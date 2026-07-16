@@ -72,7 +72,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-x-hidden overflow-y-auto md:overflow-hidden">
+    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-x-hidden overflow-y-auto md:overflow-hidden bg-[#292a30]">
       {/* Background layers */}
       <div className="absolute inset-0 z-[-2] flex flex-col pointer-events-none">
         <div className="h-[70%] bg-gradient-to-b from-[#424450] to-[#3a3c46]" />
@@ -125,8 +125,8 @@ export default function HeroSection() {
         </div>
       </header>
 
-      {/* Slider images container - Perfectly centered on the chauffeur's middle body */}
-      <div className="absolute left-0 right-0 w-full h-auto z-10 pointer-events-none top-[35%] md:top-[50%] -translate-y-1/2">
+      {/* Slider images container */}
+      <div className="absolute left-0 right-0 w-full h-auto z-10 pointer-events-none top-[28%] md:top-[50%] -translate-y-1/2">
         {slides.map((slide, index) => (
           <Image
             key={slide.id}
@@ -141,19 +141,20 @@ export default function HeroSection() {
       </div>
 
       {/* Main content area */}
-      <div className="relative flex-grow w-full min-h-[75vh] xs:min-h-[80vh] md:min-h-0 z-30 pointer-events-none">
+      {/* Set explicit viewport heights so the chauffeur scales accurately relative to the screen */}
+      <div className="relative flex-grow w-full h-[52vh] xs:h-[58vh] md:h-[65vh] z-30 pointer-events-none">
         
-        {/* Chauffeur image - Head starts at blue line, feet touch the bottom container edge */}
-        <div className="absolute top-[2%] bottom-0 left-1/2 -translate-x-1/2 h-[68vh] md:h-[83vh] w-auto z-20 pointer-events-none flex justify-center items-end">
+        {/* Chauffeur image - Kept clean, un-clipped, and sits perfectly down to the pixel on the bottom edge */}
+        <div className="absolute  bottom-0 left-1/2 -translate-x-1/2 h-full w-auto z-20 pointer-events-none flex justify-center items-end overflow-visible">
           <img
             src="/chauffeur.png"
             alt="Chauffeur"
-            className="h-full w-auto object-contain object-bottom block origin-bottom scale-200 md:scale-105"
+            className="h-[95%] w-auto object-contain object-bottom block origin-bottom scale-146 xs:scale-105 md:scale-100"
           />
         </div>
 
         {/* Slide text container */}
-        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 right-auto md:right-[8%] top-[22%] max-h-[680px]:top-[33%] translate-y-0 md:top-[52%] md:-translate-y-1/2 w-[85%] max-w-[280px] xs:max-w-[340px] pointer-events-auto text-center md:text-left z-30 flex flex-col items-center md:items-start">
+        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 right-auto md:right-[8%] top-[15%] max-h-[680px]:top-[20%] translate-y-0 md:top-[50%] md:-translate-y-1/2 w-[85%] max-w-[280px] xs:max-w-[340px] pointer-events-auto text-center md:text-left z-30 flex flex-col items-center md:items-start">
           <h2
             className={`text-[1.5rem] xs:text-[1.8rem] sm:text-[2.2rem] md:text-[2.5rem] leading-tight font-bold text-white mb-1 xs:mb-3 md:mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
               titleVisible ? "opacity-100" : "opacity-0"
@@ -172,7 +173,7 @@ export default function HeroSection() {
             Book Now
           </button>
 
-          {/* Horizontal Pagination dots - Placed right below the button */}
+          {/* Horizontal Pagination dots */}
           <div className="flex flex-row items-center gap-2.5 mt-4 pointer-events-auto z-40">
             {slides.map((_, index) => (
               <div
@@ -193,11 +194,12 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Booking form */}
-      <div className="relative md:absolute bottom-0 z-40 w-full flex flex-col items-center pb-12 md:pb-20 pt-10 md:pt-8 bg-[#292a30] md:bg-transparent -mt-[40px] md:mt-auto">
+      {/* Booking form section */}
+      {/* Removed negative margin class to keep feet intact and ensure tabs rest naturally next to his heels */}
+      <div className="relative md:absolute bottom-0 z-40 w-full flex flex-col items-center pb-8 md:pb-16 pt-4 md:pt-8 bg-[#292a30] md:bg-transparent mt-auto">
         
-        {/* Fixed Mobile Tabs - Restored to sit cleanly above the form fields without overlapping */}
-        <div className="flex bg-[#2a2c35] rounded-full p-1 mb-6 shadow-lg border border-gray-600/50 w-[90%] max-w-[320px] md:w-auto">
+        {/* Mobile Tabs */}
+        <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-2xl border border-gray-600/50 w-[90%] max-w-[320px] md:w-auto">
           <button
             className={`flex-1 rounded-full py-2 px-8 font-semibold text-sm transition-all ${
               isOneWay
