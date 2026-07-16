@@ -19,7 +19,7 @@ body {
   position: absolute;
   top: 48%;
   left: 50%;
-  width: 63%;
+  width: 90%; /* Scale up on mobile so the centered car is visible behind the chauffeur */
   max-width: 910px;
   object-fit: contain;
   transform: translate(-50%, -50%);
@@ -30,6 +30,7 @@ body {
 @media (min-width: 768px) {
   .car-slide {
     top: 52%;
+    width: 63%; /* Restores the original proportion on desktop */
   }
 }
 

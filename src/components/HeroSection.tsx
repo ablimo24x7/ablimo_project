@@ -72,7 +72,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden">
+    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-x-hidden overflow-y-auto md:overflow-hidden">
       {/* Background layers */}
       <div className="absolute inset-0 z-[-2] flex flex-col pointer-events-none">
         <div className="h-[70%] bg-gradient-to-b from-[#424450] to-[#3a3c46]" />
@@ -141,18 +141,18 @@ export default function HeroSection() {
       </div>
 
       {/* Chauffeur image */}
-      <div className="absolute top-[54%] md:top-[58%] left-1/4 md:left-[30%] -translate-y-1/2 h-[78vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
+      <div className="absolute bottom-0 md:top-[58%] left-1/2 -translate-x-1/2 md:left-[30%] md:-translate-y-1/2 h-[50vh] sm:h-[60vh] md:h-[78vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
         <Image
           src="/chauffeur.png"
           alt="Chauffeur"
           width={400}
           height={900}
-          className="h-full w-auto object-contain drop-shadow-2xl"
+          className="h-full w-auto object-contain drop-shadow-2xl object-bottom"
         />
       </div>
 
       {/* Main content area */}
-      <div className="relative flex-grow w-full z-30 pointer-events-none">
+      <div className="relative flex-grow w-full min-h-[80vh] xs:min-h-[82vh] sm:min-h-[90vh] md:min-h-0 z-30 pointer-events-none">
         {/* Pagination dots */}
         <div className="absolute left-8 md:left-16 top-[48%] md:top-[52%] -translate-y-1/2 flex flex-col items-center gap-4 pointer-events-auto">
           {slides.map((_, index) => (
@@ -171,7 +171,7 @@ export default function HeroSection() {
         </div>
 
         {/* Slide text */}
-        <div className="absolute right-8 md:right-[8%] top-[48%] md:top-[52%] -translate-y-1/2 w-full max-w-[340px] pointer-events-auto">
+        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 right-auto md:right-[8%] top-[25%] sm:top-[30%] md:top-[52%] -translate-y-1/2 w-[85%] max-w-[340px] pointer-events-auto text-center md:text-left">
           <h2
             className={`text-[2.5rem] leading-tight font-bold text-white mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
               titleVisible ? "opacity-100" : "opacity-0"
@@ -192,8 +192,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Booking form */}
-      <div className="relative z-40 w-full flex flex-col items-center pb-8 md:pb-20 pt-4 md:pt-8 mt-auto">
+     {/* Booking form */}
+      <div className="relative md:absolute bottom-0 z-40 w-full flex flex-col items-center pb-12 md:pb-20 pt-10 md:pt-8 bg-[#292a30] md:bg-transparent mt-12 md:mt-auto">
         <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-lg border border-gray-600/50">
           <button
             className={`flex-1 rounded-full py-2 px-8 font-semibold text-sm transition-all ${
