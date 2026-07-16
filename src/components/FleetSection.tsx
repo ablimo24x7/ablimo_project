@@ -46,12 +46,12 @@ export default function FleetSection() {
     <section className="bg-[#1c1d21] py-20 px-8 text-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">Our Fleet</h2>
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
           {filters.map((filter) => (
             <button
               key={filter.value}
               onClick={() => setActiveFilter(filter.value)}
-              className={`px-6 py-2 rounded-full font-semibold transition-all ${
+              className={`px-3 py-1.5 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 activeFilter === filter.value
                   ? "bg-white text-black"
                   : "bg-[#3e3e48] hover:bg-gray-600 text-white"
