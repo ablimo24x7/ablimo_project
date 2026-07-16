@@ -144,7 +144,7 @@ export default function HeroSection() {
       <div className="relative flex-grow w-full min-h-[75vh] xs:min-h-[80vh] md:min-h-0 z-30 pointer-events-none">
         
         {/* Chauffeur image - Head starts at blue line, feet touch the bottom container edge */}
-        <div className="absolute top-[2%] bottom-0 left-1/2 -translate-x-1/2 h-[72vh] md:h-[82vh] w-auto z-20 pointer-events-none flex justify-center items-end">
+        <div className="absolute top-[2%] bottom-0 left-1/2 -translate-x-1/2 h-[68vh] md:h-[83vh] w-auto z-20 pointer-events-none flex justify-center items-end">
           <img
             src="/chauffeur.png"
             alt="Chauffeur"
