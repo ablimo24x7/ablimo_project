@@ -77,9 +77,7 @@ export default function FAQSection() {
                     {item.question}
                   </h3>
                   <div
-                    className={`w-8 h-8 rounded-full border border-gray-500 flex items-center justify-center flex-shrink-0 transition-all duration-300 faq-icon text-gray-400 group-hover:border-white group-hover:text-white ${
-                      activeIndex === index ? "rotate-45" : ""
-                    }`}
+                    className={`w-8 h-8 rounded-full border border-gray-500 flex items-center justify-center flex-shrink-0 transition-all duration-300 faq-icon text-gray-400 group-hover:border-white group-hover:text-white`}
                   >
                     <svg
                       className="w-4 h-4"
@@ -87,16 +85,29 @@ export default function FAQSection() {
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 4v16m8-8H4"
-                      />
+                      {activeIndex === index ? (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M20 12H4"
+                        />
+                      ) : (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 4v16m8-8H4"
+                        />
+                      )}
                     </svg>
                   </div>
                 </button>
-                <div className="faq-answer text-gray-400 text-sm leading-relaxed">
+                <div
+                  className={`faq-answer text-gray-400 text-sm leading-relaxed overflow-hidden transition-all duration-300 ${
+                    activeIndex === index ? "max-h-96 py-4 opacity-100" : "max-h-0 py-0 opacity-0"
+                  }`}
+                >
                   <p>{item.answer}</p>
                 </div>
               </div>

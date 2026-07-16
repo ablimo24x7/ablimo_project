@@ -122,6 +122,4 @@ select:focus {
   padding-bottom: 1rem;
 }
 
-.faq-item.active .faq-icon {
-  transform: rotate(45deg);
-}
+
