@@ -140,21 +140,23 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Chauffeur image */}
-      <div className="absolute bottom-0 md:top-[58%] left-1/2 -translate-x-1/2 md:left-[30%] md:-translate-y-1/2 h-[50vh] sm:h-[60vh] md:h-[78vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
-        <Image
-          src="/chauffeur.png"
-          alt="Chauffeur"
-          width={400}
-          height={900}
-          className="h-full w-auto object-contain drop-shadow-2xl object-bottom"
-        />
-      </div>
+     {/* Main content area */}
+      <div className="relative flex-grow w-full min-h-[75vh] xs:min-h-[80vh] md:min-h-0 z-30 pointer-events-none">
+        
+        {/* Chauffeur image - Now nested inside the z-30 parent so it scales correctly relative to the layout */}
+        {/* Chauffeur image */}
+<div className="absolute bottom-0 md:top-[58%] left-1/2 -translate-x-1/2 md:left-[30%] md:-translate-y-1/2 h-[95vh] md:h-[78vh] w-[90vw] md:w-auto max-h-[1200px] z-20 pointer-events-none flex justify-center items-end">
+  <img
+    src="/chauffeur.png"
+    alt="Chauffeur"
+    className="h-full w-auto object-contain object-bottom block"
+    // This makes sure the 92vh height only applies on mobile, leaving PC completely untouched!
+    style={typeof window !== "undefined" && window.innerWidth < 768 ? { minHeight: '92vh' } : {}}
+  />
+</div>
 
-      {/* Main content area */}
-      <div className="relative flex-grow w-full min-h-[80vh] xs:min-h-[82vh] sm:min-h-[90vh] md:min-h-0 z-30 pointer-events-none">
         {/* Pagination dots */}
-        <div className="absolute left-8 md:left-16 top-[48%] md:top-[52%] -translate-y-1/2 flex flex-col items-center gap-4 pointer-events-auto">
+        <div className="absolute left-8 md:left-16 top-[48%] md:top-[52%] -translate-y-1/2 flex flex-col items-center gap-4 pointer-events-auto z-40">
           {slides.map((_, index) => (
             <div
               key={index}
@@ -170,17 +172,17 @@ export default function HeroSection() {
           ))}
         </div>
 
-        {/* Slide text */}
-        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 right-auto md:right-[8%] top-[25%] sm:top-[30%] md:top-[52%] -translate-y-1/2 w-[85%] max-w-[340px] pointer-events-auto text-center md:text-left">
+        {/* Slide text - Positioned beautifully over his chest/torso area on mobile (top-[38%]) */}
+        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 right-auto md:right-[8%] top-[38%] md:top-[52%] -translate-y-1/2 w-[85%] max-w-[340px] pointer-events-auto text-center md:text-left z-30">
           <h2
-            className={`text-[2.5rem] leading-tight font-bold text-white mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
+            className={`text-[2.2rem] md:text-[2.5rem] leading-tight font-bold text-white mb-3 md:mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
               titleVisible ? "opacity-100" : "opacity-0"
             }`}
           >
             {slides[currentIndex].title}
           </h2>
           <p
-            className={`text-sm text-gray-300 leading-relaxed mb-8 drop-shadow transition-opacity duration-500 delay-100 ${
+            className={`text-xs md:text-sm text-gray-300 leading-relaxed mb-6 md:mb-8 drop-shadow transition-opacity duration-500 delay-100 ${
               titleVisible ? "opacity-100" : "opacity-0"
             }`}
           >
