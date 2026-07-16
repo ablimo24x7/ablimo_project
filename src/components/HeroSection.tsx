@@ -125,8 +125,8 @@ export default function HeroSection() {
         </div>
       </header>
 
-      {/* Slider images container */}
-      <div className="absolute inset-0 w-full h-full z-10 pointer-events-none">
+      {/* Slider images container - Perfectly centered on the chauffeur's middle body */}
+      <div className="absolute left-0 right-0 w-full h-auto z-10 pointer-events-none top-[35%] md:top-[50%] -translate-y-1/2">
         {slides.map((slide, index) => (
           <Image
             key={slide.id}
@@ -140,63 +140,64 @@ export default function HeroSection() {
         ))}
       </div>
 
-     {/* Main content area */}
+      {/* Main content area */}
       <div className="relative flex-grow w-full min-h-[75vh] xs:min-h-[80vh] md:min-h-0 z-30 pointer-events-none">
         
-        {/* Chauffeur image - Now nested inside the z-30 parent so it scales correctly relative to the layout */}
-        {/* Chauffeur image */}
-<div className="absolute bottom-0 md:top-[58%] left-1/2 -translate-x-1/2 md:left-[30%] md:-translate-y-1/2 h-[95vh] md:h-[78vh] w-[90vw] md:w-auto max-h-[1200px] z-20 pointer-events-none flex justify-center items-end">
-  <img
-    src="/chauffeur.png"
-    alt="Chauffeur"
-    className="h-full w-auto object-contain object-bottom block"
-    // This makes sure the 92vh height only applies on mobile, leaving PC completely untouched!
-    style={typeof window !== "undefined" && window.innerWidth < 768 ? { minHeight: '92vh' } : {}}
-  />
-</div>
-
-        {/* Pagination dots */}
-        <div className="absolute left-8 md:left-16 top-[48%] md:top-[52%] -translate-y-1/2 flex flex-col items-center gap-4 pointer-events-auto z-40">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center w-[20px] h-[20px] cursor-pointer"
-              onClick={() => goToSlide(index)}
-            >
-              <div
-                className={
-                  index === currentIndex ? "dot-active" : "dot-inactive"
-                }
-              />
-            </div>
-          ))}
+        {/* Chauffeur image - Head starts at blue line, feet touch the bottom container edge */}
+        <div className="absolute top-[2%] bottom-0 left-1/2 -translate-x-1/2 h-[72vh] md:h-[82vh] w-auto z-20 pointer-events-none flex justify-center items-end">
+          <img
+            src="/chauffeur.png"
+            alt="Chauffeur"
+            className="h-full w-auto object-contain object-bottom block origin-bottom scale-200 md:scale-105"
+          />
         </div>
 
-        {/* Slide text - Positioned beautifully over his chest/torso area on mobile (top-[38%]) */}
-        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 right-auto md:right-[8%] top-[38%] md:top-[52%] -translate-y-1/2 w-[85%] max-w-[340px] pointer-events-auto text-center md:text-left z-30">
+        {/* Slide text container */}
+        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 right-auto md:right-[8%] top-[22%] max-h-[680px]:top-[33%] translate-y-0 md:top-[52%] md:-translate-y-1/2 w-[85%] max-w-[280px] xs:max-w-[340px] pointer-events-auto text-center md:text-left z-30 flex flex-col items-center md:items-start">
           <h2
-            className={`text-[2.2rem] md:text-[2.5rem] leading-tight font-bold text-white mb-3 md:mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
+            className={`text-[1.5rem] xs:text-[1.8rem] sm:text-[2.2rem] md:text-[2.5rem] leading-tight font-bold text-white mb-1 xs:mb-3 md:mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
               titleVisible ? "opacity-100" : "opacity-0"
             }`}
           >
             {slides[currentIndex].title}
           </h2>
           <p
-            className={`text-xs md:text-sm text-gray-300 leading-relaxed mb-6 md:mb-8 drop-shadow transition-opacity duration-500 delay-100 ${
+            className={`text-[10.5px] xs:text-xs md:text-sm text-gray-300 leading-relaxed mb-2.5 xs:mb-6 md:mb-8 drop-shadow transition-opacity duration-500 delay-100 ${
               titleVisible ? "opacity-100" : "opacity-0"
             }`}
           >
             {slides[currentIndex].desc}
           </p>
-          <button className="border-2 border-white text-white px-8 py-3 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
+          <button className="border-2 border-white text-white px-6 py-2 xs:px-8 xs:py-3 text-[10px] xs:text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
             Book Now
           </button>
+
+          {/* Horizontal Pagination dots - Placed right below the button */}
+          <div className="flex flex-row items-center gap-2.5 mt-4 pointer-events-auto z-40">
+            {slides.map((_, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center w-[14px] h-[14px] xs:w-[18px] xs:h-[18px] cursor-pointer"
+                onClick={() => goToSlide(index)}
+              >
+                <div
+                  className={
+                    index === currentIndex 
+                      ? "dot-active scale-90 xs:scale-100" 
+                      : "dot-inactive scale-90 xs:scale-100"
+                  }
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-     {/* Booking form */}
-      <div className="relative md:absolute bottom-0 z-40 w-full flex flex-col items-center pb-12 md:pb-20 pt-10 md:pt-8 bg-[#292a30] md:bg-transparent mt-12 md:mt-auto">
-        <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-lg border border-gray-600/50">
+      {/* Booking form */}
+      <div className="relative md:absolute bottom-0 z-40 w-full flex flex-col items-center pb-12 md:pb-20 pt-10 md:pt-8 bg-[#292a30] md:bg-transparent -mt-[40px] md:mt-auto">
+        
+        {/* Fixed Mobile Tabs - Restored to sit cleanly above the form fields without overlapping */}
+        <div className="flex bg-[#2a2c35] rounded-full p-1 mb-6 shadow-lg border border-gray-600/50 w-[90%] max-w-[320px] md:w-auto">
           <button
             className={`flex-1 rounded-full py-2 px-8 font-semibold text-sm transition-all ${
               isOneWay
@@ -218,6 +219,7 @@ export default function HeroSection() {
             By the hour
           </button>
         </div>
+
         <div className="w-full max-w-[1200px] px-4 md:px-0">
           <div className="flex flex-col md:flex-row items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-4 gap-4 md:gap-0">
             <div className="flex-1 w-full px-4 border-b md:border-b-0 md:border-r border-gray-400/40 relative">
@@ -277,7 +279,7 @@ export default function HeroSection() {
                 <option className="bg-[#474850]">11:30 PM</option>
               </select>
             </div>
-            <div className="px-4 mt-4 md:mt-0 pb-1">
+            <div className="px-4 mt-4 md:mt-0 pb-1 w-full md:w-auto">
               <button className="bg-[#2a2c35] hover:bg-[#1f2027] text-white border border-gray-500/50 px-8 py-[10px] text-sm font-semibold rounded-full transition-all duration-300 w-full md:w-auto">
                 View options
               </button>

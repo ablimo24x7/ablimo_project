@@ -17,7 +17,7 @@ body {
 /* Car Slider Animation */
 .car-slide {
   position: absolute;
-  top: 40%; /* Center vertically on mobile */
+  top: 50%; /* Center vertically on mobile */
   left: 50%;
   width: 95%; /* Adjust width for mobile screen size */
   max-width: 910px;
