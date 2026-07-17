@@ -125,40 +125,140 @@ export default function HeroSection() {
         </div>
       </header>
 
-      {/* Slider images container */}
-      <div className="absolute inset-0 w-full h-full z-10 pointer-events-none">
-        {slides.map((slide, index) => (
+      {/* ===== DESKTOP LAYOUT ===== */}
+      <div className="hidden md:block absolute inset-0 w-full h-full">
+        {/* Slider images */}
+        <div className="absolute inset-0 w-full h-full z-10 pointer-events-none">
+          {slides.map((slide, index) => (
+            <Image
+              key={slide.id}
+              src={slide.src}
+              alt={slide.title}
+              width={910}
+              height={400}
+              className={getCarClass(index)}
+              priority={index === 0}
+            />
+          ))}
+        </div>
+
+        {/* Chauffeur image */}
+        <div className="absolute top-[58%] left-[30%] -translate-y-1/2 h-[78vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
           <Image
-            key={slide.id}
-            src={slide.src}
-            alt={slide.title}
-            width={910}
-            height={400}
-            className={getCarClass(index)}
-            priority={index === 0}
+            src="/chauffeur.png"
+            alt="Chauffeur"
+            width={400}
+            height={900}
+            className="h-full w-auto object-contain drop-shadow-2xl"
           />
-        ))}
+        </div>
+
+        {/* Content */}
+        <div className="relative w-full h-full z-30 pointer-events-none">
+          {/* Pagination dots - vertical left */}
+          <div className="absolute left-16 top-[52%] -translate-y-1/2 flex flex-col items-center gap-4 pointer-events-auto">
+            {slides.map((_, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center w-[20px] h-[20px] cursor-pointer"
+                onClick={() => goToSlide(index)}
+              >
+                <div
+                  className={
+                    index === currentIndex ? "dot-active" : "dot-inactive"
+                  }
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Slide text - right side */}
+          <div className="absolute right-[8%] top-[52%] -translate-y-1/2 w-full max-w-[340px] pointer-events-auto">
+            <h2
+              className={`text-[2.5rem] leading-tight font-bold text-white mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
+                titleVisible ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {slides[currentIndex].title}
+            </h2>
+            <p
+              className={`text-sm text-gray-300 leading-relaxed mb-8 drop-shadow transition-opacity duration-500 delay-100 ${
+                titleVisible ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {slides[currentIndex].desc}
+            </p>
+            <button className="border-2 border-white text-white px-8 py-3 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
+              Book Now
+            </button>
+          </div>
+        </div>
       </div>
 
-      {/* Chauffeur image */}
-      <div className="absolute top-[54%] md:top-[58%] left-1/4 md:left-[30%] -translate-y-1/2 h-[78vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
-        <Image
-          src="/chauffeur.png"
-          alt="Chauffeur"
-          width={400}
-          height={900}
-          className="h-full w-auto object-contain drop-shadow-2xl"
-        />
-      </div>
+      {/* ===== MOBILE LAYOUT - Vertical Column ===== */}
+      <div className="md:hidden relative w-full flex-1 flex flex-col items-center z-20 px-6 pt-4">
+        {/* Chauffeur + Cars - main visual focus */}
+        <div className="relative w-full flex-1 flex justify-center items-center min-h-[40vh]">
+          {/* Cars behind chauffeur */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {slides.map((slide, index) => (
+              <Image
+                key={slide.id}
+                src={slide.src}
+                alt={slide.title}
+                width={500}
+                height={250}
+                className={`absolute w-[85%] h-auto object-contain transition-all duration-700 ${
+                  index === currentIndex
+                    ? "opacity-70 scale-100"
+                    : index < currentIndex
+                    ? "opacity-0 -translate-x-full scale-90"
+                    : "opacity-0 translate-x-full scale-90"
+                }`}
+                priority={index === 0}
+              />
+            ))}
+          </div>
+          {/* Chauffeur on top */}
+          <div className="relative z-10 h-full flex items-end justify-center">
+            <Image
+              src="/chauffeur.png"
+              alt="Chauffeur"
+              width={260}
+              height={600}
+              className="h-[75vh] max-h-[500px] w-auto object-contain object-bottom drop-shadow-2xl"
+              priority
+            />
+          </div>
+        </div>
 
-      {/* Main content area */}
-      <div className="relative flex-grow w-full z-30 pointer-events-none">
-        {/* Pagination dots */}
-        <div className="absolute left-8 md:left-16 top-[48%] md:top-[52%] -translate-y-1/2 flex flex-col items-center gap-4 pointer-events-auto">
+        {/* Slide text - at chauffeur mid section level */}
+        <div className="w-full text-center -mt-16 mb-2 relative z-30">
+          <h2
+            className={`text-[1.75rem] leading-tight font-bold text-white mb-2 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
+              titleVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {slides[currentIndex].title}
+          </h2>
+          <p
+            className={`text-xs text-gray-300 leading-relaxed mb-5 drop-shadow transition-opacity duration-500 delay-100 px-2 ${
+              titleVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {slides[currentIndex].desc}
+          </p>
+          <button className="border-2 border-white text-white px-7 py-2.5 text-[11px] font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-black transition-all duration-300">
+            Book Now
+          </button>
+        </div>
+
+        {/* Horizontal pagination dots */}
+        <div className="flex items-center justify-center gap-5 py-3 pointer-events-auto">
           {slides.map((_, index) => (
             <div
               key={index}
-              className="flex items-center justify-center w-[20px] h-[20px] cursor-pointer"
+              className="flex items-center justify-center w-[18px] h-[18px] cursor-pointer"
               onClick={() => goToSlide(index)}
             >
               <div
@@ -169,34 +269,13 @@ export default function HeroSection() {
             </div>
           ))}
         </div>
-
-        {/* Slide text */}
-        <div className="absolute right-8 md:right-[8%] top-[48%] md:top-[52%] -translate-y-1/2 w-full max-w-[340px] pointer-events-auto">
-          <h2
-            className={`text-[2.5rem] leading-tight font-bold text-white mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
-              titleVisible ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {slides[currentIndex].title}
-          </h2>
-          <p
-            className={`text-sm text-gray-300 leading-relaxed mb-8 drop-shadow transition-opacity duration-500 delay-100 ${
-              titleVisible ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {slides[currentIndex].desc}
-          </p>
-          <button className="border-2 border-white text-white px-8 py-3 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
-            Book Now
-          </button>
-        </div>
       </div>
 
       {/* Booking form */}
       <div className="relative z-40 w-full flex flex-col items-center pb-8 md:pb-20 pt-4 md:pt-8 mt-auto">
         <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-lg border border-gray-600/50">
           <button
-            className={`flex-1 rounded-full py-2 px-8 font-semibold text-sm transition-all ${
+            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all ${
               isOneWay
                 ? "bg-[#e4e4e4] text-[#292a30] shadow-md"
                 : "text-gray-400 hover:text-white"
@@ -206,7 +285,7 @@ export default function HeroSection() {
             One way
           </button>
           <button
-            className={`flex-1 rounded-full py-2 px-8 font-semibold text-sm transition-all ${
+            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all ${
               !isOneWay
                 ? "bg-[#e4e4e4] text-[#292a30] shadow-md"
                 : "text-gray-400 hover:text-white"
@@ -217,35 +296,35 @@ export default function HeroSection() {
           </button>
         </div>
         <div className="w-full max-w-[1200px] px-4 md:px-0">
-          <div className="flex flex-col md:flex-row items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-4 gap-4 md:gap-0">
-            <div className="flex-1 w-full px-4 border-b md:border-b-0 md:border-r border-gray-400/40 relative">
-              <label className="block text-white font-semibold text-[13px] mb-2">
+          <div className="flex flex-col md:flex-row items-stretch md:items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-3 md:p-4 gap-3 md:gap-0">
+            <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+              <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
                 Pickup location
               </label>
               <input
                 type="text"
                 placeholder="Address, airport, hotel, ..."
-                className="w-full bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-sm"
+                className="w-full bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm"
               />
             </div>
             {isOneWay ? (
-              <div className="flex-1 w-full px-4 border-b md:border-b-0 md:border-r border-gray-400/40">
-                <label className="block text-white font-semibold text-[13px] mb-2">
+              <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+                <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
                   Drop-off location
                 </label>
                 <input
                   type="text"
                   placeholder="Address, airport, hotel, ..."
-                  className="w-full bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-sm"
+                  className="w-full bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm"
                 />
               </div>
             ) : (
-              <div className="flex-1 w-full px-4 border-b md:border-b-0 md:border-r border-gray-400/40">
-                <label className="block text-white font-semibold text-[13px] mb-2">
+              <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+                <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
                   Duration
                 </label>
                 <div className="relative">
-                  <select className="w-full bg-transparent text-gray-200 font-medium appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-sm cursor-pointer">
+                  <select className="w-full bg-transparent text-gray-200 font-medium appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm cursor-pointer">
                     <option className="bg-[#474850]">
                       2 hours (80 km included)
                     </option>
@@ -259,24 +338,24 @@ export default function HeroSection() {
                 </div>
               </div>
             )}
-            <div className="flex-[0.8] w-full px-4 border-b md:border-b-0 md:border-r border-gray-400/40">
-              <label className="block text-white font-semibold text-[13px] mb-2">
+            <div className="flex-1 md:flex-[0.8] w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+              <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
                 Date
               </label>
-              <select className="w-full bg-transparent text-gray-300 appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-sm cursor-pointer">
+              <select className="w-full bg-transparent text-gray-300 appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm cursor-pointer">
                 <option className="bg-[#474850]">Select a date</option>
               </select>
             </div>
-            <div className="flex-[0.8] w-full px-4 border-b md:border-b-0 md:border-r border-gray-400/40">
-              <label className="block text-white font-semibold text-[13px] mb-2">
+            <div className="flex-1 md:flex-[0.8] w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+              <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
                 Pickup time
               </label>
-              <select className="w-full bg-transparent text-white font-semibold appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-sm cursor-pointer">
+              <select className="w-full bg-transparent text-white font-semibold appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm cursor-pointer">
                 <option className="bg-[#474850]">11:30 PM</option>
               </select>
             </div>
-            <div className="px-4 mt-4 md:mt-0 pb-1">
-              <button className="bg-[#2a2c35] hover:bg-[#1f2027] text-white border border-gray-500/50 px-8 py-[10px] text-sm font-semibold rounded-full transition-all duration-300 w-full md:w-auto">
+            <div className="px-3 md:px-4 mt-2 md:mt-0 pb-1">
+              <button className="bg-[#2a2c35] hover:bg-[#1f2027] text-white border border-gray-500/50 px-6 md:px-8 py-[10px] text-xs md:text-sm font-semibold rounded-full transition-all duration-300 w-full md:w-auto">
                 View options
               </button>
             </div>
