@@ -5,7 +5,6 @@ import PricingSection from "@/components/PricingSection";
 import FleetSection from "@/components/FleetSection";
 import BrandOptions from "@/components/BrandOptions";
 import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <FleetSection />
       <BrandOptions />
       <FAQSection />
-      <Footer />
     </>
   );
 }

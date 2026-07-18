@@ -5,53 +5,53 @@ const footerLinks = {
   company: {
     title: "Company",
     links: [
-      { label: "How AB.Limo works", href: "#" },
-      { label: "Career", href: "#" },
-      { label: "Press", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Become a chauffeur partner", href: "#" },
+      { label: "How AB.Limo works", href: "/about" },
+      { label: "Career", href: "/career" },
+      { label: "Press", href: "/press/releases" },
+      { label: "Green initiatives", href: "/sustainability" },
+      { label: "Become a chauffeur partner", href: "/partners" },
     ],
   },
   business: {
     title: "AB.Limo for Business",
     links: [
-      { label: "Overview", href: "#" },
-      { label: "Corporations", href: "#" },
-      { label: "Travel agencies", href: "#" },
-      { label: "Strategic partnerships", href: "#" },
+      { label: "Overview", href: "/business" },
+      { label: "Corporations", href: "/corporations" },
+      { label: "Travel agencies", href: "/travel-agencies" },
+      { label: "Strategic partnerships", href: "/strategic-partnerships" },
     ],
   },
   cities: {
     title: "Top cities",
     links: [
-      { label: "Dubai", href: "#" },
-      { label: "Riyadh", href: "#" },
-      { label: "Doha", href: "#" },
-      { label: "Abu Dhabi", href: "#" },
-      { label: "Jeddah", href: "#" },
-      { label: "All cities", href: "#" },
+      { label: "Dubai", href: "/countries/ae/dubai/airport-transfer" },
+      { label: "Riyadh", href: "/countries/sa/riyadh/airport-transfer" },
+      { label: "Doha", href: "/countries/qa/doha/airport-transfer" },
+      { label: "Abu Dhabi", href: "/countries/ae/abu-dhabi/airport-transfer" },
+      { label: "Jeddah", href: "/countries/sa/jeddah/airport-transfer" },
+      { label: "All cities", href: "/cities" },
     ],
   },
   explore: {
     title: "Explore",
     links: [
-      { label: "City-to-city rides", href: "#" },
-      { label: "Limousine service", href: "#" },
-      { label: "Chauffeur service", href: "#" },
-      { label: "Private car service", href: "#" },
-      { label: "Ground transportation", href: "#" },
-      { label: "Airport transfer", href: "#" },
-      { label: "All countries", href: "#" },
+      { label: "City-to-city rides", href: "/city-to-city" },
+      { label: "Limousine service", href: "/limousine-service" },
+      { label: "Chauffeur service", href: "/chauffeur-service" },
+      { label: "Private car service", href: "/car-service" },
+      { label: "Ground transportation", href: "/ground-transportation" },
+      { label: "Airport transfer", href: "/airport-transfer" },
+      { label: "All countries", href: "/countries" },
     ],
   },
   cityToCity: {
     title: "City-to-City rides",
     links: [
-      { label: "Dubai - Abu Dhabi", href: "#" },
-      { label: "Riyadh - Dammam", href: "#" },
-      { label: "Doha - Al Khor", href: "#" },
-      { label: "Jeddah - Mecca", href: "#" },
-      { label: "Manama - Al Khobar", href: "#" },
+      { label: "Dubai - Abu Dhabi", href: "/city-to-city/abu-dhabi-dubai" },
+      { label: "Riyadh - Dammam", href: "/city-to-city/riyadh-dammam" },
+      { label: "Doha - Al Khor", href: "/city-to-city/doha-al-khor" },
+      { label: "Jeddah - Mecca", href: "/city-to-city/jeddah-mecca" },
+      { label: "Manama - Al Khobar", href: "/city-to-city/manama-al-khobar" },
     ],
   },
 };
@@ -114,10 +114,10 @@ const socialLinks = [
 ];
 
 const bottomLinks = [
-  { label: "Terms", href: "#" },
-  { label: "Privacy policy", href: "#" },
-  { label: "Legal notice", href: "#" },
-  { label: "Accessibility", href: "#" },
+  { label: "Terms", href: "/terms" },
+  { label: "Privacy policy", href: "/privacy-policy" },
+  { label: "Legal notice", href: "/imprint" },
+  { label: "Accessibility", href: "/accessibility" },
 ];
 
 export default function Footer() {
