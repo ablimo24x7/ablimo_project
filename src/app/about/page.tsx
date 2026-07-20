@@ -26,7 +26,7 @@ const vehicleClasses = [
   {
     name: "First Class",
     image:
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0abb?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1627936354732-ffbe552799d8?q=80&w=924&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "Premium vehicles offering the highest level of luxury and sophistication.",
   },
