@@ -73,7 +73,7 @@ const cityHeroImages: Record<string, string> = {
   jeddah:
     "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=1920&h=800&fit=crop",
   doha:
-    "https://images.unsplash.com/photo-1549927681-0b673b8243ab?w=1920&h=800&fit=crop",
+    "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   paris:
     "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1920&h=800&fit=crop",
   lyon:
@@ -170,10 +170,10 @@ const citySeoImages: Record<string, string[]> = {
     "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=600&h=400&fit=crop",
   ],
   doha: [
-    "https://images.unsplash.com/photo-1549927681-0b673b8243ab?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1549927681-0b673b8243ab?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1549927681-0b673b8243ab?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1549927681-0b673b8243ab?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1734455823834-c89ebb125aa3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1700901742651-6b353164caf3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1647755453118-aad22e0f7cc0?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ],
   paris: [
     "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&h=400&fit=crop",
