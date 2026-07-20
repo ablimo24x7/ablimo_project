@@ -57,7 +57,7 @@ const partners = [
   {
     name: "World Alliance",
     description: "Founding member collaborating with global leaders to accelerate climate action.",
-    image: "https://images.unsplash.com/photo-1518173946687-a1e0f10615d5?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
