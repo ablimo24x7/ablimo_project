@@ -53,7 +53,7 @@ export default function FAQSection() {
             </span>
           </h2>
           <div>
-            <button className="bg-[#3a3c46] hover:bg-[#4a4c56] text-white border border-gray-600 px-8 py-3 text-sm font-semibold rounded-full transition-all duration-300 shadow-lg">
+            <button className="bg-[#3a3c46] hover:bg-[#4a4c56] text-white border border-gray-600 px-8 py-3 text-sm font-semibold rounded-full transition-all duration-300 shadow-lg cursor-pointer">
               ASK MORE QUESTIONS
             </button>
           </div>
@@ -70,7 +70,7 @@ export default function FAQSection() {
                 }`}
               >
                 <button
-                  className="w-full flex justify-between items-center py-6 text-left focus:outline-none"
+                  className="w-full flex justify-between items-center py-6 text-left focus:outline-none cursor-pointer"
                   onClick={() => toggleFaq(index)}
                 >
                   <h3 className="text-xl font-semibold text-gray-100 group-hover:text-white transition-colors">

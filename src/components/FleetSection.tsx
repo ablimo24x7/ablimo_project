@@ -51,7 +51,7 @@ export default function FleetSection() {
             <button
               key={filter.value}
               onClick={() => setActiveFilter(filter.value)}
-              className={`px-3 py-1.5 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
+              className={`px-3 py-1.5 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-semibold cursor-pointer transition-all ${
                 activeFilter === filter.value
                   ? "bg-white text-black"
                   : "bg-[#3e3e48] hover:bg-gray-600 text-white"

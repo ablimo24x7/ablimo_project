@@ -142,7 +142,7 @@ export default function HeroSection() {
             >
               {slides[currentIndex].desc}
             </p>
-            <button className="border-2 border-white text-white px-8 py-3 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
+            <button className="border-2 border-white text-white px-8 py-3 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
               Book Now
             </button>
           </div>
@@ -202,7 +202,7 @@ export default function HeroSection() {
           >
             {slides[currentIndex].desc}
           </p>
-          <button className="border-2 border-white text-white px-7 py-2.5 text-[11px] font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-black transition-all duration-300">
+          <button className="border-2 border-white text-white px-7 py-2.5 text-[11px] font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
             Book Now
           </button>
         </div>
@@ -229,7 +229,7 @@ export default function HeroSection() {
       <div className="relative z-40 w-full flex flex-col items-center pb-8 md:pb-16 pt-4 md:pt-8 mt-auto">
         <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-lg border border-gray-600/50">
           <button
-            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all ${
+            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm cursor-pointer transition-all ${
               isOneWay
                 ? "bg-[#e4e4e4] text-[#292a30] shadow-md"
                 : "text-gray-400 hover:text-white"
@@ -239,7 +239,7 @@ export default function HeroSection() {
             One way
           </button>
           <button
-            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all ${
+            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm cursor-pointer transition-all ${
               !isOneWay
                 ? "bg-[#e4e4e4] text-[#292a30] shadow-md"
                 : "text-gray-400 hover:text-white"
@@ -309,7 +309,7 @@ export default function HeroSection() {
               </select>
             </div>
             <div className="px-3 md:px-4 mt-2 md:mt-0 pb-1">
-              <button className="bg-[#2a2c35] hover:bg-[#1f2027] text-white border border-gray-500/50 px-6 md:px-8 py-[10px] text-xs md:text-sm font-semibold rounded-full transition-all duration-300 w-full md:w-auto">
+              <button className="bg-[#2a2c35] hover:bg-[#1f2027] text-white border border-gray-500/50 px-6 md:px-8 py-[10px] text-xs md:text-sm font-semibold rounded-full transition-all duration-300 w-full md:w-auto cursor-pointer">
                 View options
               </button>
             </div>
