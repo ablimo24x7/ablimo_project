@@ -72,7 +72,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden">
+    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-x-hidden overflow-y-auto md:overflow-hidden bg-[#292a30]">
       {/* Background layers */}
       <div className="absolute inset-0 z-[-2] flex flex-col pointer-events-none">
         <div className="h-[70%] bg-gradient-to-b from-[#424450] to-[#3a3c46]" />
@@ -96,8 +96,14 @@ export default function HeroSection() {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Chauffeur image */}
         <div className="absolute top-[58%] left-[30%] -translate-y-1/2 h-[78vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
+=======
+      {/* Slider images container */}
+      <div className="absolute left-0 right-0 w-full h-auto z-10 pointer-events-none top-[28%] md:top-[50%] -translate-y-1/2">
+        {slides.map((slide, index) => (
+>>>>>>> e2f194d8557d04d4b26f1d14c6d4d09ea63c61f1
           <Image
             src="/chauffeur.png"
             alt="Chauffeur"
@@ -149,6 +155,7 @@ export default function HeroSection() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* ===== MOBILE LAYOUT - Vertical Column ===== */}
       <div className="md:hidden relative w-full flex-1 flex flex-col items-center z-20 px-6 pt-4">
         {/* Chauffeur + Cars - main visual focus */}
@@ -228,6 +235,68 @@ export default function HeroSection() {
       {/* Booking form */}
       <div className="relative z-40 w-full flex flex-col items-center pb-8 md:pb-16 pt-4 md:pt-8 mt-auto">
         <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-lg border border-gray-600/50">
+=======
+      {/* Main content area */}
+      {/* Set explicit viewport heights so the chauffeur scales accurately relative to the screen */}
+      <div className="relative flex-grow w-full h-[52vh] xs:h-[58vh] md:h-[65vh] z-30 pointer-events-none">
+        
+        {/* Chauffeur image - Kept clean, un-clipped, and sits perfectly down to the pixel on the bottom edge */}
+        <div className="absolute  bottom-0 left-1/2 -translate-x-1/2 h-full w-auto z-20 pointer-events-none flex justify-center items-end overflow-visible">
+          <img
+            src="/chauffeur.png"
+            alt="Chauffeur"
+            className="h-[95%] w-auto object-contain object-bottom block origin-bottom scale-146 xs:scale-105 md:scale-100"
+          />
+        </div>
+
+        {/* Slide text container */}
+        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 right-auto md:right-[8%] top-[15%] max-h-[680px]:top-[20%] translate-y-0 md:top-[50%] md:-translate-y-1/2 w-[85%] max-w-[280px] xs:max-w-[340px] pointer-events-auto text-center md:text-left z-30 flex flex-col items-center md:items-start">
+          <h2
+            className={`text-[1.5rem] xs:text-[1.8rem] sm:text-[2.2rem] md:text-[2.5rem] leading-tight font-bold text-white mb-1 xs:mb-3 md:mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
+              titleVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {slides[currentIndex].title}
+          </h2>
+          <p
+            className={`text-[10.5px] xs:text-xs md:text-sm text-gray-300 leading-relaxed mb-2.5 xs:mb-6 md:mb-8 drop-shadow transition-opacity duration-500 delay-100 ${
+              titleVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {slides[currentIndex].desc}
+          </p>
+          <button className="border-2 border-white text-white px-6 py-2 xs:px-8 xs:py-3 text-[10px] xs:text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300">
+            Book Now
+          </button>
+
+          {/* Horizontal Pagination dots */}
+          <div className="flex flex-row items-center gap-2.5 mt-4 pointer-events-auto z-40">
+            {slides.map((_, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center w-[14px] h-[14px] xs:w-[18px] xs:h-[18px] cursor-pointer"
+                onClick={() => goToSlide(index)}
+              >
+                <div
+                  className={
+                    index === currentIndex 
+                      ? "dot-active scale-90 xs:scale-100" 
+                      : "dot-inactive scale-90 xs:scale-100"
+                  }
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Booking form section */}
+      {/* Removed negative margin class to keep feet intact and ensure tabs rest naturally next to his heels */}
+      <div className="relative md:absolute bottom-0 z-40 w-full flex flex-col items-center pb-8 md:pb-16 pt-4 md:pt-8 bg-[#292a30] md:bg-transparent mt-auto">
+        
+        {/* Mobile Tabs */}
+        <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-2xl border border-gray-600/50 w-[90%] max-w-[320px] md:w-auto">
+>>>>>>> e2f194d8557d04d4b26f1d14c6d4d09ea63c61f1
           <button
             className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all ${
               isOneWay
@@ -249,6 +318,7 @@ export default function HeroSection() {
             By the hour
           </button>
         </div>
+
         <div className="w-full max-w-[1200px] px-4 md:px-0">
           <div className="flex flex-col md:flex-row items-stretch md:items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-3 md:p-4 gap-3 md:gap-0">
             <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
@@ -308,8 +378,13 @@ export default function HeroSection() {
                 <option className="bg-[#474850]">11:30 PM</option>
               </select>
             </div>
+<<<<<<< HEAD
             <div className="px-3 md:px-4 mt-2 md:mt-0 pb-1">
               <button className="bg-[#2a2c35] hover:bg-[#1f2027] text-white border border-gray-500/50 px-6 md:px-8 py-[10px] text-xs md:text-sm font-semibold rounded-full transition-all duration-300 w-full md:w-auto">
+=======
+            <div className="px-4 mt-4 md:mt-0 pb-1 w-full md:w-auto">
+              <button className="bg-[#2a2c35] hover:bg-[#1f2027] text-white border border-gray-500/50 px-8 py-[10px] text-sm font-semibold rounded-full transition-all duration-300 w-full md:w-auto">
+>>>>>>> e2f194d8557d04d4b26f1d14c6d4d09ea63c61f1
                 View options
               </button>
             </div>
