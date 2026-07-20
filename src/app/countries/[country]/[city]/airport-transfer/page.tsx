@@ -67,7 +67,7 @@ const cityHeroImages: Record<string, string> = {
   dubai:
     "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&h=800&fit=crop",
   "abu-dhabi":
-    "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&h=800&fit=crop",
+    "https://images.unsplash.com/photo-1624317937315-0ced8736c9e9?q=80&w=902&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   riyadh:
     "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=1920&h=800&fit=crop",
   jeddah:
@@ -152,10 +152,10 @@ const citySeoImages: Record<string, string[]> = {
     "https://images.unsplash.com/photo-1584546459262-0ddde08da490?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ],
   "abu-dhabi": [
-    "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1578152882785-df9744e359e5?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1624317937315-0ced8736c9e9?q=80&w=902&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1685909201292-d86e15a63a1b?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ],
   riyadh: [
     "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=600&h=400&fit=crop",
