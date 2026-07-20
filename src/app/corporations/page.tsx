@@ -22,12 +22,12 @@ const imageGridItems = [
   {
     title: "Airport transfers",
     image:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Client travel",
     image:
-      "https://images.unsplash.com/photo-1464938050520-ef2571e0d6e0?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -205,7 +205,7 @@ export default function CorporationsPage() {
           </div>
           <div className="relative h-80 rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1549317661-bd32c8ce0abb?w=600&h=400&fit=crop"
+              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
               alt="Reliable chauffeur service"
               fill
               className="object-cover"
