@@ -41,7 +41,7 @@ const features = [
 const vehicleClasses = [
   {
     title: "Business Class",
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     passengers: 3,
     luggage: 2,
     description: "Executive sedans for professional travel",
