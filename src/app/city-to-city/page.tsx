@@ -22,7 +22,7 @@ const benefits = [
 
 const topCities = [
   { name: "Dubai", country: "UAE", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop" },
-  { name: "Riyadh", country: "Saudi Arabia", image: "https://images.unsplash.com/photo-1578895102346-7e342c3f3b50?w=400&h=300&fit=crop" },
+  { name: "Riyadh", country: "Saudi Arabia", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
   { name: "Doha", country: "Qatar", image: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=400&h=300&fit=crop" },
   { name: "Abu Dhabi", country: "UAE", image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" },
 ];
