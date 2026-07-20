@@ -399,7 +399,7 @@ export default function AboutPage() {
                 "Stay updated with the latest news, announcements, and media coverage about AB.Limo.",
               href: "/press/releases",
               image:
-                "https://images.unsplash.com/photo-1504711434969-e33886168d5c?w=600&h=400&fit=crop",
+                "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop",
             },
             {
               title: "Blog",
