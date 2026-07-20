@@ -2,39 +2,22 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
-import BookingWidget from "./BookingWidget";
+import HomeBookingWidget from "./HomeBookingWidget";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
-const slides = [
-  {
-    id: 1,
-    src: "/cars/New folder/3.png",
-    title: "AB.Limo Model S",
-    desc: "The AB.Limo Model S is a full-sized electric five-door, liftback, produced by AB.Limo. Since its introduction June 2012 it has achieved rapidly growing sale from Norway and California.",
-  },
-  {
-    id: 2,
-    src: "/cars/New folder/1.png",
-    title: "Lexus LS 500",
-    desc: "Experience uncompromising luxury and meticulous craftsmanship. The Lexus LS 500 delivers a smooth, powerful ride perfect for executive travel and high-end transport.",
-  },
-  {
-    id: 3,
-    src: "/cars/New folder/2.png",
-    title: "Mercedes Sprinter",
-    desc: "Ideal for group travel, the Mercedes Sprinter offers unparalleled space and premium amenities, ensuring your entire party travels in absolute comfort and style.",
-  },
-  {
-    id: 4,
-    src: "/cars/New folder/4.png",
-    title: "GMC Yukon Elite",
-    desc: "Command the road with the robust GMC SUV, blending dominating power with sophisticated style and ample luggage capacity for any journey.",
-  },
+const slideImages = [
+  { id: 1, src: "/cars/New folder/3.png" },
+  { id: 2, src: "/cars/New folder/1.png" },
+  { id: 3, src: "/cars/New folder/2.png" },
+  { id: 4, src: "/cars/New folder/4.png" },
 ];
 
-export default function HeroSection() {
+export default function HeroSection({ dict }: { dict: Dictionary }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [titleVisible, setTitleVisible] = useState(true);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const slides = dict.home.slides;
 
   const updateText = useCallback(() => {
     setTitleVisible(false);
@@ -52,7 +35,7 @@ export default function HeroSection() {
         updateText();
       }, 5000);
     },
-    [currentIndex, updateText]
+    [currentIndex, updateText, slides.length]
   );
 
   useEffect(() => {
@@ -63,7 +46,7 @@ export default function HeroSection() {
     return () => {
       if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     };
-  }, [updateText]);
+  }, [updateText, slides.length]);
 
   const getCarClass = (index: number) => {
     if (index === currentIndex) return "car-slide car-active";
@@ -83,11 +66,11 @@ export default function HeroSection() {
       <div className="hidden md:block absolute inset-0 w-full h-full">
         {/* Slider images */}
         <div className="absolute inset-0 w-full h-full z-10 pointer-events-none">
-          {slides.map((slide, index) => (
+          {slideImages.map((slide, index) => (
             <Image
               key={slide.id}
               src={slide.src}
-              alt={slide.title}
+              alt={slides[index].title}
               width={910}
               height={400}
               className={getCarClass(index)}
@@ -143,7 +126,7 @@ export default function HeroSection() {
               {slides[currentIndex].desc}
             </p>
             <button className="border-2 border-white text-white px-8 py-3 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
-              Book Now
+              {dict.hero.bookNow}
             </button>
           </div>
         </div>
@@ -155,11 +138,11 @@ export default function HeroSection() {
         <div className="relative w-full flex-1 flex justify-center items-center min-h-[35vh]">
           {/* Cars behind chauffeur */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            {slides.map((slide, index) => (
+            {slideImages.map((slide, index) => (
               <Image
                 key={slide.id}
                 src={slide.src}
-                alt={slide.title}
+                alt={slides[index].title}
                 width={500}
                 height={250}
                 className={`absolute w-[85%] h-auto object-contain transition-all duration-700 ${
@@ -203,13 +186,13 @@ export default function HeroSection() {
             {slides[currentIndex].desc}
           </p>
           <button className="border-2 border-white text-white px-7 py-2.5 text-[11px] font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
-            Book Now
+            {dict.hero.bookNow}
           </button>
         </div>
 
         {/* Horizontal pagination dots */}
         <div className="flex items-center justify-center gap-5 py-3 pointer-events-auto">
-          {slides.map((_, index) => (
+          {slides.map((_: unknown, index: number) => (
             <div
               key={index}
               className="flex items-center justify-center w-[18px] h-[18px] cursor-pointer"
@@ -227,7 +210,7 @@ export default function HeroSection() {
 
       {/* Booking form */}
       <div className="relative z-40 w-full flex justify-center pb-8 md:pb-16 pt-4 md:pt-8 mt-auto px-4">
-        <BookingWidget />
+        <HomeBookingWidget />
       </div>
     </section>
   );

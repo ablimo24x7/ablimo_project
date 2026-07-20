@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 function LocationIcon() {
   return (
@@ -27,11 +28,13 @@ function ClockIcon() {
 }
 
 interface BookingWidgetProps {
+  dict: Dictionary;
   className?: string;
 }
 
-export default function BookingWidget({ className = "" }: BookingWidgetProps) {
+export default function BookingWidget({ dict, className = "" }: BookingWidgetProps) {
   const [activeTab, setActiveTab] = useState<"one-way" | "hourly">("one-way");
+  const b = dict.booking;
 
   return (
     <div
@@ -47,7 +50,7 @@ export default function BookingWidget({ className = "" }: BookingWidgetProps) {
               : "text-gray-600 hover:bg-gray-100"
           }`}
         >
-          One way
+          {b.oneWay}
         </button>
         <button
           onClick={() => setActiveTab("hourly")}
@@ -57,7 +60,7 @@ export default function BookingWidget({ className = "" }: BookingWidgetProps) {
               : "text-gray-600 hover:bg-gray-100"
           }`}
         >
-          By the hour
+          {b.byTheHour}
         </button>
       </div>
 
@@ -66,13 +69,13 @@ export default function BookingWidget({ className = "" }: BookingWidgetProps) {
         {/* From */}
         <div>
           <label className="block text-[11px] font-bold text-gray-500 mb-1.5">
-            From
+            {b.from}
           </label>
           <div className="flex items-center gap-2.5 border-2 border-transparent focus-within:border-gray-800 rounded-xl bg-gray-50 px-3 py-2.5 transition-colors">
             <LocationIcon />
             <input
               type="text"
-              placeholder="Address, airport, hotel, ..."
+              placeholder={b.pickupPlaceholder}
               className="w-full text-sm text-gray-800 placeholder-gray-400 outline-none bg-transparent"
             />
           </div>
@@ -82,13 +85,13 @@ export default function BookingWidget({ className = "" }: BookingWidgetProps) {
         {activeTab === "one-way" ? (
           <div>
             <label className="block text-[11px] font-bold text-gray-500 mb-1.5">
-              To
+              {b.to}
             </label>
             <div className="flex items-center gap-2.5 border-2 border-transparent focus-within:border-gray-800 rounded-xl bg-gray-50 px-3 py-2.5 transition-colors">
               <LocationIcon />
               <input
                 type="text"
-                placeholder="Address, airport, hotel, ..."
+                placeholder={b.pickupPlaceholder}
                 className="w-full text-sm text-gray-800 placeholder-gray-400 outline-none bg-transparent"
               />
             </div>
@@ -96,14 +99,14 @@ export default function BookingWidget({ className = "" }: BookingWidgetProps) {
         ) : (
           <div>
             <label className="block text-[11px] font-bold text-gray-500 mb-1.5">
-              Duration
+              {b.duration}
             </label>
             <div className="flex items-center gap-2.5 border-2 border-transparent focus-within:border-gray-800 rounded-xl bg-gray-50 px-3 py-2.5 transition-colors">
               <ClockIcon />
               <select className="w-full text-sm text-gray-800 outline-none bg-transparent appearance-none cursor-pointer">
-                <option>2 hours (80 km included)</option>
-                <option>3 hours (120 km included)</option>
-                <option>4 hours (160 km included)</option>
+                <option>{b.hours80km}</option>
+                <option>{b.hours120km}</option>
+                <option>{b.hours160km}</option>
               </select>
             </div>
           </div>
@@ -113,26 +116,26 @@ export default function BookingWidget({ className = "" }: BookingWidgetProps) {
         <div className="flex gap-3">
           <div className="flex-1">
             <label className="block text-[11px] font-bold text-gray-500 mb-1.5">
-              Date
+              {b.date}
             </label>
             <div className="flex items-center gap-2.5 border-2 border-transparent focus-within:border-gray-800 rounded-xl bg-gray-50 px-3 py-2.5 transition-colors">
               <CalendarIcon />
               <input
                 type="text"
-                placeholder="Select date"
+                placeholder={b.selectDate}
                 className="w-full text-sm text-gray-800 placeholder-gray-400 outline-none bg-transparent"
               />
             </div>
           </div>
           <div className="flex-1">
             <label className="block text-[11px] font-bold text-gray-500 mb-1.5">
-              Pickup time
+              {b.pickupTime}
             </label>
             <div className="flex items-center gap-2.5 border-2 border-transparent focus-within:border-gray-800 rounded-xl bg-gray-50 px-3 py-2.5 transition-colors">
               <ClockIcon />
               <input
                 type="text"
-                placeholder="Select time"
+                placeholder={b.selectTime}
                 className="w-full text-sm text-gray-800 placeholder-gray-400 outline-none bg-transparent"
               />
             </div>
@@ -141,12 +144,12 @@ export default function BookingWidget({ className = "" }: BookingWidgetProps) {
 
         {/* Helper Text */}
         <p className="text-[11px] text-gray-400 -mt-1">
-          Chauffeur will wait 15 minutes free of charge.
+          {b.helperText}
         </p>
 
         {/* Search Button */}
         <button className="w-full bg-[#292a30] text-white py-3.5 rounded-full text-sm font-semibold hover:bg-[#1c1d21] transition-colors cursor-pointer mt-1">
-          Search
+          {b.search}
         </button>
       </div>
     </div>
