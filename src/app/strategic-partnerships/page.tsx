@@ -14,7 +14,7 @@ const partnershipCards = [
     description:
       "Seamlessly connect your passengers with premium ground transportation. Integrate our API into your booking flow for a complete travel experience.",
     image:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
     icon: "✈️",
   },
   {
