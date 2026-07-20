@@ -147,9 +147,9 @@ const citySeoImages: Record<string, string[]> = {
   ],
   dubai: [
     "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1580674285054-bed31e145f59?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1546412414-e18852590e8e?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1691664054143-ccdc900eca74?q=80&w=1544&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1584546459262-0ddde08da490?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ],
   "abu-dhabi": [
     "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
