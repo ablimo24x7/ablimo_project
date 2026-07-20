@@ -286,10 +286,10 @@ const serviceClasses = [
       "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag",
     availability: "Available in most of our business districts",
     images: [
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1617531653342-4a97e1f01e55?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1779025313068-b4a11d86bf0d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1779025313068-b4a11d86bf0d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&h=500&fit=crop",
     ],
   },
