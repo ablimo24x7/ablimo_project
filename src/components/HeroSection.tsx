@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
-import HomeBookingWidget from "./HomeBookingWidget";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const slideImages = [
@@ -15,9 +14,11 @@ const slideImages = [
 export default function HeroSection({ dict }: { dict: Dictionary }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [titleVisible, setTitleVisible] = useState(true);
+  const [isOneWay, setIsOneWay] = useState(true);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const slides = dict.home.slides;
+  const b = dict.booking;
 
   const updateText = useCallback(() => {
     setTitleVisible(false);
@@ -209,8 +210,95 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
       </div>
 
       {/* Booking form */}
-      <div className="relative z-40 w-full flex justify-center pb-8 md:pb-16 pt-4 md:pt-8 mt-auto px-4">
-        <HomeBookingWidget />
+      <div className="relative z-40 w-full flex flex-col items-center pb-8 md:pb-16 pt-4 md:pt-8 mt-auto">
+        <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-lg border border-gray-600/50">
+          <button
+            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all cursor-pointer ${
+              isOneWay
+                ? "bg-[#e4e4e4] text-[#292a30] shadow-md"
+                : "text-gray-400 hover:text-white"
+            }`}
+            onClick={() => setIsOneWay(true)}
+          >
+            {b.oneWay}
+          </button>
+          <button
+            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all cursor-pointer ${
+              !isOneWay
+                ? "bg-[#e4e4e4] text-[#292a30] shadow-md"
+                : "text-gray-400 hover:text-white"
+            }`}
+            onClick={() => setIsOneWay(false)}
+          >
+            {b.byTheHour}
+          </button>
+        </div>
+        <div className="w-full max-w-[1200px] px-4 md:px-0">
+          <div className="flex flex-col md:flex-row items-stretch md:items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-3 md:p-4 gap-3 md:gap-0">
+            <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+              <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
+                {b.from}
+              </label>
+              <input
+                type="text"
+                placeholder={b.pickupPlaceholder}
+                className="w-full bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm"
+              />
+            </div>
+            {isOneWay ? (
+              <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+                <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
+                  {b.to}
+                </label>
+                <input
+                  type="text"
+                  placeholder={b.pickupPlaceholder}
+                  className="w-full bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm"
+                />
+              </div>
+            ) : (
+              <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+                <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
+                  {b.duration}
+                </label>
+                <div className="relative">
+                  <select className="w-full bg-transparent text-gray-200 font-medium appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm cursor-pointer">
+                    <option className="bg-[#474850]">
+                      {b.hours80km}
+                    </option>
+                    <option className="bg-[#474850]">
+                      {b.hours120km}
+                    </option>
+                    <option className="bg-[#474850]">
+                      {b.hours160km}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            )}
+            <div className="flex-1 md:flex-[0.8] w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+              <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
+                {b.date}
+              </label>
+              <select className="w-full bg-transparent text-gray-300 appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm cursor-pointer">
+                <option className="bg-[#474850]">{b.selectDate}</option>
+              </select>
+            </div>
+            <div className="flex-1 md:flex-[0.8] w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
+              <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
+                {b.pickupTime}
+              </label>
+              <select className="w-full bg-transparent text-white font-semibold appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm cursor-pointer">
+                <option className="bg-[#474850]">{b.selectTime}</option>
+              </select>
+            </div>
+            <div className="px-3 md:px-4 mt-2 md:mt-0 pb-1">
+              <button className="bg-[#2a2c35] hover:bg-[#1f2027] text-white border border-gray-500/50 px-6 md:px-8 py-[10px] text-xs md:text-sm font-semibold rounded-full transition-all duration-300 w-full md:w-auto cursor-pointer">
+                {b.search}
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
