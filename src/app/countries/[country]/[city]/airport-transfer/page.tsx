@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useState, useCallback } from "react";
+import BookingWidget from "@/components/BookingWidget";
 
 const countryNames: Record<string, string> = {
   us: "US",
@@ -412,29 +413,7 @@ function ArrowUp() {
   );
 }
 
-function LocationIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="#181a1f">
-      <path d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13Z" />
-    </svg>
-  );
-}
 
-function CalendarIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" className="text-gray-500">
-      <path d="M17 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3ZM4 9V19H20V9H4ZM6 13H11V17H6V13Z" />
-    </svg>
-  );
-}
-
-function ClockIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" className="text-gray-500">
-      <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM13 12V7H11V14H17V12H13Z" />
-    </svg>
-  );
-}
 
 export default function DynamicAirportTransferPage() {
   const params = useParams();
@@ -447,7 +426,6 @@ export default function DynamicAirportTransferPage() {
   const heroImage = cityHeroImages[citySlug] || cityHeroImages.default;
   const seoImages = citySeoImages[citySlug] || citySeoImages.default;
 
-  const [activeTab, setActiveTab] = useState<"one-way" | "hourly">("one-way");
   const [benefitIndex, setBenefitIndex] = useState(0);
   const [serviceImageIndices, setServiceImageIndices] = useState<number[]>(
     serviceClasses.map(() => 0)
@@ -486,111 +464,14 @@ export default function DynamicAirportTransferPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#292a30]" />
 
         {/* Hero Content + Booking Widget */}
-        <div className="absolute inset-0 flex flex-col justify-end">
-          <div className="w-full max-w-7xl mx-auto px-8 pb-8">
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-8 max-w-2xl">
-              Airport Transfer in {cityName}
-            </h1>
-
-            {/* Booking Widget */}
-            <div className="bg-white rounded-2xl p-6 max-w-4xl">
-              {/* Tabs */}
-              <div className="flex gap-1 mb-5">
-                <button
-                  onClick={() => setActiveTab("one-way")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-colors ${
-                    activeTab === "one-way"
-                      ? "bg-[#292a30] text-white"
-                      : "text-gray-600 hover:bg-gray-100"
-                  }`}
-                >
-                  One way
-                </button>
-                <button
-                  onClick={() => setActiveTab("hourly")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-colors ${
-                    activeTab === "hourly"
-                      ? "bg-[#292a30] text-white"
-                      : "text-gray-600 hover:bg-gray-100"
-                  }`}
-                >
-                  By the hour
-                </button>
-              </div>
-
-              {/* Form */}
-              <div className="flex flex-col md:flex-row gap-3">
-                {/* From */}
-                <div className="flex-1 relative">
-                  <label className="block text-xs font-bold text-gray-500 mb-1">
-                    From
-                  </label>
-                  <div className="flex items-center gap-2 border-b border-gray-300 pb-2">
-                    <LocationIcon />
-                    <input
-                      type="text"
-                      placeholder="Address, airport, hotel, ..."
-                      className="w-full text-sm text-gray-800 placeholder-gray-400 outline-none bg-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* To */}
-                <div className="flex-1 relative">
-                  <label className="block text-xs font-bold text-gray-500 mb-1">
-                    To
-                  </label>
-                  <div className="flex items-center gap-2 border-b border-gray-300 pb-2">
-                    <LocationIcon />
-                    <input
-                      type="text"
-                      placeholder="Address, airport, hotel, ..."
-                      className="w-full text-sm text-gray-800 placeholder-gray-400 outline-none bg-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* Date */}
-                <div className="w-full md:w-44">
-                  <label className="block text-xs font-bold text-gray-500 mb-1">
-                    Date
-                  </label>
-                  <div className="flex items-center gap-2 border-b border-gray-300 pb-2">
-                    <CalendarIcon />
-                    <input
-                      type="text"
-                      placeholder="Select date"
-                      className="w-full text-sm text-gray-800 placeholder-gray-400 outline-none bg-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* Pickup Time */}
-                <div className="w-full md:w-44">
-                  <label className="block text-xs font-bold text-gray-500 mb-1">
-                    Pickup time
-                  </label>
-                  <div className="flex items-center gap-2 border-b border-gray-300 pb-2">
-                    <ClockIcon />
-                    <input
-                      type="text"
-                      placeholder="Select time"
-                      className="w-full text-sm text-gray-800 placeholder-gray-400 outline-none bg-transparent"
-                    />
-                  </div>
-                  <p className="text-[11px] text-gray-400 mt-1">
-                    Chauffeur will wait 15 minutes free of charge.
-                  </p>
-                </div>
-
-                {/* Search Button */}
-                <div className="flex items-end">
-                  <button className="bg-[#292a30] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-[#1c1d21] transition-colors whitespace-nowrap">
-                    Search
-                  </button>
-                </div>
-              </div>
+        <div className="absolute inset-0 flex items-end">
+          <div className="w-full max-w-7xl mx-auto px-8 pb-8 flex flex-col lg:flex-row items-end justify-between gap-8">
+            <div className="max-w-xl">
+              <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
+                Airport Transfer in {cityName}
+              </h1>
             </div>
+            <BookingWidget />
           </div>
         </div>
       </section>

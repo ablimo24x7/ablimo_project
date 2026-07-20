@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import BookingWidget from "@/components/BookingWidget";
 
-export const metadata: Metadata = {
+const metadata = {
   title: "Airport Transfer Service Worldwide | AB.Limo",
   description:
     "Book a luxury airport transfer service worldwide. Competitive rates, professional chauffeurs, and seamless airport travel with AB.Limo.",
@@ -89,7 +91,7 @@ export default function AirportTransferPage() {
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=1920&h=800&fit=crop"
           alt="Airport Transfer"
@@ -97,20 +99,17 @@ export default function AirportTransferPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#292a30]" />
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            Airport Transfer Service Worldwide
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Seamless, reliable, and luxurious airport transfers in cities around the globe.
-          </p>
-          <Link
-            href="/"
-            className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
-          >
-            Book Now
-          </Link>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#292a30]" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-8 flex flex-col lg:flex-row items-end justify-between gap-8">
+          <div className="max-w-xl">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+              Airport Transfer Service Worldwide
+            </h1>
+            <p className="text-lg text-gray-300">
+              Seamless, reliable, and luxurious airport transfers in cities around the globe.
+            </p>
+          </div>
+          <BookingWidget />
         </div>
       </section>
 
