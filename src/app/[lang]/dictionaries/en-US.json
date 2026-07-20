@@ -6,11 +6,28 @@
   "header": {
     "logo": "AB.Limo",
     "nav": {
-      "order": "ORDER",
-      "bookNow": "BOOK NOW",
-      "charging": "CHARGING",
-      "gallery": "GALLERY",
-      "videos": "VIDEOS"
+      "ourServices": "Our services",
+      "forBusiness": "For business",
+      "forChauffeurs": "For chauffeurs",
+      "help": "Help",
+      "signIn": "Sign in",
+      "bookNow": "Book now"
+    },
+    "dropdowns": {
+      "services": {
+        "cityToCity": "City-to-City rides",
+        "chauffeurHailing": "Chauffeur hailing",
+        "airportTransfer": "Airport transfers",
+        "hourlyHire": "Hourly hire",
+        "chauffeurService": "Chauffeur service",
+        "limousineService": "Limousine service"
+      },
+      "business": {
+        "overview": "Overview",
+        "corporations": "Corporations",
+        "travelAgencies": "Travel agencies",
+        "strategicPartnerships": "Strategic partnerships"
+      }
     }
   },
   "booking": {

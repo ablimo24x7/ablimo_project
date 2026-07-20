@@ -1,37 +1,38 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { locales, type Locale } from "@/app/[lang]/dictionaries";
 
 const languageLabels: Record<Locale, { flag: string; label: string }> = {
-  "en-US": { flag: "🇺🇸", label: "EN-US" },
-  "en-UK": { flag: "🇬🇧", label: "EN-UK" },
+  "en-US": { flag: "🇺🇸", label: "English (US)" },
+  "en-UK": { flag: "🇬🇧", label: "English (UK)" },
   ar: { flag: "🇸🇦", label: "العربية" },
 };
 
 interface LanguageSwitcherProps {
   currentLang: Locale;
+  isOpen: boolean;
+  onToggle: () => void;
+  onClose: () => void;
 }
 
-export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClose }: LanguageSwitcherProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        onClose();
       }
     }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [isOpen, onClose]);
 
   const getLocalePath = (locale: Locale) => {
     const segments = pathname.split("/");
@@ -40,10 +41,11 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
   };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative" ref={ref}>
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 text-xs font-semibold tracking-wider text-gray-400 hover:text-white transition-colors cursor-pointer px-2 py-1.5 rounded-lg hover:bg-white/10"
+        onClick={onToggle}
+        onMouseEnter={onToggle}
+        className="flex items-center gap-1.5 text-xs font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors cursor-pointer px-3 py-2 rounded-lg hover:bg-white/10"
       >
         <span>{languageLabels[currentLang].flag}</span>
         <span>{languageLabels[currentLang].label}</span>
@@ -53,26 +55,24 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
           stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-1 bg-[#2a2c35] border border-gray-600/50 rounded-xl shadow-xl overflow-hidden min-w-[140px] z-50">
+        <div
+          className="absolute right-0 top-full mt-1 bg-[#2a2c35] border border-gray-600/50 rounded-xl shadow-xl overflow-hidden min-w-[180px] z-50"
+          onMouseLeave={onClose}
+        >
           {locales.map((locale) => (
             <Link
               key={locale}
               href={getLocalePath(locale)}
-              onClick={() => setIsOpen(false)}
-              className={`flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${
+              onClick={onClose}
+              className={`flex items-center gap-2.5 px-4 py-3 text-sm transition-colors ${
                 locale === currentLang
                   ? "bg-white/10 text-white"
-                  : "text-gray-400 hover:bg-white/5 hover:text-white"
+                  : "text-gray-300 hover:bg-white/5 hover:text-white"
               }`}
             >
               <span>{languageLabels[locale].flag}</span>

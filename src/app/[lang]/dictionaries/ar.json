@@ -6,11 +6,28 @@
   "header": {
     "logo": "AB.Limo",
     "nav": {
-      "order": "طلب",
-      "bookNow": "احجز الآن",
-      "charging": "شحن",
-      "gallery": "المعرض",
-      "videos": "الفيديو"
+      "ourServices": "خدماتنا",
+      "forBusiness": "للشركات",
+      "forChauffeurs": "للسائقين",
+      "help": "مساعدة",
+      "signIn": "تسجيل الدخول",
+      "bookNow": "احجز الآن"
+    },
+    "dropdowns": {
+      "services": {
+        "cityToCity": "رحلات مدينة إلى مدينة",
+        "chauffeurHailing": "استدعاء سائق",
+        "airportTransfer": "نقل المطار",
+        "hourlyHire": "التوظيف بالساعة",
+        "chauffeurService": "خدمة السائق",
+        "limousineService": "خدمة الليموسين"
+      },
+      "business": {
+        "overview": "نظرة عامة",
+        "corporations": "الشركات",
+        "travelAgencies": "وكالات السفر",
+        "strategicPartnerships": "الشراكات الاستراتيجية"
+      }
     }
   },
   "booking": {
