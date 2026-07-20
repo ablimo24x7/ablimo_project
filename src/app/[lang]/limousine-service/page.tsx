@@ -17,7 +17,6 @@ const features = [
       </svg>
     ),
     titleKey: "trustedReliable" as const,
-    descriptionKey: "trustedReliableDesc" as const,
   },
   {
     icon: (
@@ -26,7 +25,6 @@ const features = [
       </svg>
     ),
     titleKey: "transparentPricing" as const,
-    descriptionKey: "transparentPricingDesc" as const,
   },
   {
     icon: (
@@ -35,65 +33,9 @@ const features = [
       </svg>
     ),
     titleKey: "professionalChauffeurs" as const,
-    descriptionKey: "professionalChauffeursDesc" as const,
   },
 ];
 
-const vehicleClasses = [
-  {
-    title: "Business Class",
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop",
-    passengers: 3,
-    luggage: 2,
-    description: "Executive sedans for business and airport transfers",
-  },
-  {
-    title: "First Class",
-    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop",
-    passengers: 3,
-    luggage: 3,
-    description: "Premium luxury vehicles for special occasions",
-  },
-  {
-    title: "Business Van/SUV",
-    image: "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop",
-    passengers: 6,
-    luggage: 6,
-    description: "Spacious vehicles for groups and extra luggage",
-  },
-];
-
-const faqItems = [
-  {
-    questionKey: "q1" as const,
-    answerKey: "q1Answer" as const,
-  },
-  {
-    questionKey: "q2" as const,
-    answerKey: "q2Answer" as const,
-  },
-  {
-    questionKey: "q3" as const,
-    answerKey: "q3Answer" as const,
-  },
-  {
-    questionKey: "q4" as const,
-    answerKey: "q4Answer" as const,
-  },
-];
-
-const featureTexts: Record<string, { title: string; description: string }> = {
-  trustedReliable: { title: "Trusted & reliable", description: "Our limousine service is trusted by millions of travelers worldwide for its reliability and consistency." },
-  transparentPricing: { title: "Transparent pricing", description: "Know your fare before you ride. No hidden fees, no surge pricing, just honest and competitive rates." },
-  professionalChauffeurs: { title: "Professional chauffeurs", description: "Every chauffeur is professionally trained, licensed, and committed to providing exceptional service." },
-};
-
-const faqTexts: Record<string, { question: string; answer: string }> = {
-  q1: { question: "What is a limousine service?", answer: "A limousine service provides professional chauffeur-driven luxury vehicles for transportation. It offers a premium experience with well-maintained vehicles, trained chauffeurs, and door-to-door service." },
-  q2: { question: "How far in advance should I book?", answer: "We recommend booking at least 2-4 hours in advance for the best availability. However, we also accommodate last-minute bookings based on vehicle availability in your area." },
-  q3: { question: "Can I request a specific vehicle model?", answer: "While we cannot guarantee specific models, we will match you with the best available vehicle in your chosen class. All vehicles in our fleet are premium and well-maintained." },
-  q4: { question: "Is the limousine service available 24/7?", answer: "Yes, our limousine service operates 24 hours a day, 7 days a week. You can book a ride anytime through our website, app, or by contacting our customer service team." },
-};
 
 export default async function LimousineServicePage({
   params,
@@ -132,11 +74,11 @@ export default async function LimousineServicePage({
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href="/" className="hover:text-white transition-colors">
-            Home
+          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            {dict.limousineService.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-white">Limousine Service</span>
+          <span className="text-white">{dict.limousineService.breadcrumb.limousineService}</span>
         </nav>
       </div>
 
@@ -144,7 +86,7 @@ export default async function LimousineServicePage({
       <section className="max-w-7xl mx-auto px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature) => {
-            const texts = featureTexts[feature.titleKey];
+            const texts = dict.limousineService.features[feature.titleKey as keyof typeof dict.limousineService.features] as { title: string; desc: string };
             return (
               <div
                 key={feature.titleKey}
@@ -153,7 +95,7 @@ export default async function LimousineServicePage({
                 <div className="text-gray-400 mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{texts.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  {texts.description}
+                  {texts.desc}
                 </p>
               </div>
             );
@@ -171,7 +113,7 @@ export default async function LimousineServicePage({
             {dict.limousineService.chooseClassDesc}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {vehicleClasses.map((vehicle) => (
+            {Object.values(dict.limousineService.vehicleClasses).map((vehicle) => (
               <div
                 key={vehicle.title}
                 className="bg-[#292a30] rounded-2xl overflow-hidden group"
@@ -186,19 +128,19 @@ export default async function LimousineServicePage({
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{vehicle.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{vehicle.description}</p>
+                  <p className="text-gray-400 text-sm mb-4">{vehicle.desc}</p>
                   <div className="flex gap-4 text-sm text-gray-400">
                     <span className="flex items-center gap-1">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                       </svg>
-                      {vehicle.passengers} Passengers
+                      {vehicle.passengers} {dict.common.passengers}
                     </span>
                     <span className="flex items-center gap-1">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z" />
                       </svg>
-                      {vehicle.luggage} Luggage
+                      {vehicle.luggage} {dict.common.luggage}
                     </span>
                   </div>
                 </div>
@@ -330,32 +272,29 @@ export default async function LimousineServicePage({
             {dict.limousineService.faq.title}
           </h2>
           <div className="space-y-4">
-            {faqItems.map((item) => {
-              const texts = faqTexts[item.questionKey];
-              return (
-                <div
-                  key={item.questionKey}
-                  className="bg-[#292a30] rounded-2xl overflow-hidden"
-                >
-                  <details className="group">
-                    <summary className="w-full p-6 text-left flex items-center justify-between hover:bg-[#2a2c35] transition-colors cursor-pointer list-none">
-                      <h3 className="text-lg font-semibold pr-4">{texts.question}</h3>
-                      <svg
-                        className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </summary>
-                    <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
-                      {texts.answer}
-                    </div>
-                  </details>
-                </div>
-              );
-            })}
+            {dict.limousineService.faq.items.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#292a30] rounded-2xl overflow-hidden"
+              >
+                <details className="group">
+                  <summary className="w-full p-6 text-left flex items-center justify-between hover:bg-[#2a2c35] transition-colors cursor-pointer list-none">
+                    <h3 className="text-lg font-semibold pr-4">{item.q}</h3>
+                    <svg
+                      className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                    {item.a}
+                  </div>
+                </details>
+              </div>
+            ))}
           </div>
         </div>
       </section>

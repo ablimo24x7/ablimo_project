@@ -5,54 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
-const pressReleases = [
-  {
-    id: 1,
-    date: "June 12, 2026",
-    title: "AB.Limo Expands to 10 New Cities Across Southeast Asia",
-    excerpt:
-      "AB.Limo announces its entry into 10 new Southeast Asian markets, including Bangkok, Kuala Lumpur, and Jakarta, as part of its global growth strategy.",
-    image:
-      "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=600&h=400&fit=crop",
-  },
-  {
-    id: 2,
-    date: "April 28, 2026",
-    title: "AB.Limo Achieves Carbon Neutral Operations in All European Markets",
-    excerpt:
-      "Our commitment to sustainability reaches a major milestone as all European operations are now fully carbon neutral through offsetting and EV adoption.",
-    image:
-      "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&h=400&fit=crop",
-  },
-  {
-    id: 3,
-    date: "March 15, 2026",
-    title: "Strategic Partnership with Emirates for Premium Ground Transportation",
-    excerpt:
-      "AB.Limo partners with Emirates airline to provide seamless luxury ground transfers for first and business class passengers across 25 global destinations.",
-    image:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=400&fit=crop",
-  },
-  {
-    id: 4,
-    date: "February 3, 2026",
-    title: "AB.Limo Launches New Corporate Mobility Platform",
-    excerpt:
-      "Introducing a next-generation corporate travel management platform with real-time analytics, cost optimization, and seamless expense integration.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-  },
-  {
-    id: 5,
-    date: "January 18, 2026",
-    title: "AB.Limo Surpasses 2 Million Completed Rides Globally",
-    excerpt:
-      "A landmark achievement as AB.Limo celebrates over 2 million safe, comfortable, and on-time rides delivered to passengers worldwide.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
-  },
-];
-
 const years = ["2026", "2025", "2024", "2023"];
 
 export default function PressReleasesClient({ dict }: { dict: Dictionary }) {
@@ -65,7 +17,7 @@ export default function PressReleasesClient({ dict }: { dict: Dictionary }) {
     { name: dict.press.tabs.presskit, href: "/press/presskit", active: false },
   ];
 
-  const filteredReleases = pressReleases.filter(
+  const filteredReleases = dict.press.releases.filter(
     (r) => r.date.includes(selectedYear)
   );
 
@@ -159,9 +111,9 @@ export default function PressReleasesClient({ dict }: { dict: Dictionary }) {
           </div>
 
           <div className="space-y-6">
-            {filteredReleases.slice(0, visibleCount).map((release) => (
+            {filteredReleases.slice(0, visibleCount).map((release, index) => (
               <article
-                key={release.id}
+                key={index}
                 className="bg-[#35363c] rounded-xl overflow-hidden hover:scale-[1.01] transition-transform duration-300 group"
               >
                 <div className="flex flex-col md:flex-row">
@@ -226,8 +178,7 @@ export default function PressReleasesClient({ dict }: { dict: Dictionary }) {
             {dict.press.contact.heading}
           </h2>
           <p className="text-gray-400 mb-10 max-w-2xl mx-auto">
-            For media inquiries, interview requests, or to receive our press kit,
-            please reach out to our communications team.
+            {dict.press.contact.desc}
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-[#292a30] p-6 rounded-xl border border-gray-700/50">
@@ -247,7 +198,7 @@ export default function PressReleasesClient({ dict }: { dict: Dictionary }) {
                 </svg>
               </div>
               <h3 className="font-semibold mb-2">{dict.press.contact.email}</h3>
-              <p className="text-gray-400 text-sm">press@ablimo.com</p>
+              <p className="text-gray-400 text-sm">{dict.press.contact.emailValue}</p>
             </div>
             <div className="bg-[#292a30] p-6 rounded-xl border border-gray-700/50">
               <div className="w-12 h-12 bg-[#35363c] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -266,7 +217,7 @@ export default function PressReleasesClient({ dict }: { dict: Dictionary }) {
                 </svg>
               </div>
               <h3 className="font-semibold mb-2">{dict.press.contact.phone}</h3>
-              <p className="text-gray-400 text-sm">+971 4 555 0199</p>
+              <p className="text-gray-400 text-sm">{dict.press.contact.phoneValue}</p>
             </div>
             <div className="bg-[#292a30] p-6 rounded-xl border border-gray-700/50">
               <div className="w-12 h-12 bg-[#35363c] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -291,7 +242,7 @@ export default function PressReleasesClient({ dict }: { dict: Dictionary }) {
                 </svg>
               </div>
               <h3 className="font-semibold mb-2">{dict.press.contact.location}</h3>
-              <p className="text-gray-400 text-sm">Dubai, United Arab Emirates</p>
+              <p className="text-gray-400 text-sm">{dict.press.contact.locationValue}</p>
             </div>
           </div>
         </div>

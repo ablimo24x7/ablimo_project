@@ -95,12 +95,12 @@ export default function PartnersClient({ dict }: { dict: Dictionary }) {
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 leading-tight">
-            Unlock global
+            {dict.partners.unlockDemand.heading1}
             <br />
-            <span className="italic font-light text-gray-300">demand</span>
+            <span className="italic font-light text-gray-300">{dict.partners.unlockDemand.heading2}</span>
           </h2>
           <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-            Everything you need to grow your chauffeur business on a world-class platform.
+            {dict.partners.unlockDemand.desc}
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {features.slice(0, 3).map((feature) => (
@@ -241,9 +241,9 @@ export default function PartnersClient({ dict }: { dict: Dictionary }) {
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 leading-tight">
-            Frequently asked
+            {dict.partners.faqHeading.heading1}
             <br />
-            <span className="italic font-light text-gray-300">questions</span>
+            <span className="italic font-light text-gray-300">{dict.partners.faqHeading.heading2}</span>
           </h2>
           <div className="space-y-4">
             {dict.partners.faq.items.map((item, index) => (
@@ -298,8 +298,7 @@ export default function PartnersClient({ dict }: { dict: Dictionary }) {
             {dict.partners.cta.questions}
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Our partnerships team is here to help. Reach out and we&apos;ll
-            provide all the information you need to get started.
+            {dict.partners.cta.questionsDesc}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

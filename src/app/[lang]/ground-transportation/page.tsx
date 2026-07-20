@@ -46,11 +46,11 @@ export default async function GroundTransportationPage({
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href="/" className="hover:text-white transition-colors">
-            Home
+          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            {dict.groundTransportation.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-white">Ground Transportation</span>
+          <span className="text-white">{dict.groundTransportation.breadcrumb.groundTransportation}</span>
         </nav>
       </div>
 

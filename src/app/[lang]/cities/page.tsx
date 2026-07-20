@@ -16,5 +16,5 @@ export default async function CitiesPage({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
 
-  return <CitiesClient dict={dict} />;
+  return <CitiesClient dict={dict} lang={lang} />;
 }

@@ -9,91 +9,30 @@ const metadata = {
     "Book a luxury airport transfer service worldwide. Competitive rates, professional chauffeurs, and seamless airport travel with AB.Limo.",
 };
 
-const features = [
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    titleKey: "competitiveRates" as const,
-    descriptionKey: "competitiveRatesDesc" as const,
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    titleKey: "seamlessTravel" as const,
-    descriptionKey: "seamlessTravelDesc" as const,
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    titleKey: "travelOnYourTerms" as const,
-    descriptionKey: "travelOnYourTermsDesc" as const,
-  },
+const featureKeys = ["competitiveRates", "seamlessTravel", "travelOnYourTerms"] as const;
+
+const featureIcons = [
+  <svg key="competitiveRates" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>,
+  <svg key="seamlessTravel" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+  </svg>,
+  <svg key="travelOnYourTerms" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>,
 ];
 
-const vehicleClasses = [
-  {
-    title: "Business Class",
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop",
-    passengers: 3,
-    luggage: 2,
-    features: ["Wi-Fi", "Water bottles", "Phone charger"],
-  },
-  {
-    title: "First Class",
-    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop",
-    passengers: 3,
-    luggage: 3,
-    features: ["Wi-Fi", "Refreshments", "Premium leather seats"],
-  },
-  {
-    title: "Business Van/SUV",
-    image: "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop",
-    passengers: 6,
-    luggage: 6,
-    features: ["Wi-Fi", "Spacious interior", "Extra luggage space"],
-  },
-];
 
-const faqItems = [
-  {
-    questionKey: "q1" as const,
-    answerKey: "q1Answer" as const,
-  },
-  {
-    questionKey: "q2" as const,
-    answerKey: "q2Answer" as const,
-  },
-  {
-    questionKey: "q3" as const,
-    answerKey: "q3Answer" as const,
-  },
-];
+
+
 
 const globalCities = [
   "Dubai", "Riyadh", "Doha", "Abu Dhabi", "Jeddah", "London",
   "Paris", "New York", "Singapore", "Tokyo", "Berlin", "Istanbul",
 ];
 
-const featureTexts: Record<string, { title: string; description: string }> = {
-  competitiveRates: { title: "Competitive rates", description: "Enjoy transparent pricing with no hidden fees. Our airport transfer rates are competitive and fixed upfront." },
-  seamlessTravel: { title: "Seamless airport travel", description: "From booking to drop-off, enjoy a smooth and hassle-free airport transfer experience." },
-  travelOnYourTerms: { title: "Travel on your terms", description: "Schedule your pickup at your convenience. Our chauffeurs wait for you, even if your flight is delayed." },
-};
 
-const faqTexts: Record<string, { question: string; answer: string }> = {
-  q1: { question: "How do I book an airport transfer?", answer: "You can book an airport transfer through our website or mobile app. Simply enter your pickup and drop-off locations, select your preferred vehicle class, and confirm your booking. You'll receive a confirmation with your chauffeur details." },
-  q2: { question: "What happens if my flight is delayed?", answer: "We monitor all flights in real-time. If your flight is delayed, your chauffeur will automatically adjust the pickup time. You won't be charged extra for flight delays, and your chauffeur will be waiting when you land." },
-  q3: { question: "Is meet and greet service included?", answer: "Yes, meet and greet service is included with all airport transfers. Your chauffeur will meet you in the arrivals hall with a personalized name board and assist you with your luggage." },
-};
 
 export default async function AirportTransferPage({
   params,
@@ -132,28 +71,28 @@ export default async function AirportTransferPage({
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href="/" className="hover:text-white transition-colors">
-            Home
+          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            {dict.airportTransfer.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-white">Airport Transfer</span>
+          <span className="text-white">{dict.airportTransfer.breadcrumb.airportTransfer}</span>
         </nav>
       </div>
 
       {/* Feature Cards */}
       <section className="max-w-7xl mx-auto px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature) => {
-            const texts = featureTexts[feature.titleKey];
+          {featureKeys.map((key, index) => {
+            const feature = dict.airportTransfer.features[key];
             return (
               <div
-                key={feature.titleKey}
+                key={key}
                 className="bg-[#1c1d21] p-8 rounded-2xl hover:bg-[#2a2c35] transition-colors"
               >
-                <div className="text-gray-400 mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{texts.title}</h3>
+                <div className="text-gray-400 mb-4">{featureIcons[index]}</div>
+                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  {texts.description}
+                  {feature.desc}
                 </p>
               </div>
             );
@@ -171,9 +110,9 @@ export default async function AirportTransferPage({
             {dict.airportTransfer.discoverClassesDesc}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {vehicleClasses.map((vehicle) => (
+            {Object.entries(dict.airportTransfer.vehicleClasses).map(([key, vehicle]) => (
               <div
-                key={vehicle.title}
+                key={key}
                 className="bg-[#292a30] rounded-2xl overflow-hidden group"
               >
                 <div className="relative h-48 overflow-hidden">
@@ -191,13 +130,13 @@ export default async function AirportTransferPage({
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                       </svg>
-                      {vehicle.passengers} Passengers
+                      {vehicle.passengers} {dict.common.passengers}
                     </span>
                     <span className="flex items-center gap-1">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z" />
                       </svg>
-                      {vehicle.luggage} Luggage
+                      {vehicle.luggage} {dict.common.luggage}
                     </span>
                   </div>
                   <ul className="space-y-2">
@@ -306,16 +245,15 @@ export default async function AirportTransferPage({
           {dict.airportTransfer.faq.title}
         </h2>
         <div className="space-y-4">
-          {faqItems.map((item) => {
-            const texts = faqTexts[item.questionKey];
+          {dict.airportTransfer.faq.items.map((item, index) => {
             return (
               <div
-                key={item.questionKey}
+                key={index}
                 className="bg-[#1c1d21] rounded-2xl overflow-hidden"
               >
                 <details className="group">
                   <summary className="w-full p-6 text-left flex items-center justify-between hover:bg-[#2a2c35] transition-colors cursor-pointer list-none">
-                    <h3 className="text-lg font-semibold pr-4">{texts.question}</h3>
+                    <h3 className="text-lg font-semibold pr-4">{item.q}</h3>
                     <svg
                       className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
                       fill="none"
@@ -326,7 +264,7 @@ export default async function AirportTransferPage({
                     </svg>
                   </summary>
                   <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
-                    {texts.answer}
+                    {item.a}
                   </div>
                 </details>
               </div>

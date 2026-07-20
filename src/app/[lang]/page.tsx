@@ -24,12 +24,12 @@ export default async function Home({
   return (
     <>
       <HeroSection dict={dict} />
-      <ServicesSection />
-      <AboutSection />
-      <PricingSection />
-      <FleetSection />
-      <BrandOptions />
-      <FAQSection />
+      <ServicesSection dict={dict} />
+      <AboutSection dict={dict} />
+      <PricingSection dict={dict} />
+      <FleetSection dict={dict} />
+      <BrandOptions dict={dict} />
+      <FAQSection dict={dict} />
     </>
   );
 }

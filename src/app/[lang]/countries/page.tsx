@@ -16,5 +16,5 @@ export default async function CountriesPage({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
 
-  return <CountriesClient dict={dict} />;
+  return <CountriesClient dict={dict} lang={lang} />;
 }

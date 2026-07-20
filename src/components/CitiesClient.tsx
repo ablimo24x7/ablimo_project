@@ -97,7 +97,7 @@ function cityToSlug(city: string): string {
   return city.toLowerCase().replace(/\s+/g, "-");
 }
 
-export default function CitiesClient({ dict }: { dict: Dictionary }) {
+export default function CitiesClient({ dict, lang }: { dict: Dictionary; lang: string }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredCountries = citiesByCountry
@@ -134,7 +134,7 @@ export default function CitiesClient({ dict }: { dict: Dictionary }) {
             {dict.cities.hero.desc.replace("{count}", String(totalCities))}
           </p>
           <Link
-            href="/"
+            href={`/${lang}`}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.cities.bookNow}
@@ -145,7 +145,7 @@ export default function CitiesClient({ dict }: { dict: Dictionary }) {
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href="/" className="hover:text-white transition-colors">
+          <Link href={`/${lang}`} className="hover:text-white transition-colors">
             {dict.cities.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
@@ -201,14 +201,14 @@ export default function CitiesClient({ dict }: { dict: Dictionary }) {
                     {country.country}
                   </h3>
                   <span className="text-sm text-gray-500 font-medium">
-                    {country.cities.length} {country.cities.length === 1 ? "city" : "cities"}
+                    {country.cities.length} {country.cities.length === 1 ? dict.common.city : dict.common.cities}
                   </span>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                   {country.cities.map((city) => (
                     <Link
                       key={city}
-                      href={`/countries/${country.code}/${cityToSlug(city)}/airport-transfer`}
+                      href={`/${lang}/countries/${country.code}/${cityToSlug(city)}/airport-transfer`}
                       className="group bg-[#1c1d21] border border-gray-700/50 rounded-xl p-5 text-center hover:border-white/30 hover:bg-[#2a2c35] transition-all duration-300"
                     >
                       <div className="w-10 h-10 mx-auto mb-3 bg-[#292a30] rounded-full flex items-center justify-center border border-gray-700/50 group-hover:border-white/30 transition-colors">
@@ -254,17 +254,17 @@ export default function CitiesClient({ dict }: { dict: Dictionary }) {
             {dict.cities.cta.heading}
           </h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            We&apos;re constantly expanding our network. Contact us to request service in a new city, or browse our available countries.
+            {dict.cities.cta.desc}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/countries"
+              href={`/${lang}/countries`}
               className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
             >
               {dict.cities.cta.viewCountries}
             </Link>
             <Link
-              href="/"
+              href={`/${lang}`}
               className="inline-block border border-white text-white px-8 py-3 text-sm font-semibold rounded-full hover:bg-white hover:text-[#292a30] transition-colors"
             >
               {dict.cities.cta.contactUs}

@@ -2,50 +2,30 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const fleetCars = [
-  {
-    image: "/flee-8-min-768x357.png",
-    title: "Electric Class",
-    passengers: 4,
-    luggage: 2,
-    category: "suv",
-  },
-  {
-    image: "/flee-9-min-768x357.png",
-    title: "The BMW 7 Series Sedan",
-    passengers: 4,
-    luggage: 3,
-    category: "sedan",
-  },
-  {
-    image: "/v-class-768x357.png",
-    title: "Mercedes V-Class",
-    passengers: 4,
-    luggage: 3,
-    category: "van",
-  },
+  { image: "/flee-8-min-768x357.png", title: "Electric Class", passengers: 4, luggage: 2, category: "suv" },
+  { image: "/flee-9-min-768x357.png", title: "The BMW 7 Series Sedan", passengers: 4, luggage: 3, category: "sedan" },
+  { image: "/v-class-768x357.png", title: "Mercedes V-Class", passengers: 4, luggage: 3, category: "van" },
 ];
 
-const filters = [
-  { label: "Show All", value: "all" },
-  { label: "Sedan", value: "sedan" },
-  { label: "Suv", value: "suv" },
-  { label: "Van", value: "van" },
-];
-
-export default function FleetSection() {
+export default function FleetSection({ dict }: { dict: Dictionary }) {
   const [activeFilter, setActiveFilter] = useState("all");
+  const fleet = dict.home.fleet;
+  const filters = [
+    { label: fleet.filters.all, value: "all" },
+    { label: fleet.filters.sedan, value: "sedan" },
+    { label: fleet.filters.suv, value: "suv" },
+    { label: fleet.filters.van, value: "van" },
+  ];
 
-  const filteredCars =
-    activeFilter === "all"
-      ? fleetCars
-      : fleetCars.filter((car) => car.category === activeFilter);
+  const filteredCars = activeFilter === "all" ? fleetCars : fleetCars.filter((car) => car.category === activeFilter);
 
   return (
     <section className="bg-[#1c1d21] py-20 px-8 text-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Fleet</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">{fleet.title}</h2>
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
           {filters.map((filter) => (
             <button
@@ -66,22 +46,14 @@ export default function FleetSection() {
             <div
               key={car.title}
               className={`bg-[#3e3e48] p-6 rounded-xl text-center ${
-                activeFilter !== "all" && car.category !== activeFilter
-                  ? "hidden"
-                  : ""
+                activeFilter !== "all" && car.category !== activeFilter ? "hidden" : ""
               }`}
             >
-              <Image
-                src={car.image}
-                alt={car.title}
-                width={400}
-                height={200}
-                className="w-full h-auto mb-6 object-contain"
-              />
+              <Image src={car.image} alt={car.title} width={400} height={200} className="w-full h-auto mb-6 object-contain" />
               <h4 className="text-xl font-bold mb-4">{car.title}</h4>
               <div className="flex justify-center gap-6 text-sm text-gray-300">
-                <span>👤 Passengers {car.passengers}</span>
-                <span>💼 Luggage {car.luggage}</span>
+                <span>👤 {fleet.passengers} {car.passengers}</span>
+                <span>💼 {fleet.luggage} {car.luggage}</span>
               </div>
             </div>
           ))}

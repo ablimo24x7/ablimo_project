@@ -71,7 +71,7 @@ const featureIcons = [
   </svg>,
 ];
 
-export default function CountriesClient({ dict }: { dict: Dictionary }) {
+export default function CountriesClient({ dict, lang }: { dict: Dictionary; lang: string }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredCountries = countries.filter((country) =>
@@ -98,7 +98,7 @@ export default function CountriesClient({ dict }: { dict: Dictionary }) {
             {dict.countries.hero.desc}
           </p>
           <Link
-            href="/"
+            href={`/${lang}`}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.countries.bookNow}
@@ -109,7 +109,7 @@ export default function CountriesClient({ dict }: { dict: Dictionary }) {
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href="/" className="hover:text-white transition-colors">
+            <Link href={`/${lang}`} className="hover:text-white transition-colors">
             {dict.countries.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
@@ -164,22 +164,22 @@ export default function CountriesClient({ dict }: { dict: Dictionary }) {
       {/* Countries Grid */}
       <section className="max-w-7xl mx-auto px-8 py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Countries we serve
+          {dict.countries.section.heading}
         </h2>
         <p className="text-gray-400 mb-12">
-          Explore our global network of premium chauffeur services
+          {dict.countries.section.desc}
         </p>
 
         {filteredCountries.length === 0 ? (
           <div className="text-center py-16">
-            <p className="text-gray-400 text-lg">No countries found matching &ldquo;{searchQuery}&rdquo;</p>
+            <p className="text-gray-400 text-lg">{dict.countries.noResults.replace("{query}", searchQuery)}</p>
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {filteredCountries.map((country) => (
               <Link
                 key={country.code}
-                href={`/countries/${country.code}`}
+                href={`/${lang}/countries/${country.code}`}
                 className="group bg-[#1c1d21] border border-gray-700/50 rounded-xl p-6 text-center hover:border-white/30 hover:bg-[#2a2c35] transition-all duration-300"
               >
                 <div className="w-12 h-12 mx-auto mb-3 bg-[#292a30] rounded-full flex items-center justify-center border border-gray-700/50 group-hover:border-white/30 transition-colors">
@@ -203,10 +203,10 @@ export default function CountriesClient({ dict }: { dict: Dictionary }) {
             {dict.countries.cta.heading}
           </h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Book your premium chauffeur service in any of our 50+ countries and experience the difference.
+            {dict.countries.cta.desc}
           </p>
           <Link
-            href="/"
+            href={`/${lang}`}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.countries.cta.button}

@@ -26,70 +26,6 @@ const topRoutes = [
   { from: "Dubai", to: "Sharjah", distance: "30 km", duration: "30m" },
 ];
 
-const faqItems = [
-  {
-    question: "How long does a city-to-city transfer take?",
-    answer:
-      "The duration depends on the distance between cities. For example, Dubai to Abu Dhabi takes approximately 1.5 hours, while Riyadh to Dammam takes around 4 hours. Your chauffeur will choose the most efficient route.",
-  },
-  {
-    question: "Can I make stops during my city-to-city journey?",
-    answer:
-      "Yes, you can request additional stops during your journey. Simply let us know your requirements when booking, or communicate with your chauffeur during the trip. Additional stops may incur extra charges.",
-  },
-  {
-    question: "What vehicles are available for long distance travel?",
-    answer:
-      "We offer Business Class sedans, First Class luxury sedans, and Business Van/SUV options for city-to-city travel. All vehicles are equipped with Wi-Fi, charging ports, and refreshments for your comfort.",
-  },
-  {
-    question: "Is there a maximum distance for city-to-city transfers?",
-    answer:
-      "We cover distances up to 500 km for a single booking. For longer distances, we can arrange multi-day transfers with overnight stops at premium hotels along the route.",
-  },
-  {
-    question: "Can I book a round trip?",
-    answer:
-      "Yes, round-trip bookings are available. You can schedule your return journey at the time of booking or arrange it later through our app or customer service.",
-  },
-  {
-    question: "What is the cancellation policy?",
-    answer:
-      "Free cancellation is available up to 24 hours before your scheduled pickup. Cancellations within 24 hours may incur a fee. Please check our terms for full details.",
-  },
-  {
-    question: "Do you provide child seats?",
-    answer:
-      "Yes, child seats are available upon request. Please mention your requirements when booking so we can ensure the appropriate seat is installed in your vehicle.",
-  },
-  {
-    question: "Are your prices fixed or metered?",
-    answer:
-      "All our city-to-city transfers have fixed prices. You'll see the exact fare when you book, with no hidden charges or surge pricing.",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Ahmad Al-Rashid",
-    role: "Business Executive",
-    text: "The Dubai to Abu Dhabi transfer was seamless. My chauffeur was professional, the car was immaculate, and I arrived relaxed and ready for my meeting.",
-    rating: 5,
-  },
-  {
-    name: "Sarah Johnson",
-    role: "Frequent Traveler",
-    text: "I use AB.Limo for all my intercity travel in the Gulf region. The consistency and quality of service is unmatched. Highly recommended.",
-    rating: 5,
-  },
-  {
-    name: "Mohammed Al-Thani",
-    role: "Corporate Client",
-    text: "Our company uses AB.Limo for all executive city-to-city transfers. The reliability and professionalism of their chauffeurs is exceptional.",
-    rating: 5,
-  },
-];
-
 export default async function CityToCityPage({
   params,
 }: {
@@ -98,6 +34,9 @@ export default async function CityToCityPage({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
+
+  const faqItems = dict.cityToCity.faq.items;
+  const testimonials = dict.cityToCity.testimonials.items;
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
@@ -127,11 +66,11 @@ export default async function CityToCityPage({
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href="/" className="hover:text-white transition-colors">
-            Home
+          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            {dict.cityToCity.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-white">City-to-City</span>
+          <span className="text-white">{dict.cityToCity.breadcrumb.cityToCity}</span>
         </nav>
       </div>
 
@@ -309,12 +248,12 @@ export default async function CityToCityPage({
         <div className="space-y-4">
           {faqItems.map((item) => (
             <div
-              key={item.question}
+              key={item.q}
               className="bg-[#1c1d21] rounded-2xl overflow-hidden"
             >
               <details className="group">
                 <summary className="w-full p-6 text-left flex items-center justify-between hover:bg-[#2a2c35] transition-colors cursor-pointer list-none">
-                  <h3 className="text-lg font-semibold pr-4">{item.question}</h3>
+                  <h3 className="text-lg font-semibold pr-4">{item.q}</h3>
                   <svg
                     className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
                     fill="none"
@@ -325,7 +264,7 @@ export default async function CityToCityPage({
                   </svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
-                  {item.answer}
+                  {item.a}
                 </div>
               </details>
             </div>
@@ -346,7 +285,7 @@ export default async function CityToCityPage({
                 className="bg-[#292a30] p-8 rounded-2xl"
               >
                 <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                     </svg>

@@ -16,8 +16,7 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
       </svg>
     ),
-    titleKey: "expertlyTrained" as const,
-    descriptionKey: "expertlyTrainedDesc" as const,
+    key: "expertlyTrained" as const,
   },
   {
     icon: (
@@ -25,8 +24,7 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    titleKey: "worldwideCoverage" as const,
-    descriptionKey: "worldwideCoverageDesc" as const,
+    key: "worldwideCoverage" as const,
   },
   {
     icon: (
@@ -34,40 +32,9 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    titleKey: "alwaysOnTime" as const,
-    descriptionKey: "alwaysOnTimeDesc" as const,
+    key: "alwaysOnTime" as const,
   },
 ];
-
-const vehicleClasses = [
-  {
-    title: "Business Class",
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop",
-    passengers: 3,
-    luggage: 2,
-    description: "Executive sedans for professional travel",
-  },
-  {
-    title: "First Class",
-    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop",
-    passengers: 3,
-    luggage: 3,
-    description: "Ultra-luxury vehicles for VIP travel",
-  },
-  {
-    title: "Business Van/SUV",
-    image: "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop",
-    passengers: 6,
-    luggage: 6,
-    description: "Spacious options for groups and families",
-  },
-];
-
-const featureTexts: Record<string, { title: string; description: string }> = {
-  expertlyTrained: { title: "Expertly trained", description: "Our chauffeurs undergo rigorous training and background checks to ensure your safety and comfort." },
-  worldwideCoverage: { title: "Worldwide coverage", description: "Access professional chauffeurs in over 50 countries and 300 cities across the globe." },
-  alwaysOnTime: { title: "Always on time", description: "Punctuality is our promise. Your chauffeur will always arrive before your scheduled pickup time." },
-};
 
 export default async function ChauffeurServicePage({
   params,
@@ -106,11 +73,11 @@ export default async function ChauffeurServicePage({
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href="/" className="hover:text-white transition-colors">
-            Home
+          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            {dict.chauffeurService.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-white">Chauffeur Service</span>
+          <span className="text-white">{dict.chauffeurService.breadcrumb.chauffeurService}</span>
         </nav>
       </div>
 
@@ -118,16 +85,16 @@ export default async function ChauffeurServicePage({
       <section className="max-w-7xl mx-auto px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature) => {
-            const texts = featureTexts[feature.titleKey];
+            const texts = dict.chauffeurService.features[feature.key];
             return (
               <div
-                key={feature.titleKey}
+                key={feature.key}
                 className="bg-[#1c1d21] p-8 rounded-2xl hover:bg-[#2a2c35] transition-colors"
               >
                 <div className="text-gray-400 mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{texts.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  {texts.description}
+                  {texts.desc}
                 </p>
               </div>
             );
@@ -145,7 +112,7 @@ export default async function ChauffeurServicePage({
             {dict.chauffeurService.chooseClassDesc}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {vehicleClasses.map((vehicle) => (
+            {Object.values(dict.chauffeurService.vehicleClasses).map((vehicle) => (
               <div
                 key={vehicle.title}
                 className="bg-[#292a30] rounded-2xl overflow-hidden group"
@@ -160,19 +127,19 @@ export default async function ChauffeurServicePage({
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{vehicle.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{vehicle.description}</p>
+                  <p className="text-gray-400 text-sm mb-4">{vehicle.desc}</p>
                   <div className="flex gap-4 text-sm text-gray-400">
                     <span className="flex items-center gap-1">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                       </svg>
-                      {vehicle.passengers} Passengers
+                      {vehicle.passengers} {dict.common.passengers}
                     </span>
                     <span className="flex items-center gap-1">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z" />
                       </svg>
-                      {vehicle.luggage} Luggage
+                      {vehicle.luggage} {dict.common.luggage}
                     </span>
                   </div>
                 </div>

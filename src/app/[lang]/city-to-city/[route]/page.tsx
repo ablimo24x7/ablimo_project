@@ -42,38 +42,6 @@ const cityImages: Record<string, string> = {
   sharjah: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
 };
 
-const benefits = [
-  "Comfortable, door-to-door service without the hassle of airports",
-  "Fixed prices with no hidden fees or surge pricing",
-  "Professional chauffeurs with extensive route knowledge",
-  "Premium vehicles equipped with Wi-Fi and refreshments",
-  "Flexible scheduling and last-minute bookings available",
-  "Track your journey in real-time with our mobile app",
-];
-
-const faqItems = [
-  {
-    question: "How long does the transfer take?",
-    answer:
-      "The duration depends on the distance between cities. Your chauffeur will choose the most efficient route, and you can track the journey in real-time through our app.",
-  },
-  {
-    question: "Can I make stops during my journey?",
-    answer:
-      "Yes, you can request additional stops during your journey. Simply let us know your requirements when booking, or communicate with your chauffeur during the trip. Additional stops may incur extra charges.",
-  },
-  {
-    question: "What vehicles are available for this route?",
-    answer:
-      "We offer Business Class sedans, First Class luxury sedans, and Business Van/SUV options. All vehicles are equipped with Wi-Fi, charging ports, and refreshments for your comfort.",
-  },
-  {
-    question: "Can I book a round trip?",
-    answer:
-      "Yes, round-trip bookings are available. You can schedule your return journey at the time of booking or arrange it later through our app or customer service.",
-  },
-];
-
 function parseRouteSlug(slug: string): { from: string; to: string } {
   const known = knownRoutes[slug];
   if (known) {
@@ -128,6 +96,8 @@ export default async function DynamicCityToCityPage({
   const { lang, route: routeSlug } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const rp = (dict as any).cityToCity.routePage;
 
   const { from, to } = parseRouteSlug(routeSlug);
   const routeInfo = getRouteInfo(routeSlug);
@@ -170,12 +140,12 @@ export default async function DynamicCityToCityPage({
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href="/" className="hover:text-white transition-colors">
-            Home
+          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            {rp.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
-          <Link href="/city-to-city" className="hover:text-white transition-colors">
-            City-to-City
+          <Link href={`/${lang}/city-to-city`} className="hover:text-white transition-colors">
+            {rp.breadcrumb.cityToCity}
           </Link>
           <span className="mx-2">/</span>
           <span className="text-white">
@@ -195,7 +165,7 @@ export default async function DynamicCityToCityPage({
               </svg>
             </div>
             <p className="text-3xl font-bold mb-1">{routeInfo.distance}</p>
-            <p className="text-gray-400 text-sm">Total Distance</p>
+            <p className="text-gray-400 text-sm">{rp.totalDistance}</p>
           </div>
           <div className="bg-[#1c1d21] p-8 rounded-2xl text-center">
             <div className="text-gray-400 mb-4">
@@ -204,7 +174,7 @@ export default async function DynamicCityToCityPage({
               </svg>
             </div>
             <p className="text-3xl font-bold mb-1">{routeInfo.duration}</p>
-            <p className="text-gray-400 text-sm">Estimated Time</p>
+            <p className="text-gray-400 text-sm">{rp.estimatedTime}</p>
           </div>
           <div className="bg-[#1c1d21] p-8 rounded-2xl text-center">
             <div className="text-gray-400 mb-4">
@@ -212,8 +182,8 @@ export default async function DynamicCityToCityPage({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <p className="text-3xl font-bold mb-1">Fixed</p>
-            <p className="text-gray-400 text-sm">Pricing</p>
+            <p className="text-3xl font-bold mb-1">{rp.fixedPricing}</p>
+            <p className="text-gray-400 text-sm">{rp.pricing}</p>
           </div>
         </div>
       </section>
@@ -230,7 +200,7 @@ export default async function DynamicCityToCityPage({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-6 left-6">
-              <p className="text-sm text-gray-300 mb-1">From</p>
+              <p className="text-sm text-gray-300 mb-1">{rp.from}</p>
               <h3 className="text-2xl font-bold">{from}</h3>
             </div>
           </div>
@@ -243,7 +213,7 @@ export default async function DynamicCityToCityPage({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-6 left-6">
-              <p className="text-sm text-gray-300 mb-1">To</p>
+              <p className="text-sm text-gray-300 mb-1">{rp.to}</p>
               <h3 className="text-2xl font-bold">{to}</h3>
             </div>
           </div>
@@ -255,13 +225,13 @@ export default async function DynamicCityToCityPage({
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Why choose AB.Limo for {from} to {to}
+              {rp.whyChoose.replace("{from}", from).replace("{to}", to)}
             </h2>
             <p className="text-gray-400 leading-relaxed mb-8">
-              Travel between {from} and {to} in complete comfort with our premium city-to-city transfer service. Our professional chauffeurs know the best routes and ensure a smooth, relaxing journey.
+              {rp.whyChooseDesc.replace("{from}", from).replace("{to}", to)}
             </p>
             <ul className="space-y-4">
-              {benefits.map((benefit) => (
+              {rp.routeFeatures.map((benefit: string) => (
                 <li key={benefit} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
@@ -295,33 +265,23 @@ export default async function DynamicCityToCityPage({
           </div>
           <div className="order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About this route
+              {rp.aboutRoute}
             </h2>
             <p className="text-gray-400 leading-relaxed mb-6">
-              The {from} to {to} route covers {routeInfo.distance} of premium road travel. Our experienced chauffeurs are familiar with every stretch of this route, ensuring the most efficient and comfortable journey.
+              {rp.aboutRouteDesc1.replace("{from}", from).replace("{to}", to).replace("{distance}", routeInfo.distance)}
             </p>
             <p className="text-gray-400 leading-relaxed mb-8">
-              Whether you&apos;re traveling for business or leisure, our door-to-door service eliminates the stress of driving or navigating public transport. Sit back, relax, and enjoy the scenery while our professional driver takes care of everything.
+              {rp.aboutRouteDesc2}
             </p>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                </svg>
-                <span className="text-gray-400">Door-to-door pickup and drop-off</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                </svg>
-                <span className="text-gray-400">Real-time journey tracking</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                </svg>
-                <span className="text-gray-400">Complimentary Wi-Fi and refreshments</span>
-              </li>
+              {rp.routeFeatures.map((feature: string) => (
+                <li key={feature} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                  </svg>
+                  <span className="text-gray-400">{feature}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -333,14 +293,14 @@ export default async function DynamicCityToCityPage({
           {dict.cityToCity.faq.title}
         </h2>
         <div className="space-y-4">
-          {faqItems.map((item) => (
+          {dict.cityToCity.faq.items.map((item: { q: string; a: string }) => (
             <div
-              key={item.question}
+              key={item.q}
               className="bg-[#1c1d21] rounded-2xl overflow-hidden"
             >
               <details className="group">
                 <summary className="w-full p-6 text-left flex items-center justify-between hover:bg-[#2a2c35] transition-colors cursor-pointer list-none">
-                  <h3 className="text-lg font-semibold pr-4">{item.question}</h3>
+                  <h3 className="text-lg font-semibold pr-4">{item.q}</h3>
                   <svg
                     className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
                     fill="none"
@@ -351,7 +311,7 @@ export default async function DynamicCityToCityPage({
                   </svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
-                  {item.answer}
+                  {item.a}
                 </div>
               </details>
             </div>
@@ -363,13 +323,13 @@ export default async function DynamicCityToCityPage({
       <section className="bg-[#1c1d21] py-20 px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready for your journey from {from} to {to}?
+            {rp.ctaTitle.replace("{from}", from).replace("{to}", to)}
           </h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             {dict.cityToCity.cta.desc}
           </p>
           <Link
-            href="/"
+            href={`/${lang}`}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.cityToCity.cta.bookNow}
