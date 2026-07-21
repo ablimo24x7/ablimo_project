@@ -1,10 +1,10 @@
-import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import AboutSection from "@/components/AboutSection";
-import PricingSection from "@/components/PricingSection";
-import FleetSection from "@/components/FleetSection";
-import BrandOptions from "@/components/BrandOptions";
-import FAQSection from "@/components/FAQSection";
+import HeroSection from "@/app/[lang]/_components/HeroSection";
+import ServicesSection from "@/app/[lang]/_components/ServicesSection";
+import AboutSection from "@/app/[lang]/_components/AboutSection";
+import PricingSection from "@/app/[lang]/_components/PricingSection";
+import FleetSection from "@/app/[lang]/_components/FleetSection";
+import BrandOptions from "@/app/[lang]/_components/BrandOptions";
+import FAQSection from "@/app/[lang]/_components/FAQSection";
 import {
   getDictionary,
   hasLocale,

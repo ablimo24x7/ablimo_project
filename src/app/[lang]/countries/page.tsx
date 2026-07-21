@@ -1,5 +1,5 @@
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
-import CountriesClient from "@/components/CountriesClient";
+import CountriesClient from "@/app/[lang]/countries/_components/CountriesClient";
 
 const metadata = {
   title: "AB.Limo Global Availability",

@@ -1,5 +1,5 @@
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
-import CitiesClient from "@/components/CitiesClient";
+import CitiesClient from "@/app/[lang]/cities/_components/CitiesClient";
 
 const metadata = {
   title: "Our Cities Around the World | AB.Limo",

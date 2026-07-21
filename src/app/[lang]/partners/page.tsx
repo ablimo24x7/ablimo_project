@@ -1,5 +1,5 @@
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
-import PartnersClient from "@/components/PartnersClient";
+import PartnersClient from "@/app/[lang]/partners/_components/PartnersClient";
 
 export default async function PartnersPage({
   params,
