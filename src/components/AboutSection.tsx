@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import ScrollReveal from "./ScrollReveal";
 
 const icons = [
   <svg key="1" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" /></svg>,
@@ -16,13 +17,15 @@ export default function AboutSection({ dict }: { dict: Dictionary }) {
   return (
     <section className="bg-[#474753] py-20 px-8">
       <div className="max-w-6xl mx-auto">
-        <Image
-          src="/about-limmo-large.png"
-          alt="Luxury Car"
-          width={1200}
-          height={400}
-          className="w-full h-auto mb-16 rounded-lg animate-slide-right"
-        />
+        <ScrollReveal animation="animate-slide-right">
+          <Image
+            src="/about-limmo-large.png"
+            alt="Luxury Car"
+            width={1200}
+            height={400}
+            className="w-full h-auto mb-16 rounded-lg"
+          />
+        </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <Image
             src="/about-chairs.png"

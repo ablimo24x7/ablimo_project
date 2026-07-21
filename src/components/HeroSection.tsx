@@ -81,7 +81,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
         </div>
 
         {/* Chauffeur image */}
-        <div className="absolute top-[58%] left-[30%] -translate-y-1/2 h-[78vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
+        <div className="absolute top-[46%] left-[30%] -translate-y-1/2 h-[78vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
           <Image
             src="/chauffeur.png"
             alt="Chauffeur"
