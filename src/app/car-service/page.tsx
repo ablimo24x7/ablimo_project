@@ -195,7 +195,7 @@ export default function CarServicePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=600&fit=crop"
+              src="https://images.unsplash.com/photo-1606400142640-69e81d222bcb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Black Car Service"
               fill
               className="object-cover"
