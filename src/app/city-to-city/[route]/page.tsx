@@ -34,7 +34,7 @@ const cityImages: Record<string, string> = {
   reims: "https://images.unsplash.com/photo-1595576663498-fdd3f0f8e3e5?w=400&h=300&fit=crop",
   riyadh: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   dammam: "https://images.unsplash.com/photo-1578895101408-1a36b834405b?q=80&w=795&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  doha: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=400&h=300&fit=crop",
+  doha: "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "al-khor": "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=400&h=300&fit=crop",
   jeddah: "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?q=80&w=773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   mecca: "https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -272,7 +272,7 @@ export default function DynamicCityToCityPage() {
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop"
+              src="https://images.unsplash.com/photo-1606400142640-69e81d222bcb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Long Distance Travel"
               fill
               className="object-cover"
