@@ -273,8 +273,8 @@
       "travelOnYourTerms": { "title": "Travel on your terms", "desc": "Schedule your pickup at your convenience. Our chauffeurs wait for you, even if your flight is delayed." }
     },
     "vehicleClasses": {
-      "businessClass": { "title": "Business Class", "features": ["Wi-Fi", "Water bottles", "Phone charger"], "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop" },
-      "firstClass": { "title": "First Class", "features": ["Wi-Fi", "Refreshments", "Premium leather seats"], "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop" },
+      "businessClass": { "title": "Business Class", "features": ["Wi-Fi", "Water bottles", "Phone charger"], "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "First Class", "features": ["Wi-Fi", "Refreshments", "Premium leather seats"], "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
       "businessVanSuv": { "title": "Business Van/SUV", "features": ["Wi-Fi", "Spacious interior", "Extra luggage space"], "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "globalCities": {
@@ -316,8 +316,8 @@
       "alwaysOnTime": { "title": "Always on time", "desc": "Punctuality is our promise. Your chauffeur will always arrive before your scheduled pickup time." }
     },
     "vehicleClasses": {
-      "businessClass": { "title": "Business Class", "desc": "Executive sedans for professional travel", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop" },
-      "firstClass": { "title": "First Class", "desc": "Ultra-luxury vehicles for VIP travel", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop" },
+      "businessClass": { "title": "Business Class", "desc": "Executive sedans for professional travel", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "First Class", "desc": "Ultra-luxury vehicles for VIP travel", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
       "businessVanSuv": { "title": "Business Van/SUV", "desc": "Spacious options for groups and families", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "worldClass": {
@@ -365,8 +365,8 @@
       "quickBooking": { "title": "Quick booking", "desc": "Book your ride in seconds through our app or website. Fast, easy, and convenient." }
     },
     "vehicleClasses": {
-      "businessClass": { "title": "Business Class", "desc": "Reliable sedans for everyday executive travel", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop" },
-      "firstClass": { "title": "First Class", "desc": "Premium luxury for special occasions", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop" },
+      "businessClass": { "title": "Business Class", "desc": "Reliable sedans for everyday executive travel", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "First Class", "desc": "Premium luxury for special occasions", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
       "businessVanSuv": { "title": "Business Van/SUV", "desc": "Spacious vehicles for groups and families", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "blackCarWorldwide": {
@@ -415,8 +415,8 @@
       "professionalChauffeurs": { "title": "Professional chauffeurs", "desc": "Every chauffeur is professionally trained, licensed, and committed to providing exceptional service." }
     },
     "vehicleClasses": {
-      "businessClass": { "title": "Business Class", "desc": "Executive sedans for business and airport transfers", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop" },
-      "firstClass": { "title": "First Class", "desc": "Premium luxury vehicles for special occasions", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop" },
+      "businessClass": { "title": "Business Class", "desc": "Executive sedans for business and airport transfers", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "First Class", "desc": "Premium luxury vehicles for special occasions", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
       "businessVanSuv": { "title": "Business Van/SUV", "desc": "Spacious vehicles for groups and extra luggage", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "limoCity": {
@@ -984,11 +984,11 @@
     "readMore": "Read full release",
     "showMore": "Show more",
     "releases": [
-      { "date": "June 12, 2026", "title": "AB.Limo Expands to 10 New Cities Across Southeast Asia", "excerpt": "AB.Limo announces its entry into 10 new Southeast Asian markets, including Bangkok, Kuala Lumpur, and Jakarta, as part of its global growth strategy.", "image": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=600&h=400&fit=crop" },
+      { "date": "June 12, 2026", "title": "AB.Limo Expands to 10 New Cities Across Southeast Asia", "excerpt": "AB.Limo announces its entry into 10 new Southeast Asian markets, including Bangkok, Kuala Lumpur, and Jakarta, as part of its global growth strategy.", "image": "https://images.unsplash.com/photo-1538332576228-eb5b4c4de6f5?auto=format&fit=crop&w=800&q=80" },
       { "date": "April 28, 2026", "title": "AB.Limo Achieves Carbon Neutral Operations in All European Markets", "excerpt": "Our commitment to sustainability reaches a major milestone as all European operations are now fully carbon neutral through offsetting and EV adoption.", "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&h=400&fit=crop" },
-      { "date": "March 15, 2026", "title": "Strategic Partnership with Emirates for Premium Ground Transportation", "excerpt": "AB.Limo partners with Emirates airline to provide seamless luxury ground transfers for first and business class passengers across 25 global destinations.", "image": "https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=400&fit=crop" },
+      { "date": "March 15, 2026", "title": "Strategic Partnership with Emirates for Premium Ground Transportation", "excerpt": "AB.Limo partners with Emirates airline to provide seamless luxury ground transfers for first and business class passengers across 25 global destinations.", "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80" },
       { "date": "February 3, 2026", "title": "AB.Limo Launches New Corporate Mobility Platform", "excerpt": "Introducing a next-generation corporate travel management platform with real-time analytics, cost optimization, and seamless expense integration.", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" },
-      { "date": "January 18, 2026", "title": "AB.Limo Surpasses 2 Million Completed Rides Globally", "excerpt": "A landmark achievement as AB.Limo celebrates over 2 million safe, comfortable, and on-time rides delivered to passengers worldwide.", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop" }
+      { "date": "January 18, 2026", "title": "AB.Limo Surpasses 2 Million Completed Rides Globally", "excerpt": "A landmark achievement as AB.Limo celebrates over 2 million safe, comfortable, and on-time rides delivered to passengers worldwide.", "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" }
     ],
     "contact": {
       "heading": "Press Contact",

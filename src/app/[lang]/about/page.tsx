@@ -138,7 +138,7 @@ export default async function AboutPage({
             {dict.about.vehicleClasses.classes.map((vehicle, index) => {
               const images = [
                 "https://images.unsplash.com/photo-1563720223185-11003d516935?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1549317661-bd32c8ce0abb?w=600&h=400&fit=crop",
+                "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop",
                 "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&h=400&fit=crop",
               ];
               return (

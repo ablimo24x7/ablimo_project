@@ -273,8 +273,8 @@
       "travelOnYourTerms": { "title": "سافر كما تشاء", "desc": "حدد وقت استلامك حسب رغبتك. ينتظركم سائقونا حتى لو تأخرت رحلتك." }
     },
     "vehicleClasses": {
-      "businessClass": { "title": "الدرجة-business", "features": ["واي فاي", "زجاجات مياه", "شاحن هاتف"], "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop" },
-      "firstClass": { "title": "الدرجة الأولى", "features": ["واي فاي", "مشروبات", " مقاعد جلدية فاخرة"], "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop" },
+      "businessClass": { "title": "الدرجة-business", "features": ["واي فاي", "زجاجات مياه", "شاحن هاتف"], "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "الدرجة الأولى", "features": ["واي فاي", "مشروبات", " مقاعد جلدية فاخرة"], "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
       "businessVanSuv": { "title": "فان/سيارة دفع رباعي - الدرجة business", "features": ["واي فاي", "مساحة واسعة", "مساحة إضافية للأمتعة"], "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "globalCities": {
@@ -316,8 +316,8 @@
       "alwaysOnTime": { "title": "في الوقت دائماً", "desc": "الدقة هي وعودنا. سيصل سائقك دائماً قبل وقت الاستلام المحدد." }
     },
     "vehicleClasses": {
-      "businessClass": { "title": "الدرجة-business", "desc": "سيدان تنفيذية للسفر المحترف", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop" },
-      "firstClass": { "title": "الدرجة الأولى", "desc": "سيارات فاخرة للغاية للسفر VIP", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop" },
+      "businessClass": { "title": "الدرجة-business", "desc": "سيدان تنفيذية للسفر المحترف", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "الدرجة الأولى", "desc": "سيارات فاخرة للغاية للسفر VIP", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
       "businessVanSuv": { "title": "فان/سيارة دفع رباعي - الدرجة business", "desc": "خيارات واسعة للمجموعات والعائلات", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "worldClass": {
@@ -365,8 +365,8 @@
       "quickBooking": { "title": "حجز سريع", "a": "احجز رحلتك في ثوانٍ عبر تطبيقنا أو موقعنا الإلكتروني. سريع وسهل ومريح." }
     },
     "vehicleClasses": {
-      "businessClass": { "title": "الدرجة-business", "desc": "سيدان موثوقة للسفر التنفيذي اليومي", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop" },
-      "firstClass": { "title": "الدرجة الأولى", "desc": "فخامة فاخرة للمناسبات الخاصة", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop" },
+      "businessClass": { "title": "الدرجة-business", "desc": "سيدان موثوقة للسفر التنفيذي اليومي", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "الدرجة الأولى", "desc": "فخامة فاخرة للمناسبات الخاصة", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
       "businessVanSuv": { "title": "فان/سيارة دفع رباعي - الدرجة business", "desc": "سيارات واسعة للمجموعات والعائلات", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "blackCarWorldwide": {
@@ -415,8 +415,8 @@
       "professionalChauffeurs": { "title": "سائقون محترفون", "desc": "كل سائق مدرب محترفاً ومرخص، ومكرس لتقديم خدمة استثنائية." }
     },
     "vehicleClasses": {
-      "businessClass": { "title": "الدرجة-business", "desc": "سيدان تنفيذية للسفر التجاري ونقل المطار", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0afe?w=800&h=500&fit=crop" },
-      "firstClass": { "title": "الدرجة الأولى", "desc": "سيارات فاخرة للمناسبات الخاصة", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop" },
+      "businessClass": { "title": "الدرجة-business", "desc": "سيدان تنفيذية للسفر التجاري ونقل المطار", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "الدرجة الأولى", "desc": "سيارات فاخرة للمناسبات الخاصة", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
       "businessVanSuv": { "title": "فان/سيارة دفع رباعي - الدرجة business", "desc": "سيارات واسعة للمجموعات والأمتعة الإضافية", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "limoCity": {
@@ -957,11 +957,11 @@
     "readMore": "اقرأ البيان الكامل",
     "showMore": "عرض المزيد",
     "releases": [
-      { "date": "12 يونيو 2026", "title": "توسّع AB.Limo إلى 10 مدن جديدة في جنوب شرق آسيا", "excerpt": "تعلن AB.Limo عن دخولها 10 أسواق جديدة في جنوب شرق آسيا، بما في ذلك بانكوك وكوالالمبوروجاكرتا، كجزء من استراتيجيتها للنمو العالمي.", "image": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=600&h=400&fit=crop" },
+      { "date": "12 يونيو 2026", "title": "توسّع AB.Limo إلى 10 مدن جديدة في جنوب شرق آسيا", "excerpt": "تعلن AB.Limo عن دخولها 10 أسواق جديدة في جنوب شرق آسيا، بما في ذلك بانكوك وكوالالمبوروجاكرتا، كجزء من استراتيجيتها للنمو العالمي.", "image": "https://images.unsplash.com/photo-1538332576228-eb5b4c4de6f5?auto=format&fit=crop&w=800&q=80" },
       { "date": "28 أبريل 2026", "title": "تحقق AB.Limo من عمليات محايدة الكربون في جميع الأسواق الأوروبية", "excerpt": "يصل التزامنا بالاستدامة إلى معلم رئيسي حيث أصبحت جميع العمليات الأوروبية محايدة الكربون بالكامل من خلال التعويض وتبني السيارات الكهربائية.", "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&h=400&fit=crop" },
-      { "date": "15 مارس 2026", "title": "شراكة استراتيجية مع طيران الإمارات للنقل البري الفاخر", "excerpt": "تتعاون AB.Limo مع طيران الإمارات لتقديم نقل برّي فاخر سلس لركاب الدرجة الأولى والدرجةBusiness عبر 25 وجهة عالمية.", "image": "https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=400&fit=crop" },
+      { "date": "15 مارس 2026", "title": "شراكة استراتيجية مع طيران الإمارات للنقل البري الفاخر", "excerpt": "تتعاون AB.Limo مع طيران الإمارات لتقديم نقل برّي فاخر سلس لركاب الدرجة الأولى والدرجةBusiness عبر 25 وجهة عالمية.", "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80" },
       { "date": "3 فبراير 2026", "title": "إطلاق AB.Limo لمنصة جديدة للتنقل المؤسسي", "excerpt": "تقديم منصة جديدة الجيل لإدارة سفر الشركات مع تحليلات في الوقت الفعلي وتحسين التكاليف وتكامل سلس للمصروفات.", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" },
-      { "date": "18 يناير 2026", "title": "تتجاوز AB.Limo 2 مليون رحلة مكتملة عالمياً", "excerpt": "إنجاز历史性 حيث تحتفل AB.Limo بأكثر من 2 مليون رحلة آمنة ومريحة وفي الوقت المحدد مقدمة للركاب حول العالم.", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop" }
+      { "date": "18 يناير 2026", "title": "تتجاوز AB.Limo 2 مليون رحلة مكتملة عالمياً", "excerpt": "إنجاز历史性 حيث تحتفل AB.Limo بأكثر من 2 مليون رحلة آمنة ومريحة وفي الوقت المحدد مقدمة للركاب حول العالم.", "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" }
     ],
     "contact": {
       "heading": "جهة الاتصال الصحفية",
