@@ -4,91 +4,176 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const citiesByCountry: { country: string; code: string; cities: string[] }[] = [
+// Har city ke sath uski apni specific image ka data structure
+const citiesByCountry: { 
+  country: string; 
+  code: string; 
+  cities: { name: string; image: string }[] 
+}[] = [
   {
     country: "Australia",
     code: "au",
-    cities: ["Sydney", "Melbourne", "Brisbane", "Perth"],
+    cities: [
+      { name: "Sydney", image: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Melbourne", image: "https://images.unsplash.com/photo-1514395462725-fb4566210144?w=400&h=300&fit=crop" },
+      { name: "Brisbane", image: "https://images.unsplash.com/photo-1548661625-a30d197ce439?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Perth", image: "https://images.unsplash.com/photo-1580014942344-ce423d2b885a?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Austria",
     code: "at",
-    cities: ["Vienna", "Salzburg"],
+    cities: [
+      { name: "Vienna", image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Salzburg", image: "https://images.unsplash.com/photo-1603892710963-331039c8dc66?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Belgium",
     code: "be",
-    cities: ["Brussels"],
+    cities: [
+      { name: "Brussels", image: "https://images.unsplash.com/photo-1626013969117-8c13864fdb2d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Canada",
     code: "ca",
-    cities: ["Toronto", "Vancouver", "Montreal", "Calgary"],
+    cities: [
+      { name: "Toronto", image: "https://images.unsplash.com/photo-1490623970972-ae8bb3da443e?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Vancouver", image: "https://images.unsplash.com/photo-1730661906876-18bfc6e95f2f?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Montreal", image: "https://images.unsplash.com/photo-1519178251-5390a0fb6a3f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Calgary", image: "https://images.unsplash.com/photo-1563772770586-c4edcb11e75d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "France",
     code: "fr",
-    cities: ["Paris", "Lyon", "Nice", "Marseille", "Bordeaux", "Cannes"],
+    cities: [
+      { name: "Paris", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=300&fit=crop" },
+      { name: "Lyon", image: "https://images.unsplash.com/photo-1697054601740-dfa28d40c76e?q=80&w=775&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Nice", image: "https://images.unsplash.com/photo-1643914729809-4aa59fdc4c17?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Marseille", image: "https://images.unsplash.com/photo-1566838217578-1903568a76d9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Bordeaux", image: "https://images.unsplash.com/photo-1509636902752-929c7497f3d4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Cannes", image: "https://images.unsplash.com/photo-1659642081573-ac1a040d2e50?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Germany",
     code: "de",
-    cities: ["Berlin", "Munich", "Frankfurt", "Hamburg", "Cologne", "Dusseldorf", "Stuttgart"],
+    cities: [
+      { name: "Berlin", image: "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Munich", image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Frankfurt", image: "https://images.unsplash.com/photo-1605186620429-1ece911f171c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Hamburg", image: "https://images.unsplash.com/photo-1473615695634-d284ec918736?q=80&w=928&auto=format&fit=crop" },
+      { name: "Cologne", image: "https://images.unsplash.com/photo-1722722864801-962b94fbb715?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Dusseldorf", image: "https://images.unsplash.com/photo-1600081926664-b4224c1abc0d?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Stuttgart", image: "https://images.unsplash.com/photo-1722722835129-62f50e5f6389?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Italy",
     code: "it",
-    cities: ["Rome", "Milan", "Florence", "Venice", "Naples"],
+    cities: [
+      { name: "Rome", image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&h=300&fit=crop" },
+      { name: "Milan", image: "https://images.unsplash.com/photo-1610016302534-6f67f1c968d8?q=80&w=775&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Florence", image: "https://images.unsplash.com/photo-1476362174823-3a23f4aa6d76?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Venice", image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Naples", image: "https://images.unsplash.com/photo-1581242125825-f9faf0f350bd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Japan",
     code: "jp",
-    cities: ["Tokyo", "Osaka"],
+    cities: [
+      { name: "Tokyo", image: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Osaka", image: "https://images.unsplash.com/photo-1589452271712-64b8a66c7b71?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Netherlands",
     code: "nl",
-    cities: ["Amsterdam"],
+    cities: [
+      { name: "Amsterdam", image: "https://images.unsplash.com/photo-1547750341-26482cf3a2ac?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Qatar",
     code: "qa",
-    cities: ["Doha"],
+    cities: [
+      { name: "Doha", image: "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Saudi Arabia",
     code: "sa",
-    cities: ["Riyadh", "Jeddah", "Mecca"],
+    cities: [
+      { name: "Riyadh", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Jeddah", image: "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?q=80&w=773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Mecca", image: "https://images.unsplash.com/photo-1704104501136-8f35402af395?q=80&w=749&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Singapore",
     code: "sg",
-    cities: ["Singapore"],
+    cities: [
+      { name: "Singapore", image: "https://images.unsplash.com/photo-1542114740389-9b46fb1e5be7?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Spain",
     code: "es",
-    cities: ["Barcelona", "Madrid", "Malaga"],
+    cities: [
+      { name: "Barcelona", image: "https://images.unsplash.com/photo-1578912996078-305d92249aa6?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Madrid", image: "https://images.unsplash.com/photo-1543785734-4b6e564642f8?w=400&h=300&fit=crop" },
+      { name: "Malaga", image: "https://images.unsplash.com/photo-1553775556-80669b94bfa5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "Switzerland",
     code: "ch",
-    cities: ["Zurich", "Geneva", "Basel"],
+    cities: [
+      { name: "Zurich", image: "https://images.unsplash.com/photo-1620563092215-0fbc6b55cfc5?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Geneva", image: "https://images.unsplash.com/photo-1574904935745-7e40279f589d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Basel", image: "https://images.unsplash.com/photo-1657123843551-3417f3057d2c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "UAE",
     code: "ae",
-    cities: ["Dubai", "Abu Dhabi"],
+    cities: [
+      { name: "Dubai", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop" },
+      { name: "Abu Dhabi", image: "https://images.unsplash.com/photo-1590822067318-d58785999ad3?q=80&w=732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "UK",
     code: "uk",
-    cities: ["London", "Manchester", "Birmingham", "Edinburgh", "Glasgow", "Bristol", "Leeds", "Liverpool"],
+    cities: [
+      { name: "London", image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&h=300&fit=crop" },
+      { name: "Manchester", image: "https://images.unsplash.com/photo-1692968678752-3f24021a188e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Birmingham", image: "https://images.unsplash.com/photo-1668998909685-f23656e70eb9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Edinburgh", image: "https://images.unsplash.com/photo-1567802942109-0a5d92ed35b8?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Glasgow", image: "https://images.unsplash.com/photo-1590392452359-4c6581f6eac5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Bristol", image: "https://images.unsplash.com/photo-1667017898252-10a7894b428e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Leeds", image: "https://images.unsplash.com/photo-1610704645600-014521c9c10d?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Liverpool", image: "https://images.unsplash.com/photo-1726410238762-2388af04eadb?q=80&w=943&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
   {
     country: "US",
     code: "us",
-    cities: ["New York", "Los Angeles", "Miami", "Chicago", "San Francisco", "Boston", "Seattle", "Dallas", "Houston", "Washington DC"],
+    cities: [
+      { name: "New York", image: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=400&h=300&fit=crop" },
+      { name: "Los Angeles", image: "https://images.unsplash.com/photo-1570658379397-89d15db1b0de?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Miami", image: "https://images.unsplash.com/photo-1574167701654-856d6406583e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Chicago", image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "San Francisco", image: "https://images.unsplash.com/photo-1719858403364-83f7442a197e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Boston", image: "https://images.unsplash.com/photo-1565127803082-69dd82351360?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Seattle", image: "https://images.unsplash.com/photo-1589481169991-40ee02888551?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Dallas", image: "https://images.unsplash.com/photo-1652928417129-e058a89673ca?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Houston", image: "https://images.unsplash.com/photo-1622007151631-25aa98ab394b?q=80&w=891&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Washington DC", image: "https://images.unsplash.com/photo-1574365379583-54937ea00cb8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    ],
   },
 ].sort((a, b) => a.country.localeCompare(b.country));
 
@@ -102,8 +187,8 @@ export default function CitiesPage() {
   const filteredCountries = citiesByCountry
     .map((country) => ({
       ...country,
-      cities: country.cities.filter((city) =>
-        city.toLowerCase().includes(searchQuery.toLowerCase())
+      cities: country.cities.filter((cityObj) =>
+        cityObj.name.toLowerCase().includes(searchQuery.toLowerCase())
       ),
     }))
     .filter((country) => country.cities.length > 0);
@@ -204,39 +289,35 @@ export default function CitiesPage() {
                   </span>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                  {country.cities.map((city) => (
+                  {country.cities.map((cityObj) => (
                     <Link
-                      key={city}
-                      href={`/countries/${country.code}/${cityToSlug(city)}/airport-transfer`}
-                      className="group bg-[#1c1d21] border border-gray-700/50 rounded-xl p-5 text-center hover:border-white/30 hover:bg-[#2a2c35] transition-all duration-300"
+                      key={cityObj.name}
+                      href={`/countries/${country.code}/${cityToSlug(cityObj.name)}/airport-transfer`}
+                      className="group relative bg-[#1c1d21] border border-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center hover:border-gray-600 transition-all duration-300 overflow-hidden min-h-[140px]"
                     >
-                      <div className="w-10 h-10 mx-auto mb-3 bg-[#292a30] rounded-full flex items-center justify-center border border-gray-700/50 group-hover:border-white/30 transition-colors">
-                        <svg
-                          className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                          />
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                          />
-                        </svg>
+                      {/* Har City ki Apni Background Image aur Dark Overlay */}
+                      <div className="absolute inset-0 z-0">
+                        <Image
+                          src={cityObj.image}
+                          alt={cityObj.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-40 group-hover:opacity-50"
+                        />
+                        <div className="absolute inset-0 bg-[#1c1d21]/5 backdrop-blur-[1px]" />
                       </div>
-                      <h4 className="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">
-                        {city}
-                      </h4>
-                      <p className="text-xs text-gray-500 mt-1 group-hover:text-gray-400 transition-colors">
-                        Airport Transfer
-                      </p>
+
+                      {/* Card Content */}
+                      <div className="relative z-10 flex flex-col items-center">
+                        <div className="w-10 h-10 rounded-full border border-gray-600/60 bg-[#292a30]/80 flex items-center justify-center text-xs font-bold text-gray-200 tracking-wider mb-2.5 group-hover:border-white transition-colors">
+                          {country.code.toUpperCase()}
+                        </div>
+                        <h4 className="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">
+                          {cityObj.name}
+                        </h4>
+                        <p className="text-[11px] text-gray-400 mt-0.5 group-hover:text-gray-300 transition-colors">
+                          Airport Transfer
+                        </p>
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -247,7 +328,7 @@ export default function CitiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#1c1d21] py-20 px-8">
+      <section className="bg-[#1c1d21] py-20 px8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Can&apos;t find your city?
@@ -271,7 +352,6 @@ export default function CitiesPage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

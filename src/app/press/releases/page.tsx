@@ -76,7 +76,7 @@ export default function PressReleasesPage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[360px] flex items-center justify-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1504711434969-e33886168d5c?w=1920&h=1080&fit=crop"
+          src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80"
           alt="Press Releases"
           fill
           className="object-cover"
