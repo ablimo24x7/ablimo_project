@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useCallback } from "react";
-import BookingWidget from "@/components/BookingWidget";
+import BookingWidget from "@/components/layout/BookingWidget";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const countryNames: Record<string, string> = {

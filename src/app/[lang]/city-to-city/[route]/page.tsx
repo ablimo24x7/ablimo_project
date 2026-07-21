@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import BookingWidget from "@/components/BookingWidget";
+import BookingWidget from "@/components/layout/BookingWidget";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
 
 const knownRoutes: Record<string, { from: string; to: string; distance: string; duration: string }> = {

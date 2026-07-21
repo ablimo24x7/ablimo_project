@@ -1,5 +1,5 @@
 import { getDictionary } from "@/app/[lang]/dictionaries";
-import AirportTransferCityClient from "@/components/AirportTransferCityClient";
+import AirportTransferCityClient from "@/app/[lang]/countries/_components/AirportTransferCityClient";
 
 export default async function DynamicAirportTransferPage({
   params,
