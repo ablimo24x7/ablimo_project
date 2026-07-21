@@ -5,8 +5,8 @@ import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lan
 const gridImages = [
   "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=400&fit=crop",
   "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1464938050520-ef2571e0d6e0?w=600&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80",
 ];
 
 const benefitIcons = ["🕐", "🌐", "💳", "📱", "🚗", "🛡️"];

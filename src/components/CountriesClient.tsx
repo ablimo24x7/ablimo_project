@@ -6,57 +6,57 @@ import Image from "next/image";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const countries = [
-  { name: "Argentina", code: "ar" },
-  { name: "Australia", code: "au" },
-  { name: "Austria", code: "at" },
-  { name: "Bahrain", code: "bh" },
-  { name: "Belgium", code: "be" },
-  { name: "Brazil", code: "br" },
-  { name: "Cambodia", code: "kh" },
-  { name: "Canada", code: "ca" },
-  { name: "Chile", code: "cl" },
-  { name: "China", code: "cn" },
-  { name: "Croatia", code: "hr" },
-  { name: "Czechia", code: "cz" },
-  { name: "Denmark", code: "dk" },
-  { name: "Finland", code: "fi" },
-  { name: "France", code: "fr" },
-  { name: "Germany", code: "de" },
-  { name: "Greece", code: "gr" },
-  { name: "Hungary", code: "hu" },
-  { name: "Indonesia", code: "id" },
-  { name: "Ireland", code: "ie" },
-  { name: "Italy", code: "it" },
-  { name: "Japan", code: "jp" },
-  { name: "Jordan", code: "jo" },
-  { name: "Kenya", code: "ke" },
-  { name: "Kuwait", code: "kw" },
-  { name: "Luxembourg", code: "lu" },
-  { name: "Malaysia", code: "my" },
-  { name: "Mexico", code: "mx" },
-  { name: "Monaco", code: "mc" },
-  { name: "Netherlands", code: "nl" },
-  { name: "New Zealand", code: "nz" },
-  { name: "Norway", code: "no" },
-  { name: "Oman", code: "om" },
-  { name: "Poland", code: "pl" },
-  { name: "Portugal", code: "pt" },
-  { name: "Qatar", code: "qa" },
-  { name: "Romania", code: "ro" },
-  { name: "Saudi Arabia", code: "sa" },
-  { name: "Singapore", code: "sg" },
-  { name: "Slovakia", code: "sk" },
-  { name: "South Africa", code: "za" },
-  { name: "Spain", code: "es" },
-  { name: "Sweden", code: "se" },
-  { name: "Switzerland", code: "ch" },
-  { name: "Thailand", code: "th" },
-  { name: "Tunisia", code: "tn" },
-  { name: "Türkiye", code: "tr" },
-  { name: "UAE", code: "ae" },
-  { name: "UK", code: "uk" },
-  { name: "US", code: "us" },
-  { name: "Vietnam", code: "vn" },
+  { name: "Argentina", code: "ar", image: "https://images.unsplash.com/photo-1495317823589-e67efe1524b0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Australia", code: "au", image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=400&h=300&fit=crop" },
+  { name: "Austria", code: "at", image: "https://images.unsplash.com/photo-1526581671404-349f224db79b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Bahrain", code: "bh", image: "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Belgium", code: "be", image: "https://images.unsplash.com/photo-1626013969117-8c13864fdb2d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Brazil", code: "br", image: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&h=300&fit=crop" },
+  { name: "Cambodia", code: "kh", image: "https://images.unsplash.com/photo-1635167463041-00f6d9344cda?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Canada", code: "ca", image: "https://images.unsplash.com/photo-1490623970972-ae8bb3da443e?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Chile", code: "cl", image: "https://images.unsplash.com/photo-1689850543263-01a52ccc6943?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "China", code: "cn", image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=400&h=300&fit=crop" },
+  { name: "Croatia", code: "hr", image: "https://images.unsplash.com/photo-1575540291670-8d3b26f7d327?q=80&w=939&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Czechia", code: "cz", image: "https://images.unsplash.com/photo-1600623471616-8c1966c91ff6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Denmark", code: "dk", image: "https://images.unsplash.com/photo-1513622118278-bc041b3c13ed?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Finland", code: "fi", image: "https://images.unsplash.com/photo-1538332576228-eb5b4c4de6f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "France", code: "fr", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=300&fit=crop" },
+  { name: "Germany", code: "de", image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Greece", code: "gr", image: "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Hungary", code: "hu", image: "https://images.unsplash.com/photo-1616432902940-b7a1acbc60b3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Indonesia", code: "id", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&h=300&fit=crop" },
+  { name: "Ireland", code: "ie", image: "https://images.unsplash.com/photo-1611087642788-e41c41f5680b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Italy", code: "it", image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=400&h=300&fit=crop" },
+  { name: "Japan", code: "jp", image: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Jordan", code: "jo", image: "https://images.unsplash.com/photo-1597814419713-99e2923951b6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Kenya", code: "ke", image: "https://images.unsplash.com/photo-1519659528534-7fd733a832a0?q=80&w=726&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Kuwait", code: "kw", image: "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Luxembourg", code: "lu", image: "https://images.unsplash.com/photo-1592770733110-738f7769188c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Malaysia", code: "my", image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=864&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Mexico", code: "mx", image: "https://images.unsplash.com/photo-1547686669-9a8cb1a22d91?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Monaco", code: "mc", image: "https://images.unsplash.com/photo-1595138320174-a64d168e9970?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Netherlands", code: "nl", image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "New Zealand", code: "nz", image: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Norway", code: "no", image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Oman", code: "om", image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Poland", code: "pl", image: "https://images.unsplash.com/photo-1519197924294-4ba991a11128?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Portugal", code: "pt", image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Qatar", code: "qa", image: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Romania", code: "ro", image: "https://images.unsplash.com/photo-1555990793-da11153b2473?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Saudi Arabia", code: "sa", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Singapore", code: "sg", image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&h=300&fit=crop" },
+  { name: "Slovakia", code: "sk", image: "https://images.unsplash.com/photo-1563911892437-1feda0179e1b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "South Africa", code: "za", image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Spain", code: "es", image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=400&h=300&fit=crop" },
+  { name: "Sweden", code: "se", image: "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Switzerland", code: "ch", image: "https://images.unsplash.com/photo-1515488764276-beab7607c1e6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Thailand", code: "th", image: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=400&h=300&fit=crop" },
+  { name: "Tunisia", code: "tn", image: "https://images.unsplash.com/photo-1569982175971-d92b01cf8694?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Türkiye", code: "tr", image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "UAE", code: "ae", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop" },
+  { name: "UK", code: "uk", image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&h=300&fit=crop" },
+  { name: "US", code: "us", image: "https://images.unsplash.com/photo-1485738422979-f5c462d49f04?w=400&h=300&fit=crop" },
+  { name: "Vietnam", code: "vn", image: "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 const featureIcons = [
@@ -180,16 +180,25 @@ export default function CountriesClient({ dict, lang }: { dict: Dictionary; lang
               <Link
                 key={country.code}
                 href={`/${lang}/countries/${country.code}`}
-                className="group bg-[#1c1d21] border border-gray-700/50 rounded-xl p-6 text-center hover:border-white/30 hover:bg-[#2a2c35] transition-all duration-300"
+                className="group bg-[#1c1d21] border border-gray-700/50 rounded-xl overflow-hidden hover:border-white/30 hover:bg-[#2a2c35] transition-all duration-300"
               >
-                <div className="w-12 h-12 mx-auto mb-3 bg-[#292a30] rounded-full flex items-center justify-center border border-gray-700/50 group-hover:border-white/30 transition-colors">
-                  <span className="text-sm font-bold text-gray-300 uppercase">
-                    {country.code}
-                  </span>
+                <div className="relative h-32 overflow-hidden">
+                  <Image
+                    src={country.image}
+                    alt={country.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
-                <h3 className="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">
-                  {country.name}
-                </h3>
+                <div className="p-4 text-center">
+                  <h3 className="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">
+                    {country.name}
+                  </h3>
+                  <p className="text-xs text-gray-500 mt-1 uppercase">
+                    {country.code}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>

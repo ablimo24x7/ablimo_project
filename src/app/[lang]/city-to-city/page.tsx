@@ -12,8 +12,8 @@ const cityToCityMetadata: Metadata = {
 
 const topCities = [
   { name: "Dubai", country: "UAE", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop" },
-  { name: "Riyadh", country: "Saudi Arabia", image: "https://images.unsplash.com/photo-1578895102346-7e342c3f3b50?w=400&h=300&fit=crop" },
-  { name: "Doha", country: "Qatar", image: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=400&h=300&fit=crop" },
+  { name: "Riyadh", country: "Saudi Arabia", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Doha", country: "Qatar", image: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
   { name: "Abu Dhabi", country: "UAE", image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" },
 ];
 
@@ -149,7 +149,7 @@ export default async function CityToCityPage({
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop"
+              src="https://images.unsplash.com/photo-1572401611152-cf63d874b019?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Long Distance Travel"
               fill
               className="object-cover"

@@ -220,7 +220,7 @@ export default async function TravelAgenciesPage({
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative h-72 rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0abb?w=800&h=500&fit=crop"
+                src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80"
                 alt="Executive sedan"
                 fill
                 className="object-cover"
