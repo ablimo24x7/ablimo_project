@@ -134,7 +134,7 @@ const newsItems = [
     date: "July 10, 2026",
     category: "Company News",
     image:
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1473951574080-01fe45ec8643?q=80&w=904&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Join Us at the Global Mobility Summit 2026",
@@ -148,7 +148,7 @@ const newsItems = [
     date: "June 28, 2026",
     category: "Awards",
     image:
-      "https://images.unsplash.com/photo-1560472355-536de3962603?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1698047682091-782b1e5c6536?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
