@@ -11,7 +11,7 @@ export default async function Header({ lang }: HeaderProps) {
   const dict = await getDictionary(lang);
 
   return (
-    <header className="relative z-50 w-full flex justify-between items-center px-10 md:px-12 py-5">
+    <header className="relative z-50 w-full flex justify-between items-center px-8 md:px-12 py-5">
       {/* Logo */}
       <Link
         href={`/${lang}`}
