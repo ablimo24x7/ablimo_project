@@ -268,7 +268,7 @@ export default function LimousineServicePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=800&h=600&fit=crop"
+              src="https://images.unsplash.com/photo-1606400142640-69e81d222bcb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Airport Limousine"
               fill
               className="object-cover"
