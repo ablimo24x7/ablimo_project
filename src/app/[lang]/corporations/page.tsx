@@ -101,7 +101,7 @@ export default async function CorporationsPage({
           </div>
           <div className="relative h-80 rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1549317661-bd32c8ce0abb?w=600&h=400&fit=crop"
+              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop"
               alt="Reliable chauffeur service"
               fill
               className="object-cover"

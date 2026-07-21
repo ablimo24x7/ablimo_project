@@ -25,6 +25,13 @@ export default async function TravelAgenciesPage({
   const dict = await getDictionary(locale);
   const t = (dict as any).travelAgencies;
 
+  const imageGridImages = [
+    "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop",
+  ];
+
   const imageGridItems = t.imageGrid;
 
   const commissionItems = t.commission.items;
@@ -66,13 +73,13 @@ export default async function TravelAgenciesPage({
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {imageGridItems.map((title: string) => (
+            {imageGridItems.map((title: string, index: number) => (
               <div
                 key={title}
                 className="relative h-64 rounded-xl overflow-hidden group"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&h=400&fit=crop"
+                  src={imageGridImages[index] || imageGridImages[0]}
                   alt={title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -220,7 +227,7 @@ export default async function TravelAgenciesPage({
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative h-72 rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
                 alt="Executive sedan"
                 fill
                 className="object-cover"

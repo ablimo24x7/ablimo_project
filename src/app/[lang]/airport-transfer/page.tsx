@@ -196,7 +196,7 @@ export default async function AirportTransferPage({
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] rounded-2xl overflow-hidden order-2 lg:order-1">
             <Image
-              src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=800&h=600&fit=crop"
+              src="https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Airport Terminal"
               fill
               className="object-cover"

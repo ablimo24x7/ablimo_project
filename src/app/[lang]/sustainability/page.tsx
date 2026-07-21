@@ -41,7 +41,7 @@ export default async function SustainabilityPage({
     "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop",
     "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&h=400&fit=crop",
     "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1518173946687-a1e0f10615d5?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80",
   ];
 
   const partners = dict.sustainability.partners.items.map(
