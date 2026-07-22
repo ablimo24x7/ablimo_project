@@ -20,7 +20,22 @@ interface LanguageSwitcherProps {
 
 export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClose }: LanguageSwitcherProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    onToggle();
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      onClose();
+    }, 150);
+  };
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -34,6 +49,16 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
     }
   }, [isOpen, onClose]);
 
+  useEffect(() => {
+    function handleWindowBlur() {
+      if (isOpen) {
+        onClose();
+      }
+    }
+    window.addEventListener("blur", handleWindowBlur);
+    return () => window.removeEventListener("blur", handleWindowBlur);
+  }, [isOpen, onClose]);
+
   const getLocalePath = (locale: Locale) => {
     const segments = pathname.split("/");
     segments[1] = locale;
@@ -44,7 +69,8 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
     <div className="relative" ref={ref}>
       <button
         onClick={onToggle}
-        onMouseEnter={onToggle}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         className="flex items-center justify-center w-9 h-9 text-gray-300 hover:text-white transition-colors cursor-pointer rounded-full hover:bg-white/10"
         title={languageLabels[currentLang].label}
       >
@@ -56,7 +82,8 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
       {isOpen && (
         <div
           className="absolute right-0 top-full mt-1 bg-[#2a2c35] border border-gray-600/50 rounded-xl shadow-xl overflow-hidden min-w-[180px] z-50"
-          onMouseLeave={onClose}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {locales.map((locale) => (
             <Link

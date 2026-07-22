@@ -19,6 +19,21 @@ interface NavDropdownProps {
 
 export default function NavDropdown({ label, items, isOpen, onToggle, onClose }: NavDropdownProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    onToggle();
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      onClose();
+    }, 150);
+  };
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -32,12 +47,23 @@ export default function NavDropdown({ label, items, isOpen, onToggle, onClose }:
     }
   }, [isOpen, onClose]);
 
+  useEffect(() => {
+    function handleWindowBlur() {
+      if (isOpen) {
+        onClose();
+      }
+    }
+    window.addEventListener("blur", handleWindowBlur);
+    return () => window.removeEventListener("blur", handleWindowBlur);
+  }, [isOpen, onClose]);
+
   return (
     <div className="relative" ref={ref}>
       <button
         onClick={onToggle}
-        onMouseEnter={onToggle}
-        className="flex items-center gap-1 text-xs font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors cursor-pointer px-3 py-2 rounded-lg hover:bg-white/10"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="flex items-center gap-1 text-xs md:text-sm font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors cursor-pointer px-3 py-2 rounded-lg hover:bg-white/10"
       >
         {label}
         <svg
@@ -53,7 +79,8 @@ export default function NavDropdown({ label, items, isOpen, onToggle, onClose }:
       {isOpen && (
         <div
           className="absolute left-0 top-full mt-1 bg-[#2a2c35] border border-gray-600/50 rounded-xl shadow-xl overflow-hidden min-w-[220px] z-50"
-          onMouseLeave={onClose}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {items.map((item) => (
             <Link

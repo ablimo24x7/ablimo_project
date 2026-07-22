@@ -59,7 +59,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
     <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden -mt-20">
       {/* Background text */}
       <div className="absolute inset-0 z-[-1] flex items-center justify-center pointer-events-none overflow-hidden">
-        <h1 className="text-[26vw] font-black text-white opacity-[0.03] tracking-tighter select-none -mt-[5%]">
+        <h1 className="text-[22vw] font-black text-white opacity-[0.03] tracking-tighter select-none -mt-[5%]">
           AB.LIMO
         </h1>
       </div>
