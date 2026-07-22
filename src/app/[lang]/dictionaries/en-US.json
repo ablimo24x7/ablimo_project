@@ -278,9 +278,9 @@
       "businessVanSuv": { "title": "Business Van/SUV", "features": ["Wi-Fi", "Spacious interior", "Extra luggage space"], "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "globalCities": {
-      "title": "Airport transfer in global cities",
-      "desc1": "Our airport transfer service is available in major cities worldwide. Whether you're landing in Dubai, departing from London, or connecting through Singapore, our professional chauffeurs ensure a smooth journey.",
-      "desc2": "With local knowledge and international standards, we provide consistent quality no matter where your travels take you."
+      "title": "Airport transfer in Gulf cities",
+      "desc1": "Our airport transfer service is available in all major cities across the Gulf region. Whether you're landing in Dubai, departing from Riyadh, or connecting through Doha, our professional chauffeurs ensure a smooth journey.",
+      "desc2": "With local knowledge and international standards, we provide consistent quality across the UAE, Saudi Arabia, Qatar, Bahrain, Kuwait, and Oman."
     },
     "getToFromAirport": {
       "title": "Get to or from the airport",
@@ -312,7 +312,7 @@
     "chooseClassDesc": "Select from our range of premium vehicles to match your travel style.",
     "features": {
       "expertlyTrained": { "title": "Expertly trained", "desc": "Our chauffeurs undergo rigorous training and background checks to ensure your safety and comfort." },
-      "worldwideCoverage": { "title": "Worldwide coverage", "desc": "Access professional chauffeurs in over 50 countries and 300 cities across the globe." },
+      "worldwideCoverage": { "title": "Gulf coverage", "desc": "Access professional chauffeurs across all 6 Gulf countries and 25+ cities." },
       "alwaysOnTime": { "title": "Always on time", "desc": "Punctuality is our promise. Your chauffeur will always arrive before your scheduled pickup time." }
     },
     "vehicleClasses": {
@@ -329,9 +329,9 @@
       "localKnowledge": "Local area knowledge and expertise"
     },
     "worldwide": {
-      "title": "Chauffeur hire worldwide",
-      "desc": "Whether you're traveling for business or leisure, hire a professional chauffeur in over 300 cities worldwide. Our global network ensures consistent service quality no matter where your travels take you.",
-      "desc2": "From London to Dubai, New York to Singapore, our chauffeurs are ready to provide you with a seamless and luxurious travel experience."
+      "title": "Chauffeur hire in the Gulf",
+      "desc": "Whether you're traveling for business or leisure, hire a professional chauffeur across all 6 Gulf countries. Our regional network ensures consistent service quality wherever your travels take you.",
+      "desc2": "From Dubai to Riyadh, Doha to Abu Dhabi, our chauffeurs are ready to provide you with a seamless and luxurious travel experience."
     },
     "travelAB": {
       "title": "Travel from A to B",
@@ -370,8 +370,8 @@
       "businessVanSuv": { "title": "Business Van/SUV", "desc": "Spacious vehicles for groups and families", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
     },
     "blackCarWorldwide": {
-      "title": "Black car service worldwide",
-      "desc": "Our black car service is available in over 300 cities worldwide. Whether you need a ride to the airport, a business transfer, or a special occasion vehicle, our premium black car service delivers excellence every time.",
+      "title": "Black car service across the Gulf",
+      "desc": "Our black car service is available across all 6 Gulf countries. Whether you need a ride to the airport, a business transfer, or a special occasion vehicle, our premium black car service delivers excellence every time.",
       "consistent": "Consistent quality across all locations",
       "premium": "Premium well-maintained vehicles",
       "professional": "Professional chauffeurs at your service"
@@ -405,7 +405,7 @@
   },
   "limousineService": {
     "title": "Limo Service Around the Globe",
-    "subtitle": "Premium limousine service in cities worldwide. Book your luxury ride today.",
+    "subtitle": "Premium limousine service across the Gulf region. Book your luxury ride today.",
     "breadcrumb": { "home": "Home", "limousineService": "Limousine Service" },
     "chooseClass": "Choose your service class",
     "chooseClassDesc": "Select from our range of premium vehicles to match your travel needs.",
@@ -427,7 +427,7 @@
     "getAround": {
       "title": "Get around with a AB.Limo limo",
       "desc": "AB.Limo is your trusted partner for premium transportation. Our global network of professional chauffeurs and luxury vehicles ensures you get where you need to go in comfort and style.",
-      "available": "Available in 50+ countries worldwide",
+      "available": "Available across 6 Gulf countries",
       "available247": "24/7 availability for your convenience",
       "easyBooking": "Easy booking through app or website",
       "consistent": "Consistent quality across all locations"
@@ -456,7 +456,7 @@
   },
   "groundTransportation": {
     "title": "Comprehensive Ground Transportation",
-    "subtitle": "Complete transportation solutions for individuals and businesses worldwide.",
+    "subtitle": "Complete transportation solutions for individuals and businesses across the Gulf region.",
     "breadcrumb": { "home": "Home", "groundTransportation": "Ground Transportation" },
     "comprehensive": {
       "title": "Your comprehensive ground transportation",
@@ -491,7 +491,7 @@
     "title": "About AB.Limo",
     "meta": {
       "title": "About AB.Limo - Premium Luxury Chauffeur Service",
-      "description": "Learn about AB.Limo, a premium luxury chauffeur service operating across 60 countries and 500+ cities worldwide."
+      "description": "Learn about AB.Limo, a premium luxury chauffeur service operating across 6 Gulf countries and 25+ cities in the Middle East."
     },
     "breadcrumb": { "home": "Home", "about": "About AB.Limo" },
     "hero": { "heading1": "Changing the travel", "heading2": "game" },
@@ -535,7 +535,7 @@
         { "title": "Quality Standards", "desc": "Every vehicle in our fleet meets the highest quality and comfort standards." },
         { "title": "Safety First", "desc": "Professional chauffeurs trained to the highest safety protocols worldwide." },
         { "title": "Sustainability", "desc": "Committed to reducing our environmental impact through electric vehicles." },
-        { "title": "Global Reach", "desc": "Serving passengers in over 60 countries with consistently excellent service." }
+        { "title": "Gulf Reach", "desc": "Serving passengers across 6 Gulf countries with consistently excellent service." }
       ]
     },
     "operates": {
@@ -553,7 +553,7 @@
       "heading2": "questions",
       "items": [
         { "q": "How do I book a ride with AB.Limo?", "a": "Booking is simple. Use our website or mobile app to enter your pickup and drop-off locations, select your vehicle class, and confirm your reservation. You'll receive instant confirmation and real-time updates." },
-        { "q": "What areas does AB.Limo operate in?", "a": "We operate in over 60 countries and 500+ cities worldwide, including major cities across the Middle East, Europe, Asia, and North America." },
+        { "q": "What areas does AB.Limo operate in?", "a": "We operate across all 6 Gulf countries — UAE, Saudi Arabia, Qatar, Bahrain, Kuwait, and Oman — covering 25+ major cities including Dubai, Riyadh, Doha, Abu Dhabi, Jeddah, Manama, Kuwait City, and Muscat." },
         { "q": "Can I schedule rides in advance?", "a": "Yes, you can schedule rides up to 60 days in advance. This is perfect for airport transfers, business meetings, and special events." },
         { "q": "What payment methods are accepted?", "a": "We accept all major credit cards, debit cards, and digital payment methods. Corporate accounts can also be set up for business travel." },
         { "q": "Is AB.Limo available for corporate accounts?", "a": "Absolutely. We offer tailored corporate solutions with dedicated account management, consolidated billing, and preferential rates for businesses of all sizes." }
@@ -573,10 +573,10 @@
     "title": "AB.Limo for Business",
     "meta": {
       "title": "Corporate Transportation Services | AB.Limo",
-      "description": "Premium corporate transportation solutions tailored for businesses. Five-star chauffeurs worldwide with competitive rates and 24/7 priority support."
+      "description": "Premium corporate transportation solutions tailored for businesses. Five-star chauffeurs across the Gulf with competitive rates and 24/7 priority support."
     },
     "breadcrumb": { "home": "Home", "business": "Business" },
-    "hero": { "heading": "Corporate transportation services", "subheading": "Five-star chauffeurs worldwide" },
+    "hero": { "heading": "Corporate transportation services", "subheading": "Five-star chauffeurs across the Gulf" },
     "tailored": {
       "heading": "Tailored to you",
       "desc": "Whether you're managing corporate travel, running a travel agency, or seeking strategic partnerships, we have the perfect solution.",
@@ -590,7 +590,7 @@
     "features": {
       "heading": "Why choose AB.Limo for business",
       "items": [
-        { "title": "Global reliability", "desc": "Consistent, premium service across 1,500+ cities in 50+ countries worldwide." },
+        { "title": "Gulf reliability", "desc": "Consistent, premium service across 6 Gulf countries and 25+ cities." },
         { "title": "Competitive rates", "desc": "Transparent pricing with volume discounts and no hidden fees for corporate accounts." },
         { "title": "Unrivaled flexibility", "desc": "Last-minute changes, special requests, and custom itineraries handled with ease." },
         { "title": "Priority 24/7 support", "desc": "Dedicated account managers and round-the-clock support for immediate assistance." },
@@ -692,7 +692,7 @@
       "heading": "Benefits for your business",
       "items": [
         { "title": "By the hour", "desc": "Flexible hourly bookings for meetings and events" },
-        { "title": "Global coverage", "desc": "Consistent service across 1,500+ cities worldwide" },
+        { "title": "Gulf coverage", "desc": "Consistent service across all 6 Gulf countries" },
         { "title": "Corporate accounts", "desc": "Dedicated billing and account management" },
         { "title": "Easy booking", "desc": "Book via app, web, or dedicated account manager" },
         { "title": "Premium fleet", "desc": "Latest models from Mercedes, BMW, and Audi" },
@@ -1082,7 +1082,7 @@
         { "title": "Brand alignment", "desc": "Partner with a premium luxury brand trusted worldwide" },
         { "title": "Technical integration", "desc": "Seamless API integration with dedicated developer support" },
         { "title": "Data insights", "desc": "Access to analytics and reporting for partnership performance" },
-        { "title": "Global reach", "desc": "Access to 1,500+ cities across 50+ countries" },
+        { "title": "Gulf reach", "desc": "Access to 25+ cities across 6 Gulf countries" },
         { "title": "Reliability", "desc": "99.8% on-time performance backed by SLA guarantees" }
       ]
     },
@@ -1198,7 +1198,7 @@
       "heading": "Partner benefits",
       "items": [
         { "title": "Additional revenue", "desc": "Generate income from every chauffeur booking" },
-        { "title": "Global fleet access", "desc": "1,500+ cities with consistent service quality" },
+        { "title": "Gulf fleet access", "desc": "25+ cities with consistent service quality" },
         { "title": "API integration", "desc": "Seamlessly integrate into your booking platform" },
         { "title": "Dashboard reporting", "desc": "Real-time visibility into bookings and commissions" },
         { "title": "Dedicated support", "desc": "Partner success team for ongoing assistance" },

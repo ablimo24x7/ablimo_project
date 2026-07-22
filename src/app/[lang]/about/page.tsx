@@ -3,14 +3,14 @@ import Link from "next/link";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
 
 const statsData = [
-  { number: "60+", labelKey: "countries" },
-  { number: "500+", labelKey: "cities" },
+  { number: "6", labelKey: "countries" },
+  { number: "25+", labelKey: "cities" },
   { number: "10+", labelKey: "years" },
   { number: "1M+", labelKey: "rides" },
 ];
 
 const cityNames = [
-  "Dubai", "Riyadh", "Doha", "Abu Dhabi", "Jeddah", "Manama", "London", "Paris", "New York", "Singapore",
+  "Dubai", "Riyadh", "Doha", "Abu Dhabi", "Jeddah", "Manama", "Kuwait City", "Muscat", "Sharjah", "Mecca",
 ];
 
 export default async function AboutPage({

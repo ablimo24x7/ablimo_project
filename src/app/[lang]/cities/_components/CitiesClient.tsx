@@ -7,89 +7,30 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const citiesByCountry: { country: string; code: string; cities: { name: string; image: string }[] }[] = [
   {
-    country: "Australia",
-    code: "au",
+    country: "Bahrain",
+    code: "bh",
     cities: [
-      { name: "Sydney", image: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Melbourne", image: "https://images.unsplash.com/photo-1514395462725-fb4566210144?w=400&h=300&fit=crop" },
-      { name: "Brisbane", image: "https://images.unsplash.com/photo-1548661625-a30d197ce439?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Perth", image: "https://images.unsplash.com/photo-1580014942344-ce423d2b885a?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Manama", image: "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=800&h=600&fit=crop" },
+      { name: "Riffa", image: "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=800&h=600&fit=crop&q=80" },
+      { name: "Muharraq", image: "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=800&h=600&fit=crop&q=81" },
     ],
   },
   {
-    country: "Austria",
-    code: "at",
+    country: "Kuwait",
+    code: "kw",
     cities: [
-      { name: "Vienna", image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Salzburg", image: "https://images.unsplash.com/photo-1603892710963-331039c8dc66?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Kuwait City", image: "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=800&h=600&fit=crop" },
+      { name: "Hawalli", image: "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=800&h=600&fit=crop&q=80" },
+      { name: "Farwaniya", image: "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=800&h=600&fit=crop&q=81" },
     ],
   },
   {
-    country: "Belgium",
-    code: "be",
+    country: "Oman",
+    code: "om",
     cities: [
-      { name: "Brussels", image: "https://images.unsplash.com/photo-1626013969117-8c13864fdb2d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    ],
-  },
-  {
-    country: "Canada",
-    code: "ca",
-    cities: [
-      { name: "Toronto", image: "https://images.unsplash.com/photo-1490623970972-ae8bb3da443e?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Vancouver", image: "https://images.unsplash.com/photo-1730661906876-18bfc6e95f2f?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Montreal", image: "https://images.unsplash.com/photo-1519178251-5390a0fb6a3f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Calgary", image: "https://images.unsplash.com/photo-1563772770586-c4edcb11e75d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    ],
-  },
-  {
-    country: "France",
-    code: "fr",
-    cities: [
-      { name: "Paris", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=300&fit=crop" },
-      { name: "Lyon", image: "https://images.unsplash.com/photo-1697054601740-dfa28d40c76e?q=80&w=775&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Nice", image: "https://images.unsplash.com/photo-1643914729809-4aa59fdc4c17?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Marseille", image: "https://images.unsplash.com/photo-1566838217578-1903568a76d9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Bordeaux", image: "https://images.unsplash.com/photo-1509636902752-929c7497f3d4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Cannes", image: "https://images.unsplash.com/photo-1659642081573-ac1a040d2e50?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    ],
-  },
-  {
-    country: "Germany",
-    code: "de",
-    cities: [
-      { name: "Berlin", image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Munich", image: "https://images.unsplash.com/photo-1595576663498-fdd3d56d5a50?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Frankfurt", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Hamburg", image: "https://images.unsplash.com/photo-1561128031-95f28b66ed93?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Cologne", image: "https://images.unsplash.com/photo-1584479898061-15742e14f50d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Dusseldorf", image: "https://images.unsplash.com/photo-1610105176331-5706d0fc4a83?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Stuttgart", image: "https://images.unsplash.com/photo-1614247108729-3e5a48e06e9b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    ],
-  },
-  {
-    country: "Italy",
-    code: "it",
-    cities: [
-      { name: "Rome", image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&h=300&fit=crop" },
-      { name: "Milan", image: "https://images.unsplash.com/photo-1520440229-6469a149ac59?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Florence", image: "https://images.unsplash.com/photo-1543429776-2782f8f3e2b0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Venice", image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Naples", image: "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    ],
-  },
-  {
-    country: "Japan",
-    code: "jp",
-    cities: [
-      { name: "Tokyo", image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&h=300&fit=crop" },
-      { name: "Osaka", image: "https://images.unsplash.com/photo-1590559899731-a382839e5549?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    ],
-  },
-  {
-    country: "Netherlands",
-    code: "nl",
-    cities: [
-      { name: "Amsterdam", image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Muscat", image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&h=600&fit=crop" },
+      { name: "Salalah", image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&h=600&fit=crop&q=80" },
+      { name: "Sohar", image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&h=600&fit=crop&q=81" },
     ],
   },
   {
@@ -97,6 +38,8 @@ const citiesByCountry: { country: string; code: string; cities: { name: string; 
     code: "qa",
     cities: [
       { name: "Doha", image: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Al Khor", image: "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=800&h=600&fit=crop" },
+      { name: "Lusail", image: "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=800&h=600&fit=crop" },
     ],
   },
   {
@@ -104,71 +47,21 @@ const citiesByCountry: { country: string; code: string; cities: { name: string; 
     code: "sa",
     cities: [
       { name: "Riyadh", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Jeddah", image: "https://images.unsplash.com/photo-1578895102346-7e342c3f3b50?w=400&h=300&fit=crop" },
-      { name: "Mecca", image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop" },
-    ],
-  },
-  {
-    country: "Singapore",
-    code: "sg",
-    cities: [
-      { name: "Singapore", image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&h=300&fit=crop" },
-    ],
-  },
-  {
-    country: "Spain",
-    code: "es",
-    cities: [
-      { name: "Barcelona", image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=400&h=300&fit=crop" },
-      { name: "Madrid", image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Malaga", image: "https://images.unsplash.com/photo-1585204394783-501ae8f640d4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    ],
-  },
-  {
-    country: "Switzerland",
-    code: "ch",
-    cities: [
-      { name: "Zurich", image: "https://images.unsplash.com/photo-1515488764276-beab7607c1e6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Geneva", image: "https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Basel", image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Jeddah", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=800&h=600&fit=crop" },
+      { name: "Mecca", image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&h=600&fit=crop" },
+      { name: "Medina", image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&h=600&fit=crop&q=80" },
+      { name: "Dammam", image: "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=800&h=600&fit=crop" },
     ],
   },
   {
     country: "UAE",
     code: "ae",
     cities: [
-      { name: "Dubai", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop" },
-      { name: "Abu Dhabi", image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" },
-    ],
-  },
-  {
-    country: "UK",
-    code: "uk",
-    cities: [
-      { name: "London", image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&h=300&fit=crop" },
-      { name: "Manchester", image: "https://images.unsplash.com/photo-1515586838455-8f8f940d6853?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Birmingham", image: "https://images.unsplash.com/photo-1580894742597-87bc878ddb3d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Edinburgh", image: "https://images.unsplash.com/photo-1506377585622-bedcbb027afc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Glasgow", image: "https://images.unsplash.com/photo-1549038425-00b82fbe47a9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Bristol", image: "https://images.unsplash.com/photo-1567600794774-b6c3e63e0034?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Leeds", image: "https://images.unsplash.com/photo-1588714477688-cf28a50e94f7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Liverpool", image: "https://images.unsplash.com/photo-1560507074-b04488e0b80e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    ],
-  },
-  {
-    country: "US",
-    code: "us",
-    cities: [
-      { name: "New York", image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=400&h=300&fit=crop" },
-      { name: "Los Angeles", image: "https://images.unsplash.com/photo-1534190760961-74e8c1c5c3da?w=400&h=300&fit=crop" },
-      { name: "Miami", image: "https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=400&h=300&fit=crop" },
-      { name: "Chicago", image: "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?w=400&h=300&fit=crop" },
-      { name: "San Francisco", image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&h=300&fit=crop" },
-      { name: "Boston", image: "https://images.unsplash.com/photo-1501979376754-2ff867a4f659?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Seattle", image: "https://images.unsplash.com/photo-1502175353174-a7a70e73b362?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Dallas", image: "https://images.unsplash.com/photo-1545194445-dddb8f4487c6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Houston", image: "https://images.unsplash.com/photo-1530089711124-9ca31fb9e863?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-      { name: "Washington DC", image: "https://images.unsplash.com/photo-1617581629397-a7250d77c223?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { name: "Dubai", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop" },
+      { name: "Abu Dhabi", image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&h=600&fit=crop" },
+      { name: "Sharjah", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop&q=80" },
+      { name: "Ajman", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop&q=81" },
+      { name: "Ras Al Khaimah", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop&q=82" },
     ],
   },
 ].sort((a, b) => a.country.localeCompare(b.country));
