@@ -15,15 +15,25 @@ const topCities = [
   { name: "Riyadh", country: "Saudi Arabia", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
   { name: "Doha", country: "Qatar", image: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
   { name: "Abu Dhabi", country: "UAE", image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" },
+  { name: "Manama", country: "Bahrain", image: "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop" },
+  { name: "Kuwait City", country: "Kuwait", image: "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop" },
+  { name: "Muscat", country: "Oman", image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop" },
+  { name: "Jeddah", country: "Saudi Arabia", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop" },
 ];
 
 const topRoutes = [
   { from: "Dubai", to: "Abu Dhabi", distance: "140 km", duration: "1h 30m" },
+  { from: "Dubai", to: "Sharjah", distance: "30 km", duration: "30m" },
   { from: "Riyadh", to: "Dammam", distance: "400 km", duration: "4h 00m" },
+  { from: "Riyadh", to: "Jeddah", distance: "950 km", duration: "9h 00m" },
   { from: "Doha", to: "Al Khor", distance: "50 km", duration: "45m" },
   { from: "Jeddah", to: "Mecca", distance: "80 km", duration: "1h 00m" },
   { from: "Manama", to: "Al Khobar", distance: "110 km", duration: "1h 30m" },
-  { from: "Dubai", to: "Sharjah", distance: "30 km", duration: "30m" },
+  { from: "Kuwait City", to: "Doha", distance: "550 km", duration: "5h 30m" },
+  { from: "Muscat", to: "Abu Dhabi", distance: "350 km", duration: "3h 30m" },
+  { from: "Abu Dhabi", to: "Al Ain", distance: "150 km", duration: "1h 30m" },
+  { from: "Dubai", to: "Ras Al Khaimah", distance: "100 km", duration: "1h 00m" },
+  { from: "Mecca", to: "Medina", distance: "420 km", duration: "4h 15m" },
 ];
 
 export default async function CityToCityPage({

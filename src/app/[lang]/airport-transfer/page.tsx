@@ -28,8 +28,8 @@ const featureIcons = [
 
 
 const globalCities = [
-  "Dubai", "Riyadh", "Doha", "Abu Dhabi", "Jeddah", "London",
-  "Paris", "New York", "Singapore", "Tokyo", "Berlin", "Istanbul",
+  "Dubai", "Abu Dhabi", "Riyadh", "Jeddah", "Doha", "Manama",
+  "Kuwait City", "Muscat", "Sharjah", "Mecca", "Dammam", "Al Khor",
 ];
 
 
