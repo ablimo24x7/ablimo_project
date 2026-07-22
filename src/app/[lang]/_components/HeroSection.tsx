@@ -241,7 +241,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
           </button>
         </div>
         <div className="w-full max-w-[1200px] px-4 md:px-0">
-          <div className="flex flex-col md:flex-row items-stretch md:items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-3 md:p-3 gap-3 md:gap-0">
+          <div className="flex flex-col md:flex-row items-stretch md:items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-2 md:p-2 gap-3 md:gap-0">
             <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
               <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
                 {b.from}
