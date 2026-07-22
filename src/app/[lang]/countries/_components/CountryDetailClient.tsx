@@ -187,7 +187,7 @@ export default function CountryDetailClient({ dict, lang, countrySlug }: Props) 
             </section>
 
             {/* Intro & Links Section */}
-            <section className="max-w-7xl mx-auto px-30 py-10 space-y-6">
+            <section className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-10 space-y-6">
                 <p className="text-gray-300 text-[16px] leading-relaxed">
                     {detail.intro.replace("{country}", countryName)}
                 </p>
