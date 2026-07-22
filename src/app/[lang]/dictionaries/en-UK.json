@@ -1,0 +1,1252 @@
+{
+  "metadata": {
+    "siteTitle": "AB.Limo - Luxury Chauffeur Service",
+    "siteDescription": "Premium luxury chauffeur service. Book your ride with AB.Limo for airport transfers, business travel, and special events."
+  },
+  "header": {
+    "logo": "AB.Limo",
+    "nav": {
+      "ourServices": "Our services",
+      "forBusiness": "For business",
+      "forChauffeurs": "For chauffeurs",
+      "help": "Help",
+      "signIn": "Sign in",
+      "bookNow": "Book now"
+    },
+    "dropdowns": {
+      "services": {
+        "cityToCity": "City-to-City rides",
+        "chauffeurHailing": "Chauffeur hailing",
+        "airportTransfer": "Airport transfers",
+        "hourlyHire": "Hourly hire",
+        "chauffeurService": "Chauffeur service",
+        "limousineService": "Limousine service"
+      },
+      "business": {
+        "overview": "Overview",
+        "corporations": "Corporations",
+        "travelAgencies": "Travel agencies",
+        "strategicPartnerships": "Strategic partnerships"
+      }
+    }
+  },
+  "booking": {
+    "oneWay": "One way",
+    "byTheHour": "By the hour",
+    "from": "From",
+    "to": "To",
+    "duration": "Duration",
+    "date": "Date",
+    "pickupTime": "Pickup time",
+    "search": "Search",
+    "helperText": "Chauffeur will wait 15 minutes free of charge.",
+    "pickupPlaceholder": "Address, airport, hotel, ...",
+    "selectDate": "Select date",
+    "selectTime": "Select time",
+    "hours80km": "2 hours (80 km included)",
+    "hours120km": "3 hours (120 km included)",
+    "hours160km": "4 hours (160 km included)"
+  },
+  "common": {
+    "breadcrumb": { "home": "Home" },
+    "passengers": "Passengers",
+    "luggage": "Luggage",
+    "faqTitle": "Frequently Asked Questions",
+    "businessClass": "Business Class",
+    "firstClass": "First Class",
+    "businessVanSuv": "Business Van/SUV",
+    "fitsUpToPeople": "Fits up to {n} people",
+    "city": "city",
+    "cities": "cities"
+  },
+  "hero": {
+    "bookNow": "Book Now"
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "howItWorks": "How AB.Limo works",
+      "career": "Career",
+      "press": "Press",
+      "greenInitiatives": "Green initiatives",
+      "becomeChauffeur": "Become a chauffeur partner"
+    },
+    "business": {
+      "title": "AB.Limo for Business",
+      "overview": "Overview",
+      "corporations": "Corporations",
+      "travelAgencies": "Travel agencies",
+      "strategicPartnerships": "Strategic partnerships"
+    },
+    "topCities": {
+      "title": "Top cities",
+      "dubai": "Dubai",
+      "riyadh": "Riyadh",
+      "doha": "Doha",
+      "abuDhabi": "Abu Dhabi",
+      "jeddah": "Jeddah",
+      "allCities": "All cities"
+    },
+    "explore": {
+      "title": "Explore",
+      "cityToCity": "City-to-city rides",
+      "limousine": "Limousine service",
+      "chauffeur": "Chauffeur service",
+      "privateCar": "Private car service",
+      "groundTransport": "Ground transportation",
+      "airportTransfer": "Airport transfer",
+      "allCountries": "All countries"
+    },
+    "cityToCityRides": {
+      "title": "City-to-City rides",
+      "dubaiAbuDhabi": "Dubai - Abu Dhabi",
+      "riyadhDammam": "Riyadh - Dammam",
+      "dohaAlKhor": "Doha - Al Khor",
+      "jeddahMecca": "Jeddah - Mecca",
+      "manamaAlKhobar": "Manama - Al Khobar"
+    },
+    "bottomLinks": {
+      "terms": "Terms",
+      "privacy": "Privacy policy",
+      "legal": "Legal notice",
+      "accessibility": "Accessibility"
+    },
+    "copyright": "©2026 AB.Limo"
+  },
+  "home": {
+    "slides": [
+      {
+        "title": "AB.Limo Model S",
+        "desc": "The AB.Limo Model S is a full-sized electric five-door, liftback, produced by AB.Limo. Since its introduction June 2012 it has achieved rapidly growing sale from Norway and California."
+      },
+      {
+        "title": "Lexus LS 500",
+        "desc": "Experience uncompromising luxury and meticulous craftsmanship. The Lexus LS 500 delivers a smooth, powerful ride perfect for executive travel and high-end transport."
+      },
+      {
+        "title": "Mercedes Sprinter",
+        "desc": "Ideal for group travel, the Mercedes Sprinter offers unparalleled space and premium amenities, ensuring your entire party travels in absolute comfort and style."
+      },
+      {
+        "title": "GMC Yukon Elite",
+        "desc": "Command the road with the robust GMC SUV, blending dominating power with sophisticated style and ample luggage capacity for any journey."
+      }
+    ],
+    "services": {
+      "title": "Our Services",
+      "items": [
+        { "title": "Airport Transfers", "desc": "Pellentesque semper dui eget fermentum sagittis. Curabitur bibendum id ante." },
+        { "title": "Business Transfers", "desc": "Sed nisi magna, rhoncus nec imperdiet non, pretium vitae odio donec scelerisque gravida." },
+        { "title": "Events & Wedding", "desc": "Phasellus ullamcorper hendrerit suscipit. Quisque efficitur dictum tellus, eget malesuada." }
+      ]
+    },
+    "about": {
+      "heading1": "We make sure that",
+      "heading2": "your every trip",
+      "heading3": "is comfortable",
+      "features": [
+        "Luxury Limousine Selection",
+        "24/7 Order Available",
+        "Fast Car Delivery Service",
+        "High Safety and Purity",
+        "Fixed Price & Bonus System",
+        "Professional Car Drivers"
+      ]
+    },
+    "pricing": {
+      "title": "Choose Your Plan",
+      "plans": [
+        { "name": "Business", "subtitle": "Class", "desc": "Reliable comfort for everyday executive travel", "price": "75$", "unit": "/ hour" },
+        { "name": "Premium", "subtitle": "Class", "desc": "Stylish vehicles for elevated business journeys", "price": "140$", "unit": "/ hour" },
+        { "name": "Luxury", "subtitle": "Class", "desc": "Ultimate comfort with exclusive luxury experience", "price": "299$", "unit": "/ hour" }
+      ]
+    },
+    "fleet": {
+      "title": "Our Fleet",
+      "subtitle": "Choose from our selection of premium vehicles",
+      "viewDetails": "View Details",
+      "filters": { "all": "Show All", "sedan": "Sedan", "suv": "Suv", "van": "Van" },
+      "passengers": "Passengers",
+      "luggage": "Luggage"
+    },
+    "brands": {
+      "subtitle": "Brand Options",
+      "heading1": "Explore our amazing",
+      "heading2": "partnering Brands"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "heading1": "Answer to all the Frequently",
+      "heading2": "Asked Questions",
+      "askMore": "ASK MORE QUESTIONS",
+      "items": [
+        { "q": "What documents do I need to hire a chauffeur?", "a": "To hire a chauffeur with AB.Limo, you'll need a valid government-issued photo ID (passport or national ID), a valid driving license, and proof of address. Additional documents may be required depending on your location." },
+        { "q": "What is the minimum age to book a car?", "a": "The minimum age to book a car with AB.Limo is 18 years old. However, some vehicle categories may have higher age requirements." },
+        { "q": "Do I need a credit card to book a car?", "a": "Yes, we require a valid credit card to secure your booking. We accept all major credit cards including Visa, Mastercard, and American Express." },
+        { "q": "Is fuel included in the booking price?", "a": "Yes, fuel is included in all our booking prices. You won't need to worry about refueling during your trip." },
+        { "q": "Can I change or cancel my reservation?", "a": "Yes, you can change or cancel your reservation up to 24 hours before your scheduled pickup time at no extra charge." }
+      ]
+    }
+  },
+  "cityToCity": {
+    "title": "City-to-City Long Distance Car Service",
+    "subtitle": "Travel between cities in luxury and comfort with professional chauffeurs.",
+    "breadcrumb": { "home": "Home", "cityToCity": "City-to-City" },
+    "bookYourJourney": "Book Your Journey",
+    "downloadApp": "Download the AB.Limo App",
+    "downloadAppDesc": "Book your city-to-city transfer on the go. Track your chauffeur, manage bookings, and enjoy exclusive app-only offers.",
+    "scanQR": "Scan QR Code",
+    "betterWay": {
+      "title": "Long distance car service, the better way",
+      "desc": "Skip the hassle of airports and enjoy a comfortable door-to-door journey between cities. Our long distance car service offers the perfect alternative to driving yourself or flying short distances.",
+      "benefits": [
+        "Comfortable, door-to-door service without the hassle of airports",
+        "Fixed prices with no hidden fees or surge pricing",
+        "Professional chauffeurs with extensive route knowledge",
+        "Premium vehicles equipped with Wi-Fi and refreshments",
+        "Flexible scheduling and last-minute bookings available",
+        "Track your journey in real-time with our mobile app"
+      ]
+    },
+    "globalReach": {
+      "title": "Global reach",
+      "desc": "Our long distance car service covers major routes across the Middle East and beyond."
+    },
+    "routes": {
+      "title": "City-to-City routes",
+      "desc": "Popular routes with competitive fixed pricing and professional chauffeurs.",
+      "topCities": "Top cities",
+      "topRoutes": "Top routes"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        { "q": "How long does a city-to-city transfer take?", "a": "The duration depends on the distance between cities. For example, Dubai to Abu Dhabi takes approximately 1.5 hours, while Riyadh to Dammam takes around 4 hours. Your chauffeur will choose the most efficient route." },
+        { "q": "Can I make stops during my city-to-city journey?", "a": "Yes, you can request additional stops during your journey. Simply let us know your requirements when booking, or communicate with your chauffeur during the trip. Additional stops may incur extra charges." },
+        { "q": "What vehicles are available for long distance travel?", "a": "We offer Business Class sedans, First Class luxury sedans, and Business Van/SUV options for city-to-city travel. All vehicles are equipped with Wi-Fi, charging ports, and refreshments for your comfort." },
+        { "q": "Is there a maximum distance for city-to-city transfers?", "a": "We cover distances up to 500 km for a single booking. For longer distances, we can arrange multi-day transfers with overnight stops at premium hotels along the route." },
+        { "q": "Can I book a round trip?", "a": "Yes, round-trip bookings are available. You can schedule your return journey at the time of booking or arrange it later through our app or customer service." },
+        { "q": "What is the cancellation policy?", "a": "Free cancellation is available up to 24 hours before your scheduled pickup. Cancellations within 24 hours may incur a fee. Please check our terms for full details." },
+        { "q": "Do you provide child seats?", "a": "Yes, child seats are available upon request. Please mention your requirements when booking so we can ensure the appropriate seat is installed in your vehicle." },
+        { "q": "Are your prices fixed or metered?", "a": "All our city-to-city transfers have fixed prices. You'll see the exact fare when you book, with no hidden charges or surge pricing." }
+      ]
+    },
+    "testimonials": {
+      "title": "What our customers say",
+      "items": [
+        { "name": "Ahmad Al-Rashid", "role": "Business Executive", "text": "The Dubai to Abu Dhabi transfer was seamless. My chauffeur was professional, the car was immaculate, and I arrived relaxed and ready for my meeting." },
+        { "name": "Sarah Johnson", "role": "Frequent Traveler", "text": "I use AB.Limo for all my intercity travel in the Gulf region. The consistency and quality of service is unmatched. Highly recommended." },
+        { "name": "Mohammed Al-Thani", "role": "Corporate Client", "text": "Our company uses AB.Limo for all executive city-to-city transfers. The reliability and professionalism of their chauffeurs is exceptional." }
+      ]
+    },
+    "cta": {
+      "title": "Ready for your next city-to-city journey?",
+      "desc": "Book your long distance transfer today and travel in luxury and comfort.",
+      "bookNow": "Book Now"
+    },
+    "routePage": {
+      "breadcrumb": { "home": "Home", "cityToCity": "City-to-City" },
+      "totalDistance": "Total Distance",
+      "estimatedTime": "Estimated Time",
+      "fixedPricing": "Fixed",
+      "pricing": "Pricing",
+      "from": "From",
+      "to": "To",
+      "whyChoose": "Why choose AB.Limo for {from} to {to}",
+      "whyChooseDesc": "Travel between {from} and {to} in complete comfort with our premium city-to-city transfer service. Our professional chauffeurs know the best routes and ensure a smooth, relaxing journey.",
+      "aboutRoute": "About this route",
+      "aboutRouteDesc1": "The {from} to {to} route covers {distance} of premium road travel. Our experienced chauffeurs are familiar with every stretch of this route, ensuring the most efficient and comfortable journey.",
+      "aboutRouteDesc2": "Whether you're traveling for business or leisure, our door-to-door service eliminates the stress of driving or navigating public transport. Sit back, relax, and enjoy the scenery while our professional driver takes care of everything.",
+      "routeFeatures": ["Door-to-door pickup and drop-off", "Real-time journey tracking", "Complimentary Wi-Fi and refreshments"],
+      "ctaTitle": "Ready for your journey from {from} to {to}?"
+    }
+  },
+  "airportTransfer": {
+    "title": "Airport Transfer Service Worldwide",
+    "subtitle": "Seamless, reliable, and luxurious airport transfers in cities around the globe.",
+    "breadcrumb": { "home": "Home", "airportTransfer": "Airport Transfer" },
+    "discoverClasses": "Discover our service classes",
+    "discoverClassesDesc": "Choose from our range of premium vehicles to match your travel needs and style preferences.",
+    "features": {
+      "competitiveRates": { "title": "Competitive rates", "desc": "Enjoy transparent pricing with no hidden fees. Our airport transfer rates are competitive and fixed upfront." },
+      "seamlessTravel": { "title": "Seamless airport travel", "desc": "From booking to drop-off, enjoy a smooth and hassle-free airport transfer experience." },
+      "travelOnYourTerms": { "title": "Travel on your terms", "desc": "Schedule your pickup at your convenience. Our chauffeurs wait for you, even if your flight is delayed." }
+    },
+    "vehicleClasses": {
+      "businessClass": { "title": "Business Class", "features": ["Wi-Fi", "Water bottles", "Phone charger"], "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "First Class", "features": ["Wi-Fi", "Refreshments", "Premium leather seats"], "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
+      "businessVanSuv": { "title": "Business Van/SUV", "features": ["Wi-Fi", "Spacious interior", "Extra luggage space"], "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
+    },
+    "globalCities": {
+      "title": "Airport transfer in global cities",
+      "desc1": "Our airport transfer service is available in major cities worldwide. Whether you're landing in Dubai, departing from London, or connecting through Singapore, our professional chauffeurs ensure a smooth journey.",
+      "desc2": "With local knowledge and international standards, we provide consistent quality no matter where your travels take you."
+    },
+    "getToFromAirport": {
+      "title": "Get to or from the airport",
+      "desc": "Whether you need a ride to catch your flight or a comfortable transfer after landing, AB.Limo has you covered. Our airport transfer service is designed to make your journey as smooth as possible.",
+      "flightTracking": "Flight tracking for accurate pickup times",
+      "waitTime": "Complimentary 60-minute wait time",
+      "meetGreet": "Meet and greet at arrivals",
+      "luggageAssist": "Luggage assistance included"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        { "q": "How do I book an airport transfer?", "a": "You can book an airport transfer through our website or mobile app. Simply enter your pickup and drop-off locations, select your preferred vehicle class, and confirm your booking. You'll receive a confirmation with your chauffeur details." },
+        { "q": "What happens if my flight is delayed?", "a": "We monitor all flights in real-time. If your flight is delayed, your chauffeur will automatically adjust the pickup time. You won't be charged extra for flight delays, and your chauffeur will be waiting when you land." },
+        { "q": "Is meet and greet service included?", "a": "Yes, meet and greet service is included with all airport transfers. Your chauffeur will meet you in the arrivals hall with a personalized name board and assist you with your luggage." }
+      ]
+    },
+    "cta": {
+      "title": "Ready to book your airport transfer?",
+      "desc": "Experience seamless airport transfers with professional chauffeurs and premium vehicles.",
+      "bookYourTransfer": "Book Your Transfer"
+    }
+  },
+  "chauffeurService": {
+    "title": "Your Professional Chauffeur Service",
+    "subtitle": "Experienced drivers, premium vehicles, and exceptional service.",
+    "breadcrumb": { "home": "Home", "chauffeurService": "Chauffeur Service" },
+    "chooseClass": "Choose your vehicle class",
+    "chooseClassDesc": "Select from our range of premium vehicles to match your travel style.",
+    "features": {
+      "expertlyTrained": { "title": "Expertly trained", "desc": "Our chauffeurs undergo rigorous training and background checks to ensure your safety and comfort." },
+      "worldwideCoverage": { "title": "Worldwide coverage", "desc": "Access professional chauffeurs in over 50 countries and 300 cities across the globe." },
+      "alwaysOnTime": { "title": "Always on time", "desc": "Punctuality is our promise. Your chauffeur will always arrive before your scheduled pickup time." }
+    },
+    "vehicleClasses": {
+      "businessClass": { "title": "Business Class", "desc": "Executive sedans for professional travel", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "First Class", "desc": "Ultra-luxury vehicles for VIP travel", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
+      "businessVanSuv": { "title": "Business Van/SUV", "desc": "Spacious options for groups and families", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
+    },
+    "worldClass": {
+      "title": "World class chauffeurs",
+      "desc": "Our chauffeurs are more than just drivers — they are trained professionals dedicated to providing an exceptional travel experience. Each chauffeur undergoes extensive training in defensive driving, etiquette, and customer service.",
+      "licensed": "Licensed and insured professionals",
+      "background": "Extensive background checks completed",
+      "multilingual": "Multilingual capabilities",
+      "localKnowledge": "Local area knowledge and expertise"
+    },
+    "worldwide": {
+      "title": "Chauffeur hire worldwide",
+      "desc": "Whether you're traveling for business or leisure, hire a professional chauffeur in over 300 cities worldwide. Our global network ensures consistent service quality no matter where your travels take you.",
+      "desc2": "From London to Dubai, New York to Singapore, our chauffeurs are ready to provide you with a seamless and luxurious travel experience."
+    },
+    "travelAB": {
+      "title": "Travel from A to B",
+      "desc": "Get where you need to go with comfort and style. Our chauffeur service covers airport transfers, business travel, city tours, and long-distance journeys. No matter the occasion, we have the perfect vehicle and chauffeur for you.",
+      "airport": "Airport transfers with flight tracking",
+      "business": "Business and corporate travel",
+      "cityToCity": "City-to-city long distance travel"
+    },
+    "airportChauffeur": {
+      "title": "Professional chauffeur service to and from the airport",
+      "desc": "Start your journey stress-free with our airport chauffeur service. Your professional chauffeur will meet you at the airport with a personalized name board and assist you with your luggage.",
+      "flightTracking": "Real-time flight tracking",
+      "meetGreet": "Meet and greet at arrivals",
+      "waitTime": "60 minutes complimentary wait time"
+    },
+    "cta": {
+      "title": "Ready to hire your professional chauffeur?",
+      "desc": "Experience the difference with AB.Limo's professional chauffeur service.",
+      "bookNow": "Book Now"
+    }
+  },
+  "carService": {
+    "title": "Professional Car Service with AB.Limo",
+    "subtitle": "Premium private car service for all your transportation needs.",
+    "breadcrumb": { "home": "Home", "carService": "Car Service" },
+    "chooseClass": "Choose your vehicle class",
+    "chooseClassDesc": "Select from our range of premium vehicles to match your travel needs.",
+    "features": {
+      "safeSecure": { "title": "Safe & secure", "desc": "Your safety is our priority. All vehicles are regularly inspected and chauffeurs are fully licensed." },
+      "fixedPricing": { "title": "Fixed pricing", "desc": "Know your fare before you ride. No hidden fees, no surge pricing, just honest and transparent rates." },
+      "quickBooking": { "title": "Quick booking", "desc": "Book your ride in seconds through our app or website. Fast, easy, and convenient." }
+    },
+    "vehicleClasses": {
+      "businessClass": { "title": "Business Class", "desc": "Reliable sedans for everyday executive travel", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "First Class", "desc": "Premium luxury for special occasions", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
+      "businessVanSuv": { "title": "Business Van/SUV", "desc": "Spacious vehicles for groups and families", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
+    },
+    "blackCarWorldwide": {
+      "title": "Black car service worldwide",
+      "desc": "Our black car service is available in over 300 cities worldwide. Whether you need a ride to the airport, a business transfer, or a special occasion vehicle, our premium black car service delivers excellence every time.",
+      "consistent": "Consistent quality across all locations",
+      "premium": "Premium well-maintained vehicles",
+      "professional": "Professional chauffeurs at your service"
+    },
+    "professional": {
+      "title": "Your professional car service",
+      "desc": "AB.Limo is your trusted partner for professional car service. We combine cutting-edge technology with premium vehicles and expert chauffeurs to deliver an unmatched travel experience.",
+      "desc2": "From the moment you book to the moment you arrive, every detail is handled with care and precision. Experience the difference of true professional car service."
+    },
+    "corporate": {
+      "title": "Corporate car service",
+      "desc": "Elevate your corporate travel with our dedicated business car service. We offer tailored solutions for companies of all sizes, including executive accounts, group travel, and event transportation.",
+      "accountManagement": "Dedicated account management",
+      "billing": "Centralized billing and reporting",
+      "priorityBooking": "Priority booking for executives"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        { "q": "What is a private car service?", "a": "A private car service provides on-demand transportation with professional chauffeurs and premium vehicles. Unlike ride-sharing, you get a dedicated vehicle and chauffeur for your exclusive use." },
+        { "q": "How do I book a car service?", "a": "You can book through our website, mobile app, or by contacting our customer service team. Simply enter your pickup location, destination, and preferred vehicle class to get an instant quote." },
+        { "q": "What payment methods do you accept?", "a": "We accept all major credit and debit cards, as well as digital payment methods. Payment is processed automatically at the end of your ride, so you don't need to carry cash." },
+        { "q": "Can I schedule a ride in advance?", "a": "Yes, you can schedule rides up to 30 days in advance. This is perfect for airport transfers, business meetings, and special events where punctuality is essential." }
+      ]
+    },
+    "cta": {
+      "title": "Ready to experience professional car service?",
+      "desc": "Book your premium ride today and travel with confidence.",
+      "bookYourRide": "Book Your Ride"
+    }
+  },
+  "limousineService": {
+    "title": "Limo Service Around the Globe",
+    "subtitle": "Premium limousine service in cities worldwide. Book your luxury ride today.",
+    "breadcrumb": { "home": "Home", "limousineService": "Limousine Service" },
+    "chooseClass": "Choose your service class",
+    "chooseClassDesc": "Select from our range of premium vehicles to match your travel needs.",
+    "features": {
+      "trustedReliable": { "title": "Trusted & reliable", "desc": "Our limousine service is trusted by millions of travelers worldwide for its reliability and consistency." },
+      "transparentPricing": { "title": "Transparent pricing", "desc": "Know your fare before you ride. No hidden fees, no surge pricing, just honest and competitive rates." },
+      "professionalChauffeurs": { "title": "Professional chauffeurs", "desc": "Every chauffeur is professionally trained, licensed, and committed to providing exceptional service." }
+    },
+    "vehicleClasses": {
+      "businessClass": { "title": "Business Class", "desc": "Executive sedans for business and airport transfers", "passengers": 3, "luggage": 2, "image": "https://images.unsplash.com/photo-1619221496652-7ee3d7406203?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      "firstClass": { "title": "First Class", "desc": "Premium luxury vehicles for special occasions", "passengers": 3, "luggage": 3, "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop" },
+      "businessVanSuv": { "title": "Business Van/SUV", "desc": "Spacious vehicles for groups and extra luggage", "passengers": 6, "luggage": 6, "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop" }
+    },
+    "limoCity": {
+      "title": "Limo service in the city",
+      "desc": "Navigate city streets in style with our professional limousine service. Whether you're heading to a business meeting, a special event, or simply exploring the city, our chauffeurs ensure a comfortable and stylish journey.",
+      "desc2": "Our vehicles are equipped with modern amenities including Wi-Fi, charging ports, and refreshments to make your city ride enjoyable and productive."
+    },
+    "getAround": {
+      "title": "Get around with a AB.Limo limo",
+      "desc": "AB.Limo is your trusted partner for premium transportation. Our global network of professional chauffeurs and luxury vehicles ensures you get where you need to go in comfort and style.",
+      "available": "Available in 50+ countries worldwide",
+      "available247": "24/7 availability for your convenience",
+      "easyBooking": "Easy booking through app or website",
+      "consistent": "Consistent quality across all locations"
+    },
+    "airportLimo": {
+      "title": "Airport limousine service",
+      "desc": "Start or end your journey in style with our airport limousine service. Our chauffeurs monitor your flight in real-time and adjust pickup times accordingly, ensuring a seamless airport experience.",
+      "flightTracking": "Flight tracking for accurate pickups",
+      "meetGreet": "Meet and greet at arrivals",
+      "waitTime": "Complimentary 60-minute wait time"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        { "q": "What is a limousine service?", "a": "A limousine service provides professional chauffeur-driven luxury vehicles for transportation. It offers a premium experience with well-maintained vehicles, trained chauffeurs, and door-to-door service." },
+        { "q": "How far in advance should I book?", "a": "We recommend booking at least 2-4 hours in advance for the best availability. However, we also accommodate last-minute bookings based on vehicle availability in your area." },
+        { "q": "Can I request a specific vehicle model?", "a": "While we cannot guarantee specific models, we will match you with the best available vehicle in your chosen class. All vehicles in our fleet are premium and well-maintained." },
+        { "q": "Is the limousine service available 24/7?", "a": "Yes, our limousine service operates 24 hours a day, 7 days a week. You can book a ride anytime through our website, app, or by contacting our customer service team." }
+      ]
+    },
+    "cta": {
+      "title": "Experience premium limousine service",
+      "desc": "Book your luxury ride today and travel in style with AB.Limo.",
+      "bookYourLimo": "Book Your Limo"
+    }
+  },
+  "groundTransportation": {
+    "title": "Comprehensive Ground Transportation",
+    "subtitle": "Complete transportation solutions for individuals and businesses worldwide.",
+    "breadcrumb": { "home": "Home", "groundTransportation": "Ground Transportation" },
+    "comprehensive": {
+      "title": "Your comprehensive ground transportation",
+      "desc": "AB.Limo provides end-to-end ground transportation solutions tailored to your needs. Whether you're an individual traveler, a corporate client, or organizing a large event, our comprehensive service covers every aspect of your journey.",
+      "airport": "Airport transfers with flight monitoring",
+      "corporate": "Corporate accounts with centralized billing",
+      "event": "Event and group transportation",
+      "cityToCity": "City-to-city long distance travel"
+    },
+    "personalChauffeur": {
+      "title": "Your personal chauffeur",
+      "desc": "Every journey with AB.Limo includes a dedicated professional chauffeur. Our drivers are more than just transportation providers — they are your personal concierge on the road, ensuring your comfort and safety throughout the journey.",
+      "trained": "Professionally trained and licensed drivers",
+      "multilingual": "Multilingual communication skills",
+      "localKnowledge": "Local knowledge and route expertise"
+    },
+    "airportGround": {
+      "title": "Reliable ground transportation to and from the airport",
+      "desc": "Start and end every trip with confidence using our airport ground transportation service. We monitor your flight in real-time and adjust pickup times accordingly, ensuring a seamless airport experience every time.",
+      "flightTracking": "Real-time flight tracking and delay adjustments",
+      "meetGreet": "Meet and greet at arrivals with name board",
+      "waitTime": "Complimentary 60-minute wait time",
+      "luggageAssist": "Luggage assistance and handling"
+    },
+    "cta": {
+      "title": "Ready for comprehensive ground transportation?",
+      "desc": "Experience seamless transportation solutions with AB.Limo. Book your journey today.",
+      "bookNow": "Book Now"
+    }
+  },
+  "about": {
+    "title": "About AB.Limo",
+    "meta": {
+      "title": "About AB.Limo - Premium Luxury Chauffeur Service",
+      "description": "Learn about AB.Limo, a premium luxury chauffeur service operating across 60 countries and 500+ cities worldwide."
+    },
+    "breadcrumb": { "home": "Home", "about": "About AB.Limo" },
+    "hero": { "heading1": "Changing the travel", "heading2": "game" },
+    "mission": {
+      "p1": "AB.Limo was founded with a simple mission: to revolutionize the way people experience ground transportation. We believe that every journey should be seamless, comfortable, and memorable.",
+      "p2": "From airport transfers to business travel, special events to city-to-city rides, we provide a premium chauffeur service that combines cutting-edge technology with unparalleled luxury. Our platform connects passengers with professionally trained chauffeurs behind the wheel of meticulously maintained vehicles.",
+      "p3": "We're not just a ride service — we're redefining what it means to travel in style and comfort.",
+      "stat": "10+",
+      "statLabel": "Years of Excellence"
+    },
+    "stats": {
+      "heading1": "Over a decade of",
+      "heading2": "travel innovation",
+      "countries": "Countries",
+      "cities": "Cities",
+      "years": "Years of Innovation",
+      "rides": "Rides Completed"
+    },
+    "howItWorks": {
+      "heading1": "How AB.Limo",
+      "heading2": "works",
+      "steps": [
+        { "title": "Book Your Ride", "desc": "Enter your pickup and drop-off details, choose your vehicle class, and select your preferred time. It takes less than a minute." },
+        { "title": "Meet Your Chauffeur", "desc": "Your professionally trained chauffeur arrives at your location, ready to provide a comfortable and safe journey." },
+        { "title": "Travel in Style", "desc": "Enjoy a seamless, luxurious ride to your destination. Pay effortlessly through the app with no hidden fees." }
+      ]
+    },
+    "vehicleClasses": {
+      "heading1": "Our vehicle",
+      "heading2": "classes",
+      "classes": [
+        { "title": "Business Class", "desc": "Comfortable sedans with professional chauffeurs for everyday travel." },
+        { "title": "First Class", "desc": "Premium vehicles offering the highest level of luxury and sophistication." },
+        { "title": "Business Van/SUV", "desc": "Spacious vehicles for group travel with ample luggage capacity." }
+      ]
+    },
+    "quality": {
+      "heading1": "Quality, safety, and",
+      "heading2": "sustainability",
+      "features": [
+        { "title": "Quality Standards", "desc": "Every vehicle in our fleet meets the highest quality and comfort standards." },
+        { "title": "Safety First", "desc": "Professional chauffeurs trained to the highest safety protocols worldwide." },
+        { "title": "Sustainability", "desc": "Committed to reducing our environmental impact through electric vehicles." },
+        { "title": "Global Reach", "desc": "Serving passengers in over 60 countries with consistently excellent service." }
+      ]
+    },
+    "operates": {
+      "heading1": "Where AB.Limo",
+      "heading2": "operates",
+      "viewAll": "View All Cities"
+    },
+    "quote": {
+      "text": "Every journey with AB.Limo is crafted to deliver an experience that transcends mere transportation — it's about creating moments of comfort, trust, and unparalleled service.",
+      "name": "The AB.Limo Team",
+      "subtitle": "Committed to Excellence"
+    },
+    "faq": {
+      "heading1": "Frequently asked",
+      "heading2": "questions",
+      "items": [
+        { "q": "How do I book a ride with AB.Limo?", "a": "Booking is simple. Use our website or mobile app to enter your pickup and drop-off locations, select your vehicle class, and confirm your reservation. You'll receive instant confirmation and real-time updates." },
+        { "q": "What areas does AB.Limo operate in?", "a": "We operate in over 60 countries and 500+ cities worldwide, including major cities across the Middle East, Europe, Asia, and North America." },
+        { "q": "Can I schedule rides in advance?", "a": "Yes, you can schedule rides up to 60 days in advance. This is perfect for airport transfers, business meetings, and special events." },
+        { "q": "What payment methods are accepted?", "a": "We accept all major credit cards, debit cards, and digital payment methods. Corporate accounts can also be set up for business travel." },
+        { "q": "Is AB.Limo available for corporate accounts?", "a": "Absolutely. We offer tailored corporate solutions with dedicated account management, consolidated billing, and preferential rates for businesses of all sizes." }
+      ]
+    },
+    "whereToFrom": {
+      "heading1": "Where to from",
+      "heading2": "here",
+      "cards": [
+        { "title": "Careers", "desc": "Join our growing international team and help shape the future of luxury travel." },
+        { "title": "Press", "desc": "Stay updated with the latest news, announcements, and media coverage about AB.Limo." },
+        { "title": "Blog", "desc": "Discover travel tips, destination guides, and insights from our team of experts." }
+      ]
+    }
+  },
+  "business": {
+    "title": "AB.Limo for Business",
+    "meta": {
+      "title": "Corporate Transportation Services | AB.Limo",
+      "description": "Premium corporate transportation solutions tailored for businesses. Five-star chauffeurs worldwide with competitive rates and 24/7 priority support."
+    },
+    "breadcrumb": { "home": "Home", "business": "Business" },
+    "hero": { "heading": "Corporate transportation services", "subheading": "Five-star chauffeurs worldwide" },
+    "tailored": {
+      "heading": "Tailored to you",
+      "desc": "Whether you're managing corporate travel, running a travel agency, or seeking strategic partnerships, we have the perfect solution.",
+      "cards": [
+        { "title": "Corporate travel", "desc": "Streamline your company's travel with dedicated account management, consolidated invoicing, and premium chauffeur services for all your business needs." },
+        { "title": "Travel agencies", "desc": "Partner with AB.Limo to offer your clients world-class chauffeur services. Earn commission while delivering exceptional ground transportation experiences." },
+        { "title": "Strategic partnerships", "desc": "Create lasting value through strategic alliances. Integrate our API, co-brand services, and unlock new revenue streams for your business." }
+      ]
+    },
+    "planning": { "heading": "From planning to pickup", "desc": "Our intuitive platform puts corporate travel management at your fingertips." },
+    "features": {
+      "heading": "Why choose AB.Limo for business",
+      "items": [
+        { "title": "Global reliability", "desc": "Consistent, premium service across 1,500+ cities in 50+ countries worldwide." },
+        { "title": "Competitive rates", "desc": "Transparent pricing with volume discounts and no hidden fees for corporate accounts." },
+        { "title": "Unrivaled flexibility", "desc": "Last-minute changes, special requests, and custom itineraries handled with ease." },
+        { "title": "Priority 24/7 support", "desc": "Dedicated account managers and round-the-clock support for immediate assistance." },
+        { "title": "Simplified management", "desc": "Centralized dashboard for booking, tracking, and reporting across your organization." },
+        { "title": "Sustainability", "desc": "Carbon offset programs and eco-friendly vehicle options for conscious businesses." }
+      ]
+    },
+    "quote": {
+      "text": "AB.Limo has transformed how we handle executive travel. The reliability, consistency, and premium service quality have made them an invaluable partner for our global operations.",
+      "name": "Sarah Mitchell",
+      "title": "VP of Operations, TechCorp"
+    },
+    "help": { "heading": "How can we help?", "desc": "Tell us about your business travel needs and our team will craft a tailored solution for your organization.", "button": "Get in touch" },
+    "awards": {
+      "heading": "Award-winning service",
+      "items": [
+        { "title": "Best Corporate Transport Provider", "year": "2025", "org": "Global Travel Awards" },
+        { "title": "Excellence in Business Travel", "year": "2024", "org": "Business Travel Awards" },
+        { "title": "Sustainability Leader", "year": "2025", "org": "Green Transportation Council" }
+      ]
+    },
+    "contact": {
+      "heading": "Contact us",
+      "desc": "Ready to elevate your corporate transportation? Reach out today.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "company": "Company name",
+      "message": "How can we help?",
+      "submit": "Submit inquiry"
+    }
+  },
+  "corporations": {
+    "title": "Corporations",
+    "meta": {
+      "title": "Corporate Travel Solutions | AB.Limo",
+      "description": "Premium corporate travel solutions for business executives. Reliable chauffeur services with streamlined booking and consolidated invoicing."
+    },
+    "breadcrumb": { "home": "Home", "corporations": "Corporations" },
+    "hero": { "heading": "Corporate Travel Solutions for Business Executives" },
+    "imageGrid": ["Business trips", "City-to-City", "Airport transfers", "Client travel"],
+    "quote": {
+      "text": "AB.Limo consistently delivers exceptional service for our executive team. Their reliability and attention to detail set them apart from any other provider we've worked with.",
+      "attribution": "— James Chen, Chief Financial Officer, Global Enterprises"
+    },
+    "reliability": {
+      "heading": "A new level of chauffeur reliability",
+      "desc": "Every journey is backed by our commitment to punctuality and professionalism. Your executives deserve nothing less.",
+      "items": [
+        "Guaranteed on-time arrivals with real-time flight tracking",
+        "Professional chauffeurs trained in executive service protocols",
+        "24/7 live support for immediate assistance during trips",
+        "Backup vehicle arrangements for unexpected situations",
+        "GPS tracking and trip updates for travel managers"
+      ]
+    },
+    "invoices": {
+      "heading": "A relief from chasing invoices",
+      "desc": "Say goodbye to administrative headaches. Our consolidated billing makes expense management effortless.",
+      "items": [
+        "Single monthly invoice for all corporate bookings",
+        "Detailed expense reports broken down by department",
+        "Integration with major expense management platforms",
+        "Transparent pricing with no hidden surcharges",
+        "Custom billing cycles to match your accounting needs"
+      ]
+    },
+    "booking": {
+      "heading": "Booking for your executives",
+      "desc": "Whether booking for yourself or on behalf of executives, our streamlined process ensures a seamless experience from start to finish."
+    },
+    "hourly": {
+      "heading": "By the hour",
+      "desc": "Need a chauffeur for multiple stops, meetings, or a full day of events? Our hourly service gives you the flexibility to move at your own pace.",
+      "items": [
+        "Minimum 3-hour booking",
+        "Wait time included at no extra cost",
+        "Flexible route changes throughout the day"
+      ]
+    },
+    "awards": {
+      "heading": "Award-winning service",
+      "items": [
+        { "title": "Best Corporate Transport Provider", "year": "2025", "org": "Global Travel Awards" },
+        { "title": "Excellence in Business Travel", "year": "2024", "org": "Business Travel Awards" },
+        { "title": "Sustainability Leader", "year": "2025", "org": "Green Transportation Council" }
+      ]
+    },
+    "sustainability": {
+      "heading": "Sustainability committed",
+      "desc": "We're committed to reducing our environmental impact while maintaining the highest standards of luxury service.",
+      "items": [
+        "Carbon offset program for all rides",
+        "Hybrid and electric vehicle options",
+        "Environmental impact reports"
+      ]
+    },
+    "benefits": {
+      "heading": "Benefits for your business",
+      "items": [
+        { "title": "By the hour", "desc": "Flexible hourly bookings for meetings and events" },
+        { "title": "Global coverage", "desc": "Consistent service across 1,500+ cities worldwide" },
+        { "title": "Corporate accounts", "desc": "Dedicated billing and account management" },
+        { "title": "Easy booking", "desc": "Book via app, web, or dedicated account manager" },
+        { "title": "Premium fleet", "desc": "Latest models from Mercedes, BMW, and Audi" },
+        { "title": "Safety first", "desc": "Fully licensed, insured, and vetted chauffeurs" }
+      ]
+    },
+    "contact": {
+      "heading": "Get started today",
+      "desc": "Set up your corporate account and experience premium executive travel.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "company": "Company name",
+      "message": "Tell us about your travel needs",
+      "submit": "Request corporate account"
+    },
+    "faq": {
+      "heading": "Frequently asked questions",
+      "items": [
+        { "q": "How do I set up a corporate account?", "a": "Contact our corporate team to set up your account. We'll configure billing, preferred vehicles, and booking permissions tailored to your organization's needs." },
+        { "q": "Can we manage multiple bookers under one account?", "a": "Yes. Our platform supports unlimited bookers with customizable permission levels, approval workflows, and department-level cost tracking." },
+        { "q": "What payment options are available?", "a": "We accept corporate credit cards, bank transfers, and offer NET-30 terms for qualified accounts. All billing is consolidated into a single monthly invoice." },
+        { "q": "How do you handle last-minute changes?", "a": "Our 24/7 support team can modify bookings in real-time. Changes to pickup times, routes, or vehicle types are accommodated whenever possible." }
+      ]
+    }
+  },
+  "career": {
+    "title": "Career",
+    "meta": {
+      "title": "Careers at AB.Limo - Join Our Global Team",
+      "description": "Explore exciting career opportunities at AB.Limo. Join a growing international team and help shape the future of luxury ground transportation."
+    },
+    "breadcrumb": { "home": "Home", "career": "Career" },
+    "hero": { "heading": "Start your career journey with AB.Limo" },
+    "intro": {
+      "heading1": "Start your journey.",
+      "heading2": "Find your lane.",
+      "p1": "At AB.Limo, we're not just building a ride service — we're revolutionizing how the world moves. Our team of innovators, dreamers, and doers are passionate about creating seamless luxury experiences for millions of passengers worldwide.",
+      "p2": "Whether you're a tech enthusiast, a customer service expert, or a business strategist, there's a place for you in our global team. We believe that great companies are built by great people, and we're committed to creating an environment where everyone can thrive."
+    },
+    "team": {
+      "heading1": "Join a growing",
+      "heading2": "international team",
+      "members": "Team Members",
+      "nationalities": "Nationalities",
+      "offices": "Office Locations",
+      "rating": "Glassdoor Rating"
+    },
+    "quote": {
+      "text": "We believe that when you invest in people, they invest in you. At AB.Limo, every team member has the opportunity to make a real impact on how the world moves.",
+      "title": "Chief People Officer",
+      "company": "AB.Limo"
+    },
+    "departments": {
+      "heading1": "Discover our teams &",
+      "heading2": "opportunities",
+      "teams": [
+        { "code": "PED", "name": "Product Engineering & Development", "desc": "Build and innovate the technology platform that powers millions of rides worldwide." },
+        { "code": "MKT", "name": "Marketing", "desc": "Drive brand awareness and customer engagement across global markets." },
+        { "code": "SLS", "name": "Sales", "desc": "Expand our corporate partnerships and grow revenue across all segments." },
+        { "code": "P&C", "name": "People & Culture", "desc": "Shape our workplace culture and attract top talent from around the world." },
+        { "code": "CC", "name": "Customer Care", "desc": "Deliver exceptional support to passengers and chauffeurs alike." },
+        { "code": "OPS", "name": "Operations", "desc": "Ensure seamless service delivery across our global network of cities." },
+        { "code": "F&L", "name": "Finance & Legal", "desc": "Manage financial strategy, compliance, and corporate governance." },
+        { "code": "EXEC", "name": "Executive Management", "desc": "Lead the vision and strategic direction of AB.Limo worldwide." }
+      ]
+    },
+    "benefits": {
+      "heading1": "Why you'll love",
+      "heading2": "working here",
+      "items": [
+        { "title": "Personal Development", "desc": "Access to learning programs, mentorship, and growth opportunities to advance your career." },
+        { "title": "Open Feedback", "desc": "A culture of transparency where every voice matters and feedback drives continuous improvement." },
+        { "title": "Flexible Work", "desc": "Work-life balance with flexible schedules and remote work options where possible." },
+        { "title": "Social Events", "desc": "Regular team gatherings, celebrations, and company-wide events to connect and have fun." },
+        { "title": "Cares Day", "desc": "Dedicated days off for volunteering and giving back to the communities we serve." }
+      ]
+    },
+    "news": {
+      "heading1": "Latest",
+      "heading2": "news",
+      "items": [
+        { "title": "AB.Limo Expands to 10 New Cities Across Europe", "date": "July 10, 2026", "category": "Company News" },
+        { "title": "Join Us at the Global Mobility Summit 2026", "date": "July 5, 2026", "category": "Events" },
+        { "title": "AB.Limo Named Top Employer in Transportation Sector", "date": "June 28, 2026", "category": "Awards" }
+      ]
+    },
+    "chauffeurCta": {
+      "heading": "Looking to become a chauffeur?",
+      "desc": "Join our network of professional chauffeurs and earn money on your own schedule. We provide training, support, and access to premium clients.",
+      "button": "Become a Chauffeur Partner"
+    }
+  },
+  "sustainability": {
+    "title": "Sustainability",
+    "meta": {
+      "title": "Sustainability - AB.Limo | Driving a Greener Future",
+      "description": "AB.Limo is committed to sustainability through electric vehicles, carbon offsetting, and net-zero initiatives."
+    },
+    "breadcrumb": { "home": "Home", "sustainability": "Sustainability" },
+    "hero": {
+      "heading1": "Driving a Greener",
+      "heading2": "Future",
+      "desc": "Our commitment to the planet goes beyond compliance. We're actively shaping a sustainable future for luxury ground transportation.",
+      "button": "Book a ride"
+    },
+    "stats": {
+      "carbonOffset": "Carbon offset",
+      "evFleet": "EV fleet",
+      "netZero": "Net-zero target",
+      "countries": "Countries"
+    },
+    "ev": {
+      "heading1": "The new normal:",
+      "heading2": "electric vehicles",
+      "p1": "Electric vehicles are no longer the future — they're the present. At AB.Limo, we're accelerating our transition to a fully electric fleet, ensuring every ride contributes to cleaner air and quieter cities.",
+      "p2": "From Tesla Model S and Mercedes EQS to BMW iX, our growing EV fleet delivers the same luxury experience with zero tailpipe emissions. We're investing heavily in charging infrastructure to ensure seamless coverage across all our operating markets."
+    },
+    "carbonOffset": {
+      "heading1": "100% carbon",
+      "heading2": "offset",
+      "p1": "Every ride taken with AB.Limo is fully carbon offset. We invest in verified carbon reduction projects — from reforestation in the Amazon to renewable energy installations in Sub-Saharan Africa.",
+      "p2": "Our partnership with South Pole ensures that every ton of CO2 emitted is matched with high-quality carbon credits, making your journey with us climate-positive."
+    },
+    "partners": {
+      "heading1": "Our sustainability",
+      "heading2": "partners",
+      "items": [
+        { "name": "South Pole", "desc": "Leading carbon offsetting partner helping us neutralize emissions through verified projects worldwide." },
+        { "name": "Cooper Parry", "desc": "Ensuring accountability and transparency in our sustainability reporting and carbon accounting." },
+        { "name": "The Climate Pledge", "desc": "Founding signatory committed to reaching net-zero carbon emissions by 2040." },
+        { "name": "World Alliance", "desc": "Founding member collaborating with global leaders to accelerate climate action." }
+      ]
+    },
+    "commitment": {
+      "heading1": "Our commitment",
+      "heading2": "in action",
+      "steps": [
+        { "title": "Electric Vehicles", "desc": "Transitioning our entire fleet to electric vehicles across all major markets by 2030." },
+        { "title": "Carbon Offsetting", "desc": "100% of our emissions are offset through verified carbon credit programs." },
+        { "title": "Net-Zero Commitment", "desc": "Committed to achieving net-zero emissions by 2040 through the Climate Pledge." }
+      ]
+    },
+    "climateStrikes": {
+      "heading1": "Participating in",
+      "heading2": "climate strikes",
+      "p1": "We believe in using our voice and platform to advocate for systemic change. AB.Limo actively participates in global climate strikes and supports policy initiatives that accelerate the transition to a low-carbon economy.",
+      "p2": "Our team members are encouraged to engage in sustainability activism, and we provide paid time off for climate-related volunteer activities and community events."
+    },
+    "quote": {
+      "text": "Sustainability isn't a department or a initiative — it's embedded in everything we do. Every ride we provide is a step towards a cleaner, more sustainable future for ground transportation.",
+      "name": "The AB.Limo Leadership Team",
+      "subtitle": "Driving sustainability forward"
+    },
+    "app": {
+      "heading1": "Sustainable travel,",
+      "heading2": "in your hands",
+      "desc": "Download the AB.Limo app and choose sustainable luxury at your fingertips. See real-time carbon offset data for every ride, track your personal sustainability impact, and join us in driving change.",
+      "appStore": "App Store",
+      "googlePlay": "Google Play"
+    }
+  },
+  "partners": {
+    "title": "Partners",
+    "meta": {
+      "title": "Become a Service Provider | AB.Limo Partners",
+      "description": "Join AB.Limo's network of professional chauffeurs. Earn money on your own schedule with training, support, and access to premium clients."
+    },
+    "breadcrumb": { "home": "Home", "partners": "Partners" },
+    "hero": { "heading": "Become a service provider", "desc": "Join AB.Limo's global network of professional chauffeurs and grow your business." },
+    "features": [
+      { "title": "Competitive earnings", "desc": "Earn competitive rates with transparent pricing and weekly payouts." },
+      { "title": "Flexible schedule", "desc": "Work when you want, where you want. Set your own hours and availability." },
+      { "title": "Premium clients", "desc": "Access high-value corporate and leisure travelers who value quality service." },
+      { "title": "Training & support", "desc": "Receive professional training and 24/7 support from our dedicated team." }
+    ],
+    "quote": {
+      "text": "Joining AB.Limo was the best decision for my business. The platform is easy to use, the clients are respectful, and the earnings are competitive.",
+      "name": "Mohammed K.",
+      "role": "Professional Chauffeur"
+    },
+    "tabs": {
+      "onboarding": "Onboarding",
+      "requirements": "Requirements"
+    },
+    "onboarding": {
+      "heading": "How to get started",
+      "steps": [
+        { "title": "Apply online", "desc": "Complete our online application form with your details and vehicle information." },
+        { "title": "Background check", "desc": "We'll conduct a thorough background check and verify your driving credentials." },
+        { "title": "Vehicle inspection", "desc": "Your vehicle will be inspected to ensure it meets our quality standards." },
+        { "title": "Training", "desc": "Complete our professional chauffeur training program covering safety, etiquette, and technology." },
+        { "title": "Go live", "desc": "Start accepting bookings and earning money on your own schedule." }
+      ]
+    },
+    "requirements": {
+      "heading": "What you need",
+      "items": [
+        "Valid driver's license with clean driving record",
+        "Professional appearance and demeanor",
+        "Vehicle meeting our fleet standards (less than 5 years old)",
+        "Comprehensive insurance coverage",
+        "Smartphone with data plan for the AB.Limo chauffeur app",
+        "Excellent communication skills in English (additional languages are a plus)"
+      ]
+    },
+    "sustainability": {
+      "heading": "Sustainability commitment",
+      "desc": "We're committed to reducing our environmental impact. Join us in our journey towards a greener future by choosing hybrid or electric vehicles."
+    },
+    "faq": {
+      "heading": "Frequently asked questions",
+      "items": [
+        { "q": "How much can I earn?", "a": "Earnings vary based on location, hours, and demand. Most chauffeurs earn competitive rates with opportunities for bonuses during peak times." },
+        { "q": "What vehicles are accepted?", "a": "We accept luxury sedans, SUVs, and vans that meet our quality standards. Vehicles must be less than 5 years old and in excellent condition." },
+        { "q": "How do I get paid?", "a": "We process payments weekly via direct deposit. You can track your earnings in real-time through the chauffeur app." },
+        { "q": "Is there a minimum number of hours?", "a": "No, there's no minimum. Work as much or as little as you want. Our platform is designed for flexibility." }
+      ]
+    },
+    "cta": {
+      "button": "Apply now",
+      "contact": "Contact us",
+      "download": "Download partner brochure",
+      "questions": "Still have questions?",
+      "questionsDesc": "Our partnerships team is here to help. Reach out and we'll provide all the information you need to get started."
+    },
+    "unlockDemand": {
+      "heading1": "Unlock global",
+      "heading2": "demand",
+      "desc": "Everything you need to grow your chauffeur business on a world-class platform."
+    },
+    "faqHeading": {
+      "heading1": "Frequently asked",
+      "heading2": "questions"
+    }
+  },
+  "airportTransferCity": {
+    "heroTitle": "Airport Transfer in {city}",
+    "breadcrumb": { "home": "Home", "countries": "Countries" },
+    "testimonial": {
+      "text": "Probably the best airport pickup service I have experienced! Superb quality of car and hospitality.",
+      "author": "Priyakant A."
+    },
+    "benefits": {
+      "competitiveRates": { "title": "Competitive rates", "desc": "Access premium service at distance-based prices that are fair to you and our chauffeurs." },
+      "seamlessTravel": { "title": "Seamless airport travel", "desc": "Relax with 1 hour of complimentary wait time and flight tracking." },
+      "travelOnYourTerms": { "title": "Travel on your terms", "desc": "Stay flexible and in charge of your schedule. It's quick and easy for you to cancel or make changes to any ride." }
+    },
+    "discoverClasses": "Discover our service classes",
+    "serviceClasses": {
+      "businessClass": { "title": "Business Class", "desc": "Mercedes E-Class, BMW 5 Series, Audi A6, Cadillac XTS, or similar.", "fitsPeople": 3, "fitsLuggage": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag", "availability": "Available in most of our business districts", "fitsUpTo": "Fits up to {n} people" },
+      "firstClass": { "title": "First Class", "desc": "Mercedes S-Class, BMW 7 Series, Audi A8, or similar", "fitsPeople": 3, "fitsLuggage": "Fits 2 carry-on bags, or 2 standard check-in, or 1 extra large check-in bag", "availability": "Available in most of our business districts", "fitsUpTo": "Fits up to {n} people" },
+      "businessVanSuv": { "title": "Business Van / SUV", "desc": "Mercedes V-Class, Chevy Suburban, Cadillac Escalade, GMC Yukon Denali, or similar", "fitsPeople": 5, "fitsLuggage": "Fits 12 carry-on bags or 8 standard check-in or 6 extra large check-in bags", "availability": "Best for larger parties, lots of luggage, or families", "fitsUpTo": "Fits up to {n} people" }
+    },
+    "seo": {
+      "reliableTitle": "Your reliable {city} airport transfer",
+      "reliableDesc1": "{city} requires little introduction. As one of the world's most iconic cities, its fame spans many genres; food, business, finance, culture, architecture and history.",
+      "reliableDesc2": "Whether you are staying in the city center or the surrounding areas, AB.Limo is available for airport transfers city-wide, a far more reliable and relaxing alternative to a standard taxi.",
+      "arrivalTitle": "Arrival at {city} airports",
+      "arrivalDesc1": "{city} is one of the busiest metropolitan areas in the world and landing at its airports can be a trying endeavor. Our chauffeurs are always polite, smartly dressed and discrete.",
+      "arrivalDesc2": "Our stylish airport transfer is perfect for those flying into {city} on business.",
+      "exploreTitle": "Explore {city} with AB.Limo",
+      "exploreDesc": "In a city as rich and vibrant as {city}, even business travelers must take a little time off to experience what the city has to offer.",
+      "flyingTitle": "Flying into {city}",
+      "flyingDesc": "Choosing the best airport for you often depends on where you're staying and how you plan to continue into the city."
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "faq": [
+      { "q": "How does booking and pricing work?", "a": ["1. Enter your pickup and drop-off locations to see a fixed price.", "2. Choose your preferred service class and vehicle.", "3. Select your pickup date and time.", "4. Confirm your booking and receive instant confirmation.", "5. Your chauffeur details will be sent to you before your ride."] },
+      { "q": "What happens if my flight is delayed?", "a": ["We monitor all flights in real-time. If your flight is delayed, your chauffeur will automatically adjust the pickup time. You won't be charged extra for flight delays, and your chauffeur will be waiting when you land."] },
+      { "q": "Is meet and greet service included?", "a": ["Yes, meet and greet service is included with all airport transfers. Your chauffeur will meet you in the arrivals hall with a personalized name board and assist you with your luggage."] },
+      { "q": "Can I cancel or modify my booking?", "a": ["Yes, you can cancel or modify your booking up to 24 hours before your scheduled pickup time at no extra charge. For changes within 24 hours, please contact our support team."] }
+    ]
+  },
+  "press": {
+    "title": "Press",
+    "meta": {
+      "title": "Press Releases & Media Coverage | AB.Limo",
+      "description": "Stay updated with the latest news, press releases, and media coverage from AB.Limo."
+    },
+    "breadcrumb": { "home": "Home", "press": "Press" },
+    "hero": { "heading": "Press Releases" },
+    "tabs": {
+      "releases": "Press Releases",
+      "coverage": "Press Coverage",
+      "presskit": "Presskit"
+    },
+    "latest": { "heading": "Latest announcements" },
+    "readMore": "Read full release",
+    "showMore": "Show more",
+    "releases": [
+      { "date": "June 12, 2026", "title": "AB.Limo Expands to 10 New Cities Across Southeast Asia", "excerpt": "AB.Limo announces its entry into 10 new Southeast Asian markets, including Bangkok, Kuala Lumpur, and Jakarta, as part of its global growth strategy.", "image": "https://images.unsplash.com/photo-1538332576228-eb5b4c4de6f5?auto=format&fit=crop&w=800&q=80" },
+      { "date": "April 28, 2026", "title": "AB.Limo Achieves Carbon Neutral Operations in All European Markets", "excerpt": "Our commitment to sustainability reaches a major milestone as all European operations are now fully carbon neutral through offsetting and EV adoption.", "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&h=400&fit=crop" },
+      { "date": "March 15, 2026", "title": "Strategic Partnership with Emirates for Premium Ground Transportation", "excerpt": "AB.Limo partners with Emirates airline to provide seamless luxury ground transfers for first and business class passengers across 25 global destinations.", "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80" },
+      { "date": "February 3, 2026", "title": "AB.Limo Launches New Corporate Mobility Platform", "excerpt": "Introducing a next-generation corporate travel management platform with real-time analytics, cost optimization, and seamless expense integration.", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" },
+      { "date": "January 18, 2026", "title": "AB.Limo Surpasses 2 Million Completed Rides Globally", "excerpt": "A landmark achievement as AB.Limo celebrates over 2 million safe, comfortable, and on-time rides delivered to passengers worldwide.", "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" }
+    ],
+    "contact": {
+      "heading": "Press Contact",
+      "desc": "For media inquiries, interview requests, or to receive our press kit, please reach out to our communications team.",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "emailValue": "press@ablimo.com",
+      "phoneValue": "+971 4 555 0199",
+      "locationValue": "Dubai, United Arab Emirates"
+    }
+  },
+  "cities": {
+    "title": "Cities",
+    "meta": {
+      "title": "Our Cities Around the World | AB.Limo",
+      "description": "Premium chauffeur service in cities across the globe. Book your ride in 500+ cities worldwide."
+    },
+    "breadcrumb": { "home": "Home", "cities": "Cities" },
+    "hero": {
+      "heading": "Our Cities Around the World",
+      "desc": "Premium chauffeur service in {count}+ cities across the globe"
+    },
+    "search": { "placeholder": "Search cities..." },
+    "section": {
+      "heading": "Cities we serve",
+      "desc": "Explore our network of cities worldwide"
+    },
+    "airportTransfer": "Airport Transfer",
+    "noResults": "No cities found matching your search.",
+    "bookNow": "Book Now",
+    "cityLabel": { "one": "city", "other": "cities" },
+    "cta": {
+      "heading": "Can't find your city?",
+      "desc": "We're constantly expanding our network. Contact us to request service in a new city, or browse our available countries.",
+      "viewCountries": "View All Countries",
+      "contactUs": "Contact Us"
+    }
+  },
+  "countries": {
+    "title": "Countries",
+    "meta": {
+      "title": "AB.Limo Global Availability",
+      "description": "Luxury chauffeur service across 50+ countries worldwide."
+    },
+    "breadcrumb": { "home": "Home", "countries": "Countries" },
+    "hero": {
+      "heading": "AB.Limo Global Availability",
+      "desc": "Luxury chauffeur service across 50+ countries worldwide"
+    },
+    "search": { "placeholder": "Search countries..." },
+    "features": [
+      { "title": "Global availability", "desc": "Service in 50+ countries across 6 continents" },
+      { "title": "Unrivaled flexibility", "desc": "Book rides on your schedule, 24/7" },
+      { "title": "Competitive rates", "desc": "Transparent pricing with no hidden fees" }
+    ],
+    "bookNow": "Book Now",
+    "section": {
+      "heading": "Countries we serve",
+      "desc": "Explore our global network of premium chauffeur services"
+    },
+    "noResults": "No countries found matching \"{query}\"",
+    "cta": {
+      "heading": "Ready to travel in luxury?",
+      "desc": "Book your premium chauffeur service in any of our 50+ countries and experience the difference.",
+      "button": "Book Your Ride"
+    }
+  },
+  "strategicPartnerships": {
+    "title": "Strategic Partnerships",
+    "meta": {
+      "title": "Partnership Opportunities with AB.Limo | Strategic Partnerships",
+      "description": "Explore strategic partnership opportunities with AB.Limo across aviation, cruise, financial, and hotel sectors."
+    },
+    "breadcrumb": { "home": "Home", "partnerships": "Strategic Partnerships" },
+    "hero": { "heading": "Partnership Opportunities with AB.Limo" },
+    "industries": {
+      "heading": "Industries we partner with",
+      "desc": "We collaborate with leaders across industries to deliver integrated luxury transportation solutions.",
+      "cards": [
+        { "title": "Aviation", "desc": "Seamlessly connect your passengers with premium ground transportation. Integrate our API into your booking flow for a complete travel experience." },
+        { "title": "Cruise", "desc": "Enhance your cruise packages with luxury port transfers and shore excursion transportation. Delight guests from embarkation to disembarkation." },
+        { "title": "Financial services", "desc": "Add premium transportation as a perk for high-net-worth clients. Elevate your wealth management offerings with exclusive chauffeur access." },
+        { "title": "Hotel", "desc": "Extend your hospitality beyond the lobby. Offer guests luxury chauffeur services as part of their stay with seamless booking integration." }
+      ]
+    },
+    "benefits": {
+      "heading": "Why partner with AB.Limo",
+      "items": [
+        { "title": "Revenue growth", "desc": "New revenue streams through commissions and referrals" },
+        { "title": "Brand alignment", "desc": "Partner with a premium luxury brand trusted worldwide" },
+        { "title": "Technical integration", "desc": "Seamless API integration with dedicated developer support" },
+        { "title": "Data insights", "desc": "Access to analytics and reporting for partnership performance" },
+        { "title": "Global reach", "desc": "Access to 1,500+ cities across 50+ countries" },
+        { "title": "Reliability", "desc": "99.8% on-time performance backed by SLA guarantees" }
+      ]
+    },
+    "api": {
+      "heading": "Powerful API integrations",
+      "desc": "Our robust API enables seamless integration into your existing systems, providing a frictionless experience for your customers and operations team.",
+      "items": [
+        "RESTful API with comprehensive documentation",
+        "Webhook notifications for real-time trip updates",
+        "Sandbox environment for testing and development",
+        "SDKs for JavaScript, Python, Ruby, and PHP",
+        "Dedicated technical integration support",
+        "99.99% API uptime guarantee"
+      ],
+      "codeComment": "// Example API request"
+    },
+    "awards": {
+      "heading": "Recognition and awards",
+      "items": [
+        { "title": "Best Corporate Transport Provider", "year": "2025", "org": "Global Travel Awards" },
+        { "title": "Excellence in Business Travel", "year": "2024", "org": "Business Travel Awards" },
+        { "title": "Innovation in Mobility", "year": "2025", "org": "Mobility Innovation Summit" }
+      ]
+    },
+    "cta": {
+      "heading": "Ready to create a partnership?",
+      "desc": "Let's explore how a strategic partnership with AB.Limo can drive growth for your business.",
+      "contact": "Contact partnerships team",
+      "download": "Download partnership brochure"
+    },
+    "contact": {
+      "heading": "Get in touch",
+      "desc": "Tell us about your business and how you'd like to partner with AB.Limo.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "company": "Company name",
+      "industry": "Select industry",
+      "industries": ["Aviation", "Cruise", "Financial Services", "Hotel & Hospitality", "Other"],
+      "message": "Tell us about your partnership goals",
+      "submit": "Submit partnership inquiry"
+    }
+  },
+  "travelAgencies": {
+    "title": "Travel Agencies",
+    "meta": {
+      "title": "Global Chauffeur Services for Travel Agencies | AB.Limo",
+      "description": "Partner with AB.Limo to offer your clients world-class chauffeur services. Earn commission and boost your brand reputation."
+    },
+    "breadcrumb": { "home": "Home", "travelAgencies": "Travel Agencies" },
+    "hero": { "heading": "Global Chauffeur Services for Travel Agencies" },
+    "imageGrid": ["Award-winning", "Ease of booking", "Global yet local", "Carbon offset"],
+    "quote": {
+      "text": "Partnering with AB.Limo has elevated our service offering. Our clients love the consistency and quality, and the commission structure has been a significant revenue driver for our agency.",
+      "attribution": "— Maria Rodriguez, Director, Prestige Travel Group"
+    },
+    "commission": {
+      "heading": "Additional revenue and commission",
+      "desc": "Turn every ground transportation need into a revenue opportunity. Our partnership program is designed to reward your success.",
+      "items": [
+        "Earn competitive commissions on every booking",
+        "Tiered commission structure for high-volume partners",
+        "Monthly commission payments with transparent reporting",
+        "Dedicated partner success manager",
+        "Marketing materials and co-branding opportunities"
+      ]
+    },
+    "vehicles": {
+      "heading": "Vehicles ready for all occasions",
+      "desc": "From solo business trips to group transfers, our diverse fleet ensures the right vehicle for every client need.",
+      "items": [
+        { "title": "Solo travel", "desc": "Sedans and executive vehicles for individual business travelers seeking comfort and style." },
+        { "title": "Group travel", "desc": "SUVs, vans, and minibuses for team outings, conferences, and group transfers." },
+        { "title": "Memorable amenities", "desc": "Wi-Fi, refreshments, child seats, and special requests accommodated with care." }
+      ]
+    },
+    "satisfaction": {
+      "heading": "Deliver top-notch client satisfaction",
+      "desc": "Impress your clients with a premium chauffeur experience that exceeds expectations at every touchpoint.",
+      "items": [
+        "Professional, multilingual chauffeurs",
+        "Real-time booking confirmations",
+        "Post-trip feedback collection",
+        "99.8% customer satisfaction rate"
+      ]
+    },
+    "reputation": {
+      "heading": "Boost your brand reputation",
+      "desc": "Align your agency with a premium brand that clients trust. Our award-winning service reflects positively on your business.",
+      "items": [
+        "Co-branded marketing materials",
+        "White-label booking options",
+        "Social media partnership opportunities"
+      ]
+    },
+    "fleet": {
+      "heading": "Our fleet",
+      "sedans": { "title": "Executive Sedans", "desc": "Mercedes E-Class, BMW 5 Series" },
+      "suvs": { "title": "Luxury SUVs", "desc": "Mercedes GLS, Range Rover" }
+    },
+    "api": {
+      "heading": "API integrations",
+      "desc": "Integrate our booking system directly into your platform for a seamless experience.",
+      "items": [
+        "RESTful API with comprehensive documentation",
+        "Webhook notifications for real-time trip updates",
+        "Sandbox environment for testing",
+        "Rate limiting and authentication security",
+        "SDKs available for major programming languages"
+      ]
+    },
+    "benefits": {
+      "heading": "Partner benefits",
+      "items": [
+        { "title": "Additional revenue", "desc": "Generate income from every chauffeur booking" },
+        { "title": "Global fleet access", "desc": "1,500+ cities with consistent service quality" },
+        { "title": "API integration", "desc": "Seamlessly integrate into your booking platform" },
+        { "title": "Dashboard reporting", "desc": "Real-time visibility into bookings and commissions" },
+        { "title": "Dedicated support", "desc": "Partner success team for ongoing assistance" },
+        { "title": "White-label options", "desc": "Customize the experience under your brand" }
+      ]
+    },
+    "contact": {
+      "heading": "Become a partner",
+      "desc": "Ready to add premium chauffeur services to your offerings?",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "agency": "Agency name",
+      "message": "Tell us about your agency",
+      "submit": "Apply for partnership"
+    },
+    "faq": {
+      "heading": "Frequently asked questions",
+      "items": [
+        { "q": "How do I become a travel agency partner?", "a": "Contact our partnerships team to discuss your agency's needs. We'll set up your account, provide API documentation, and guide you through the integration process." },
+        { "q": "What commission rates do you offer?", "a": "Commission rates vary based on booking volume. We offer competitive tiered structures starting at 8% with opportunities for increased rates as volume grows." },
+        { "q": "Can I white-label the booking experience?", "a": "Yes. Our white-label solution allows you to present the chauffeur booking experience under your own brand, maintaining consistency with your agency's identity." },
+        { "q": "What support do you provide to partners?", "a": "Partners receive a dedicated success manager, 24/7 technical support, marketing materials, and access to our partner portal with training resources." }
+      ]
+    }
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "breadcrumb": { "home": "Home", "terms": "Terms" },
+    "lastRevised": "Last revised: July 15, 2026",
+    "toc": "Table of Contents"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "breadcrumb": { "home": "Home", "privacy": "Privacy Policy" },
+    "lastRevised": "Last revised: July 15, 2026"
+  },
+  "imprint": {
+    "title": "Legal Notice",
+    "breadcrumb": { "home": "Home", "imprint": "Legal Notice" }
+  },
+  "accessibilityPage": {
+    "title": "Accessibility",
+    "breadcrumb": { "home": "Home", "accessibility": "Accessibility" }
+  },
+  "language": {
+    "en-US": "English (US)",
+    "en-UK": "English (UK)",
+    "ar": "العربية"
+  }
+}
