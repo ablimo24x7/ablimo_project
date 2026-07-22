@@ -56,7 +56,14 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden">
+    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden -mt-20">
+      {/* Background text */}
+      <div className="absolute inset-0 z-[-1] flex items-center justify-center pointer-events-none overflow-hidden">
+        <h1 className="text-[26vw] font-black text-white opacity-[0.03] tracking-tighter select-none -mt-[5%]">
+          AB.LIMO
+        </h1>
+      </div>
+
       {/* Background layers */}
       <div className="absolute inset-0 z-[-2] flex flex-col pointer-events-none">
         <div className="h-[70%] bg-gradient-to-b from-[#424450] to-[#3a3c46]" />
@@ -81,7 +88,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
         </div>
 
         {/* Chauffeur image */}
-        <div className="absolute top-[46%] left-[30%] -translate-y-1/2 h-[78vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
+        <div className="absolute top-[58%] left-[30%] -translate-y-1/2 h-[80vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
           <Image
             src="/chauffeur.png"
             alt="Chauffeur"
@@ -94,7 +101,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
         {/* Content */}
         <div className="relative w-full h-full z-30 pointer-events-none">
           {/* Pagination dots - vertical left */}
-          <div className="absolute left-16 top-[50%] -translate-y-1/2 flex flex-col items-center gap-4 pointer-events-auto">
+          <div className="absolute left-16 top-[42%] -translate-y-1/2 flex flex-col items-center gap-4 pointer-events-auto">
             {slides.map((_, index) => (
               <div
                 key={index}
@@ -111,7 +118,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
           </div>
 
           {/* Slide text - right side */}
-          <div className="absolute right-[8%] top-[50%] -translate-y-1/2 w-full max-w-[340px] pointer-events-auto">
+          <div className="absolute right-[8%] top-[42%] -translate-y-1/2 w-full max-w-[340px] pointer-events-auto">
             <h2
               className={`text-[2.5rem] leading-tight font-bold text-white mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
                 titleVisible ? "opacity-100" : "opacity-0"
@@ -163,8 +170,8 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
               src="/chauffeur.png"
               alt="Chauffeur"
               width={260}
-              height={600}
-              className="h-[75vh] max-h-[500px] w-auto object-contain object-bottom drop-shadow-2xl"
+              height={800}
+              className="h-[90vh] max-h-[500px] w-auto object-contain object-bottom drop-shadow-2xl"
               priority
             />
           </div>
@@ -210,7 +217,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
       </div>
 
       {/* Booking form */}
-      <div className="relative z-40 w-full flex flex-col items-center pb-8 md:pb-16 pt-4 md:pt-8 mt-auto">
+      <div className="relative z-40 w-full flex flex-col items-center pb-8 md:pb-16 pt-4 md:pt-8 mt-auto mt-0 md:mt-152">
         <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-lg border border-gray-600/50">
           <button
             className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all cursor-pointer ${
@@ -234,7 +241,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
           </button>
         </div>
         <div className="w-full max-w-[1200px] px-4 md:px-0">
-          <div className="flex flex-col md:flex-row items-stretch md:items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-3 md:p-4 gap-3 md:gap-0">
+          <div className="flex flex-col md:flex-row items-stretch md:items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-3 md:p-3 gap-3 md:gap-0">
             <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
               <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
                 {b.from}
