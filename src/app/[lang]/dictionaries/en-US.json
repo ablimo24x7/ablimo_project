@@ -2051,5 +2051,341 @@
     "en-US": "English (US)",
     "en-UK": "English (UK)",
     "ar": "العربية"
+  },
+  "cityContent": {
+    "united-arab-emirates": {
+      "dubai": {
+        "gettingAround": {
+          "title": "Getting Around Dubai",
+          "description": "Dubai is a global destination known for its modern skyline, luxury shopping, business districts, and iconic attractions. Whether you're visiting for business or leisure, AB.Limo provides reliable chauffeur services that make traveling across the city comfortable and stress-free. From Downtown Dubai and Dubai Marina to Palm Jumeirah and Business Bay, our professional chauffeurs ensure every journey is smooth, punctual, and tailored to your schedule."
+        },
+        "limousineService": {
+          "title": "A Dubai Taxi Alternative",
+          "description": "Dubai is a vast, dynamic destination with plenty to explore, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Dubai by the hour to visit your chosen sights, whether that is touring iconic attractions or shopping at luxury malls, ensuring a premier alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Dubai Airport Transfer",
+          "description": "Enjoy a seamless airport transfer with AB.Limo between Dubai International Airport (DXB), Al Maktoum International Airport (DWC), and your destination. Your chauffeur monitors your flight, greets you upon arrival, assists with your luggage, and ensures a comfortable journey without the hassle of waiting for taxis."
+        }
+      },
+      "abu-dhabi": {
+        "gettingAround": {
+          "title": "Getting Around Abu Dhabi",
+          "description": "Abu Dhabi combines cultural landmarks, government institutions, luxury resorts, and thriving business districts. AB.Limo offers dependable chauffeur services for business travelers, tourists, and residents, providing comfortable transportation throughout the capital. Whether you're visiting the Corniche, Yas Island, or Saadiyat Island, travel with confidence and convenience."
+        },
+        "limousineService": {
+          "title": "An Abu Dhabi Taxi Alternative",
+          "description": "Navigating Abu Dhabi's cultural landmarks and luxury resorts is effortless when you bypass ordinary transport lines. Choose our top-quality limousine service in Abu Dhabi by the hour for flexible visits to the Corniche or Yas Island, offering a comfortable and reliable alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Abu Dhabi Airport Transfer",
+          "description": "Travel effortlessly between Zayed International Airport (AUH) and your destination with AB.Limo. Our airport transfer service includes flight tracking, meet-and-greet assistance, luggage support, and reliable transportation to hotels, offices, or residences across Abu Dhabi."
+        }
+      },
+      "sharjah": {
+        "gettingAround": {
+          "title": "Getting Around Sharjah",
+          "description": "Sharjah is celebrated for its rich heritage, museums, waterfronts, and growing commercial districts. AB.Limo offers professional chauffeur services that help you travel comfortably throughout the city while avoiding the stress of driving and parking."
+        },
+        "limousineService": {
+          "title": "A Sharjah Taxi Alternative",
+          "description": "Experience Sharjah's rich heritage, museums, and waterfronts without the hassle of waiting for street transport. Secure a top-quality limousine service in Sharjah by the hour to manage your cultural sightseeing or business visits with absolute style and convenience."
+        },
+        "airportTransfer": {
+          "title": "Sharjah Airport Transfer",
+          "description": "Book your airport transfer with AB.Limo for convenient transportation between Sharjah International Airport (SHJ) and your destination. Our chauffeurs arrive on time, assist with luggage, and ensure a smooth and comfortable journey."
+        }
+      },
+      "ajman": {
+        "gettingAround": {
+          "title": "Getting Around Ajman",
+          "description": "Ajman offers beautiful beaches, vibrant neighborhoods, and easy access to neighboring emirates. AB.Limo provides reliable chauffeur services that allow you to travel comfortably for business meetings, leisure outings, and daily transportation needs."
+        },
+        "limousineService": {
+          "title": "An Ajman Taxi Alternative",
+          "description": "Ajman is a beautiful coastal destination with plenty to see, and with a service from AB.Limo, you have an opportunity to explore it smoothly. Hire a top-quality limousine service in Ajman by the hour to visit beaches or neighboring emirates, ensuring a premier alternative to standard street transport."
+        },
+        "airportTransfer": {
+          "title": "Ajman Airport Transfer",
+          "description": "Although Ajman does not have its own international airport, AB.Limo offers convenient transfers between Ajman and nearby airports including Dubai International Airport (DXB) and Sharjah International Airport (SHJ), ensuring a smooth start or end to your journey."
+        }
+      },
+      "ras-al-khaimah": {
+        "gettingAround": {
+          "title": "Getting Around Ras Al Khaimah",
+          "description": "Known for its mountains, beaches, luxury resorts, and outdoor adventures, Ras Al Khaimah is one of the UAE's most scenic destinations. AB.Limo provides premium chauffeur services that make exploring the emirate comfortable, convenient, and stress-free."
+        },
+        "limousineService": {
+          "title": "A Ras Al Khaimah Taxi Alternative",
+          "description": "Navigating Ras Al Khaimah's mountains, beaches, and luxury resorts is effortless when you bypass ordinary transport lines. Choose our top-quality limousine service in Ras Al Khaimah by the hour for flexible outdoor adventures, offering a comfortable and reliable alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Ras Al Khaimah Airport Transfer",
+          "description": "AB.Limo offers reliable airport transfers between Ras Al Khaimah International Airport (RKT) and hotels, resorts, residences, and business destinations. Our chauffeurs monitor your flight and provide timely, comfortable transportation from arrival to destination."
+        }
+      }
+    },
+    "saudi-arabia": {
+      "riyadh": {
+        "gettingAround": {
+          "title": "Getting Around Riyadh",
+          "description": "As the vibrant political and financial capital of Saudi Arabia, Riyadh features a dynamic blend of modern high-rises, historical treasures, and massive commercial centers. Whether you are navigating the King Abdullah Financial District or visiting the historic Al Murabba Palace, AB.Limo provides reliable chauffeur services designed to make your travel across the city completely comfortable and stress-free."
+        },
+        "limousineService": {
+          "title": "A Riyadh Taxi Alternative",
+          "description": "Riyadh is a vast, dynamic destination with plenty to explore, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Riyadh by the hour to visit your chosen sights, whether that is touring commercial centers or historic landmarks, ensuring a premier alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Riyadh Airport Transfer",
+          "description": "Ensure a seamless and punctual journey with AB.Limo between King Khalid International Airport (RUH) and your destination in Riyadh. Your chauffeur tracks your flight status, welcomes you upon arrival, assists with your luggage, and drives you directly to your hotel or office in absolute comfort."
+        }
+      },
+      "jeddah": {
+        "gettingAround": {
+          "title": "Getting Around Jeddah",
+          "description": "Known as the commercial hub of the Red Sea coast, Jeddah boasts a stunning Corniche, historic Al-Balad districts, and booming business zones. AB.Limo offers dependable private car and chauffeur services to help residents, tourists, and business travelers move through the coastal city with ease and sophistication."
+        },
+        "limousineService": {
+          "title": "A Jeddah Taxi Alternative",
+          "description": "Navigating Jeddah's historic Al-Balad districts and coastal Corniche is effortless when you bypass ordinary transport lines. Choose our top-quality limousine service in Jeddah by the hour for flexible visits along the Red Sea waterfront, offering a comfortable and reliable alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Jeddah Airport Transfer",
+          "description": "Eliminate travel stress with AB.Limo's professional airport transfer service between King Abdulaziz International Airport (JED) and any location in Jeddah. Enjoy flight monitoring, meet-and-greet assistance at arrivals, and seamless transportation straight to your final stop."
+        }
+      },
+      "mecca": {
+        "gettingAround": {
+          "title": "Getting Around Mecca",
+          "description": "Mecca is a city of immense spiritual significance, welcoming millions of visitors annually. AB.Limo provides respectful, highly reliable, and comfortable transportation services to help pilgrims and travelers navigate between hotels, holy sites, and regional destinations with absolute peace of mind."
+        },
+        "limousineService": {
+          "title": "A Mecca Taxi Alternative",
+          "description": "Experience Mecca's holy sites and hotels without the hassle of waiting for street transport. Secure a top-quality limousine service in Mecca by the hour to manage your scheduled transportation or family visits with absolute style and convenience."
+        },
+        "airportTransfer": {
+          "title": "Mecca Airport Transfer",
+          "description": "Ensure a smooth and dependable connection between Mecca and nearby King Abdulaziz International Airport (JED) in Jeddah with AB.Limo. Our airport transfer service handles your schedule, luggage, and route efficiently so you can travel without any hassle."
+        }
+      },
+      "medina": {
+        "gettingAround": {
+          "title": "Getting Around Medina",
+          "description": "Medina is celebrated for its serene atmosphere, sacred landmarks, and peaceful community spaces. AB.Limo offers dedicated chauffeur solutions designed to give visitors and residents smooth, reliable, and respectful transit throughout the city and its surrounding areas."
+        },
+        "limousineService": {
+          "title": "A Medina Taxi Alternative",
+          "description": "Medina is a peaceful, culturally rich city with plenty to see, and with a service from AB.Limo, you have an opportunity to explore it smoothly. Hire a top-quality limousine service in Medina by the hour to visit sacred landmarks or community spaces, ensuring a premier alternative to standard street transport."
+        },
+        "airportTransfer": {
+          "title": "Medina Airport Transfer",
+          "description": "Book a dependable airport transfer with AB.Limo between Prince Mohammad bin Abdulaziz International Airport (MED) and your hotel or residence in Medina. Experience on-time arrivals, flight tracking, and professional luggage assistance from start to finish."
+        }
+      },
+      "dammam": {
+        "gettingAround": {
+          "title": "Getting Around Dammam",
+          "description": "As the capital of Saudi Arabia's Eastern Province, Dammam is a major administrative, industrial, and commercial center on the Arabian Gulf. AB.Limo provides expert chauffeur services to help you navigate corporate hubs, industrial zones, and scenic coastal parks efficiently."
+        },
+        "limousineService": {
+          "title": "A Dammam Taxi Alternative",
+          "description": "Experience Dammam's corporate hubs and scenic coastal parks without the hassle of waiting for street transport. Secure a top-quality limousine service in Dammam by the hour to manage your business trips or leisure outings with absolute style and convenience."
+        },
+        "airportTransfer": {
+          "title": "Dammam Airport Transfer",
+          "description": "Travel effortlessly between King Fahd International Airport (DMM) and any spot in Dammam with AB.Limo. Benefit from live flight tracking, warm meet-and-greet service at arrivals, and direct, comfortable transit to your destination."
+        }
+      }
+    },
+    "qatar": {
+      "doha": {
+        "gettingAround": {
+          "title": "Getting Around Doha",
+          "description": "As the thriving capital of Qatar, Doha seamlessly blends futuristic architecture with rich cultural heritage. From the iconic West Bay financial district and Msheireb Downtown to the cultural hub of Katara and The Pearl-Qatar, AB.Limo offers reliable chauffeur services to help you navigate the city smoothly, comfortably, and entirely on your schedule."
+        },
+        "limousineService": {
+          "title": "A Doha Taxi Alternative",
+          "description": "Doha is a vast, culturally rich city with plenty to do, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Doha by the hour to visit your chosen sights, whether that is exploring the iconic cultural hubs or shopping at modern malls, ensuring a premier alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Doha Airport Transfer",
+          "description": "Enjoy a seamless transition between Hamad International Airport (DOH) and your destination in Doha with AB.Limo. Our professional airport transfer service includes live flight tracking, warm meet-and-greet assistance at arrivals, luggage support, and a comfortable ride straight to your hotel or residence."
+        }
+      },
+      "al-khor": {
+        "gettingAround": {
+          "title": "Getting Around Al Khor",
+          "description": "Located on Qatar's northeast coast, Al Khor is known for its beautiful mangroves, tranquil beaches, and rich fishing heritage. AB.Limo provides dependable chauffeur services to ensure you travel comfortably between coastal resorts, historical sites, and surrounding areas without any travel stress."
+        },
+        "limousineService": {
+          "title": "An Al Khor Taxi Alternative",
+          "description": "Navigating Al Khor's coastal resorts and historical sites is effortless when you bypass ordinary transport lines. Choose our top-quality limousine service in Al Khor by the hour for flexible visits to local landmarks, offering a comfortable and reliable alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Al Khor Airport Transfer",
+          "description": "Book a convenient airport transfer with AB.Limo for smooth transportation between Al Khor and Hamad International Airport (DOH) in Doha. Our punctual drivers and well-maintained fleet ensure your journey to or from the airport is effortless and comfortable."
+        }
+      },
+      "lusail": {
+        "gettingAround": {
+          "title": "Getting Around Lusail",
+          "description": "As Qatar's state-of-the-art planned city, Lusail features cutting-edge smart infrastructure, stunning waterfront marinas, and major entertainment venues. AB.Limo offers expert chauffeur services to help residents, business professionals, and visitors navigate Lusail's modern districts with ease."
+        },
+        "limousineService": {
+          "title": "A Lusail Taxi Alternative",
+          "description": "Experience Lusail's waterfront marinas and modern entertainment venues without the hassle of waiting for street transport. Secure a top-quality limousine service in Lusail by the hour to manage your daily sightseeing or local visits with absolute style and convenience."
+        },
+        "airportTransfer": {
+          "title": "Lusail Airport Transfer",
+          "description": "Ensure a punctual and comfortable airport transfer between Lusail and Hamad International Airport (DOH) with AB.Limo. Take advantage of our flight tracking, professional meet-and-greet service, and direct transit to start or conclude your trip seamlessly."
+        }
+      }
+    },
+    "bahrain": {
+      "manama": {
+        "gettingAround": {
+          "title": "Getting Around Manama",
+          "description": "As the vibrant capital of Bahrain, Manama is a bustling hub of modern commerce, historic souks, and cultural landmarks. Whether you are conducting business in the Diplomatic Area or exploring the scenic waterfront of Bahrain Bay, AB.Limo offers reliable chauffeur services designed to make your journey across the city comfortable and stress-free."
+        },
+        "limousineService": {
+          "title": "A Manama Taxi Alternative",
+          "description": "Manama is a vast, culturally rich city with plenty to do, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Manama by the hour to visit your chosen sights, whether that is exploring the historic souks or shopping at modern malls, ensuring a premier alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Manama Airport Transfer",
+          "description": "Enjoy a seamless airport transfer with AB.Limo between Bahrain International Airport (BAH) and your destination in Manama. Our chauffeurs monitor your flight status, greet you warmly upon arrival, assist with your luggage, and ensure a smooth ride directly to your hotel or office."
+        }
+      },
+      "riffa": {
+        "gettingAround": {
+          "title": "Getting Around Riffa",
+          "description": "Divided into East and West Riffa, this historic city is known for its iconic Riffa Fort, modern residential communities, and premier golf courses. AB.Limo provides dependable chauffeur services to help you navigate Riffa's residential and commercial districts with absolute ease."
+        },
+        "limousineService": {
+          "title": "A Riffa Taxi Alternative",
+          "description": "Navigating Riffa's historic and modern residential communities is effortless when you bypass ordinary transport lines. Choose our top-quality limousine service in Riffa by the hour for flexible visits to local landmarks or golf courses, offering a comfortable and reliable alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Riffa Airport Transfer",
+          "description": "Book a reliable airport transfer with AB.Limo for hassle-free transportation between Riffa and Bahrain International Airport (BAH). Benefit from punctual arrivals, flight tracking, and comfortable transit from your doorstep to the terminal."
+        }
+      },
+      "muharraq": {
+        "gettingAround": {
+          "title": "Getting Around Muharraq",
+          "description": "As Bahrain's traditional cultural heart, Muharraq is famous for its pearl-diving heritage trail, historic houses, and lively local markets. AB.Limo offers professional chauffeur services that allow you to explore Muharraq's unique streets and modern developments comfortably."
+        },
+        "limousineService": {
+          "title": "A Muharraq Taxi Alternative",
+          "description": "Experience Muharraq's traditional heritage trail and lively local markets without the hassle of waiting for street transport. Secure a top-quality limousine service in Muharraq by the hour to manage your daily sightseeing, appointments, or local visits with absolute style and convenience."
+        },
+        "airportTransfer": {
+          "title": "Muharraq Airport Transfer",
+          "description": "Since Muharraq is home to Bahrain International Airport (BAH), AB.Limo provides instant, ultra-convenient airport transfer services. Your chauffeur ensures prompt pickup and effortless transportation straight to your accommodation or meeting."
+        }
+      }
+    },
+    "kuwait": {
+      "kuwait": {
+        "gettingAround": {
+          "title": "Getting Around Kuwait City",
+          "description": "As the vibrant political and economic capital of Kuwait, Kuwait City features a striking skyline, bustling traditional souks, and major commercial districts. Whether you are conducting business in Sharq or visiting cultural landmarks along the Arabian Gulf Street, AB.Limo provides reliable chauffeur services designed to make your travels across the city comfortable and stress-free."
+        },
+        "limousineService": {
+          "title": "A Kuwait City Taxi Alternative",
+          "description": "Kuwait City is a vast, dynamic destination with plenty to explore, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Kuwait City by the hour to visit your chosen sights, whether that is touring local markets or shopping at modern avenues, ensuring a premier alternative to standard taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Kuwait City Airport Transfer",
+          "description": "Enjoy a seamless airport transfer with AB.Limo between Kuwait International Airport (KWI) and your destination in Kuwait City. Our chauffeurs monitor your flight status, greet you warmly upon arrival, assist with your luggage, and ensure a smooth ride directly to your hotel or office."
+        }
+      },
+      "hawalli": {
+        "gettingAround": {
+          "title": "Getting Around Hawalli",
+          "description": "Hawalli is one of Kuwait's most densely populated and commercially vibrant governorates, known for its major shopping avenues and lively residential areas. AB.Limo offers dependable chauffeur services to help you navigate Hawalli's busy districts with absolute ease and convenience."
+        },
+        "limousineService": {
+          "title": "A Hawalli Taxi Alternative",
+          "description": "Navigating Hawalli's active commercial streets is effortless when you bypass ordinary transport lines. Choose our top-quality limousine service in Hawalli by the hour for flexible shopping trips, dining outings, or personal visits, offering a comfortable and reliable alternative to local taxi queues."
+        },
+        "airportTransfer": {
+          "title": "Hawalli Airport Transfer",
+          "description": "Book a reliable airport transfer with AB.Limo for hassle-free transportation between Hawalli and Kuwait International Airport (KWI). Benefit from punctual arrivals, live flight tracking, and comfortable transit from your doorstep to the terminal."
+        }
+      },
+      "farwaniya": {
+        "gettingAround": {
+          "title": "Getting Around Farwaniya",
+          "description": "As a major residential and commercial hub close to the airport, Farwaniya is a bustling area filled with diverse markets and businesses. AB.Limo provides professional chauffeur services that allow you to travel through Farwaniya's busy streets comfortably and efficiently."
+        },
+        "limousineService": {
+          "title": "A Farwaniya Taxi Alternative",
+          "description": "Experience Farwaniya's busy commercial landscape without the hassle of waiting for street transport. Secure a top-quality limousine service in Farwaniya by the hour to manage your daily errands, business meetings, or local visits with absolute style and convenience."
+        },
+        "airportTransfer": {
+          "title": "Farwaniya Airport Transfer",
+          "description": "Due to its proximity to Kuwait International Airport (KWI), Farwaniya benefits from quick and convenient airport transfer solutions with AB.Limo. Your chauffeur ensures prompt pickup and effortless transportation straight to your accommodation or meeting."
+        }
+      }
+    },
+    "oman": {
+      "muscat": {
+        "gettingAround": {
+          "title": "Getting Around Muscat",
+          "description": "Muscat blends rich maritime history with striking modern architecture, framed by rugged mountains and the Gulf of Oman. AB.Limo provides reliable chauffeur services to help you navigate the capital seamlessly, from the grand mosques of Bawshar to the coastal beauty of Qurum and the historic charm of Muttrah."
+        },
+        "limousineService": {
+          "title": "A Muscat Taxi Alternative",
+          "description": "Explore Muscat's traditional souks, majestic palaces, and scenic coastlines without the hassle of waiting for street transport. Hire a top-quality limousine service in Muscat by the hour to manage your sightseeing or business visits with absolute style and convenience."
+        },
+        "airportTransfer": {
+          "title": "Muscat Airport Transfer",
+          "description": "Ensure a smooth and punctual journey with AB.Limo between Muscat International Airport (MCT) and your destination in the city. Your chauffeur tracks your flight status, welcomes you upon arrival, assists with your luggage, and drives you directly to your hotel or office in absolute comfort."
+        }
+      },
+      "salalah": {
+        "gettingAround": {
+          "title": "Getting Around Salalah",
+          "description": "Known for its lush greenery during the Khareef season, beautiful white-sand beaches, and rich archaeological sites, Salalah is Oman's southern gem. AB.Limo offers professional chauffeur services to help you experience the region's natural beauty and cultural landmarks comfortably."
+        },
+        "limousineService": {
+          "title": "A Salalah Taxi Alternative",
+          "description": "Discover Salalah's breathtaking landscapes, historical frankincense trails, and coastal resorts without relying on standard street transport. Secure a top-quality limousine service in Salalah by the hour for flexible and luxurious exploration."
+        },
+        "airportTransfer": {
+          "title": "Salalah Airport Transfer",
+          "description": "Book a reliable airport transfer with AB.Limo between Salalah International Airport (SLL) and your hotel or resort. Enjoy live flight tracking, warm meet-and-greet assistance, and smooth, direct transit."
+        }
+      },
+      "sohar": {
+        "gettingAround": {
+          "title": "Getting Around Sohar",
+          "description": "As a historic coastal city and a rapidly expanding industrial and commercial hub, Sohar offers a unique blend of heritage and modern development. AB.Limo provides dependable chauffeur services to help business travelers and tourists navigate the city effortlessly."
+        },
+        "limousineService": {
+          "title": "A Sohar Taxi Alternative",
+          "description": "Navigate Sohar's historic port areas, bustling markets, and modern commercial centers in comfort. Choose our top-quality limousine service in Sohar by the hour for a reliable, premier alternative to ordinary taxi networks."
+        },
+        "airportTransfer": {
+          "title": "Sohar Airport Transfer",
+          "description": "Enjoy a seamless transfer with AB.Limo between Sohar Airport (OHS) and your hotel, corporate office, or residence. Experience professional drivers, punctual pickups, and complete peace of mind."
+        }
+      }
+    }
+  },
+  "cityFeatures": {
+    "airportTravel": {
+      "title": "Seamless airport travel",
+      "description": "Enjoy smooth airport transfers with professional chauffeurs, timely pickups, and real-time flight monitoring for a hassle-free travel experience from start to finish."
+    },
+    "competitiveRates": {
+      "title": "Competitive rates",
+      "description": "Experience premium chauffeur services with transparent, distance-based pricing that offers exceptional value without compromising on comfort or quality."
+    },
+    "safetyFirst": {
+      "title": "Safety first",
+      "description": "Your safety is our priority. Our experienced chauffeurs, well-maintained vehicles, and commitment to reliable service ensure every journey is secure, comfortable, and stress-free."
+    }
   }
 }
