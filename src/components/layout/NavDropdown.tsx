@@ -21,12 +21,20 @@ export default function NavDropdown({ label, items, isOpen, onToggle, onClose }:
   const ref = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleMouseEnter = () => {
+  const clearCloseTimeout = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+  };
+
+  const handleButtonMouseEnter = () => {
+    clearCloseTimeout();
     onToggle();
+  };
+
+  const handlePanelMouseEnter = () => {
+    clearCloseTimeout();
   };
 
   const handleMouseLeave = () => {
@@ -61,7 +69,7 @@ export default function NavDropdown({ label, items, isOpen, onToggle, onClose }:
     <div className="relative" ref={ref}>
       <button
         onClick={onToggle}
-        onMouseEnter={handleMouseEnter}
+        onMouseEnter={handleButtonMouseEnter}
         onMouseLeave={handleMouseLeave}
         className="flex items-center gap-1 text-xs md:text-sm font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors cursor-pointer px-3 py-2 rounded-lg hover:bg-white/10"
       >
@@ -79,7 +87,7 @@ export default function NavDropdown({ label, items, isOpen, onToggle, onClose }:
       {isOpen && (
         <div
           className="absolute left-0 top-full mt-1 bg-[#2a2c35] border border-gray-600/50 rounded-xl shadow-xl overflow-hidden min-w-[220px] z-50"
-          onMouseEnter={handleMouseEnter}
+          onMouseEnter={handlePanelMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
           {items.map((item) => (
