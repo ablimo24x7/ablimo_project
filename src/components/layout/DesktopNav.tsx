@@ -54,14 +54,14 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
 
       <Link
         href={`/${lang}/partners`}
-        className="text-xs font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
+        className="text-xs md:text-sm font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
       >
         {nav.forChauffeurs}
       </Link>
 
       <Link
         href={`/${lang}/about`}
-        className="text-xs font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
+        className="text-xs md:text-sm font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
       >
         {nav.help}
       </Link>
