@@ -12,13 +12,15 @@ const slideImages = [
 ];
 
 export default function HeroSection({ dict }: { dict: Dictionary }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [slideCounter, setSlideCounter] = useState(0);
   const [titleVisible, setTitleVisible] = useState(true);
   const [isOneWay, setIsOneWay] = useState(true);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const slides = dict.home.slides;
   const b = dict.booking;
+  const totalSlides = slides.length;
+  const currentIndex = slideCounter % totalSlides;
 
   const updateText = useCallback(() => {
     setTitleVisible(false);
@@ -28,31 +30,32 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
   const goToSlide = useCallback(
     (newIndex: number) => {
       if (newIndex === currentIndex) return;
-      setCurrentIndex(newIndex);
+      setSlideCounter(newIndex);
       updateText();
       if (autoPlayRef.current) clearInterval(autoPlayRef.current);
       autoPlayRef.current = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % slides.length);
+        setSlideCounter((prev) => prev + 1);
         updateText();
       }, 5000);
     },
-    [currentIndex, updateText, slides.length]
+    [currentIndex, updateText]
   );
 
   useEffect(() => {
     autoPlayRef.current = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % slides.length);
+      setSlideCounter((prev) => prev + 1);
       updateText();
     }, 5000);
     return () => {
       if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     };
-  }, [updateText, slides.length]);
+  }, [updateText]);
 
   const getCarClass = (index: number) => {
     if (index === currentIndex) return "car-slide car-active";
-    if (index < currentIndex) return "car-slide car-hidden-right";
-    return "car-slide car-hidden-left";
+    const diff = (index - currentIndex + totalSlides) % totalSlides;
+    if (diff <= totalSlides / 2) return "car-slide car-hidden-left";
+    return "car-slide car-hidden-right";
   };
 
   return (
