@@ -43,11 +43,11 @@ const cityHeroImages: Record<string, string> = {
     doha: "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "al-khor": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1170&auto=format&fit=crop",
     lusail: "https://images.unsplash.com/photo-1728488443267-8340c9a74dcf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    manama: "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=1170&auto=format&fit=crop",
+    manama: "https://images.unsplash.com/photo-1547548731-e95343697eb4?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     riffa: "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     muharraq: "https://images.unsplash.com/photo-1708160603696-4ba7a7c6a96c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    kuwait: "https://images.unsplash.com/photo-1558634742-56096b49522b?q=80&w=1266&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    hawalli: "https://images.unsplash.com/photo-1558634742-56096b49522b?q=80&w=1266&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    kuwait: "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    hawalli: "https://images.unsplash.com/photo-1695735680024-41fdcefc5875?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     farwaniya: "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     muscat: "https://images.unsplash.com/photo-1699855803432-17f4ab468b2d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     salalah: "https://images.unsplash.com/photo-1680181825817-838f9bf98e2b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -55,9 +55,9 @@ const cityHeroImages: Record<string, string> = {
 };
 
 const sectionImages = {
-    gettingAround: "https://plus.unsplash.com/premium_photo-1664303199063-77f22ea1ac45?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Updated to passenger/cab image style
-    limousineService: "https://plus.unsplash.com/premium_photo-1723924834561-10c2d05ba92e?q=80&w=1155&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    airportTransfer: "https://plus.unsplash.com/premium_photo-1661507156446-364c353f6799?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    gettingAround: "/gettingAround.png",
+    limousineService: "/taxi Alternative.png",
+    airportTransfer: "/airportTransfer.png",
 };
 
 interface Props {
@@ -81,7 +81,10 @@ export default function CityDetailClient({ dict, lang, countrySlug, citySlug }: 
     const cDict = dict.countries;
     const cityData = (dict as any).cityContent?.[countrySlugMap[countrySlug] || countrySlug]?.[citySlug];
 
-    const heroTitle = `Taxi Alternative ${cityName}`;
+    // const heroTitle = `Taxi Alternative ${cityName}`;
+    const taxiAltText = dict.cityTaxiTitle?.taxiAlternative || "Taxi Alternative";
+
+    const heroTitle = `${taxiAltText} ${cityName}`;
     const heroImage = cityHeroImages[citySlug] || cityHeroImages.dubai;
 
     const gettingAroundTitle = cityData?.gettingAround?.title || `Getting Around in ${cityName}`;

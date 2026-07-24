@@ -2387,5 +2387,8 @@
       "title": "Safety first",
       "description": "Your safety is our priority. Our experienced chauffeurs, well-maintained vehicles, and commitment to reliable service ensure every journey is secure, comfortable, and stress-free."
     }
+  },
+  "cityTaxiTitle": {
+    "taxiAlternative": "Taxi Alternative"
   }
 }
