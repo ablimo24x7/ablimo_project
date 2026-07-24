@@ -12,7 +12,7 @@ const slideImages = [
 ];
 
 export default function HeroSection({ dict }: { dict: Dictionary }) {
-  const [slideCounter, setSlideCounter] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [titleVisible, setTitleVisible] = useState(true);
   const [isOneWay, setIsOneWay] = useState(true);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -20,36 +20,36 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
   const slides = dict.home.slides;
   const b = dict.booking;
   const totalSlides = slides.length;
-  const currentIndex = slideCounter % totalSlides;
 
   const updateText = useCallback(() => {
     setTitleVisible(false);
     setTimeout(() => setTitleVisible(true), 300);
   }, []);
 
+  const startAutoplay = useCallback(() => {
+    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
+    autoPlayRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % totalSlides);
+      updateText();
+    }, 5000);
+  }, [totalSlides, updateText]);
+
   const goToSlide = useCallback(
     (newIndex: number) => {
       if (newIndex === currentIndex) return;
-      setSlideCounter(newIndex);
+      setCurrentIndex(newIndex);
       updateText();
-      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-      autoPlayRef.current = setInterval(() => {
-        setSlideCounter((prev) => prev + 1);
-        updateText();
-      }, 5000);
+      startAutoplay();
     },
-    [currentIndex, updateText]
+    [currentIndex, updateText, startAutoplay]
   );
 
   useEffect(() => {
-    autoPlayRef.current = setInterval(() => {
-      setSlideCounter((prev) => prev + 1);
-      updateText();
-    }, 5000);
+    startAutoplay();
     return () => {
       if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     };
-  }, [updateText]);
+  }, [startAutoplay]);
 
   const getCarClass = (index: number) => {
     if (index === currentIndex) return "car-slide car-active";
@@ -123,16 +123,14 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
           {/* Slide text - right side */}
           <div className="absolute right-[8%] top-[42%] -translate-y-1/2 w-full max-w-[340px] pointer-events-auto">
             <h2
-              className={`text-[2.5rem] leading-tight font-bold text-white mb-4 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
-                titleVisible ? "opacity-100" : "opacity-0"
-              }`}
+              key={`desktop-title-${currentIndex}`}
+              className="text-[2.5rem] leading-tight font-bold text-white mb-4 tracking-wide drop-shadow-lg animate-fade-in"
             >
               {slides[currentIndex].title}
             </h2>
             <p
-              className={`text-sm text-gray-300 leading-relaxed mb-8 drop-shadow transition-opacity duration-500 delay-100 ${
-                titleVisible ? "opacity-100" : "opacity-0"
-              }`}
+              key={`desktop-desc-${currentIndex}`}
+              className="text-sm text-gray-300 leading-relaxed mb-8 drop-shadow animate-fade-in delay-100"
             >
               {slides[currentIndex].desc}
             </p>
@@ -156,13 +154,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
                 alt={slides[index].title}
                 width={500}
                 height={250}
-                className={`absolute w-[85%] h-auto object-contain transition-all duration-700 ${
-                  index === currentIndex
-                    ? "opacity-70 scale-100"
-                    : index < currentIndex
-                    ? "opacity-0 -translate-x-full scale-90"
-                    : "opacity-0 translate-x-full scale-90"
-                }`}
+                className={getCarClass(index)}
                 priority={index === 0}
               />
             ))}
@@ -183,16 +175,14 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
         {/* Slide text - at chauffeur mid section level */}
         <div className="w-full text-center -mt-24 mb-2 relative z-30">
           <h2
-            className={`text-[1.75rem] leading-tight font-bold text-white mb-2 tracking-wide drop-shadow-lg transition-opacity duration-500 ${
-              titleVisible ? "opacity-100" : "opacity-0"
-            }`}
+            key={`mobile-title-${currentIndex}`}
+            className="text-[1.75rem] leading-tight font-bold text-white mb-2 tracking-wide drop-shadow-lg animate-fade-in"
           >
             {slides[currentIndex].title}
           </h2>
           <p
-            className={`text-xs text-gray-300 leading-relaxed mb-5 drop-shadow transition-opacity duration-500 delay-100 px-2 ${
-              titleVisible ? "opacity-100" : "opacity-0"
-            }`}
+            key={`mobile-desc-${currentIndex}`}
+            className="text-xs text-gray-300 leading-relaxed mb-5 drop-shadow animate-fade-in delay-100 px-2"
           >
             {slides[currentIndex].desc}
           </p>
