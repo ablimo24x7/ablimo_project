@@ -18,7 +18,7 @@ export default async function StrategicPartnershipsPage({
   const dict = await getDictionary(lang as Locale);
 
   const partnershipCardImages = [
-    "https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=400&fit=crop",
+    "/Aviation.png",
     "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&h=400&fit=crop",
     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
     "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop",

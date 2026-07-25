@@ -21,7 +21,18 @@ export default async function AboutPage({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-
+  const citiesData = [
+    { name: "Dubai", country: "ae", city: "dubai" },
+    { name: "Riyadh", country: "sa", city: "riyadh" },
+    { name: "Doha", country: "qa", city: "doha" },
+    { name: "Abu Dhabi", country: "ae", city: "abu-dhabi" },
+    { name: "Jeddah", country: "sa", city: "jeddah" },
+    { name: "Manama", country: "bh", city: "manama" },
+    { name: "Kuwait City", country: "kw", city: "kuwait" },
+    { name: "Muscat", country: "om", city: "muscat" },
+    { name: "Sharjah", country: "ae", city: "sharjah" },
+    { name: "Mecca", country: "sa", city: "mecca" },
+  ];
   return (
     <>
       {/* Hero Section */}
@@ -203,18 +214,19 @@ export default async function AboutPage({
             <span className="italic font-light text-gray-300">{dict.about.operates.heading2}</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {cityNames.map((city) => (
-              <div
-                key={city}
-                className="bg-[#292a30] p-6 rounded-lg text-center border border-gray-700/50 hover:border-white/30 transition-all duration-300 cursor-pointer"
+            {citiesData.map((item) => (
+              <Link
+                key={item.city}
+                href={`/${lang}/countries/${item.country}/${item.city}`}
+                className="bg-[#292a30] p-6 rounded-lg text-center border border-gray-700/50 hover:border-white/30 transition-all duration-300 block"
               >
-                <p className="text-lg font-semibold">{city}</p>
-              </div>
+                <p className="text-lg font-semibold">{item.name}</p>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-12">
             <Link
-              href="#"
+              href={`/${lang}/cities`}
               className="inline-block border-2 border-white text-white px-8 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-white hover:text-[#292a30] transition-all duration-300"
             >
               {dict.about.operates.viewAll}
@@ -263,7 +275,7 @@ export default async function AboutPage({
             const links = ["/career", "/press/releases", "/blog"];
             const images = [
               "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1504711434969-e33886168d5c?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1543242594-c8bae8b9e708?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop",
             ];
             return (
