@@ -9,8 +9,17 @@ const statsData = [
   { number: "1M+", labelKey: "rides" },
 ];
 
-const cityNames = [
-  "Dubai", "Riyadh", "Doha", "Abu Dhabi", "Jeddah", "Manama", "Kuwait City", "Muscat", "Sharjah", "Mecca",
+const cityLinks = [
+  { name: "Dubai", country: "ae", city: "dubai" },
+  { name: "Riyadh", country: "sa", city: "riyadh" },
+  { name: "Doha", country: "qa", city: "doha" },
+  { name: "Abu Dhabi", country: "ae", city: "abu-dhabi" },
+  { name: "Jeddah", country: "sa", city: "jeddah" },
+  { name: "Manama", country: "bh", city: "manama" },
+  { name: "Kuwait City", country: "kw", city: "kuwait" },
+  { name: "Muscat", country: "om", city: "muscat" },
+  { name: "Sharjah", country: "ae", city: "sharjah" },
+  { name: "Mecca", country: "sa", city: "mecca" },
 ];
 
 export default async function AboutPage({
@@ -203,18 +212,19 @@ export default async function AboutPage({
             <span className="italic font-light text-gray-300">{dict.about.operates.heading2}</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {cityNames.map((city) => (
-              <div
-                key={city}
-                className="bg-[#292a30] p-6 rounded-lg text-center border border-gray-700/50 hover:border-white/30 transition-all duration-300 cursor-pointer"
+            {cityLinks.map((city) => (
+              <Link
+                key={city.name}
+                href={`/${lang}/countries/${city.country}/${city.city}`}
+                className="bg-[#292a30] p-6 rounded-lg text-center border border-gray-700/50 hover:border-white/30 transition-all duration-300"
               >
-                <p className="text-lg font-semibold">{city}</p>
-              </div>
+                <p className="text-lg font-semibold">{city.name}</p>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-12">
             <Link
-              href="#"
+              href={`/${lang}/cities`}
               className="inline-block border-2 border-white text-white px-8 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-white hover:text-[#292a30] transition-all duration-300"
             >
               {dict.about.operates.viewAll}
