@@ -269,7 +269,7 @@ export default async function ChauffeurServicePage({
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] rounded-2xl overflow-hidden order-1 lg:order-2">
             <Image
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=800&h=600&fit=crop"
+              src="/airportTransfer.png"
               alt="Airport Chauffeur"
               fill
               className="object-cover"
