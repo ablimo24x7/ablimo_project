@@ -183,7 +183,7 @@ export default async function GroundTransportationPage({
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden order-1 lg:order-2">
             <Image
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=800&h=600&fit=crop"
+              src="https://images.unsplash.com/photo-1549897411-b06572cdf806?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Airport Ground Transportation"
               fill
               className="object-cover"

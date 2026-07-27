@@ -30,7 +30,18 @@ export default async function AboutPage({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-
+  const citiesData = [
+    { name: "Dubai", country: "ae", city: "dubai" },
+    { name: "Riyadh", country: "sa", city: "riyadh" },
+    { name: "Doha", country: "qa", city: "doha" },
+    { name: "Abu Dhabi", country: "ae", city: "abu-dhabi" },
+    { name: "Jeddah", country: "sa", city: "jeddah" },
+    { name: "Manama", country: "bh", city: "manama" },
+    { name: "Kuwait City", country: "kw", city: "kuwait" },
+    { name: "Muscat", country: "om", city: "muscat" },
+    { name: "Sharjah", country: "ae", city: "sharjah" },
+    { name: "Mecca", country: "sa", city: "mecca" },
+  ];
   return (
     <>
       {/* Hero Section */}
@@ -273,7 +284,7 @@ export default async function AboutPage({
             const links = ["/career", "/press/releases", "/blog"];
             const images = [
               "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1504711434969-e33886168d5c?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1543242594-c8bae8b9e708?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop",
             ];
             return (
