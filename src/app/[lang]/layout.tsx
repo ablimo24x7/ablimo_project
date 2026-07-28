@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 });
 
 export async function generateStaticParams() {
-  return [{ lang: "en-US" }, { lang: "en-UK" }, { lang: "ar" }];
+  return [{ lang: "en-US" }, { lang: "en-GB" }, { lang: "ar" }];
 }
 
 export async function generateMetadata({

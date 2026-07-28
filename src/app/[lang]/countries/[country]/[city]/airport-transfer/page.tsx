@@ -7,7 +7,7 @@ export default async function DynamicAirportTransferPage({
   params: Promise<{ lang: string; country: string; city: string }>;
 }) {
   const { lang, country, city } = await params;
-  const dict = await getDictionary(lang as "en-US" | "en-UK" | "ar");
+  const dict = await getDictionary(lang as "en-US" | "en-GB" | "ar");
 
   return <AirportTransferCityClient dict={dict} lang={lang} countrySlug={country} citySlug={city} />;
 }
