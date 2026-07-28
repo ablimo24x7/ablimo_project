@@ -9,26 +9,26 @@ const fleetCars = [
   { image: "/cars/sedans/msc.png", title: "Mercedes S Class", passengers: 3, luggage: 3, category: "sedan" },
   { image: "/cars/sedans/GMC.png", title: "GMC", passengers: 7, luggage: 4, category: "sedan" },
   { image: "/cars/sedans/CADILAC.png", title: "Cadillac", passengers: 7, luggage: 4, category: "sedan" },
-  { image: "/cars/sedans/LEXUS.png", title: "Lexus", passengers: 3, luggage: 3, category: "sedan" },
-  { image: "/cars/sedans/FAURD TAURUS.png", title: "Ford Taurus", passengers: 3, luggage: 3, category: "sedan" },
-  { image: "/cars/sedans/BMW.png", title: "BMW", passengers: 3, luggage: 3, category: "sedan" },
+  { image: "/cars/sedans/LEXUS.png", title: "Lexus", passengers: 3, luggage: 2, category: "sedan" },
+  { image: "/cars/sedans/FAURD TAURUS.png", title: "Ford Taurus", passengers: 3, luggage: 5, category: "sedan" },
+  { image: "/cars/sedans/BMW.png", title: "BMW", passengers: 3, luggage: 2, category: "sedan" },
 
   // SUVs
   { image: "/cars/suvs/CADILAC.png", title: "Cadillac SUV", passengers: 7, luggage: 4, category: "suv" },
   { image: "/cars/suvs/GMC.png", title: "GMC SUV", passengers: 7, luggage: 4, category: "suv" },
 
   // Vans
-  { image: "/cars/vans/HAICE.png", title: "Haice", passengers: 12, luggage: 0, category: "van" },
-  { image: "/cars/vans/Sprinter.png", title: "Sprinter", passengers: 14, luggage: 0, category: "van" },
-  { image: "/cars/vans/V_Class.png", title: "V Class", passengers: 6, luggage: 6, category: "van" },
-  { image: "/cars/vans/STARIA.png", title: "Staria", passengers: 11, luggage: 0, category: "van" },
-  { image: "/cars/vans/Maxus.png", title: "Maxus", passengers: 15, luggage: 0, category: "van" },
-  { image: "/cars/vans/COASTER.png", title: "Coaster", passengers: 22, luggage: 0, category: "van" },
+  { image: "/cars/vans/HAICE.png", title: "Haice", passengers: 12, luggage: 5, category: "van" },
+  { image: "/cars/vans/Sprinter.png", title: "Sprinter", passengers: 14, luggage: 10, category: "van" },
+  { image: "/cars/vans/V_Class.png", title: "V Class", passengers: 6, luggage: 4, category: "van" },
+  { image: "/cars/vans/STARIA.png", title: "Staria", passengers: 11, luggage: 5, category: "van" },
+  { image: "/cars/vans/Maxus.png", title: "Maxus", passengers: 15, luggage: 8, category: "van" },
+  { image: "/cars/vans/COASTER.png", title: "Coaster", passengers: 22, luggage: 15, category: "van" },
 
   // Buses
-  { image: "/cars/buses/VIP_Luxury_bus.png", title: "VIP Luxury Bus", passengers: 21, luggage: 25, category: "buses" },
-  { image: "/cars/buses/Mid_Size_Bus.png", title: "Mid Size Bus", passengers: 33, luggage: 25, category: "buses" },
-  { image: "/cars/buses/King_Long_bus.png", title: "King Long Bus", passengers: 49, luggage: 50, category: "buses" },
+  { image: "/cars/buses/VIP_Luxury_bus.png", title: "VIP Luxury Bus", passengers: 21, luggage: 20, category: "buses" },
+  { image: "/cars/buses/Mid_Size_Bus.png", title: "Mid Size Bus", passengers: 33, luggage: 30, category: "buses" },
+  { image: "/cars/buses/King_Long_bus.png", title: "King Long Bus", passengers: 49, luggage: 45, category: "buses" },
 
   // Golf Vehicles
   { image: "/cars/golf-vehicles/4x4_Golf_Cart_2_seater.png", title: "4x4 Golf Cart 2 Seater", passengers: 2, luggage: 0, category: "golf" },
