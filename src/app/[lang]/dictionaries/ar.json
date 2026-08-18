@@ -65,55 +65,96 @@
     "bookNow": "احجز الآن"
   },
   "footer": {
-    "company": {
-      "title": "الشركة",
-      "howItWorks": "كيف يعمل AB.Limo",
-      "career": "الوظائف",
-      "press": "الصحافة",
-      "greenInitiatives": "المبادرات البيئية",
-      "becomeChauffeur": "كن شريك سائق"
+    "aboutUs": {
+      "title": "عن الشركة",
+      "homepage": "الرئيسية",
+      "aboutAB": "عن شركة AB Transportation",
+      "leadership": "فريق القيادة",
+      "awards": "الجوائز والتقدير",
+      "chauffeurRecruitment": "توظيف السائقين",
+      "corporateCareers": "الوظائف الشركاتية",
+      "press": "الصحافة / غرفة الأخبار",
+      "sustainability": "الاستدامة",
+      "contactUs": "اتصل بنا"
     },
-    "business": {
-      "title": "AB.Limo للأعمال",
-      "overview": "نظرة عامة",
-      "corporations": "الشركات",
-      "travelAgencies": "وكالات السفر",
-      "strategicPartnerships": "الشراكات الاستراتيجية"
+    "supportLegal": {
+      "title": "الدعم والقانونية",
+      "helpCenter": "مركز المساعدة",
+      "contactCallback": "اتصل / طلب اتصال",
+      "liveChat": "الدردشة المباشرة / المساعد الذكي",
+      "terms": "الشروط والأحكام",
+      "privacy": "سياسة الخصوصية",
+      "cookie": "سياسة ملفات تعريف الارتباط / الإعدادات",
+      "modernSlavery": "بيان العبودية الحديثة",
+      "codeOfConduct": "مدونة السلوك"
     },
-    "topCities": {
-      "title": "أكبر المدن",
-      "dubai": "دبي",
-      "riyadh": "الرياض",
+    "fleet": {
+      "title": "الأسطول",
+      "landing": "صفحة الأسطول",
+      "luxurySedan": "سيدان فاخرة (S-Class)",
+      "businessSedan": "سيدان أعمال",
+      "luxurySuv": "سيارة دفع رباعي فاخرة (Escalade/GMC)",
+      "businessVan": "فان أعمال (V-Class)",
+      "mpv": "MPV (Hyundai Staria)",
+      "miniBus": "ميني باص / كوتش / باص فاخر VIP"
+    },
+    "locations": {
+      "title": "المواقع",
+      "qatar": "قطر",
+      "saudiArabia": "المملكة العربية السعودية",
+      "uae": "الإمارات العربية المتحدة",
+      "kuwait": "الكويت",
+      "bahrain": "البحرين",
+      "oman": "عمان",
+      "europeUkUsa": "أوروبا / المملكة المتحدة / أمريكا / آسيا / أستراليا",
+      "allCities": "جميع المدن",
+      "allCountries": "جميع الدول"
+    },
+    "globalHubs": {
+      "title": "المراكز العالمية",
       "doha": "الدوحة",
-      "abuDhabi": "أبوظبي",
       "jeddah": "جدة",
-      "allCities": "جميع المدن"
+      "mecca": "مكة المكرمة",
+      "riyadh": "الرياض",
+      "tabuk": "تبوك",
+      "madinah": "المدينة المنورة",
+      "alUla": "العلا",
+      "dammam": "الدمام",
+      "alKhobar": "الخبر",
+      "alQasim": "القصيم",
+      "abha": "أبها",
+      "jizan": "جازان",
+      "neom": "نيوم",
+      "abuDhabi": "أبوظبي",
+      "dubai": "دبي",
+      "sharjah": "الشارقة",
+      "ajman": "عجمان",
+      "rasAlKhaymah": "رأس الخيمة",
+      "kuwaitCity": "مدينة الكويت",
+      "manama": "المنامة",
+      "muscat": "مسقط"
     },
     "explore": {
       "title": "استكشف",
-      "cityToCity": "رحلات بين المدن",
-      "limousine": "خدمة ليموزين",
-      "chauffeur": "خدمة سائق",
-      "privateCar": "خدمة سيارة خاصة",
-      "groundTransport": "نقل برّي",
-      "airportTransfer": "نقل من وإلى المطار",
-      "allCountries": "جميع الدول"
+      "asDirected": "خدمات حسب الطلب",
+      "executiveMobility": "التنقل التنفيذي والمؤسسي",
+      "airportTransfers": "نقل المطار",
+      "vipDiplomatic": "كبار الشخصيات والدبلوماسية والحكومة",
+      "corporateFleet": "الأسطول المؤسسي وتنقل القوى العاملة",
+      "eventTransportation": "نقل الفعاليات",
+      "groupCharter": "المجموعات والكوتشات",
+      "tourism": "السياحة والترفيه",
+      "religiousTourism": "السياحة الدينية",
+      "crossBorder": "التنقل العابر للحدود",
+      "premiumLifestyle": "أسلوب الحياة الفاخر والمتخصص"
     },
-    "cityToCityRides": {
-      "title": "رحلات بين المدن",
-      "dubaiAbuDhabi": "دبي - أبوظبي",
-      "riyadhDammam": "الرياض - الدمام",
-      "dohaAlKhor": "الدوحة - الخور",
-      "jeddahMecca": "جدة - مكة",
-      "manamaAlKhobar": "المنامة - الخبر"
-    },
-    "bottomLinks": {
-      "terms": "الشروط",
-      "privacy": "سياسة الخصوصية",
-      "legal": "إشعار قانوني",
-      "accessibility": "إمكانية الوصول"
-    },
-    "copyright": "©2026 AB.Limo"
+    "copyright": "©2026 AB.Limo",
+    "imprint": "الإخلاء",
+    "accessibility": "إمكانية الوصول",
+    "appStoreAlt": "حمّل من متجر التطبيقات",
+    "googlePlayAlt": "احصل عليه من جوجل بلاي",
+    "showMore": "المزيد..",
+    "showLess": "أقل"
   },
   "home": {
     "slides": [
