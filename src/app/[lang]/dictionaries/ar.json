@@ -6,27 +6,91 @@
   "header": {
     "logo": "AB.Limo",
     "nav": {
-      "ourServices": "خدماتنا",
-      "forBusiness": "للشركات",
-      "forChauffeurs": "للسائقين",
+      "home": "الرئيسية",
       "help": "مساعدة",
-      "signIn": "تسجيل الدخول",
-      "bookNow": "احجز الآن"
+      "bookNow": "احجز الآن",
+      "ourServices": "خدماتنا",
+      "tourismMobility": "حلول التنقل السياحي",
+      "corporateMobility": "حلول التنقل المؤسسي",
+      "eventsMobility": "حلول تنقل الفعاليات",
+      "mobilityByIndustry": "التنقل حسب القطاع",
+      "technology": "التكنولوجيا"
     },
     "dropdowns": {
-      "services": {
-        "cityToCity": "رحلات مدينة إلى مدينة",
-        "chauffeurHailing": "استدعاء سائق",
-        "airportTransfer": "نقل المطار",
-        "hourlyHire": "التوظيف بالساعة",
-        "chauffeurService": "خدمة السائق",
-        "limousineService": "خدمة الليموسين"
+      "technology": {
+        "corporateLogin": "دخول الشركات",
+        "affiliateLogin": "دخول الشركاء",
+        "chauffeurPortal": "بوابة السائق",
+        "fleetPortal": "بوابة الأسطول",
+        "customerPortal": "بوابة العميل"
       },
-      "business": {
-        "overview": "نظرة عامة",
-        "corporations": "الشركات",
-        "travelAgencies": "وكالات السفر",
-        "strategicPartnerships": "الشراكات الاستراتيجية"
+      "services": {
+        "executiveChauffeur": "خدمات السائق التنفيذي",
+        "chauffeurHailing": "خدمات استدعاء السائق",
+        "hourlyChauffeur": "سائق بالساعة",
+        "airportTransfers": "النقل من وإلى المطار",
+        "cityTransfers": "النقل داخل المدينة",
+        "intercityTransfers": "النقل بين المدن",
+        "limousineServices": "خدمات الليموزين",
+        "busCharter": "تأجير حافلات",
+        "miniBusCharter": "تأجير ميني باص",
+        "coachCharter": "تأجير كوتش",
+        "airportCoachTransfers": "نقل الكوتش من وإلى المطار"
+      },
+      "tourism": {
+        "tourismDmc": "حلول تنقل السياحة وشركات السياحة",
+        "hospitality": "حلول التنقل الفندقية",
+        "roadshows": "تنقل العروض السياحية",
+        "pilgrimage": "نقل الحجاج والعمار",
+        "tourismTransport": "النقل السياحي",
+        "mice": "نقل المؤتمرات والمعارض",
+        "hotelShuttle": "خدمة نقل الفنادق"
+      },
+      "corporate": {
+        "overview": "حلول التنقل المؤسسي",
+        "eventMice": "حلول تنقل الفعاليات والمؤتمرات",
+        "vipChauffeur": "خدمات سائق كبار الشخصيات",
+        "cityToCity": "رحلات بين المدن",
+        "corporateShuttle": "خدمة نقل الشركات",
+        "staffTransport": "نقل الموظفين",
+        "schoolTransport": "نقل الطلاب",
+        "universityTransport": "نقل الجامعيين",
+        "financialRoadshows": "حلول تنقل العروض المالية"
+      },
+      "events": {
+        "eventTransport": "نقل الفعاليات",
+        "exhibition": "نقل المعارض",
+        "conference": "نقل المؤتمرات",
+        "sportsTeam": "نقل الفرق الرياضية",
+        "artists": "نقل الفنانين",
+        "crew": "نقل الطاقم",
+        "vipDelegation": "نقل الوفود رفيعة المستوى"
+      },
+      "industry": {
+        "government": "حلول التنقل الحكومي والدبلوماسي",
+        "embassy": "حلول نقل السفارات",
+        "aviation": "حلول التنقل الجوي",
+        "workforce": "حلول تنقل القوى العاملة",
+        "energy": "حلول تنقل الطاقة والمرافق",
+        "construction": "حلول مشاريع البناء",
+        "industrial": "حلول التنقل الصناعي",
+        "sportsEntertainment": "حلول التنقل الرياضي والترفيهي",
+        "pilgrimage": "حلول نقل الحجاج والعمار",
+        "healthcare": "حلول التنقل الصحي",
+        "education": "حلول التنقل التعليمي",
+        "retail": "حلول التنقل التجاري",
+        "mediaProduction": "حلول تنقل الإعلام والإنتاج",
+        "marine": "حلول التنقل البحري والموانئ",
+        "mining": "حلول التنقل المناحي والمواقع النائية",
+        "technology": "حلول التنقل التكنولوجي والابتكاري",
+        "ngo": "حلول التنقل الإنساني والمنظمات",
+        "realEstate": "حلول التنقل العقاري والمجتمعي",
+        "luxuryVip": "حلول التنقل الفاخرة وكبار الشخصيات",
+        "mediaEntertainment": "حلول التنقل لقطاع الإعلام والترفيه",
+        "medical": "حلول النقل الطبي",
+        "oilGas": "نقل موظفي النفط والغاز",
+        "miningStaff": "نقل موظفي المناجم",
+        "constructionStaff": "نقل موظفي البناء"
       }
     }
   },

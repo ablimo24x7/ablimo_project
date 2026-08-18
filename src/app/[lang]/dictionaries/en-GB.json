@@ -6,27 +6,91 @@
   "header": {
     "logo": "AB.Limo",
     "nav": {
-      "ourServices": "Our services",
-      "forBusiness": "For business",
-      "forChauffeurs": "For chauffeurs",
+      "home": "Home",
       "help": "Help",
-      "signIn": "Sign in",
-      "bookNow": "Book now"
+      "bookNow": "Book now",
+      "ourServices": "Our Services",
+      "tourismMobility": "Tourism Mobility Solutions",
+      "corporateMobility": "Corporate Mobility Solutions",
+      "eventsMobility": "Events Mobility Solutions",
+      "mobilityByIndustry": "Mobility by Industry",
+      "technology": "Technology"
     },
     "dropdowns": {
-      "services": {
-        "cityToCity": "City-to-City rides",
-        "chauffeurHailing": "Chauffeur hailing",
-        "airportTransfer": "Airport transfers",
-        "hourlyHire": "Hourly hire",
-        "chauffeurService": "Chauffeur service",
-        "limousineService": "Limousine service"
+      "technology": {
+        "corporateLogin": "Corporate Login",
+        "affiliateLogin": "Affiliate Login",
+        "chauffeurPortal": "Chauffeur Portal",
+        "fleetPortal": "Fleet Portal",
+        "customerPortal": "Customer Portal"
       },
-      "business": {
-        "overview": "Overview",
-        "corporations": "Corporations",
-        "travelAgencies": "Travel agencies",
-        "strategicPartnerships": "Strategic partnerships"
+      "services": {
+        "executiveChauffeur": "Executive Chauffeur Services",
+        "chauffeurHailing": "Chauffeur Hailing Services",
+        "hourlyChauffeur": "Hourly Chauffeur",
+        "airportTransfers": "Airport Transfers",
+        "cityTransfers": "City Transfers",
+        "intercityTransfers": "Intercity Transfers",
+        "limousineServices": "Limousine Services",
+        "busCharter": "Bus Charter",
+        "miniBusCharter": "Mini Bus Charter",
+        "coachCharter": "Coach Charter",
+        "airportCoachTransfers": "Airport Coach Transfers"
+      },
+      "tourism": {
+        "tourismDmc": "Tourism & DMC Mobility Solutions",
+        "hospitality": "Hospitality Mobility Solutions",
+        "roadshows": "Tourism Roadshows Mobility",
+        "pilgrimage": "Pilgrimage Transportation",
+        "tourismTransport": "Tourism Transportation",
+        "mice": "MICE Transportation",
+        "hotelShuttle": "Hotel Shuttle"
+      },
+      "corporate": {
+        "overview": "Corporate Mobility Solutions",
+        "eventMice": "Event & MICE Mobility Solutions",
+        "vipChauffeur": "VIP Chauffeur Services",
+        "cityToCity": "City to City Rides",
+        "corporateShuttle": "Corporate Shuttle Services",
+        "staffTransport": "Staff / Employee Transportation",
+        "schoolTransport": "School Transportation",
+        "universityTransport": "University Transportation",
+        "financialRoadshows": "Financial Roadshows Mobility Solutions"
+      },
+      "events": {
+        "eventTransport": "Event Transportation",
+        "exhibition": "Exhibition Transportation",
+        "conference": "Conference Transportation",
+        "sportsTeam": "Sports Team Transportation",
+        "artists": "Artists Transportation",
+        "crew": "Crew Transportation",
+        "vipDelegation": "VIP Delegation Transportation"
+      },
+      "industry": {
+        "government": "Government & Diplomatic Mobility Solutions",
+        "embassy": "Embassy Transportation Solutions",
+        "aviation": "Aviation Mobility Solutions",
+        "workforce": "Workforce Mobility Solutions",
+        "energy": "Energy & Utilities Mobility Solutions",
+        "construction": "Construction & Project Mobility Solutions",
+        "industrial": "Industrial Mobility Solutions",
+        "sportsEntertainment": "Sports & Entertainment Mobility Solutions",
+        "pilgrimage": "Pilgrimage Mobility Solutions",
+        "healthcare": "Healthcare Mobility Solutions",
+        "education": "Education Mobility Solutions",
+        "retail": "Retail & Commercial Mobility Solutions",
+        "mediaProduction": "Media & Production Mobility Solutions",
+        "marine": "Marine & Port Mobility Solutions",
+        "mining": "Mining & Remote Site Mobility Solutions",
+        "technology": "Technology & Innovation Mobility Solutions",
+        "ngo": "NGO & Humanitarian Mobility Solutions",
+        "realEstate": "Real Estate & Community Mobility Solutions",
+        "luxuryVip": "Luxury & VIP Mobility Solutions",
+        "mediaEntertainment": "Media & Entertainment Industry Mobility Solution",
+        "medical": "Medical Transportation Solutions",
+        "oilGas": "Oil & Gas Staff Mobility Solutions",
+        "miningStaff": "Mining Staff Transportation",
+        "constructionStaff": "Construction Staff Transportation"
       }
     }
   },
