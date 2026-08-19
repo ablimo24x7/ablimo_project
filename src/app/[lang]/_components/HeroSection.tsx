@@ -1,303 +1,133 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
-import Image from "next/image";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { useState } from "react";
 
-const slideImages = [
-  { id: 1, src: "/cars/New folder/3.png" },
-  { id: 2, src: "/cars/New folder/1.png" },
-  { id: 3, src: "/cars/New folder/2.png" },
-  { id: 4, src: "/cars/New folder/4.png" },
-];
-
-export default function HeroSection({ dict }: { dict: Dictionary }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [titleVisible, setTitleVisible] = useState(true);
-  const [isOneWay, setIsOneWay] = useState(true);
-  const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const slides = dict.home.slides;
-  const b = dict.booking;
-  const totalSlides = slides.length;
-
-  const updateText = useCallback(() => {
-    setTitleVisible(false);
-    setTimeout(() => setTitleVisible(true), 300);
-  }, []);
-
-  const startAutoplay = useCallback(() => {
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    autoPlayRef.current = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % totalSlides);
-      updateText();
-    }, 5000);
-  }, [totalSlides, updateText]);
-
-  const goToSlide = useCallback(
-    (newIndex: number) => {
-      if (newIndex === currentIndex) return;
-      setCurrentIndex(newIndex);
-      updateText();
-      startAutoplay();
-    },
-    [currentIndex, updateText, startAutoplay]
-  );
-
-  useEffect(() => {
-    startAutoplay();
-    return () => {
-      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    };
-  }, [startAutoplay]);
-
-  const getCarClass = (index: number) => {
-    if (index === currentIndex) return "car-slide car-active";
-    const diff = (index - currentIndex + totalSlides) % totalSlides;
-    if (diff <= totalSlides / 2) return "car-slide car-hidden-left";
-    return "car-slide car-hidden-right";
-  };
+export default function HeroSection() {
+  const [activeTab, setActiveTab] = useState("transfer");
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden -mt-20">
-      {/* Background text */}
-      <div className="absolute inset-0 z-[-1] flex items-center justify-center pointer-events-none overflow-hidden">
-        <h1 className="text-[22vw] font-black text-white opacity-[0.03] tracking-tighter select-none -mt-[5%]">
-          AB.LIMO
-        </h1>
-      </div>
-
-      {/* Background layers */}
-      <div className="absolute inset-0 z-[-2] flex flex-col pointer-events-none">
-        <div className="h-[70%] bg-gradient-to-b from-[#424450] to-[#3a3c46]" />
-        <div className="h-[30%] bg-[#292a30]" />
-      </div>
-
-      {/* ===== DESKTOP LAYOUT ===== */}
-      <div className="hidden md:block absolute inset-0 w-full h-full">
-        {/* Slider images */}
-        <div className="absolute inset-0 w-full h-full z-10 pointer-events-none">
-          {slideImages.map((slide, index) => (
-            <Image
-              key={slide.id}
-              src={slide.src}
-              alt={slides[index].title}
-              width={910}
-              height={400}
-              className={getCarClass(index)}
-              priority={index === 0}
-            />
-          ))}
-        </div>
-
-        {/* Chauffeur image */}
-        <div className="absolute top-[58%] left-[30%] -translate-y-1/2 h-[80vh] max-h-[910px] z-20 pointer-events-none flex justify-center items-end">
-          <Image
-            src="/chauffeur.png"
-            alt="Chauffeur"
-            width={400}
-            height={900}
-            className="h-full w-auto object-contain drop-shadow-2xl"
-          />
-        </div>
-
-        {/* Content */}
-        <div className="relative w-full h-full z-30 pointer-events-none">
-          {/* Pagination dots - vertical left */}
-          <div className="absolute left-16 top-[42%] -translate-y-1/2 flex flex-col items-center gap-4 pointer-events-auto">
-            {slides.map((_, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center w-[20px] h-[20px] cursor-pointer"
-                onClick={() => goToSlide(index)}
-              >
-                <div
-                  className={
-                    index === currentIndex ? "dot-active" : "dot-inactive"
-                  }
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Slide text - right side */}
-          <div className="absolute right-[8%] top-[42%] -translate-y-1/2 w-full max-w-[340px] pointer-events-auto">
-            <h2
-              key={`desktop-title-${currentIndex}`}
-              className="text-[2.5rem] leading-tight font-bold text-white mb-4 tracking-wide drop-shadow-lg animate-fade-in"
-            >
-              {slides[currentIndex].title}
-            </h2>
-            <p
-              key={`desktop-desc-${currentIndex}`}
-              className="text-sm text-gray-300 leading-relaxed mb-8 drop-shadow animate-fade-in delay-100"
-            >
-              {slides[currentIndex].desc}
+    <section className="hero-bg min-h-screen flex items-center relative pt-20">
+      <div className="absolute inset-0 bg-gradient-to-r from-abBlack via-abBlack/80 to-transparent"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Hero Content */}
+          <div className="lg:col-span-7 text-left">
+            <div className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full bg-abGold/10 border border-abGold/30 mb-6">
+              <span className="w-2 h-2 rounded-full bg-abGold animate-pulse"></span>
+              <span className="text-abGold text-xs font-bold tracking-widest uppercase">GCC Premier Enterprise Logistics</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+              The Science of <br/>
+              <span className="text-abGold">Transportation.</span>
+            </h1>
+            <p className="text-lg text-gray-300 mb-10 max-w-2xl leading-relaxed">
+              Beyond standard transfers. AB.Limo engineers bespoke mobility architecture for mega-events, corporate roadshows, and government protocol across Saudi Arabia, UAE, and Qatar.
             </p>
-            <button className="border-2 border-white text-white px-8 py-3 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
-              {dict.hero.bookNow}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* ===== MOBILE LAYOUT - Vertical Column ===== */}
-      <div className="md:hidden relative w-full flex-1 flex flex-col items-center z-20 px-6 pt-4">
-        {/* Chauffeur + Cars - main visual focus */}
-        <div className="relative w-full flex-1 flex justify-center items-center min-h-[35vh]">
-          {/* Cars behind chauffeur */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            {slideImages.map((slide, index) => (
-              <Image
-                key={slide.id}
-                src={slide.src}
-                alt={slides[index].title}
-                width={500}
-                height={250}
-                className={getCarClass(index)}
-                priority={index === 0}
-              />
-            ))}
-          </div>
-          {/* Chauffeur on top */}
-          <div className="relative z-10 h-full flex items-end justify-center">
-            <Image
-              src="/chauffeur.png"
-              alt="Chauffeur"
-              width={260}
-              height={800}
-              className="h-[90vh] max-h-[500px] w-auto object-contain object-bottom drop-shadow-2xl"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Slide text - at chauffeur mid section level */}
-        <div className="w-full text-center -mt-24 mb-2 relative z-30">
-          <h2
-            key={`mobile-title-${currentIndex}`}
-            className="text-[1.75rem] leading-tight font-bold text-white mb-2 tracking-wide drop-shadow-lg animate-fade-in"
-          >
-            {slides[currentIndex].title}
-          </h2>
-          <p
-            key={`mobile-desc-${currentIndex}`}
-            className="text-xs text-gray-300 leading-relaxed mb-5 drop-shadow animate-fade-in delay-100 px-2"
-          >
-            {slides[currentIndex].desc}
-          </p>
-          <button className="border-2 border-white text-white px-7 py-2.5 text-[11px] font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
-            {dict.hero.bookNow}
-          </button>
-        </div>
-
-        {/* Horizontal pagination dots */}
-        <div className="flex items-center justify-center gap-5 py-3 pointer-events-auto">
-          {slides.map((_: unknown, index: number) => (
-            <div
-              key={index}
-              className="flex items-center justify-center w-[18px] h-[18px] cursor-pointer"
-              onClick={() => goToSlide(index)}
-            >
-              <div
-                className={
-                  index === currentIndex ? "dot-active" : "dot-inactive"
-                }
-              />
+            <div className="flex flex-wrap gap-4">
+              <a href="#logistics" className="bg-abGold hover:bg-yellow-600 text-white px-8 py-3.5 rounded text-sm font-semibold transition-colors shadow-lg shadow-abGold/20">
+                Explore Event Frameworks
+              </a>
+              <a href="#duty-of-care" className="bg-transparent border border-gray-500 text-white hover:border-white px-8 py-3.5 rounded text-sm font-semibold transition-colors flex items-center">
+                <i className="fa-solid fa-shield-halved mr-2 text-abGold"></i> View Duty of Care
+              </a>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      {/* Booking form */}
-      <div className="relative z-40 w-full flex flex-col items-center pb-8 md:pb-16 pt-4 md:pt-8 mt-auto mt-0 md:mt-152">
-        <div className="flex bg-[#2a2c35] rounded-full p-1 mb-4 shadow-lg border border-gray-600/50">
-          <button
-            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all cursor-pointer ${
-              isOneWay
-                ? "bg-[#e4e4e4] text-[#292a30] shadow-md"
-                : "text-gray-400 hover:text-white"
-            }`}
-            onClick={() => setIsOneWay(true)}
-          >
-            {b.oneWay}
-          </button>
-          <button
-            className={`flex-1 rounded-full py-2 px-6 md:px-8 font-semibold text-xs md:text-sm transition-all cursor-pointer ${
-              !isOneWay
-                ? "bg-[#e4e4e4] text-[#292a30] shadow-md"
-                : "text-gray-400 hover:text-white"
-            }`}
-            onClick={() => setIsOneWay(false)}
-          >
-            {b.byTheHour}
-          </button>
-        </div>
-        <div className="w-full max-w-[1200px] px-4 md:px-0">
-          <div className="flex flex-col md:flex-row items-stretch md:items-end bg-[#53545b]/80 backdrop-blur-md rounded-xl border border-gray-400/40 shadow-2xl p-2 md:p-2 gap-3 md:gap-0">
-            <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
-              <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
-                {b.from}
-              </label>
-              <input
-                type="text"
-                placeholder={b.pickupPlaceholder}
-                className="w-full bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm"
-              />
-            </div>
-            {isOneWay ? (
-              <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
-                <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
-                  {b.to}
-                </label>
-                <input
-                  type="text"
-                  placeholder={b.pickupPlaceholder}
-                  className="w-full bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm"
-                />
+          {/* B2B Interactive Widget */}
+          <div className="lg:col-span-5 w-full">
+            <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-100">
+              {/* Tabs */}
+              <div className="flex border-b border-gray-200" id="widget-tabs">
+                <button
+                  onClick={() => setActiveTab("transfer")}
+                  className={`flex-1 py-4 px-2 text-xs font-bold uppercase tracking-wider transition-colors ${
+                    activeTab === "transfer"
+                      ? "text-abGold border-b-2 border-abGold bg-gray-50"
+                      : "text-gray-400 hover:text-gray-600"
+                  }`}
+                >
+                  Executive Transfer
+                </button>
+                <button
+                  onClick={() => setActiveTab("as-directed")}
+                  className={`flex-1 py-4 px-2 text-xs font-bold uppercase tracking-wider transition-colors ${
+                    activeTab === "as-directed"
+                      ? "text-abGold border-b-2 border-abGold bg-gray-50"
+                      : "text-gray-400 hover:text-gray-600"
+                  }`}
+                >
+                  As-Directed (Hourly)
+                </button>
+                <button
+                  onClick={() => setActiveTab("event")}
+                  className={`flex-1 py-4 px-2 text-xs font-bold uppercase tracking-wider transition-colors ${
+                    activeTab === "event"
+                      ? "text-abGold border-b-2 border-abGold bg-gray-50"
+                      : "text-gray-400 hover:text-gray-600"
+                  }`}
+                >
+                  Event Logistics
+                </button>
               </div>
-            ) : (
-              <div className="flex-1 w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
-                <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
-                  {b.duration}
-                </label>
-                <div className="relative">
-                  <select className="w-full bg-transparent text-gray-200 font-medium appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm cursor-pointer">
-                    <option className="bg-[#474850]">
-                      {b.hours80km}
-                    </option>
-                    <option className="bg-[#474850]">
-                      {b.hours120km}
-                    </option>
-                    <option className="bg-[#474850]">
-                      {b.hours160km}
-                    </option>
-                  </select>
-                </div>
+              
+              {/* Booking Forms Container */}
+              <div className="p-6 h-[340px] relative">
+                
+                {/* Transfer / As-Directed Form */}
+                <form
+                  className={`space-y-4 absolute inset-6 transition-opacity duration-300 ${
+                    activeTab !== "event" ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                  }`}
+                  onSubmit={(e) => e.preventDefault()}
+                >
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><i className="fa-solid fa-plane-arrival text-gray-400 text-sm"></i></div>
+                    <input type="text" placeholder="Pickup (e.g., RUH Airport)" className="block w-full pl-10 pr-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 transition-colors" />
+                  </div>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><i className="fa-regular fa-building text-gray-400 text-sm"></i></div>
+                    <input type="text" placeholder="Drop-off (e.g., KAFD)" className="block w-full pl-10 pr-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 transition-colors" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="relative">
+                      <input type="date" className="block w-full px-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 text-gray-500" />
+                    </div>
+                    <div className="relative">
+                      <input type="time" className="block w-full px-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 text-gray-500" />
+                    </div>
+                  </div>
+                  <button type="submit" className="w-full bg-abBlack hover:bg-gray-900 text-white font-semibold py-3.5 px-4 rounded transition-colors shadow-lg mt-2">Source Executive Fleet</button>
+                </form>
+
+                {/* Event Form */}
+                <form
+                  className={`space-y-4 absolute inset-6 transition-opacity duration-300 ${
+                    activeTab === "event" ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                  }`}
+                  onSubmit={(e) => e.preventDefault()}
+                >
+                  <p className="text-sm text-gray-500 mb-4">Connect with our Transport Control Room team to engineer logistics for mega-events, exhibitions, or VIP tours.</p>
+                  <div className="relative">
+                    <select className="block w-full pl-3 pr-10 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 text-gray-600">
+                      <option>Select Logistics Type</option>
+                      <option>Exhibition & Trade Show Shuttle</option>
+                      <option>Executive Coach / Bus Charter</option>
+                      <option>Government & Protocol Event</option>
+                      <option>Sports or Concert Transportation</option>
+                    </select>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <input type="number" placeholder="Est. Pax" className="block w-full px-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50" />
+                    <input type="text" placeholder="Event City" className="block w-full px-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50" />
+                  </div>
+                  <button type="submit" className="w-full bg-abGold hover:bg-yellow-600 text-white font-semibold py-3.5 px-4 rounded transition-colors shadow-lg mt-4">Request Logistics Consultation</button>
+                </form>
+
               </div>
-            )}
-            <div className="flex-1 md:flex-[0.8] w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
-              <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
-                {b.date}
-              </label>
-              <select className="w-full bg-transparent text-gray-300 appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm cursor-pointer">
-                <option className="bg-[#474850]">{b.selectDate}</option>
-              </select>
-            </div>
-            <div className="flex-1 md:flex-[0.8] w-full px-3 md:px-4 py-2 border-b md:border-b-0 md:border-r border-gray-400/40">
-              <label className="block text-white font-semibold text-[11px] md:text-[13px] mb-1 md:mb-2">
-                {b.pickupTime}
-              </label>
-              <select className="w-full bg-transparent text-white font-semibold appearance-none border-b border-gray-300 focus:border-white pb-2 transition-colors text-xs md:text-sm cursor-pointer">
-                <option className="bg-[#474850]">{b.selectTime}</option>
-              </select>
-            </div>
-            <div className="px-3 md:px-4 mt-2 md:mt-0 pb-1">
-              <button className="bg-[#2a2c35] hover:bg-[#1f2027] text-white border border-gray-500/50 px-6 md:px-8 py-[10px] text-xs md:text-sm font-semibold rounded-full transition-all duration-300 w-full md:w-auto cursor-pointer">
-                {b.search}
-              </button>
             </div>
           </div>
+
         </div>
       </div>
     </section>

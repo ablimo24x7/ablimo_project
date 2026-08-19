@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { hasLocale, defaultLocale, type Locale } from "./dictionaries";
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "900"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-montserrat",
+  variable: "--font-inter",
 });
 
 export async function generateStaticParams() {
@@ -47,9 +47,16 @@ export default async function RootLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${montserrat.variable} antialiased`}
+      className={`${inter.variable} antialiased`}
     >
-      <body className="text-white antialiased overflow-x-hidden selection:bg-gray-600">
+
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+      </head>
+      <body className="bg-abGray text-gray-800 antialiased selection:bg-abGold selection:text-white overflow-x-hidden">
         <Header lang={locale} />
         {children}
         <Footer lang={locale} />
