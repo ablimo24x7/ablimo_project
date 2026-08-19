@@ -10,5 +10,5 @@ export default async function PartnersPage({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
 
-  return <PartnersClient dict={dict} />;
+  return <PartnersClient dict={dict} lang={lang} />;
 }

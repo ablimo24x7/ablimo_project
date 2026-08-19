@@ -71,6 +71,12 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
     { label: dd.events.vipDelegation, href: "#" },
   ];
 
+  const ourSolutionGroups = [
+    { title: nav.tourismMobility, items: tourismLinks },
+    { title: nav.corporateMobility, items: corporateLinks },
+    { title: nav.eventsMobility, items: eventsLinks },
+  ];
+
   const industryLinks = [
     { label: dd.industry.government, href: "#" },
     { label: dd.industry.embassy, href: "#" },
@@ -147,7 +153,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
       </div>
 
       {/* Section 2: Main Navigation */}
-      <nav className="flex items-center justify-center gap-0.5 px-8 md:px-12 py-2">
+      <nav className="flex items-center justify-end gap-0.5 px-8 md:px-12 py-2">
         <Link
           href={`/${lang}`}
           className="text-xs md:text-sm font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
@@ -165,29 +171,11 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
         />
 
         <NavDropdown
-          id="tourism"
-          label={nav.tourismMobility}
-          items={tourismLinks}
-          isOpen={openDropdown === "tourism"}
-          onToggle={() => setOpenDropdown(openDropdown === "tourism" ? null : "tourism")}
-          onClose={() => setOpenDropdown(null)}
-        />
-
-        <NavDropdown
-          id="corporate"
-          label={nav.corporateMobility}
-          items={corporateLinks}
-          isOpen={openDropdown === "corporate"}
-          onToggle={() => setOpenDropdown(openDropdown === "corporate" ? null : "corporate")}
-          onClose={() => setOpenDropdown(null)}
-        />
-
-        <NavDropdown
-          id="events"
-          label={nav.eventsMobility}
-          items={eventsLinks}
-          isOpen={openDropdown === "events"}
-          onToggle={() => setOpenDropdown(openDropdown === "events" ? null : "events")}
+          id="solutions"
+          label={nav.ourSolution}
+          groups={ourSolutionGroups}
+          isOpen={openDropdown === "solutions"}
+          onToggle={() => setOpenDropdown(openDropdown === "solutions" ? null : "solutions")}
           onClose={() => setOpenDropdown(null)}
         />
 
@@ -198,7 +186,6 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
           isOpen={openDropdown === "industry"}
           onToggle={() => setOpenDropdown(openDropdown === "industry" ? null : "industry")}
           onClose={() => setOpenDropdown(null)}
-          columns={2}
           alignRight
         />
       </nav>

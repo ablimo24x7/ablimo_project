@@ -98,15 +98,32 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
     { label: dd.industry.constructionStaff, href: "#" },
   ];
 
-  const dropdownSections: { id: string; label: string; items: { label: string; href: string }[] }[] = [
-    { id: "services", label: nav.ourServices, items: serviceLinks },
+  const ourSolutionSections = [
     { id: "tourism", label: nav.tourismMobility, items: tourismLinks },
     { id: "corporate", label: nav.corporateMobility, items: corporateLinks },
     { id: "events", label: nav.eventsMobility, items: eventsLinks },
+  ];
+
+  const dropdownSections: { id: string; label: string; items: { label: string; href: string }[] }[] = [
+    { id: "services", label: nav.ourServices, items: serviceLinks },
     { id: "industry", label: nav.mobilityByIndustry, items: industryLinks },
   ];
 
+  const isSolutionsOpen = openDropdown === "solutions" || openDropdown?.startsWith("solution-");
+
   const toggleDropdown = (id: string) => {
+    if (id === "solutions") {
+      if (isSolutionsOpen) {
+        setOpenDropdown(null);
+      } else {
+        setOpenDropdown("solutions");
+      }
+      return;
+    }
+    if (id.startsWith("solution-")) {
+      setOpenDropdown(openDropdown === id ? "solutions" : id);
+      return;
+    }
     setOpenDropdown(openDropdown === id ? null : id);
   };
 
@@ -167,6 +184,60 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
             >
               {nav.home}
             </Link>
+
+            {/* Our Solution - nested accordion */}
+            <div className="border-b border-gray-700">
+              <button
+                onClick={() => toggleDropdown("solutions")}
+                className="flex items-center justify-between w-full text-left text-white text-lg font-semibold py-3 cursor-pointer"
+              >
+                {nav.ourSolution}
+                <svg
+                  className={`w-5 h-5 transition-transform ${openDropdown === "solutions" ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isSolutionsOpen && (
+                <div className="pl-4 pb-2">
+                  {ourSolutionSections.map((section) => (
+                    <div key={section.id}>
+                      <button
+                        onClick={() => toggleDropdown(`solution-${section.id}`)}
+                        className="flex items-center justify-between w-full text-left text-gray-200 text-base font-semibold py-2.5 cursor-pointer"
+                      >
+                        {section.label}
+                        <svg
+                          className={`w-4 h-4 transition-transform ${openDropdown === `solution-${section.id}` ? "rotate-180" : ""}`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {openDropdown === `solution-${section.id}` && (
+                        <div className="pl-4 pb-1">
+                          {section.items.map((item) => (
+                            <Link
+                              key={item.label}
+                              href={item.href}
+                              onClick={() => setIsOpen(false)}
+                              className="block py-2 text-gray-400 hover:text-white transition-colors text-sm"
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Dropdown sections */}
             {dropdownSections.map((section) => (

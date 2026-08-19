@@ -51,7 +51,7 @@ export default async function TermsPage({
             {t.title}
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-            <Link href="/" className="hover:text-white transition-colors">
+            <Link href={`/${lang}`} className="hover:text-white transition-colors">
               {t.breadcrumb.home}
             </Link>
             <span>/</span>
