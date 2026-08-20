@@ -139,15 +139,15 @@
       "items": [
         {
           "title": "Airport Transfers",
-          "desc": "Pellentesque semper dui eget fermentum sagittis. Curabitur bibendum id ante."
+          "desc": "Seamless airport pickups and drop-offs with professional chauffeurs, flight monitoring, and luggage assistance."
         },
         {
           "title": "Business Transfers",
-          "desc": "Sed nisi magna, rhoncus nec imperdiet non, pretium vitae odio donec scelerisque gravida."
+          "desc": "Executive travel solutions with punctual, comfortable vehicles and dedicated service for corporate journeys."
         },
         {
           "title": "Events & Wedding",
-          "desc": "Phasellus ullamcorper hendrerit suscipit. Quisque efficitur dictum tellus, eget malesuada."
+          "desc": "Luxury transport for special occasions, ensuring elegant arrivals and flawless service from start to finish."
         }
       ]
     },
@@ -193,12 +193,15 @@
     "fleet": {
       "title": "Our Fleet",
       "subtitle": "Choose from our selection of premium vehicles",
+      "hospitalityNote": "Premium hospitality experience: We provide essential amenities on all trips, including bottled water and light refreshments, to ensure a comfortable experience for guests.",
       "viewDetails": "View Details",
       "filters": {
         "all": "Show All",
         "sedan": "Sedan",
-        "suv": "Suv",
-        "van": "Van"
+        "suv": "SUV",
+        "van": "Van",
+        "buses": "Buses",
+        "golf": "Golf Vehicles"
       },
       "passengers": "Passengers",
       "luggage": "Luggage"
@@ -2387,5 +2390,8 @@
       "title": "Safety first",
       "description": "Your safety is our priority. Our experienced chauffeurs, well-maintained vehicles, and commitment to reliable service ensure every journey is secure, comfortable, and stress-free."
     }
+  },
+  "cityTaxiTitle": {
+    "taxiAlternative": "Taxi Alternative"
   }
 }
