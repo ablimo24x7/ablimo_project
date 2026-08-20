@@ -10,5 +10,5 @@ export default async function PressReleasesPage({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
 
-  return <PressReleasesClient dict={dict} />;
+  return <PressReleasesClient dict={dict} lang={lang} />;
 }

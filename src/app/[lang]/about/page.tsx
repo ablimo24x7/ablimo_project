@@ -59,7 +59,7 @@ export default async function AboutPage({
             {dict.about.title}
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-            <Link href="/" className="hover:text-white transition-colors">
+            <Link href={`/${lang}`} className="hover:text-white transition-colors">
               {dict.about.breadcrumb.home}
             </Link>
             <span>/</span>

@@ -312,7 +312,7 @@ export default async function CarServicePage({
           {dict.carService.cta.desc}
         </p>
         <Link
-          href="/"
+          href={`/${lang}`}
           className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
         >
           {dict.carService.cta.bookYourRide}

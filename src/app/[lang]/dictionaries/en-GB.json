@@ -6,27 +6,92 @@
   "header": {
     "logo": "AB.Limo",
     "nav": {
-      "ourServices": "Our services",
-      "forBusiness": "For business",
-      "forChauffeurs": "For chauffeurs",
+      "home": "Home",
       "help": "Help",
-      "signIn": "Sign in",
-      "bookNow": "Book now"
+      "bookNow": "Book now",
+      "ourServices": "Our Services",
+      "ourSolution": "Our Solutions",
+      "tourismMobility": "Tourism Mobility Solutions",
+      "corporateMobility": "Corporate Mobility Solutions",
+      "eventsMobility": "Events Mobility Solutions",
+      "mobilityByIndustry": "Mobility by Industry",
+      "technology": "Technology"
     },
     "dropdowns": {
-      "services": {
-        "cityToCity": "City-to-City rides",
-        "chauffeurHailing": "Chauffeur hailing",
-        "airportTransfer": "Airport transfers",
-        "hourlyHire": "Hourly hire",
-        "chauffeurService": "Chauffeur service",
-        "limousineService": "Limousine service"
+      "technology": {
+        "corporateLogin": "Corporate Login",
+        "affiliateLogin": "Affiliate Login",
+        "chauffeurPortal": "Chauffeur Portal",
+        "fleetPortal": "Fleet Portal",
+        "customerPortal": "Customer Portal"
       },
-      "business": {
-        "overview": "Overview",
-        "corporations": "Corporations",
-        "travelAgencies": "Travel agencies",
-        "strategicPartnerships": "Strategic partnerships"
+      "services": {
+        "executiveChauffeur": "Executive Chauffeur Services",
+        "chauffeurHailing": "Chauffeur Hailing Services",
+        "hourlyChauffeur": "Hourly Chauffeur",
+        "airportTransfers": "Airport Transfers",
+        "cityTransfers": "City Transfers",
+        "intercityTransfers": "Intercity Transfers",
+        "limousineServices": "Limousine Services",
+        "busCharter": "Bus Charter",
+        "miniBusCharter": "Mini Bus Charter",
+        "coachCharter": "Coach Charter",
+        "airportCoachTransfers": "Airport Coach Transfers"
+      },
+      "tourism": {
+        "tourismDmc": "Tourism & DMC Mobility Solutions",
+        "hospitality": "Hospitality Mobility Solutions",
+        "roadshows": "Tourism Roadshows Mobility",
+        "pilgrimage": "Pilgrimage Transportation",
+        "tourismTransport": "Tourism Transportation",
+        "mice": "MICE Transportation",
+        "hotelShuttle": "Hotel Shuttle"
+      },
+      "corporate": {
+        "overview": "Corporate Mobility Solutions",
+        "eventMice": "Event & MICE Mobility Solutions",
+        "vipChauffeur": "VIP Chauffeur Services",
+        "cityToCity": "City to City Rides",
+        "corporateShuttle": "Corporate Shuttle Services",
+        "staffTransport": "Staff / Employee Transportation",
+        "schoolTransport": "School Transportation",
+        "universityTransport": "University Transportation",
+        "financialRoadshows": "Financial Roadshows Mobility Solutions"
+      },
+      "events": {
+        "eventTransport": "Event Transportation",
+        "exhibition": "Exhibition Transportation",
+        "conference": "Conference Transportation",
+        "sportsTeam": "Sports Team Transportation",
+        "artists": "Artists Transportation",
+        "crew": "Crew Transportation",
+        "vipDelegation": "VIP Delegation Transportation"
+      },
+      "industry": {
+        "government": "Government & Diplomatic Mobility Solutions",
+        "embassy": "Embassy Transportation Solutions",
+        "aviation": "Aviation Mobility Solutions",
+        "workforce": "Workforce Mobility Solutions",
+        "energy": "Energy & Utilities Mobility Solutions",
+        "construction": "Construction & Project Mobility Solutions",
+        "industrial": "Industrial Mobility Solutions",
+        "sportsEntertainment": "Sports & Entertainment Mobility Solutions",
+        "pilgrimage": "Pilgrimage Mobility Solutions",
+        "healthcare": "Healthcare Mobility Solutions",
+        "education": "Education Mobility Solutions",
+        "retail": "Retail & Commercial Mobility Solutions",
+        "mediaProduction": "Media & Production Mobility Solutions",
+        "marine": "Marine & Port Mobility Solutions",
+        "mining": "Mining & Remote Site Mobility Solutions",
+        "technology": "Technology & Innovation Mobility Solutions",
+        "ngo": "NGO & Humanitarian Mobility Solutions",
+        "realEstate": "Real Estate & Community Mobility Solutions",
+        "luxuryVip": "Luxury & VIP Mobility Solutions",
+        "mediaEntertainment": "Media & Entertainment Industry Mobility Solution",
+        "medical": "Medical Transportation Solutions",
+        "oilGas": "Oil & Gas Staff Mobility Solutions",
+        "miningStaff": "Mining Staff Transportation",
+        "constructionStaff": "Construction Staff Transportation"
       }
     }
   },
@@ -65,55 +130,96 @@
     "bookNow": "Book Now"
   },
   "footer": {
-    "company": {
-      "title": "Company",
-      "howItWorks": "How AB.Limo works",
-      "career": "Career",
-      "press": "Press",
-      "greenInitiatives": "Green initiatives",
-      "becomeChauffeur": "Become a chauffeur partner"
+    "aboutUs": {
+      "title": "About Us",
+      "homepage": "Homepage",
+      "aboutAB": "About AB Transportation",
+      "leadership": "Leadership Team",
+      "awards": "Awards & Recognition",
+      "chauffeurRecruitment": "Chauffeur Recruitment",
+      "corporateCareers": "Corporate Careers",
+      "press": "Press / Newsroom",
+      "sustainability": "Sustainability",
+      "contactUs": "Contact Us"
     },
-    "business": {
-      "title": "AB.Limo for Business",
-      "overview": "Overview",
-      "corporations": "Corporations",
-      "travelAgencies": "Travel agencies",
-      "strategicPartnerships": "Strategic partnerships"
+    "supportLegal": {
+      "title": "Support & Legal",
+      "helpCenter": "Help Center",
+      "contactCallback": "Contact / Callback Request",
+      "liveChat": "Live Chat / AI Assistant",
+      "terms": "Terms and Conditions",
+      "privacy": "Privacy Policy",
+      "cookie": "Cookie Policy / Settings",
+      "modernSlavery": "Modern Slavery Statement",
+      "codeOfConduct": "Code of Conduct"
     },
-    "topCities": {
-      "title": "Top cities",
-      "dubai": "Dubai",
-      "riyadh": "Riyadh",
+    "fleet": {
+      "title": "Fleet",
+      "landing": "Fleet Landing Page",
+      "luxurySedan": "Luxury Sedan (S-Class)",
+      "businessSedan": "Business Sedan",
+      "luxurySuv": "Luxury SUV (Escalade/GMC)",
+      "businessVan": "Business Van (V-Class)",
+      "mpv": "MPV (Hyundai Staria)",
+      "miniBus": "Mini Bus / Coach / VIP Luxury Bus"
+    },
+    "locations": {
+      "title": "Locations",
+      "qatar": "Qatar",
+      "saudiArabia": "Saudi Arabia",
+      "uae": "United Arab Emirates",
+      "kuwait": "Kuwait",
+      "bahrain": "Bahrain",
+      "oman": "Oman",
+      "europeUkUsa": "Europe / UK / USA / Asia / Australia",
+      "allCities": "All Cities",
+      "allCountries": "All Countries"
+    },
+    "globalHubs": {
+      "title": "Global Hubs",
       "doha": "Doha",
-      "abuDhabi": "Abu Dhabi",
       "jeddah": "Jeddah",
-      "allCities": "All cities"
+      "mecca": "Mecca / Makkah",
+      "riyadh": "Riyadh",
+      "tabuk": "Tabuk",
+      "madinah": "Madinah",
+      "alUla": "Al Ula",
+      "dammam": "Dammam",
+      "alKhobar": "Al Khobar",
+      "alQasim": "Al Qasim",
+      "abha": "Abha",
+      "jizan": "Jizan",
+      "neom": "Neom",
+      "abuDhabi": "Abu Dhabi",
+      "dubai": "Dubai",
+      "sharjah": "Sharjah",
+      "ajman": "Ajman",
+      "rasAlKhaymah": "Ras Al Khaymah",
+      "kuwaitCity": "Kuwait City",
+      "manama": "Manama",
+      "muscat": "Muscat"
     },
     "explore": {
       "title": "Explore",
-      "cityToCity": "City-to-city rides",
-      "limousine": "Limousine service",
-      "chauffeur": "Chauffeur service",
-      "privateCar": "Private car service",
-      "groundTransport": "Ground transportation",
-      "airportTransfer": "Airport transfer",
-      "allCountries": "All countries"
+      "asDirected": "As Directed Services",
+      "executiveMobility": "Executive & Corporate Mobility",
+      "airportTransfers": "Airport Transfers",
+      "vipDiplomatic": "VIP, Diplomatic & Government",
+      "corporateFleet": "Corporate Fleet & Workforce Mobility",
+      "eventTransportation": "Event Transportation",
+      "groupCharter": "Group & Coach Charter",
+      "tourism": "Tourism & Leisure",
+      "religiousTourism": "Religious Tourism",
+      "crossBorder": "Cross-Border Mobility",
+      "premiumLifestyle": "Premium Lifestyle & Specialty"
     },
-    "cityToCityRides": {
-      "title": "City-to-City rides",
-      "dubaiAbuDhabi": "Dubai - Abu Dhabi",
-      "riyadhDammam": "Riyadh - Dammam",
-      "dohaAlKhor": "Doha - Al Khor",
-      "jeddahMecca": "Jeddah - Mecca",
-      "manamaAlKhobar": "Manama - Al Khobar"
-    },
-    "bottomLinks": {
-      "terms": "Terms",
-      "privacy": "Privacy policy",
-      "legal": "Legal notice",
-      "accessibility": "Accessibility"
-    },
-    "copyright": "©2026 AB.Limo"
+    "copyright": "©2026 AB.Limo",
+    "imprint": "Imprint",
+    "accessibility": "Accessibility",
+    "appStoreAlt": "Download on the App Store",
+    "googlePlayAlt": "Get it on Google Play",
+    "showMore": "more..",
+    "showLess": "less"
   },
   "home": {
     "slides": [
