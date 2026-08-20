@@ -139,34 +139,32 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
       {/* Hamburger button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-white cursor-pointer p-1"
+        className="text-gray-300 hover:text-white focus:outline-none cursor-pointer"
       >
         {isOpen ? (
           <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+          <i className="fa-solid fa-bars text-2xl"></i>
         )}
       </button>
 
       {/* Mobile menu overlay */}
       {isOpen && (
-        <div className="fixed inset-0 top-0 left-0 w-full h-full bg-[#292a30] z-50 overflow-y-auto">
+        <div className="fixed inset-0 top-0 left-0 w-full h-full bg-abBlack z-50 overflow-y-auto">
           {/* Close button */}
-          <div className="flex justify-between items-center px-6 py-5">
+          <div className="flex justify-between items-center px-6 py-5 border-b border-gray-800">
             <Link
               href={`/${lang}`}
-              className="text-2xl font-light tracking-wide text-gray-200"
+              className="text-white text-2xl font-bold tracking-widest uppercase"
               onClick={() => setIsOpen(false)}
             >
               {dict.header.logo}
             </Link>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-white cursor-pointer p-1"
+              className="text-gray-300 hover:text-white cursor-pointer p-1"
             >
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -180,16 +178,16 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
             <Link
               href={`/${lang}`}
               onClick={() => setIsOpen(false)}
-              className="text-white text-lg font-semibold py-3 border-b border-gray-700"
+              className="text-gray-300 hover:text-abGold text-lg font-medium py-3 border-b border-gray-800 transition-colors"
             >
               {nav.home}
             </Link>
 
             {/* Our Solution - nested accordion */}
-            <div className="border-b border-gray-700">
+            <div className="border-b border-gray-800">
               <button
                 onClick={() => toggleDropdown("solutions")}
-                className="flex items-center justify-between w-full text-left text-white text-lg font-semibold py-3 cursor-pointer"
+                className="flex items-center justify-between w-full text-left text-gray-300 hover:text-abGold text-lg font-medium py-3 cursor-pointer transition-colors"
               >
                 {nav.ourSolution}
                 <svg
@@ -207,7 +205,7 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
                     <div key={section.id}>
                       <button
                         onClick={() => toggleDropdown(`solution-${section.id}`)}
-                        className="flex items-center justify-between w-full text-left text-gray-200 text-base font-semibold py-2.5 cursor-pointer"
+                        className="flex items-center justify-between w-full text-left text-gray-400 hover:text-abGold text-base font-medium py-2.5 cursor-pointer transition-colors"
                       >
                         {section.label}
                         <svg
@@ -226,7 +224,7 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
                               key={item.label}
                               href={item.href}
                               onClick={() => setIsOpen(false)}
-                              className="block py-2 text-gray-400 hover:text-white transition-colors text-sm"
+                              className="block py-2 text-gray-500 hover:text-abGold transition-colors text-sm"
                             >
                               {item.label}
                             </Link>
@@ -241,10 +239,10 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
 
             {/* Dropdown sections */}
             {dropdownSections.map((section) => (
-              <div key={section.id}>
+              <div key={section.id} className="border-b border-gray-800">
                 <button
                   onClick={() => toggleDropdown(section.id)}
-                  className="flex items-center justify-between w-full text-left text-white text-lg font-semibold py-3 border-b border-gray-700 cursor-pointer"
+                  className="flex items-center justify-between w-full text-left text-gray-300 hover:text-abGold text-lg font-medium py-3 cursor-pointer transition-colors"
                 >
                   {section.label}
                   <svg
@@ -263,7 +261,7 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
                         key={item.label}
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block py-2.5 text-gray-300 hover:text-white transition-colors"
+                        className="block py-2.5 text-gray-500 hover:text-abGold transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -277,21 +275,18 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
             <Link
               href={`/${lang}/about`}
               onClick={() => setIsOpen(false)}
-              className="text-white text-lg font-semibold py-3 border-b border-gray-700"
+              className="text-gray-300 hover:text-abGold text-lg font-medium py-3 border-b border-gray-800 transition-colors"
             >
               {nav.help}
             </Link>
 
             {/* Technology link */}
-            <div className="border-b border-gray-700">
+            <div className="border-b border-gray-800">
               <button
                 onClick={() => toggleDropdown("technology")}
-                className="flex items-center justify-between w-full text-left text-white text-lg font-semibold py-3 cursor-pointer"
+                className="flex items-center justify-between w-full text-left text-gray-300 hover:text-abGold text-lg font-medium py-3 cursor-pointer transition-colors"
               >
                 <span className="flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                  </svg>
                   {nav.technology}
                 </span>
                 <svg
@@ -310,7 +305,7 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
                       key={item.label}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="block py-2.5 text-gray-300 hover:text-white transition-colors"
+                      className="block py-2.5 text-gray-500 hover:text-abGold transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -319,14 +314,23 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
               )}
             </div>
 
-            {/* Book now */}
-            <Link
-              href={`/${lang}`}
-              onClick={() => setIsOpen(false)}
-              className="mt-4 text-center text-[#292a30] bg-white hover:bg-gray-100 px-5 py-3 rounded-full text-lg font-semibold transition-all"
-            >
-              {nav.bookNow}
-            </Link>
+            {/* Action buttons */}
+            <div className="mt-6 space-y-3">
+              <Link
+                href={`/${lang}/partners`}
+                onClick={() => setIsOpen(false)}
+                className="block text-center text-gray-300 hover:text-abGold text-sm font-medium py-3 border border-gray-700 rounded transition-colors"
+              >
+                Chauffeur Partner Portal
+              </Link>
+              <Link
+                href={`/${lang}`}
+                onClick={() => setIsOpen(false)}
+                className="block text-center bg-transparent border border-abGold text-abGold hover:bg-abGold hover:text-white px-5 py-3 rounded text-sm font-semibold transition-colors"
+              >
+                {nav.bookNow}
+              </Link>
+            </div>
           </nav>
         </div>
       )}

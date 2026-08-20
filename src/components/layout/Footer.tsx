@@ -174,13 +174,13 @@ export default async function Footer({ lang }: FooterProps) {
   ];
 
   return (
-    <footer className="bg-[#16171b] pt-20 pb-10 border-t border-gray-700/50 text-white">
-      <div className="max-w-[1400px] mx-auto px-8">
+    <footer className="bg-abBlack text-white pt-20 pb-8 border-t-[4px] border-abGold">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Row: Logo and Apps */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
           <Link
             href={`/${lang}`}
-            className="text-3xl font-light tracking-wide text-gray-200"
+            className="text-3xl font-bold tracking-widest uppercase"
           >
             {dict.header.logo}
           </Link>
@@ -210,7 +210,7 @@ export default async function Footer({ lang }: FooterProps) {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
           {footerColumns.map((section) => (
             <div key={section.title}>
-              <h4 className="font-semibold mb-6 text-gray-100">
+              <h4 className="text-sm font-bold text-gray-200 uppercase tracking-wider mb-6">
                 {section.title}
               </h4>
               <ExpandableFooterLinks
@@ -223,9 +223,9 @@ export default async function Footer({ lang }: FooterProps) {
         </div>
 
         {/* Bottom Row: Copyright, Links, Socials */}
-        <div className="flex flex-col lg:flex-row justify-between items-center pt-8 border-t border-gray-800 gap-6">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm text-gray-400">
-            <span className="font-semibold text-gray-200">
+        <div className="border-t border-gray-900 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm text-gray-600">
+            <span className="font-semibold text-gray-400">
               {dict.footer.copyright}
             </span>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
@@ -233,7 +233,7 @@ export default async function Footer({ lang }: FooterProps) {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gray-300 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -242,12 +242,12 @@ export default async function Footer({ lang }: FooterProps) {
           </div>
 
           {/* Social Icons */}
-          <div className="flex gap-5 text-gray-400">
+          <div className="flex gap-4 text-gray-400">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
-                className="hover:text-white transition-colors"
+                className="h-10 w-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-abGold hover:text-white transition-colors"
                 aria-label={social.label}
               >
                 {social.icon}

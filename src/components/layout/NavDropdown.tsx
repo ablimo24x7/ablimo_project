@@ -114,60 +114,49 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
         onClick={onToggle}
         onMouseEnter={handleButtonMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={`flex items-center gap-1 text-xs md:text-sm font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors cursor-pointer px-3 py-2 rounded-lg hover:bg-white/10 ${triggerClassName ?? ""}`}
+        className={`flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-abGold transition-colors cursor-pointer ${triggerClassName ?? ""}`}
       >
         {children}
         {label}
-        <svg
-          className={`w-3 h-3 transition-transform ${isOpen ? "rotate-180" : ""}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+        <i className="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
       </button>
 
       {isOpen && (
         <div
-          className={`absolute top-full mt-1 bg-[#2a2c35] border border-gray-600/50 rounded-xl shadow-xl z-50 ${
-            alignRight ? "right-0" : "left-0"
-          } ${
+          className={`absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-2xl rounded-b-xl border-t-[3px] border-abGold z-50 ${
             groups
-              ? `flex min-w-[240px]`
+              ? `flex min-w-[280px]`
               : columns > 1
               ? `grid grid-cols-2 min-w-[440px]`
-              : `min-w-[220px] max-h-[480px] overflow-y-auto`
+              : `min-w-[240px] max-h-[480px] overflow-y-auto`
           }`}
           onMouseEnter={handlePanelMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
           {groups ? (
             <>
-              <div className="min-w-[240px] py-1 relative">
+              <div className="min-w-[240px] py-1 relative border-r border-gray-100">
                 {groups.map((group) => (
                   <div
                     key={group.title}
                     onMouseEnter={() => handleGroupMouseEnter(group)}
                     onMouseLeave={handleGroupMouseLeave}
-                    className={`px-5 py-2.5 text-sm cursor-pointer transition-colors ${
+                    className={`px-5 py-3 text-sm cursor-pointer transition-colors ${
                       hoveredGroup?.title === group.title
-                        ? "bg-white/10 text-white"
-                        : "text-gray-300 hover:bg-white/10 hover:text-white"
+                        ? "bg-gray-50 text-abGold"
+                        : "text-gray-900 hover:bg-gray-50 hover:text-abGold"
                     }`}
                   >
-                    <div className="flex items-center justify-between">
-                      <svg className="w-3 h-3 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                      </svg>
+                    <div className="flex items-center justify-between font-semibold">
                       {group.title}
+                      <i className="fa-solid fa-chevron-right text-[10px] text-gray-400"></i>
                     </div>
                   </div>
                 ))}
 
                 {hoveredGroup && (
                   <div
-                    className="absolute top-0 right-full min-w-[280px] bg-[#2a2c35] border border-gray-600/50 rounded-l-xl shadow-xl py-1 max-h-[600px] overflow-y-auto z-50"
+                    className="absolute top-0 left-full min-w-[280px] bg-white border-l border-gray-100 shadow-xl py-1 max-h-[600px] overflow-y-auto z-50"
                     onMouseEnter={handleSubPanelMouseEnter}
                     onMouseLeave={handleSubPanelMouseLeave}
                   >
@@ -176,7 +165,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
                         key={item.href + item.label}
                         href={item.href}
                         onClick={onClose}
-                        className="block px-5 py-2.5 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
+                        className="block px-5 py-3 text-sm font-semibold text-gray-900 hover:text-abGold hover:bg-gray-50 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -191,7 +180,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
                 key={item.href + item.label}
                 href={item.href}
                 onClick={onClose}
-                className="block px-5 py-3 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
+                className="block px-5 py-3 text-sm font-semibold text-gray-900 hover:text-abGold hover:bg-gray-50 transition-colors"
               >
                 {item.label}
               </Link>

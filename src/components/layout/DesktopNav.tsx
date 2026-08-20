@@ -105,90 +105,51 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
   ];
 
   return (
-    <>
-      {/* Section 1: Top Bar */}
-      <div className="flex items-center justify-between px-8 md:px-12 py-3">
-        <Link
-          href={`/${lang}`}
-          className="text-2xl font-light tracking-wide text-gray-200"
-        >
-          {dict.header.logo}
-        </Link>
+    <nav className="hidden lg:flex space-x-6 items-center">
+      <NavDropdown
+        id="services"
+        label={nav.ourServices}
+        items={serviceLinks}
+        isOpen={openDropdown === "services"}
+        onToggle={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
+        onClose={() => setOpenDropdown(null)}
+      />
 
-        <div className="flex items-center gap-1">
-          <Link
-            href={`/${lang}/about`}
-            className="text-xs md:text-sm font-semibold tracking-[0.1em] text-gray-200 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
-          >
-            {nav.help}
-          </Link>
+      <NavDropdown
+        id="solutions"
+        label={nav.ourSolution}
+        groups={ourSolutionGroups}
+        isOpen={openDropdown === "solutions"}
+        onToggle={() => setOpenDropdown(openDropdown === "solutions" ? null : "solutions")}
+        onClose={() => setOpenDropdown(null)}
+      />
 
-          <LanguageSwitcher
-            currentLang={lang}
-            isOpen={openDropdown === "lang"}
-            onToggle={() => setOpenDropdown(openDropdown === "lang" ? null : "lang")}
-            onClose={() => setOpenDropdown(null)}
-          />
+      <NavDropdown
+        id="industry"
+        label={nav.mobilityByIndustry}
+        items={industryLinks}
+        isOpen={openDropdown === "industry"}
+        onToggle={() => setOpenDropdown(openDropdown === "industry" ? null : "industry")}
+        onClose={() => setOpenDropdown(null)}
+      />
 
-          <NavDropdown
-            id="technology"
-            label={nav.technology}
-            items={technologyLinks}
-            isOpen={openDropdown === "technology"}
-            onToggle={() => setOpenDropdown(openDropdown === "technology" ? null : "technology")}
-            onClose={() => setOpenDropdown(null)}
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-            </svg>
-          </NavDropdown>
+      <NavDropdown
+        id="technology"
+        label={nav.technology}
+        items={technologyLinks}
+        isOpen={openDropdown === "technology"}
+        onToggle={() => setOpenDropdown(openDropdown === "technology" ? null : "technology")}
+        onClose={() => setOpenDropdown(null)}
+      />
 
-          <Link
-            href={`/${lang}`}
-            className="text-xs font-semibold tracking-[0.1em] text-[#292a30] bg-white hover:bg-gray-100 px-5 py-2 rounded-full transition-all ml-2"
-          >
-            {nav.bookNow}
-          </Link>
-        </div>
-      </div>
+      <div className="w-px h-5 bg-gray-700 mx-1" />
 
-      {/* Section 2: Main Navigation */}
-      <nav className="flex items-center justify-end gap-0.5 px-8 md:px-12 py-2">
-        <Link
-          href={`/${lang}`}
-          className="text-xs md:text-sm font-semibold tracking-[0.1em] text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
-        >
-          {nav.home}
-        </Link>
-
-        <NavDropdown
-          id="services"
-          label={nav.ourServices}
-          items={serviceLinks}
-          isOpen={openDropdown === "services"}
-          onToggle={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
-          onClose={() => setOpenDropdown(null)}
-        />
-
-        <NavDropdown
-          id="solutions"
-          label={nav.ourSolution}
-          groups={ourSolutionGroups}
-          isOpen={openDropdown === "solutions"}
-          onToggle={() => setOpenDropdown(openDropdown === "solutions" ? null : "solutions")}
-          onClose={() => setOpenDropdown(null)}
-        />
-
-        <NavDropdown
-          id="industry"
-          label={nav.mobilityByIndustry}
-          items={industryLinks}
-          isOpen={openDropdown === "industry"}
-          onToggle={() => setOpenDropdown(openDropdown === "industry" ? null : "industry")}
-          onClose={() => setOpenDropdown(null)}
-          alignRight
-        />
-      </nav>
-    </>
+      <LanguageSwitcher
+        currentLang={lang}
+        isOpen={openDropdown === "lang"}
+        onToggle={() => setOpenDropdown(openDropdown === "lang" ? null : "lang")}
+        onClose={() => setOpenDropdown(null)}
+      />
+    </nav>
   );
 }
