@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import ExpandableFooterLinks from "./ExpandableFooterLinks";
 
 interface FooterProps {
   lang: Locale;
@@ -10,96 +11,103 @@ export default async function Footer({ lang }: FooterProps) {
   const dict = await getDictionary(lang);
   const d = dict.footer;
 
-  const footerLinks = {
-    company: {
-      title: d.company.title,
+  const footerColumns = [
+    {
+      title: d.aboutUs.title,
       links: [
-        { label: d.company.howItWorks, href: `/${lang}/about` },
-        { label: d.company.career, href: `/${lang}/career` },
-        { label: d.company.press, href: `/${lang}/press/releases` },
-        { label: d.company.greenInitiatives, href: `/${lang}/sustainability` },
-        { label: d.company.becomeChauffeur, href: `/${lang}/partners` },
+        { label: d.aboutUs.homepage, href: `/${lang}` },
+        { label: d.aboutUs.aboutAB, href: `/${lang}/about` },
+        { label: d.aboutUs.leadership, href: `/${lang}/leadership-team` },
+        { label: d.aboutUs.awards, href: `/${lang}/awards` },
+        { label: d.aboutUs.chauffeurRecruitment, href: `/${lang}/partners` },
+        { label: d.aboutUs.corporateCareers, href: `/${lang}/career` },
+        { label: d.aboutUs.press, href: `/${lang}/press/releases` },
+        { label: d.aboutUs.sustainability, href: `/${lang}/sustainability` },
+        { label: d.aboutUs.contactUs, href: `/${lang}/contact` },
       ],
     },
-    business: {
-      title: d.business.title,
+    {
+      title: d.supportLegal.title,
       links: [
-        { label: d.business.overview, href: `/${lang}/business` },
-        { label: d.business.corporations, href: `/${lang}/corporations` },
-        { label: d.business.travelAgencies, href: `/${lang}/travel-agencies` },
-        {
-          label: d.business.strategicPartnerships,
-          href: `/${lang}/strategic-partnerships`,
-        },
+        { label: d.supportLegal.helpCenter, href: `/${lang}/help-center` },
+        { label: d.supportLegal.contactCallback, href: `/${lang}/contact` },
+        { label: d.supportLegal.liveChat, href: `/${lang}/live-chat` },
+        { label: d.supportLegal.terms, href: `/${lang}/terms` },
+        { label: d.supportLegal.privacy, href: `/${lang}/privacy-policy` },
+        { label: d.supportLegal.cookie, href: `/${lang}/cookie-policy` },
+        { label: d.supportLegal.modernSlavery, href: `/${lang}/modern-slavery` },
+        { label: d.supportLegal.codeOfConduct, href: `/${lang}/code-of-conduct` },
       ],
     },
-    cities: {
-      title: d.topCities.title,
+    {
+      title: d.fleet.title,
       links: [
-        {
-          label: d.topCities.dubai,
-          href: `/${lang}/countries/ae/dubai/airport-transfer`,
-        },
-        {
-          label: d.topCities.riyadh,
-          href: `/${lang}/countries/sa/riyadh/airport-transfer`,
-        },
-        {
-          label: d.topCities.doha,
-          href: `/${lang}/countries/qa/doha/airport-transfer`,
-        },
-        {
-          label: d.topCities.abuDhabi,
-          href: `/${lang}/countries/ae/abu-dhabi/airport-transfer`,
-        },
-        {
-          label: d.topCities.jeddah,
-          href: `/${lang}/countries/sa/jeddah/airport-transfer`,
-        },
-        { label: d.topCities.allCities, href: `/${lang}/cities` },
+        { label: d.fleet.landing, href: `/${lang}/fleet` },
+        { label: d.fleet.luxurySedan, href: `/${lang}/fleet/luxury-sedan` },
+        { label: d.fleet.businessSedan, href: `/${lang}/fleet/business-sedan` },
+        { label: d.fleet.luxurySuv, href: `/${lang}/fleet/luxury-suv` },
+        { label: d.fleet.businessVan, href: `/${lang}/fleet/business-van` },
+        { label: d.fleet.mpv, href: `/${lang}/fleet/mpv` },
+        { label: d.fleet.miniBus, href: `/${lang}/fleet/mini-bus` },
       ],
     },
-    explore: {
+    {
+      title: d.locations.title,
+      links: [
+        { label: d.locations.qatar, href: `/${lang}/countries/qa` },
+        { label: d.locations.saudiArabia, href: `/${lang}/countries/sa` },
+        { label: d.locations.uae, href: `/${lang}/countries/ae` },
+        { label: d.locations.kuwait, href: `/${lang}/countries/kw` },
+        { label: d.locations.bahrain, href: `/${lang}/countries/bh` },
+        { label: d.locations.oman, href: `/${lang}/countries/om` },
+        { label: d.locations.europeUkUsa, href: `/${lang}/countries` },
+        { label: d.locations.allCities, href: `/${lang}/cities` },
+        { label: d.locations.allCountries, href: `/${lang}/countries` },
+      ],
+    },
+    {
+      title: d.globalHubs.title,
+      links: [
+        { label: d.globalHubs.doha, href: `/${lang}/countries/qa/doha` },
+        { label: d.globalHubs.jeddah, href: `/${lang}/countries/sa/jeddah` },
+        { label: d.globalHubs.mecca, href: `/${lang}/countries/sa/mecca` },
+        { label: d.globalHubs.riyadh, href: `/${lang}/countries/sa/riyadh` },
+        { label: d.globalHubs.tabuk, href: `/${lang}/countries/sa/tabuk` },
+        { label: d.globalHubs.madinah, href: `/${lang}/countries/sa/madinah` },
+        { label: d.globalHubs.alUla, href: `/${lang}/countries/sa/al-ula` },
+        { label: d.globalHubs.dammam, href: `/${lang}/countries/sa/dammam` },
+        { label: d.globalHubs.alKhobar, href: `/${lang}/countries/sa/al-khobar` },
+        { label: d.globalHubs.alQasim, href: `/${lang}/countries/sa/al-qasim` },
+        { label: d.globalHubs.abha, href: `/${lang}/countries/sa/abha` },
+        { label: d.globalHubs.jizan, href: `/${lang}/countries/sa/jizan` },
+        { label: d.globalHubs.neom, href: `/${lang}/countries/sa/neom` },
+        { label: d.globalHubs.abuDhabi, href: `/${lang}/countries/ae/abu-dhabi` },
+        { label: d.globalHubs.dubai, href: `/${lang}/countries/ae/dubai` },
+        { label: d.globalHubs.sharjah, href: `/${lang}/countries/ae/sharjah` },
+        { label: d.globalHubs.ajman, href: `/${lang}/countries/ae/ajman` },
+        { label: d.globalHubs.rasAlKhaymah, href: `/${lang}/countries/ae/ras-al-khaymah` },
+        { label: d.globalHubs.kuwaitCity, href: `/${lang}/countries/kw/kuwait-city` },
+        { label: d.globalHubs.manama, href: `/${lang}/countries/bh/manama` },
+        { label: d.globalHubs.muscat, href: `/${lang}/countries/om/muscat` },
+      ],
+    },
+    {
       title: d.explore.title,
       links: [
-        { label: d.explore.cityToCity, href: `/${lang}/city-to-city` },
-        { label: d.explore.limousine, href: `/${lang}/limousine-service` },
-        { label: d.explore.chauffeur, href: `/${lang}/chauffeur-service` },
-        { label: d.explore.privateCar, href: `/${lang}/car-service` },
-        {
-          label: d.explore.groundTransport,
-          href: `/${lang}/ground-transportation`,
-        },
-        { label: d.explore.airportTransfer, href: `/${lang}/airport-transfer` },
-        { label: d.explore.allCountries, href: `/${lang}/countries` },
+        { label: d.explore.asDirected, href: `/${lang}/as-directed` },
+        { label: d.explore.executiveMobility, href: `/${lang}/executive-mobility` },
+        { label: d.explore.airportTransfers, href: `/${lang}/airport-transfer` },
+        { label: d.explore.vipDiplomatic, href: `/${lang}/vip-diplomatic` },
+        { label: d.explore.corporateFleet, href: `/${lang}/corporate-fleet` },
+        { label: d.explore.eventTransportation, href: `/${lang}/event-transportation` },
+        { label: d.explore.groupCharter, href: `/${lang}/group-charter` },
+        { label: d.explore.tourism, href: `/${lang}/tourism` },
+        { label: d.explore.religiousTourism, href: `/${lang}/religious-tourism` },
+        { label: d.explore.crossBorder, href: `/${lang}/cross-border` },
+        { label: d.explore.premiumLifestyle, href: `/${lang}/premium-lifestyle` },
       ],
     },
-    cityToCity: {
-      title: d.cityToCityRides.title,
-      links: [
-        {
-          label: d.cityToCityRides.dubaiAbuDhabi,
-          href: `/${lang}/city-to-city/abu-dhabi-dubai`,
-        },
-        {
-          label: d.cityToCityRides.riyadhDammam,
-          href: `/${lang}/city-to-city/riyadh-dammam`,
-        },
-        {
-          label: d.cityToCityRides.dohaAlKhor,
-          href: `/${lang}/city-to-city/doha-al-khor`,
-        },
-        {
-          label: d.cityToCityRides.jeddahMecca,
-          href: `/${lang}/city-to-city/jeddah-mecca`,
-        },
-        {
-          label: d.cityToCityRides.manamaAlKhobar,
-          href: `/${lang}/city-to-city/manama-al-khobar`,
-        },
-      ],
-    },
-  };
+  ];
 
   const socialLinks = [
     {
@@ -159,20 +167,20 @@ export default async function Footer({ lang }: FooterProps) {
   ];
 
   const bottomLinks = [
-    { label: d.bottomLinks.terms, href: `/${lang}/terms` },
-    { label: d.bottomLinks.privacy, href: `/${lang}/privacy-policy` },
-    { label: d.bottomLinks.legal, href: `/${lang}/imprint` },
-    { label: d.bottomLinks.accessibility, href: `/${lang}/accessibility` },
+    { label: d.supportLegal.terms, href: `/${lang}/terms` },
+    { label: d.supportLegal.privacy, href: `/${lang}/privacy-policy` },
+    { label: d.imprint, href: `/${lang}/imprint` },
+    { label: d.accessibility, href: `/${lang}/accessibility` },
   ];
 
   return (
-    <footer className="bg-[#16171b] pt-20 pb-10 border-t border-gray-700/50 text-white">
-      <div className="max-w-7xl mx-auto px-8">
+    <footer className="bg-abBlack text-white pt-20 pb-8 border-t-[4px] border-abGold">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Row: Logo and Apps */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
           <Link
             href={`/${lang}`}
-            className="text-3xl font-light tracking-wide text-gray-200"
+            className="text-3xl font-bold tracking-widest uppercase"
           >
             {dict.header.logo}
           </Link>
@@ -180,7 +188,7 @@ export default async function Footer({ lang }: FooterProps) {
             <a href="#" className="hover:opacity-80 transition-opacity">
               <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                alt="Download on the App Store"
+                alt={d.appStoreAlt}
                 width={120}
                 height={40}
                 className="h-10 w-auto"
@@ -189,7 +197,7 @@ export default async function Footer({ lang }: FooterProps) {
             <a href="#" className="hover:opacity-80 transition-opacity">
               <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Get it on Google Play"
+                alt={d.googlePlayAlt}
                 width={135}
                 height={40}
                 className="h-10 w-auto"
@@ -199,40 +207,33 @@ export default async function Footer({ lang }: FooterProps) {
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
-          {Object.values(footerLinks).map((section) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+          {footerColumns.map((section) => (
             <div key={section.title}>
-              <h4 className="font-semibold mb-6 text-gray-100">
+              <h4 className="text-sm font-bold text-gray-200 uppercase tracking-wider mb-6">
                 {section.title}
               </h4>
-              <ul className="space-y-4 text-sm text-gray-400">
-                {section.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <ExpandableFooterLinks
+                links={section.links}
+                showMoreText={d.showMore}
+                showLessText={d.showLess}
+              />
             </div>
           ))}
         </div>
 
         {/* Bottom Row: Copyright, Links, Socials */}
-        <div className="flex flex-col lg:flex-row justify-between items-center pt-8 border-t border-gray-800 gap-6">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm text-gray-400">
-            <span className="font-semibold text-gray-200">
-              {d.copyright}
+        <div className="border-t border-gray-900 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm text-gray-600">
+            <span className="font-semibold text-gray-400">
+              {dict.footer.copyright}
             </span>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               {bottomLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gray-300 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -241,12 +242,12 @@ export default async function Footer({ lang }: FooterProps) {
           </div>
 
           {/* Social Icons */}
-          <div className="flex gap-5 text-gray-400">
+          <div className="flex gap-4 text-gray-400">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
-                className="hover:text-white transition-colors"
+                className="h-10 w-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-abGold hover:text-white transition-colors"
                 aria-label={social.label}
               >
                 {social.icon}

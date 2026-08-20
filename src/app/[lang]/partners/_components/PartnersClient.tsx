@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
-export default function PartnersClient({ dict }: { dict: Dictionary }) {
+export default function PartnersClient({ dict, lang }: { dict: Dictionary; lang: string }) {
   const [activeTab, setActiveTab] = useState(dict.partners.tabs.onboarding);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -70,7 +70,7 @@ export default function PartnersClient({ dict }: { dict: Dictionary }) {
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/70 via-[#292a30]/50 to-[#292a30]" />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300 mb-4">
-            <Link href="/" className="hover:text-white transition-colors">
+            <Link href={`/${lang}`} className="hover:text-white transition-colors">
               {dict.partners.breadcrumb.home}
             </Link>
             <span>/</span>

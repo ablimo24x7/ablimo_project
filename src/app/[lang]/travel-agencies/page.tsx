@@ -58,7 +58,7 @@ export default async function TravelAgenciesPage({
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/80 via-[#292a30]/60 to-[#292a30]" />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <p className="text-gray-400 text-sm tracking-widest uppercase mb-4">
-            <Link href="/" className="hover:text-white transition-colors">
+            <Link href={`/${lang}`} className="hover:text-white transition-colors">
               {t.breadcrumb.home}
             </Link>{" "}
             &gt; {t.breadcrumb.travelAgencies}

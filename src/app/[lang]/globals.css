@@ -1,17 +1,45 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #292a30;
-  --color-foreground: #ffffff;
-  --font-montserrat: var(--font-montserrat);
+  --color-abBlack: #0a0a0a;
+  --color-abGold: #c5a059;
+  --color-abGray: #f4f4f5;
+  --color-abDarkGray: #18181b;
+  --font-inter: var(--font-inter);
 }
 
 body {
-  background-color: #292a30;
-  color: #ffffff;
-  font-family: var(--font-montserrat), sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 4px;
+}
+
+/* Mega menu styles */
+.mega-menu:hover .mega-menu-content {
+  display: grid;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) translateY(0);
+}
+.mega-menu-content {
+  transition: all 0.2s ease-in-out;
+  transform: translateX(-12px) translateY(6px);
+}
+
+/* Hero background */
+.hero-bg {
+  background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.95)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80') center/cover no-repeat;
 }
 
 /* Car Slider Animation */
@@ -142,5 +170,3 @@ select:focus {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
-

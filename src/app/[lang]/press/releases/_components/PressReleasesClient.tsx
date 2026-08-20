@@ -7,7 +7,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const years = ["2026", "2025", "2024", "2023"];
 
-export default function PressReleasesClient({ dict }: { dict: Dictionary }) {
+export default function PressReleasesClient({ dict, lang }: { dict: Dictionary; lang: string }) {
   const [visibleCount, setVisibleCount] = useState(3);
   const [selectedYear, setSelectedYear] = useState("2026");
 
@@ -39,7 +39,7 @@ export default function PressReleasesClient({ dict }: { dict: Dictionary }) {
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/80 via-[#292a30]/60 to-[#292a30]" />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300 mb-4">
-            <Link href="/" className="hover:text-white transition-colors">
+            <Link href={`/${lang}`} className="hover:text-white transition-colors">
               {dict.press.breadcrumb.home}
             </Link>
             <span>/</span>
