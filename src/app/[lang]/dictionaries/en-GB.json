@@ -139,15 +139,15 @@
       "items": [
         {
           "title": "Airport Transfers",
-          "desc": "Pellentesque semper dui eget fermentum sagittis. Curabitur bibendum id ante."
+          "desc": "Seamless airport pickups and drop-offs with professional chauffeurs, flight monitoring, and luggage assistance."
         },
         {
           "title": "Business Transfers",
-          "desc": "Sed nisi magna, rhoncus nec imperdiet non, pretium vitae odio donec scelerisque gravida."
+          "desc": "Executive travel solutions with punctual, comfortable vehicles and dedicated service for corporate journeys."
         },
         {
           "title": "Events & Wedding",
-          "desc": "Phasellus ullamcorper hendrerit suscipit. Quisque efficitur dictum tellus, eget malesuada."
+          "desc": "Luxury transport for special occasions, ensuring elegant arrivals and flawless service from start to finish."
         }
       ]
     },
@@ -193,12 +193,15 @@
     "fleet": {
       "title": "Our Fleet",
       "subtitle": "Choose from our selection of premium vehicles",
+      "hospitalityNote": "Premium hospitality experience: We provide essential amenities on all trips, including bottled water and light refreshments, to ensure a comfortable experience for guests.",
       "viewDetails": "View Details",
       "filters": {
         "all": "Show All",
         "sedan": "Sedan",
-        "suv": "Suv",
-        "van": "Van"
+        "suv": "SUV",
+        "van": "Van",
+        "buses": "Buses",
+        "golf": "Golf Vehicles"
       },
       "passengers": "Passengers",
       "luggage": "Luggage"
@@ -210,29 +213,29 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "heading1": "Answer to all the Frequently",
-      "heading2": "Asked Questions",
+      "heading1": "Answers to the questions",
+      "heading2": "you ask most often",
       "askMore": "ASK MORE QUESTIONS",
       "items": [
         {
-          "q": "What documents do I need to hire a chauffeur?",
-          "a": "To hire a chauffeur with AB.Limo, you'll need a valid government-issued photo ID (passport or national ID), a valid driving license, and proof of address. Additional documents may be required depending on your location."
+          "q": "What documents do I need to book a chauffeur service?",
+          "a": "To book a chauffeur service with AB.Limo, we typically require a valid government-issued photo ID and your booking details. Additional information may be requested for airport transfers or special arrangements."
         },
         {
-          "q": "What is the minimum age to book a car?",
-          "a": "The minimum age to book a car with AB.Limo is 18 years old. However, some vehicle categories may have higher age requirements."
+          "q": "Is there a minimum age requirement for passengers?",
+          "a": "There is no minimum age requirement for passengers travelling with our chauffeur service. For bookings involving minors, additional arrangements may be needed in advance."
         },
         {
-          "q": "Do I need a credit card to book a car?",
-          "a": "Yes, we require a valid credit card to secure your booking. We accept all major credit cards including Visa, Mastercard, and American Express."
+          "q": "Do I need to pay in advance for my booking?",
+          "a": "Depending on the journey type and location, a booking confirmation, card authorisation, or advance payment may be required to secure your reservation."
         },
         {
-          "q": "Is fuel included in the booking price?",
-          "a": "Yes, fuel is included in all our booking prices. You won't need to worry about refueling during your trip."
+          "q": "Are airport pickups included in the service?",
+          "a": "Yes, our airport transfer service includes flight monitoring, punctual meet-and-greet support, and assistance with luggage whenever required."
         },
         {
           "q": "Can I change or cancel my reservation?",
-          "a": "Yes, you can change or cancel your reservation up to 24 hours before your scheduled pickup time at no extra charge."
+          "a": "Yes, changes and cancellations are possible subject to our booking terms and the timing of your request. We recommend notifying us as early as possible."
         }
       ]
     }
@@ -2049,7 +2052,7 @@
   },
   "language": {
     "en-US": "English (US)",
-    "en-UK": "English (UK)",
+    "en-GB": "English (UK)",
     "ar": "العربية"
   },
   "cityContent": {

@@ -7,7 +7,7 @@ import { locales, type Locale } from "@/app/[lang]/dictionaries";
 
 const languageLabels: Record<Locale, { flag: string; label: string }> = {
   "en-US": { flag: "🇺🇸", label: "English (US)" },
-  "en-UK": { flag: "🇬🇧", label: "English (UK)" },
+  "en-GB": { flag: "🇬🇧", label: "English (UK)" },
   ar: { flag: "🇸🇦", label: "العربية" },
 };
 

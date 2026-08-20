@@ -7,7 +7,7 @@ export default async function CityPage({
     params: Promise<{ lang: string; country: string; city: string }>;
 }) {
     const { lang, country, city } = await params;
-    const dict = await getDictionary(lang as "en-US" | "en-UK" | "ar");
+    const dict = await getDictionary(lang as "en-US" | "en-GB" | "ar");
 
     return <CityDetailClient dict={dict} lang={lang} countrySlug={country} citySlug={city} />;
 }
