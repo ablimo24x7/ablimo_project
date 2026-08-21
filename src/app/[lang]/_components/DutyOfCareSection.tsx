@@ -13,19 +13,19 @@ export default function DutyOfCareSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Tech Card 1 */}
-          <div className="bg-abDarkGray/50 border border-gray-800 p-8 rounded-xl backdrop-blur-sm hover:border-abGold transition-colors duration-300">
+          <div className="bg-abDarkGray/50 border border-gray-800 p-8 rounded-xl backdrop-blur-sm hover:border-abGold transition-colors duration-300 text-center md:text-left">
             <i className="fa-solid fa-satellite-dish text-2xl text-abGold mb-6"></i>
             <h4 className="text-xl font-bold mb-3">Intelligent Transport Systems</h4>
             <p className="text-gray-400 text-sm leading-relaxed">Proprietary live GPS tracking allowing corporate security teams to monitor Executive Protection Services and standard rides in real-time.</p>
           </div>
           {/* Tech Card 2 */}
-          <div className="bg-abDarkGray/50 border border-gray-800 p-8 rounded-xl backdrop-blur-sm hover:border-abGold transition-colors duration-300">
+          <div className="bg-abDarkGray/50 border border-gray-800 p-8 rounded-xl backdrop-blur-sm hover:border-abGold transition-colors duration-300 text-center md:text-left">
             <i className="fa-solid fa-file-invoice-dollar text-2xl text-abGold mb-6"></i>
             <h4 className="text-xl font-bold mb-3">Corporate Tech Integration</h4>
             <p className="text-gray-400 text-sm leading-relaxed">Centralized corporate billing with direct API integrations to expense management platforms like <strong>SAP Concur</strong> for frictionless accounting.</p>
           </div>
           {/* Tech Card 3 */}
-          <div className="bg-abDarkGray/50 border border-gray-800 p-8 rounded-xl backdrop-blur-sm hover:border-abGold transition-colors duration-300">
+          <div className="bg-abDarkGray/50 border border-gray-800 p-8 rounded-xl backdrop-blur-sm hover:border-abGold transition-colors duration-300 text-center md:text-left">
             <i className="fa-solid fa-id-card-clip text-2xl text-abGold mb-6"></i>
             <h4 className="text-xl font-bold mb-3">Vetted Professionalism</h4>
             <p className="text-gray-400 text-sm leading-relaxed">Mandatory comprehensive background checks, defensive driving certifications, and strict Non-Disclosure Agreements (NDAs) for all chauffeurs.</p>

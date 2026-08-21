@@ -5,7 +5,7 @@ export default function EventLogisticsSection() {
     <section id="logistics" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <div className="text-center lg:text-left">
             <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-3">Core Pillar: Event Mobility</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Mastering Complex Route Architecture.</h3>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
@@ -13,29 +13,29 @@ export default function EventLogisticsSection() {
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-start">
+              <div className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left">
                 <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200">
                   <i className="fa-solid fa-route text-abBlack"></i>
                 </div>
-                <div className="ml-4">
+                <div className="mt-3 lg:mt-0 lg:ml-4">
                   <h4 className="text-lg font-bold text-gray-900">Delivery Schedules & Route Planning</h4>
                   <p className="mt-1 text-sm text-gray-500">Dynamic routing mapped to avoid local congestion, maximizing efficiency for convention shuttles and VIP movements.</p>
                 </div>
               </div>
-              <div className="flex items-start">
+              <div className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left">
                 <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200">
                   <i className="fa-solid fa-traffic-light text-abBlack"></i>
                 </div>
-                <div className="ml-4">
+                <div className="mt-3 lg:mt-0 lg:ml-4">
                   <h4 className="text-lg font-bold text-gray-900">Traffic & On-Site Parking Management</h4>
                   <p className="mt-1 text-sm text-gray-500">Ground coordinators dispatching our luxury coach and executive bus fleet to maintain seamless loading/unloading zones.</p>
                 </div>
               </div>
-              <div className="flex items-start">
+              <div className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left">
                 <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200">
                   <i className="fa-solid fa-chart-pie text-abBlack"></i>
                 </div>
-                <div className="ml-4">
+                <div className="mt-3 lg:mt-0 lg:ml-4">
                   <h4 className="text-lg font-bold text-gray-900">Post-Event Passenger Analytics</h4>
                   <p className="mt-1 text-sm text-gray-500">Comprehensive reporting on passenger volumes, vehicle utilization, and operational KPIs delivered to event organizers.</p>
                 </div>

@@ -47,8 +47,8 @@ export default function FleetSection() {
   return (
     <section id="fleet" className="py-24 bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-          <div className="max-w-2xl">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12">
+          <div className="max-w-2xl text-center md:text-left">
             <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-2">Our Vehicle Governance</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Strictly Black. Strictly Professional.</h3>
             <p className="mt-4 text-gray-600">The AB.Limo brand standard mandates a uniform fleet of late-model, immaculate black vehicles. No exceptions. We procure and lease dedicated fleets for long-term government and corporate contracts.</p>
@@ -75,7 +75,7 @@ export default function FleetSection() {
                   className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 text-center md:text-left">
                 <h4 className="text-lg font-bold text-gray-900 mb-1">{vehicle.title}</h4>
                 <p className="text-sm text-abGold font-medium mb-4">{vehicle.subtitle}</p>
                 <div className="flex justify-between items-center text-xs text-gray-500 border-t border-gray-100 pt-4">

@@ -6,13 +6,13 @@ export default function HeroSection() {
   const [activeTab, setActiveTab] = useState("transfer");
 
   return (
-    <section className="hero-bg min-h-screen flex items-center relative pt-20">
+    <section className="hero-bg min-h-screen flex items-center relative pt-25">
       <div className="absolute inset-0 bg-gradient-to-r from-abBlack via-abBlack/80 to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
           {/* Hero Content */}
-          <div className="lg:col-span-7 text-left">
+          <div className="lg:col-span-7 text-center lg:text-left">
             <div className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full bg-abGold/10 border border-abGold/30 mb-6">
               <span className="w-2 h-2 rounded-full bg-abGold animate-pulse"></span>
               <span className="text-abGold text-xs font-bold tracking-widest uppercase">GCC Premier Enterprise Logistics</span>
@@ -21,10 +21,10 @@ export default function HeroSection() {
               The Science of <br/>
               <span className="text-abGold">Transportation.</span>
             </h1>
-            <p className="text-base text-gray-300 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Beyond standard transfers. AB.Limo engineers bespoke mobility architecture for mega-events, corporate roadshows, and government protocol across Saudi Arabia, UAE, and Qatar.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <a href="#logistics" className="bg-abGold hover:bg-yellow-600 text-white px-8 py-3.5 rounded text-sm font-semibold transition-colors shadow-lg shadow-abGold/20">
                 Explore Event Frameworks
               </a>
