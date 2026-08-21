@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <section className="hero-bg min-h-screen flex items-center relative pt-20">
       <div className="absolute inset-0 bg-gradient-to-r from-abBlack via-abBlack/80 to-transparent"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
           {/* Hero Content */}
@@ -17,11 +17,11 @@ export default function HeroSection() {
               <span className="w-2 h-2 rounded-full bg-abGold animate-pulse"></span>
               <span className="text-abGold text-xs font-bold tracking-widest uppercase">GCC Premier Enterprise Logistics</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] mb-6">
               The Science of <br/>
               <span className="text-abGold">Transportation.</span>
             </h1>
-            <p className="text-lg text-gray-300 mb-10 max-w-2xl leading-relaxed">
+            <p className="text-base text-gray-300 mb-8 max-w-2xl leading-relaxed">
               Beyond standard transfers. AB.Limo engineers bespoke mobility architecture for mega-events, corporate roadshows, and government protocol across Saudi Arabia, UAE, and Qatar.
             </p>
             <div className="flex flex-wrap gap-4">

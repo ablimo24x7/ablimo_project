@@ -11,7 +11,7 @@ export default async function Header({ lang }: HeaderProps) {
   const dict = await getDictionary(lang);
 
   return (
-    <header className="fixed w-full bg-abBlack/95 backdrop-blur-md border-b border-gray-800 z-50 transition-all">
+    <header className="fixed w-full bg-abBlack/95 border-b border-gray-800 z-[90] transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}

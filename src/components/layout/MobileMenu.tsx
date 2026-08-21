@@ -152,7 +152,7 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
 
       {/* Mobile menu overlay */}
       {isOpen && (
-        <div className="fixed inset-0 top-0 left-0 w-full h-full bg-abBlack z-50 overflow-y-auto">
+        <div className="fixed inset-0 top-0 left-0 w-full h-full bg-abBlack z-[99] overflow-y-auto">
           {/* Close button */}
           <div className="flex justify-between items-center px-6 py-5 border-b border-gray-800">
             <Link
