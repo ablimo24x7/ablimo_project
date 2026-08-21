@@ -6,7 +6,7 @@ export default function HeroSection() {
   const [activeTab, setActiveTab] = useState("transfer");
 
   return (
-    <section className="hero-bg min-h-screen flex items-center relative pt-25">
+    <section className="hero-bg min-h-screen flex items-center relative pt-25 pb-10">
       <div className="absolute inset-0 bg-gradient-to-r from-abBlack via-abBlack/80 to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -123,11 +123,9 @@ export default function HeroSection() {
                   </div>
                   <button type="submit" className="w-full bg-abGold hover:bg-yellow-600 text-white font-semibold py-3.5 px-4 rounded transition-colors shadow-lg mt-4">Request Logistics Consultation</button>
                 </form>
-
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
