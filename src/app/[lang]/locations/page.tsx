@@ -1,13 +1,13 @@
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
-import CountriesClient from "@/app/[lang]/countries/_components/CountriesClient";
+import CountriesClient from "./_components/CountriesClient";
 
-const metadata = {
+export const metadata = {
   title: "AB.Limo Global Availability",
   description:
     "Luxury chauffeur service across 50+ countries worldwide.",
 };
 
-export default async function CountriesPage({
+export default async function LocationsPage({
   params,
 }: {
   params: Promise<{ lang: string }>;

@@ -3,31 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import BookingWidget from "@/components/layout/BookingWidget";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-
-const cityNames: Record<string, string> = {
-    dubai: "Dubai",
-    "abu-dhabi": "Abu Dhabi",
-    sharjah: "Sharjah",
-    ajman: "Ajman",
-    "ras-al-khaimah": "Ras Al Khaimah",
-    riyadh: "Riyadh",
-    jeddah: "Jeddah",
-    mecca: "Mecca",
-    medina: "Medina",
-    dammam: "Dammam",
-    doha: "Doha",
-    "al-khor": "Al Khor",
-    lusail: "Lusail",
-    manama: "Manama",
-    riffa: "Riffa",
-    muharraq: "Muharraq",
-    kuwait: "Kuwait City",
-    hawalli: "Hawalli",
-    farwaniya: "Farwaniya",
-    muscat: "Muscat",
-    salalah: "Salalah",
-    sohar: "Sohar",
-};
+import {
+    airportUrl,
+    countryUrl,
+    locationsUrl,
+    type City,
+    type Country,
+} from "@/lib/locations";
 
 const cityHeroImages: Record<string, string> = {
     dubai: "https://images.unsplash.com/photo-1721170628208-dffed6eb3514?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -63,29 +45,20 @@ const sectionImages = {
 interface Props {
     dict: Dictionary;
     lang: string;
-    countrySlug: string;
-    citySlug: string;
+    country: Country;
+    city: City;
 }
 
-export default function CityDetailClient({ dict, lang, countrySlug, citySlug }: Props) {
-    const countrySlugMap: Record<string, string> = {
-        ae: "united-arab-emirates",
-        sa: "saudi-arabia",
-        qa: "qatar",
-        bh: "bahrain",
-        kw: "kuwait",
-        om: "oman",
-    };
-
-    const cityName = cityNames[citySlug] || citySlug.toUpperCase();
+export default function CityDetailClient({ dict, lang, country, city }: Props) {
+    const cityName = city.name;
     const cDict = dict.countries;
-    const cityData = (dict as any).cityContent?.[countrySlugMap[countrySlug] || countrySlug]?.[citySlug];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const cityData = (dict as any).cityContent?.[country.slug]?.[city.slug];
 
-    // const heroTitle = `Taxi Alternative ${cityName}`;
     const taxiAltText = dict.cityTaxiTitle?.taxiAlternative || "Taxi Alternative";
 
     const heroTitle = `${taxiAltText} ${cityName}`;
-    const heroImage = cityHeroImages[citySlug] || cityHeroImages.dubai;
+    const heroImage = cityHeroImages[city.slug] || cityHeroImages.dubai;
 
     const gettingAroundTitle = cityData?.gettingAround?.title || `Getting Around in ${cityName}`;
     const gettingAroundDesc = cityData?.gettingAround?.description || `${cityName} is a dynamic and culturally rich destination with plenty to experience. AB.Limo offers an ideal chauffeur service that gets you around in absolute comfort and style, connecting you effortlessly across key districts and landmarks.`;
@@ -148,14 +121,14 @@ export default function CityDetailClient({ dict, lang, countrySlug, citySlug }: 
                             <span aria-hidden="true">→</span>
                         </li>
                         <li className="flex items-center gap-2">
-                            <Link href={`/${lang}/countries`} className="hover:text-white transition-colors">
+                            <Link href={locationsUrl(lang)} className="hover:text-white transition-colors">
                                 {cDict.breadcrumb.countries}
                             </Link>
                             <span aria-hidden="true">→</span>
                         </li>
                         <li className="flex items-center gap-2">
-                            <Link href={`/${lang}/countries/${countrySlug}`} className="hover:text-white transition-colors">
-                                {countrySlug.toUpperCase()}
+                            <Link href={countryUrl(lang, country)} className="hover:text-white transition-colors">
+                                {country.name}
                             </Link>
                             <span aria-hidden="true">→</span>
                         </li>
@@ -277,6 +250,20 @@ export default function CityDetailClient({ dict, lang, countrySlug, citySlug }: 
                         <p className="text-gray-300 text-[16px] leading-relaxed">
                             {airportDesc}
                         </p>
+                        {city.airports.length > 0 && (
+                            <ul className="space-y-2 text-[16px]">
+                                {city.airports.map((airport) => (
+                                    <li key={airport.slug}>
+                                        <Link
+                                            href={airportUrl(lang, country, city, airport)}
+                                            className="font-bold underline underline-offset-4 hover:text-gray-300 transition-colors"
+                                        >
+                                            {airport.name} ({airport.iata})
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
                 </div>
             </section>

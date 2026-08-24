@@ -5,19 +5,14 @@ import Image from "next/image";
 import { useState, useCallback } from "react";
 import BookingWidget from "@/components/layout/BookingWidget";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-
-const countryNames: Record<string, string> = {
-  bh: "Bahrain", kw: "Kuwait", om: "Oman", qa: "Qatar", sa: "Saudi Arabia", ae: "UAE",
-};
-
-const cityNames: Record<string, string> = {
-  dubai: "Dubai", "abu-dhabi": "Abu Dhabi", sharjah: "Sharjah", ajman: "Ajman", "ras-al-khaimah": "Ras Al Khaimah",
-  riyadh: "Riyadh", jeddah: "Jeddah", mecca: "Mecca", medina: "Medina", dammam: "Dammam",
-  doha: "Doha", "al-khor": "Al Khor", lusail: "Lusail",
-  manama: "Manama", riffa: "Riffa", muharraq: "Muharraq",
-  kuwait: "Kuwait City", hawalli: "Hawalli", farwaniya: "Farwaniya",
-  muscat: "Muscat", salalah: "Salalah", sohar: "Sohar",
-};
+import {
+    cityUrl,
+    countryUrl,
+    locationsUrl,
+    type Airport,
+    type City,
+    type Country,
+} from "@/lib/locations";
 
 const cityHeroImages: Record<string, string> = {
   dubai: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&h=800&fit=crop",
@@ -73,11 +68,6 @@ const serviceClasses = [
   { dictKey: "businessVanSuv", fitsPeople: 5, images: ["https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=500&fit=crop","https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=500&fit=crop","https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=500&fit=crop"] },
 ];
 
-function slugToName(slug: string, map: Record<string, string>): string {
-  if (map[slug]) return map[slug];
-  return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
-}
-
 function CheckIcon() {
   return (<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="text-white/80 flex-shrink-0 mt-0.5"><path d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z" /></svg>);
 }
@@ -93,15 +83,15 @@ function ArrowUp() {
 interface Props {
   dict: Dictionary;
   lang: string;
-  countrySlug: string;
-  citySlug: string;
+  country: Country;
+  city: City;
+  airport: Airport;
 }
 
-export default function AirportTransferCityClient({ dict, lang, countrySlug, citySlug }: Props) {
-  const countryName = slugToName(countrySlug, countryNames);
-  const cityName = slugToName(citySlug, cityNames);
-  const heroImage = cityHeroImages[citySlug] || cityHeroImages.default;
-  const seoImages = citySeoImages[citySlug] || citySeoImages.default;
+export default function AirportTransferClient({ dict, lang, country, city, airport }: Props) {
+  const cityName = city.name;
+  const heroImage = cityHeroImages[city.slug] || cityHeroImages.default;
+  const seoImages = citySeoImages[city.slug] || citySeoImages.default;
   const atcDict = dict.airportTransferCity;
 
   const [benefitIndex, setBenefitIndex] = useState(0);
@@ -119,12 +109,12 @@ export default function AirportTransferCityClient({ dict, lang, countrySlug, cit
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
       <section className="relative w-full h-[60vh] min-h-[450px]">
-        <Image src={heroImage} alt={`Airport Transfer in ${cityName}`} fill className="object-cover" priority />
+        <Image src={heroImage} alt={`Airport Transfer at ${airport.name}`} fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#292a30]" />
         <div className="absolute inset-0 flex items-end">
           <div className="w-full max-w-7xl mx-auto px-8 pb-8 flex flex-col lg:flex-row items-end justify-between gap-8">
             <div className="max-w-xl">
-              <h1 className="text-3xl md:text-5xl font-bold tracking-tight">{atcDict.heroTitle.replace("{city}", cityName)}</h1>
+              <h1 className="text-3xl md:text-5xl font-bold tracking-tight">{atcDict.heroTitle.replace("{city}", airport.name)}</h1>
             </div>
             <BookingWidget dict={dict} />
           </div>
@@ -135,10 +125,10 @@ export default function AirportTransferCityClient({ dict, lang, countrySlug, cit
         <nav aria-label="Breadcrumb navigation">
           <ol className="flex items-center gap-2 text-sm text-gray-400 flex-wrap">
             <li className="flex items-center gap-2"><Link href={`/${lang}`} className="hover:text-white transition-colors">{atcDict.breadcrumb.home}</Link><span aria-hidden="true">→</span></li>
-            <li className="flex items-center gap-2"><Link href={`/${lang}/countries`} className="hover:text-white transition-colors">{atcDict.breadcrumb.countries}</Link><span aria-hidden="true">→</span></li>
-            <li className="flex items-center gap-2"><Link href={`/${lang}/countries/${countrySlug}`} className="hover:text-white transition-colors">{countryName}</Link><span aria-hidden="true">→</span></li>
-            <li className="flex items-center gap-2"><Link href={`/${lang}/countries/${countrySlug}/${citySlug}`} className="hover:text-white transition-colors">{cityName}</Link><span aria-hidden="true">→</span></li>
-            <li><span className="text-white" aria-current="page">{atcDict.heroTitle.replace("{city}", cityName)}</span></li>
+            <li className="flex items-center gap-2"><Link href={locationsUrl(lang)} className="hover:text-white transition-colors">{atcDict.breadcrumb.countries}</Link><span aria-hidden="true">→</span></li>
+            <li className="flex items-center gap-2"><Link href={countryUrl(lang, country)} className="hover:text-white transition-colors">{country.name}</Link><span aria-hidden="true">→</span></li>
+            <li className="flex items-center gap-2"><Link href={cityUrl(lang, country, city)} className="hover:text-white transition-colors">{cityName}</Link><span aria-hidden="true">→</span></li>
+            <li><span className="text-white" aria-current="page">{airport.name}</span></li>
           </ol>
         </nav>
       </section>
@@ -213,11 +203,11 @@ export default function AirportTransferCityClient({ dict, lang, countrySlug, cit
       <section className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col lg:flex-row gap-12 items-center py-16 border-t border-white/10">
           <div className="flex-1"><h2 className="text-2xl md:text-3xl font-bold mb-6">{atcDict.seo.reliableTitle.replace("{city}", cityName)}</h2><div className="text-gray-400 leading-relaxed space-y-4"><p>{atcDict.seo.reliableDesc1.replace("{city}", cityName)}</p><p>{atcDict.seo.reliableDesc2.replace("{city}", cityName)}</p></div></div>
-          <div className="flex-1 relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden"><Image src={seoImages[0]} alt={`${cityName} airport transfer`} fill className="object-cover" /></div>
+          <div className="flex-1 relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden"><Image src={seoImages[0]} alt={`${airport.name} transfer`} fill className="object-cover" /></div>
         </div>
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-center py-16 border-t border-white/10">
           <div className="flex-1"><h2 className="text-2xl md:text-3xl font-bold mb-6">{atcDict.seo.arrivalTitle.replace("{city}", cityName)}</h2><div className="text-gray-400 leading-relaxed space-y-4"><p>{atcDict.seo.arrivalDesc1.replace("{city}", cityName)}</p><p>{atcDict.seo.arrivalDesc2.replace("{city}", cityName)}</p></div></div>
-          <div className="flex-1 relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden"><Image src={seoImages[1]} alt={`${cityName} airport arrival`} fill className="object-cover" /></div>
+          <div className="flex-1 relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden"><Image src={seoImages[1]} alt={`${airport.name} arrival`} fill className="object-cover" /></div>
         </div>
         <div className="flex flex-col lg:flex-row gap-12 items-center py-16 border-t border-white/10">
           <div className="flex-1"><h2 className="text-2xl md:text-3xl font-bold mb-6">{atcDict.seo.exploreTitle.replace("{city}", cityName)}</h2><div className="text-gray-400 leading-relaxed space-y-4"><p>{atcDict.seo.exploreDesc.replace("{city}", cityName)}</p></div></div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { cityUrl, locationsUrl, resolveCity, resolveCountry } from "@/lib/locations";
 
 const statsData = [
   { number: "6", labelKey: "countries" },
@@ -30,18 +31,6 @@ export default async function AboutPage({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  const citiesData = [
-    { name: "Dubai", country: "ae", city: "dubai" },
-    { name: "Riyadh", country: "sa", city: "riyadh" },
-    { name: "Doha", country: "qa", city: "doha" },
-    { name: "Abu Dhabi", country: "ae", city: "abu-dhabi" },
-    { name: "Jeddah", country: "sa", city: "jeddah" },
-    { name: "Manama", country: "bh", city: "manama" },
-    { name: "Kuwait City", country: "kw", city: "kuwait" },
-    { name: "Muscat", country: "om", city: "muscat" },
-    { name: "Sharjah", country: "ae", city: "sharjah" },
-    { name: "Mecca", country: "sa", city: "mecca" },
-  ];
   return (
     <>
       {/* Hero Section */}
@@ -226,7 +215,10 @@ export default async function AboutPage({
             {cityLinks.map((city) => (
               <Link
                 key={city.name}
-                href={`/${lang}/countries/${city.country}/${city.city}`}
+                href={(() => {
+                  const country = resolveCountry(city.country)!;
+                  return cityUrl(lang, country, resolveCity(country, city.city)!);
+                })()}
                 className="bg-[#292a30] p-6 rounded-lg text-center border border-gray-700/50 hover:border-white/30 transition-all duration-300"
               >
                 <p className="text-lg font-semibold">{city.name}</p>
@@ -235,7 +227,7 @@ export default async function AboutPage({
           </div>
           <div className="text-center mt-12">
             <Link
-              href={`/${lang}/cities`}
+              href={locationsUrl(lang)}
               className="inline-block border-2 border-white text-white px-8 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-white hover:text-[#292a30] transition-all duration-300"
             >
               {dict.about.operates.viewAll}

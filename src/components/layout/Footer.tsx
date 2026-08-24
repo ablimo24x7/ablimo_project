@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import {
+  COUNTRIES,
+  cityUrl,
+  countryUrl,
+  locationsUrl,
+  resolveCity,
+} from "@/lib/locations";
 import ExpandableFooterLinks from "./ExpandableFooterLinks";
 
 interface FooterProps {
@@ -10,6 +17,15 @@ interface FooterProps {
 export default async function Footer({ lang }: FooterProps) {
   const dict = await getDictionary(lang);
   const d = dict.footer;
+
+  const country = (code: string) => {
+    const found = COUNTRIES.find((c) => c.code === code)!;
+    return countryUrl(lang, found);
+  };
+  const hubCity = (code: string, citySlug: string) => {
+    const c = COUNTRIES.find((x) => x.code === code)!;
+    return cityUrl(lang, c, resolveCity(c, citySlug)!);
+  };
 
   const footerColumns = [
     {
@@ -54,41 +70,41 @@ export default async function Footer({ lang }: FooterProps) {
     {
       title: d.locations.title,
       links: [
-        { label: d.locations.qatar, href: `/${lang}/countries/qa` },
-        { label: d.locations.saudiArabia, href: `/${lang}/countries/sa` },
-        { label: d.locations.uae, href: `/${lang}/countries/ae` },
-        { label: d.locations.kuwait, href: `/${lang}/countries/kw` },
-        { label: d.locations.bahrain, href: `/${lang}/countries/bh` },
-        { label: d.locations.oman, href: `/${lang}/countries/om` },
-        { label: d.locations.europeUkUsa, href: `/${lang}/countries` },
-        { label: d.locations.allCities, href: `/${lang}/cities` },
-        { label: d.locations.allCountries, href: `/${lang}/countries` },
+        { label: d.locations.qatar, href: country("qa") },
+        { label: d.locations.saudiArabia, href: country("sa") },
+        { label: d.locations.uae, href: country("ae") },
+        { label: d.locations.kuwait, href: country("kw") },
+        { label: d.locations.bahrain, href: country("bh") },
+        { label: d.locations.oman, href: country("om") },
+        { label: d.locations.europeUkUsa, href: locationsUrl(lang) },
+        { label: d.locations.allCities, href: locationsUrl(lang) },
+        { label: d.locations.allCountries, href: locationsUrl(lang) },
       ],
     },
     {
       title: d.globalHubs.title,
       links: [
-        { label: d.globalHubs.doha, href: `/${lang}/countries/qa/doha` },
-        { label: d.globalHubs.jeddah, href: `/${lang}/countries/sa/jeddah` },
-        { label: d.globalHubs.mecca, href: `/${lang}/countries/sa/mecca` },
-        { label: d.globalHubs.riyadh, href: `/${lang}/countries/sa/riyadh` },
-        { label: d.globalHubs.tabuk, href: `/${lang}/countries/sa/tabuk` },
-        { label: d.globalHubs.madinah, href: `/${lang}/countries/sa/madinah` },
-        { label: d.globalHubs.alUla, href: `/${lang}/countries/sa/al-ula` },
-        { label: d.globalHubs.dammam, href: `/${lang}/countries/sa/dammam` },
-        { label: d.globalHubs.alKhobar, href: `/${lang}/countries/sa/al-khobar` },
-        { label: d.globalHubs.alQasim, href: `/${lang}/countries/sa/al-qasim` },
-        { label: d.globalHubs.abha, href: `/${lang}/countries/sa/abha` },
-        { label: d.globalHubs.jizan, href: `/${lang}/countries/sa/jizan` },
-        { label: d.globalHubs.neom, href: `/${lang}/countries/sa/neom` },
-        { label: d.globalHubs.abuDhabi, href: `/${lang}/countries/ae/abu-dhabi` },
-        { label: d.globalHubs.dubai, href: `/${lang}/countries/ae/dubai` },
-        { label: d.globalHubs.sharjah, href: `/${lang}/countries/ae/sharjah` },
-        { label: d.globalHubs.ajman, href: `/${lang}/countries/ae/ajman` },
-        { label: d.globalHubs.rasAlKhaymah, href: `/${lang}/countries/ae/ras-al-khaymah` },
-        { label: d.globalHubs.kuwaitCity, href: `/${lang}/countries/kw/kuwait-city` },
-        { label: d.globalHubs.manama, href: `/${lang}/countries/bh/manama` },
-        { label: d.globalHubs.muscat, href: `/${lang}/countries/om/muscat` },
+        { label: d.globalHubs.doha, href: hubCity("qa", "doha") },
+        { label: d.globalHubs.jeddah, href: hubCity("sa", "jeddah") },
+        { label: d.globalHubs.mecca, href: hubCity("sa", "mecca") },
+        { label: d.globalHubs.riyadh, href: hubCity("sa", "riyadh") },
+        { label: d.globalHubs.tabuk, href: hubCity("sa", "tabuk") },
+        { label: d.globalHubs.madinah, href: hubCity("sa", "medina") },
+        { label: d.globalHubs.alUla, href: hubCity("sa", "al-ula") },
+        { label: d.globalHubs.dammam, href: hubCity("sa", "dammam") },
+        { label: d.globalHubs.alKhobar, href: hubCity("sa", "al-khobar") },
+        { label: d.globalHubs.alQasim, href: hubCity("sa", "al-qasim") },
+        { label: d.globalHubs.abha, href: hubCity("sa", "abha") },
+        { label: d.globalHubs.jizan, href: hubCity("sa", "jizan") },
+        { label: d.globalHubs.neom, href: hubCity("sa", "neom") },
+        { label: d.globalHubs.abuDhabi, href: hubCity("ae", "abu-dhabi") },
+        { label: d.globalHubs.dubai, href: hubCity("ae", "dubai") },
+        { label: d.globalHubs.sharjah, href: hubCity("ae", "sharjah") },
+        { label: d.globalHubs.ajman, href: hubCity("ae", "ajman") },
+        { label: d.globalHubs.rasAlKhaymah, href: hubCity("ae", "ras-al-khaimah") },
+        { label: d.globalHubs.kuwaitCity, href: hubCity("kw", "kuwait") },
+        { label: d.globalHubs.manama, href: hubCity("bh", "manama") },
+        { label: d.globalHubs.muscat, href: hubCity("om", "muscat") },
       ],
     },
     {
@@ -96,7 +112,7 @@ export default async function Footer({ lang }: FooterProps) {
       links: [
         { label: d.explore.asDirected, href: `/${lang}/as-directed` },
         { label: d.explore.executiveMobility, href: `/${lang}/executive-mobility` },
-        { label: d.explore.airportTransfers, href: `/${lang}/airport-transfer` },
+        { label: d.explore.airportTransfers, href: locationsUrl(lang) },
         { label: d.explore.vipDiplomatic, href: `/${lang}/vip-diplomatic` },
         { label: d.explore.corporateFleet, href: `/${lang}/corporate-fleet` },
         { label: d.explore.eventTransportation, href: `/${lang}/event-transportation` },
