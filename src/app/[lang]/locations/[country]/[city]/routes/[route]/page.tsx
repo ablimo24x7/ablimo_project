@@ -1,28 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import BookingWidget from "@/components/layout/BookingWidget";
-import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
-
-const knownRoutes: Record<string, { from: string; to: string; distance: string; duration: string }> = {
-  "abu-dhabi-dubai": { from: "Abu Dhabi", to: "Dubai", distance: "140 km", duration: "1h 30m" },
-  "dubai-abu-dhabi": { from: "Dubai", to: "Abu Dhabi", distance: "140 km", duration: "1h 30m" },
-  "dubai-sharjah": { from: "Dubai", to: "Sharjah", distance: "30 km", duration: "30m" },
-  "riyadh-dammam": { from: "Riyadh", to: "Dammam", distance: "400 km", duration: "4h 00m" },
-  "riyadh-jeddah": { from: "Riyadh", to: "Jeddah", distance: "950 km", duration: "9h 00m" },
-  "doha-al-khor": { from: "Doha", to: "Al Khor", distance: "50 km", duration: "45m" },
-  "jeddah-mecca": { from: "Jeddah", to: "Mecca", distance: "80 km", duration: "1h 00m" },
-  "manama-al-khobar": { from: "Manama", to: "Al Khobar", distance: "110 km", duration: "1h 30m" },
-  "kuwait-doha": { from: "Kuwait City", to: "Doha", distance: "550 km", duration: "5h 30m" },
-  "muscat-abu-dhabi": { from: "Muscat", to: "Abu Dhabi", distance: "350 km", duration: "3h 30m" },
-  "abu-dhabi-al-ain": { from: "Abu Dhabi", to: "Al Ain", distance: "150 km", duration: "1h 30m" },
-  "dubai-ras-al-khaimah": { from: "Dubai", to: "Ras Al Khaimah", distance: "100 km", duration: "1h 00m" },
-  "mecca-medina": { from: "Mecca", to: "Medina", distance: "420 km", duration: "4h 15m" },
-  "jeddah-riyadh": { from: "Jeddah", to: "Riyadh", distance: "950 km", duration: "9h 00m" },
-  "dubai-ajman": { from: "Dubai", to: "Ajman", distance: "35 km", duration: "30m" },
-  "kuwait-city-al-ahmadi": { from: "Kuwait City", to: "Al Ahmadi", distance: "40 km", duration: "30m" },
-  "doha-lusail": { from: "Doha", to: "Lusail", distance: "25 km", duration: "20m" },
-  "muscat-sohar": { from: "Muscat", to: "Sohar", distance: "230 km", duration: "2h 30m" },
-};
+import { getDictionary } from "@/app/[lang]/dictionaries";
+import {
+    COUNTRIES,
+    findRoute,
+    locationsUrl,
+    countryUrl,
+    cityUrl,
+    resolveCity,
+    resolveCountry,
+    titleFromSlug,
+    type City,
+} from "@/lib/locations";
 
 const cityImages: Record<string, string> = {
   dubai: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
@@ -47,83 +38,40 @@ const cityImages: Record<string, string> = {
   sohar: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80",
 };
 
-function parseRouteSlug(slug: string): { from: string; to: string } {
-  const known = knownRoutes[slug];
-  if (known) {
-    return { from: known.from, to: known.to };
-  }
+const fallbackImage = "https://images.unsplash.com/photo-1494783367193-149034c05e8f?w=800&h=600&fit=crop";
 
-  const parts = slug.split("-");
-  if (parts.length === 1) {
-    return { from: slugToDisplayName(parts[0]), to: slugToDisplayName(parts[0]) };
-  }
-
-  let bestSplit = 1;
-  let bestFrom = parts[0];
-  let bestTo = parts.slice(1).join("-");
-
-  for (let i = 1; i < parts.length; i++) {
-    const candidateFrom = parts.slice(0, i).join("-");
-    const candidateTo = parts.slice(i).join("-");
-    const fromKey = candidateFrom;
-    const toKey = candidateTo;
-    if (cityImages[fromKey] && cityImages[toKey]) {
-      bestSplit = i;
-      bestFrom = candidateFrom;
-      bestTo = candidateTo;
-      break;
-    }
-  }
-
-  return { from: slugToDisplayName(bestFrom), to: slugToDisplayName(bestTo) };
-}
-
-function slugToDisplayName(slug: string): string {
-  return slug
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
-}
-
-function getRouteInfo(slug: string) {
-  const known = knownRoutes[slug];
-  if (known) {
-    return { distance: known.distance, duration: known.duration };
-  }
-  return { distance: "Contact us", duration: "Contact us" };
-}
-
-export default async function DynamicCityToCityPage({
+export default async function RoutePage({
   params,
 }: {
-  params: Promise<{ lang: string; route: string }>;
+  params: Promise<{ lang: string; country: string; city: string; route: string }>;
 }) {
-  const { lang, route: routeSlug } = await params;
-  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const { lang, country: countryParam, city: cityParam, route: routeSlug } = await params;
+  const originCountry = resolveCountry(countryParam);
+  if (!originCountry) notFound();
+  const originCity = resolveCity(originCountry, cityParam);
+  if (!originCity) notFound();
+
+  const locale = lang as "en-US" | "en-GB" | "ar";
   const dict = await getDictionary(locale);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const rp = (dict as any).cityToCity.routePage;
 
-  const { from, to } = parseRouteSlug(routeSlug);
-  const routeInfo = getRouteInfo(routeSlug);
+  const [fromRaw, toRaw] = routeSlug.split("-to-");
+  if (!fromRaw || !toRaw) notFound();
+  const from = resolveCity(originCountry, fromRaw) ?? ({ slug: fromRaw, name: titleFromSlug(fromRaw), airports: [] } as City);
+  const to = resolveCity(originCountry, toRaw) ?? resolveCityInAnyCountry(toRaw) ?? ({ slug: toRaw, name: titleFromSlug(toRaw), airports: [] } as City);
 
-  const fromSlug = Object.keys(cityImages).find(
-    (k) => slugToDisplayName(k) === from
-  ) || from.toLowerCase().replace(/\s+/g, "-");
-  const toSlug = Object.keys(cityImages).find(
-    (k) => slugToDisplayName(k) === to
-  ) || to.toLowerCase().replace(/\s+/g, "-");
-
-  const fromImage = cityImages[fromSlug] || "https://images.unsplash.com/photo-1494783367193-149034c05e8f?w=800&h=600&fit=crop";
-  const toImage = cityImages[toSlug] || "https://images.unsplash.com/photo-1494783367193-149034c05e8f?w=800&h=600&fit=crop";
+  const routeInfo = findRoute(from.slug, to.slug);
+  const distance = routeInfo?.distance ?? "Contact us";
+  const duration = routeInfo?.duration ?? "Contact us";
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
         <Image
-          src={fromImage}
-          alt={`${from} to ${to}`}
+          src={cityImages[from.slug] ?? fallbackImage}
+          alt={`${from.name} to ${to.name}`}
           fill
           className="object-cover"
           priority
@@ -132,7 +80,7 @@ export default async function DynamicCityToCityPage({
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-8 flex flex-col lg:flex-row items-end justify-between gap-8">
           <div className="max-w-xl">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-              {from} to {to}
+              {from.name} to {to.name}
             </h1>
             <p className="text-lg text-gray-300">
               {dict.cityToCity.subtitle}
@@ -144,17 +92,25 @@ export default async function DynamicCityToCityPage({
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
-        <nav className="text-sm text-gray-400">
+        <nav className="text-sm text-gray-400 flex flex-wrap items-center gap-2">
           <Link href={`/${lang}`} className="hover:text-white transition-colors">
             {rp.breadcrumb.home}
           </Link>
-          <span className="mx-2">/</span>
-          <Link href={`/${lang}/city-to-city`} className="hover:text-white transition-colors">
-            {rp.breadcrumb.cityToCity}
+          <span aria-hidden="true">→</span>
+          <Link href={locationsUrl(lang)} className="hover:text-white transition-colors">
+            Locations
           </Link>
-          <span className="mx-2">/</span>
+          <span aria-hidden="true">→</span>
+          <Link href={countryUrl(lang, originCountry)} className="hover:text-white transition-colors">
+            {originCountry.name}
+          </Link>
+          <span aria-hidden="true">→</span>
+          <Link href={cityUrl(lang, originCountry, originCity)} className="hover:text-white transition-colors">
+            {originCity.name}
+          </Link>
+          <span aria-hidden="true">→</span>
           <span className="text-white">
-            {from} to {to}
+            {from.name} to {to.name}
           </span>
         </nav>
       </div>
@@ -169,7 +125,7 @@ export default async function DynamicCityToCityPage({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <p className="text-3xl font-bold mb-1">{routeInfo.distance}</p>
+            <p className="text-3xl font-bold mb-1">{distance}</p>
             <p className="text-gray-400 text-sm">{rp.totalDistance}</p>
           </div>
           <div className="bg-[#1c1d21] p-8 rounded-2xl text-center">
@@ -178,7 +134,7 @@ export default async function DynamicCityToCityPage({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <p className="text-3xl font-bold mb-1">{routeInfo.duration}</p>
+            <p className="text-3xl font-bold mb-1">{duration}</p>
             <p className="text-gray-400 text-sm">{rp.estimatedTime}</p>
           </div>
           <div className="bg-[#1c1d21] p-8 rounded-2xl text-center">
@@ -198,28 +154,28 @@ export default async function DynamicCityToCityPage({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative h-[300px] rounded-2xl overflow-hidden">
             <Image
-              src={fromImage}
-              alt={from}
+              src={cityImages[from.slug] ?? fallbackImage}
+              alt={from.name}
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-6 left-6">
               <p className="text-sm text-gray-300 mb-1">{rp.from}</p>
-              <h3 className="text-2xl font-bold">{from}</h3>
+              <h3 className="text-2xl font-bold">{from.name}</h3>
             </div>
           </div>
           <div className="relative h-[300px] rounded-2xl overflow-hidden">
             <Image
-              src={toImage}
-              alt={to}
+              src={cityImages[to.slug] ?? fallbackImage}
+              alt={to.name}
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-6 left-6">
               <p className="text-sm text-gray-300 mb-1">{rp.to}</p>
-              <h3 className="text-2xl font-bold">{to}</h3>
+              <h3 className="text-2xl font-bold">{to.name}</h3>
             </div>
           </div>
         </div>
@@ -230,10 +186,10 @@ export default async function DynamicCityToCityPage({
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {rp.whyChoose.replace("{from}", from).replace("{to}", to)}
+              {rp.whyChoose.replace("{from}", from.name).replace("{to}", to.name)}
             </h2>
             <p className="text-gray-400 leading-relaxed mb-8">
-              {rp.whyChooseDesc.replace("{from}", from).replace("{to}", to)}
+              {rp.whyChooseDesc.replace("{from}", from.name).replace("{to}", to.name)}
             </p>
             <ul className="space-y-4">
               {rp.routeFeatures.map((benefit: string) => (
@@ -262,8 +218,8 @@ export default async function DynamicCityToCityPage({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] rounded-2xl overflow-hidden order-2 lg:order-1">
             <Image
-              src={toImage}
-              alt={to}
+              src={cityImages[to.slug] ?? fallbackImage}
+              alt={to.name}
               fill
               className="object-cover"
             />
@@ -273,7 +229,7 @@ export default async function DynamicCityToCityPage({
               {rp.aboutRoute}
             </h2>
             <p className="text-gray-400 leading-relaxed mb-6">
-              {rp.aboutRouteDesc1.replace("{from}", from).replace("{to}", to).replace("{distance}", routeInfo.distance)}
+              {rp.aboutRouteDesc1.replace("{from}", from.name).replace("{to}", to.name).replace("{distance}", distance)}
             </p>
             <p className="text-gray-400 leading-relaxed mb-8">
               {rp.aboutRouteDesc2}
@@ -328,7 +284,7 @@ export default async function DynamicCityToCityPage({
       <section className="bg-[#1c1d21] py-20 px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {rp.ctaTitle.replace("{from}", from).replace("{to}", to)}
+            {rp.ctaTitle.replace("{from}", from.name).replace("{to}", to.name)}
           </h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             {dict.cityToCity.cta.desc}
@@ -343,4 +299,12 @@ export default async function DynamicCityToCityPage({
       </section>
     </main>
   );
+}
+
+function resolveCityInAnyCountry(slug: string): City | undefined {
+  for (const country of COUNTRIES) {
+    const found = resolveCity(country, slug);
+    if (found) return found;
+  }
+  return undefined;
 }

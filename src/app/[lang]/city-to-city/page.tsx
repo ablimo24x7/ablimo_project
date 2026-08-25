@@ -3,8 +3,15 @@ import Link from "next/link";
 import Image from "next/image";
 import BookingWidget from "@/components/layout/BookingWidget";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import {
+  CITY_ROUTES,
+  cityNameBySlug,
+  cityUrl,
+  findCityByName,
+  routeUrl,
+} from "@/lib/locations";
 
-const cityToCityMetadata: Metadata = {
+export const metadata: Metadata = {
   title: "City-to-City Long Distance Car Service | AB.Limo",
   description:
     "Travel between cities in luxury and comfort. Book a long distance car service with professional chauffeurs and premium vehicles.",
@@ -19,21 +26,6 @@ const topCities = [
   { name: "Kuwait City", country: "Kuwait", image: "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop" },
   { name: "Muscat", country: "Oman", image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop" },
   { name: "Jeddah", country: "Saudi Arabia", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop" },
-];
-
-const topRoutes = [
-  { from: "Dubai", to: "Abu Dhabi", distance: "140 km", duration: "1h 30m" },
-  { from: "Dubai", to: "Sharjah", distance: "30 km", duration: "30m" },
-  { from: "Riyadh", to: "Dammam", distance: "400 km", duration: "4h 00m" },
-  { from: "Riyadh", to: "Jeddah", distance: "950 km", duration: "9h 00m" },
-  { from: "Doha", to: "Al Khor", distance: "50 km", duration: "45m" },
-  { from: "Jeddah", to: "Mecca", distance: "80 km", duration: "1h 00m" },
-  { from: "Manama", to: "Al Khobar", distance: "110 km", duration: "1h 30m" },
-  { from: "Kuwait City", to: "Doha", distance: "550 km", duration: "5h 30m" },
-  { from: "Muscat", to: "Abu Dhabi", distance: "350 km", duration: "3h 30m" },
-  { from: "Abu Dhabi", to: "Al Ain", distance: "150 km", duration: "1h 30m" },
-  { from: "Dubai", to: "Ras Al Khaimah", distance: "100 km", duration: "1h 00m" },
-  { from: "Mecca", to: "Medina", distance: "420 km", duration: "4h 15m" },
 ];
 
 export default async function CityToCityPage({
@@ -201,24 +193,28 @@ export default async function CityToCityPage({
           <div className="mb-16">
             <h3 className="text-xl font-semibold mb-6">{dict.cityToCity.routes.topCities}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {topCities.map((city) => (
-                <div
-                  key={city.name}
-                  className="relative h-40 rounded-xl overflow-hidden group cursor-pointer"
-                >
-                  <Image
-                    src={city.image}
-                    alt={city.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <h4 className="font-bold">{city.name}</h4>
-                    <p className="text-xs text-gray-300">{city.country}</p>
-                  </div>
-                </div>
-              ))}
+              {topCities.map((city) => {
+                const loc = findCityByName(city.name);
+                return (
+                  <Link
+                    key={city.name}
+                    href={loc ? cityUrl(lang, loc.country, loc.city) : "#"}
+                    className="relative h-40 rounded-xl overflow-hidden group cursor-pointer"
+                  >
+                    <Image
+                      src={city.image}
+                      alt={city.name}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <h4 className="font-bold">{city.name}</h4>
+                      <p className="text-xs text-gray-300">{city.country}</p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
@@ -226,25 +222,35 @@ export default async function CityToCityPage({
           <div>
             <h3 className="text-xl font-semibold mb-6">{dict.cityToCity.routes.topRoutes}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {topRoutes.map((route) => (
-                <div
-                  key={`${route.from}-${route.to}`}
-                  className="bg-[#292a30] p-5 rounded-xl flex items-center justify-between hover:bg-[#2a2c35] transition-colors"
-                >
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold">{route.from}</span>
-                      <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                      <span className="font-semibold">{route.to}</span>
+              {CITY_ROUTES.map((route) => {
+                const fromName = cityNameBySlug(route.fromSlug);
+                const toName = cityNameBySlug(route.toSlug);
+                const origin = findCityByName(fromName);
+                return (
+                  <Link
+                    key={`${route.fromSlug}-${route.toSlug}`}
+                    href={
+                      origin
+                        ? routeUrl(lang, origin.country, origin.city, route)
+                        : "#"
+                    }
+                    className="bg-[#292a30] p-5 rounded-xl flex items-center justify-between hover:bg-[#2a2c35] transition-colors"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="font-semibold">{fromName}</span>
+                        <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                        <span className="font-semibold">{toName}</span>
+                      </div>
+                      <p className="text-xs text-gray-400">
+                        {route.distance} &middot; {route.duration}
+                      </p>
                     </div>
-                    <p className="text-xs text-gray-400">
-                      {route.distance} &middot; {route.duration}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
