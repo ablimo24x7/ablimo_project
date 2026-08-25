@@ -149,6 +149,15 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
           <Button type="button" variant="outline" onClick={() => router.back()}>
             Cancel
           </Button>
+          {isEdit && form.slug && (
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => window.open(`/en-US/blog/${form.slug}?preview=true`, "_blank")}
+            >
+              View on Site
+            </Button>
+          )}
           <Button type="submit" disabled={mutation.isPending}>
             {mutation.isPending ? "Saving..." : isEdit ? "Update" : "Create"}
           </Button>

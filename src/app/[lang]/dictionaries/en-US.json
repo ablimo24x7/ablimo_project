@@ -2499,5 +2499,27 @@
   },
   "cityTaxiTitle": {
     "taxiAlternative": "Taxi Alternative"
+  },
+  "blog": {
+    "home": "Home",
+    "allArticles": "Blog",
+    "allArticlesDescription": "Explore our latest articles, guides, and news about premium transportation services.",
+    "minRead": "min read",
+    "keyTakeaways": "Key Takeaways",
+    "finalThoughts": "Final Thoughts",
+    "relatedArticles": "Related Articles",
+    "viewAllArticles": "View all articles",
+    "noArticles": "No articles found.",
+    "readMore": "Read more",
+    "countries": "Countries",
+    "cities": "Cities",
+    "cityToCity": "City to City",
+    "airportTransfers": "Airport Transfers",
+    "article": "Article",
+    "searchPlaceholder": "Search articles...",
+    "filterByType": "Filter by type",
+    "all": "All",
+    "publishedOn": "Published on",
+    "by": "by"
   }
 }

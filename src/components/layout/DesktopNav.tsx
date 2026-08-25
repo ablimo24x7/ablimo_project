@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { type Locale } from "@/app/[lang]/dictionaries";
+import { locationsUrl } from "@/lib/locations";
 import NavDropdown from "./NavDropdown";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -29,14 +30,14 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
     { label: dd.services.executiveChauffeur, href: `/${lang}/chauffeur-service` },
     { label: dd.services.chauffeurHailing, href: `/${lang}/chauffeur-service` },
     { label: dd.services.hourlyChauffeur, href: `/${lang}/car-service` },
-    { label: dd.services.airportTransfers, href: `/${lang}/airport-transfer` },
+    { label: dd.services.airportTransfers, href: locationsUrl(lang) },
     { label: dd.services.cityTransfers, href: `/${lang}/city-to-city` },
     { label: dd.services.intercityTransfers, href: `/${lang}/city-to-city` },
     { label: dd.services.limousineServices, href: `/${lang}/limousine-service` },
     { label: dd.services.busCharter, href: "#" },
     { label: dd.services.miniBusCharter, href: "#" },
     { label: dd.services.coachCharter, href: "#" },
-    { label: dd.services.airportCoachTransfers, href: `/${lang}/airport-transfer` },
+    { label: dd.services.airportCoachTransfers, href: locationsUrl(lang) },
   ];
 
   const tourismLinks = [
@@ -113,6 +114,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
         isOpen={openDropdown === "services"}
         onToggle={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
         onClose={() => setOpenDropdown(null)}
+        lang={lang}
       />
 
       <NavDropdown
@@ -122,6 +124,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
         isOpen={openDropdown === "solutions"}
         onToggle={() => setOpenDropdown(openDropdown === "solutions" ? null : "solutions")}
         onClose={() => setOpenDropdown(null)}
+        lang={lang}
       />
 
       <NavDropdown
@@ -131,6 +134,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
         isOpen={openDropdown === "industry"}
         onToggle={() => setOpenDropdown(openDropdown === "industry" ? null : "industry")}
         onClose={() => setOpenDropdown(null)}
+        lang={lang}
       />
 
       <NavDropdown
@@ -140,6 +144,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
         isOpen={openDropdown === "technology"}
         onToggle={() => setOpenDropdown(openDropdown === "technology" ? null : "technology")}
         onClose={() => setOpenDropdown(null)}
+        lang={lang}
       />
 
       <div className="w-px h-5 bg-gray-700 mx-1" />

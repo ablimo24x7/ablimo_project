@@ -21,17 +21,19 @@ interface NavDropdownProps {
   isOpen: boolean;
   onToggle: () => void;
   onClose: () => void;
+  lang?: string;
   columns?: number;
   alignRight?: boolean;
   triggerClassName?: string;
   children?: React.ReactNode;
 }
 
-export default function NavDropdown({ label, items, groups, isOpen, onToggle, onClose, columns = 1, alignRight = false, triggerClassName, children }: NavDropdownProps) {
+export default function NavDropdown({ label, items, groups, isOpen, onToggle, onClose, lang = "en-US", columns = 1, alignRight = false, triggerClassName, children }: NavDropdownProps) {
   const ref = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [hoveredGroup, setHoveredGroup] = useState<DropdownGroup | null>(null);
   const groupTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const isRtl = lang.split("-")[0] === "ar";
 
   const clearCloseTimeout = () => {
     if (timeoutRef.current) {
@@ -118,12 +120,12 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
       >
         {children}
         {label}
-        <i className="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+        <i className={`fa-solid fa-chevron-down ${isRtl ? "mr-1.5" : "ml-1.5"} text-[10px]`}></i>
       </button>
 
       {isOpen && (
         <div
-          className={`absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-2xl rounded-b-xl border-t-[3px] border-abGold z-50 ${
+          className={`absolute top-full ${isRtl ? "right-0" : "left-0"} bg-white shadow-2xl rounded-b-xl border-t-[3px] border-abGold z-50 ${
             groups
               ? `flex min-w-[280px]`
               : columns > 1
@@ -135,7 +137,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
         >
           {groups ? (
             <>
-              <div className="min-w-[240px] py-1 relative border-r border-gray-100">
+              <div className={`min-w-[240px] py-1 relative ${isRtl ? "border-l border-gray-100" : "border-r border-gray-100"}`}>
                 {groups.map((group) => (
                   <div
                     key={group.title}
@@ -149,14 +151,14 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
                   >
                     <div className="flex items-center justify-between font-semibold">
                       {group.title}
-                      <i className="fa-solid fa-chevron-right text-[10px] text-gray-400"></i>
+                      <i className={`fa-solid fa-chevron-${isRtl ? "left" : "right"} text-[10px] text-gray-400`}></i>
                     </div>
                   </div>
                 ))}
 
                 {hoveredGroup && (
                   <div
-                    className="absolute top-0 left-full min-w-[280px] bg-white border-l border-gray-100 shadow-xl py-1 max-h-[600px] overflow-y-auto z-50"
+                    className={`absolute top-0 min-w-[280px] bg-white shadow-xl py-1 max-h-[600px] overflow-y-auto z-50 ${isRtl ? "right-full border-r border-gray-100" : "left-full border-l border-gray-100"}`}
                     onMouseEnter={handleSubPanelMouseEnter}
                     onMouseLeave={handleSubPanelMouseLeave}
                   >

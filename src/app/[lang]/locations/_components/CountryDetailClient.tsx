@@ -4,15 +4,17 @@ import Link from "next/link";
 import Image from "next/image";
 import BookingWidget from "@/components/layout/BookingWidget";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-
-const countryNames: Record<string, string> = {
-    bh: "Bahrain",
-    kw: "Kuwait",
-    om: "Oman",
-    qa: "Qatar",
-    sa: "Saudi Arabia",
-    ae: "UAE",
-};
+import {
+    airportUrl,
+    cityUrl,
+    cityNameBySlug,
+    locationsUrl,
+    resolveCity,
+    routeSlugOf,
+    routeUrl,
+    routesForCountry,
+    type Country,
+} from "@/lib/locations";
 
 const countryHeroImages: Record<string, string> = {
     bh: "https://images.unsplash.com/photo-1547548731-e95343697eb4?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -23,61 +25,9 @@ const countryHeroImages: Record<string, string> = {
     ae: "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 };
 
-const cityNames: Record<string, string> = {
-    dubai: "Dubai",
-    "abu-dhabi": "Abu Dhabi",
-    sharjah: "Sharjah",
-    ajman: "Ajman",
-    "ras-al-khaimah": "Ras Al Khaimah",
-    riyadh: "Riyadh",
-    jeddah: "Jeddah",
-    mecca: "Mecca",
-    medina: "Medina",
-    dammam: "Dammam",
-    doha: "Doha",
-    "al-khor": "Al Khor",
-    lusail: "Lusail",
-    manama: "Manama",
-    riffa: "Riffa",
-    muharraq: "Muharraq",
-    kuwait: "Kuwait City",
-    hawalli: "Hawalli",
-    farwaniya: "Farwaniya",
-    muscat: "Muscat",
-    salalah: "Salalah",
-    sohar: "Sohar",
-};
-
-const citiesByCountry: Record<string, string[]> = {
-    ae: ["dubai", "abu-dhabi", "sharjah", "ajman", "ras-al-khaimah"],
-    sa: ["riyadh", "jeddah", "mecca", "medina", "dammam"],
-    qa: ["doha", "al-khor", "lusail"],
-    bh: ["manama", "riffa", "muharraq"],
-    kw: ["kuwait", "hawalli", "farwaniya"],
-    om: ["muscat", "salalah", "sohar"],
-};
-
-const cityToCityRoutes: Record<string, { label: string; href: string }[]> = {
-    bh: [{ label: "Dammam to Bahrain", href: "/city-to-city/dammam-to-bahrain" }],
-    kw: [{ label: "Kuwait City to Al Ahmadi", href: "/city-to-city/kuwait-city-al-ahmadi" }],
-    om: [{ label: "Muscat to Sohar", href: "/city-to-city/muscat-sohar" }],
-    qa: [{ label: "Doha to Lusail", href: "/city-to-city/doha-lusail" }],
-    sa: [
-        { label: "Riyadh to Dammam", href: "/city-to-city/riyadh-dammam" },
-        { label: "Riyadh to Jeddah", href: "/city-to-city/riyadh-jeddah" },
-        { label: "Jeddah to Mecca", href: "/city-to-city/jeddah-mecca" },
-        { label: "Mecca to Medina", href: "/city-to-city/mecca-medina" },
-    ],
-    ae: [
-        { label: "Abu Dhabi to Dubai", href: "/city-to-city/abu-dhabi-dubai" },
-        { label: "Dubai to Abu Dhabi", href: "/city-to-city/dubai-abu-dhabi" },
-        { label: "Dubai to Sharjah", href: "/city-to-city/dubai-sharjah" },
-    ],
-};
-
 const featureIcons = [
     <svg key="globe" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>,
     <svg key="clock" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -90,17 +40,17 @@ const featureIcons = [
 interface Props {
     dict: Dictionary;
     lang: string;
-    countrySlug: string;
+    country: Country;
 }
 
-export default function CountryDetailClient({ dict, lang, countrySlug }: Props) {
-    const countryName = countryNames[countrySlug] || countrySlug.toUpperCase();
-    const cities = citiesByCountry[countrySlug] || [];
+export default function CountryDetailClient({ dict, lang, country }: Props) {
+    const countryName = country.name;
     const cDict = dict.countries;
     const detail = cDict.detail;
     const heroTitle = detail.heroTitle.replace("{country}", countryName);
-    const heroImage = countryHeroImages[countrySlug] || countryHeroImages.ae;
-    const routes = cityToCityRoutes[countrySlug] || [];
+    const heroImage = countryHeroImages[country.code] || countryHeroImages.ae;
+    const routes = routesForCountry(country);
+    const citiesWithAirports = country.cities.filter((c) => c.airports.length > 0);
 
     return (
         <main className="min-h-screen bg-[#292a30] text-white">
@@ -154,7 +104,7 @@ export default function CountryDetailClient({ dict, lang, countrySlug }: Props) 
                             <span aria-hidden="true">→</span>
                         </li>
                         <li className="flex items-center gap-2">
-                            <Link href={`/${lang}/countries`} className="hover:text-white transition-colors">
+                            <Link href={locationsUrl(lang)} className="hover:text-white transition-colors">
                                 {cDict.breadcrumb.countries}
                             </Link>
                             <span aria-hidden="true">→</span>
@@ -206,13 +156,13 @@ export default function CountryDetailClient({ dict, lang, countrySlug }: Props) 
                         {detail.citiesHeading}
                     </h2>
                     <ul className="list-disc list-inside space-y-2 text-[16px] pl-2">
-                        {cities.map((slug) => (
-                            <li key={slug} className="text-white">
+                        {country.cities.map((cityObj) => (
+                            <li key={cityObj.slug} className="text-white">
                                 <Link
-                                    href={`/${lang}/countries/${countrySlug}/${slug}`}
+                                    href={cityUrl(lang, country, cityObj)}
                                     className="font-bold underline underline-offset-4 hover:text-gray-300 transition-colors"
                                 >
-                                    {detail.cityServiceSuffix.replace("{city}", cityNames[slug] || slug)}
+                                    {detail.cityServiceSuffix.replace("{city}", cityObj.name)}
                                 </Link>
                             </li>
                         ))}
@@ -225,14 +175,18 @@ export default function CountryDetailClient({ dict, lang, countrySlug }: Props) 
                         {detail.airportTransferHeading}
                     </h2>
                     <ul className="list-disc list-inside space-y-2 text-[16px] pl-2">
-                        <li>
-                            <Link
-                                href={`/${lang}/countries/${countrySlug}/airport-transfer`}
-                                className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
-                            >
-                                {detail.airportTransferLink.replace("{country}", countryName)}
-                            </Link>
-                        </li>
+                        {citiesWithAirports.flatMap((cityObj) =>
+                            cityObj.airports.map((airport) => (
+                                <li key={airport.slug}>
+                                    <Link
+                                        href={airportUrl(lang, country, cityObj, airport)}
+                                        className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
+                                    >
+                                        {cityObj.name} – {airport.name}
+                                    </Link>
+                                </li>
+                            ))
+                        )}
                     </ul>
                 </div>
 
@@ -244,7 +198,7 @@ export default function CountryDetailClient({ dict, lang, countrySlug }: Props) 
                     <ul className="list-disc list-inside space-y-2 text-[16px] pl-2">
                         <li>
                             <Link
-                                href={`/${lang}/countries/${countrySlug}/limousine-service`}
+                                href={`/${lang}/limousine-service`}
                                 className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
                             >
                                 {detail.limousineLink.replace("{country}", countryName)}
@@ -260,16 +214,19 @@ export default function CountryDetailClient({ dict, lang, countrySlug }: Props) 
                     </h2>
                     <ul className="list-disc list-inside space-y-2 text-[16px] pl-2">
                         {routes.length > 0 ? (
-                            routes.map((route, idx) => (
-                                <li key={idx}>
-                                    <Link
-                                        href={`/${lang}${route.href}`}
-                                        className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
-                                    >
-                                        {route.label}
-                                    </Link>
-                                </li>
-                            ))
+                            routes.map((route) => {
+                                const originCity = resolveCity(country, route.fromSlug)!;
+                                return (
+                                    <li key={routeSlugOf(route)}>
+                                        <Link
+                                            href={routeUrl(lang, country, originCity, route)}
+                                            className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
+                                        >
+                                            {cityNameBySlug(route.fromSlug)} to {cityNameBySlug(route.toSlug)}
+                                        </Link>
+                                    </li>
+                                );
+                            })
                         ) : (
                             <li>
                                 <Link

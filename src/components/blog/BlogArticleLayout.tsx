@@ -8,6 +8,12 @@ interface BlogArticleLayoutProps {
   lang: string;
   templateLabel: string;
   breadcrumbBase: { label: string; href: string };
+  homeLabel: string;
+  minReadLabel: string;
+  keyTakeawaysLabel: string;
+  finalThoughtsLabel: string;
+  authorLabel: string;
+  isArabic: boolean;
   children: React.ReactNode;
 }
 
@@ -16,6 +22,12 @@ export function BlogArticleLayout({
   lang,
   templateLabel,
   breadcrumbBase,
+  homeLabel,
+  minReadLabel,
+  keyTakeawaysLabel,
+  finalThoughtsLabel,
+  authorLabel,
+  isArabic,
   children,
 }: BlogArticleLayoutProps) {
   const heroImage =
@@ -46,18 +58,18 @@ export function BlogArticleLayout({
       {/* Breadcrumb */}
       <section className="max-w-7xl mx-auto px-8 pt-8 pb-4">
         <nav aria-label="Breadcrumb" className="flex justify-center">
-          <ol className="flex items-center gap-2 text-sm text-gray-400 flex-wrap text-center">
+          <ol className="flex items-center gap-2 text-sm text-gray-400 flex-wrap text-center" dir="ltr">
             <li className="flex items-center gap-2">
               <Link href={`/${lang}`} className="hover:text-white transition-colors">
-                Home
+                {homeLabel}
               </Link>
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true">{isArabic ? "←" : "→"}</span>
             </li>
             <li className="flex items-center gap-2">
               <Link href={breadcrumbBase.href} className="hover:text-white transition-colors">
                 {breadcrumbBase.label}
               </Link>
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true">{isArabic ? "←" : "→"}</span>
             </li>
             <li>
               <span className="text-white font-medium" aria-current="page">
@@ -70,20 +82,24 @@ export function BlogArticleLayout({
 
       {/* Meta Info */}
       <section className="max-w-7xl mx-auto px-8 pb-8">
-        <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+        <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400" dir="ltr">
           {article.authorName && (
             <span className="flex items-center gap-1.5">
               <User className="h-4 w-4" />
-              {article.authorName}
+              {authorLabel}
             </span>
           )}
           <span className="flex items-center gap-1.5">
             <Calendar className="h-4 w-4" />
-            {article.date}
+            {new Date(article.date).toLocaleDateString(isArabic ? "ar-SA" : "en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </span>
           <span className="flex items-center gap-1.5">
             <Clock className="h-4 w-4" />
-            {article.readTime} min read
+            {article.readTime} {minReadLabel}
           </span>
           {article.tags && article.tags.length > 0 && (
             <span className="flex items-center gap-1.5">
@@ -106,12 +122,13 @@ export function BlogArticleLayout({
           {/* Body Content */}
           {article.bodyContent && (
             <div
-              className="prose prose-lg prose-invert max-w-none
+              className={`prose prose-lg prose-invert max-w-none
                 prose-headings:font-serif prose-headings:text-white
                 prose-p:text-gray-300 prose-p:leading-relaxed
                 prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
                 prose-strong:text-white
-                prose-img:rounded-2xl"
+                prose-img:rounded-2xl ${isArabic ? "text-right" : ""}`}
+              dir={isArabic ? "rtl" : "ltr"}
               dangerouslySetInnerHTML={{ __html: article.bodyContent }}
             />
           )}
@@ -120,14 +137,15 @@ export function BlogArticleLayout({
           {article.keyTakeawaysContent && (
             <div className="mt-12 bg-[#1c1d21] rounded-2xl p-8">
               <h2 className="text-2xl font-serif font-bold text-white mb-4">
-                Key Takeaways
+                {keyTakeawaysLabel}
               </h2>
               <div
-                className="prose prose-lg prose-invert max-w-none
+                className={`prose prose-lg prose-invert max-w-none
                   prose-headings:font-serif prose-headings:text-white
                   prose-p:text-gray-300 prose-p:leading-relaxed
                   prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
-                  prose-strong:text-white"
+                  prose-strong:text-white ${isArabic ? "text-right" : ""}`}
+                dir={isArabic ? "rtl" : "ltr"}
                 dangerouslySetInnerHTML={{ __html: article.keyTakeawaysContent }}
               />
             </div>
@@ -137,14 +155,15 @@ export function BlogArticleLayout({
           {article.finalThoughtsContent && (
             <div className="mt-12">
               <h2 className="text-2xl font-serif font-bold text-white mb-4">
-                Final Thoughts
+                {finalThoughtsLabel}
               </h2>
               <div
-                className="prose prose-lg prose-invert max-w-none
+                className={`prose prose-lg prose-invert max-w-none
                   prose-headings:font-serif prose-headings:text-white
                   prose-p:text-gray-300 prose-p:leading-relaxed
                   prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
-                  prose-strong:text-white"
+                  prose-strong:text-white ${isArabic ? "text-right" : ""}`}
+                dir={isArabic ? "rtl" : "ltr"}
                 dangerouslySetInnerHTML={{ __html: article.finalThoughtsContent }}
               />
             </div>

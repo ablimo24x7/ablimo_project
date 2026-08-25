@@ -4,15 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { COUNTRIES, countryUrl } from "@/lib/locations";
 
-const countries = [
-  { name: "Bahrain", code: "bh", image: "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Kuwait", code: "kw", image: "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=800&h=600&fit=crop" },
-  { name: "Oman", code: "om", image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Qatar", code: "qa", image: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "Saudi Arabia", code: "sa", image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { name: "UAE", code: "ae", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop" },
-].sort((a, b) => a.name.localeCompare(b.name));
+const countryImages: Record<string, string> = {
+  bh: "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  kw: "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=800&h=600&fit=crop",
+  om: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  qa: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  sa: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ae: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+};
 
 const featureIcons = [
   <svg key="globe" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -29,7 +30,7 @@ const featureIcons = [
 export default function CountriesClient({ dict, lang }: { dict: Dictionary; lang: string }) {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredCountries = countries.filter((country) =>
+  const filteredCountries = COUNTRIES.filter((country) =>
     country.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -64,7 +65,7 @@ export default function CountriesClient({ dict, lang }: { dict: Dictionary; lang
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+          <Link href={`/${lang}`} className="hover:text-white transition-colors">
             {dict.countries.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
@@ -134,12 +135,12 @@ export default function CountriesClient({ dict, lang }: { dict: Dictionary; lang
             {filteredCountries.map((country) => (
               <Link
                 key={country.code}
-                href={`/${lang}/countries/${country.code}`}
+                href={countryUrl(lang, country)}
                 className="group bg-[#1c1d21] border border-gray-700/50 rounded-xl overflow-hidden hover:border-white/30 hover:bg-[#2a2c35] transition-all duration-300"
               >
                 <div className="relative h-32 overflow-hidden">
                   <Image
-                    src={country.image}
+                    src={countryImages[country.code]}
                     alt={country.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -151,7 +152,7 @@ export default function CountriesClient({ dict, lang }: { dict: Dictionary; lang
                     {country.name}
                   </h3>
                   <p className="text-xs text-gray-500 mt-1 uppercase">
-                    {country.code}
+                    {country.cities.length} {country.cities.length === 1 ? dict.common.city : dict.common.cities}
                   </p>
                 </div>
               </Link>
