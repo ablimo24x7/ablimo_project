@@ -113,6 +113,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
         isOpen={openDropdown === "services"}
         onToggle={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
         onClose={() => setOpenDropdown(null)}
+        lang={lang}
       />
 
       <NavDropdown
@@ -122,6 +123,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
         isOpen={openDropdown === "solutions"}
         onToggle={() => setOpenDropdown(openDropdown === "solutions" ? null : "solutions")}
         onClose={() => setOpenDropdown(null)}
+        lang={lang}
       />
 
       <NavDropdown
@@ -131,6 +133,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
         isOpen={openDropdown === "industry"}
         onToggle={() => setOpenDropdown(openDropdown === "industry" ? null : "industry")}
         onClose={() => setOpenDropdown(null)}
+        lang={lang}
       />
 
       <NavDropdown
@@ -140,6 +143,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
         isOpen={openDropdown === "technology"}
         onToggle={() => setOpenDropdown(openDropdown === "technology" ? null : "technology")}
         onClose={() => setOpenDropdown(null)}
+        lang={lang}
       />
 
       <div className="w-px h-5 bg-gray-700 mx-1" />

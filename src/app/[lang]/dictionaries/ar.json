@@ -2499,5 +2499,27 @@
   },
   "cityTaxiTitle": {
     "taxiAlternative": "بديل التاكسي"
+  },
+  "blog": {
+    "home": "الرئيسية",
+    "allArticles": "المدونة",
+    "allArticlesDescription": "استكشف أحدث مقالاتنا وأدلةنا وأخبار خدمات النقل الفاخرة.",
+    "minRead": "دقائق قراءة",
+    "keyTakeaways": "النقاط الرئيسية",
+    "finalThoughts": "أفكار أخيرة",
+    "relatedArticles": "مقالات ذات صلة",
+    "viewAllArticles": "عرض جميع المقالات",
+    "noArticles": "لم يتم العثور على مقالات.",
+    "readMore": "اقرأ المزيد",
+    "countries": "الدول",
+    "cities": "المدن",
+    "cityToCity": "من مدينة إلى أخرى",
+    "airportTransfers": "الانتقالات المطارية",
+    "article": "مقال",
+    "searchPlaceholder": "البحث في المقالات...",
+    "filterByType": "تصفية حسب النوع",
+    "all": "الكل",
+    "publishedOn": "نُشر في",
+    "by": "بقلم"
   }
 }

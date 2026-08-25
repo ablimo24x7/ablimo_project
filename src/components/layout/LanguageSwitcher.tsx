@@ -73,6 +73,8 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
     return segments.join("/");
   };
 
+  const isRtl = currentLang.split("-")[0] === "ar";
+
   return (
     <div className="relative" ref={ref}>
       <button
@@ -89,7 +91,7 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
 
       {isOpen && (
         <div
-          className="absolute right-0 top-full mt-1 bg-[#2a2c35] border border-gray-600/50 rounded-xl shadow-xl overflow-hidden min-w-[180px] z-50"
+          className={`absolute top-full mt-1 bg-[#2a2c35] border border-gray-600/50 rounded-xl shadow-xl overflow-hidden min-w-[180px] z-50 ${isRtl ? "right-0" : "left-0"}`}
           onMouseEnter={handlePanelMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
