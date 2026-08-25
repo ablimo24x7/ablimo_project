@@ -4,6 +4,7 @@ import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
 import {
   COUNTRIES,
   cityUrl,
+  citiesUrl,
   countryUrl,
   locationsUrl,
   resolveCity,
@@ -77,7 +78,7 @@ export default async function Footer({ lang }: FooterProps) {
         { label: d.locations.bahrain, href: country("bh") },
         { label: d.locations.oman, href: country("om") },
         { label: d.locations.europeUkUsa, href: locationsUrl(lang) },
-        { label: d.locations.allCities, href: locationsUrl(lang) },
+        { label: d.locations.allCities, href: citiesUrl(lang) },
         { label: d.locations.allCountries, href: locationsUrl(lang) },
       ],
     },

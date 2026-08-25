@@ -241,6 +241,20 @@ export function locationsUrl(lang: string): string {
   return `/${lang}/locations`;
 }
 
+export function citiesUrl(lang: string): string {
+  return `/${lang}/locations/cities`;
+}
+
+export function allCities(): { country: Country; city: City }[] {
+  const result: { country: Country; city: City }[] = [];
+  for (const c of COUNTRIES) {
+    for (const cityObj of c.cities) {
+      result.push({ country: c, city: cityObj });
+    }
+  }
+  return result;
+}
+
 export function countryUrl(lang: string, country: Country): string {
   return `/${lang}/locations/${country.slug}`;
 }

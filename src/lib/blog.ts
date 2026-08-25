@@ -62,12 +62,22 @@ export async function getAllPublishedArticles(
   locale: string = "en"
 ): Promise<ArticleDoc[]> {
   await connectDB();
-  const articles = await Article.find({
+  let articles = await Article.find({
     ...localeFilter(locale),
     status: "published",
   })
     .sort({ date: -1 })
     .lean();
+
+  if (articles.length === 0 && locale !== "en") {
+    articles = await Article.find({
+      ...localeFilter("en"),
+      status: "published",
+    })
+      .sort({ date: -1 })
+      .lean();
+  }
+
   return articles as ArticleDoc[];
 }
 
