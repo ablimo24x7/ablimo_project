@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
+import { redirects } from "./config/redirects";
 
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
+  redirects,
   images: {
     remotePatterns: [
       {
