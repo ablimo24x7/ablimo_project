@@ -59,7 +59,7 @@ export default async function CarServicePage({
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden pt-24 pb-10">
         <Image
           src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1920&h=800&fit=crop"
           alt="Professional Car Service"
@@ -68,7 +68,7 @@ export default async function CarServicePage({
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#292a30]" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-8 flex flex-col lg:flex-row items-end justify-between gap-8">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
               {dict.carService.title}
