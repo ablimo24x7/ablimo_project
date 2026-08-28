@@ -57,6 +57,75 @@ export interface IndustryContent {
   ctaHref?: string;
 }
 
+export interface IndustryPageTexts {
+  badge: string;
+  title: string;
+  subtitle: string;
+  ctaTitle: string;
+  ctaDesc: string;
+  ctaLabel: string;
+  features?: { title: string; desc: string }[];
+  cardsHeading?: string;
+  cardsDesc?: string;
+  cards: { tag?: string; title: string; desc: string }[];
+  sections?: {
+    imageAlt: string;
+    title: string;
+    paragraphs: string[];
+    bullets: { text: string }[];
+  }[];
+  faqs: { q: string; a: string }[];
+}
+
+export interface IndustryStructure {
+  heroImage: string;
+  featureIcons?: React.ReactNode[];
+  cardImages: string[];
+  sectionImages: {
+    image: string;
+    dark?: boolean;
+    imageSide?: "left" | "right";
+  }[];
+}
+
+export function buildIndustryContent(
+  texts: IndustryPageTexts,
+  structure: IndustryStructure
+): IndustryContent {
+  return {
+    badge: texts.badge,
+    title: texts.title,
+    subtitle: texts.subtitle,
+    heroImage: structure.heroImage,
+    ctaTitle: texts.ctaTitle,
+    ctaDesc: texts.ctaDesc,
+    ctaLabel: texts.ctaLabel,
+    features: (texts.features ?? []).map((f, i) => ({
+      icon: structure.featureIcons?.[i] ?? null,
+      title: f.title,
+      desc: f.desc,
+    })),
+    cardsHeading: texts.cardsHeading,
+    cardsDesc: texts.cardsDesc,
+    cards: texts.cards.map((c, i) => ({
+      image: structure.cardImages[i],
+      tag: c.tag,
+      title: c.title,
+      desc: c.desc,
+    })),
+    sections: (texts.sections ?? []).map((s, i) => ({
+      image: structure.sectionImages[i].image,
+      imageAlt: s.imageAlt,
+      title: s.title,
+      paragraphs: s.paragraphs,
+      bullets: s.bullets,
+      dark: structure.sectionImages[i].dark,
+      imageSide: structure.sectionImages[i].imageSide,
+    })),
+    faqs: texts.faqs,
+  };
+}
+
 const CheckIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={`${className} text-green-400 mt-0.5 flex-shrink-0`} fill="currentColor" viewBox="0 0 24 24">
     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
@@ -76,6 +145,9 @@ export default async function IndustryPage({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
   const homeLabel = dict.common?.breadcrumb?.home ?? "Home";
+  const industriesLabel =
+    dict.industries?.breadcrumb?.industries ?? "Industries";
+  const faqTitle = dict.industries?.faqTitle ?? "Frequently Asked Questions";
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
@@ -115,7 +187,7 @@ export default async function IndustryPage({
           </Link>
           <span className="mx-2">/</span>
           <Link href={`/${lang}/industries`} className="hover:text-white transition-colors">
-            Industries
+            {industriesLabel}
           </Link>
           <span className="mx-2">/</span>
           <span className="text-white">{breadcrumb}</span>
@@ -243,7 +315,7 @@ export default async function IndustryPage({
         <section className="bg-[#1c1d21] py-20 px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Frequently Asked Questions
+              {faqTitle}
             </h2>
             <div className="space-y-4">
               {content.faqs.map((item) => (

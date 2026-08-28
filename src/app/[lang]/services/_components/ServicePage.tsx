@@ -56,6 +56,73 @@ export interface ServiceContent {
   ctaHref?: string;
 }
 
+export interface ServicePageTexts {
+  title: string;
+  subtitle: string;
+  ctaTitle: string;
+  ctaDesc: string;
+  ctaLabel: string;
+  features?: { title: string; desc: string }[];
+  cardsHeading?: string;
+  cardsDesc?: string;
+  cards: { tag?: string; title: string; desc: string }[];
+  sections?: {
+    imageAlt: string;
+    title: string;
+    paragraphs: string[];
+    bullets: { text: string }[];
+  }[];
+  faqs: { q: string; a: string }[];
+}
+
+export interface ServiceStructure {
+  heroImage: string;
+  featureIcons?: React.ReactNode[];
+  cardImages: string[];
+  sectionImages: {
+    image: string;
+    dark?: boolean;
+    imageSide?: "left" | "right";
+  }[];
+}
+
+export function buildServiceContent(
+  texts: ServicePageTexts,
+  structure: ServiceStructure
+): ServiceContent {
+  return {
+    title: texts.title,
+    subtitle: texts.subtitle,
+    heroImage: structure.heroImage,
+    ctaTitle: texts.ctaTitle,
+    ctaDesc: texts.ctaDesc,
+    ctaLabel: texts.ctaLabel,
+    features: (texts.features ?? []).map((f, i) => ({
+      icon: structure.featureIcons?.[i] ?? null,
+      title: f.title,
+      desc: f.desc,
+    })),
+    cardsHeading: texts.cardsHeading,
+    cardsDesc: texts.cardsDesc,
+    cards: texts.cards.map((c, i) => ({
+      image: structure.cardImages[i],
+      tag: c.tag,
+      title: c.title,
+      desc: c.desc,
+    })),
+    sections: (texts.sections ?? []).map((s, i) => ({
+      image: structure.sectionImages[i].image,
+      imageAlt: s.imageAlt,
+      title: s.title,
+      paragraphs: s.paragraphs,
+      bullets: s.bullets,
+      dark: structure.sectionImages[i].dark,
+      imageSide: structure.sectionImages[i].imageSide,
+    })),
+    faqs: texts.faqs,
+  };
+}
+
 const CheckIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={`${className} text-green-400 mt-0.5 flex-shrink-0`} fill="currentColor" viewBox="0 0 24 24">
     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
@@ -75,6 +142,8 @@ export default async function ServicePage({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
   const homeLabel = dict.common?.breadcrumb?.home ?? "Home";
+  const servicesLabel = dict.services?.breadcrumb?.services ?? "Services";
+  const faqTitle = dict.services?.faqTitle ?? "Frequently Asked Questions";
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
@@ -94,7 +163,7 @@ export default async function ServicePage({
             <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abGold/10 border border-abGold/30 mb-5">
               <span className="w-2 h-2 rounded-full bg-abGold animate-pulse"></span>
               <span className="text-abGold text-xs font-bold tracking-widest uppercase">
-                AB.Limo Luxury Mobility
+                {dict.services?.luxuryMobility ?? "AB.Limo Luxury Mobility"}
               </span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
@@ -114,7 +183,7 @@ export default async function ServicePage({
           </Link>
           <span className="mx-2">/</span>
           <Link href={`/${lang}/services`} className="hover:text-white transition-colors">
-            Services
+            {servicesLabel}
           </Link>
           <span className="mx-2">/</span>
           <span className="text-white">{breadcrumb}</span>
@@ -242,7 +311,7 @@ export default async function ServicePage({
         <section className="bg-[#1c1d21] py-20 px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Frequently Asked Questions
+              {faqTitle}
             </h2>
             <div className="space-y-4">
               {content.faqs.map((item) => (
