@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { COUNTRIES, countryUrl } from "@/lib/locations";
+import { countryUrl, type Country } from "@/lib/locations";
 
 const countryImages: Record<string, string> = {
   bh: "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -27,10 +27,10 @@ const featureIcons = [
   </svg>,
 ];
 
-export default function CountriesClient({ dict, lang }: { dict: Dictionary; lang: string }) {
+export default function CountriesClient({ dict, lang, countries }: { dict: Dictionary; lang: string; countries: Country[] }) {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredCountries = COUNTRIES.filter((country) =>
+  const filteredCountries = countries.filter((country) =>
     country.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -140,7 +140,7 @@ export default function CountriesClient({ dict, lang }: { dict: Dictionary; lang
               >
                 <div className="relative h-32 overflow-hidden">
                   <Image
-                    src={countryImages[country.code]}
+                    src={countryImages[country.code] || countryImages.ae}
                     alt={country.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"

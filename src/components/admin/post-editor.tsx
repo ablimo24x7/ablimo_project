@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
+import { allIsoCountries } from "@/lib/iso3166";
 import { toast } from "sonner";
 import slugify from "slugify";
 
@@ -39,9 +40,16 @@ type PostData = {
   finalThoughtsContent: string;
   featured: boolean;
   tags: string[];
+  authorName: string;
+  date: string;
+  readTime: number;
+  articleMedia: {
+    heroCoverMedia: { url: string };
+  };
   seo_metadata: {
     metaTitle: string;
     metaDescription: string;
+    ogImage: string;
   };
 };
 
@@ -63,7 +71,11 @@ const defaultPost: PostData = {
   finalThoughtsContent: "",
   featured: false,
   tags: [],
-  seo_metadata: { metaTitle: "", metaDescription: "" },
+  authorName: "",
+  date: new Date().toISOString().slice(0, 10),
+  readTime: 5,
+  articleMedia: { heroCoverMedia: { url: "" } },
+  seo_metadata: { metaTitle: "", metaDescription: "", ogImage: "" },
 };
 
 interface PostEditorProps {
@@ -71,11 +83,41 @@ interface PostEditorProps {
   mode?: "create" | "edit";
 }
 
+function normalizePost(data?: PostData): PostData {
+  const d: Partial<PostData> = data ?? {};
+  return {
+    ...defaultPost,
+    ...d,
+    articleMedia: {
+      heroCoverMedia: {
+        url: d.articleMedia?.heroCoverMedia?.url ?? defaultPost.articleMedia.heroCoverMedia.url,
+      },
+    },
+    seo_metadata: {
+      metaTitle: d.seo_metadata?.metaTitle ?? "",
+      metaDescription: d.seo_metadata?.metaDescription ?? "",
+      ogImage: d.seo_metadata?.ogImage ?? "",
+    },
+  };
+}
+
 export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
   const router = useRouter();
   const queryClient = useQueryClient();
-  const [form, setForm] = React.useState<PostData>(initialData ?? defaultPost);
+  const [form, setForm] = React.useState<PostData>(() => normalizePost(initialData));
   const [tagInput, setTagInput] = React.useState("");
+
+  const countryOptions = React.useMemo(() => allIsoCountries(), []);
+
+  const { data: categories } = useQuery({
+    queryKey: ["categories"],
+    queryFn: async () => {
+      const res = await fetch("/api/categories");
+      if (!res.ok) throw new Error("Failed");
+      return res.json() as Promise<{ items: Array<{ _id: string; label: string; slug: string }> }>;
+    },
+  });
+  const categoryItems = categories?.items ?? [];
 
   const isEdit = mode === "edit" && form._id;
 
@@ -181,6 +223,17 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
                 <Label>Excerpt</Label>
                 <Textarea rows={3} value={form.excerpt} onChange={(e) => updateField("excerpt", e.target.value)} />
               </div>
+              <div className="space-y-2">
+                <Label>Author Name</Label>
+                <Input value={form.authorName} onChange={(e) => updateField("authorName", e.target.value)} placeholder="e.g. Admin" />
+              </div>
+              <div className="space-y-2">
+                <Label>Cover Image URL</Label>
+                <Input value={form.articleMedia.heroCoverMedia.url} onChange={(e) => updateField("articleMedia", { heroCoverMedia: { url: e.target.value } })} placeholder="https://..." />
+                {form.articleMedia.heroCoverMedia.url && (
+                  <img src={form.articleMedia.heroCoverMedia.url} alt="Cover preview" className="mt-2 h-32 w-full rounded-md object-cover" />
+                )}
+              </div>
             </CardContent>
           </Card>
 
@@ -208,6 +261,25 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
             <CardHeader><CardTitle>Publish</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
+                <Label>Category *</Label>
+                <Select
+                  value={form.category}
+                  onValueChange={(v) => {
+                    if (!v) return;
+                    const cat = categoryItems.find((c) => c.slug === v);
+                    updateField("category", v);
+                    updateField("categoryLabel", cat?.label || v);
+                  }}
+                >
+                  <SelectTrigger><SelectValue placeholder="Select a category" /></SelectTrigger>
+                  <SelectContent>
+                    {categoryItems.map((c) => (
+                      <SelectItem key={c._id} value={c.slug}>{c.label}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
                 <Label>Status</Label>
                 <Select value={form.status} onValueChange={(v) => v && updateField("status", v)}>
                   <SelectTrigger><SelectValue /></SelectTrigger>
@@ -223,6 +295,14 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
               <div className="flex items-center justify-between">
                 <Label>Featured</Label>
                 <Switch checked={form.featured} onCheckedChange={(v) => updateField("featured", v)} />
+              </div>
+              <div className="space-y-2">
+                <Label>Publication Date</Label>
+                <Input type="date" value={form.date?.slice(0, 10) ?? ""} onChange={(e) => updateField("date", e.target.value)} />
+              </div>
+              <div className="space-y-2">
+                <Label>Read Time (minutes)</Label>
+                <Input type="number" min={1} value={form.readTime} onChange={(e) => updateField("readTime", Number(e.target.value))} />
               </div>
             </CardContent>
           </Card>
@@ -245,7 +325,14 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
               {(form.templateType === "country" || form.templateType === "city") && (
                 <div className="space-y-2">
                   <Label>Country</Label>
-                  <Input value={form.country} onChange={(e) => updateField("country", e.target.value)} />
+                  <Select value={form.country} onValueChange={(v) => v && updateField("country", v)}>
+                    <SelectTrigger><SelectValue placeholder="Select a country" /></SelectTrigger>
+                    <SelectContent>
+                      {countryOptions.map((c) => (
+                        <SelectItem key={c.code} value={c.name}>{c.name}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
               )}
               {(form.templateType === "city" || form.templateType === "city-to-city") && (
@@ -285,6 +372,10 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
               <div className="space-y-2">
                 <Label>Meta Description</Label>
                 <Textarea rows={3} value={form.seo_metadata.metaDescription} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaDescription: e.target.value })} />
+              </div>
+              <div className="space-y-2">
+                <Label>OG Image URL</Label>
+                <Input value={form.seo_metadata.ogImage} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, ogImage: e.target.value })} placeholder="https://..." />
               </div>
             </CardContent>
           </Card>

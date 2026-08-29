@@ -28,6 +28,23 @@ export const authOptions: NextAuthOptions = {
         if (!parsed.success) return null;
 
         await connectDB();
+
+        // In-memory fallback when the database is disabled/unavailable
+        if (!process.env.USE_DATABASE || process.env.USE_DATABASE === "false") {
+          const fallbackEmail = "admin@ablimo.com";
+          const fallbackPassword = "admin123";
+          if (parsed.data.email.toLowerCase() === fallbackEmail && parsed.data.password === fallbackPassword) {
+            return {
+              id: "memory-admin",
+              name: "Admin",
+              email: fallbackEmail,
+              roles: ["admin"],
+              avatarUrl: null,
+            };
+          }
+          return null;
+        }
+
         const user = await User.findOne({ email: parsed.data.email }).lean();
         if (!user) return null;
         if (!user.isActive) return null;
@@ -53,7 +70,8 @@ export const authOptions: NextAuthOptions = {
         (token as JWT).roles = (user as { roles?: string[] }).roles ?? ((token as JWT).roles ?? []);
         token.email = (user as { email?: string | null }).email ?? token.email;
         token.name = (user as { name?: string | null }).name ?? token.name;
-        (token as JWT).avatarUrl = (user as any).avatarUrl ?? null;
+        (token as JWT).avatarUrl =
+          (user as { avatarUrl?: string | null | undefined }).avatarUrl ?? null;
       }
       return token;
     },

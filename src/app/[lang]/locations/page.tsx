@@ -1,4 +1,5 @@
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { getAllCountries } from "@/lib/locationData";
 import CountriesClient from "./_components/CountriesClient";
 
 export const metadata = {
@@ -16,5 +17,7 @@ export default async function LocationsPage({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
 
-  return <CountriesClient dict={dict} lang={lang} />;
+  const countries = await getAllCountries();
+
+  return <CountriesClient dict={dict} lang={lang} countries={countries} />;
 }

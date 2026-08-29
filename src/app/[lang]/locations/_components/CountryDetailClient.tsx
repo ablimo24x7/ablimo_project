@@ -7,14 +7,13 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
     airportUrl,
     cityUrl,
-    cityNameBySlug,
     locationsUrl,
-    resolveCity,
-    routeSlugOf,
     routeUrl,
-    routesForCountry,
+    titleFromSlug,
+    type CityRoute,
     type Country,
 } from "@/lib/locations";
+import ShowMoreGrid from "./ShowMoreGrid";
 
 const countryHeroImages: Record<string, string> = {
     bh: "https://images.unsplash.com/photo-1547548731-e95343697eb4?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -41,16 +40,19 @@ interface Props {
     dict: Dictionary;
     lang: string;
     country: Country;
+    routes?: CityRoute[];
 }
 
-export default function CountryDetailClient({ dict, lang, country }: Props) {
+export default function CountryDetailClient({ dict, lang, country, routes = [] }: Props) {
     const countryName = country.name;
     const cDict = dict.countries;
     const detail = cDict.detail;
     const heroTitle = detail.heroTitle.replace("{country}", countryName);
     const heroImage = countryHeroImages[country.code] || countryHeroImages.ae;
-    const routes = routesForCountry(country);
-    const citiesWithAirports = country.cities.filter((c) => c.airports.length > 0);
+    const citiesWithAirports = (country.cities ?? []).filter((c) => c.airports.length > 0);
+
+    const cityNameFor = (slug: string) =>
+        (country.cities ?? []).find((c) => c.slug === slug)?.name ?? titleFromSlug(slug);
 
     return (
         <main className="min-h-screen bg-[#292a30] text-white">
@@ -137,107 +139,142 @@ export default function CountryDetailClient({ dict, lang, country }: Props) {
             </section>
 
             {/* Intro & Links Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-10 space-y-6">
-                <p className="text-gray-300 text-[16px] leading-relaxed">
-                    {detail.intro.replace("{country}", countryName)}
-                </p>
+            <section className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-10 space-y-12">
+                <div className="space-y-6">
+                    <p className="text-gray-300 text-[16px] leading-relaxed">
+                        {detail.intro.replace("{country}", countryName)}
+                    </p>
 
-                <p className="text-gray-300 text-[16px] leading-relaxed">
-                    {detail.subIntro}
-                </p>
+                    <p className="text-gray-300 text-[16px] leading-relaxed">
+                        {detail.subIntro}
+                    </p>
 
-                <p className="text-gray-300 text-[16px] leading-relaxed pb-4">
-                    {detail.rangeHeading.replace("{country}", countryName)}
-                </p>
+                    <p className="text-gray-300 text-[16px] leading-relaxed pb-4">
+                        {detail.rangeHeading.replace("{country}", countryName)}
+                    </p>
+                </div>
 
                 {/* 1. Cities Section */}
-                <div className="space-y-3 pt-2">
+                <div className="space-y-6 pt-2">
                     <h2 className="text-3xl font-serif font-bold text-white tracking-tight">
                         {detail.citiesHeading}
                     </h2>
-                    <ul className="list-disc list-inside space-y-2 text-[16px] pl-2">
-                        {country.cities.map((cityObj) => (
-                            <li key={cityObj.slug} className="text-white">
-                                <Link
-                                    href={cityUrl(lang, country, cityObj)}
-                                    className="font-bold underline underline-offset-4 hover:text-gray-300 transition-colors"
-                                >
-                                    {detail.cityServiceSuffix.replace("{city}", cityObj.name)}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                    <ShowMoreGrid
+                        items={(country.cities ?? []).map((cityObj) => ({
+                            slug: cityObj.slug,
+                            name: cityObj.name,
+                            href: cityUrl(lang, country, cityObj),
+                        }))}
+                        moreLabel={dict.press.showMore}
+                        lessLabel={dict.press.showLess}
+                        renderItem={(c) => (
+                            <Link
+                                href={c.href}
+                                className="block h-full bg-[#1c1d21] border border-gray-700/50 rounded-xl px-4 py-5 text-center hover:border-white/30 hover:bg-[#2a2c35] transition-all"
+                            >
+                                <h3 className="text-sm font-semibold text-gray-200 hover:text-white transition-colors">
+                                    {c.name}
+                                </h3>
+                            </Link>
+                        )}
+                    />
                 </div>
 
                 {/* 2. Airport Transfer Section */}
-                <div className="space-y-3 pt-6">
+                <div className="space-y-6 pt-2">
                     <h2 className="text-3xl font-serif font-bold text-white tracking-tight">
                         {detail.airportTransferHeading}
                     </h2>
-                    <ul className="list-disc list-inside space-y-2 text-[16px] pl-2">
-                        {citiesWithAirports.flatMap((cityObj) =>
-                            cityObj.airports.map((airport) => (
-                                <li key={airport.slug}>
-                                    <Link
-                                        href={airportUrl(lang, country, cityObj, airport)}
-                                        className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
-                                    >
-                                        {cityObj.name} – {airport.name}
-                                    </Link>
-                                </li>
-                            ))
+                    <ShowMoreGrid
+                        items={citiesWithAirports.flatMap((cityObj) =>
+                            cityObj.airports.map((airport) => ({
+                                slug: airport.slug,
+                                name: `${cityObj.name} – ${airport.name}`,
+                                iata: airport.iata,
+                                href: airportUrl(lang, country, cityObj, airport),
+                            }))
                         )}
-                    </ul>
+                        moreLabel={dict.press.showMore}
+                        lessLabel={dict.press.showLess}
+                        renderItem={(a) => (
+                            <Link
+                                href={a.href}
+                                className="block h-full bg-[#1c1d21] border border-gray-700/50 rounded-xl px-4 py-5 hover:border-white/30 hover:bg-[#2a2c35] transition-all"
+                            >
+                                <h3 className="text-sm font-semibold text-gray-200 hover:text-white transition-colors truncate">
+                                    {a.name}
+                                </h3>
+                                {a.iata && (
+                                    <span className="inline-block mt-2 text-[11px] uppercase tracking-wide text-abGold">
+                                        {a.iata}
+                                    </span>
+                                )}
+                            </Link>
+                        )}
+                    />
                 </div>
 
                 {/* 3. Limousine Service Section */}
-                <div className="space-y-3 pt-6">
+                <div className="space-y-3 pt-2">
                     <h2 className="text-3xl font-serif font-bold text-white tracking-tight">
                         {detail.limousineHeading}
                     </h2>
-                    <ul className="list-disc list-inside space-y-2 text-[16px] pl-2">
-                        <li>
-                            <Link
-                                href={`/${lang}/limousine-service`}
-                                className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
-                            >
-                                {detail.limousineLink.replace("{country}", countryName)}
-                            </Link>
-                        </li>
-                    </ul>
+                    <Link
+                        href={`/${lang}/limousine-service`}
+                        className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
+                    >
+                        {detail.limousineLink.replace("{country}", countryName)}
+                    </Link>
                 </div>
 
                 {/* 4. City-to-City Service Section */}
-                <div className="space-y-3 pt-6">
+                <div className="space-y-6 pt-2">
                     <h2 className="text-3xl font-serif font-bold text-white tracking-tight">
                         City-to-City Service
                     </h2>
-                    <ul className="list-disc list-inside space-y-2 text-[16px] pl-2">
-                        {routes.length > 0 ? (
-                            routes.map((route) => {
-                                const originCity = resolveCity(country, route.fromSlug)!;
-                                return (
-                                    <li key={routeSlugOf(route)}>
-                                        <Link
-                                            href={routeUrl(lang, country, originCity, route)}
-                                            className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
-                                        >
-                                            {cityNameBySlug(route.fromSlug)} to {cityNameBySlug(route.toSlug)}
-                                        </Link>
-                                    </li>
+                    {routes.length > 0 ? (
+                        <ShowMoreGrid
+                            items={routes.map((route) => {
+                                const originCity = (country.cities ?? []).find(
+                                    (c) => c.slug === route.fromSlug
                                 );
-                            })
-                        ) : (
-                            <li>
+                                return {
+                                    ...route,
+                                    href: originCity
+                                        ? routeUrl(lang, country, originCity, route)
+                                        : `/${lang}/city-to-city`,
+                                };
+                            })}
+                            moreLabel={dict.press.showMore}
+                            lessLabel={dict.press.showLess}
+                            renderItem={(r) => (
                                 <Link
-                                    href={`/${lang}/city-to-city`}
-                                    className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
+                                    href={r.href}
+                                    className="block h-full bg-[#1c1d21] border border-gray-700/50 rounded-xl px-4 py-5 hover:border-white/30 hover:bg-[#2a2c35] transition-all"
                                 >
-                                    {countryName} City-to-City Rides
+                                    <div className="flex items-center justify-center gap-2 text-sm font-semibold text-gray-200 hover:text-white transition-colors">
+                                        <span>{cityNameFor(r.fromSlug)}</span>
+                                        <span className="text-abGold">→</span>
+                                        <span>{cityNameFor(r.toSlug)}</span>
+                                    </div>
+                                    {(r.distance || r.duration) && (
+                                        <div className="mt-2 text-center text-xs text-gray-500">
+                                            {r.distance}
+                                            {r.distance && r.duration ? " · " : ""}
+                                            {r.duration}
+                                        </div>
+                                    )}
                                 </Link>
-                            </li>
-                        )}
-                    </ul>
+                            )}
+                        />
+                    ) : (
+                        <Link
+                            href={`/${lang}/city-to-city`}
+                            className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
+                        >
+                            {countryName} City-to-City Rides
+                        </Link>
+                    )}
                 </div>
             </section>
         </main>
