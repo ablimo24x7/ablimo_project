@@ -40,6 +40,11 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
     { label: dd.services.airportCoachTransfers, href: locationsUrl(lang) },
   ];
 
+  const appServiceLinks = dict.services.categories.map((category) => ({
+    label: category.title,
+    href: `/${lang}/services/${category.slug}`,
+  }));
+
   const tourismLinks = [
     { label: dd.tourism.tourismDmc, href: "#" },
     { label: dd.tourism.hospitality, href: "#" },
@@ -110,7 +115,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
       <NavDropdown
         id="services"
         label={nav.ourServices}
-        items={serviceLinks}
+        items={[...appServiceLinks, ...serviceLinks]}
         isOpen={openDropdown === "services"}
         onToggle={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
         onClose={() => setOpenDropdown(null)}

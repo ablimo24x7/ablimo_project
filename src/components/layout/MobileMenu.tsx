@@ -272,15 +272,6 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
               </div>
             ))}
 
-            {/* Help link */}
-            <Link
-              href={`/${lang}/about`}
-              onClick={() => setIsOpen(false)}
-              className="text-gray-300 hover:text-abGold text-lg font-medium py-3 border-b border-gray-800 transition-colors"
-            >
-              {nav.help}
-            </Link>
-
             {/* Technology link */}
             <div className="border-b border-gray-800">
               <button
