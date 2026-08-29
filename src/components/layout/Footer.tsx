@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
 import {
   COUNTRIES,
@@ -201,6 +200,7 @@ export default async function Footer({ lang }: FooterProps) {
           >
             {dict.header.logo}
           </Link>
+          {/* App download badges (Android & Apple) - hidden for all screens
           <div className="flex gap-4">
             <a href="#" className="hover:opacity-80 transition-opacity">
               <Image
@@ -221,6 +221,7 @@ export default async function Footer({ lang }: FooterProps) {
               />
             </a>
           </div>
+          */}
         </div>
 
         {/* Links Grid */}
