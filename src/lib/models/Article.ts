@@ -42,14 +42,31 @@ const articleSchema = new Schema(
     // ── ABLimo Template Fields ─────────────────────────────
     templateType: {
       type: String,
-      enum: ["country", "city", "city-to-city", "airport"],
-      default: "country",
+      enum: ["service-country", "service-city"],
+      default: "service-country",
     },
+    serviceSlug: {
+      type: String,
+      enum: [
+        "chauffeur-vip",
+        "airport-transfers",
+        "corporate-transportation",
+        "event-transportation",
+        "bus-coach-hire",
+        "tourism-transportation",
+      ],
+      default: "",
+    },
+    countrySlug: {
+      type: String,
+      enum: ["saudi-arabia", "uae", "qatar", "bahrain", "kuwait", "oman", "gcc"],
+      default: "",
+    },
+    citySlug: { type: String, default: "" },
     country: { type: String, default: "" },
     city: { type: String, default: "" },
     routeFrom: { type: String, default: "" },
     routeTo: { type: String, default: "" },
-    airportName: { type: String, default: "" },
 
     // ── SEO ────────────────────────────────────────────────
     seo_metadata: {
@@ -70,6 +87,11 @@ articleSchema.index({ status: 1 });
 articleSchema.index({ category: 1 });
 articleSchema.index({ featured: 1 });
 articleSchema.index({ templateType: 1 });
+articleSchema.index({ serviceSlug: 1 });
+articleSchema.index({ countrySlug: 1 });
+articleSchema.index({ citySlug: 1 });
+articleSchema.index({ serviceSlug: 1, countrySlug: 1 });
+articleSchema.index({ serviceSlug: 1, countrySlug: 1, citySlug: 1 });
 articleSchema.index({ country: 1 });
 articleSchema.index({ city: 1 });
 articleSchema.index({ title: "text", slug: "text" });

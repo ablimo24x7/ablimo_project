@@ -24,26 +24,18 @@ export async function generateMetadata({
 }
 
 const categoryImages: Record<string, string> = {
-  "executive-corporate-mobility":
+  "chauffeur-vip":
     "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=500&fit=crop",
   "airport-transfers":
     "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop",
-  "vip-diplomatic-government":
-    "https://images.unsplash.com/photo-1511974035430-5de47d3b95da?w=800&h=500&fit=crop",
-  "corporate-fleet":
+  "corporate-transportation":
     "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&h=500&fit=crop",
   "event-transportation":
     "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop",
-  "group-coach-charter":
+  "bus-coach-hire":
     "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=500&fit=crop",
-  "tourism-leisure":
+  "tourism-transportation":
     "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=500&fit=crop",
-  "religious-tourism":
-    "https://images.unsplash.com/photo-1563521395854-2afd2c1b9a73?w=800&h=500&fit=crop",
-  "cross-border-mobility":
-    "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&h=500&fit=crop",
-  "premium-lifestyle":
-    "https://images.unsplash.com/photo-1494905998402-395d579af36f?w=800&h=500&fit=crop",
 };
 
 const pillars = [
@@ -204,7 +196,7 @@ export default async function ServicesPage({
           {dict.services.cta.desc}
         </p>
         <Link
-          href={`/${lang}/services/executive-corporate-mobility`}
+          href={`/${lang}/services/chauffeur-vip`}
           className="inline-block bg-abGold hover:bg-yellow-600 text-white px-8 py-3 text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abGold/20"
         >
           {dict.services.cta.label}

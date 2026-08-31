@@ -120,8 +120,7 @@ const DEFAULT_HERO =
  * Additional services surfaced in the header navigation but previously not
  * managed as dashboard services. They are now seeded into the database so they
  * appear in the dashboard services list. Slugs mirror the nav targets and do
- * not collide with the 10 core verticals. "Airport Transfers" is intentionally
- * omitted because it already exists as a core service.
+ * not collide with the 6 core verticals.
  */
 const NAV_ONLY_SERVICES: Array<{
   slug: string;
@@ -138,6 +137,7 @@ const NAV_ONLY_SERVICES: Array<{
   { slug: "mini-bus-charter", title: "Mini Bus Charter", href: "#" },
   { slug: "coach-charter", title: "Coach Charter", href: "#" },
   { slug: "airport-coach-transfers", title: "Airport Coach Transfers", href: "#" },
+  { slug: "city-to-city", title: "City to City", href: "/city-to-city" },
 ];
 
 function normalizeLocale(lang: string): Locale {

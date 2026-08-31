@@ -17,20 +17,16 @@ async function getTranslatedArticle(slug: string, locale: string, preview: boole
 
 function getBreadcrumbKey(templateType: string, dict: { countries?: string; cities?: string; cityToCity?: string; airportTransfers?: string; article?: string }): string {
   switch (templateType) {
-    case "country": return dict.countries || "Countries";
-    case "city": return dict.cities || "Cities";
-    case "city-to-city": return dict.cityToCity || "City to City";
-    case "airport": return dict.airportTransfers || "Airport Transfers";
+    case "service-country": return dict.countries || "Countries";
+    case "service-city": return dict.cities || "Cities";
     default: return dict.article || "Blog";
   }
 }
 
-function getViewAllHref(templateType: string, lang: string): string {
+function getViewAllHref(templateType: string, lang: string, serviceSlug?: string, countrySlug?: string): string {
   switch (templateType) {
-    case "country": return `/${lang}/locations`;
-    case "city": return `/${lang}/locations`;
-    case "city-to-city": return `/${lang}/city-to-city`;
-    case "airport": return `/${lang}/services/airport-transfers`;
+    case "service-country": return serviceSlug ? `/${lang}/services/${serviceSlug}` : `/${lang}/services`;
+    case "service-city": return serviceSlug && countrySlug ? `/${lang}/services/${serviceSlug}/${countrySlug}` : `/${lang}/services`;
     default: return `/${lang}/blog`;
   }
 }
@@ -66,17 +62,23 @@ export default async function BlogSlugPage({ params, searchParams }: Props) {
   const b = dict.blog;
 
   const templateLabel =
-    article.templateType === "city-to-city" && article.routeFrom && article.routeTo
-      ? `${article.routeFrom} to ${article.routeTo}`
-      : article.country || article.city || article.airportName || b.article;
+    article.templateType === "service-city" && article.city
+      ? article.city
+      : article.country || article.city || b.article;
 
   const breadcrumbBase = {
     label: getBreadcrumbKey(article.templateType, b),
-    href: getViewAllHref(article.templateType, lang),
+    href: getViewAllHref(article.templateType, lang, article.serviceSlug, article.countrySlug),
   };
 
   const sideInfo = await getTranslatedSideInfo(article.templateType, article, locale, lang);
-  const related = await getRelatedArticles(article.templateType, locale, slug, 4);
+  const related = await getRelatedArticles({
+    serviceSlug: article.serviceSlug || "",
+    countrySlug: article.countrySlug || "",
+    locale,
+    excludeSlug: slug,
+    limit: 4,
+  });
 
   return (
     <BlogArticleLayout
@@ -95,7 +97,7 @@ export default async function BlogSlugPage({ params, searchParams }: Props) {
       <RelatedArticles
         articles={related}
         lang={lang}
-        viewAllHref={getViewAllHref(article.templateType, lang)}
+        viewAllHref={getViewAllHref(article.templateType, lang, article.serviceSlug, article.countrySlug)}
         viewAllLabel={b.viewAllArticles}
       />
     </BlogArticleLayout>
@@ -104,14 +106,14 @@ export default async function BlogSlugPage({ params, searchParams }: Props) {
 
 async function getTranslatedSideInfo(
   templateType: string,
-  article: { country?: string; city?: string; routeFrom?: string; routeTo?: string; airportName?: string },
+  article: { country?: string; city?: string; serviceSlug?: string; countrySlug?: string; citySlug?: string; routeFrom?: string; routeTo?: string },
   locale: string,
   lang: string
 ): Promise<React.ReactNode> {
   const isArabic = locale.split("-")[0] === "ar";
 
   switch (templateType) {
-    case "country": {
+    case "service-country": {
       if (!article.country) return null;
       const [title, desc, linkText] = await Promise.all([
         translateText(`About ${article.country}`, locale),
@@ -127,7 +129,7 @@ async function getTranslatedSideInfo(
             <h2 className="text-xl font-serif font-bold text-white mb-4">{title}</h2>
             <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
             <a
-              href={`/${lang}/locations/${article.country.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/${lang}/services/${article.serviceSlug || "chauffeur-vip"}/${article.countrySlug || article.country?.toLowerCase().replace(/\s+/g, "-")}`}
               className="inline-flex items-center gap-2 mt-4 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
             >
               {linkText} {isArabic ? "←" : "→"}
@@ -137,16 +139,15 @@ async function getTranslatedSideInfo(
       );
     }
 
-    case "city": {
+    case "service-city": {
       if (!article.city) return null;
-      const [title, desc, detailText, airportText] = await Promise.all([
+      const [title, desc, detailText] = await Promise.all([
         translateText(`Limo Service in ${article.city}`, locale),
         translateText(
           `Discover premium limousine and chauffeur services in ${article.city}${article.country ? `, ${article.country}` : ""}. From airport transfers to city tours, we ensure a comfortable and luxurious travel experience.`,
           locale
         ),
         translateText(`View ${article.city} details`, locale),
-        translateText("Airport transfers", locale),
       ]);
       return (
         <section className="max-w-7xl mx-auto px-8 pb-16">
@@ -154,70 +155,15 @@ async function getTranslatedSideInfo(
             <h2 className="text-xl font-serif font-bold text-white mb-4">{title}</h2>
             <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
             <div className="flex flex-wrap gap-3 mt-4">
-              {article.country && (
+              {article.serviceSlug && article.countrySlug && article.citySlug && (
                 <a
-                  href={`/${lang}/locations/${article.country.toLowerCase().replace(/\s+/g, "-")}/${article.city?.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`/${lang}/services/${article.serviceSlug}/${article.countrySlug}/${article.citySlug}`}
                   className="inline-flex items-center gap-2 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
                 >
                   {detailText} {isArabic ? "←" : "→"}
                 </a>
               )}
-              {article.country && article.city && (
-                <a
-                  href={`/${lang}/locations/${article.country.toLowerCase().replace(/\s+/g, "-")}/${article.city?.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="inline-flex items-center gap-2 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
-                >
-                  {airportText} {isArabic ? "←" : "→"}
-                </a>
-              )}
             </div>
-          </div>
-        </section>
-      );
-    }
-
-    case "city-to-city": {
-      const [title, desc] = await Promise.all([
-        translateText(`${article.routeFrom} to ${article.routeTo} Route`, locale),
-        translateText(
-          `Travel between ${article.routeFrom || "cities"} and ${article.routeTo || "destinations"} in comfort and style. Our professional chauffeurs ensure a safe, punctual, and luxurious journey across the region.`,
-          locale
-        ),
-      ]);
-      return (
-        <section className="max-w-7xl mx-auto px-8 pb-16">
-          <div className="bg-[#1c1d21] rounded-2xl p-8 max-w-4xl mx-auto">
-            <h2 className="text-xl font-serif font-bold text-white mb-4">{title}</h2>
-            <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
-          </div>
-        </section>
-      );
-    }
-
-    case "airport": {
-      const [title, desc, linkText] = await Promise.all([
-        translateText(`${article.airportName || "Airport"} Transfer Services`, locale),
-        translateText(
-          `Experience seamless airport transfers with our premium limousine service. Whether you're arriving at or departing from ${article.airportName || "the airport"}${article.city ? ` in ${article.city}` : ""}${article.country ? `, ${article.country}` : ""}, our professional chauffeurs provide punctual, comfortable, and stress-free transportation.`,
-          locale
-        ),
-        translateText(article.city ? `View ${article.city} airport transfers` : "View airport transfers", locale),
-      ]);
-      return (
-        <section className="max-w-7xl mx-auto px-8 pb-16">
-          <div className="bg-[#1c1d21] rounded-2xl p-8 max-w-4xl mx-auto">
-            <h2 className="text-xl font-serif font-bold text-white mb-4">{title}</h2>
-            <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
-            {article.country && article.city && (
-              <div className="flex flex-wrap gap-3 mt-4">
-                <a
-                  href={`/${lang}/locations/${article.country.toLowerCase().replace(/\s+/g, "-")}/${article.city?.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="inline-flex items-center gap-2 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
-                >
-                  {linkText} {isArabic ? "←" : "→"}
-                </a>
-              </div>
-            )}
           </div>
         </section>
       );

@@ -83,4 +83,70 @@ export const redirects: () => Promise<Redirect[]> = async () => [
     destination: "/:lang/locations/:path*",
     permanent: true,
   },
+
+  // ---- Legacy service slug redirects -----------------------------------
+  {
+    source: "/:lang/services/executive-corporate-mobility",
+    destination: "/:lang/services/chauffeur-vip",
+    permanent: true,
+  },
+  {
+    source: "/:lang/services/vip-diplomatic-government",
+    destination: "/:lang/services/chauffeur-vip",
+    permanent: true,
+  },
+  {
+    source: "/:lang/services/corporate-fleet",
+    destination: "/:lang/services/corporate-transportation",
+    permanent: true,
+  },
+  {
+    source: "/:lang/services/group-coach-charter",
+    destination: "/:lang/services/bus-coach-hire",
+    permanent: true,
+  },
+  {
+    source: "/:lang/services/tourism-leisure",
+    destination: "/:lang/services/tourism-transportation",
+    permanent: true,
+  },
+  {
+    source: "/:lang/services/religious-tourism",
+    destination: "/:lang/services/tourism-transportation",
+    permanent: true,
+  },
+  {
+    source: "/:lang/services/premium-lifestyle",
+    destination: "/:lang/services/chauffeur-vip",
+    permanent: true,
+  },
+  {
+    source: "/:lang/services/cross-border-mobility",
+    destination: "/:lang/services/chauffeur-vip",
+    permanent: true,
+  },
+
+  // ---- Legacy country slug redirects ------------------------------------
+  {
+    source: "/:lang/services/:service/united-arab-emirates/:path*",
+    destination: "/:lang/services/:service/uae/:path*",
+    permanent: true,
+  },
+  {
+    source: "/:lang/locations/united-arab-emirates/:path*",
+    destination: "/:lang/locations/uae/:path*",
+    permanent: true,
+  },
+
+  // ---- Legacy city slug redirects ---------------------------------------
+  {
+    source: "/:lang/services/:service/:country/kuwait/:path*",
+    destination: "/:lang/services/:service/:country/kuwait-city/:path*",
+    permanent: true,
+  },
+  {
+    source: "/:lang/locations/:country/kuwait/:path*",
+    destination: "/:lang/locations/:country/kuwait-city/:path*",
+    permanent: true,
+  },
 ];

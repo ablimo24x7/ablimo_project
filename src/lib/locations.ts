@@ -37,8 +37,8 @@ const city = (slug: string, name: string, airports: Airport[] = []): City => ({ 
 export const COUNTRIES: Country[] = [
   {
     code: "ae",
-    slug: "united-arab-emirates",
-    name: "United Arab Emirates",
+    slug: "uae",
+    name: "UAE",
     cities: [
       city("dubai", "Dubai", [
         airport("dubai-international-airport", "Dubai International Airport", "DXB"),
@@ -55,6 +55,8 @@ export const COUNTRIES: Country[] = [
         airport("ras-al-khaimah-international-airport", "Ras Al Khaimah International Airport", "RKT"),
       ]),
       city("al-ain", "Al Ain"),
+      city("fujairah", "Fujairah"),
+      city("umm-al-quwain", "Umm Al Quwain"),
     ],
   },
   {
@@ -76,12 +78,17 @@ export const COUNTRIES: Country[] = [
         airport("king-fahd-international-airport", "King Fahd International Airport", "DMM"),
       ]),
       city("tabuk", "Tabuk"),
-      city("al-ula", "Al Ula"),
+      city("alula", "Al Ula"),
       city("al-khobar", "Al Khobar"),
       city("al-qasim", "Al Qasim"),
       city("abha", "Abha"),
       city("jizan", "Jizan"),
       city("neom", "NEOM"),
+      city("hail", "Hail"),
+      city("jubail", "Jubail"),
+      city("najran", "Najran"),
+      city("taif", "Taif"),
+      city("yanbu", "Yanbu"),
     ],
   },
   {
@@ -94,6 +101,7 @@ export const COUNTRIES: Country[] = [
       ]),
       city("al-khor", "Al Khor"),
       city("lusail", "Lusail"),
+      city("al-wakrah", "Al Wakrah"),
     ],
   },
   {
@@ -113,12 +121,13 @@ export const COUNTRIES: Country[] = [
     slug: "kuwait",
     name: "Kuwait",
     cities: [
-      city("kuwait", "Kuwait City", [
+      city("kuwait-city", "Kuwait City", [
         airport("kuwait-international-airport", "Kuwait International Airport", "KWI"),
       ]),
       city("hawalli", "Hawalli"),
       city("farwaniya", "Farwaniya"),
       city("al-ahmadi", "Al Ahmadi"),
+      city("salmiya", "Salmiya"),
     ],
   },
   {
@@ -135,19 +144,22 @@ export const COUNTRIES: Country[] = [
       city("sohar", "Sohar", [
         airport("sohar-international-airport", "Sohar International Airport", "SOH"),
       ]),
+      city("nizwa", "Nizwa"),
     ],
   },
 ];
 
 const countryAliases: Record<string, string> = {
-  uae: "united-arab-emirates",
+  "united-arab-emirates": "uae",
 };
 
 const cityAliases: Record<string, string> = {
   madinah: "medina",
   makkah: "mecca",
-  "kuwait-city": "kuwait",
+  kuwait: "kuwait-city",
+  "kuwait-city": "kuwait-city",
   "ras-al-khaymah": "ras-al-khaimah",
+  "al-ula": "alula",
 };
 
 export function resolveCountry(input: string): Country | undefined {

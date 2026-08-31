@@ -2,8 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock } from "lucide-react";
-import { getAllPublishedArticles } from "@/lib/blog";
+import { getAllPublishedArticles, getAllPublishedArticlesFiltered } from "@/lib/blog";
 import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
+
+const SERVICE_TABS = [
+  { slug: "all", label: "All" },
+  { slug: "chauffeur-vip", label: "Chauffeur & VIP" },
+  { slug: "airport-transfers", label: "Airport Transfers" },
+  { slug: "corporate-transportation", label: "Corporate" },
+  { slug: "event-transportation", label: "Events" },
+  { slug: "bus-coach-hire", label: "Bus & Coach" },
+  { slug: "tourism-transportation", label: "Tourism" },
+] as const;
 
 export async function generateMetadata({
   params,
@@ -20,31 +30,34 @@ export async function generateMetadata({
 }
 
 const templateColors: Record<string, string> = {
-  country: "bg-blue-500/20 text-blue-300",
-  city: "bg-green-500/20 text-green-300",
-  "city-to-city": "bg-purple-500/20 text-purple-300",
-  airport: "bg-amber-500/20 text-amber-300",
+  "service-country": "bg-blue-500/20 text-blue-300",
+  "service-city": "bg-green-500/20 text-green-300",
 };
 
 const templateLabels: Record<string, string> = {
-  country: "Country",
-  city: "City",
-  "city-to-city": "City to City",
-  airport: "Airport",
+  "service-country": "Country",
+  "service-city": "City",
 };
 
 export default async function BlogPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ lang: string }>;
+  searchParams: Promise<{ service?: string }>;
 }) {
   const { lang } = await params;
+  const sp = await searchParams;
   const locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
   const b = dict.blog;
   const isArabic = locale.split("-")[0] === "ar";
 
-  const articles = await getAllPublishedArticles(locale);
+  const activeService = sp.service || "all";
+
+  const articles = activeService === "all"
+    ? await getAllPublishedArticles(locale)
+    : await getAllPublishedArticlesFiltered({ serviceSlug: activeService, locale });
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
@@ -75,6 +88,31 @@ export default async function BlogPage({
             </li>
           </ol>
         </nav>
+      </section>
+
+      {/* Service Filter Tabs */}
+      <section className="max-w-7xl mx-auto px-8 pb-8">
+        <div className="flex flex-wrap gap-2 justify-center">
+          {SERVICE_TABS.map((tab) => {
+            const isActive = activeService === tab.slug;
+            const href = tab.slug === "all"
+              ? `/${lang}/blog`
+              : `/${lang}/blog?service=${tab.slug}`;
+            return (
+              <Link
+                key={tab.slug}
+                href={href}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  isActive
+                    ? "bg-abGold text-white"
+                    : "bg-[#1c1d21] text-gray-400 hover:text-white hover:bg-[#2a2c35]"
+                }`}
+              >
+                {tab.label}
+              </Link>
+            );
+          })}
+        </div>
       </section>
 
       {/* Articles Grid */}

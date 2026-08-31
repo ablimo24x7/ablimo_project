@@ -37,12 +37,17 @@ export const PostCreateSchema = z.object({
   finalThoughtsContent: z.string().optional().default(""),
 
   // ABLimo template fields
-  templateType: z.enum(["country", "city", "city-to-city", "airport"]).optional().default("country"),
+  templateType: z.enum(["service-country", "service-city"]).optional().default("service-country"),
+  serviceSlug: z.enum([
+    "chauffeur-vip", "airport-transfers", "corporate-transportation",
+    "event-transportation", "bus-coach-hire", "tourism-transportation",
+  ]).optional(),
+  countrySlug: z.enum(["saudi-arabia", "uae", "qatar", "bahrain", "kuwait", "oman", "gcc"]).optional(),
+  citySlug: z.string().optional().default(""),
   country: z.string().optional().default(""),
   city: z.string().optional().default(""),
   routeFrom: z.string().optional().default(""),
   routeTo: z.string().optional().default(""),
-  airportName: z.string().optional().default(""),
 
   seo_metadata: SeoMetadataSchema.optional(),
 });
@@ -62,5 +67,6 @@ export const PostListQuerySchema = z.object({
   tags: z.string().trim().max(200).optional(),
   sort: z.enum(["date", "views", "title"]).optional().default("date"),
   order: z.enum(["asc", "desc"]).optional().default("desc"),
-  templateType: z.enum(["country", "city", "city-to-city", "airport"]).optional(),
+  templateType: z.enum(["service-country", "service-city"]).optional(),
+  service: z.string().optional(),
 });

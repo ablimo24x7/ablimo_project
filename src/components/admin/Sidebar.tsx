@@ -9,12 +9,14 @@ import {
   Users,
   ShieldCheck,
   Settings,
-  Globe,
-  MapPin,
   MapPinned,
-  Route,
-  Plane,
   CarFront,
+  Briefcase,
+  Plane,
+  Building2,
+  CalendarDays,
+  Bus,
+  Mountain,
 } from "lucide-react";
 import {
   Sidebar,
@@ -35,17 +37,18 @@ const adminNav = [
   { title: "Categories", url: "/dashboard/categories", icon: FolderTree },
   { title: "Services", url: "/dashboard/services", icon: CarFront },
   { title: "Locations", url: "/dashboard/locations", icon: MapPinned },
-  { title: "Routes", url: "/dashboard/routes", icon: Route },
   { title: "Users", url: "/dashboard/users", icon: Users },
   { title: "Permissions", url: "/dashboard/settings/permissions", icon: ShieldCheck },
   { title: "Settings", url: "/dashboard/settings", icon: Settings },
 ];
 
-const templateNav = [
-  { title: "Country Blogs", url: "/dashboard/posts?template=country", icon: Globe },
-  { title: "City Blogs", url: "/dashboard/posts?template=city", icon: MapPin },
-  { title: "City-to-City", url: "/dashboard/posts?template=city-to-city", icon: Route },
-  { title: "Airport Blogs", url: "/dashboard/posts?template=airport", icon: Plane },
+const serviceNav = [
+  { title: "Chauffeur & VIP", url: "/dashboard/posts?service=chauffeur-vip", icon: Briefcase },
+  { title: "Airport Transfers", url: "/dashboard/posts?service=airport-transfers", icon: Plane },
+  { title: "Corporate", url: "/dashboard/posts?service=corporate-transportation", icon: Building2 },
+  { title: "Events", url: "/dashboard/posts?service=event-transportation", icon: CalendarDays },
+  { title: "Bus & Coach", url: "/dashboard/posts?service=bus-coach-hire", icon: Bus },
+  { title: "Tourism", url: "/dashboard/posts?service=tourism-transportation", icon: Mountain },
 ];
 
 export function AdminSidebar() {
@@ -85,10 +88,10 @@ export function AdminSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
         <SidebarGroup>
-          <SidebarGroupLabel>Blog Templates</SidebarGroupLabel>
+          <SidebarGroupLabel>Blog by Service</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {templateNav.map((item) => (
+              {serviceNav.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton render={<Link href={item.url} />}>
                     <item.icon />

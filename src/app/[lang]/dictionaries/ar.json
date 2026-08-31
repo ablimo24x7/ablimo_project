@@ -205,7 +205,7 @@
       "executiveMobility": "التنقل التنفيذي والمؤسسي",
       "airportTransfers": "نقل المطار",
       "vipDiplomatic": "كبار الشخصيات والدبلوماسية والحكومة",
-      "corporateFleet": "الأسطول المؤسسي وتنقل القوى العاملة",
+      "corporateTransportation": "الأسطول المؤسسي وتنقل القوى العاملة",
       "eventTransportation": "نقل الفعاليات",
       "groupCharter": "المجموعات والكوتشات",
       "tourism": "السياحة والترفيه",
@@ -2620,7 +2620,7 @@
     "luxuryMobility": "AB.Limo للتنقل الفاخر"
   },
   "servicePages": {
-    "executiveCorporateMobility": {
+    "chauffeurVip": {
       "metadata": {
         "title": "النقل التنفيذي والشركات | AB.Limo",
         "description": "حلول تنقل مخصصة لأعضاء مجالس الإدارة والجولات الترويجية وجداول المدراء التنفيذيين. نقل فاخر بسائق خاص مصمم وفق جدول أعمالك."
@@ -3006,7 +3006,7 @@
         }
       ]
     },
-    "corporateFleet": {
+    "corporateTransportation": {
       "metadata": {
         "title": "أسطول الشركات وتنقل الموظفين | AB.Limo",
         "description": "إدارة أساطيل الشركات وبرامج نقل الموظفين المصممة للموثوقية والامتثال والكفاءة."
@@ -3243,7 +3243,7 @@
         }
       ]
     },
-    "groupCoachCharter": {
+    "busCoachHire": {
       "metadata": {
         "title": "النقل الجماعي واستئجار الحافلات | AB.Limo",
         "description": "حافلات صغيرة وحافلات تنفيذية واستئجار حافلات مدرسية للفرق والوفود والمجموعات الكبيرة في الخليج."
@@ -3480,7 +3480,7 @@
         }
       ]
     },
-    "tourismLeisure": {
+    "tourismTransportation": {
       "metadata": {
         "title": "نقل السياحة والترفيه | AB.Limo",
         "description": "جولات خاصة مخصصة ومشاهدة المعالم ونقل ترفيهي تنظمه AB.Limo للمسافرين المميزين."

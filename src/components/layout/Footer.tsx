@@ -114,7 +114,7 @@ export default async function Footer({ lang }: FooterProps) {
         { label: d.explore.executiveMobility, href: `/${lang}/executive-mobility` },
         { label: d.explore.airportTransfers, href: locationsUrl(lang) },
         { label: d.explore.vipDiplomatic, href: `/${lang}/vip-diplomatic` },
-        { label: d.explore.corporateFleet, href: `/${lang}/corporate-fleet` },
+        { label: d.explore.corporateTransportation, href: `/${lang}/services/corporate-transportation` },
         { label: d.explore.eventTransportation, href: `/${lang}/event-transportation` },
         { label: d.explore.groupCharter, href: `/${lang}/group-charter` },
         { label: d.explore.tourism, href: `/${lang}/tourism` },

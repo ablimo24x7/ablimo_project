@@ -51,23 +51,62 @@ export async function getArticleBySlug(
   return article ? (article as ArticleDoc) : null;
 }
 
-export async function getRelatedArticles(
-  templateType: string,
-  locale: string = "en",
-  excludeSlug: string = "",
-  limit: number = 4
-): Promise<ArticleDoc[]> {
+export async function getRelatedArticles(params: {
+  serviceSlug: string;
+  countrySlug?: string;
+  locale: string;
+  excludeSlug: string;
+  limit?: number;
+}): Promise<ArticleDoc[]> {
   if (!isDatabaseEnabled()) return [];
   await connectDB();
-  const articles = await Article.find({
-    templateType,
-    ...localeFilter(locale),
+  const filter: Record<string, unknown> = {
+    serviceSlug: params.serviceSlug,
+    ...localeFilter(params.locale),
     status: "published",
-    slug: { $ne: excludeSlug },
-  })
+    slug: { $ne: params.excludeSlug },
+  };
+  if (params.countrySlug) {
+    filter.countrySlug = params.countrySlug;
+  }
+  const articles = await Article.find(filter)
     .sort({ date: -1 })
-    .limit(limit)
+    .limit(params.limit ?? 4)
     .lean();
+  return articles as ArticleDoc[];
+}
+
+export async function getAllPublishedArticlesFiltered(params: {
+  serviceSlug?: string;
+  countrySlug?: string;
+  citySlug?: string;
+  locale: string;
+  limit?: number;
+}): Promise<ArticleDoc[]> {
+  if (!isDatabaseEnabled()) return [];
+  await connectDB();
+  const filter: Record<string, unknown> = {
+    ...localeFilter(params.locale),
+    status: "published",
+  };
+  if (params.serviceSlug) filter.serviceSlug = params.serviceSlug;
+  if (params.countrySlug) filter.countrySlug = params.countrySlug;
+  if (params.citySlug) filter.citySlug = params.citySlug;
+  let articles = await Article.find(filter)
+    .sort({ date: -1 })
+    .limit(params.limit ?? 100)
+    .lean();
+
+  if (articles.length === 0 && params.locale !== "en") {
+    const fallbackFilter = { ...filter };
+    delete fallbackFilter.locale;
+    Object.assign(fallbackFilter, localeFilter("en"));
+    articles = await Article.find(fallbackFilter)
+      .sort({ date: -1 })
+      .limit(params.limit ?? 100)
+      .lean();
+  }
+
   return articles as ArticleDoc[];
 }
 

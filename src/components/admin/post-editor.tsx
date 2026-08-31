@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -17,9 +17,19 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
-import { allIsoCountries } from "@/lib/iso3166";
+import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
+import { COUNTRIES } from "@/lib/locations";
 import { toast } from "sonner";
 import slugify from "slugify";
+
+const SERVICE_OPTIONS = [
+  { slug: "chauffeur-vip", label: "Chauffeur & VIP" },
+  { slug: "airport-transfers", label: "Airport Transfers" },
+  { slug: "corporate-transportation", label: "Corporate Transportation" },
+  { slug: "event-transportation", label: "Event Transportation" },
+  { slug: "bus-coach-hire", label: "Bus & Coach Hire" },
+  { slug: "tourism-transportation", label: "Tourism Transportation" },
+] as const;
 
 type PostData = {
   _id?: string;
@@ -30,11 +40,9 @@ type PostData = {
   categoryLabel: string;
   status: string;
   templateType: string;
-  country: string;
-  city: string;
-  routeFrom: string;
-  routeTo: string;
-  airportName: string;
+  serviceSlug: string;
+  countrySlug: string;
+  citySlug: string;
   bodyContent: string;
   keyTakeawaysContent: string;
   finalThoughtsContent: string;
@@ -60,12 +68,10 @@ const defaultPost: PostData = {
   category: "",
   categoryLabel: "",
   status: "draft",
-  templateType: "country",
-  country: "",
-  city: "",
-  routeFrom: "",
-  routeTo: "",
-  airportName: "",
+  templateType: "service-country",
+  serviceSlug: "",
+  countrySlug: "",
+  citySlug: "",
   bodyContent: "",
   keyTakeawaysContent: "",
   finalThoughtsContent: "",
@@ -107,17 +113,15 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
   const [form, setForm] = React.useState<PostData>(() => normalizePost(initialData));
   const [tagInput, setTagInput] = React.useState("");
 
-  const countryOptions = React.useMemo(() => allIsoCountries(), []);
+  const selectedCountry = React.useMemo(
+    () => COUNTRIES.find((c) => c.slug === form.countrySlug),
+    [form.countrySlug]
+  );
 
-  const { data: categories } = useQuery({
-    queryKey: ["categories"],
-    queryFn: async () => {
-      const res = await fetch("/api/categories");
-      if (!res.ok) throw new Error("Failed");
-      return res.json() as Promise<{ items: Array<{ _id: string; label: string; slug: string }> }>;
-    },
-  });
-  const categoryItems = categories?.items ?? [];
+  const cityOptions = React.useMemo(
+    () => selectedCountry?.cities ?? [],
+    [selectedCountry]
+  );
 
   const isEdit = mode === "edit" && form._id;
 
@@ -174,8 +178,12 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
       toast.error("Title is required");
       return;
     }
-    if (!form.category) {
-      toast.error("Category is required");
+    if (!form.serviceSlug) {
+      toast.error("Service is required");
+      return;
+    }
+    if (!form.countrySlug) {
+      toast.error("Country is required");
       return;
     }
     mutation.mutate(form);
@@ -241,16 +249,28 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
             <CardHeader><CardTitle>Body Content</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label>HTML Content</Label>
-                <Textarea rows={12} value={form.bodyContent} onChange={(e) => updateField("bodyContent", e.target.value)} placeholder="Paste HTML content here..." />
+                <Label>Content</Label>
+                <WysiwygEditor
+                  value={form.bodyContent}
+                  onChange={(v) => updateField("bodyContent", v)}
+                  placeholder="Write your article content here..."
+                />
               </div>
               <div className="space-y-2">
                 <Label>Key Takeaways</Label>
-                <Textarea rows={6} value={form.keyTakeawaysContent} onChange={(e) => updateField("keyTakeawaysContent", e.target.value)} />
+                <WysiwygEditor
+                  value={form.keyTakeawaysContent}
+                  onChange={(v) => updateField("keyTakeawaysContent", v)}
+                  placeholder="Summarize the key points..."
+                />
               </div>
               <div className="space-y-2">
                 <Label>Final Thoughts</Label>
-                <Textarea rows={6} value={form.finalThoughtsContent} onChange={(e) => updateField("finalThoughtsContent", e.target.value)} />
+                <WysiwygEditor
+                  value={form.finalThoughtsContent}
+                  onChange={(v) => updateField("finalThoughtsContent", v)}
+                  placeholder="Wrap up your article..."
+                />
               </div>
             </CardContent>
           </Card>
@@ -260,25 +280,12 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
           <Card>
             <CardHeader><CardTitle>Publish</CardTitle></CardHeader>
             <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label>Category *</Label>
-                <Select
-                  value={form.category}
-                  onValueChange={(v) => {
-                    if (!v) return;
-                    const cat = categoryItems.find((c) => c.slug === v);
-                    updateField("category", v);
-                    updateField("categoryLabel", cat?.label || v);
-                  }}
-                >
-                  <SelectTrigger><SelectValue placeholder="Select a category" /></SelectTrigger>
-                  <SelectContent>
-                    {categoryItems.map((c) => (
-                      <SelectItem key={c._id} value={c.slug}>{c.label}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
+              {form.categoryLabel && (
+                <div className="space-y-2">
+                  <Label>Category</Label>
+                  <p className="text-sm text-muted-foreground">{form.categoryLabel}</p>
+                </div>
+              )}
               <div className="space-y-2">
                 <Label>Status</Label>
                 <Select value={form.status} onValueChange={(v) => v && updateField("status", v)}>
@@ -308,57 +315,76 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
           </Card>
 
           <Card>
-            <CardHeader><CardTitle>Template</CardTitle></CardHeader>
+            <CardHeader><CardTitle>Service Location</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label>Template Type</Label>
-                <Select value={form.templateType} onValueChange={(v) => v && updateField("templateType", v)}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
+                <Label>Service *</Label>
+                <Select
+                  value={form.serviceSlug}
+                  onValueChange={(v) => {
+                    if (!v) return;
+                    updateField("serviceSlug", v);
+                    const opt = SERVICE_OPTIONS.find((s) => s.slug === v);
+                    updateField("category", v);
+                    updateField("categoryLabel", opt?.label || v);
+                  }}
+                >
+                  <SelectTrigger><SelectValue placeholder="Select a service" /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="country">Country</SelectItem>
-                    <SelectItem value="city">City</SelectItem>
-                    <SelectItem value="city-to-city">City-to-City</SelectItem>
-                    <SelectItem value="airport">Airport</SelectItem>
+                    {SERVICE_OPTIONS.map((s) => (
+                      <SelectItem key={s.slug} value={s.slug}>{s.label}</SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>
-              {(form.templateType === "country" || form.templateType === "city") && (
+              <div className="space-y-2">
+                <Label>Country *</Label>
+                <Select
+                  value={form.countrySlug}
+                  onValueChange={(v) => {
+                    if (!v) return;
+                    updateField("countrySlug", v);
+                    updateField("citySlug", "");
+                    updateField("templateType", "service-country");
+                  }}
+                >
+                  <SelectTrigger><SelectValue placeholder="Select a country" /></SelectTrigger>
+                  <SelectContent>
+                    {COUNTRIES.map((c) => (
+                      <SelectItem key={c.slug} value={c.slug}>{c.name}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              {form.countrySlug && (
                 <div className="space-y-2">
-                  <Label>Country</Label>
-                  <Select value={form.country} onValueChange={(v) => v && updateField("country", v)}>
-                    <SelectTrigger><SelectValue placeholder="Select a country" /></SelectTrigger>
+                  <Label>City (optional)</Label>
+                  <Select
+                    value={form.citySlug}
+                    onValueChange={(v) => {
+                      if (!v) {
+                        updateField("citySlug", "");
+                        updateField("templateType", "service-country");
+                        return;
+                      }
+                      updateField("citySlug", v);
+                      updateField("templateType", "service-city");
+                    }}
+                  >
+                    <SelectTrigger><SelectValue placeholder="No city (country-level)" /></SelectTrigger>
                     <SelectContent>
-                      {countryOptions.map((c) => (
-                        <SelectItem key={c.code} value={c.name}>{c.name}</SelectItem>
+                      {cityOptions.map((c) => (
+                        <SelectItem key={c.slug} value={c.slug}>{c.name}</SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
                 </div>
               )}
-              {(form.templateType === "city" || form.templateType === "city-to-city") && (
-                <div className="space-y-2">
-                  <Label>City</Label>
-                  <Input value={form.city} onChange={(e) => updateField("city", e.target.value)} />
-                </div>
-              )}
-              {form.templateType === "city-to-city" && (
-                <>
-                  <div className="space-y-2">
-                    <Label>Route From</Label>
-                    <Input value={form.routeFrom} onChange={(e) => updateField("routeFrom", e.target.value)} />
-                  </div>
-                  <div className="space-y-2">
-                    <Label>Route To</Label>
-                    <Input value={form.routeTo} onChange={(e) => updateField("routeTo", e.target.value)} />
-                  </div>
-                </>
-              )}
-              {form.templateType === "airport" && (
-                <div className="space-y-2">
-                  <Label>Airport Name</Label>
-                  <Input value={form.airportName} onChange={(e) => updateField("airportName", e.target.value)} />
-                </div>
-              )}
+              <p className="text-xs text-muted-foreground">
+                {form.templateType === "service-city"
+                  ? `Template: service-city → /services/${form.serviceSlug}/${form.countrySlug}/${form.citySlug}`
+                  : `Template: service-country → /services/${form.serviceSlug}/${form.countrySlug}`}
+              </p>
             </CardContent>
           </Card>
 

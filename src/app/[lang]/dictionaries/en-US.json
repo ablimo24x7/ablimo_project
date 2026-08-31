@@ -205,7 +205,7 @@
       "executiveMobility": "Executive & Corporate Mobility",
       "airportTransfers": "Airport Transfers",
       "vipDiplomatic": "VIP, Diplomatic & Government",
-      "corporateFleet": "Corporate Fleet & Workforce Mobility",
+      "corporateTransportation": "Corporate Fleet & Workforce Mobility",
       "eventTransportation": "Event Transportation",
       "groupCharter": "Group & Coach Charter",
       "tourism": "Tourism & Leisure",
@@ -2544,9 +2544,9 @@
     },
     "categories": [
       {
-        "slug": "executive-corporate-mobility",
-        "title": "Executive & Corporate Mobility",
-        "desc": "Bespoke ground transport for business travel, roadshows, and executive itineraries across the Gulf and beyond."
+        "slug": "chauffeur-vip",
+        "title": "Chauffeur & VIP",
+        "desc": "Bespoke chauffeur-driven transport for executives, VIPs, and discerning travellers across the GCC."
       },
       {
         "slug": "airport-transfers",
@@ -2554,14 +2554,9 @@
         "desc": "Seamless airport pickup, drop-off, and VIP tarmac services with flight tracking and meet & greet."
       },
       {
-        "slug": "vip-diplomatic-government",
-        "title": "VIP, Diplomatic & Government",
-        "desc": "High-security, protocol-driven transport for dignitaries, heads of state, and diplomatic missions."
-      },
-      {
-        "slug": "corporate-fleet",
-        "title": "Corporate Fleet & Workforce Mobility",
-        "desc": "Managed corporate fleets and employee shuttle programs engineered for reliability and efficiency."
+        "slug": "corporate-transportation",
+        "title": "Corporate Transportation",
+        "desc": "Managed corporate fleets, executive travel, and workforce mobility solutions engineered for reliability."
       },
       {
         "slug": "event-transportation",
@@ -2569,29 +2564,14 @@
         "desc": "End-to-end guest movement for conferences, exhibitions, concerts, and large-scale corporate gatherings."
       },
       {
-        "slug": "group-coach-charter",
-        "title": "Group & Coach Charter",
+        "slug": "bus-coach-hire",
+        "title": "Bus & Coach Hire",
         "desc": "Minibuses, executive coaches, and motorcoach charters for teams, delegations, and large groups."
       },
       {
-        "slug": "tourism-leisure",
-        "title": "Tourism & Leisure",
-        "desc": "Custom private tours, sightseeing, and leisure transit curated for discerning travellers."
-      },
-      {
-        "slug": "religious-tourism",
-        "title": "Religious Tourism",
-        "desc": "Dignified pilgrimage and religious group travel with sensitive, respectful service."
-      },
-      {
-        "slug": "cross-border-mobility",
-        "title": "Cross-Border Mobility",
-        "desc": "Long-distance and international road transfers across GCC borders with full coordination."
-      },
-      {
-        "slug": "premium-lifestyle",
-        "title": "Premium Lifestyle & Specialty",
-        "desc": "Bespoke luxury transport for weddings, celebrations, and high-profile personal occasions."
+        "slug": "tourism-transportation",
+        "title": "Tourism Transportation",
+        "desc": "Custom private tours, sightseeing, pilgrimage, and leisure transit curated for discerning travellers."
       }
     ],
     "pillars": {
@@ -2620,7 +2600,7 @@
     "luxuryMobility": "AB.Limo Luxury Mobility"
   },
   "servicePages": {
-    "executiveCorporateMobility": {
+    "chauffeurVip": {
       "metadata": {
         "title": "Executive & Corporate Mobility | AB.Limo",
         "description": "Bespoke corporator mobility for board members, roadshows, and executive itineraries. Premium chauffeur-driven transport engineered around your business schedule."
@@ -3006,7 +2986,7 @@
         }
       ]
     },
-    "corporateFleet": {
+    "corporateTransportation": {
       "metadata": {
         "title": "Corporate Fleet & Workforce Mobility | AB.Limo",
         "description": "Managed corporate fleets and employee shuttle programs engineered for reliability, compliance, and efficiency."
@@ -3243,7 +3223,7 @@
         }
       ]
     },
-    "groupCoachCharter": {
+    "busCoachHire": {
       "metadata": {
         "title": "Group & Coach Charter | AB.Limo",
         "description": "Minibuses, executive coaches, and motorcoach charters for teams, delegations, and large groups across the Gulf."
@@ -3480,7 +3460,7 @@
         }
       ]
     },
-    "tourismLeisure": {
+    "tourismTransportation": {
       "metadata": {
         "title": "Tourism & Leisure Transport | AB.Limo",
         "description": "Custom private tours, sightseeing, and leisure transit curated by AB.Limo for discerning travellers."

@@ -12,12 +12,14 @@ export async function GET(req: NextRequest) {
   const category = searchParams.get("category") || "";
   const status = searchParams.get("status") || "";
   const templateType = searchParams.get("templateType") || "";
+  const service = searchParams.get("service") || "";
 
   const filter: Record<string, any> = {};
   if (q) filter.$or = [{ title: { $regex: q, $options: "i" } }, { slug: { $regex: q, $options: "i" } }];
   if (category) filter.category = category;
   if (status) filter.status = status;
   if (templateType) filter.templateType = templateType;
+  if (service) filter.serviceSlug = service;
 
   const total = await Article.countDocuments(filter);
   const items = await Article.find(filter)

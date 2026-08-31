@@ -8,6 +8,13 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
   Table,
   TableBody,
   TableCell,
@@ -29,14 +36,25 @@ import { toast } from "sonner";
 import { Plus, Pencil, Trash2 } from "lucide-react";
 import { useState } from "react";
 
+const SERVICE_FILTER_OPTIONS = [
+  { slug: "all", label: "All Services" },
+  { slug: "chauffeur-vip", label: "Chauffeur & VIP" },
+  { slug: "airport-transfers", label: "Airport Transfers" },
+  { slug: "corporate-transportation", label: "Corporate Transportation" },
+  { slug: "event-transportation", label: "Event Transportation" },
+  { slug: "bus-coach-hire", label: "Bus & Coach Hire" },
+  { slug: "tourism-transportation", label: "Tourism Transportation" },
+] as const;
+
 type Post = {
   _id: string;
   title: string;
   slug: string;
   status: string;
   templateType: string;
-  country: string;
-  city: string;
+  serviceSlug: string;
+  countrySlug: string;
+  citySlug: string;
   views: number;
   date: string;
 };
@@ -45,11 +63,15 @@ export default function PostsPage() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [serviceFilter, setServiceFilter] = useState("all");
 
   const { data, isLoading } = useQuery({
-    queryKey: ["posts"],
+    queryKey: ["posts", serviceFilter],
     queryFn: async () => {
-      const res = await fetch("/api/articles");
+      const params = new URLSearchParams();
+      if (serviceFilter !== "all") params.set("service", serviceFilter);
+      const qs = params.toString();
+      const res = await fetch(`/api/articles${qs ? `?${qs}` : ""}`);
       if (!res.ok) throw new Error("Failed");
       return res.json() as Promise<{ items: Post[] }>;
     },
@@ -81,6 +103,19 @@ export default function PostsPage() {
         </Button>
       </div>
 
+      <div className="flex items-center gap-3">
+        <Select value={serviceFilter} onValueChange={(v) => { if (v) setServiceFilter(v); }}>
+          <SelectTrigger className="w-[220px]">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {SERVICE_FILTER_OPTIONS.map((s) => (
+              <SelectItem key={s.slug} value={s.slug}>{s.label}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+
       <Card>
         <CardContent className="p-0">
           {isLoading ? (
@@ -92,7 +127,8 @@ export default function PostsPage() {
               <TableHeader>
                 <TableRow>
                   <TableHead>Title</TableHead>
-                  <TableHead>Template</TableHead>
+                  <TableHead>Service</TableHead>
+                  <TableHead>Location</TableHead>
                   <TableHead>Status</TableHead>
                   <TableHead className="text-right">Views</TableHead>
                   <TableHead className="w-24">Actions</TableHead>
@@ -101,7 +137,7 @@ export default function PostsPage() {
               <TableBody>
                 {posts.length === 0 ? (
                   <TableRow>
-                    <TableCell colSpan={5} className="py-8 text-center text-muted-foreground">
+                    <TableCell colSpan={6} className="py-8 text-center text-muted-foreground">
                       No posts yet. Create your first post.
                     </TableCell>
                   </TableRow>
@@ -112,7 +148,10 @@ export default function PostsPage() {
                         <div className="font-medium">{p.title}</div>
                         <div className="text-xs text-muted-foreground">/{p.slug}</div>
                       </TableCell>
-                      <TableCell><Badge variant="outline" className="capitalize">{p.templateType}</Badge></TableCell>
+                      <TableCell><Badge variant="outline" className="capitalize">{p.serviceSlug || "—"}</Badge></TableCell>
+                      <TableCell className="text-sm text-muted-foreground">
+                        {[p.countrySlug, p.citySlug].filter(Boolean).join(" / ") || "—"}
+                      </TableCell>
                       <TableCell><Badge variant={p.status === "published" ? "default" : "secondary"} className="capitalize">{p.status}</Badge></TableCell>
                       <TableCell className="text-right tabular-nums">{p.views ?? 0}</TableCell>
                       <TableCell>
