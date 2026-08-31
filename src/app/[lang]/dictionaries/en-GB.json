@@ -1716,6 +1716,7 @@
     },
     "readMore": "Read full release",
     "showMore": "Show more",
+    "showLess": "Show less",
     "releases": [
       {
         "date": "June 12, 2026",
@@ -2521,5 +2522,1512 @@
     "all": "All",
     "publishedOn": "Published on",
     "by": "by"
+  },
+  "services": {
+    "metadata": {
+      "title": "Luxury Chauffeur Services | AB.Limo Master Taxonomy",
+      "description": "Explore the complete AB.Limo services taxonomy: executive mobility, airport transfers, VIP & government transport, corporate fleets, events, group charters, tourism, and premium lifestyle chauffeur services."
+    },
+    "hero": {
+      "badge": "The Complete Services Taxonomy",
+      "titleStart": "A Full Suite of",
+      "titleHighlight": "Luxury Mobility",
+      "desc": "Ten specialised service verticals, one uncompromising standard. AB.Limo engineers bespoke chauffeur-driven ground transport for executives, governments, events, and discerning travellers across the GCC and beyond."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "services": "Services"
+    },
+    "explore": {
+      "title": "Explore Our Service Verticals",
+      "desc": "Each vertical is delivered by the same premium fleet, professional chauffeurs, and dedicated transport control room that defines the AB.Limo standard."
+    },
+    "categories": [
+      {
+        "slug": "executive-corporate-mobility",
+        "title": "Executive & Corporate Mobility",
+        "desc": "Bespoke ground transport for business travel, roadshows, and executive itineraries across the Gulf and beyond."
+      },
+      {
+        "slug": "airport-transfers",
+        "title": "Airport Transfers",
+        "desc": "Seamless airport pickup, drop-off, and VIP tarmac services with flight tracking and meet & greet."
+      },
+      {
+        "slug": "vip-diplomatic-government",
+        "title": "VIP, Diplomatic & Government",
+        "desc": "High-security, protocol-driven transport for dignitaries, heads of state, and diplomatic missions."
+      },
+      {
+        "slug": "corporate-fleet",
+        "title": "Corporate Fleet & Workforce Mobility",
+        "desc": "Managed corporate fleets and employee shuttle programs engineered for reliability and efficiency."
+      },
+      {
+        "slug": "event-transportation",
+        "title": "Event Transportation",
+        "desc": "End-to-end guest movement for conferences, exhibitions, concerts, and large-scale corporate gatherings."
+      },
+      {
+        "slug": "group-coach-charter",
+        "title": "Group & Coach Charter",
+        "desc": "Minibuses, executive coaches, and motorcoach charters for teams, delegations, and large groups."
+      },
+      {
+        "slug": "tourism-leisure",
+        "title": "Tourism & Leisure",
+        "desc": "Custom private tours, sightseeing, and leisure transit curated for discerning travellers."
+      },
+      {
+        "slug": "religious-tourism",
+        "title": "Religious Tourism",
+        "desc": "Dignified pilgrimage and religious group travel with sensitive, respectful service."
+      },
+      {
+        "slug": "cross-border-mobility",
+        "title": "Cross-Border Mobility",
+        "desc": "Long-distance and international road transfers across GCC borders with full coordination."
+      },
+      {
+        "slug": "premium-lifestyle",
+        "title": "Premium Lifestyle & Specialty",
+        "desc": "Bespoke luxury transport for weddings, celebrations, and high-profile personal occasions."
+      }
+    ],
+    "pillars": {
+      "title": "What Unites Every Vertical",
+      "items": [
+        {
+          "title": "Security & Duty of Care",
+          "desc": "Vetted, background-checked chauffeurs and GPS-monitored fleets uphold the highest duty-of-care standards."
+        },
+        {
+          "title": "Relentless Punctuality",
+          "desc": "Transport control rooms monitor every journey in real time, guaranteeing on-time performance."
+        },
+        {
+          "title": "Seamless Coordination",
+          "desc": "From flight tracking to event logistics, a single point of contact orchestrates your entire journey."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Engineer Your Mobility?",
+      "desc": "Tell us about your itinerary, event, or fleet requirements and our transport specialists will respond within one business hour.",
+      "label": "Start a Consultation"
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "luxuryMobility": "AB.Limo Luxury Mobility"
+  },
+  "servicePages": {
+    "executiveCorporateMobility": {
+      "metadata": {
+        "title": "Executive & Corporate Mobility | AB.Limo",
+        "description": "Bespoke corporator mobility for board members, roadshows, and executive itineraries. Premium chauffeur-driven transport engineered around your business schedule."
+      },
+      "title": "Executive & Corporate Mobility",
+      "subtitle": "Private, punctual, and discreet ground transport engineered around the modern executive schedule.",
+      "ctaTitle": "Elevate Your Corporate Travel Programme",
+      "ctaDesc": "Speak with a corporate mobility specialist about dedicated executive transport, roadshows, and board travel.",
+      "ctaLabel": "Request a Corporate Proposal",
+      "features": [
+        {
+          "title": "Dedicated Executives",
+          "desc": "Trained, vetted chauffeurs and brand-directed fleets that reflect your company's professional image at every meeting."
+        },
+        {
+          "title": "On-Time, Every Time",
+          "desc": "Transport control rooms sync with your calendar and live traffic, guaranteeing arrival at every commitment."
+        },
+        {
+          "title": "Single-Point Liaison",
+          "desc": "A dedicated account manager coordinates every journey, itinerary change, and invoice on your behalf."
+        }
+      ],
+      "cardsHeading": "Corporate Mobility Solutions",
+      "cardsDesc": "From daily executive transport to multi-city roadshows, we design the right mobilisation for your business.",
+      "cards": [
+        {
+          "tag": "Roadshows",
+          "title": "Multi-City Roadshows",
+          "desc": "Seamless inter-city and cross-border transfers for investor meetings, board tours, and stakeholder visits."
+        },
+        {
+          "tag": "On Demand",
+          "title": "Executive Hourly Hire",
+          "desc": "As-directed availability with an executive fleet on standby throughout the business day."
+        },
+        {
+          "tag": "Corporate Accounts",
+          "title": "Corporate Travel Accounts",
+          "desc": "Streamlined billing, consolidated reporting, and priority booking for your organisation."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Executive business travel",
+          "title": "Business Travel, Reimagined",
+          "paragraphs": [
+            "Travel should never be a distraction from the work that matters. AB.Limo provides executive transport that disappears into your day: a professional chauffeur, a pristine vehicle, and quiet, uninterrupted productivity from door to door.",
+            "Whether it is a single board meeting or a week-long itinerary across Riyadh, Dubai, and Doha, your schedule is orchestrated around you-not the other way around."
+          ],
+          "bullets": [
+            {
+              "text": "Productivity features including Wi-Fi and charging on selected vehicles"
+            },
+            {
+              "text": "Quiet, discreet service suited to sensitive business conversations"
+            },
+            {
+              "text": "Flexible scheduling aligned with meeting times and last-minute changes"
+            }
+          ]
+        },
+        {
+          "imageAlt": "Corporate team and executives",
+          "title": "A Fleet That Represents Your Brand",
+          "paragraphs": [
+            "Your transport is part of your corporate image. Our executive fleet of professional-grade sedans and luxury SUVs presents a consistent, polished identity for every client-facing interaction.",
+            "Chauffeurs are trained in corporate etiquette, confidentiality, and protocol handling, ensuring your executives are in the most capable hands."
+          ],
+          "bullets": [
+            {
+              "text": "Premium executive sedans and luxury SUVs"
+            },
+            {
+              "text": "Vehicle cleanliness and presentation inspected before every journey"
+            },
+            {
+              "text": "Confidentiality and discretion as standard"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can AB.Limo manage a multi-city corporate roadshow?",
+          "a": "Yes. Our transport control room coordinates vehicle, chauffeur, and timing requirements across cities and borders, presenting a single itinerary and consolidated invoice."
+        },
+        {
+          "q": "Do you offer corporate billing and reporting?",
+          "a": "We provide dedicated corporate accounts with monthly consolidated invoices and usage reports to simplify expense management and auditing."
+        },
+        {
+          "q": "Are executives assigned the same chauffeur?",
+          "a": "Where preferred, we allocate a dedicated chauffeur who becomes familiar with your preferences, routes, and schedules for a consistent experience."
+        }
+      ]
+    },
+    "airportTransfers": {
+      "metadata": {
+        "title": "Airport Transfers | AB.Limo",
+        "description": "Seamless airport pickup, drop-off, and VIP tarmac services with live flight tracking, meet & greet, and premium vehicles."
+      },
+      "title": "Airport Transfers",
+      "subtitle": "Punctual, stress-free transfers from and to the airport, backed by live flight tracking and dedicated meet & greet.",
+      "ctaTitle": "Book Your Airport Transfer",
+      "ctaDesc": "From a single arrival to a full delegation, our airport specialists coordinate every landing and departure.",
+      "ctaLabel": "Arrange Airport Transport",
+      "features": [
+        {
+          "title": "Live Flight Tracking",
+          "desc": "Real-time flight monitoring means your chauffeur is positioned correctly, even when landings run early or late."
+        },
+        {
+          "title": "Meet & Greet",
+          "desc": "A professional representative greets you at arrivals with a namesign, assists with luggage, and escorts you to your vehicle."
+        },
+        {
+          "title": "Complimentary Waiting Time",
+          "desc": "Generous waiting time on arrivals and precise positioning on departures ensure a seamless experience."
+        }
+      ],
+      "cardsHeading": "Airport Services",
+      "cardsDesc": "Explore dedicated airport transport solutions, from standard arrivals to tarmac-level VIP arrivals.",
+      "cards": [
+        {
+          "tag": "Arrivals",
+          "title": "Airport Pickup",
+          "desc": "Guaranteed-on-time arrival meeting with meet & greet and assistance to the vehicle. Explore the full service below."
+        },
+        {
+          "tag": "Departures",
+          "title": "Airport Drop-Off",
+          "desc": "Relaxed, punctual transfers to the terminal with ample time for check-in, exactly when you need it."
+        },
+        {
+          "tag": "VIP Access",
+          "title": "VIP Tarmac Arrivals",
+          "desc": "Privileged vehicular access for high-profile travellers requiring the utmost dignity and efficiency."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Luxury airport transfer vehicle",
+          "title": "Airport Transfers, Perfected",
+          "paragraphs": [
+            "The airport is the first and last impression of any journey. AB.Limo ensures that impression is flawless, with a coordinated team, live flight intelligence, and a premium vehicle standing ready the moment you are.",
+            "For business travellers, delegations, and families alike, every arrival and departure is handled with quiet precision."
+          ],
+          "bullets": [
+            {
+              "text": "Arrivals and departures at all major GCC airports"
+            },
+            {
+              "text": "Luggage assistance and door-to-door convenience"
+            },
+            {
+              "text": "Flexible rescheduling aligned with flight changes"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What happens if my flight is delayed?",
+          "a": "Our team monitors your flight in real time. Your chauffeur is repositioned automatically, and you are never charged for reasonable delay-related waiting."
+        },
+        {
+          "q": "Where will I meet my driver at arrivals?",
+          "a": "A representative greets you at the arrivals gate with a namesign and escorts you to the vehicle, so you need not search for your driver."
+        },
+        {
+          "q": "Do you service private and GA terminals?",
+          "a": "Yes, in addition to commercial terminals we arrange transfers to and from private and general-aviation (GA) terminals, including VIP tarmac access."
+        }
+      ],
+      "subLinks": [
+        {
+          "slug": "pickup",
+          "title": "Airport Pickup"
+        },
+        {
+          "slug": "drop-off",
+          "title": "Airport Drop-Off"
+        },
+        {
+          "slug": "vip-tarmac",
+          "title": "VIP Tarmac Arrivals"
+        }
+      ]
+    },
+    "airportTransferPickup": {
+      "metadata": {
+        "title": "Airport Pickup Service | AB.Limo",
+        "description": "Premium airport pickup with meet & greet, live flight tracking, and luxury vehicles. Arrive seamlessly from the moment you land."
+      },
+      "title": "Airport Pickup",
+      "subtitle": "A chauffeur waiting exactly when you land, with namesign, luggage assistance, and a premium vehicle ready at the kerb.",
+      "ctaTitle": "Arrange Your Arrival Transfer",
+      "ctaDesc": "Tell us your flight details and we will position a chauffeur to meet you the moment you clear arrivals.",
+      "ctaLabel": "Book Airport Pickup",
+      "cardsHeading": "The Arrival Experience",
+      "cardsDesc": "Every step of your airport pickup is orchestrated for comfort and speed.",
+      "cards": [
+        {
+          "tag": "Flight Sync",
+          "title": "Live Flight Tracking",
+          "desc": "We monitor your flight in real time so your chauffeur is positioned for your actual landing, not the scheduled one."
+        },
+        {
+          "tag": "Meet & Greet",
+          "title": "Namesign Greeting",
+          "desc": "A professional representative greets you at the arrivals gate, assists with luggage, and guides you to your vehicle."
+        },
+        {
+          "tag": "Premium Fleet",
+          "title": "Luxury Vehicles",
+          "desc": "Choose from executive sedans, luxury SUVs, or spacious vans sized to your party and luggage."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Airport pickup chauffeur",
+          "title": "Land, and Everything is Handled",
+          "paragraphs": [
+            "After a long flight, the last thing you want is to coordinate transport. With AB.Limo, your chauffeur is already waiting. Your only job is to walk through the doors and relax.",
+            "Our meet & greet representative takes care of your luggage and escorts you to a waiting vehicle, whisking you to your destination in comfort."
+          ],
+          "bullets": [
+            {
+              "text": "Free waiting on arrival for your comfort"
+            },
+            {
+              "text": "Assistance with luggage and logistics"
+            },
+            {
+              "text": "Direct airport communication on any change"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How long will my chauffeur wait if my flight is delayed?",
+          "a": "Included waiting time covers typical delays. Our flight tracking auto-adjusts the pickup time, and longer delays are handled with minimal notice."
+        },
+        {
+          "q": "Can I request a namesign or meet & greet?",
+          "a": "Yes, meet & greet with a visible namesign is included as standard on all airport pickups and can be upgraded for special occasions."
+        },
+        {
+          "q": "Do you meet passengers at the baggage claim or arrivals gate?",
+          "a": "We meet you right at the arrivals gate with your namesign, then accompany you through baggage claim to the vehicle."
+        }
+      ]
+    },
+    "airportTransferDropOff": {
+      "metadata": {
+        "title": "Airport Drop-Off Service | AB.Limo",
+        "description": "On-time, stress-free airport drop-offs. Punctual chauffeur service to the terminal, giving you ample time to check in and relax."
+      },
+      "title": "Airport Drop-Off",
+      "subtitle": "Punctual, punctual transfers to the terminal with generous time to spare-so check-in is calm, not stressful.",
+      "ctaTitle": "Reserve Your Departure Transfer",
+      "ctaDesc": "We synchronise with your flight and travel conditions to ensure you reach the terminal with time to spare.",
+      "ctaLabel": "Book Airport Drop-Off",
+      "cardsHeading": "The Departure Experience",
+      "cardsDesc": "Smooth, reliable departures engineered around your flight schedule.",
+      "cards": [
+        {
+          "tag": "Punctual",
+          "title": "On-Time Guarantee",
+          "desc": "We calculate your optimum departure time, accounting for traffic and check-in requirements, and arrive at precisely the right moment."
+        },
+        {
+          "tag": "Comfort",
+          "title": "Relaxed Journey",
+          "desc": "Start your trip in comfort with a premium vehicle and a courteous chauffeur who knows the fastest, smoothest routes."
+        },
+        {
+          "tag": "Assistance",
+          "title": "Luggage Support",
+          "desc": "Your chauffeur assists with luggage at pickup and at the terminal departure kerb."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Business traveller at airport departure",
+          "title": "Departures, Without the Rush",
+          "paragraphs": [
+            "A frantic dash to the airport is the worst way to begin a journey. AB.Limo plans your departure meticulously, balancing comfort with the buffer you need.",
+            "From early-morning flights to last-minute schedule changes, your drop-off is handled with precision and calm."
+          ],
+          "bullets": [
+            {
+              "text": "Chauffeur positioned ahead of your required terminal time"
+            },
+            {
+              "text": "Automatic adjustment for traffic and route conditions"
+            },
+            {
+              "text": "Suitable for early, late, and red-eye departures"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How early should I be picked up for my flight?",
+          "a": "Our system calculates the ideal pickup time based on your flight, terminal, and prevailing traffic to give you the recommended check-in buffer."
+        },
+        {
+          "q": "Can you accommodate very early morning departures?",
+          "a": "Absolutely. Our 24/7 dispatch handles early, late, and overnight departures with full chauffeur availability around the clock."
+        },
+        {
+          "q": "Do you drop off at the correct airline terminal?",
+          "a": "Yes, our chauffeurs are familiar with all major terminals and will deliver you to the correct departure entrance for your airline."
+        }
+      ]
+    },
+    "airportTransferVipTarmac": {
+      "metadata": {
+        "title": "VIP Tarmac Airport Service | AB.Limo",
+        "description": "Privileged VIP tarmac airport access for dignitaries and high-profile travellers. Discreet, efficient, and secure arrivals and departures."
+      },
+      "title": "VIP Tarmac Arrivals",
+      "subtitle": "Privileged tarmac access and expedited handling for high-profile travellers who value dignity, privacy, and time.",
+      "ctaTitle": "Arrange VIP Tarmac Handling",
+      "ctaDesc": "Coordinate with our ground-handling partners for a seamless, discreet tarmac experience at the airport of your choice.",
+      "ctaLabel": "Arrange VIP Access",
+      "cardsHeading": "VIP Ground Handling",
+      "cardsDesc": "A full suite of privileged services for distinguished travellers.",
+      "cards": [
+        {
+          "tag": "Privileged Access",
+          "title": "Direct Tarmac Access",
+          "desc": "Vehicular access to the aircraft for qualifying flights, minimising time through public terminals."
+        },
+        {
+          "tag": "Discreet",
+          "title": "Private & Secure",
+          "desc": "Discreet handling and heightened security protocols appropriate for dignitaries and high-profile guests."
+        },
+        {
+          "tag": "Assistance",
+          "title": "Full Coordination",
+          "desc": "We liaise with airport authorities, immigration, and ground handlers to orchestrate every detail."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "VIP airport terminal",
+          "title": "The Privilege of Time",
+          "paragraphs": [
+            "For distinguished travellers, the airport experience should be as seamless and dignified as the journey itself. AB.Limo coordinates privileged ground access with authorised partners to streamline arrivals and departures.",
+            "Our protocol-trained chauffeurs and white-glove handling ensure complete discretion from the moment you touch down."
+          ],
+          "bullets": [
+            {
+              "text": "Coordination of authorised tarmac access where permitted"
+            },
+            {
+              "text": "Protocol- and security-aware chauffeurs"
+            },
+            {
+              "text": "Priority and expedited handling arrangements"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is tarmac access available at all airports?",
+          "a": "Privileged tarmac access depends on airport policy and qualifying criteria. Our ground-handling partners confirm eligibility and arrange access where authorised."
+        },
+        {
+          "q": "Who handles the security and protocol arrangements?",
+          "a": "AB.Limo coordinates with accredited ground handlers and relevant authorities to manage protocol, security, and entrance permissions."
+        },
+        {
+          "q": "Can this service be arranged for private jets?",
+          "a": "Yes, our VIP ground handling is ideal for private aviation at general-aviation (GA) and fixed-base operator (FBO) terminals."
+        }
+      ]
+    },
+    "corporateFleet": {
+      "metadata": {
+        "title": "Corporate Fleet & Workforce Mobility | AB.Limo",
+        "description": "Managed corporate fleets and employee shuttle programs engineered for reliability, compliance, and efficiency."
+      },
+      "title": "Corporate Fleet & Workforce Mobility",
+      "subtitle": "Managed ground transport for organisations-secure employee shuttles, fleet management, and duty-of-care programmes.",
+      "ctaTitle": "Design Your Workforce Mobility Programme",
+      "ctaDesc": "From daily employee shuttles to campus fleet management, our team builds reliable, cost-effective programmes.",
+      "ctaLabel": "Request a Fleet Proposal",
+      "features": [
+        {
+          "title": "Employee Shuttles",
+          "desc": "Reliable, scheduled shuttles for staff, shift rotations, and campus transport with live tracking."
+        },
+        {
+          "title": "Fleet Management",
+          "desc": "Right-sized vehicle pools with utilisation tracking, maintenance oversight, and transparent budgeting."
+        },
+        {
+          "title": "Duty of Care",
+          "desc": "Vetted drivers, monitored journeys, and incident support underpin your organisation's duty-of-care obligations."
+        }
+      ],
+      "cardsHeading": "Workforce Mobility Solutions",
+      "cardsDesc": "Flexible, scalable transport built around your organisation's operations.",
+      "cards": [
+        {
+          "tag": "Daily Shuttle",
+          "title": "Employee Shuttle Programs",
+          "desc": "Fixed-route and on-demand shuttles moving your workforce safely and predictably."
+        },
+        {
+          "tag": "Campuses",
+          "title": "Campus & Site Transport",
+          "desc": "Internal mobility across industrial sites, campuses, and multi-building compounds."
+        },
+        {
+          "tag": "Reporting",
+          "title": "Managed Fleet Reporting",
+          "desc": "Usage analytics and consolidated billing give full visibility and control over spend."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Corporate shuttle fleet",
+          "title": "Mobility That Scales With You",
+          "paragraphs": [
+            "Whether you move forty colleagues a day or four thousand, AB.Limo builds a workforce mobility programme that scales reliably. Routes, schedules, and capacity are optimised around your operations.",
+            "With live tracking and a dedicated account team, you always know where your people are-and that they are safe."
+          ],
+          "bullets": [
+            {
+              "text": "Right-sized vehicles from vans to motorcoaches"
+            },
+            {
+              "text": "Live journey monitoring and driver performance reporting"
+            },
+            {
+              "text": "Flexible scaling for peak periods and events"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can the shuttle programme be scaled up or down?",
+          "a": "Yes. We design capacity to flex with your workforce, adding vehicles or adjusting routes as your operations evolve."
+        },
+        {
+          "q": "Do you provide driver vetting and training?",
+          "a": "All drivers undergo rigorous vetting, background checks, and customer-service and safety training before assignment."
+        },
+        {
+          "q": "How is fleet usage reported?",
+          "a": "Your account team provides consolidated reporting on utilisation, mileage, and spend through a clear monthly summary."
+        }
+      ]
+    },
+    "crossBorderMobility": {
+      "metadata": {
+        "title": "Cross-Border Mobility | AB.Limo",
+        "description": "Long-distance and international cross-border road transport across the GCC, with full coordination of borders and documentation."
+      },
+      "title": "Cross-Border Mobility",
+      "subtitle": "Long-distance and international road transport across GCC borders, coordinated end-to-end with full attention to detail.",
+      "ctaTitle": "Plan Your Cross-Border Journey",
+      "ctaDesc": "From Riyadh to Dubai to Muscat, our teams coordinate a seamless journey across borders for you and your group.",
+      "ctaLabel": "Enquire About Cross-Border Travel",
+      "features": [
+        {
+          "title": "Border Coordination",
+          "desc": "We manage border crossing logistics, documentation, and routing to make international journeys seamless."
+        },
+        {
+          "title": "Multi-Stop Routing",
+          "desc": "Complex multi-city and multi-country itineraries planned to optimise time, comfort, and fuel."
+        },
+        {
+          "title": "Long-Distance Comfort",
+          "desc": "Premium vehicles and experienced drivers keep you comfortable and refreshed on long road journeys."
+        }
+      ],
+      "cardsHeading": "Cross-Border Routes",
+      "cardsDesc": "Seamless connectivity between the Gulf's major business and leisure hubs.",
+      "cards": [
+        {
+          "tag": "GCC",
+          "title": "Riyadh – Dubai",
+          "desc": "A flagship corridor connecting Saudi Arabia and the UAE with comfort and coordination."
+        },
+        {
+          "tag": "UAE",
+          "title": "Abu Dhabi & Doha",
+          "desc": "Cross-border connectivity between the UAE and Qatar for business and leisure travellers."
+        },
+        {
+          "tag": "Multinational",
+          "title": "Extended GCC Journeys",
+          "desc": "Multi-country programmes spanning several states with seamless handovers and support."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Long distance highway journey",
+          "title": "The Gulf, Uninterrupted",
+          "paragraphs": [
+            "Crossing borders should be an adventure, not an ordeal. AB.Limo removes the friction of long-distance international travel, handling the paperwork and route planning so you enjoy the journey.",
+            "Whether it is a business delegation or a family road trip, our coordination ensures a smooth passage at every crossing."
+          ],
+          "bullets": [
+            {
+              "text": "End-to-end border and documentation support"
+            },
+            {
+              "text": "Well-rested, long-haul experienced drivers"
+            },
+            {
+              "text": "Rest stops and route planning for comfort and safety"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Which cross-border routes do you operate?",
+          "a": "We coordinate journeys across the GCC, including major corridors between Saudi Arabia, the UAE, Qatar, Bahrain, Kuwait, and Oman."
+        },
+        {
+          "q": "Who handles border documentation?",
+          "a": "Our teams coordinate the necessary arrangements and guidance for border crossings as part of the journey service."
+        },
+        {
+          "q": "Can cross-border transport be combined with other services?",
+          "a": "Yes. We integrate cross-border journeys with airport transfers, events, and other AB.Limo services for a complete mobility plan."
+        }
+      ]
+    },
+    "eventTransportation": {
+      "metadata": {
+        "title": "Event Transportation Services | AB.Limo",
+        "description": "End-to-end guest transport for conferences, exhibitions, concerts, and large-scale corporate gatherings."
+      },
+      "title": "Event Transportation",
+      "subtitle": "Complete guest-movement logistics for conferences, exhibitions, concerts, and large-scale corporate gatherings.",
+      "ctaTitle": "Plan Your Event Transport",
+      "ctaDesc": "Our transport control room engineers guest movement for events of every scale, from boardroom summits to stadium crowds.",
+      "ctaLabel": "Request Event Logistics",
+      "features": [
+        {
+          "title": "Event Command Centre",
+          "desc": "A dedicated control room coordinates every vehicle, route, and arrival in real time throughout your event."
+        },
+        {
+          "title": "Rapid Deployment",
+          "desc": "Automated scheduling and on-demand expansion ensure capacity is ready the moment demand rises."
+        },
+        {
+          "title": "Dedicated Coordination",
+          "desc": "A named event transport manager liaises with your organisers and venues from planning to teardown."
+        }
+      ],
+      "cardsHeading": "Event Transport Templates",
+      "cardsDesc": "Proven frameworks scaled to the size and nature of your gathering.",
+      "cards": [
+        {
+          "tag": "Conferences",
+          "title": "Conferences & Summits",
+          "desc": "Coordinated delegate transfers between hotels, venues, and airports for multi-day programmes."
+        },
+        {
+          "tag": "Exhibitions",
+          "title": "Exhibitions & Trade Shows",
+          "desc": "High-frequency shuttles moving attendees efficiently across large exhibition floors and sites."
+        },
+        {
+          "tag": "Concerts",
+          "title": "Concerts & Sports",
+          "desc": "Timed, high-volume guest management for performances, tournaments, and stadium events."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Large corporate conference event",
+          "title": "Seamless Movement, Unforgettable Event",
+          "paragraphs": [
+            "The success of an event often hinges on how smoothly guests arrive, move, and depart. AB.Limo turns transport into a seamless part of the experience, invisible in operation but powerful in contribution.",
+            "From the first airport pickup to the final shuttle of the evening, every movement is orchestrated by a dedicated command centre."
+          ],
+          "bullets": [
+            {
+              "text": "End-to-end guest journey planning and wayfinding"
+            },
+            {
+              "text": "Vans, minibuses, executive coaches, and luxury sedans"
+            },
+            {
+              "text": "On-site marshalling and guest-flow management"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How far in advance should we book event transport?",
+          "a": "For large-scale events we recommend a minimum of several weeks of planning. Our team can also mobilise for tighter timeframes where capacity allows."
+        },
+        {
+          "q": "Can transport be scheduled around our event programme?",
+          "a": "Yes. We build the movement plan around your agenda, adjusting timings automatically as the programme evolves."
+        },
+        {
+          "q": "Do you manage hotel-to-venue shuttles?",
+          "a": "Absolutely, including multi-hotel loops and timed services coordinated with your event schedule."
+        }
+      ]
+    },
+    "groupCoachCharter": {
+      "metadata": {
+        "title": "Group & Coach Charter | AB.Limo",
+        "description": "Minibuses, executive coaches, and motorcoach charters for teams, delegations, and large groups across the Gulf."
+      },
+      "title": "Group & Coach Charter",
+      "subtitle": "Executive coaches, minibuses, and motorcoach charters for teams, delegations, and groups travelling together.",
+      "ctaTitle": "Charter Your Group Transport",
+      "ctaDesc": "Tell us your group size, route, and schedule, and we will match the perfect coach or fleet to your journey.",
+      "ctaLabel": "Request a Group Charter",
+      "features": [
+        {
+          "title": "Right-Sized Vehicles",
+          "desc": "From 8-seat minibuses to 49-seat executive coaches, our fleet fits your group and luggage perfectly."
+        },
+        {
+          "title": "On-Time Charting",
+          "desc": "Reliable scheduling keeps your whole group moving to plan, whether single- or multi-day."
+        },
+        {
+          "title": "Flexible Itineraries",
+          "desc": "Custom routes, stops, and schedules designed around your group's unique plan."
+        }
+      ],
+      "cardsHeading": "Charter Options",
+      "cardsDesc": "A fleet built for group travel, from compact crews to full delegations.",
+      "cards": [
+        {
+          "tag": "Minibus",
+          "title": "Minibuses (8–16 pax)",
+          "desc": "Comfortable mid-size vehicles ideal for teams, families, and small delegations."
+        },
+        {
+          "tag": "Executive Coach",
+          "title": "Executive Coaches (20–30 pax)",
+          "desc": "Business-class coaches with reclining seats and onboard comforts for discerning groups."
+        },
+        {
+          "tag": "Motorcoach",
+          "title": "Motorcoaches (40+ pax)",
+          "desc": "Full-size motorcoaches for large groups, events, and long-distance charters."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Group travelling together",
+          "title": "One Journey, One Group, Zero Friction",
+          "paragraphs": [
+            "Moving a group is about more than reserving a vehicle-it is about keeping your people together, on time, and comfortable. AB.Limo handles every detail so you can focus on your group.",
+            "Our coordinators manage the itinerary, the drivers, and the logistics, while your group simply enjoys the journey."
+          ],
+          "bullets": [
+            {
+              "text": "Dedicated journey coordinator for every charter"
+            },
+            {
+              "text": "Comfortable, well-maintained, inspection-ready vehicles"
+            },
+            {
+              "text": "Multi-day and multi-vehicle charters supported"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the minimum group size for a charter?",
+          "a": "We charter for groups of roughly eight passengers and above, though smaller executive transfers are also available."
+        },
+        {
+          "q": "Can you charter coaches for a multi-day itinerary?",
+          "a": "Yes, including overnight journeys and multi-day programmes with coordinated driver planning."
+        },
+        {
+          "q": "Are drivers experienced with large coach operations?",
+          "a": "Our coach drivers hold the appropriate licensing and undergo rigorous training and background vetting."
+        }
+      ]
+    },
+    "premiumLifestyle": {
+      "metadata": {
+        "title": "Premium Lifestyle & Specialty Transport | AB.Limo",
+        "description": "Bespoke luxury transport for weddings, celebrations, and high-profile personal occasions, delivered by AB.Limo."
+      },
+      "title": "Premium Lifestyle & Specialty",
+      "subtitle": "Bespoke luxury transport for life's most memorable moments-weddings, celebrations, and special occasions.",
+      "ctaTitle": "Plan a Bespoke Occasion",
+      "ctaDesc": "Tell us about your special day and we will craft transport that matches the occasion perfectly.",
+      "ctaLabel": "Enquire About Specialty Transport",
+      "features": [
+        {
+          "title": "Occasion Styling",
+          "desc": "Elegant vehicle presentation, ribbons, and décor to match the theme and tone of your special day."
+        },
+        {
+          "title": "Tailored Moments",
+          "desc": "Every detail coordinated with your planners to create a memorable and seamless experience."
+        },
+        {
+          "title": "Family & Parties",
+          "desc": "Comfortable, stylish transport for family gatherings, birthdays, anniversaries, and parties."
+        }
+      ],
+      "cardsHeading": "Specialty Occasions",
+      "cardsDesc": "Life's big moments deserve transport as memorable as the occasion itself.",
+      "cards": [
+        {
+          "tag": "Weddings",
+          "title": "Wedding Transport",
+          "desc": "Elegant arrival and departure transport for the couple, wedding party, and guests."
+        },
+        {
+          "tag": "Celebrations",
+          "title": "Anniversaries & Milestones",
+          "desc": "Sensitive, elegant transport for anniversaries, birthdays, and family milestones."
+        },
+        {
+          "tag": "Corporate Galas",
+          "title": "Corporate Galas & Dinners",
+          "desc": "Sophisticated transport for awards nights, galas, and high-profile social functions."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Elegant wedding celebration",
+          "title": "Moments Worth Remembering",
+          "paragraphs": [
+            "Some occasions warrant more than transport-they call for an entrance. AB.Limo offers bespoke luxury vehicles and styling that make your special moments unforgettable.",
+            "From a pristine luxury sedan for your wedding day to a fleet for a family gathering, we tailor every detail to your vision."
+          ],
+          "bullets": [
+            {
+              "text": "Pristine, occasion-ready luxury vehicles"
+            },
+            {
+              "text": "Optional ribbons, décor, and styling"
+            },
+            {
+              "text": "Coordination with planners and venues"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you style the vehicle for a wedding?",
+          "a": "Yes, we offer elegant presentation options including ribbons and décor to suit the theme of your special day."
+        },
+        {
+          "q": "Do you provide multiple vehicles for an event?",
+          "a": "We can supply coordinated fleets of sedans, vans, or coaches to transport the entire party or guest group."
+        },
+        {
+          "q": "Can the chauffeur follow our own schedule?",
+          "a": "Absolutely. Hourly and as-directed hire gives you full flexibility to run your day on your terms."
+        }
+      ]
+    },
+    "religiousTourism": {
+      "metadata": {
+        "title": "Religious & Pilgrimage Travel | AB.Limo",
+        "description": "Dignified pilgrimage and religious group travel with sensitive, respectful service for Hajj, Umrah, and other journeys of faith."
+      },
+      "title": "Religious Tourism",
+      "subtitle": "Dignified, respectful transport for pilgrimages and religious group travel, delivered with care and sensitivity.",
+      "ctaTitle": "Arrange Sacred Journey Transport",
+      "ctaDesc": "Speak with our team about coordinated, dignified transport for pilgrimages and religious group travel.",
+      "ctaLabel": "Plan Pilgrimage Transport",
+      "features": [
+        {
+          "title": "Respect & Sensitivity",
+          "desc": "Our teams understand and honour the devotional character of religious travel in every interaction."
+        },
+        {
+          "title": "Group Coordination",
+          "desc": "Synchronised group movement with careful attention to elderly, family, and first-time pilgrim needs."
+        },
+        {
+          "title": "Punctual & Dependable",
+          "desc": "Strict adherence to schedule ensures pilgrimages proceed smoothly from airport to sacred sites and back."
+        }
+      ],
+      "cardsHeading": "Pilgrimage & Group Services",
+      "cardsDesc": "Specialised transport supporting journeys of faith with reliability and heart.",
+      "cards": [
+        {
+          "tag": "Umrah & Hajj",
+          "title": "Sacred Sites Transfers",
+          "desc": "Coordinated transfers between airports, hotels, and sacred sites throughout the pilgrimage programme."
+        },
+        {
+          "tag": "Groups",
+          "title": "Devotional Group Travel",
+          "desc": "Comfortable, dignified coach and minibus transport for religious groups and congregations."
+        },
+        {
+          "tag": "Family",
+          "title": "Family & Elderly Care",
+          "desc": "Thoughtful, patient service for families and senior pilgrims requiring additional assistance."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Sacred journey destination",
+          "title": "Journeys of the Heart, Handled with Care",
+          "paragraphs": [
+            "For journeys of faith, the experience matters as much as the destination. AB.Limo provides transport characterised by patience, dignity, and respect for the holiness of the occasion.",
+            "Our coordinators attend to the small considerations that make a pilgrimage meaningful, allowing travellers to focus fully on their spiritual journey."
+          ],
+          "bullets": [
+            {
+              "text": "Sensitive, courteous handling of all travellers"
+            },
+            {
+              "text": "Assistance for families, elderly, and those with mobility needs"
+            },
+            {
+              "text": "Coordination with travel agents and group leaders"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do you specialise in Hajj and Umrah transport?",
+          "a": "Yes, we provide coordinated transfer services supporting Hajj, Umrah, and other pilgrimage programmes with sensitivity and reliability."
+        },
+        {
+          "q": "Can you accommodate large religious groups?",
+          "a": "We deploy minibuses and coaches to move congregations and large devotional groups efficiently and comfortably."
+        },
+        {
+          "q": "Is assistance available for elderly pilgrims?",
+          "a": "Certainly. We provide patient, attentive support and can arrange additional assistance for those with mobility requirements."
+        }
+      ]
+    },
+    "tourismLeisure": {
+      "metadata": {
+        "title": "Tourism & Leisure Transport | AB.Limo",
+        "description": "Custom private tours, sightseeing, and leisure transit curated by AB.Limo for discerning travellers."
+      },
+      "title": "Tourism & Leisure",
+      "subtitle": "Custom private tours, sightseeing, and leisure transit curated for travellers who expect more.",
+      "ctaTitle": "Design Your Private Tour",
+      "ctaDesc": "From iconic landmarks to hidden gems, let us curate a seamless, luxurious way to explore your destination.",
+      "ctaLabel": "Plan a Private Tour",
+      "features": [
+        {
+          "title": "Custom Itineraries",
+          "desc": "We craft day tours and multi-day programmes around your interests, pace, and preferred destinations."
+        },
+        {
+          "title": "Knowledgeable Chauffeurs",
+          "desc": "Friendly, multilingual chauffeurs double as guides with local insight and great storytelling."
+        },
+        {
+          "title": "Curated Experiences",
+          "desc": "Recommendations for dining, shopping, and landmarks elevate your leisure travel to a true experience."
+        }
+      ],
+      "cardsHeading": "Leisure Experiences",
+      "cardsDesc": "Turn an ordinary trip into a memorable journey with our signature experiences.",
+      "cards": [
+        {
+          "tag": "City Tours",
+          "title": "Private City Tours",
+          "desc": "Iconic landmarks and hidden favourites, seen at your own pace in complete privacy."
+        },
+        {
+          "tag": "Coastal",
+          "title": "Beach & Leisure Runs",
+          "desc": "Relaxed transfers to beaches, resorts, and leisure destinations with zero logistics stress."
+        },
+        {
+          "tag": "Culture",
+          "title": "Culture & Heritage",
+          "desc": "Thoughtful journeys connecting you with the history, architecture, and culture of the region."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Scenic leisure travel destination",
+          "title": "Explore, Your Way",
+          "paragraphs": [
+            "Leisure time should never be rushed or rationed. With a private AB.Limo chauffeur, your itinerary bends to your mood, your schedule, and your curiosity.",
+            "Stop for a photograph, linger at a viewpoint, or add a spontaneous detour-your chauffeur is there to make it effortless."
+          ],
+          "bullets": [
+            {
+              "text": "Full-day and half-day hire with flexible stops"
+            },
+            {
+              "text": "Multilingual chauffeurs with local expertise"
+            },
+            {
+              "text": "Suitable for couples, families, and small groups"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you plan a full-day sightseeing itinerary?",
+          "a": "Yes. We design detailed day tours with recommended timings, dining spots, and must-see stops tailored to your interests."
+        },
+        {
+          "q": "Are your chauffeurs also tour guides?",
+          "a": "Our chauffeurs are knowledgeable about their cities and happy to share insight, while professional licensed guides can also be arranged."
+        },
+        {
+          "q": "Can we make stops along the way?",
+          "a": "Absolutely. Hourly and day-hire packages allow you to stop, explore, or change your plan at any time."
+        }
+      ]
+    },
+    "vipDiplomaticGovernment": {
+      "metadata": {
+        "title": "VIP, Diplomatic & Government Transport | AB.Limo",
+        "description": "High-security, protocol-driven chauffeur transport for dignitaries, heads of state, and diplomatic missions across the GCC."
+      },
+      "title": "VIP, Diplomatic & Government",
+      "subtitle": "Discreet, secure, and protocol-driven transport for dignitaries, diplomatic missions, and government delegations.",
+      "ctaTitle": "Engage Our Protocol Transport Team",
+      "ctaDesc": "For government agencies, embassies, and high-profile principals requiring discreet and secure ground transport.",
+      "ctaLabel": "Request Protocol Services",
+      "features": [
+        {
+          "title": "Heightened Security",
+          "desc": "Swift, convoy-ready chauffeurs and fleet prepared for sensitive movements with stringent vetting."
+        },
+        {
+          "title": "Strict Discretion",
+          "desc": "Protocol-trained chauffeurs bound by confidentiality, appropriate for sensitive diplomatic movements."
+        },
+        {
+          "title": "International Protocol",
+          "desc": "Deep familiarity with diplomatic protocol, convoy etiquette, and ceremonial requirements."
+        }
+      ],
+      "cardsHeading": "Protocol & Security Solutions",
+      "cardsDesc": "Specialised transport services for the most demanding environments.",
+      "cards": [
+        {
+          "tag": "Convoys",
+          "title": "Coordinated Convoys",
+          "desc": "Multi-vehicle movements with advance route planning and radio coordination for complete synchronisation."
+        },
+        {
+          "tag": "Delegations",
+          "title": "Government Delegations",
+          "desc": "Comprehensive delegation transport accommodating principals, staff, security, and support personnel."
+        },
+        {
+          "tag": "Diplomatic",
+          "title": "Embassy & Diplomatic",
+          "desc": "Steady, professional transport for embassy staff, attachés, and visiting diplomats."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Protocol and government building",
+          "title": "Trusted by Those Who Can't Be Late",
+          "paragraphs": [
+            "For principals whose schedules carry protocol weight, there is no margin for error. AB.Limo's protocol transport division is built on advance planning, redundancy, and absolute reliability.",
+            "Chauffeurs are screened, trained in discreet service, and prepared to adapt instantly to evolving itineraries and security requirements."
+          ],
+          "bullets": [
+            {
+              "text": "Advance route reconnaissance and contingency planning"
+            },
+            {
+              "text": "Vetted, protocol-trained chauffeurs"
+            },
+            {
+              "text": "Coordination with accompanying security details"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you coordinate with our security detail?",
+          "a": "Yes. We work directly with your security team to synchronise movements, routes, and timings for a fully coordinated operation."
+        },
+        {
+          "q": "Do you provide chauffeurs with diplomatic driving experience?",
+          "a": "Our protocol chauffeurs are selected and trained for diplomatic driving, discretion, and international protocol etiquette."
+        },
+        {
+          "q": "Is this service available on short notice?",
+          "a": "While advance notice is preferred for comprehensive protocol planning, our dedicated team can mobilise for urgent requirements where possible."
+        }
+      ]
+    }
+  },
+  "industries": {
+    "metadata": {
+      "title": "Dedicated B2B Industry Solutions | AB.Limo",
+      "description": "Enterprise-grade ground transport for aviation crews, luxury hospitality, corporate mobility, and government & diplomatic protocol."
+    },
+    "hero": {
+      "badge": "B2B Industry Solutions",
+      "titleStart": "Ground Mobility Built for",
+      "titleHighlight": "Enterprise Clients",
+      "desc": "Specialised transport programmes for aviation, hospitality, corporate, and government sectors-delivered with one uncompromising standard of security, punctuality, and discretion."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "industries": "Industries"
+    },
+    "explore": {
+      "title": "Explore Our Industry Verticals",
+      "desc": "Each vertical pairs dedicated account management with the premium fleet and professional chauffeurs that define the AB.Limo standard."
+    },
+    "categories": [
+      {
+        "slug": "aviation",
+        "title": "Aviation",
+        "tag": "Crew & FBO",
+        "desc": "Airline crew transfers, pilot logistics, and VIP lounge transit coordinated around flight schedules and layovers."
+      },
+      {
+        "slug": "hospitality",
+        "title": "Hospitality",
+        "tag": "Hotels & Resorts",
+        "desc": "5-star concierge partnership transit for luxury hotels and resorts, from VIP guest arrivals to bespoke outings."
+      },
+      {
+        "slug": "corporate-enterprise",
+        "title": "Corporate / Enterprise",
+        "tag": "Business Mobility",
+        "desc": "Employee mobility, executive commuting, and corporate roadshow transport for forward-thinking enterprises."
+      },
+      {
+        "slug": "government-diplomatic",
+        "title": "Government & Diplomatic",
+        "tag": "Protocol",
+        "desc": "High-security protocol transport for official delegations, dignitaries, and government transit requirements."
+      }
+    ],
+    "pillars": {
+      "title": "What Enterprise Clients Can Expect",
+      "items": [
+        {
+          "title": "Enterprise-Grade Reliability",
+          "desc": "Dedicated account management, consolidated billing, and service-level agreements built for procurement teams."
+        },
+        {
+          "title": "24/7 Control Room",
+          "desc": "A live transport command centre monitors every journey and responds instantly to evolving schedules."
+        },
+        {
+          "title": "Custom Programmes",
+          "desc": "Right-sized fleets, route networks, and reporting tailored to the unique demands of each industry vertical."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Build a Programme Around Your Industry",
+      "desc": "Speak with our enterprise mobility specialists about a dedicated transport programme for your organisation.",
+      "label": "Start the Conversation"
+    },
+    "faqTitle": "Frequently Asked Questions"
+  },
+  "industryPages": {
+    "aviation": {
+      "metadata": {
+        "title": "Aviation Ground Transport for Crews & FBOs | AB.Limo",
+        "description": "Airline crew transfers, pilot logistics, and VIP lounge transit coordinated around flight schedules and layovers by AB.Limo."
+      },
+      "badge": "Aviation & FBO Operations",
+      "title": "Aviation Ground Mobility",
+      "subtitle": "Precision crew transfers, pilot logistics, and VIP lounge transit synchronised with your flight operations.",
+      "ctaTitle": "Partner With Our Aviation Team",
+      "ctaDesc": "Speak with our aviation ground-handling specialists about a crew and FBO mobility programme.",
+      "ctaLabel": "Request Aviation Proposal",
+      "features": [
+        {
+          "title": "Flight-Synchronised",
+          "desc": "Crew transport positioned around rosters, layovers, and schedule changes with live flight coordination."
+        },
+        {
+          "title": "Crew Rosters, Done",
+          "desc": "Reliable, on-time transfers for cabin and flight crew, with drivers who understand aviation scheduling."
+        },
+        {
+          "title": "FBO & Lounge Transit",
+          "desc": "VIP transfers between terminals, private aviation lounges, and fixed-base operator facilities."
+        }
+      ],
+      "cardsHeading": "Aviation Solutions",
+      "cardsDesc": "Ground mobility designed around the rhythm of the flight deck.",
+      "cards": [
+        {
+          "tag": "Crew",
+          "title": "Airline Crew Transfers",
+          "desc": "Punctual transport between hotels, airports, and bases for cabin and flight crew worldwide."
+        },
+        {
+          "tag": "Private Aviation",
+          "title": "Pilot & Flight Deck Logistics",
+          "desc": "Dedicated pilot transport and rotation support for commercial and private operators."
+        },
+        {
+          "tag": "VIP",
+          "title": "VIP Lounge & FBO Transit",
+          "desc": "Seamless, discreet connections between terminals, lounges, and fixed-base operator facilities."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Aircraft on the tarmac",
+          "title": "Rolling with the Flight Schedule",
+          "paragraphs": [
+            "Aviation runs on precision. So does our service. AB.Limo aligns ground transport with crew rosters, aircraft rotations, and the unpredictable shifts that define life at an airport.",
+            "Our transport control room stays in sync with your operations team, repositioning vehicles instantly as schedules evolve."
+          ],
+          "bullets": [
+            {
+              "text": "24/7 dispatch aligned to flight operations"
+            },
+            {
+              "text": "Drivers familiar with airside and terminal coordination"
+            },
+            {
+              "text": "Dedicated liaison for every airline or FBO account"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you accommodate irregular and delayed crew schedules?",
+          "a": "Yes. Our control room monitors operational changes and repositions vehicles to match updated crew timings in real time."
+        },
+        {
+          "q": "Do you support both commercial airlines and private aviation?",
+          "a": "We serve commercial operators, private flights, and fixed-base operators with tailored crew and VIP ground solutions."
+        },
+        {
+          "q": "Can ground transport be provided at multiple crew bases?",
+          "a": "Absolutely. Our network supports crew mobility across multiple bases and cities with a consistent service standard."
+        }
+      ]
+    },
+    "hospitality": {
+      "metadata": {
+        "title": "Hospitality Ground Transport for Hotels & Resorts | AB.Limo",
+        "description": "Bespoke transit partnerships for luxury hotels, resorts, and 5-star concierge teams by AB.Limo."
+      },
+      "badge": "Hospitality & Concierge",
+      "title": "Hospitality Ground Mobility",
+      "subtitle": "Seamless guest transport partnerships that elevate the luxury hotel and resort experience.",
+      "ctaTitle": "Partner With Our Hospitality Team",
+      "ctaDesc": "Speak with our hospitality liaison about a guest transport partnership for your property.",
+      "ctaLabel": "Request Partnership Details",
+      "features": [
+        {
+          "title": "Concierge-Level Service",
+          "desc": "Discreet, gracious chauffeurs trained to represent your property's standards at every doorstep."
+        },
+        {
+          "title": "Premium Guest Fleet",
+          "desc": "A curated fleet of luxury sedans, SUVs, and vans that complement your brand and impress your guests."
+        },
+        {
+          "title": "Guest Journey Orchestration",
+          "desc": "From airport pickup to sightseeing and gala evenings, your guests are cared for at every turn."
+        }
+      ],
+      "cardsHeading": "Hospitality Solutions",
+      "cardsDesc": "Turn guest transport into a signature part of the five-star stay.",
+      "cards": [
+        {
+          "tag": "Arrivals",
+          "title": "VIP Guest Transfers",
+          "desc": "Elegant airport and private-jet arrivals that set the tone for an exceptional stay."
+        },
+        {
+          "tag": "Concierge",
+          "title": "Concierge On-Demand",
+          "desc": "Hourly and as-directed transport responding to your concierge team's every guest request."
+        },
+        {
+          "tag": "Resorts",
+          "title": "Resort & Amenity Runs",
+          "desc": "Seamless transfers to beaches, golf courses, spas, and local attractions for resort guests."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Luxury hotel lobby and concierge",
+          "title": "Transport as a Mark of Hospitality",
+          "paragraphs": [
+            "For discerning guests, the journey shapes the stay. AB.Limo partners with luxury hotels and resorts to deliver transport that is as refined as the property itself.",
+            "Our chauffeurs arrive immaculate and gracious, treating every guest as a principal and every trip as a privilege to be honoured."
+          ],
+          "bullets": [
+            {
+              "text": "Dedicated partnership liaison for your property"
+            },
+            {
+              "text": "White-glove, presentation-conscious chauffeurs"
+            },
+            {
+              "text": "Flexible billing tailored to hotel operations"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can transport be branded or aligned to our hotel's standards?",
+          "a": "Yes. We tailor vehicle choice, chauffeur presentation, and service style to match your property's brand and service standards."
+        },
+        {
+          "q": "Do you integrate with our concierge team?",
+          "a": "We provide a direct liaison and simple booking channel so your concierge team can arrange guest transport seamlessly."
+        },
+        {
+          "q": "Can you handle large guest movements like conferences or galas?",
+          "a": "We coordinate everything from single VIP transfers to multi-guest movements for conferences, galas, and special events."
+        }
+      ]
+    },
+    "corporateEnterprise": {
+      "metadata": {
+        "title": "Corporate & Enterprise Mobility Solutions | AB.Limo",
+        "description": "Employee mobility, executive commuting, and corporate roadshow transport for forward-thinking enterprises by AB.Limo."
+      },
+      "badge": "Corporate & Enterprise",
+      "title": "Corporate & Enterprise Mobility",
+      "subtitle": "Integrated ground transport for employee mobility, executive travel, and corporate roadshows.",
+      "ctaTitle": "Build Your Enterprise Programme",
+      "ctaDesc": "Speak with our enterprise mobility consultants about a comprehensive transport programme for your business.",
+      "ctaLabel": "Request Enterprise Proposal",
+      "features": [
+        {
+          "title": "Employee Mobility",
+          "desc": "Reliable daily transport for your workforce, from office shuttles to site and campus movements."
+        },
+        {
+          "title": "Executive Commuting",
+          "desc": "Dedicated executive transport with a consistent chauffeur who knows your preferences and routes."
+        },
+        {
+          "title": "Roadshow Logistics",
+          "desc": "Multi-city and multi-country movement for roadshows, board tours, and stakeholder visits."
+        }
+      ],
+      "cardsHeading": "Enterprise Mobility Solutions",
+      "cardsDesc": "Scalable programmes built around your organisation's operations and duty-of-care obligations.",
+      "cards": [
+        {
+          "tag": "Commute",
+          "title": "Executive Commuting",
+          "desc": "Daily, subscribed executive transport with priority booking and consistent service."
+        },
+        {
+          "tag": "Roadshows",
+          "title": "Corporate Roadshows",
+          "desc": "Seamless inter-city movement for investor meetings, board tours, and key stakeholder visits."
+        },
+        {
+          "tag": "Accounts",
+          "title": "Enterprise Accounts",
+          "desc": "Consolidated billing, usage reporting, and a dedicated account manager for your organisation."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Corporate executives in business travel",
+          "title": "Mobility That Moves Your Business Forward",
+          "paragraphs": [
+            "Ground transport is an extension of your brand and your duty of care. AB.Limo engineering corporate mobility programmes that are reliable, transparent, and tailored to how your business actually moves.",
+            "From the daily commute to a week-long roadshow, every journey is coordinated, reported, and invoiced with enterprise-grade rigour."
+          ],
+          "bullets": [
+            {
+              "text": "Consolidated invoicing and usage analytics"
+            },
+            {
+              "text": "Dedicated account manager and 24/7 control room"
+            },
+            {
+              "text": "Vetted chauffeurs and monitored journeys for duty of care"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How does corporate billing and reporting work?",
+          "a": "We provide consolidated monthly invoices and usage reports, giving full visibility and control over your ground-transport spend."
+        },
+        {
+          "q": "Can the programme scale with our workforce?",
+          "a": "Yes. We right-size fleets and routes to your workforce, scaling up or down as your operations evolve."
+        },
+        {
+          "q": "Do you offer a single point of contact?",
+          "a": "Every enterprise account is assigned a dedicated account manager who coordinates journeys, changes, and queries on your behalf."
+        }
+      ]
+    },
+    "governmentDiplomatic": {
+      "metadata": {
+        "title": "Government & Diplomatic Ground Transport | AB.Limo",
+        "description": "High-security protocol transport for official delegations, dignitaries, and government transit by AB.Limo."
+      },
+      "badge": "Government & Diplomatic Protocol",
+      "title": "Government & Diplomatic Mobility",
+      "subtitle": "High-security, protocol-driven transport for official delegations, dignitaries, and government transit.",
+      "ctaTitle": "Engage Our Protocol Team",
+      "ctaDesc": "For government agencies, embassies, and diplomatic missions requiring discreet, secure ground transport.",
+      "ctaLabel": "Request Protocol Services",
+      "features": [
+        {
+          "title": "Heightened Security",
+          "desc": "Convoy-ready chauffeurs and fleet prepared for sensitive movements with stringent vetting."
+        },
+        {
+          "title": "Official Delegations",
+          "desc": "Comprehensive delegation transport accommodating principals, staff, security, and support personnel."
+        },
+        {
+          "title": "International Protocol",
+          "desc": "Deep familiarity with diplomatic protocol, convoy etiquette, and ceremonial transport requirements."
+        }
+      ],
+      "cardsHeading": "Protocol & Security Solutions",
+      "cardsDesc": "Specialised government and diplomatic transport built for the most demanding environments.",
+      "cards": [
+        {
+          "tag": "Convoys",
+          "title": "Coordinated Convoys",
+          "desc": "Multi-vehicle movements with advance route planning and radio coordination."
+        },
+        {
+          "tag": "Delegations",
+          "title": "Official Delegations",
+          "desc": "Full delegation transport synchronised across international visits and summits."
+        },
+        {
+          "tag": "Diplomatic",
+          "title": "Embassy & Diplomatic",
+          "desc": "Steady, professional transport for embassy staff, attachés, and visiting diplomats."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Government and protocol transport",
+          "title": "Trusted Where There Is No Margin for Error",
+          "paragraphs": [
+            "For government and diplomatic movements, logistics carry weight that exceeds the calendar. AB.Limo's protocol division is built on advance planning, redundancy, and absolute discretion.",
+            "Chauffeurs are screened and trained for protocol duty, ready to adapt instantly to evolving itineraries and security requirements."
+          ],
+          "bullets": [
+            {
+              "text": "Advance route reconnaissance and contingency planning"
+            },
+            {
+              "text": "Vetted, protocol-trained chauffeurs"
+            },
+            {
+              "text": "Coordination with accompanying security details"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you coordinate with our security detail?",
+          "a": "Yes. We work directly with your security team to synchronise movements, routes, and timings for a fully coordinated operation."
+        },
+        {
+          "q": "Are chauffeurs experienced with diplomatic protocol?",
+          "a": "Our protocol chauffeurs are selected and trained for diplomatic driving, discretion, and international protocol etiquette."
+        },
+        {
+          "q": "Can you handle large official delegations?",
+          "a": "We coordinate fleets and support vehicles to move principals and their entourages cohesively across any itinerary."
+        }
+      ]
+    }
   }
 }

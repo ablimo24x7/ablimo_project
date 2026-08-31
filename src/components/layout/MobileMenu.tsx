@@ -5,14 +5,16 @@ import Link from "next/link";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { type Locale } from "@/app/[lang]/dictionaries";
 import { locationsUrl } from "@/lib/locations";
+import type { NavServiceItem } from "@/lib/services";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 interface MobileMenuProps {
   dict: Dictionary;
   lang: Locale;
+  dbServiceLinks: NavServiceItem[];
 }
 
-export default function MobileMenu({ dict, lang }: MobileMenuProps) {
+export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const nav = dict.header.nav;
@@ -39,6 +41,16 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
     { label: dd.services.coachCharter, href: "#" },
     { label: dd.services.airportCoachTransfers, href: locationsUrl(lang) },
   ];
+
+  const appServiceLinks = dict.services.categories.map((category) => ({
+    label: category.title,
+    href: `/${lang}/services/${category.slug}`,
+  }));
+
+  const mergedCategoryLinks = [...appServiceLinks, ...dbServiceLinks].filter(
+    (link, index, arr) =>
+      arr.findIndex((other) => other.href === link.href) === index
+  );
 
   const tourismLinks = [
     { label: dd.tourism.tourismDmc, href: "#" },
@@ -106,7 +118,7 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
   ];
 
   const dropdownSections: { id: string; label: string; items: { label: string; href: string }[] }[] = [
-    { id: "services", label: nav.ourServices, items: serviceLinks },
+    { id: "services", label: nav.ourServices, items: [...mergedCategoryLinks, ...serviceLinks] },
     { id: "industry", label: nav.mobilityByIndustry, items: industryLinks },
   ];
 
@@ -271,15 +283,6 @@ export default function MobileMenu({ dict, lang }: MobileMenuProps) {
                 )}
               </div>
             ))}
-
-            {/* Help link */}
-            <Link
-              href={`/${lang}/about`}
-              onClick={() => setIsOpen(false)}
-              className="text-gray-300 hover:text-abGold text-lg font-medium py-3 border-b border-gray-800 transition-colors"
-            >
-              {nav.help}
-            </Link>
 
             {/* Technology link */}
             <div className="border-b border-gray-800">

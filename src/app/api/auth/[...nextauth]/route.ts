@@ -17,8 +17,27 @@ const authOptions: NextAuthOptions = {
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
+        const email = credentials.email.toLowerCase();
+
         await connectDB();
-        const user = await User.findOne({ email: credentials.email.toLowerCase() }).lean();
+
+        // In-memory fallback when the database is disabled/unavailable
+        if (!process.env.USE_DATABASE || process.env.USE_DATABASE === "false") {
+          const fallbackEmail = "admin@ablimo.com";
+          const fallbackPassword = "admin123";
+          if (email === fallbackEmail && credentials.password === fallbackPassword) {
+            return {
+              id: "memory-admin",
+              name: "Admin",
+              email: fallbackEmail,
+              roles: ["admin"],
+              avatarUrl: null,
+            };
+          }
+          return null;
+        }
+
+        const user = await User.findOne({ email }).lean();
         if (!user || !user.isActive) return null;
         const valid = await verifyPassword(credentials.password, user.passwordHash);
         if (!valid) return null;

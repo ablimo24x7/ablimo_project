@@ -2,12 +2,23 @@ export interface Airport {
   slug: string;
   name: string;
   iata: string;
+  description?: string;
+  aliases?: string[];
+  type?: string;
+  status?: string; // draft | published | archived
+  citySlug?: string;
+  _id?: string;
 }
 
 export interface City {
   slug: string;
   name: string;
   airports: Airport[];
+  description?: string;
+  aliases?: string[];
+  status?: string; // draft | published | archived
+  countrySlug?: string;
+  _id?: string;
 }
 
 export interface Country {
@@ -15,6 +26,9 @@ export interface Country {
   slug: string;
   name: string;
   cities: City[];
+  description?: string;
+  status?: string; // draft | published | archived
+  _id?: string;
 }
 
 const airport = (slug: string, name: string, iata: string): Airport => ({ slug, name, iata });
@@ -145,11 +159,20 @@ export function resolveCountry(input: string): Country | undefined {
 export function resolveCity(country: Country, input: string): City | undefined {
   const key = input.toLowerCase();
   const slug = cityAliases[key] ?? key;
-  return country.cities.find((c) => c.slug === slug);
+  return (
+    country.cities.find(
+      (c) =>
+        c.slug === slug || (c.aliases ?? []).some((alias) => alias.toLowerCase() === key)
+    )
+  );
 }
 
 export function resolveAirport(cityObj: City, input: string): Airport | undefined {
-  return cityObj.airports.find((a) => a.slug === input.toLowerCase());
+  const key = input.toLowerCase();
+  return cityObj.airports.find(
+    (a) =>
+      a.slug === key || (a.aliases ?? []).some((alias) => alias.toLowerCase() === key)
+  );
 }
 
 export function findCityByName(name: string): { country: Country; city: City } | undefined {

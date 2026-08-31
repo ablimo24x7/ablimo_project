@@ -130,7 +130,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
               ? `flex min-w-[280px]`
               : columns > 1
               ? `grid grid-cols-2 min-w-[440px]`
-              : `min-w-[240px] max-h-[480px] overflow-y-auto`
+              : `min-w-[240px]`
           }`}
           onMouseEnter={handlePanelMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -158,7 +158,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
 
                 {hoveredGroup && (
                   <div
-                    className={`absolute top-0 min-w-[280px] bg-white shadow-xl py-1 max-h-[600px] overflow-y-auto z-50 ${isRtl ? "right-full border-r border-gray-100" : "left-full border-l border-gray-100"}`}
+                    className={`absolute top-0 min-w-[280px] bg-white shadow-xl py-1 z-50 ${isRtl ? "right-full border-r border-gray-100" : "left-full border-l border-gray-100"}`}
                     onMouseEnter={handleSubPanelMouseEnter}
                     onMouseLeave={handleSubPanelMouseLeave}
                   >

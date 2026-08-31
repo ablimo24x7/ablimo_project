@@ -5,7 +5,7 @@ import Negotiator from "negotiator";
 const locales = ["en-US", "en-GB", "ar"];
 const defaultLocale = "en-US";
 
-const protectedPaths = ["/dashboard", "/api/articles", "/api/categories", "/api/users", "/api/settings", "/api/dashboard", "/api/invitations"];
+const protectedPaths = ["/dashboard", "/api/articles", "/api/categories", "/api/users", "/api/settings", "/api/dashboard", "/api/invitations", "/api/locations"];
 
 function isProtectedPath(pathname: string): boolean {
   return protectedPaths.some((p) => pathname.startsWith(p));

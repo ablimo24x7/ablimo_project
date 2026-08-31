@@ -4,16 +4,19 @@ import { notFound } from "next/navigation";
 import BookingWidget from "@/components/layout/BookingWidget";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import {
-    COUNTRIES,
-    findRoute,
     locationsUrl,
     countryUrl,
     cityUrl,
     resolveCity,
-    resolveCountry,
     titleFromSlug,
     type City,
 } from "@/lib/locations";
+import {
+    getAllCountries,
+    getCountryForRequest,
+    getCityForRequest,
+    findRouteData,
+} from "@/lib/locationData";
 
 const cityImages: Record<string, string> = {
   dubai: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
@@ -46,9 +49,10 @@ export default async function RoutePage({
   params: Promise<{ lang: string; country: string; city: string; route: string }>;
 }) {
   const { lang, country: countryParam, city: cityParam, route: routeSlug } = await params;
-  const originCountry = resolveCountry(countryParam);
+  const originCountry = await getCountryForRequest(countryParam);
   if (!originCountry) notFound();
-  const originCity = resolveCity(originCountry, cityParam);
+  const originRes = await getCityForRequest(countryParam, cityParam);
+  const originCity = originRes?.city ?? resolveCity(originCountry, cityParam);
   if (!originCity) notFound();
 
   const locale = lang as "en-US" | "en-GB" | "ar";
@@ -59,9 +63,10 @@ export default async function RoutePage({
   const [fromRaw, toRaw] = routeSlug.split("-to-");
   if (!fromRaw || !toRaw) notFound();
   const from = resolveCity(originCountry, fromRaw) ?? ({ slug: fromRaw, name: titleFromSlug(fromRaw), airports: [] } as City);
-  const to = resolveCity(originCountry, toRaw) ?? resolveCityInAnyCountry(toRaw) ?? ({ slug: toRaw, name: titleFromSlug(toRaw), airports: [] } as City);
 
-  const routeInfo = findRoute(from.slug, to.slug);
+  const to = await resolveCityInAnyCountry(toRaw);
+
+  const routeInfo = await findRouteData(from.slug, to.slug);
   const distance = routeInfo?.distance ?? "Contact us";
   const duration = routeInfo?.duration ?? "Contact us";
 
@@ -301,10 +306,11 @@ export default async function RoutePage({
   );
 }
 
-function resolveCityInAnyCountry(slug: string): City | undefined {
-  for (const country of COUNTRIES) {
+async function resolveCityInAnyCountry(slug: string): Promise<City> {
+  const countries = await getAllCountries();
+  for (const country of countries) {
     const found = resolveCity(country, slug);
     if (found) return found;
   }
-  return undefined;
+  return { slug, name: titleFromSlug(slug), airports: [] };
 }

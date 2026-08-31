@@ -7,9 +7,13 @@ import {
     airportUrl,
     countryUrl,
     locationsUrl,
+    routeUrl,
+    titleFromSlug,
     type City,
+    type CityRoute,
     type Country,
 } from "@/lib/locations";
+import ShowMoreGrid from "./ShowMoreGrid";
 
 const cityHeroImages: Record<string, string> = {
     dubai: "https://images.unsplash.com/photo-1721170628208-dffed6eb3514?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -47,9 +51,10 @@ interface Props {
     lang: string;
     country: Country;
     city: City;
+    routes?: CityRoute[];
 }
 
-export default function CityDetailClient({ dict, lang, country, city }: Props) {
+export default function CityDetailClient({ dict, lang, country, city, routes = [] }: Props) {
     const cityName = city.name;
     const cDict = dict.countries;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -251,22 +256,75 @@ export default function CityDetailClient({ dict, lang, country, city }: Props) {
                             {airportDesc}
                         </p>
                         {city.airports.length > 0 && (
-                            <ul className="space-y-2 text-[16px]">
-                                {city.airports.map((airport) => (
-                                    <li key={airport.slug}>
-                                        <Link
-                                            href={airportUrl(lang, country, city, airport)}
-                                            className="font-bold underline underline-offset-4 hover:text-gray-300 transition-colors"
-                                        >
-                                            {airport.name} ({airport.iata})
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
+                        <ShowMoreGrid
+                            items={city.airports.map((airport) => ({
+                                slug: airport.slug,
+                                name: `${cityName} – ${airport.name}`,
+                                iata: airport.iata,
+                                href: airportUrl(lang, country, city, airport),
+                            }))}
+                            moreLabel={dict.press.showMore}
+                            lessLabel={dict.press.showLess}
+                            renderItem={(a) => (
+                                <Link
+                                    href={a.href}
+                                    className="block h-full bg-[#1c1d21] border border-gray-700/50 rounded-xl px-4 py-4 text-center hover:border-white/30 hover:bg-[#2a2c35] transition-all"
+                                >
+                                    <h3 className="text-sm font-semibold text-gray-200 hover:text-white transition-colors truncate">
+                                        {a.name}
+                                    </h3>
+                                    {a.iata && (
+                                        <span className="inline-block mt-1 text-[11px] uppercase tracking-wide text-abGold">
+                                            {a.iata}
+                                        </span>
+                                    )}
+                                </Link>
+                            )}
+                        />
+                    )}
                     </div>
                 </div>
             </section>
+
+            {/* City-to-City Service Section */}
+            {routes.length > 0 && (
+                <section className="max-w-7xl mx-auto px-8 py-16">
+                    <div className="space-y-6">
+                        <h2 className="text-3xl font-serif font-bold text-white tracking-tight">
+                            {cityName} City-to-City Service
+                        </h2>
+                        <ShowMoreGrid
+                            items={routes.map((route) => ({
+                                ...route,
+                                href: route.fromSlug === city.slug
+                                    ? routeUrl(lang, country, city, route)
+                                    : `/${lang}/city-to-city`,
+                            }))}
+                            moreLabel={dict.press.showMore}
+                            lessLabel={dict.press.showLess}
+                            renderItem={(r) => (
+                                <Link
+                                    href={r.href}
+                                    className="block h-full bg-[#1c1d21] border border-gray-700/50 rounded-xl px-4 py-5 hover:border-white/30 hover:bg-[#2a2c35] transition-all"
+                                >
+                                    <div className="flex items-center justify-center gap-2 text-sm font-semibold text-gray-200 hover:text-white transition-colors">
+                                        <span>{cityName}</span>
+                                        <span className="text-abGold">→</span>
+                                        <span>{titleFromSlug(r.toSlug)}</span>
+                                    </div>
+                                    {(r.distance || r.duration) && (
+                                        <div className="mt-2 text-center text-xs text-gray-500">
+                                            {r.distance}
+                                            {r.distance && r.duration ? " · " : ""}
+                                            {r.duration}
+                                        </div>
+                                    )}
+                                </Link>
+                            )}
+                        />
+                    </div>
+                </section>
+            )}
         </main>
     );
 }

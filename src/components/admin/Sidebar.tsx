@@ -11,8 +11,10 @@ import {
   Settings,
   Globe,
   MapPin,
+  MapPinned,
   Route,
   Plane,
+  CarFront,
 } from "lucide-react";
 import {
   Sidebar,
@@ -31,6 +33,9 @@ const adminNav = [
   { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
   { title: "Posts", url: "/dashboard/posts", icon: FileText },
   { title: "Categories", url: "/dashboard/categories", icon: FolderTree },
+  { title: "Services", url: "/dashboard/services", icon: CarFront },
+  { title: "Locations", url: "/dashboard/locations", icon: MapPinned },
+  { title: "Routes", url: "/dashboard/routes", icon: Route },
   { title: "Users", url: "/dashboard/users", icon: Users },
   { title: "Permissions", url: "/dashboard/settings/permissions", icon: ShieldCheck },
   { title: "Settings", url: "/dashboard/settings", icon: Settings },

@@ -4,7 +4,7 @@ import { fetchAndTranslateArticle, getRelatedArticles } from "@/lib/blog";
 import { BlogArticleLayout } from "@/components/blog/BlogArticleLayout";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
-import { needsTranslation, translateText } from "@/lib/translate";
+import { translateText } from "@/lib/translate";
 
 type Props = {
   params: Promise<{ lang: string; slug: string }>;
@@ -27,10 +27,10 @@ function getBreadcrumbKey(templateType: string, dict: { countries?: string; citi
 
 function getViewAllHref(templateType: string, lang: string): string {
   switch (templateType) {
-    case "country": return `/${lang}/countries`;
-    case "city": return `/${lang}/countries`;
+    case "country": return `/${lang}/locations`;
+    case "city": return `/${lang}/locations`;
     case "city-to-city": return `/${lang}/city-to-city`;
-    case "airport": return `/${lang}/airport-transfer`;
+    case "airport": return `/${lang}/services/airport-transfers`;
     default: return `/${lang}/blog`;
   }
 }
@@ -127,7 +127,7 @@ async function getTranslatedSideInfo(
             <h2 className="text-xl font-serif font-bold text-white mb-4">{title}</h2>
             <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
             <a
-              href={`/${lang}/countries/${article.country.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/${lang}/locations/${article.country.toLowerCase().replace(/\s+/g, "-")}`}
               className="inline-flex items-center gap-2 mt-4 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
             >
               {linkText} {isArabic ? "←" : "→"}
@@ -156,7 +156,7 @@ async function getTranslatedSideInfo(
             <div className="flex flex-wrap gap-3 mt-4">
               {article.country && (
                 <a
-                  href={`/${lang}/countries/${article.country.toLowerCase().replace(/\s+/g, "-")}/${article.city?.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`/${lang}/locations/${article.country.toLowerCase().replace(/\s+/g, "-")}/${article.city?.toLowerCase().replace(/\s+/g, "-")}`}
                   className="inline-flex items-center gap-2 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
                 >
                   {detailText} {isArabic ? "←" : "→"}
@@ -164,7 +164,7 @@ async function getTranslatedSideInfo(
               )}
               {article.country && article.city && (
                 <a
-                  href={`/${lang}/countries/${article.country.toLowerCase().replace(/\s+/g, "-")}/${article.city?.toLowerCase().replace(/\s+/g, "-")}/airport-transfer`}
+                  href={`/${lang}/locations/${article.country.toLowerCase().replace(/\s+/g, "-")}/${article.city?.toLowerCase().replace(/\s+/g, "-")}`}
                   className="inline-flex items-center gap-2 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
                 >
                   {airportText} {isArabic ? "←" : "→"}
@@ -211,7 +211,7 @@ async function getTranslatedSideInfo(
             {article.country && article.city && (
               <div className="flex flex-wrap gap-3 mt-4">
                 <a
-                  href={`/${lang}/countries/${article.country.toLowerCase().replace(/\s+/g, "-")}/${article.city?.toLowerCase().replace(/\s+/g, "-")}/airport-transfer`}
+                  href={`/${lang}/locations/${article.country.toLowerCase().replace(/\s+/g, "-")}/${article.city?.toLowerCase().replace(/\s+/g, "-")}`}
                   className="inline-flex items-center gap-2 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
                 >
                   {linkText} {isArabic ? "←" : "→"}
