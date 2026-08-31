@@ -116,6 +116,30 @@ interface DefaultServiceDictShape {
 const DEFAULT_HERO =
   "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&h=800&fit=crop";
 
+/**
+ * Additional services surfaced in the header navigation but previously not
+ * managed as dashboard services. They are now seeded into the database so they
+ * appear in the dashboard services list. Slugs mirror the nav targets and do
+ * not collide with the 10 core verticals. "Airport Transfers" is intentionally
+ * omitted because it already exists as a core service.
+ */
+const NAV_ONLY_SERVICES: Array<{
+  slug: string;
+  title: string;
+  href: string;
+}> = [
+  { slug: "executive-chauffeur", title: "Executive Chauffeur Services", href: "/chauffeur-service" },
+  { slug: "chauffeur-hailing", title: "Chauffeur Hailing Services", href: "/chauffeur-service" },
+  { slug: "hourly-chauffeur", title: "Hourly Chauffeur", href: "/car-service" },
+  { slug: "city-transfers", title: "City Transfers", href: "/city-to-city" },
+  { slug: "intercity-transfers", title: "Intercity Transfers", href: "/city-to-city" },
+  { slug: "limousine-services", title: "Limousine Services", href: "/limousine-service" },
+  { slug: "bus-charter", title: "Bus Charter", href: "#" },
+  { slug: "mini-bus-charter", title: "Mini Bus Charter", href: "#" },
+  { slug: "coach-charter", title: "Coach Charter", href: "#" },
+  { slug: "airport-coach-transfers", title: "Airport Coach Transfers", href: "#" },
+];
+
 function normalizeLocale(lang: string): Locale {
   return hasLocale(lang) ? lang : defaultLocale;
 }
@@ -197,6 +221,26 @@ export function buildDefaultServiceDocs(): ServiceContentSource[] {
       showInMenu: true,
       order: index,
       locale: "en",
+    });
+  });
+
+  NAV_ONLY_SERVICES.forEach((service, i) => {
+    docs.push({
+      slug: service.slug,
+      title: service.title,
+      subtitle: service.title,
+      desc: service.title,
+      heroImage: DEFAULT_HERO,
+      breadcrumb: service.title,
+      status: "published",
+      showInMenu: false,
+      order: categories.length + i,
+      locale: "en",
+      seo: {
+        metaTitle: service.title,
+        metaDescription: service.title,
+        ogImage: "",
+      },
     });
   });
 

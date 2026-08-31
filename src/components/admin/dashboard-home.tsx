@@ -14,6 +14,9 @@ type MetricsResponse = {
     draftPosts: number;
     totalCategories: number;
     totalViews: number;
+    totalServices: number;
+    publishedServices: number;
+    draftServices: number;
   };
   recentPosts: Array<{
     _id: string;
@@ -22,6 +25,15 @@ type MetricsResponse = {
     status: string;
     views: number;
     date: string;
+  }>;
+  recentServices: Array<{
+    _id: string;
+    title: string;
+    slug: string;
+    status: string;
+    showInMenu: boolean;
+    faqCount: number;
+    createdAt: string;
   }>;
 };
 
@@ -66,9 +78,9 @@ export function DashboardHome() {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
         <MetricCard title="Total Posts" value={data?.overview.totalPosts} loading={isLoading} />
+        <MetricCard title="Total Services" value={data?.overview.totalServices} loading={isLoading} />
         <MetricCard title="Total Views" value={data?.overview.totalViews} loading={isLoading} />
-        <MetricCard title="Drafts" value={data?.overview.draftPosts} loading={isLoading} />
-        <MetricCard title="Published" value={data?.overview.publishedPosts} loading={isLoading} />
+        <MetricCard title="Published Services" value={data?.overview.publishedServices} loading={isLoading} />
       </div>
 
       <Card>
