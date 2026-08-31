@@ -59,6 +59,7 @@ export interface ServiceContent {
 export interface ServicePageTexts {
   title: string;
   subtitle: string;
+  metadata?: { title?: string; description?: string };
   ctaTitle: string;
   ctaDesc: string;
   ctaLabel: string;
@@ -309,6 +310,23 @@ export default async function ServicePage({
       {/* FAQ Section */}
       {content.faqs && content.faqs.length > 0 && (
         <section className="bg-[#1c1d21] py-20 px-8">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: content.faqs.map((item) => ({
+                  "@type": "Question",
+                  name: item.q,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.a,
+                  },
+                })),
+              }),
+            }}
+          />
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               {faqTitle}

@@ -4,8 +4,45 @@ import { SimpleCategory } from "@/lib/models/SimpleCategory";
 import slugify from "slugify";
 import { parseJsonBody } from "@/lib/api/errors";
 
+const DEFAULT_CATEGORIES = [
+  "Airport Transfers",
+  "Executive & Corporate Mobility",
+  "VIP, Diplomatic & Government",
+  "Corporate Fleet & Workforce Mobility",
+  "Event Transportation",
+  "Group & Coach Charter",
+  "Tourism & Leisure",
+  "Religious Tourism",
+  "Cross-Border Mobility",
+  "Premium Lifestyle & Specialty",
+  "Company News",
+  "Aviation",
+  "Hospitality",
+];
+
+let seedPromise: Promise<void> | null = null;
+
+async function seedCategoriesIfEmpty(): Promise<void> {
+  if (seedPromise) return seedPromise;
+  seedPromise = (async () => {
+    try {
+      await connectDB();
+      const count = await SimpleCategory.countDocuments();
+      if (count > 0) return;
+      const docs = DEFAULT_CATEGORIES.map((label) => ({
+        slug: slugify(label, { lower: true, strict: true }),
+        label,
+      }));
+      await SimpleCategory.insertMany(docs);
+    } finally {
+      seedPromise = null;
+    }
+  })();
+  return seedPromise;
+}
+
 export async function GET() {
-  await connectDB();
+  await seedCategoriesIfEmpty();
   const items = await SimpleCategory.find().sort({ label: 1 }).lean();
   return NextResponse.json({ items });
 }

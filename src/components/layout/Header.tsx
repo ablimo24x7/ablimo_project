@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import { getNavServices, type NavServiceItem } from "@/lib/services";
 import DesktopNav from "./DesktopNav";
 import MobileMenu from "./MobileMenu";
 
@@ -9,6 +10,7 @@ interface HeaderProps {
 
 export default async function Header({ lang }: HeaderProps) {
   const dict = await getDictionary(lang);
+  const dbServiceLinks: NavServiceItem[] = await getNavServices(lang);
 
   return (
     <header className="fixed w-full bg-abBlack/95 border-b border-gray-800 z-[90] transition-all">
@@ -26,7 +28,7 @@ export default async function Header({ lang }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <DesktopNav dict={dict} lang={lang} />
+            <DesktopNav dict={dict} lang={lang} dbServiceLinks={dbServiceLinks} />
           </div>
 
           {/* Action Buttons */}
@@ -47,7 +49,7 @@ export default async function Header({ lang }: HeaderProps) {
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center">
-            <MobileMenu dict={dict} lang={lang} />
+            <MobileMenu dict={dict} lang={lang} dbServiceLinks={dbServiceLinks} />
           </div>
         </div>
       </div>

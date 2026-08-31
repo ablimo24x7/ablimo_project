@@ -1,6 +1,16 @@
 import { connectDB } from "@/lib/db";
+import { getEnv } from "@/lib/env";
 import { Article, type ArticleDoc } from "@/lib/models/Article";
 import { needsTranslation, translateText, translateHtml } from "@/lib/translate";
+
+/** True when the database is available (USE_DATABASE=true). */
+function isDatabaseEnabled(): boolean {
+  try {
+    return getEnv().USE_DATABASE !== "false";
+  } catch {
+    return true;
+  }
+}
 
 function localeFilter(locale: string) {
   const short = locale.split("-")[0];
@@ -12,8 +22,9 @@ export async function getArticleBySlugOnly(
   locale: string = "en",
   preview: boolean = false
 ): Promise<ArticleDoc | null> {
+  if (!isDatabaseEnabled()) return null;
   await connectDB();
-  const filter: Record<string, any> = {
+  const filter: Record<string, unknown> = {
     slug,
     ...localeFilter(locale),
   };
@@ -29,6 +40,7 @@ export async function getArticleBySlug(
   templateType: string,
   locale: string = "en"
 ): Promise<ArticleDoc | null> {
+  if (!isDatabaseEnabled()) return null;
   await connectDB();
   const article = await Article.findOne({
     slug,
@@ -45,6 +57,7 @@ export async function getRelatedArticles(
   excludeSlug: string = "",
   limit: number = 4
 ): Promise<ArticleDoc[]> {
+  if (!isDatabaseEnabled()) return [];
   await connectDB();
   const articles = await Article.find({
     templateType,
@@ -61,6 +74,7 @@ export async function getRelatedArticles(
 export async function getAllPublishedArticles(
   locale: string = "en"
 ): Promise<ArticleDoc[]> {
+  if (!isDatabaseEnabled()) return [];
   await connectDB();
   let articles = await Article.find({
     ...localeFilter(locale),

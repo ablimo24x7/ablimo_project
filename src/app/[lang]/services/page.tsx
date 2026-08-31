@@ -7,6 +7,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { getServiceCards } from "@/lib/services";
 
 export async function generateMetadata({
   params,
@@ -83,6 +84,10 @@ export default async function ServicesPage({
     image: categoryImages[category.slug],
   }));
 
+  const services = await getServiceCards(
+    categories.map((c) => c.slug)
+  );
+
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero */}
@@ -134,7 +139,7 @@ export default async function ServicesPage({
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category) => (
+          {services.map((category) => (
             <Link
               key={category.slug}
               href={`/${lang}/services/${category.slug}`}

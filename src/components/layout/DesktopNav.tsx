@@ -1,19 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { type Locale } from "@/app/[lang]/dictionaries";
 import { locationsUrl } from "@/lib/locations";
+import type { NavServiceItem } from "@/lib/services";
 import NavDropdown from "./NavDropdown";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 interface DesktopNavProps {
   dict: Dictionary;
   lang: Locale;
+  dbServiceLinks: NavServiceItem[];
 }
 
-export default function DesktopNav({ dict, lang }: DesktopNavProps) {
+export default function DesktopNav({ dict, lang, dbServiceLinks }: DesktopNavProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const nav = dict.header.nav;
   const dd = dict.header.dropdowns;
@@ -44,6 +45,11 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
     label: category.title,
     href: `/${lang}/services/${category.slug}`,
   }));
+
+  const mergedCategoryLinks = [...appServiceLinks, ...dbServiceLinks].filter(
+    (link, index, arr) =>
+      arr.findIndex((other) => other.href === link.href) === index
+  );
 
   const tourismLinks = [
     { label: dd.tourism.tourismDmc, href: "#" },
@@ -115,7 +121,7 @@ export default function DesktopNav({ dict, lang }: DesktopNavProps) {
       <NavDropdown
         id="services"
         label={nav.ourServices}
-        items={[...appServiceLinks, ...serviceLinks]}
+        items={[...mergedCategoryLinks, ...serviceLinks]}
         isOpen={openDropdown === "services"}
         onToggle={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
         onClose={() => setOpenDropdown(null)}
