@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import BookingWidget from "@/components/layout/BookingWidget";
+import ServiceInquiryForm from "@/components/layout/ServiceInquiryForm";
 import {
   getDictionary,
   hasLocale,
@@ -134,10 +134,14 @@ export default async function ServicePage({
   params,
   content,
   breadcrumb,
+  serviceName,
+  serviceUrl,
 }: {
   params: Promise<{ lang: string }>;
   content: ServiceContent;
   breadcrumb: string;
+  serviceName: string;
+  serviceUrl: string;
 }) {
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
@@ -172,7 +176,10 @@ export default async function ServicePage({
             </h1>
             <p className="text-lg text-gray-300">{content.subtitle}</p>
           </div>
-          <BookingWidget dict={dict} />
+          <ServiceInquiryForm
+            serviceName={serviceName}
+            serviceUrl={serviceUrl}
+          />
         </div>
       </section>
 

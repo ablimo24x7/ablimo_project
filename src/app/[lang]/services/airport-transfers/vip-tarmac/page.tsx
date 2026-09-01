@@ -57,6 +57,8 @@ export default async function Page({
       params={params}
       content={buildServiceContent(texts, structure)}
       breadcrumb={texts.title}
+      serviceName={texts.title}
+      serviceUrl={`/${lang}/services/airport-transfers/vip-tarmac`}
     />
   );
 }

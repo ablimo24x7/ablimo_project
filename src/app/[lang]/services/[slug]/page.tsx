@@ -58,6 +58,8 @@ export default async function Page({
         params={params}
         content={resolved.content}
         breadcrumb={resolved.breadcrumb}
+        serviceName={resolved.content.title}
+        serviceUrl={`/${lang}/services/${slug}`}
       />
 
       {relatedArticles.length > 0 && (
