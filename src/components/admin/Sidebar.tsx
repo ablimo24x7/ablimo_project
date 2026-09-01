@@ -13,6 +13,7 @@ import {
   CarFront,
   Globe,
   Building2,
+  MessageSquare,
 } from "lucide-react";
 import {
   Sidebar,
@@ -32,6 +33,7 @@ const adminNav = [
   { title: "Posts", url: "/dashboard/posts", icon: FileText },
   { title: "Categories", url: "/dashboard/categories", icon: FolderTree },
   { title: "Services", url: "/dashboard/services", icon: CarFront },
+  { title: "Chat Widget", url: "/dashboard/chat", icon: MessageSquare },
   { title: "Locations", url: "/dashboard/locations", icon: MapPinned },
   { title: "Users", url: "/dashboard/users", icon: Users },
   { title: "Permissions", url: "/dashboard/settings/permissions", icon: ShieldCheck },

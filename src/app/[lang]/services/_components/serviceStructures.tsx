@@ -169,6 +169,55 @@ export const serviceDictKeyBySlug: Record<string, string> = {
   "tourism-leisure": "tourismTransportation",
   "premium-lifestyle": "chauffeurVip",
   "cross-border-mobility": "chauffeurVip",
+
+  // Tourism Mobility Solutions
+  "tourism-dmc": "tourismTransportation",
+  "hospitality-mobility": "tourismTransportation",
+  "tourism-roadshows": "tourismTransportation",
+  "mice-transportation": "eventTransportation",
+  "hotel-shuttle": "tourismTransportation",
+
+  // Corporate Mobility Solutions
+  "event-mice-mobility": "eventTransportation",
+  "city-to-city": "chauffeurVip",
+  "corporate-shuttle": "corporateTransportation",
+  "staff-transport": "corporateTransportation",
+  "school-transport": "corporateTransportation",
+  "university-transport": "corporateTransportation",
+  "financial-roadshows": "corporateTransportation",
+
+  // Events Mobility Solutions
+  "exhibition-transportation": "eventTransportation",
+  "conference-transportation": "eventTransportation",
+  "sports-team-transportation": "eventTransportation",
+  "artists-transportation": "eventTransportation",
+  "crew-transportation": "eventTransportation",
+  "vip-delegation": "chauffeurVip",
+
+  // Industry Mobility Solutions
+  "government-mobility": "chauffeurVip",
+  "embassy-transportation": "chauffeurVip",
+  "aviation-mobility": "chauffeurVip",
+  "workforce-mobility": "corporateTransportation",
+  "energy-mobility": "corporateTransportation",
+  "construction-mobility": "corporateTransportation",
+  "industrial-mobility": "corporateTransportation",
+  "sports-entertainment-mobility": "eventTransportation",
+  "healthcare-mobility": "corporateTransportation",
+  "education-mobility": "corporateTransportation",
+  "retail-mobility": "corporateTransportation",
+  "media-production-mobility": "corporateTransportation",
+  "marine-mobility": "corporateTransportation",
+  "mining-mobility": "corporateTransportation",
+  "technology-mobility": "corporateTransportation",
+  "ngo-mobility": "corporateTransportation",
+  "real-estate-mobility": "corporateTransportation",
+  "luxury-vip-mobility": "chauffeurVip",
+  "media-entertainment-mobility": "eventTransportation",
+  "medical-transportation": "corporateTransportation",
+  "oil-gas-mobility": "corporateTransportation",
+  "mining-staff-transport": "corporateTransportation",
+  "construction-staff-transport": "corporateTransportation",
 };
 
 /**
@@ -182,6 +231,55 @@ export const serviceFallbackImages: Record<string, string> = {
   "event-transportation": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop",
   "bus-coach-hire": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=500&fit=crop",
   "tourism-transportation": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=500&fit=crop",
+
+  // Tourism Mobility Solutions
+  "tourism-dmc": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=500&fit=crop",
+  "hospitality-mobility": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=500&fit=crop",
+  "tourism-roadshows": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop",
+  "mice-transportation": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=500&fit=crop",
+  "hotel-shuttle": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=500&fit=crop",
+
+  // Corporate Mobility Solutions
+  "event-mice-mobility": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=500&fit=crop",
+  "city-to-city": "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&h=500&fit=crop",
+  "corporate-shuttle": "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&h=500&fit=crop",
+  "staff-transport": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=500&fit=crop",
+  "school-transport": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=500&fit=crop",
+  "university-transport": "https://images.unsplash.com/photo-1523050854058-8df90110c8f1?w=800&h=500&fit=crop",
+  "financial-roadshows": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
+
+  // Events Mobility Solutions
+  "exhibition-transportation": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop",
+  "conference-transportation": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=500&fit=crop",
+  "sports-team-transportation": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=500&fit=crop",
+  "artists-transportation": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&h=500&fit=crop",
+  "crew-transportation": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=500&fit=crop",
+  "vip-delegation": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop",
+
+  // Industry Mobility Solutions
+  "government-mobility": "https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=800&h=500&fit=crop",
+  "embassy-transportation": "https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=800&h=500&fit=crop",
+  "aviation-mobility": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop",
+  "workforce-mobility": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+  "energy-mobility": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=500&fit=crop",
+  "construction-mobility": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+  "industrial-mobility": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+  "sports-entertainment-mobility": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=500&fit=crop",
+  "healthcare-mobility": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=500&fit=crop",
+  "education-mobility": "https://images.unsplash.com/photo-1523050854058-8df90110c8f1?w=800&h=500&fit=crop",
+  "retail-mobility": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop",
+  "media-production-mobility": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&h=500&fit=crop",
+  "marine-mobility": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=500&fit=crop",
+  "mining-mobility": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+  "technology-mobility": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop",
+  "ngo-mobility": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&h=500&fit=crop",
+  "real-estate-mobility": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop",
+  "luxury-vip-mobility": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop",
+  "media-entertainment-mobility": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&h=500&fit=crop",
+  "medical-transportation": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=500&fit=crop",
+  "oil-gas-mobility": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=500&fit=crop",
+  "mining-staff-transport": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+  "construction-staff-transport": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
 };
 
 export function getFallbackImage(slug: string): string {

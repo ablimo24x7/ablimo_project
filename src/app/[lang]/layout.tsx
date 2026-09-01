@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 import { hasLocale, defaultLocale, type Locale } from "./dictionaries";
 
 export async function generateStaticParams() {
@@ -39,6 +40,7 @@ export default async function LangLayout({
       <Header lang={locale} />
       {children}
       <Footer lang={locale} />
+      <ChatWidget />
     </div>
   );
 }

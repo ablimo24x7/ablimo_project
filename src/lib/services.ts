@@ -145,6 +145,55 @@ const NAV_ONLY_SERVICES: Array<{
   { slug: "tourism-leisure", title: "Tourism Leisure", href: "/services/tourism-leisure" },
   { slug: "premium-lifestyle", title: "Premium Lifestyle", href: "/services/premium-lifestyle" },
   { slug: "cross-border-mobility", title: "Cross Border Mobility", href: "/services/cross-border-mobility" },
+
+  // Tourism Mobility Solutions
+  { slug: "tourism-dmc", title: "Tourism & DMC Mobility Solutions", href: "/services/tourism-dmc" },
+  { slug: "hospitality-mobility", title: "Hospitality Mobility Solutions", href: "/services/hospitality-mobility" },
+  { slug: "tourism-roadshows", title: "Tourism Roadshows Mobility", href: "/services/tourism-roadshows" },
+  { slug: "mice-transportation", title: "MICE Transportation", href: "/services/mice-transportation" },
+  { slug: "hotel-shuttle", title: "Hotel Shuttle", href: "/services/hotel-shuttle" },
+
+  // Corporate Mobility Solutions
+  { slug: "event-mice-mobility", title: "Event & MICE Mobility Solutions", href: "/services/event-mice-mobility" },
+  { slug: "city-to-city", title: "City to City Rides", href: "/services/city-to-city" },
+  { slug: "corporate-shuttle", title: "Corporate Shuttle Services", href: "/services/corporate-shuttle" },
+  { slug: "staff-transport", title: "Staff / Employee Transportation", href: "/services/staff-transport" },
+  { slug: "school-transport", title: "School Transportation", href: "/services/school-transport" },
+  { slug: "university-transport", title: "University Transportation", href: "/services/university-transport" },
+  { slug: "financial-roadshows", title: "Financial Roadshows Mobility Solutions", href: "/services/financial-roadshows" },
+
+  // Events Mobility Solutions
+  { slug: "exhibition-transportation", title: "Exhibition Transportation", href: "/services/exhibition-transportation" },
+  { slug: "conference-transportation", title: "Conference Transportation", href: "/services/conference-transportation" },
+  { slug: "sports-team-transportation", title: "Sports Team Transportation", href: "/services/sports-team-transportation" },
+  { slug: "artists-transportation", title: "Artists Transportation", href: "/services/artists-transportation" },
+  { slug: "crew-transportation", title: "Crew Transportation", href: "/services/crew-transportation" },
+  { slug: "vip-delegation", title: "VIP Delegation Transportation", href: "/services/vip-delegation" },
+
+  // Industry Mobility Solutions
+  { slug: "government-mobility", title: "Government & Diplomatic Mobility Solutions", href: "/services/government-mobility" },
+  { slug: "embassy-transportation", title: "Embassy Transportation Solutions", href: "/services/embassy-transportation" },
+  { slug: "aviation-mobility", title: "Aviation Mobility Solutions", href: "/services/aviation-mobility" },
+  { slug: "workforce-mobility", title: "Workforce Mobility Solutions", href: "/services/workforce-mobility" },
+  { slug: "energy-mobility", title: "Energy & Utilities Mobility Solutions", href: "/services/energy-mobility" },
+  { slug: "construction-mobility", title: "Construction & Project Mobility Solutions", href: "/services/construction-mobility" },
+  { slug: "industrial-mobility", title: "Industrial Mobility Solutions", href: "/services/industrial-mobility" },
+  { slug: "sports-entertainment-mobility", title: "Sports & Entertainment Mobility Solutions", href: "/services/sports-entertainment-mobility" },
+  { slug: "healthcare-mobility", title: "Healthcare Mobility Solutions", href: "/services/healthcare-mobility" },
+  { slug: "education-mobility", title: "Education Mobility Solutions", href: "/services/education-mobility" },
+  { slug: "retail-mobility", title: "Retail & Commercial Mobility Solutions", href: "/services/retail-mobility" },
+  { slug: "media-production-mobility", title: "Media & Production Mobility Solutions", href: "/services/media-production-mobility" },
+  { slug: "marine-mobility", title: "Marine & Port Mobility Solutions", href: "/services/marine-mobility" },
+  { slug: "mining-mobility", title: "Mining & Remote Site Mobility Solutions", href: "/services/mining-mobility" },
+  { slug: "technology-mobility", title: "Technology & Innovation Mobility Solutions", href: "/services/technology-mobility" },
+  { slug: "ngo-mobility", title: "NGO & Humanitarian Mobility Solutions", href: "/services/ngo-mobility" },
+  { slug: "real-estate-mobility", title: "Real Estate & Community Mobility Solutions", href: "/services/real-estate-mobility" },
+  { slug: "luxury-vip-mobility", title: "Luxury & VIP Mobility Solutions", href: "/services/luxury-vip-mobility" },
+  { slug: "media-entertainment-mobility", title: "Media & Entertainment Industry Mobility Solution", href: "/services/media-entertainment-mobility" },
+  { slug: "medical-transportation", title: "Medical Transportation Solutions", href: "/services/medical-transportation" },
+  { slug: "oil-gas-mobility", title: "Oil & Gas Staff Mobility Solutions", href: "/services/oil-gas-mobility" },
+  { slug: "mining-staff-transport", title: "Mining Staff Transportation", href: "/services/mining-staff-transport" },
+  { slug: "construction-staff-transport", title: "Construction Staff Transportation", href: "/services/construction-staff-transport" },
 ];
 
 function normalizeLocale(lang: string): Locale {
