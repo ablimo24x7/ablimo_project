@@ -35,7 +35,7 @@ export default async function LangLayout({
   const dir = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <div dir={dir}>
+    <div dir={dir} className="dark">
       <Header lang={locale} />
       {children}
       <Footer lang={locale} />

@@ -82,7 +82,7 @@ function ToolbarButton({
       className={`h-8 w-8 p-0 ${
         isActive
           ? "bg-abGold/20 text-abGold hover:bg-abGold/30"
-          : "text-gray-400 hover:text-white hover:bg-white/10"
+          : "text-muted-foreground hover:text-foreground hover:bg-accent"
       }`}
     >
       {children}
@@ -91,7 +91,7 @@ function ToolbarButton({
 }
 
 function ToolbarDivider() {
-  return <div className="w-px h-6 bg-gray-600 mx-1" />;
+  return <div className="w-px h-6 bg-border mx-1" />;
 }
 
 function Toolbar({ editor }: { editor: Editor }) {
@@ -315,7 +315,7 @@ function Toolbar({ editor }: { editor: Editor }) {
 
       {/* Link Dialog */}
       <Dialog open={linkOpen} onOpenChange={setLinkOpen}>
-        <DialogContent className="bg-[#1c1d21] border-gray-700">
+        <DialogContent className="bg-card border-border">
           <DialogHeader>
             <DialogTitle>Insert Link</DialogTitle>
           </DialogHeader>
@@ -323,7 +323,7 @@ function Toolbar({ editor }: { editor: Editor }) {
             value={linkUrl}
             onChange={(e) => setLinkUrl(e.target.value)}
             placeholder="https://..."
-            className="bg-[#292a30] border-gray-600"
+            className="bg-muted border-border"
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 e.preventDefault();
@@ -344,7 +344,7 @@ function Toolbar({ editor }: { editor: Editor }) {
 
       {/* Image Dialog */}
       <Dialog open={imageOpen} onOpenChange={setImageOpen}>
-        <DialogContent className="bg-[#1c1d21] border-gray-700">
+        <DialogContent className="bg-card border-border">
           <DialogHeader>
             <DialogTitle>Insert Image</DialogTitle>
           </DialogHeader>
@@ -352,7 +352,7 @@ function Toolbar({ editor }: { editor: Editor }) {
             value={imageUrl}
             onChange={(e) => setImageUrl(e.target.value)}
             placeholder="Image URL (https://...)"
-            className="bg-[#292a30] border-gray-600"
+            className="bg-muted border-border"
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 e.preventDefault();
@@ -380,7 +380,7 @@ function Toolbar({ editor }: { editor: Editor }) {
 
       {/* HTML Insert Dialog */}
       <Dialog open={htmlInsertOpen} onOpenChange={setHtmlInsertOpen}>
-        <DialogContent className="bg-[#1c1d21] border-gray-700 max-w-2xl">
+        <DialogContent className="bg-card border-border max-w-2xl">
           <DialogHeader>
             <DialogTitle>Insert Raw HTML</DialogTitle>
           </DialogHeader>
@@ -388,7 +388,7 @@ function Toolbar({ editor }: { editor: Editor }) {
             value={htmlInsertValue}
             onChange={(e) => setHtmlInsertValue(e.target.value)}
             placeholder="Paste your HTML here..."
-            className="w-full min-h-[300px] p-4 bg-[#111216] text-gray-300 font-mono text-sm resize-y focus:outline-none rounded-lg border border-gray-600"
+            className="w-full min-h-[300px] p-4 bg-muted text-foreground font-mono text-sm resize-y focus:outline-none rounded-lg border border-border"
             spellCheck={false}
           />
           <DialogFooter>
@@ -448,7 +448,7 @@ export function WysiwygEditor({
     editorProps: {
       attributes: {
         class:
-          "prose prose-invert prose-sm max-w-none min-h-[200px] p-4 focus:outline-none text-white [&_h1]:text-2xl [&_h1]:font-bold [&_h1]:mb-4 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mb-3 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:mb-2 [&_p]:mb-2 [&_p]:text-gray-200 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-2 [&_li]:mb-1 [&_li]:text-gray-200 [&_blockquote]:border-l-4 [&_blockquote]:border-abGold [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-gray-400 [&_blockquote]:my-3 [&_pre]:bg-[#111216] [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_code]:text-abGold [&_code]:bg-[#111216] [&_code]:px-1 [&_code]:py-0.5 [&_code]:rounded [&_a]:text-abGold [&_a]:underline [&_a]:hover:text-yellow-400 [&_img]:rounded-lg [&_img]:my-4 [&_img]:max-w-full [&_table]:w-full [&_table]:border-collapse [&_table]:my-4 [&_th]:border [&_th]:border-gray-600 [&_th]:bg-[#111216] [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_th]:font-semibold [&_td]:border [&_td]:border-gray-600 [&_td]:px-3 [&_td]:py-2 [&_td]:text-gray-200 [&_hr]:border-gray-600 [&_hr]:my-4 [&_ul[data-type='taskList']]:list-none [&_ul[data-type='taskList']]:pl-0 [&_ul[data-type='taskList']_li]:flex [&_ul[data-type='taskList']_li]:items-center [&_ul[data-type='taskList']_li]:gap-2 [&_ul[data-type='taskList']_li]:mb-1",
+          "prose prose-sm max-w-none min-h-[200px] p-4 focus:outline-none text-foreground [&_h1]:text-2xl [&_h1]:font-bold [&_h1]:mb-4 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mb-3 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:mb-2 [&_p]:mb-2 [&_p]:text-muted-foreground [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-2 [&_li]:mb-1 [&_li]:text-muted-foreground [&_blockquote]:border-l-4 [&_blockquote]:border-abGold [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-muted-foreground [&_blockquote]:my-3 [&_pre]:bg-muted [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_code]:text-abGold [&_code]:bg-muted [&_code]:px-1 [&_code]:py-0.5 [&_code]:rounded [&_a]:text-abGold [&_a]:underline [&_a]:hover:text-yellow-600 [&_img]:rounded-lg [&_img]:my-4 [&_img]:max-w-full [&_table]:w-full [&_table]:border-collapse [&_table]:my-4 [&_th]:border [&_th]:border-border [&_th]:bg-muted [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_th]:font-semibold [&_td]:border [&_td]:border-border [&_td]:px-3 [&_td]:py-2 [&_td]:text-muted-foreground [&_hr]:border-border [&_hr]:my-4 [&_ul[data-type='taskList']]:list-none [&_ul[data-type='taskList']]:pl-0 [&_ul[data-type='taskList']_li]:flex [&_ul[data-type='taskList']_li]:items-center [&_ul[data-type='taskList']_li]:gap-2 [&_ul[data-type='taskList']_li]:mb-1",
       },
     },
   });
@@ -479,8 +479,8 @@ export function WysiwygEditor({
   };
 
   return (
-    <div className={`border border-gray-700 rounded-lg overflow-hidden bg-[#292a30] ${className}`}>
-      <div className="flex items-center justify-between border-b border-gray-700 bg-[#1a1b1f] px-2">
+    <div className={`border border-border rounded-lg overflow-hidden bg-card ${className}`}>
+      <div className="flex items-center justify-between border-b border-border bg-muted px-2">
         <div className="flex-1">
           {editor && <Toolbar editor={editor} />}
         </div>
@@ -489,7 +489,7 @@ export function WysiwygEditor({
           variant="ghost"
           size="sm"
           onClick={toggleHtmlView}
-          className="h-8 gap-1.5 text-xs text-gray-400 hover:text-white ml-2 shrink-0"
+          className="h-8 gap-1.5 text-xs text-muted-foreground hover:text-foreground ml-2 shrink-0"
         >
           {htmlView ? (
             <>
@@ -510,7 +510,7 @@ export function WysiwygEditor({
             setHtmlInput(e.target.value);
             onChange(e.target.value);
           }}
-          className="w-full min-h-[200px] p-4 bg-[#111216] text-gray-300 font-mono text-sm resize-y focus:outline-none"
+          className="w-full min-h-[200px] p-4 bg-muted text-foreground font-mono text-sm resize-y focus:outline-none"
           spellCheck={false}
         />
       ) : (
