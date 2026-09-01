@@ -118,7 +118,7 @@ export default async function Footer({ lang }: FooterProps) {
         { label: d.explore.eventTransportation, href: `/${lang}/event-transportation` },
         { label: d.explore.groupCharter, href: `/${lang}/group-charter` },
         { label: d.explore.tourism, href: `/${lang}/tourism` },
-        { label: d.explore.religiousTourism, href: `/${lang}/religious-tourism` },
+        { label: d.explore.religiousTourism, href: `/${lang}/services/religious-tourism` },
         { label: d.explore.crossBorder, href: `/${lang}/cross-border` },
         { label: d.explore.premiumLifestyle, href: `/${lang}/premium-lifestyle` },
       ],

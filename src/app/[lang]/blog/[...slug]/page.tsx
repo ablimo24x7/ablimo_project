@@ -7,11 +7,12 @@ import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionari
 import { translateText } from "@/lib/translate";
 
 type Props = {
-  params: Promise<{ lang: string; slug: string }>;
+  params: Promise<{ lang: string; slug: string[] }>;
   searchParams: Promise<{ preview?: string }>;
 };
 
-async function getTranslatedArticle(slug: string, locale: string, preview: boolean) {
+async function getTranslatedArticle(slugParts: string[], locale: string, preview: boolean) {
+  const slug = slugParts.join("/");
   return fetchAndTranslateArticle(slug, locale, preview);
 }
 
@@ -25,8 +26,8 @@ function getBreadcrumbKey(templateType: string, dict: { countries?: string; citi
 
 function getViewAllHref(templateType: string, lang: string, serviceSlug?: string, countrySlug?: string): string {
   switch (templateType) {
-    case "service-country": return serviceSlug ? `/${lang}/services/${serviceSlug}` : `/${lang}/services`;
-    case "service-city": return serviceSlug && countrySlug ? `/${lang}/services/${serviceSlug}/${countrySlug}` : `/${lang}/services`;
+    case "service-country": return serviceSlug ? `/${lang}/blog/${serviceSlug}` : `/${lang}/blog`;
+    case "service-city": return serviceSlug && countrySlug ? `/${lang}/blog/${serviceSlug}/${countrySlug}` : `/${lang}/blog`;
     default: return `/${lang}/blog`;
   }
 }
@@ -76,7 +77,7 @@ export default async function BlogSlugPage({ params, searchParams }: Props) {
     serviceSlug: article.serviceSlug || "",
     countrySlug: article.countrySlug || "",
     locale,
-    excludeSlug: slug,
+    excludeSlug: slug.join("/"),
     limit: 4,
   });
 

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { type Locale } from "@/app/[lang]/dictionaries";
-import { locationsUrl } from "@/lib/locations";
 import type { NavServiceItem } from "@/lib/services";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -27,30 +26,6 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
     { label: dd.technology.fleetPortal, href: "#" },
     { label: dd.technology.customerPortal, href: "#" },
   ];
-
-  const serviceLinks = [
-    { label: dd.services.executiveChauffeur, href: `/${lang}/chauffeur-service` },
-    { label: dd.services.chauffeurHailing, href: `/${lang}/chauffeur-service` },
-    { label: dd.services.hourlyChauffeur, href: `/${lang}/car-service` },
-    { label: dd.services.airportTransfers, href: locationsUrl(lang) },
-    { label: dd.services.cityTransfers, href: `/${lang}/city-to-city` },
-    { label: dd.services.intercityTransfers, href: `/${lang}/city-to-city` },
-    { label: dd.services.limousineServices, href: `/${lang}/limousine-service` },
-    { label: dd.services.busCharter, href: "#" },
-    { label: dd.services.miniBusCharter, href: "#" },
-    { label: dd.services.coachCharter, href: "#" },
-    { label: dd.services.airportCoachTransfers, href: locationsUrl(lang) },
-  ];
-
-  const appServiceLinks = dict.services.categories.map((category) => ({
-    label: category.title,
-    href: `/${lang}/services/${category.slug}`,
-  }));
-
-  const mergedCategoryLinks = [...appServiceLinks, ...dbServiceLinks].filter(
-    (link, index, arr) =>
-      arr.findIndex((other) => other.href === link.href) === index
-  );
 
   const tourismLinks = [
     { label: dd.tourism.tourismDmc, href: "#" },
@@ -118,7 +93,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
   ];
 
   const dropdownSections: { id: string; label: string; items: { label: string; href: string }[] }[] = [
-    { id: "services", label: nav.ourServices, items: [...mergedCategoryLinks, ...serviceLinks] },
+    { id: "services", label: nav.ourServices, items: dbServiceLinks },
     { id: "industry", label: nav.mobilityByIndustry, items: industryLinks },
   ];
 

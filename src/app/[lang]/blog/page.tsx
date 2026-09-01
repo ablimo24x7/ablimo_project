@@ -4,15 +4,11 @@ import Image from "next/image";
 import { Calendar, Clock } from "lucide-react";
 import { getAllPublishedArticles, getAllPublishedArticlesFiltered } from "@/lib/blog";
 import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
+import { SERVICE_OPTIONS } from "@/lib/constants";
 
 const SERVICE_TABS = [
   { slug: "all", label: "All" },
-  { slug: "chauffeur-vip", label: "Chauffeur & VIP" },
-  { slug: "airport-transfers", label: "Airport Transfers" },
-  { slug: "corporate-transportation", label: "Corporate" },
-  { slug: "event-transportation", label: "Events" },
-  { slug: "bus-coach-hire", label: "Bus & Coach" },
-  { slug: "tourism-transportation", label: "Tourism" },
+  ...SERVICE_OPTIONS.map((s) => ({ slug: s.slug, label: s.label.split(" ")[0] })),
 ] as const;
 
 export async function generateMetadata({

@@ -34,16 +34,13 @@ import {
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
 import { Plus, Pencil, Trash2 } from "lucide-react";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { SERVICE_OPTIONS } from "@/lib/constants";
 
 const SERVICE_FILTER_OPTIONS = [
   { slug: "all", label: "All Services" },
-  { slug: "chauffeur-vip", label: "Chauffeur & VIP" },
-  { slug: "airport-transfers", label: "Airport Transfers" },
-  { slug: "corporate-transportation", label: "Corporate Transportation" },
-  { slug: "event-transportation", label: "Event Transportation" },
-  { slug: "bus-coach-hire", label: "Bus & Coach Hire" },
-  { slug: "tourism-transportation", label: "Tourism Transportation" },
+  ...SERVICE_OPTIONS,
 ] as const;
 
 type Post = {
@@ -59,17 +56,21 @@ type Post = {
   date: string;
 };
 
-export default function PostsPage() {
+function PostsPageContent() {
   const router = useRouter();
   const queryClient = useQueryClient();
+  const searchParams = useSearchParams();
+  const viewParam = searchParams.get("view");
+  const templateTypeFilter = viewParam === "country" ? "service-country" : viewParam === "city" ? "service-city" : "";
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [serviceFilter, setServiceFilter] = useState("all");
 
   const { data, isLoading } = useQuery({
-    queryKey: ["posts", serviceFilter],
+    queryKey: ["posts", serviceFilter, templateTypeFilter],
     queryFn: async () => {
       const params = new URLSearchParams();
       if (serviceFilter !== "all") params.set("service", serviceFilter);
+      if (templateTypeFilter) params.set("templateType", templateTypeFilter);
       const qs = params.toString();
       const res = await fetch(`/api/articles${qs ? `?${qs}` : ""}`);
       if (!res.ok) throw new Error("Failed");
@@ -97,7 +98,7 @@ export default function PostsPage() {
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold">Posts</h2>
         <Button asChild>
-          <Link href="/dashboard/posts/new">
+          <Link href={templateTypeFilter === "service-city" ? "/dashboard/posts/new?type=city" : templateTypeFilter === "service-country" ? "/dashboard/posts/new?type=country" : "/dashboard/posts/new"}>
             <Plus className="mr-2 h-4 w-4" /> New Post
           </Link>
         </Button>
@@ -188,5 +189,13 @@ export default function PostsPage() {
         </AlertDialogContent>
       </AlertDialog>
     </div>
+  );
+}
+
+export default function PostsPage() {
+  return (
+    <Suspense fallback={<div className="p-4"><Skeleton className="h-12 w-full" /></div>}>
+      <PostsPageContent />
+    </Suspense>
   );
 }

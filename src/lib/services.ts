@@ -127,17 +127,24 @@ const NAV_ONLY_SERVICES: Array<{
   title: string;
   href: string;
 }> = [
-  { slug: "executive-chauffeur", title: "Executive Chauffeur Services", href: "/chauffeur-service" },
-  { slug: "chauffeur-hailing", title: "Chauffeur Hailing Services", href: "/chauffeur-service" },
-  { slug: "hourly-chauffeur", title: "Hourly Chauffeur", href: "/car-service" },
-  { slug: "city-transfers", title: "City Transfers", href: "/city-to-city" },
-  { slug: "intercity-transfers", title: "Intercity Transfers", href: "/city-to-city" },
-  { slug: "limousine-services", title: "Limousine Services", href: "/limousine-service" },
-  { slug: "bus-charter", title: "Bus Charter", href: "#" },
-  { slug: "mini-bus-charter", title: "Mini Bus Charter", href: "#" },
-  { slug: "coach-charter", title: "Coach Charter", href: "#" },
-  { slug: "airport-coach-transfers", title: "Airport Coach Transfers", href: "#" },
-  { slug: "city-to-city", title: "City to City", href: "/city-to-city" },
+  { slug: "executive-chauffeur", title: "Executive Chauffeur Services", href: "/services/executive-chauffeur" },
+  { slug: "chauffeur-hailing", title: "Chauffeur Hailing Services", href: "/services/chauffeur-hailing" },
+  { slug: "hourly-chauffeur", title: "Hourly Chauffeur", href: "/services/hourly-chauffeur" },
+  { slug: "city-transfers", title: "City Transfers", href: "/services/city-transfers" },
+  { slug: "intercity-transfers", title: "Intercity Transfers", href: "/services/intercity-transfers" },
+  { slug: "limousine-services", title: "Limousine Services", href: "/services/limousine-services" },
+  { slug: "bus-charter", title: "Bus Charter", href: "/services/bus-charter" },
+  { slug: "mini-bus-charter", title: "Mini Bus Charter", href: "/services/mini-bus-charter" },
+  { slug: "coach-charter", title: "Coach Charter", href: "/services/coach-charter" },
+  { slug: "airport-coach-transfers", title: "Airport Coach Transfers", href: "/services/airport-coach-transfers" },
+  { slug: "religious-tourism", title: "Religious Tourism", href: "/services/religious-tourism" },
+  { slug: "executive-corporate-mobility", title: "Executive Corporate Mobility", href: "/services/executive-corporate-mobility" },
+  { slug: "vip-diplomatic-government", title: "VIP Diplomatic Government", href: "/services/vip-diplomatic-government" },
+  { slug: "corporate-fleet", title: "Corporate Fleet", href: "/services/corporate-fleet" },
+  { slug: "group-coach-charter", title: "Group Coach Charter", href: "/services/group-coach-charter" },
+  { slug: "tourism-leisure", title: "Tourism Leisure", href: "/services/tourism-leisure" },
+  { slug: "premium-lifestyle", title: "Premium Lifestyle", href: "/services/premium-lifestyle" },
+  { slug: "cross-border-mobility", title: "Cross Border Mobility", href: "/services/cross-border-mobility" },
 ];
 
 function normalizeLocale(lang: string): Locale {
@@ -233,7 +240,7 @@ export function buildDefaultServiceDocs(): ServiceContentSource[] {
       heroImage: DEFAULT_HERO,
       breadcrumb: service.title,
       status: "published",
-      showInMenu: false,
+      showInMenu: true,
       order: categories.length + i,
       locale: "en",
       seo: {
@@ -259,17 +266,46 @@ export async function seedServicesIfEmpty(): Promise<void> {
     try {
       await connectDB();
       const count = await Service.countDocuments();
-      if (count > 0) return;
-      const docs = buildDefaultServiceDocs();
-      if (docs.length) {
-        await Service.insertMany(docs);
+      if (count === 0) {
+        const docs = buildDefaultServiceDocs();
+        if (docs.length) {
+          await Service.insertMany(docs);
+        }
       }
+      // One-time migration: ensure all nav-only services have showInMenu: true
+      const navOnlySlugs = NAV_ONLY_SERVICES.map((s) => s.slug);
+      await Service.updateMany(
+        { slug: { $in: navOnlySlugs } },
+        { $set: { showInMenu: true } }
+      );
     } finally {
       seedPromise = null;
     }
   })();
 
   return seedPromise;
+}
+
+/** One-time migration: ensure all published services have showInMenu: true. */
+let migratePromise: Promise<void> | null = null;
+export async function migrateShowInMenu(): Promise<void> {
+  if (!isDatabaseEnabled()) return;
+  if (migratePromise) return migratePromise;
+
+  migratePromise = (async () => {
+    try {
+      await connectDB();
+      const navOnlySlugs = NAV_ONLY_SERVICES.map((s) => s.slug);
+      await Service.updateMany(
+        { slug: { $in: navOnlySlugs } },
+        { $set: { showInMenu: true } }
+      );
+    } finally {
+      migratePromise = null;
+    }
+  })();
+
+  return migratePromise;
 }
 
 /** Convert a Service doc (DB or dictionary-built) to the frontend `ServiceContent` shape. */

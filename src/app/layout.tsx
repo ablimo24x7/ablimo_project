@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${inter.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} antialiased dark`}>
       <head>
         <link
           rel="stylesheet"

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -18,18 +18,7 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
-import { COUNTRIES } from "@/lib/locations";
 import { toast } from "sonner";
-import slugify from "slugify";
-
-const SERVICE_OPTIONS = [
-  { slug: "chauffeur-vip", label: "Chauffeur & VIP" },
-  { slug: "airport-transfers", label: "Airport Transfers" },
-  { slug: "corporate-transportation", label: "Corporate Transportation" },
-  { slug: "event-transportation", label: "Event Transportation" },
-  { slug: "bus-coach-hire", label: "Bus & Coach Hire" },
-  { slug: "tourism-transportation", label: "Tourism Transportation" },
-] as const;
 
 type PostData = {
   _id?: string;
@@ -42,7 +31,9 @@ type PostData = {
   templateType: string;
   serviceSlug: string;
   countrySlug: string;
+  country: string;
   citySlug: string;
+  city: string;
   bodyContent: string;
   keyTakeawaysContent: string;
   finalThoughtsContent: string;
@@ -71,7 +62,9 @@ const defaultPost: PostData = {
   templateType: "service-country",
   serviceSlug: "",
   countrySlug: "",
+  country: "",
   citySlug: "",
+  city: "",
   bodyContent: "",
   keyTakeawaysContent: "",
   finalThoughtsContent: "",
@@ -86,6 +79,7 @@ const defaultPost: PostData = {
 
 interface PostEditorProps {
   initialData?: PostData;
+  initialBlogType?: "country" | "city";
   mode?: "create" | "edit";
 }
 
@@ -107,15 +101,43 @@ function normalizePost(data?: PostData): PostData {
   };
 }
 
-export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
+export function PostEditor({ initialData, initialBlogType = "country", mode = "create" }: PostEditorProps) {
   const router = useRouter();
   const queryClient = useQueryClient();
   const [form, setForm] = React.useState<PostData>(() => normalizePost(initialData));
   const [tagInput, setTagInput] = React.useState("");
+  const [blogType, setBlogType] = React.useState<"country" | "city">(
+    initialData?.templateType === "service-city" ? "city" : initialBlogType
+  );
+
+  // Fetch all services from database
+  const { data: servicesData } = useQuery({
+    queryKey: ["admin-services"],
+    queryFn: async () => {
+      const res = await fetch("/api/services?limit=100");
+      if (!res.ok) return { items: [] };
+      return res.json();
+    },
+  });
+  const serviceOptions = (servicesData?.items ?? []).map((s: { slug: string; title: string }) => ({
+    slug: s.slug,
+    label: s.title,
+  }));
+
+  // Fetch all countries/locations from database
+  const { data: locationsData } = useQuery({
+    queryKey: ["admin-locations"],
+    queryFn: async () => {
+      const res = await fetch("/api/locations");
+      if (!res.ok) return { countries: [] };
+      return res.json();
+    },
+  });
+  const countries = locationsData?.countries ?? [];
 
   const selectedCountry = React.useMemo(
-    () => COUNTRIES.find((c) => c.slug === form.countrySlug),
-    [form.countrySlug]
+    () => countries.find((c: { slug: string }) => c.slug === form.countrySlug),
+    [form.countrySlug, countries]
   );
 
   const cityOptions = React.useMemo(
@@ -124,6 +146,19 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
   );
 
   const isEdit = mode === "edit" && form._id;
+
+  const generateSlug = React.useCallback(
+    (serviceSlug: string, countrySlug: string, citySlug: string, type: "country" | "city") => {
+      if (type === "city" && serviceSlug && countrySlug && citySlug) {
+        return `services/${serviceSlug}/${countrySlug}/${citySlug}`;
+      }
+      if (type === "country" && serviceSlug && countrySlug) {
+        return `services/${serviceSlug}/${countrySlug}`;
+      }
+      return "";
+    },
+    []
+  );
 
   const mutation = useMutation({
     mutationFn: async (payload: PostData) => {
@@ -153,9 +188,11 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
   const updateField = <K extends keyof PostData>(key: K, value: PostData[K]) => {
     setForm((prev) => {
       const next = { ...prev, [key]: value };
-      if (key === "title" && !isEdit) {
-        next.slug = slugify(String(value), { lower: true, strict: true });
-      }
+      const service = key === "serviceSlug" ? (value as string) : prev.serviceSlug;
+      const country = key === "countrySlug" ? (value as string) : prev.countrySlug;
+      const city = key === "citySlug" ? (value as string) : prev.citySlug;
+      const type = (prev.templateType === "service-city" ? "city" : "country") as "country" | "city";
+      next.slug = generateSlug(service, country, city, type);
       return next;
     });
   };
@@ -205,7 +242,7 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
               variant="outline"
               onClick={() => window.open(`/en-US/blog/${form.slug}?preview=true`, "_blank")}
             >
-              View on Site
+              Preview
             </Button>
           )}
           <Button type="submit" disabled={mutation.isPending}>
@@ -224,8 +261,8 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
                 <Input value={form.title} onChange={(e) => updateField("title", e.target.value)} />
               </div>
               <div className="space-y-2">
-                <Label>Slug</Label>
-                <Input value={form.slug} onChange={(e) => updateField("slug", e.target.value)} />
+                <Label>Slug (auto-generated)</Label>
+                <Input value={form.slug} readOnly className="bg-muted" placeholder="Select service and location to generate slug" />
               </div>
               <div className="space-y-2">
                 <Label>Excerpt</Label>
@@ -324,14 +361,14 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
                   onValueChange={(v) => {
                     if (!v) return;
                     updateField("serviceSlug", v);
-                    const opt = SERVICE_OPTIONS.find((s) => s.slug === v);
+                    const opt = serviceOptions.find((s: { slug: string }) => s.slug === v);
                     updateField("category", v);
                     updateField("categoryLabel", opt?.label || v);
                   }}
                 >
-                  <SelectTrigger><SelectValue placeholder="Select a service" /></SelectTrigger>
-                  <SelectContent>
-                    {SERVICE_OPTIONS.map((s) => (
+                  <SelectTrigger className="w-full"><SelectValue placeholder="Select a service" /></SelectTrigger>
+                  <SelectContent className="min-w-[280px]">
+                    {serviceOptions.map((s: { slug: string; label: string }) => (
                       <SelectItem key={s.slug} value={s.slug}>{s.label}</SelectItem>
                     ))}
                   </SelectContent>
@@ -343,37 +380,44 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
                   value={form.countrySlug}
                   onValueChange={(v) => {
                     if (!v) return;
+                    const country = countries.find((c: { slug: string }) => c.slug === v);
                     updateField("countrySlug", v);
-                    updateField("citySlug", "");
-                    updateField("templateType", "service-country");
+                    updateField("country", country?.name || "");
+                    if (blogType === "country") {
+                      updateField("citySlug", "");
+                      updateField("city", "");
+                      updateField("templateType", "service-country");
+                    }
                   }}
                 >
-                  <SelectTrigger><SelectValue placeholder="Select a country" /></SelectTrigger>
-                  <SelectContent>
-                    {COUNTRIES.map((c) => (
+                  <SelectTrigger className="w-full"><SelectValue placeholder="Select a country" /></SelectTrigger>
+                  <SelectContent className="min-w-[280px]">
+                    {countries.map((c: { slug: string; name: string }) => (
                       <SelectItem key={c.slug} value={c.slug}>{c.name}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
               </div>
-              {form.countrySlug && (
+              {blogType === "city" && form.countrySlug && (
                 <div className="space-y-2">
-                  <Label>City (optional)</Label>
+                  <Label>City *</Label>
                   <Select
                     value={form.citySlug}
                     onValueChange={(v) => {
                       if (!v) {
                         updateField("citySlug", "");
-                        updateField("templateType", "service-country");
+                        updateField("city", "");
                         return;
                       }
+                      const city = cityOptions.find((c: { slug: string; name: string }) => c.slug === v);
                       updateField("citySlug", v);
+                      updateField("city", city?.name || "");
                       updateField("templateType", "service-city");
                     }}
                   >
-                    <SelectTrigger><SelectValue placeholder="No city (country-level)" /></SelectTrigger>
-                    <SelectContent>
-                      {cityOptions.map((c) => (
+                    <SelectTrigger className="w-full"><SelectValue placeholder="Select a city" /></SelectTrigger>
+                    <SelectContent className="min-w-[280px]">
+                      {cityOptions.map((c: { slug: string; name: string }) => (
                         <SelectItem key={c.slug} value={c.slug}>{c.name}</SelectItem>
                       ))}
                     </SelectContent>
@@ -381,9 +425,7 @@ export function PostEditor({ initialData, mode = "create" }: PostEditorProps) {
                 </div>
               )}
               <p className="text-xs text-muted-foreground">
-                {form.templateType === "service-city"
-                  ? `Template: service-city → /services/${form.serviceSlug}/${form.countrySlug}/${form.citySlug}`
-                  : `Template: service-country → /services/${form.serviceSlug}/${form.countrySlug}`}
+                Slug: {form.slug || "(auto-generated from selections)"}
               </p>
             </CardContent>
           </Card>

@@ -84,48 +84,6 @@ export const redirects: () => Promise<Redirect[]> = async () => [
     permanent: true,
   },
 
-  // ---- Legacy service slug redirects -----------------------------------
-  {
-    source: "/:lang/services/executive-corporate-mobility",
-    destination: "/:lang/services/chauffeur-vip",
-    permanent: true,
-  },
-  {
-    source: "/:lang/services/vip-diplomatic-government",
-    destination: "/:lang/services/chauffeur-vip",
-    permanent: true,
-  },
-  {
-    source: "/:lang/services/corporate-fleet",
-    destination: "/:lang/services/corporate-transportation",
-    permanent: true,
-  },
-  {
-    source: "/:lang/services/group-coach-charter",
-    destination: "/:lang/services/bus-coach-hire",
-    permanent: true,
-  },
-  {
-    source: "/:lang/services/tourism-leisure",
-    destination: "/:lang/services/tourism-transportation",
-    permanent: true,
-  },
-  {
-    source: "/:lang/services/religious-tourism",
-    destination: "/:lang/services/tourism-transportation",
-    permanent: true,
-  },
-  {
-    source: "/:lang/services/premium-lifestyle",
-    destination: "/:lang/services/chauffeur-vip",
-    permanent: true,
-  },
-  {
-    source: "/:lang/services/cross-border-mobility",
-    destination: "/:lang/services/chauffeur-vip",
-    permanent: true,
-  },
-
   // ---- Legacy country slug redirects ------------------------------------
   {
     source: "/:lang/services/:service/united-arab-emirates/:path*",

@@ -11,12 +11,8 @@ import {
   Settings,
   MapPinned,
   CarFront,
-  Briefcase,
-  Plane,
+  Globe,
   Building2,
-  CalendarDays,
-  Bus,
-  Mountain,
 } from "lucide-react";
 import {
   Sidebar,
@@ -42,13 +38,9 @@ const adminNav = [
   { title: "Settings", url: "/dashboard/settings", icon: Settings },
 ];
 
-const serviceNav = [
-  { title: "Chauffeur & VIP", url: "/dashboard/posts?service=chauffeur-vip", icon: Briefcase },
-  { title: "Airport Transfers", url: "/dashboard/posts?service=airport-transfers", icon: Plane },
-  { title: "Corporate", url: "/dashboard/posts?service=corporate-transportation", icon: Building2 },
-  { title: "Events", url: "/dashboard/posts?service=event-transportation", icon: CalendarDays },
-  { title: "Bus & Coach", url: "/dashboard/posts?service=bus-coach-hire", icon: Bus },
-  { title: "Tourism", url: "/dashboard/posts?service=tourism-transportation", icon: Mountain },
+const locationNav = [
+  { title: "Blog by Country", url: "/dashboard/posts?view=country", icon: Globe },
+  { title: "Blog by City", url: "/dashboard/posts?view=city", icon: Building2 },
 ];
 
 export function AdminSidebar() {
@@ -88,10 +80,10 @@ export function AdminSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
         <SidebarGroup>
-          <SidebarGroupLabel>Blog by Service</SidebarGroupLabel>
+          <SidebarGroupLabel>Blog by Location</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {serviceNav.map((item) => (
+              {locationNav.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton render={<Link href={item.url} />}>
                     <item.icon />
