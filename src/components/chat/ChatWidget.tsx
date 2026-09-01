@@ -86,6 +86,8 @@ export function ChatWidget() {
   const [showContactForm, setShowContactForm] = useState(false);
   const [selectedChannel, setSelectedChannel] = useState<string>("");
 
+  const isServicePage = /\/[^/]+\/services\/[^/]+/.test(pathname);
+
   const getServiceName = useCallback(() => {
     const match = pathname.match(/\/[^/]+\/services\/([^/]+)/);
     if (!match) return null;
@@ -97,13 +99,14 @@ export function ChatWidget() {
   }, [pathname]);
 
   useEffect(() => {
+    if (!isServicePage) return;
     fetch("/api/chat/config")
       .then((r) => r.json())
       .then((data) => {
         if (data && data.enabled) setConfig(data);
       })
       .catch(() => {});
-  }, []);
+  }, [isServicePage]);
 
   const handleChannelClick = useCallback(
     (channelId: string, url: string) => {
@@ -124,7 +127,7 @@ export function ChatWidget() {
     [config]
   );
 
-  if (!config || !config.enabled) return null;
+  if (!isServicePage || !config || !config.enabled) return null;
 
   const enabledChannels = config.channels.filter((c) => c.enabled);
   if (enabledChannels.length === 0) return null;
