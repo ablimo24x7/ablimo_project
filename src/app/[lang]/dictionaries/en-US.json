@@ -995,7 +995,7 @@
           "desc": "Stay updated with the latest news, announcements, and media coverage about AB.Limo."
         },
         {
-          "title": "Blog",
+          "title": "Blogs",
           "desc": "Discover travel tips, destination guides, and insights from our team of experts."
         }
       ]
@@ -2503,7 +2503,7 @@
   },
   "blog": {
     "home": "Home",
-    "allArticles": "Blog",
+    "allArticles": "Blogs",
     "allArticlesDescription": "Explore our latest articles, guides, and news about premium transportation services.",
     "minRead": "min read",
     "keyTakeaways": "Key Takeaways",

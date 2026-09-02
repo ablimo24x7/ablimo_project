@@ -35,7 +35,7 @@ const templateLabels: Record<string, string> = {
   "service-city": "City",
 };
 
-export default async function BlogPage({
+export default async function BlogsPage({
   params,
   searchParams,
 }: {
@@ -92,8 +92,8 @@ export default async function BlogPage({
           {SERVICE_TABS.map((tab) => {
             const isActive = activeService === tab.slug;
             const href = tab.slug === "all"
-              ? `/${lang}/blog`
-              : `/${lang}/blog?service=${tab.slug}`;
+              ? `/${lang}/blogs`
+              : `/${lang}/blogs?service=${tab.slug}`;
             return (
               <Link
                 key={tab.slug}
@@ -122,7 +122,7 @@ export default async function BlogPage({
             {articles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/${lang}/blog/${article.slug}`}
+                href={`/${lang}/services/${article.slug.replace(/^services\//, "")}`}
                 className="group block bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
               >
                 <div className="relative h-48 w-full">

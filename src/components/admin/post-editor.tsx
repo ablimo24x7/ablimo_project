@@ -240,7 +240,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <Button
               type="button"
               variant="outline"
-              onClick={() => window.open(`/en-US/blog/${form.slug}?preview=true`, "_blank")}
+              onClick={() => window.open(`/en-US/services/${form.slug.replace(/^services\//, "")}?preview=true`, "_blank")}
             >
               Preview
             </Button>

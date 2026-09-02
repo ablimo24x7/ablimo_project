@@ -27,7 +27,7 @@ export function RelatedArticles({
         {articles.map((article) => (
           <Link
             key={article.slug}
-            href={`/${lang}/blog/${article.slug}`}
+            href={`/${lang}/services/${article.slug.replace(/^services\//, "")}`}
             className="group block bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
           >
             <div className="relative h-40 w-full">

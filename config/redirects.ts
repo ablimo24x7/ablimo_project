@@ -107,4 +107,18 @@ export const redirects: () => Promise<Redirect[]> = async () => [
     destination: "/:lang/locations/:country/kuwait-city/:path*",
     permanent: true,
   },
+
+  // ---- Blog → Services migration -----------------------------------------
+  // Blog listing page
+  {
+    source: "/:lang/blog",
+    destination: "/:lang/blogs",
+    permanent: true,
+  },
+  // Blog article pages: /blog/services/... → /services/...
+  {
+    source: "/:lang/blog/services/:path*",
+    destination: "/:lang/services/:path*",
+    permanent: true,
+  },
 ];

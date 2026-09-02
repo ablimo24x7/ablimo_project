@@ -11,11 +11,6 @@ type Props = {
   searchParams: Promise<{ preview?: string }>;
 };
 
-async function getTranslatedArticle(slugParts: string[], locale: string, preview: boolean) {
-  const slug = slugParts.join("/");
-  return fetchAndTranslateArticle(slug, locale, preview);
-}
-
 function getBreadcrumbKey(templateType: string, dict: { countries?: string; cities?: string; cityToCity?: string; airportTransfers?: string; article?: string }): string {
   switch (templateType) {
     case "service-country": return dict.countries || "Countries";
@@ -26,16 +21,17 @@ function getBreadcrumbKey(templateType: string, dict: { countries?: string; citi
 
 function getViewAllHref(templateType: string, lang: string, serviceSlug?: string, countrySlug?: string): string {
   switch (templateType) {
-    case "service-country": return serviceSlug ? `/${lang}/blog/${serviceSlug}` : `/${lang}/blog`;
-    case "service-city": return serviceSlug && countrySlug ? `/${lang}/blog/${serviceSlug}/${countrySlug}` : `/${lang}/blog`;
-    default: return `/${lang}/blog`;
+    case "service-country": return serviceSlug ? `/${lang}/services/${serviceSlug}` : `/${lang}/blogs`;
+    case "service-city": return serviceSlug && countrySlug ? `/${lang}/services/${serviceSlug}/${countrySlug}` : `/${lang}/blogs`;
+    default: return `/${lang}/blogs`;
   }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang, slug } = await params;
   const locale = hasLocale(lang) ? lang : defaultLocale;
-  const article = await getTranslatedArticle(slug, locale, true);
+  const dbSlug = `services/${slug.join("/")}`;
+  const article = await fetchAndTranslateArticle(dbSlug, locale, true);
   if (!article) return { title: "Not Found" };
 
   return {
@@ -49,13 +45,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogSlugPage({ params, searchParams }: Props) {
+export default async function ServiceArticlePage({ params, searchParams }: Props) {
   const { lang, slug } = await params;
   const { preview } = await searchParams;
   const locale = hasLocale(lang) ? lang : defaultLocale;
   const isPreview = preview === "true";
 
-  const article = await getTranslatedArticle(slug, locale, isPreview);
+  const dbSlug = `services/${slug.join("/")}`;
+  const article = await fetchAndTranslateArticle(dbSlug, locale, isPreview);
   if (!article) notFound();
 
   const isArabic = locale.split("-")[0] === "ar";
@@ -77,7 +74,7 @@ export default async function BlogSlugPage({ params, searchParams }: Props) {
     serviceSlug: article.serviceSlug || "",
     countrySlug: article.countrySlug || "",
     locale,
-    excludeSlug: slug.join("/"),
+    excludeSlug: dbSlug,
     limit: 4,
   });
 
