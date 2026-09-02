@@ -10,6 +10,11 @@ export interface Airport {
   _id?: string;
 }
 
+export interface LocationFaq {
+  q: string;
+  a: string;
+}
+
 export interface City {
   slug: string;
   name: string;
@@ -18,6 +23,7 @@ export interface City {
   aliases?: string[];
   status?: string; // draft | published | archived
   countrySlug?: string;
+  faqs?: LocationFaq[];
   _id?: string;
 }
 
@@ -28,6 +34,7 @@ export interface Country {
   cities: City[];
   description?: string;
   status?: string; // draft | published | archived
+  faqs?: LocationFaq[];
   _id?: string;
 }
 

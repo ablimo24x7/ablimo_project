@@ -21,6 +21,11 @@ import { Plus, Trash2, ChevronDown, ChevronUp, CheckCircle2, XCircle, Loader2 } 
 import { allIsoCountries, validateCountry } from "@/lib/iso3166";
 import { toSlug } from "@/lib/slug";
 
+type FaqRecord = {
+  q: string;
+  a: string;
+};
+
 type AirportRecord = {
   _id?: string;
   slug: string;
@@ -38,6 +43,7 @@ type CityRecord = {
   aliases: string[];
   status: string;
   airports: AirportRecord[];
+  faqs: FaqRecord[];
 };
 
 type CountryRecord = {
@@ -48,6 +54,7 @@ type CountryRecord = {
   description: string;
   status: string;
   cities: CityRecord[];
+  faqs: FaqRecord[];
 };
 
 const DEFAULTS: CountryRecord = {
@@ -57,6 +64,7 @@ const DEFAULTS: CountryRecord = {
   description: "",
   status: "published",
   cities: [],
+  faqs: [],
 };
 
 const STATUS_OPTIONS = ["draft", "published", "archived"] as const;
@@ -67,7 +75,7 @@ function blankAirport(): AirportRecord {
 }
 
 function blankCity(): CityRecord {
-  return { slug: "", name: "", aliases: [], status: "published", airports: [] };
+  return { slug: "", name: "", aliases: [], status: "published", airports: [], faqs: [] };
 }
 
 interface LocationEditorProps {
@@ -239,6 +247,72 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
     });
   };
 
+  // ── Country FAQ helpers ──────────────────────────────────
+  const addCountryFaq = () => {
+    setForm((prev) => ({ ...prev, faqs: [...prev.faqs, { q: "", a: "" }] }));
+  };
+
+  const removeCountryFaq = (index: number) => {
+    setForm((prev) => ({ ...prev, faqs: prev.faqs.filter((_, i) => i !== index) }));
+  };
+
+  const updateCountryFaq = (index: number, key: "q" | "a", value: string) => {
+    setForm((prev) => {
+      const faqs = [...prev.faqs];
+      faqs[index] = { ...faqs[index], [key]: value };
+      return { ...prev, faqs };
+    });
+  };
+
+  const moveCountryFaq = (index: number, dir: -1 | 1) => {
+    setForm((prev) => {
+      const faqs = [...prev.faqs];
+      const target = index + dir;
+      if (target < 0 || target >= faqs.length) return prev;
+      [faqs[index], faqs[target]] = [faqs[target], faqs[index]];
+      return { ...prev, faqs };
+    });
+  };
+
+  // ── City FAQ helpers ─────────────────────────────────────
+  const addCityFaq = (cityIndex: number) => {
+    setForm((prev) => {
+      const cities = [...prev.cities];
+      cities[cityIndex] = { ...cities[cityIndex], faqs: [...cities[cityIndex].faqs, { q: "", a: "" }] };
+      return { ...prev, cities };
+    });
+  };
+
+  const removeCityFaq = (cityIndex: number, faqIndex: number) => {
+    setForm((prev) => {
+      const cities = [...prev.cities];
+      cities[cityIndex] = { ...cities[cityIndex], faqs: cities[cityIndex].faqs.filter((_, i) => i !== faqIndex) };
+      return { ...prev, cities };
+    });
+  };
+
+  const updateCityFaq = (cityIndex: number, faqIndex: number, key: "q" | "a", value: string) => {
+    setForm((prev) => {
+      const cities = [...prev.cities];
+      const faqs = [...cities[cityIndex].faqs];
+      faqs[faqIndex] = { ...faqs[faqIndex], [key]: value };
+      cities[cityIndex] = { ...cities[cityIndex], faqs };
+      return { ...prev, cities };
+    });
+  };
+
+  const moveCityFaq = (cityIndex: number, faqIndex: number, dir: -1 | 1) => {
+    setForm((prev) => {
+      const cities = [...prev.cities];
+      const faqs = [...cities[cityIndex].faqs];
+      const target = faqIndex + dir;
+      if (target < 0 || target >= faqs.length) return prev;
+      [faqs[faqIndex], faqs[target]] = [faqs[target], faqs[faqIndex]];
+      cities[cityIndex] = { ...cities[cityIndex], faqs };
+      return { ...prev, cities };
+    });
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim()) {
@@ -318,6 +392,51 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                   onChange={(e) => updateField("description", e.target.value)}
                 />
               </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex-row items-center justify-between">
+              <CardTitle>Country FAQs</CardTitle>
+              <Button type="button" size="sm" onClick={addCountryFaq}>
+                <Plus className="mr-1 h-4 w-4" /> Add FAQ
+              </Button>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {form.faqs.length === 0 && (
+                <p className="text-sm text-muted-foreground">
+                  No FAQs yet. Add frequently asked questions about this country.
+                </p>
+              )}
+              {form.faqs.map((faq, faqIndex) => (
+                <div key={faqIndex} className="rounded-lg border p-3 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
+                    <div className="flex items-center gap-1">
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCountryFaq(faqIndex, -1)} disabled={faqIndex === 0}>
+                        <ChevronUp className="h-3 w-3" />
+                      </Button>
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCountryFaq(faqIndex, 1)} disabled={faqIndex === form.faqs.length - 1}>
+                        <ChevronDown className="h-3 w-3" />
+                      </Button>
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCountryFaq(faqIndex)}>
+                        <Trash2 className="h-3 w-3 text-destructive" />
+                      </Button>
+                    </div>
+                  </div>
+                  <Input
+                    placeholder="Question"
+                    value={faq.q}
+                    onChange={(e) => updateCountryFaq(faqIndex, "q", e.target.value)}
+                  />
+                  <Textarea
+                    rows={3}
+                    placeholder="Answer"
+                    value={faq.a}
+                    onChange={(e) => updateCountryFaq(faqIndex, "a", e.target.value)}
+                  />
+                </div>
+              ))}
             </CardContent>
           </Card>
 
@@ -480,6 +599,49 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                             </div>
                           ))}
                         </div>
+
+                        <div className="space-y-3 pt-2">
+                          <div className="flex items-center justify-between">
+                            <Label>City FAQs</Label>
+                            <Button type="button" size="sm" variant="outline" onClick={() => addCityFaq(cityIndex)}>
+                              <Plus className="mr-1 h-4 w-4" /> Add FAQ
+                            </Button>
+                          </div>
+                          {city.faqs.length === 0 && (
+                            <p className="text-sm text-muted-foreground">
+                              No FAQs yet for {city.name || "this city"}.
+                            </p>
+                          )}
+                          {city.faqs.map((faq, faqIndex) => (
+                            <div key={faqIndex} className="rounded-lg bg-muted/50 p-3 space-y-3">
+                              <div className="flex items-center justify-between">
+                                <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
+                                <div className="flex items-center gap-1">
+                                  <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCityFaq(cityIndex, faqIndex, -1)} disabled={faqIndex === 0}>
+                                    <ChevronUp className="h-3 w-3" />
+                                  </Button>
+                                  <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCityFaq(cityIndex, faqIndex, 1)} disabled={faqIndex === city.faqs.length - 1}>
+                                    <ChevronDown className="h-3 w-3" />
+                                  </Button>
+                                  <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCityFaq(cityIndex, faqIndex)}>
+                                    <Trash2 className="h-3 w-3 text-destructive" />
+                                  </Button>
+                                </div>
+                              </div>
+                              <Input
+                                placeholder="Question"
+                                value={faq.q}
+                                onChange={(e) => updateCityFaq(cityIndex, faqIndex, "q", e.target.value)}
+                              />
+                              <Textarea
+                                rows={3}
+                                placeholder="Answer"
+                                value={faq.a}
+                                onChange={(e) => updateCityFaq(cityIndex, faqIndex, "a", e.target.value)}
+                              />
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -526,6 +688,12 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                 <span>Airports</span>
                 <span className="font-medium text-foreground">
                   {form.cities.reduce((n, c) => n + c.airports.length, 0)}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span>FAQs</span>
+                <span className="font-medium text-foreground">
+                  {form.faqs.length + form.cities.reduce((n, c) => n + c.faqs.length, 0)}
                 </span>
               </div>
               <div className="flex justify-between">

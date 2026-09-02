@@ -50,6 +50,7 @@ function mapCity(doc: CityDoc & { _id?: unknown }): City {
     status: doc.status ?? "published",
     countrySlug: doc.countrySlug,
     airports: (doc.airports ?? []).map(mapAirport),
+    faqs: (doc.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
   };
 }
 
@@ -63,6 +64,7 @@ export function toCountryShape(doc: CountryDoc & { _id?: unknown }): CountryShap
     description: doc.description ?? "",
     status: doc.status ?? "published",
     cities: (doc.cities ?? []).map(mapCity),
+    faqs: (doc.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
   };
 }
 
@@ -89,11 +91,13 @@ export async function seedLocationsIfEmpty(): Promise<void> {
     name: c.name,
     description: "",
     status: "published",
+    faqs: [],
     cities: c.cities.map((city) => ({
       slug: city.slug,
       name: city.name,
       countrySlug: c.slug,
       status: "published",
+      faqs: [],
       airports: city.airports.map((a) => ({
         slug: a.slug,
         name: a.name,

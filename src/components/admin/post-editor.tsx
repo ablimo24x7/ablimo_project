@@ -19,6 +19,9 @@ import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
 import { toast } from "sonner";
+import { Plus, Trash2, ChevronUp, ChevronDown } from "lucide-react";
+
+type FaqItem = { q: string; a: string };
 
 type PostData = {
   _id?: string;
@@ -45,6 +48,7 @@ type PostData = {
   articleMedia: {
     heroCoverMedia: { url: string };
   };
+  faqs: FaqItem[];
   seo_metadata: {
     metaTitle: string;
     metaDescription: string;
@@ -74,6 +78,7 @@ const defaultPost: PostData = {
   date: new Date().toISOString().slice(0, 10),
   readTime: 5,
   articleMedia: { heroCoverMedia: { url: "" } },
+  faqs: [],
   seo_metadata: { metaTitle: "", metaDescription: "", ogImage: "" },
 };
 
@@ -93,6 +98,7 @@ function normalizePost(data?: PostData): PostData {
         url: d.articleMedia?.heroCoverMedia?.url ?? defaultPost.articleMedia.heroCoverMedia.url,
       },
     },
+    faqs: (d.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
     seo_metadata: {
       metaTitle: d.seo_metadata?.metaTitle ?? "",
       metaDescription: d.seo_metadata?.metaDescription ?? "",
@@ -209,6 +215,29 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
     updateField("tags", form.tags.filter((t) => t !== tag));
   };
 
+  // ── FAQ helpers ──────────────────────────────────────────
+  const addFaq = () => {
+    updateField("faqs", [...form.faqs, { q: "", a: "" }]);
+  };
+
+  const removeFaq = (index: number) => {
+    updateField("faqs", form.faqs.filter((_, i) => i !== index));
+  };
+
+  const updateFaq = (index: number, key: "q" | "a", value: string) => {
+    const faqs = [...form.faqs];
+    faqs[index] = { ...faqs[index], [key]: value };
+    updateField("faqs", faqs);
+  };
+
+  const moveFaq = (index: number, dir: -1 | 1) => {
+    const faqs = [...form.faqs];
+    const target = index + dir;
+    if (target < 0 || target >= faqs.length) return;
+    [faqs[index], faqs[target]] = [faqs[target], faqs[index]];
+    updateField("faqs", faqs);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.title.trim()) {
@@ -313,6 +342,51 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                   placeholder="Wrap up your article..."
                 />
               </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex-row items-center justify-between">
+              <CardTitle>FAQs</CardTitle>
+              <Button type="button" size="sm" onClick={addFaq}>
+                <Plus className="mr-1 h-4 w-4" /> Add FAQ
+              </Button>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {form.faqs.length === 0 && (
+                <p className="text-sm text-muted-foreground">
+                  No FAQs yet. Add frequently asked questions for this article.
+                </p>
+              )}
+              {form.faqs.map((faq, faqIndex) => (
+                <div key={faqIndex} className="rounded-lg border p-3 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
+                    <div className="flex items-center gap-1">
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveFaq(faqIndex, -1)} disabled={faqIndex === 0}>
+                        <ChevronUp className="h-3 w-3" />
+                      </Button>
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveFaq(faqIndex, 1)} disabled={faqIndex === form.faqs.length - 1}>
+                        <ChevronDown className="h-3 w-3" />
+                      </Button>
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeFaq(faqIndex)}>
+                        <Trash2 className="h-3 w-3 text-destructive" />
+                      </Button>
+                    </div>
+                  </div>
+                  <Input
+                    placeholder="Question"
+                    value={faq.q}
+                    onChange={(e) => updateFaq(faqIndex, "q", e.target.value)}
+                  />
+                  <Textarea
+                    rows={3}
+                    placeholder="Answer"
+                    value={faq.a}
+                    onChange={(e) => updateFaq(faqIndex, "a", e.target.value)}
+                  />
+                </div>
+              ))}
             </CardContent>
           </Card>
         </div>

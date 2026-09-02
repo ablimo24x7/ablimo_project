@@ -82,6 +82,7 @@ export async function POST(req: NextRequest) {
       aliases: a.aliases ?? [],
       status: a.status || "published",
     })),
+    faqs: (c.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
   }));
 
   // Alias / slug conflict checks for nested cities and airports
@@ -128,6 +129,7 @@ export async function POST(req: NextRequest) {
       description: data.description || "",
       status: data.status || "published",
       cities: cityDocs,
+      faqs: (data.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
     });
 
     return NextResponse.json(toCountryShape(doc), { status: 201 });

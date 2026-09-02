@@ -14,6 +14,11 @@ const SeoMetadataSchema = z.object({
   ogImage: z.string().optional().default(""),
 });
 
+export const PostFaqSchema = z.object({
+  q: z.string().max(500).optional().default(""),
+  a: z.string().max(5000).optional().default(""),
+});
+
 export const PostCreateSchema = z.object({
   title: z.string().min(1).max(200),
   slug: z.string().min(1).max(200),
@@ -48,6 +53,9 @@ export const PostCreateSchema = z.object({
   city: z.string().optional().default(""),
   routeFrom: z.string().optional().default(""),
   routeTo: z.string().optional().default(""),
+
+  // FAQs
+  faqs: z.array(PostFaqSchema).optional().default([]),
 
   seo_metadata: SeoMetadataSchema.optional(),
 });

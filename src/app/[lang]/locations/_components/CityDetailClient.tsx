@@ -64,6 +64,7 @@ export default function CityDetailClient({ dict, lang, country, city, routes = [
 
     const heroTitle = `${taxiAltText} ${cityName}`;
     const heroImage = cityHeroImages[city.slug] || cityHeroImages.dubai;
+    const cityFaqs = (city.faqs ?? []).filter((f) => f.q && f.a);
 
     const gettingAroundTitle = cityData?.gettingAround?.title || `Getting Around in ${cityName}`;
     const gettingAroundDesc = cityData?.gettingAround?.description || `${cityName} is a dynamic and culturally rich destination with plenty to experience. AB.Limo offers an ideal chauffeur service that gets you around in absolute comfort and style, connecting you effortlessly across key districts and landmarks.`;
@@ -322,6 +323,64 @@ export default function CityDetailClient({ dict, lang, country, city, routes = [
                                 </Link>
                             )}
                         />
+                    </div>
+                </section>
+            )}
+
+            {/* FAQ Section */}
+            {cityFaqs.length > 0 && (
+                <section className="bg-[#1c1d21] py-20 px-8">
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@type": "FAQPage",
+                                mainEntity: cityFaqs.map((item) => ({
+                                    "@type": "Question",
+                                    name: item.q,
+                                    acceptedAnswer: {
+                                        "@type": "Answer",
+                                        text: item.a,
+                                    },
+                                })),
+                            }),
+                        }}
+                    />
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                            Frequently Asked Questions
+                        </h2>
+                        <div className="space-y-4">
+                            {cityFaqs.map((item) => (
+                                <div
+                                    key={item.q}
+                                    className="bg-[#292a30] rounded-2xl overflow-hidden"
+                                >
+                                    <details className="group">
+                                        <summary className="w-full p-6 text-left flex items-center justify-between hover:bg-[#2a2c35] transition-colors cursor-pointer list-none">
+                                            <h3 className="text-lg font-semibold pr-4">{item.q}</h3>
+                                            <svg
+                                                className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M19 9l-7 7-7-7"
+                                                />
+                                            </svg>
+                                        </summary>
+                                        <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                                            {item.a}
+                                        </div>
+                                    </details>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
             )}

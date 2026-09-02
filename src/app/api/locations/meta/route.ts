@@ -27,6 +27,7 @@ export async function GET() {
           n + (c.airports?.length ?? 0),
         0
       ),
+      faqCount: (d.faqs ?? []).length,
     };
   });
 

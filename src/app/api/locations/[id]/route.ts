@@ -17,6 +17,7 @@ interface CountryUpdateInput {
   description?: string;
   status?: string;
   cities?: unknown;
+  faqs?: Array<{ q?: string; a?: string }>;
 }
 
 export async function GET(_req: NextRequest, { params }: Ctx) {
@@ -84,6 +85,7 @@ export async function PUT(req: NextRequest, { params }: Ctx) {
         description: data.description ?? existing.description,
         status: data.status ?? existing.status,
         cities: data.cities ?? existing.cities,
+        faqs: data.faqs ?? existing.faqs ?? [],
       },
       { new: true, runValidators: true }
     ).lean();

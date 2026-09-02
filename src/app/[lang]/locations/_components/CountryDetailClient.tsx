@@ -50,6 +50,7 @@ export default function CountryDetailClient({ dict, lang, country, routes = [] }
     const heroTitle = detail.heroTitle.replace("{country}", countryName);
     const heroImage = countryHeroImages[country.code] || countryHeroImages.ae;
     const citiesWithAirports = (country.cities ?? []).filter((c) => c.airports.length > 0);
+    const countryFaqs = (country.faqs ?? []).filter((f) => f.q && f.a);
 
     const cityNameFor = (slug: string) =>
         (country.cities ?? []).find((c) => c.slug === slug)?.name ?? titleFromSlug(slug);
@@ -277,6 +278,64 @@ export default function CountryDetailClient({ dict, lang, country, routes = [] }
                     )}
                 </div>
             </section>
+
+            {/* FAQ Section */}
+            {countryFaqs.length > 0 && (
+                <section className="bg-[#1c1d21] py-20 px-8">
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@type": "FAQPage",
+                                mainEntity: countryFaqs.map((item) => ({
+                                    "@type": "Question",
+                                    name: item.q,
+                                    acceptedAnswer: {
+                                        "@type": "Answer",
+                                        text: item.a,
+                                    },
+                                })),
+                            }),
+                        }}
+                    />
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                            Frequently Asked Questions
+                        </h2>
+                        <div className="space-y-4">
+                            {countryFaqs.map((item) => (
+                                <div
+                                    key={item.q}
+                                    className="bg-[#292a30] rounded-2xl overflow-hidden"
+                                >
+                                    <details className="group">
+                                        <summary className="w-full p-6 text-left flex items-center justify-between hover:bg-[#2a2c35] transition-colors cursor-pointer list-none">
+                                            <h3 className="text-lg font-semibold pr-4">{item.q}</h3>
+                                            <svg
+                                                className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M19 9l-7 7-7-7"
+                                                />
+                                            </svg>
+                                        </summary>
+                                        <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                                            {item.a}
+                                        </div>
+                                    </details>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
         </main>
     );
 }

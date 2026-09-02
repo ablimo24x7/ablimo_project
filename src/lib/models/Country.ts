@@ -1,5 +1,13 @@
 import { Schema, model, models, type InferSchemaType } from "mongoose";
 
+const faqSchema = new Schema(
+  {
+    q: { type: String, default: "" },
+    a: { type: String, default: "" },
+  },
+  { _id: false }
+);
+
 const airportSchema = new Schema(
   {
     slug: { type: String, required: true, trim: true },
@@ -25,6 +33,7 @@ const citySchema = new Schema(
     description: { type: String, default: "" },
     aliases: [{ type: String, trim: true }],
     airports: { type: [airportSchema], default: [] },
+    faqs: { type: [faqSchema], default: [] },
     status: { type: String, default: "published", enum: ["draft", "published", "archived"] },
   },
   { _id: true }
@@ -37,6 +46,7 @@ const countrySchema = new Schema(
     name: { type: String, required: true, trim: true },
     description: { type: String, default: "" },
     cities: { type: [citySchema], default: [] },
+    faqs: { type: [faqSchema], default: [] },
     status: { type: String, default: "published", enum: ["draft", "published", "archived"] },
   },
   { timestamps: true }
