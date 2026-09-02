@@ -106,9 +106,10 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
   const queryClient = useQueryClient();
   const [form, setForm] = React.useState<PostData>(() => normalizePost(initialData));
   const [tagInput, setTagInput] = React.useState("");
-  const [blogType, setBlogType] = React.useState<"country" | "city">(
-    initialData?.templateType === "service-city" ? "city" : initialBlogType
-  );
+  const blogType: "country" | "city" =
+    initialData?.templateType === "service-city" ? "city" : initialBlogType;
+
+  const templateType = blogType === "city" ? "service-city" : "service-country";
 
   // Fetch all services from database
   const { data: servicesData } = useQuery({
@@ -191,8 +192,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
       const service = key === "serviceSlug" ? (value as string) : prev.serviceSlug;
       const country = key === "countrySlug" ? (value as string) : prev.countrySlug;
       const city = key === "citySlug" ? (value as string) : prev.citySlug;
-      const type = (prev.templateType === "service-city" ? "city" : "country") as "country" | "city";
-      next.slug = generateSlug(service, country, city, type);
+      next.slug = generateSlug(service, country, city, blogType);
       return next;
     });
   };
@@ -223,7 +223,11 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
       toast.error("Country is required");
       return;
     }
-    mutation.mutate(form);
+    if (blogType === "city" && !form.citySlug) {
+      toast.error("City is required for city-specific articles");
+      return;
+    }
+    mutation.mutate({ ...form, templateType });
   };
 
   return (
@@ -386,7 +390,6 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                     if (blogType === "country") {
                       updateField("citySlug", "");
                       updateField("city", "");
-                      updateField("templateType", "service-country");
                     }
                   }}
                 >
@@ -412,7 +415,6 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                       const city = cityOptions.find((c: { slug: string; name: string }) => c.slug === v);
                       updateField("citySlug", v);
                       updateField("city", city?.name || "");
-                      updateField("templateType", "service-city");
                     }}
                   >
                     <SelectTrigger className="w-full"><SelectValue placeholder="Select a city" /></SelectTrigger>

@@ -15,7 +15,7 @@ const SAMPLE_ARTICLES = [
   // SERVICE-COUNTRY BLOGS
   // ═══════════════════════════════════════════════════════════════════
   {
-    slug: "chauffeur-service-in-saudi-arabia",
+    slug: "services/chauffeur-vip/saudi-arabia",
     title: "Premium Chauffeur Service in Saudi Arabia: A Complete Guide",
     excerpt: "Discover AB.Limo's premium chauffeur services across Saudi Arabia. From Riyadh business districts to Jeddah corniche, explore how executive ground transport elevates your journey.",
     category: "chauffeur-vip",
@@ -72,7 +72,7 @@ const SAMPLE_ARTICLES = [
     locale: "en",
   },
   {
-    slug: "airport-transfers-in-uae",
+    slug: "services/airport-transfers/uae",
     title: "Seamless Airport Transfers Across the UAE: Dubai, Abu Dhabi & Beyond",
     excerpt: "From DXB Terminal 3 to Abu Dhabi's Zayed International, AB.Limo's airport transfer service ensures punctual, stress-free arrivals and departures across all UAE airports.",
     category: "airport-transfers",
@@ -129,7 +129,7 @@ const SAMPLE_ARTICLES = [
     locale: "en",
   },
   {
-    slug: "corporate-transportation-in-qatar",
+    slug: "services/corporate-transportation/qatar",
     title: "Corporate Transportation in Qatar: Fleet Solutions for Business Excellence",
     excerpt: "AB.Limo's corporate transportation services in Qatar provide managed fleets, executive travel, and workforce mobility for organisations operating in Doha and beyond.",
     category: "corporate-transportation",
@@ -184,7 +184,7 @@ const SAMPLE_ARTICLES = [
   // SERVICE-CITY BLOGS
   // ═══════════════════════════════════════════════════════════════════
   {
-    slug: "chauffeur-service-in-dubai",
+    slug: "services/chauffeur-vip/uae/dubai",
     title: "Chauffeur Service in Dubai: Your Guide to Executive Ground Transport",
     excerpt: "Navigate Dubai's iconic skyline in style with AB.Limo's chauffeur service. From Business Bay meetings to Palm Jumeirah dinners, discover executive transport tailored to Dubai's rhythm.",
     category: "chauffeur-vip",
@@ -239,7 +239,7 @@ const SAMPLE_ARTICLES = [
     locale: "en",
   },
   {
-    slug: "airport-transfer-from-riyadh",
+    slug: "services/airport-transfers/saudi-arabia/riyadh",
     title: "Airport Transfer from Riyadh: King Khalid International to Any Destination",
     excerpt: "AB.Limo's airport transfer service from Riyadh's King Khalid International Airport. Meet & greet, flight tracking, and luxury vehicles for seamless arrivals and departures.",
     category: "airport-transfers",
@@ -291,7 +291,7 @@ const SAMPLE_ARTICLES = [
     locale: "en",
   },
   {
-    slug: "event-transportation-in-abu-dhabi",
+    slug: "services/event-transportation/uae/abu-dhabi",
     title: "Event Transportation in Abu Dhabi: Conference & Gala Logistics",
     excerpt: "AB.Limo's event transportation service in Abu Dhabi. From ADNEC conferences to Saadiyat Island galas, we manage guest movements with precision and style.",
     category: "event-transportation",
@@ -343,7 +343,7 @@ const SAMPLE_ARTICLES = [
     locale: "en",
   },
   {
-    slug: "bus-coach-hire-in-doha",
+    slug: "services/bus-coach-hire/qatar/doha",
     title: "Bus & Coach Hire in Doha: Group Transport for Teams & Delegations",
     excerpt: "AB.Limo's bus and coach hire service in Doha. From corporate delegations to sports teams, find the right group transport solution for your Qatar operations.",
     category: "bus-coach-hire",
@@ -393,7 +393,7 @@ const SAMPLE_ARTICLES = [
     locale: "en",
   },
   {
-    slug: "tourism-transportation-in-oman",
+    slug: "services/tourism-transportation/oman/muscat",
     title: "Tourism Transportation in Oman: Discover the Sultanate in Comfort",
     excerpt: "AB.Limo's tourism transportation service in Oman. From Muscat's corniche to Jebel Shams, explore Oman's natural beauty with a private chauffeur and luxury vehicle.",
     category: "tourism-transportation",
@@ -463,7 +463,7 @@ async function main() {
   }
 
   if (dryRun) {
-    toInsert.forEach((a) => console.log(`  [DRY] ${a.slug} — ${a.templateType} — ${a.serviceSlug}/${a.countrySlug}${a.citySlug ? "/" + a.citySlug : ""}`));
+    toInsert.forEach((a) => console.log(`  [DRY] ${a.slug}`));
   } else {
     const result = await Article.insertMany(toInsert);
     console.log(`Inserted ${result.length} articles:`);
