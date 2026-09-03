@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { Dictionary } from "@/app/[lang]/dictionaries";
 
-export default function HeroSection() {
+export default function HeroSection({ dict }: { dict: Dictionary }) {
   const [activeTab, setActiveTab] = useState("transfer");
 
   return (
@@ -15,21 +16,21 @@ export default function HeroSection() {
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full bg-abGold/10 border border-abGold/30 mb-6">
               <span className="w-2 h-2 rounded-full bg-abGold animate-pulse"></span>
-              <span className="text-abGold text-xs font-bold tracking-widest uppercase">GCC Premier Enterprise Logistics</span>
+              <span className="text-abGold text-xs font-bold tracking-widest uppercase">{dict.home.heroSection.badge}</span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] mb-6">
-              The Science of <br/>
-              <span className="text-abGold">Transportation.</span>
+              {dict.home.heroSection.title} <br/>
+              <span className="text-abGold">{dict.home.heroSection.titleHighlight}</span>
             </h1>
             <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Beyond standard transfers. AB.Limo engineers bespoke mobility architecture for mega-events, corporate roadshows, and government protocol across Saudi Arabia, UAE, and Qatar.
+              {dict.home.heroSection.desc}
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <a href="#logistics" className="bg-abGold hover:bg-yellow-600 text-white px-8 py-3.5 rounded text-sm font-semibold transition-colors shadow-lg shadow-abGold/20">
-                Explore Event Frameworks
+                {dict.home.heroSection.ctaExplore}
               </a>
               <a href="#duty-of-care" className="bg-transparent border border-gray-500 text-white hover:border-white px-8 py-3.5 rounded text-sm font-semibold transition-colors flex items-center">
-                <i className="fa-solid fa-shield-halved mr-2 text-abGold"></i> View Duty of Care
+                <i className="fa-solid fa-shield-halved mr-2 text-abGold"></i> {dict.home.heroSection.ctaDutyOfCare}
               </a>
             </div>
           </div>
@@ -47,7 +48,7 @@ export default function HeroSection() {
                       : "text-gray-400 hover:text-gray-600"
                   }`}
                 >
-                  Executive Transfer
+                  {dict.home.heroSection.tabs.transfer}
                 </button>
                 <button
                   onClick={() => setActiveTab("as-directed")}
@@ -57,7 +58,7 @@ export default function HeroSection() {
                       : "text-gray-400 hover:text-gray-600"
                   }`}
                 >
-                  As-Directed (Hourly)
+                  {dict.home.heroSection.tabs.asDirected}
                 </button>
                 <button
                   onClick={() => setActiveTab("event")}
@@ -67,7 +68,7 @@ export default function HeroSection() {
                       : "text-gray-400 hover:text-gray-600"
                   }`}
                 >
-                  Event Logistics
+                  {dict.home.heroSection.tabs.event}
                 </button>
               </div>
               
@@ -83,11 +84,11 @@ export default function HeroSection() {
                 >
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><i className="fa-solid fa-plane-arrival text-gray-400 text-sm"></i></div>
-                    <input type="text" placeholder="Pickup (e.g., RUH Airport)" className="block w-full pl-10 pr-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 transition-colors" />
+                    <input type="text" placeholder={dict.home.heroSection.form.pickup} className="block w-full pl-10 pr-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 transition-colors" />
                   </div>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><i className="fa-regular fa-building text-gray-400 text-sm"></i></div>
-                    <input type="text" placeholder="Drop-off (e.g., KAFD)" className="block w-full pl-10 pr-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 transition-colors" />
+                    <input type="text" placeholder={dict.home.heroSection.form.dropoff} className="block w-full pl-10 pr-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 transition-colors" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="relative">
@@ -97,7 +98,7 @@ export default function HeroSection() {
                       <input type="time" className="block w-full px-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 text-gray-500" />
                     </div>
                   </div>
-                  <button type="submit" className="w-full bg-abBlack hover:bg-gray-900 text-white font-semibold py-3.5 px-4 rounded transition-colors shadow-lg mt-2">Source Executive Fleet</button>
+                  <button type="submit" className="w-full bg-abBlack hover:bg-gray-900 text-white font-semibold py-3.5 px-4 rounded transition-colors shadow-lg mt-2">{dict.home.heroSection.form.submit}</button>
                 </form>
 
                 {/* Event Form */}
@@ -107,21 +108,21 @@ export default function HeroSection() {
                   }`}
                   onSubmit={(e) => e.preventDefault()}
                 >
-                  <p className="text-sm text-gray-500 mb-4">Connect with our Transport Control Room team to engineer logistics for mega-events, exhibitions, or VIP tours.</p>
+                  <p className="text-sm text-gray-500 mb-4">{dict.home.heroSection.form.eventDesc}</p>
                   <div className="relative">
                     <select className="block w-full pl-3 pr-10 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50 text-gray-600">
-                      <option>Select Logistics Type</option>
-                      <option>Exhibition & Trade Show Shuttle</option>
-                      <option>Executive Coach / Bus Charter</option>
-                      <option>Government & Protocol Event</option>
-                      <option>Sports or Concert Transportation</option>
+                      <option>{dict.home.heroSection.form.selectType}</option>
+                      <option>{dict.home.heroSection.form.exhibition}</option>
+                      <option>{dict.home.heroSection.form.coach}</option>
+                      <option>{dict.home.heroSection.form.government}</option>
+                      <option>{dict.home.heroSection.form.sports}</option>
                     </select>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
-                    <input type="number" placeholder="Est. Pax" className="block w-full px-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50" />
-                    <input type="text" placeholder="Event City" className="block w-full px-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50" />
+                    <input type="number" placeholder={dict.home.heroSection.form.pax} className="block w-full px-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50" />
+                    <input type="text" placeholder={dict.home.heroSection.form.city} className="block w-full px-3 py-3.5 border border-gray-200 rounded focus:ring-abGold focus:border-abGold sm:text-sm bg-gray-50" />
                   </div>
-                  <button type="submit" className="w-full bg-abGold hover:bg-yellow-600 text-white font-semibold py-3.5 px-4 rounded transition-colors shadow-lg mt-4">Request Logistics Consultation</button>
+                  <button type="submit" className="w-full bg-abGold hover:bg-yellow-600 text-white font-semibold py-3.5 px-4 rounded transition-colors shadow-lg mt-4">{dict.home.heroSection.form.submitEvent}</button>
                 </form>
               </div>
             </div>

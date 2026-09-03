@@ -12,12 +12,15 @@ interface Ctx {
 
 interface CountryUpdateInput {
   name?: string;
+  nameAr?: string;
   code?: string;
   slug?: string;
   description?: string;
+  descriptionAr?: string;
   status?: string;
   cities?: unknown;
   faqs?: Array<{ q?: string; a?: string }>;
+  faqsAr?: Array<{ q?: string; a?: string }>;
 }
 
 export async function GET(_req: NextRequest, { params }: Ctx) {
@@ -80,12 +83,15 @@ export async function PUT(req: NextRequest, { params }: Ctx) {
       id,
       {
         name: canonicalName,
+        nameAr: data.nameAr ?? existing.nameAr ?? "",
         code,
         slug,
         description: data.description ?? existing.description,
+        descriptionAr: data.descriptionAr ?? existing.descriptionAr ?? "",
         status: data.status ?? existing.status,
         cities: data.cities ?? existing.cities,
         faqs: data.faqs ?? existing.faqs ?? [],
+        faqsAr: data.faqsAr ?? existing.faqsAr ?? [],
       },
       { new: true, runValidators: true }
     ).lean();

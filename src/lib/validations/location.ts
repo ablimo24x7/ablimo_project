@@ -15,12 +15,14 @@ export const FaqSchema = z.object({
 export const AirportSchema = z.object({
   slug: z.string().min(1).max(200).optional(),
   name: z.string().min(1, "Airport name is required").max(200),
+  nameAr: z.string().optional().default(""),
   iata: z
     .string()
     .min(1, "IATA code is required")
     .max(3, "IATA code must be up to 3 characters")
     .transform((v) => v.trim().toUpperCase()),
   description: z.string().optional().default(""),
+  descriptionAr: z.string().optional().default(""),
   aliases: z.array(z.string().trim().min(1)).optional().default([]),
   type: z.enum(["international", "domestic", "regional"]).optional().default("international"),
   status: statusSchema,
@@ -29,15 +31,17 @@ export const AirportSchema = z.object({
 export const CitySchema = z.object({
   slug: z.string().min(1).max(200).optional(),
   name: z.string().min(1, "City name is required").max(200),
+  nameAr: z.string().optional().default(""),
   description: z.string().optional().default(""),
+  descriptionAr: z.string().optional().default(""),
   aliases: z.array(z.string().trim().min(1)).optional().default([]),
   airports: z.array(AirportSchema).optional().default([]),
   faqs: z.array(FaqSchema).optional().default([]),
+  faqsAr: z.array(FaqSchema).optional().default([]),
   status: statusSchema,
 });
 
 export const CountryCreateSchema = z.object({
-  // Accept a real country name OR ISO alpha-2 code.
   name: z
     .string()
     .min(1, "Country is required")
@@ -45,11 +49,14 @@ export const CountryCreateSchema = z.object({
     .refine((v) => validateCountry(v) !== undefined, {
       message: "Invalid or unknown country. Please use a real ISO-3166 country.",
     }),
+  nameAr: z.string().optional().default(""),
   code: z.string().min(2).max(2).optional(),
   slug: z.string().min(1).max(200).optional(),
   description: z.string().optional().default(""),
+  descriptionAr: z.string().optional().default(""),
   cities: z.array(CitySchema).optional().default([]),
   faqs: z.array(FaqSchema).optional().default([]),
+  faqsAr: z.array(FaqSchema).optional().default([]),
   status: statusSchema,
 });
 

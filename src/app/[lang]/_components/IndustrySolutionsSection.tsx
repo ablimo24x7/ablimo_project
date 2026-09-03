@@ -1,20 +1,13 @@
-const industries = [
-  "Events & Exhibitions",
-  "Government & Ministries",
-  "Aviation & FBO Ops",
-  "Oil & Gas Logistics",
-  "Religious Tourism (Umrah/Hajj)",
-  "Sports & Tournament Transport",
-];
+import { Dictionary } from "@/app/[lang]/dictionaries";
 
-export default function IndustrySolutionsSection() {
+export default function IndustrySolutionsSection({ dict }: { dict: Dictionary }) {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-sm font-bold tracking-widest text-gray-400 uppercase mb-4">Dedicated Industry Solutions</h2>
-        <p className="text-gray-900 text-2xl font-semibold mb-10">Tailored logistics for specialized procurement teams.</p>
+        <h2 className="text-sm font-bold tracking-widest text-gray-400 uppercase mb-4">{dict.home.industrySolutions.badge}</h2>
+        <p className="text-gray-900 text-2xl font-semibold mb-10">{dict.home.industrySolutions.title}</p>
         <div className="flex flex-wrap justify-center gap-3">
-          {industries.map((industry) => (
+          {dict.home.industrySolutions.items.map((industry) => (
             <a
               key={industry}
               href="#"

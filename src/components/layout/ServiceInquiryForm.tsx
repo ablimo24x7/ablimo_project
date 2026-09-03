@@ -17,16 +17,35 @@ interface WidgetConfig {
   whatsappPopup: boolean;
 }
 
+interface ServiceInquiryFormDict {
+  inquiryForm: {
+    title: string;
+    about: string;
+    name: string;
+    phone: string;
+    email: string;
+    message: string;
+    sending: string;
+    send: string;
+    sent: string;
+    sentDesc: string;
+    sentEnd: string;
+    sentBack: string;
+  };
+}
+
 interface ServiceInquiryFormProps {
   serviceName: string;
   serviceUrl: string;
   primaryColor?: string;
+  dict?: ServiceInquiryFormDict;
 }
 
 export default function ServiceInquiryForm({
   serviceName,
   serviceUrl,
   primaryColor = "#C8A951",
+  dict,
 }: ServiceInquiryFormProps) {
   const [form, setForm] = useState({
     name: "",
@@ -37,6 +56,21 @@ export default function ServiceInquiryForm({
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [widgetConfig, setWidgetConfig] = useState<WidgetConfig | null>(null);
+
+  const t = dict?.inquiryForm ?? {
+    title: "Quick Inquiry",
+    about: "About: ",
+    name: "Your Name",
+    phone: "Phone Number",
+    email: "Email (optional)",
+    message: "Your message (optional)",
+    sending: "Sending...",
+    send: "Send Inquiry",
+    sent: "Thank You!",
+    sentDesc: "Your inquiry about ",
+    sentEnd: " has been received.",
+    sentBack: "We'll get back to you shortly.",
+  };
 
   useEffect(() => {
     fetch("/api/chat/config")
@@ -125,12 +159,12 @@ export default function ServiceInquiryForm({
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-lg font-bold mb-2">Thank You!</h3>
+        <h3 className="text-lg font-bold mb-2">{t.sent}</h3>
         <p className="text-sm text-gray-500 mb-1">
-          Your inquiry about <span className="font-semibold">{serviceName}</span> has been received.
+          {t.sentDesc}<span className="font-semibold">{serviceName}</span>{t.sentEnd}
         </p>
         <p className="text-sm text-gray-500">
-          We&apos;ll get back to you shortly.
+          {t.sentBack}
         </p>
       </div>
     );
@@ -139,9 +173,9 @@ export default function ServiceInquiryForm({
   return (
     <div className="bg-white rounded-2xl shadow-[0_12px_24px_rgba(0,0,0,0.15)] max-w-[440px] w-full overflow-hidden text-gray-900">
       <div className="p-5 border-b border-gray-100">
-        <h3 className="text-base font-bold text-gray-900">Quick Inquiry</h3>
+        <h3 className="text-base font-bold text-gray-900">{t.title}</h3>
         <p className="text-xs text-gray-500 mt-1">
-          About: <span className="font-semibold text-gray-700">{serviceName}</span>
+          {t.about}<span className="font-semibold text-gray-700">{serviceName}</span>
         </p>
       </div>
 
@@ -152,7 +186,7 @@ export default function ServiceInquiryForm({
           </svg>
           <input
             type="text"
-            placeholder="Your Name"
+            placeholder={t.name}
             required
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -166,7 +200,7 @@ export default function ServiceInquiryForm({
           </svg>
           <input
             type="tel"
-            placeholder="Phone Number"
+            placeholder={t.phone}
             required
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -180,7 +214,7 @@ export default function ServiceInquiryForm({
           </svg>
           <input
             type="email"
-            placeholder="Email (optional)"
+            placeholder={t.email}
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className="w-full text-sm text-gray-900 placeholder-gray-400 outline-none bg-transparent"
@@ -189,7 +223,7 @@ export default function ServiceInquiryForm({
 
         <div className="rounded-xl bg-gray-100 px-3.5 py-2.5 focus-within:ring-1 focus-within:ring-gray-800">
           <textarea
-            placeholder="Your message (optional)"
+            placeholder={t.message}
             rows={2}
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -203,7 +237,7 @@ export default function ServiceInquiryForm({
           className="w-full text-white py-3.5 rounded-full text-sm font-semibold transition-colors cursor-pointer mt-1 disabled:opacity-50"
           style={{ backgroundColor: primaryColor }}
         >
-          {sending ? "Sending..." : "Send Inquiry"}
+          {sending ? t.sending : t.send}
         </button>
       </form>
     </div>

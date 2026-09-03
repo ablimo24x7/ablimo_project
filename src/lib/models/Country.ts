@@ -12,11 +12,11 @@ const airportSchema = new Schema(
   {
     slug: { type: String, required: true, trim: true },
     name: { type: String, required: true, trim: true },
+    nameAr: { type: String, default: "" },
     iata: { type: String, required: true, trim: true, uppercase: true },
-    // Resolved parent city slug (denormalised for simpler lookups/validation)
     citySlug: { type: String, default: "" },
     description: { type: String, default: "" },
-    // Alternate names/slugs so e.g. "Doha Intl" can route to Hamad International Airport
+    descriptionAr: { type: String, default: "" },
     aliases: [{ type: String, trim: true }],
     type: { type: String, default: "international", enum: ["international", "domestic", "regional"] },
     status: { type: String, default: "published", enum: ["draft", "published", "archived"] },
@@ -28,12 +28,14 @@ const citySchema = new Schema(
   {
     slug: { type: String, required: true, trim: true },
     name: { type: String, required: true, trim: true },
-    // Resolved parent country slug (denormalised)
+    nameAr: { type: String, default: "" },
     countrySlug: { type: String, default: "" },
     description: { type: String, default: "" },
+    descriptionAr: { type: String, default: "" },
     aliases: [{ type: String, trim: true }],
     airports: { type: [airportSchema], default: [] },
     faqs: { type: [faqSchema], default: [] },
+    faqsAr: { type: [faqSchema], default: [] },
     status: { type: String, default: "published", enum: ["draft", "published", "archived"] },
   },
   { _id: true }
@@ -44,9 +46,12 @@ const countrySchema = new Schema(
     code: { type: String, required: true, unique: true, trim: true, lowercase: true },
     slug: { type: String, required: true, unique: true, trim: true },
     name: { type: String, required: true, trim: true },
+    nameAr: { type: String, default: "" },
     description: { type: String, default: "" },
+    descriptionAr: { type: String, default: "" },
     cities: { type: [citySchema], default: [] },
     faqs: { type: [faqSchema], default: [] },
+    faqsAr: { type: [faqSchema], default: [] },
     status: { type: String, default: "published", enum: ["draft", "published", "archived"] },
   },
   { timestamps: true }

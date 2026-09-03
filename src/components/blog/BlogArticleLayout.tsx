@@ -13,6 +13,7 @@ interface BlogArticleLayoutProps {
   keyTakeawaysLabel: string;
   finalThoughtsLabel: string;
   authorLabel: string;
+  faqTitle: string;
   isArabic: boolean;
   children: React.ReactNode;
 }
@@ -27,6 +28,7 @@ export function BlogArticleLayout({
   keyTakeawaysLabel,
   finalThoughtsLabel,
   authorLabel,
+  faqTitle,
   isArabic,
   children,
 }: BlogArticleLayoutProps) {
@@ -190,7 +192,7 @@ export function BlogArticleLayout({
                 }}
               />
               <h2 className="text-2xl font-serif font-bold text-white mb-6">
-                Frequently Asked Questions
+                {faqTitle}
               </h2>
               <div className="space-y-4">
                 {article.faqs.map((item) => (

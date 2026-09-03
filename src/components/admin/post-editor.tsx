@@ -20,6 +20,7 @@ import { Badge } from "@/components/ui/badge";
 import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
 import { toast } from "sonner";
 import { Plus, Trash2, ChevronUp, ChevronDown } from "lucide-react";
+import { TranslateButton } from "./TranslateButton";
 
 type FaqItem = { q: string; a: string };
 
@@ -290,7 +291,13 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <CardHeader><CardTitle>Content</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label>Title *</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Title *</Label>
+                  <TranslateButton
+                    text={form.title}
+                    onTranslated={(v) => updateField("title", v)}
+                  />
+                </div>
                 <Input value={form.title} onChange={(e) => updateField("title", e.target.value)} />
               </div>
               <div className="space-y-2">
@@ -298,11 +305,23 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 <Input value={form.slug} readOnly className="bg-muted" placeholder="Select service and location to generate slug" />
               </div>
               <div className="space-y-2">
-                <Label>Excerpt</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Excerpt</Label>
+                  <TranslateButton
+                    text={form.excerpt}
+                    onTranslated={(v) => updateField("excerpt", v)}
+                  />
+                </div>
                 <Textarea rows={3} value={form.excerpt} onChange={(e) => updateField("excerpt", e.target.value)} />
               </div>
               <div className="space-y-2">
-                <Label>Author Name</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Author Name</Label>
+                  <TranslateButton
+                    text={form.authorName}
+                    onTranslated={(v) => updateField("authorName", v)}
+                  />
+                </div>
                 <Input value={form.authorName} onChange={(e) => updateField("authorName", e.target.value)} placeholder="e.g. Admin" />
               </div>
               <div className="space-y-2">
@@ -319,7 +338,14 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <CardHeader><CardTitle>Body Content</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label>Content</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Content</Label>
+                  <TranslateButton
+                    text={form.bodyContent}
+                    onTranslated={(v) => updateField("bodyContent", v)}
+                    isHtml
+                  />
+                </div>
                 <WysiwygEditor
                   value={form.bodyContent}
                   onChange={(v) => updateField("bodyContent", v)}
@@ -327,7 +353,14 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 />
               </div>
               <div className="space-y-2">
-                <Label>Key Takeaways</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Key Takeaways</Label>
+                  <TranslateButton
+                    text={form.keyTakeawaysContent}
+                    onTranslated={(v) => updateField("keyTakeawaysContent", v)}
+                    isHtml
+                  />
+                </div>
                 <WysiwygEditor
                   value={form.keyTakeawaysContent}
                   onChange={(v) => updateField("keyTakeawaysContent", v)}
@@ -335,7 +368,14 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 />
               </div>
               <div className="space-y-2">
-                <Label>Final Thoughts</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Final Thoughts</Label>
+                  <TranslateButton
+                    text={form.finalThoughtsContent}
+                    onTranslated={(v) => updateField("finalThoughtsContent", v)}
+                    isHtml
+                  />
+                </div>
                 <WysiwygEditor
                   value={form.finalThoughtsContent}
                   onChange={(v) => updateField("finalThoughtsContent", v)}
@@ -374,17 +414,31 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                       </Button>
                     </div>
                   </div>
-                  <Input
-                    placeholder="Question"
-                    value={faq.q}
-                    onChange={(e) => updateFaq(faqIndex, "q", e.target.value)}
-                  />
-                  <Textarea
-                    rows={3}
-                    placeholder="Answer"
-                    value={faq.a}
-                    onChange={(e) => updateFaq(faqIndex, "a", e.target.value)}
-                  />
+                  <div className="flex items-center gap-2">
+                    <Input
+                      placeholder="Question"
+                      value={faq.q}
+                      onChange={(e) => updateFaq(faqIndex, "q", e.target.value)}
+                    />
+                    <TranslateButton
+                      text={faq.q}
+                      onTranslated={(v) => updateFaq(faqIndex, "q", v)}
+                    />
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Textarea
+                      rows={3}
+                      placeholder="Answer"
+                      value={faq.a}
+                      onChange={(e) => updateFaq(faqIndex, "a", e.target.value)}
+                      className="flex-1"
+                    />
+                    <TranslateButton
+                      text={faq.a}
+                      onTranslated={(v) => updateFaq(faqIndex, "a", v)}
+                      className="mt-2"
+                    />
+                  </div>
                 </div>
               ))}
             </CardContent>
@@ -510,11 +564,23 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <CardHeader><CardTitle>SEO</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label>Meta Title</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Meta Title</Label>
+                  <TranslateButton
+                    text={form.seo_metadata.metaTitle}
+                    onTranslated={(v) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: v })}
+                  />
+                </div>
                 <Input value={form.seo_metadata.metaTitle} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: e.target.value })} />
               </div>
               <div className="space-y-2">
-                <Label>Meta Description</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Meta Description</Label>
+                  <TranslateButton
+                    text={form.seo_metadata.metaDescription}
+                    onTranslated={(v) => updateField("seo_metadata", { ...form.seo_metadata, metaDescription: v })}
+                  />
+                </div>
                 <Textarea rows={3} value={form.seo_metadata.metaDescription} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaDescription: e.target.value })} />
               </div>
               <div className="space-y-2">

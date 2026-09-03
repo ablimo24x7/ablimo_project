@@ -18,6 +18,7 @@ import {
     findRouteData,
 } from "@/lib/locationData";
 
+
 const cityImages: Record<string, string> = {
   dubai: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
   "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
@@ -67,8 +68,8 @@ export default async function RoutePage({
   const to = await resolveCityInAnyCountry(toRaw);
 
   const routeInfo = await findRouteData(from.slug, to.slug);
-  const distance = routeInfo?.distance ?? "Contact us";
-  const duration = routeInfo?.duration ?? "Contact us";
+  const distance = routeInfo?.distance ?? rp.contactUs;
+  const duration = routeInfo?.duration ?? rp.contactUs;
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
@@ -76,7 +77,7 @@ export default async function RoutePage({
       <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
         <Image
           src={cityImages[from.slug] ?? fallbackImage}
-          alt={`${from.name} to ${to.name}`}
+          alt={`${from.name} → ${to.name}`}
           fill
           className="object-cover"
           priority
@@ -85,7 +86,7 @@ export default async function RoutePage({
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-8 flex flex-col lg:flex-row items-end justify-between gap-8">
           <div className="max-w-xl">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-              {from.name} to {to.name}
+              {from.name} → {to.name}
             </h1>
             <p className="text-lg text-gray-300">
               {dict.cityToCity.subtitle}
@@ -103,7 +104,7 @@ export default async function RoutePage({
           </Link>
           <span aria-hidden="true">→</span>
           <Link href={locationsUrl(lang)} className="hover:text-white transition-colors">
-            Locations
+            {dict.countries?.breadcrumb?.countries || "Locations"}
           </Link>
           <span aria-hidden="true">→</span>
           <Link href={countryUrl(lang, originCountry)} className="hover:text-white transition-colors">
@@ -115,7 +116,7 @@ export default async function RoutePage({
           </Link>
           <span aria-hidden="true">→</span>
           <span className="text-white">
-            {from.name} to {to.name}
+            {from.name} → {to.name}
           </span>
         </nav>
       </div>

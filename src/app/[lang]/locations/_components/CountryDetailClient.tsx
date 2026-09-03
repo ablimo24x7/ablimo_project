@@ -231,7 +231,7 @@ export default function CountryDetailClient({ dict, lang, country, routes = [] }
                 {/* 4. City-to-City Service Section */}
                 <div className="space-y-6 pt-2">
                     <h2 className="text-3xl font-serif font-bold text-white tracking-tight">
-                        City-to-City Service
+                        {detail.cityToCityHeading || "City-to-City Service"}
                     </h2>
                     {routes.length > 0 ? (
                         <ShowMoreGrid
@@ -273,7 +273,7 @@ export default function CountryDetailClient({ dict, lang, country, routes = [] }
                             href={`/${lang}/city-to-city`}
                             className="font-bold text-white underline underline-offset-4 hover:text-gray-300 transition-colors"
                         >
-                            {countryName} City-to-City Rides
+                            {countryName} {detail.cityToCityRides || "City-to-City Rides"}
                         </Link>
                     )}
                 </div>
@@ -301,7 +301,7 @@ export default function CountryDetailClient({ dict, lang, country, routes = [] }
                     />
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                            Frequently Asked Questions
+                            {detail.faqTitle || "Frequently Asked Questions"}
                         </h2>
                         <div className="space-y-4">
                             {countryFaqs.map((item) => (

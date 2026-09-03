@@ -1,6 +1,7 @@
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
 import { allCities } from "@/lib/locations";
 import { getDynamicCityList } from "@/lib/locationData";
+import { translateText, needsTranslation } from "@/lib/translate";
 import CitiesClient from "../_components/CitiesClient";
 
 export const metadata = {
@@ -20,6 +21,13 @@ export default async function CitiesPage({
 
   const dynamic = await getDynamicCityList();
   const cities = dynamic.length ? dynamic : allCities();
+
+  // Translate city names for non-English locales
+  if (needsTranslation(lang, "en")) {
+    for (const item of cities) {
+      item.city.name = await translateText(item.city.name, lang);
+    }
+  }
 
   return <CitiesClient dict={dict} lang={lang} cities={cities} />;
 }

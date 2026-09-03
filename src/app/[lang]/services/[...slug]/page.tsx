@@ -4,7 +4,10 @@ import { fetchAndTranslateArticle, getRelatedArticles } from "@/lib/blog";
 import { BlogArticleLayout } from "@/components/blog/BlogArticleLayout";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
-import { translateText } from "@/lib/translate";
+
+
+export const revalidate = 0;
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{ lang: string; slug: string[] }>;
@@ -13,7 +16,7 @@ type Props = {
 
 function getBreadcrumbKey(templateType: string, dict: { countries?: string; cities?: string; cityToCity?: string; airportTransfers?: string; article?: string }): string {
   switch (templateType) {
-    case "service-country": return dict.countries || "Countries";
+    case "service-country": return dict.countries || "Country";
     case "service-city": return dict.cities || "Cities";
     default: return dict.article || "Blog";
   }
@@ -30,9 +33,10 @@ function getViewAllHref(templateType: string, lang: string, serviceSlug?: string
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang, slug } = await params;
   const locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
   const dbSlug = `services/${slug.join("/")}`;
   const article = await fetchAndTranslateArticle(dbSlug, locale, true);
-  if (!article) return { title: "Not Found" };
+  if (!article) return { title: dict.notFound?.title || "Not Found" };
 
   return {
     title: article.seo_metadata?.metaTitle || article.title,
@@ -59,17 +63,25 @@ export default async function ServiceArticlePage({ params, searchParams }: Props
   const dict = await getDictionary(locale);
   const b = dict.blog;
 
-  const templateLabel =
-    article.templateType === "service-city" && article.city
-      ? article.city
+  const isCity = article.templateType === "service-city" && article.city;
+  const isCountry = article.templateType === "service-country" && article.country;
+
+  const templateLabel = isCity
+    ? article.city
+    : isCountry
+      ? article.country
       : article.country || article.city || b.article;
 
   const breadcrumbBase = {
-    label: getBreadcrumbKey(article.templateType, b),
+    label: isCity
+      ? (article.country || getBreadcrumbKey("service-country", b))
+      : isCountry
+        ? (getBreadcrumbKey("service-country", b))
+        : getBreadcrumbKey(article.templateType, b),
     href: getViewAllHref(article.templateType, lang, article.serviceSlug, article.countrySlug),
   };
 
-  const sideInfo = await getTranslatedSideInfo(article.templateType, article, locale, lang);
+  const sideInfo = getTranslatedSideInfo(article.templateType, article, locale, lang, dict);
   const related = await getRelatedArticles({
     serviceSlug: article.serviceSlug || "",
     countrySlug: article.countrySlug || "",
@@ -88,7 +100,8 @@ export default async function ServiceArticlePage({ params, searchParams }: Props
       minReadLabel={b.minRead}
       keyTakeawaysLabel={b.keyTakeaways}
       finalThoughtsLabel={b.finalThoughts}
-      authorLabel={article.authorName || "Admin"}
+      authorLabel={article.authorName || b.admin}
+      faqTitle={b.faqTitle}
       isArabic={isArabic}
     >
       {sideInfo}
@@ -97,30 +110,29 @@ export default async function ServiceArticlePage({ params, searchParams }: Props
         lang={lang}
         viewAllHref={getViewAllHref(article.templateType, lang, article.serviceSlug, article.countrySlug)}
         viewAllLabel={b.viewAllArticles}
+        heading={b.relatedArticles}
+        minLabel={b.minRead}
       />
     </BlogArticleLayout>
   );
 }
 
-async function getTranslatedSideInfo(
+function getTranslatedSideInfo(
   templateType: string,
   article: { country?: string; city?: string; serviceSlug?: string; countrySlug?: string; citySlug?: string; routeFrom?: string; routeTo?: string },
   locale: string,
-  lang: string
-): Promise<React.ReactNode> {
+  lang: string,
+  dict: { blog: { sideInfo: { aboutCountry: string; exploreCountry: string; viewAllCountryServices: string; limoServiceIn: string; discoverCity: string; viewCityDetails: string } } }
+): React.ReactNode {
   const isArabic = locale.split("-")[0] === "ar";
+  const sideInfo = dict.blog.sideInfo;
 
   switch (templateType) {
     case "service-country": {
       if (!article.country) return null;
-      const [title, desc, linkText] = await Promise.all([
-        translateText(`About ${article.country}`, locale),
-        translateText(
-          `Explore our comprehensive limousine and ground transportation services in ${article.country}. We provide premium airport transfers, city tours, and executive travel across the region.`,
-          locale
-        ),
-        translateText(`View all ${article.country} services`, locale),
-      ]);
+      const title = sideInfo.aboutCountry.replace("{country}", article.country);
+      const desc = sideInfo.exploreCountry.replace("{country}", article.country);
+      const linkText = sideInfo.viewAllCountryServices.replace("{country}", article.country);
       return (
         <section className="max-w-7xl mx-auto px-8 pb-16">
           <div className="bg-[#1c1d21] rounded-2xl p-8 max-w-4xl mx-auto">
@@ -139,14 +151,9 @@ async function getTranslatedSideInfo(
 
     case "service-city": {
       if (!article.city) return null;
-      const [title, desc, detailText] = await Promise.all([
-        translateText(`Limo Service in ${article.city}`, locale),
-        translateText(
-          `Discover premium limousine and chauffeur services in ${article.city}${article.country ? `, ${article.country}` : ""}. From airport transfers to city tours, we ensure a comfortable and luxurious travel experience.`,
-          locale
-        ),
-        translateText(`View ${article.city} details`, locale),
-      ]);
+      const title = sideInfo.limoServiceIn.replace("{city}", article.city);
+      const desc = sideInfo.discoverCity.replace("{city}", article.city).replace("{countryDesc}", article.country ? `, ${article.country}` : "");
+      const detailText = sideInfo.viewCityDetails.replace("{city}", article.city);
       return (
         <section className="max-w-7xl mx-auto px-8 pb-16">
           <div className="bg-[#1c1d21] rounded-2xl p-8 max-w-4xl mx-auto">

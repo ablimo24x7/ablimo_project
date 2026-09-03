@@ -37,7 +37,7 @@ export default async function Header({ lang }: HeaderProps) {
               href={`/${lang}/partners`}
               className="text-xs font-medium text-gray-400 hover:text-white transition-colors"
             >
-              Chauffeur Partner Portal
+              {dict.header.chauffeurPortal}
             </Link>
             <Link
               href={`/${lang}`}

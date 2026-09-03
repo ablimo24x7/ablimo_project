@@ -292,7 +292,7 @@ export default function CityDetailClient({ dict, lang, country, city, routes = [
                 <section className="max-w-7xl mx-auto px-8 py-16">
                     <div className="space-y-6">
                         <h2 className="text-3xl font-serif font-bold text-white tracking-tight">
-                            {cityName} City-to-City Service
+                            {cityName} {dict.countries?.detail?.cityToCityHeading || "City-to-City Service"}
                         </h2>
                         <ShowMoreGrid
                             items={routes.map((route) => ({
@@ -349,7 +349,7 @@ export default function CityDetailClient({ dict, lang, country, city, routes = [
                     />
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                            Frequently Asked Questions
+                            {dict.countries?.detail?.faqTitle || "Frequently Asked Questions"}
                         </h2>
                         <div className="space-y-4">
                             {cityFaqs.map((item) => (

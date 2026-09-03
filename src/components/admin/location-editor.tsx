@@ -20,6 +20,7 @@ import { toast } from "sonner";
 import { Plus, Trash2, ChevronDown, ChevronUp, CheckCircle2, XCircle, Loader2 } from "lucide-react";
 import { allIsoCountries, validateCountry } from "@/lib/iso3166";
 import { toSlug } from "@/lib/slug";
+import { TranslateButton } from "./TranslateButton";
 
 type FaqRecord = {
   q: string;
@@ -30,6 +31,7 @@ type AirportRecord = {
   _id?: string;
   slug: string;
   name: string;
+  nameAr: string;
   iata: string;
   aliases: string[];
   type: string;
@@ -40,42 +42,52 @@ type CityRecord = {
   _id?: string;
   slug: string;
   name: string;
+  nameAr: string;
+  description: string;
+  descriptionAr: string;
   aliases: string[];
   status: string;
   airports: AirportRecord[];
   faqs: FaqRecord[];
+  faqsAr: FaqRecord[];
 };
 
 type CountryRecord = {
   _id?: string;
   name: string;
+  nameAr: string;
   code: string;
   slug: string;
   description: string;
+  descriptionAr: string;
   status: string;
   cities: CityRecord[];
   faqs: FaqRecord[];
+  faqsAr: FaqRecord[];
 };
 
 const DEFAULTS: CountryRecord = {
   name: "",
+  nameAr: "",
   code: "",
   slug: "",
   description: "",
+  descriptionAr: "",
   status: "published",
   cities: [],
   faqs: [],
+  faqsAr: [],
 };
 
 const STATUS_OPTIONS = ["draft", "published", "archived"] as const;
 const AIRPORT_TYPES = ["international", "domestic", "regional"] as const;
 
 function blankAirport(): AirportRecord {
-  return { slug: "", name: "", iata: "", aliases: [], type: "international", status: "published" };
+  return { slug: "", name: "", nameAr: "", iata: "", aliases: [], type: "international", status: "published" };
 }
 
 function blankCity(): CityRecord {
-  return { slug: "", name: "", aliases: [], status: "published", airports: [], faqs: [] };
+  return { slug: "", name: "", nameAr: "", description: "", descriptionAr: "", aliases: [], status: "published", airports: [], faqs: [], faqsAr: [] };
 }
 
 interface LocationEditorProps {
@@ -313,6 +325,50 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
     });
   };
 
+  // ── Country Arabic FAQ helpers ──────────────────────────────
+  const addCountryFaqAr = () => {
+    setForm((prev) => ({ ...prev, faqsAr: [...prev.faqsAr, { q: "", a: "" }] }));
+  };
+
+  const removeCountryFaqAr = (index: number) => {
+    setForm((prev) => ({ ...prev, faqsAr: prev.faqsAr.filter((_, i) => i !== index) }));
+  };
+
+  const updateCountryFaqAr = (index: number, key: "q" | "a", value: string) => {
+    setForm((prev) => {
+      const faqsAr = [...prev.faqsAr];
+      faqsAr[index] = { ...faqsAr[index], [key]: value };
+      return { ...prev, faqsAr };
+    });
+  };
+
+  // ── City Arabic FAQ helpers ─────────────────────────────────
+  const addCityFaqAr = (cityIndex: number) => {
+    setForm((prev) => {
+      const cities = [...prev.cities];
+      cities[cityIndex] = { ...cities[cityIndex], faqsAr: [...cities[cityIndex].faqsAr, { q: "", a: "" }] };
+      return { ...prev, cities };
+    });
+  };
+
+  const removeCityFaqAr = (cityIndex: number, faqIndex: number) => {
+    setForm((prev) => {
+      const cities = [...prev.cities];
+      cities[cityIndex] = { ...cities[cityIndex], faqsAr: cities[cityIndex].faqsAr.filter((_, i) => i !== faqIndex) };
+      return { ...prev, cities };
+    });
+  };
+
+  const updateCityFaqAr = (cityIndex: number, faqIndex: number, key: "q" | "a", value: string) => {
+    setForm((prev) => {
+      const cities = [...prev.cities];
+      const faqsAr = [...cities[cityIndex].faqsAr];
+      faqsAr[faqIndex] = { ...faqsAr[faqIndex], [key]: value };
+      cities[cityIndex] = { ...cities[cityIndex], faqsAr };
+      return { ...prev, cities };
+    });
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim()) {
@@ -348,7 +404,13 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
             <CardHeader><CardTitle>Country</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="country-name">Country name *</Label>
+                <div className="flex items-center gap-2">
+                  <Label htmlFor="country-name">Country name *</Label>
+                  <TranslateButton
+                    text={form.name}
+                    onTranslated={(v, dir) => dir === "ar" ? updateField("nameAr", v) : updateField("nameAr", "")}
+                  />
+                </div>
                 <Input
                   id="country-name"
                   list="iso-countries"
@@ -361,6 +423,16 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                     <option key={c.code} value={c.name} />
                   ))}
                 </datalist>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="country-name-ar">Arabic Name</Label>
+                <Input
+                  id="country-name-ar"
+                  placeholder="الاسم بالعربية"
+                  value={form.nameAr}
+                  onChange={(e) => updateField("nameAr", e.target.value)}
+                  dir="rtl"
+                />
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
@@ -384,12 +456,29 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="country-description">Description</Label>
+                <div className="flex items-center gap-2">
+                  <Label htmlFor="country-description">Description</Label>
+                  <TranslateButton
+                    text={form.description}
+                    onTranslated={(v, dir) => dir === "ar" ? updateField("descriptionAr", v) : updateField("descriptionAr", "")}
+                  />
+                </div>
                 <Textarea
                   id="country-description"
                   rows={3}
                   value={form.description}
                   onChange={(e) => updateField("description", e.target.value)}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="country-description-ar">Arabic Description</Label>
+                <Textarea
+                  id="country-description-ar"
+                  rows={3}
+                  placeholder="الوصف بالعربية"
+                  value={form.descriptionAr}
+                  onChange={(e) => updateField("descriptionAr", e.target.value)}
+                  dir="rtl"
                 />
               </div>
             </CardContent>
@@ -424,16 +513,73 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                       </Button>
                     </div>
                   </div>
+                  <div className="flex items-center gap-2">
+                    <Input
+                      placeholder="Question"
+                      value={faq.q}
+                      onChange={(e) => updateCountryFaq(faqIndex, "q", e.target.value)}
+                    />
+                    <TranslateButton
+                      text={faq.q}
+                      onTranslated={(v, dir) => {
+                        if (dir === "ar") updateCountryFaqAr(faqIndex, "q", v);
+                        else updateCountryFaqAr(faqIndex, "q", "");
+                      }}
+                    />
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Textarea
+                      rows={3}
+                      placeholder="Answer"
+                      value={faq.a}
+                      onChange={(e) => updateCountryFaq(faqIndex, "a", e.target.value)}
+                      className="flex-1"
+                    />
+                    <TranslateButton
+                      text={faq.a}
+                      onTranslated={(v, dir) => {
+                        if (dir === "ar") updateCountryFaqAr(faqIndex, "a", v);
+                        else updateCountryFaqAr(faqIndex, "a", "");
+                      }}
+                      className="mt-2"
+                    />
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex-row items-center justify-between">
+              <CardTitle>Country FAQs (Arabic)</CardTitle>
+              <Button type="button" size="sm" onClick={addCountryFaqAr}>
+                <Plus className="mr-1 h-4 w-4" /> Add FAQ
+              </Button>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {form.faqsAr.length === 0 && (
+                <p className="text-sm text-muted-foreground">
+                  No Arabic FAQs yet.
+                </p>
+              )}
+              {form.faqsAr.map((faq, faqIndex) => (
+                <div key={faqIndex} className="rounded-lg border p-3 space-y-3" dir="rtl">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
+                    <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCountryFaqAr(faqIndex)}>
+                      <Trash2 className="h-3 w-3 text-destructive" />
+                    </Button>
+                  </div>
                   <Input
-                    placeholder="Question"
+                    placeholder="السؤال"
                     value={faq.q}
-                    onChange={(e) => updateCountryFaq(faqIndex, "q", e.target.value)}
+                    onChange={(e) => updateCountryFaqAr(faqIndex, "q", e.target.value)}
                   />
                   <Textarea
                     rows={3}
-                    placeholder="Answer"
+                    placeholder="الإجابة"
                     value={faq.a}
-                    onChange={(e) => updateCountryFaq(faqIndex, "a", e.target.value)}
+                    onChange={(e) => updateCountryFaqAr(faqIndex, "a", e.target.value)}
                   />
                 </div>
               ))}
@@ -486,10 +632,25 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                       <div className="space-y-4 border-t p-4">
                         <div className="grid sm:grid-cols-2 gap-4">
                           <div className="space-y-2">
-                            <Label>City name</Label>
+                            <div className="flex items-center gap-2">
+                              <Label>City name</Label>
+                              <TranslateButton
+                                text={city.name}
+                                onTranslated={(v, dir) => dir === "ar" ? updateCity(cityIndex, "nameAr", v) : updateCity(cityIndex, "nameAr", "")}
+                              />
+                            </div>
                             <Input
                               value={city.name}
                               onChange={(e) => updateCity(cityIndex, "name", e.target.value)}
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            <Label>Arabic Name</Label>
+                            <Input
+                              value={city.nameAr}
+                              onChange={(e) => updateCity(cityIndex, "nameAr", e.target.value)}
+                              dir="rtl"
+                              placeholder="الاسم بالعربية"
                             />
                           </div>
                           <div className="space-y-2">
@@ -499,6 +660,31 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                               onChange={(e) => updateCity(cityIndex, "slug", toSlug(e.target.value))}
                             />
                           </div>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2">
+                            <Label>Description</Label>
+                            <TranslateButton
+                              text={city.description}
+                              onTranslated={(v, dir) => dir === "ar" ? updateCity(cityIndex, "descriptionAr", v) : updateCity(cityIndex, "descriptionAr", "")}
+                            />
+                          </div>
+                          <Textarea
+                            rows={2}
+                            value={city.description}
+                            onChange={(e) => updateCity(cityIndex, "description", e.target.value)}
+                            placeholder="City description"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label>Arabic Description</Label>
+                          <Textarea
+                            rows={2}
+                            value={city.descriptionAr}
+                            onChange={(e) => updateCity(cityIndex, "descriptionAr", e.target.value)}
+                            dir="rtl"
+                            placeholder="الوصف بالعربية"
+                          />
                         </div>
                         <div className="flex items-center gap-2">
                           <div className="flex-1 space-y-2">
@@ -628,16 +814,65 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                                   </Button>
                                 </div>
                               </div>
+                              <div className="flex items-center gap-2">
+                                <Input
+                                  placeholder="Question"
+                                  value={faq.q}
+                                  onChange={(e) => updateCityFaq(cityIndex, faqIndex, "q", e.target.value)}
+                                />
+                                <TranslateButton
+                                  text={faq.q}
+                                  onTranslated={(v, dir) => dir === "ar" ? updateCityFaqAr(cityIndex, faqIndex, "q", v) : updateCityFaqAr(cityIndex, faqIndex, "q", "")}
+                                />
+                              </div>
+                              <div className="flex items-start gap-2">
+                                <Textarea
+                                  rows={3}
+                                  placeholder="Answer"
+                                  value={faq.a}
+                                  onChange={(e) => updateCityFaq(cityIndex, faqIndex, "a", e.target.value)}
+                                  className="flex-1"
+                                />
+                                <TranslateButton
+                                  text={faq.a}
+                                  onTranslated={(v, dir) => dir === "ar" ? updateCityFaqAr(cityIndex, faqIndex, "a", v) : updateCityFaqAr(cityIndex, faqIndex, "a", "")}
+                                  className="mt-2"
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="space-y-3 pt-2">
+                          <div className="flex items-center justify-between">
+                            <Label>City FAQs (Arabic)</Label>
+                            <Button type="button" size="sm" variant="outline" onClick={() => addCityFaqAr(cityIndex)}>
+                              <Plus className="mr-1 h-4 w-4" /> Add FAQ
+                            </Button>
+                          </div>
+                          {city.faqsAr.length === 0 && (
+                            <p className="text-sm text-muted-foreground">
+                              No Arabic FAQs yet.
+                            </p>
+                          )}
+                          {city.faqsAr.map((faq, faqIndex) => (
+                            <div key={faqIndex} className="rounded-lg bg-muted/50 p-3 space-y-3" dir="rtl">
+                              <div className="flex items-center justify-between">
+                                <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
+                                <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCityFaqAr(cityIndex, faqIndex)}>
+                                  <Trash2 className="h-3 w-3 text-destructive" />
+                                </Button>
+                              </div>
                               <Input
-                                placeholder="Question"
+                                placeholder="السؤال"
                                 value={faq.q}
-                                onChange={(e) => updateCityFaq(cityIndex, faqIndex, "q", e.target.value)}
+                                onChange={(e) => updateCityFaqAr(cityIndex, faqIndex, "q", e.target.value)}
                               />
                               <Textarea
                                 rows={3}
-                                placeholder="Answer"
+                                placeholder="الإجابة"
                                 value={faq.a}
-                                onChange={(e) => updateCityFaq(cityIndex, faqIndex, "a", e.target.value)}
+                                onChange={(e) => updateCityFaqAr(cityIndex, faqIndex, "a", e.target.value)}
                               />
                             </div>
                           ))}
