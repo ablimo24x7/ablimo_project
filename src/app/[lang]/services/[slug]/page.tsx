@@ -45,6 +45,7 @@ export default async function Page({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
   const isArabic = locale.split("-")[0] === "ar";
+  const b = dict.blog;
 
   const relatedArticles = await getAllPublishedArticlesFiltered({
     serviceSlug: slug,
@@ -65,13 +66,13 @@ export default async function Page({
       {relatedArticles.length > 0 && (
         <section className="max-w-7xl mx-auto px-8 pb-20">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
-            Related Articles
+            {b.relatedArticles}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {relatedArticles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/${lang}/blog/${article.slug}`}
+                href={`/${lang}/services/${article.slug.replace(/^services\//, "")}`}
                 className="group block bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
               >
                 <div className="relative h-48 w-full">
@@ -105,7 +106,7 @@ export default async function Page({
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock className="h-3 w-3" />
-                      {article.readTime} min read
+                      {article.readTime} {b.minRead}
                     </span>
                   </div>
                 </div>

@@ -15,16 +15,49 @@ interface WidgetConfig {
   }>;
 }
 
+interface ContactFormDict {
+  contactForm: {
+    title: string;
+    inquiryAbout: string;
+    defaultMessage: string;
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+    sending: string;
+    send: string;
+    sent: string;
+    sentDesc: string;
+    close: string;
+  };
+}
+
 interface ContactFormProps {
   config: WidgetConfig;
   serviceName: string | null;
   onClose: () => void;
+  dict?: ContactFormDict;
 }
 
-export function ContactForm({ config, serviceName, onClose }: ContactFormProps) {
+export function ContactForm({ config, serviceName, onClose, dict }: ContactFormProps) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+
+  const t = dict?.contactForm ?? {
+    title: "Contact Us",
+    inquiryAbout: "Inquiring about: ",
+    defaultMessage: "We'll get back to you soon",
+    name: "Your Name",
+    email: "Email Address",
+    phone: "Phone Number",
+    message: "Your Message",
+    sending: "Sending...",
+    send: "Send Message",
+    sent: "Message Sent!",
+    sentDesc: "We'll get back to you as soon as possible.",
+    close: "Close",
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -62,16 +95,16 @@ export function ContactForm({ config, serviceName, onClose }: ContactFormProps) 
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-lg font-semibold mb-2">Message Sent!</h3>
+          <h3 className="text-lg font-semibold mb-2">{t.sent}</h3>
           <p className="text-sm text-gray-500 mb-4">
-            We&apos;ll get back to you as soon as possible.
+            {t.sentDesc}
           </p>
           <button
             onClick={onClose}
             className="px-6 py-2 rounded-lg text-white text-sm font-medium"
             style={{ backgroundColor: config.primaryColor }}
           >
-            Close
+            {t.close}
           </button>
         </div>
       </div>
@@ -96,9 +129,9 @@ export function ContactForm({ config, serviceName, onClose }: ContactFormProps) 
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <h3 className="font-semibold text-lg">Contact Us</h3>
+          <h3 className="font-semibold text-lg">{t.title}</h3>
           <p className="text-sm opacity-90 mt-1">
-            {serviceName ? `Inquiring about: ${serviceName}` : "We'll get back to you soon"}
+            {serviceName ? `${t.inquiryAbout}${serviceName}` : t.defaultMessage}
           </p>
         </div>
 
@@ -106,7 +139,7 @@ export function ContactForm({ config, serviceName, onClose }: ContactFormProps) 
           <div>
             <input
               type="text"
-              placeholder="Your Name"
+              placeholder={t.name}
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -116,7 +149,7 @@ export function ContactForm({ config, serviceName, onClose }: ContactFormProps) 
           <div>
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder={t.email}
               required
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -126,7 +159,7 @@ export function ContactForm({ config, serviceName, onClose }: ContactFormProps) 
           <div>
             <input
               type="tel"
-              placeholder="Phone Number"
+              placeholder={t.phone}
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:border-transparent"
@@ -134,7 +167,7 @@ export function ContactForm({ config, serviceName, onClose }: ContactFormProps) 
           </div>
           <div>
             <textarea
-              placeholder="Your Message"
+              placeholder={t.message}
               required
               rows={3}
               value={form.message}
@@ -148,7 +181,7 @@ export function ContactForm({ config, serviceName, onClose }: ContactFormProps) 
             className="w-full py-3 rounded-xl text-white font-semibold text-sm transition-all hover:opacity-90 active:scale-[0.98] disabled:opacity-50"
             style={{ backgroundColor: config.primaryColor }}
           >
-            {sending ? "Sending..." : "Send Message"}
+            {sending ? t.sending : t.send}
           </button>
         </form>
       </div>

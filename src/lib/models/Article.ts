@@ -1,5 +1,13 @@
 import { Schema, model, models, type InferSchemaType } from "mongoose";
 
+const faqSchema = new Schema(
+  {
+    q: { type: String, default: "" },
+    a: { type: String, default: "" },
+  },
+  { _id: false }
+);
+
 const mediaItemSchema = new Schema(
   {
     url: { type: String, default: "" },
@@ -67,6 +75,9 @@ const articleSchema = new Schema(
     city: { type: String, default: "" },
     routeFrom: { type: String, default: "" },
     routeTo: { type: String, default: "" },
+
+    // ── FAQs ───────────────────────────────────────────────
+    faqs: { type: [faqSchema], default: [] },
 
     // ── SEO ────────────────────────────────────────────────
     seo_metadata: {

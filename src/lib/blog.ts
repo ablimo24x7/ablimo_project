@@ -1,7 +1,6 @@
 import { connectDB } from "@/lib/db";
 import { getEnv } from "@/lib/env";
 import { Article, type ArticleDoc } from "@/lib/models/Article";
-import { needsTranslation, translateText, translateHtml } from "@/lib/translate";
 
 /** True when the database is available (USE_DATABASE=true). */
 function isDatabaseEnabled(): boolean {
@@ -69,10 +68,28 @@ export async function getRelatedArticles(params: {
   if (params.countrySlug) {
     filter.countrySlug = params.countrySlug;
   }
-  const articles = await Article.find(filter)
+  let articles = await Article.find(filter)
     .sort({ date: -1 })
     .limit(params.limit ?? 4)
     .lean();
+
+  // If no locale-specific articles found and locale is Arabic, fall back to English
+  if (articles.length === 0 && params.locale === "ar") {
+    const fallbackFilter: Record<string, unknown> = {
+      serviceSlug: params.serviceSlug,
+      ...localeFilter("en"),
+      status: "published",
+      slug: { $ne: params.excludeSlug },
+    };
+    if (params.countrySlug) {
+      fallbackFilter.countrySlug = params.countrySlug;
+    }
+    articles = await Article.find(fallbackFilter)
+      .sort({ date: -1 })
+      .limit(params.limit ?? 4)
+      .lean();
+  }
+
   return articles as ArticleDoc[];
 }
 
@@ -97,10 +114,15 @@ export async function getAllPublishedArticlesFiltered(params: {
     .limit(params.limit ?? 100)
     .lean();
 
-  if (articles.length === 0 && params.locale !== "en") {
-    const fallbackFilter = { ...filter };
-    delete fallbackFilter.locale;
-    Object.assign(fallbackFilter, localeFilter("en"));
+  // Fall back to English if no locale-specific articles found
+  if (articles.length === 0 && params.locale === "ar") {
+    const fallbackFilter: Record<string, unknown> = {
+      ...localeFilter("en"),
+      status: "published",
+    };
+    if (params.serviceSlug) fallbackFilter.serviceSlug = params.serviceSlug;
+    if (params.countrySlug) fallbackFilter.countrySlug = params.countrySlug;
+    if (params.citySlug) fallbackFilter.citySlug = params.citySlug;
     articles = await Article.find(fallbackFilter)
       .sort({ date: -1 })
       .limit(params.limit ?? 100)
@@ -122,7 +144,8 @@ export async function getAllPublishedArticles(
     .sort({ date: -1 })
     .lean();
 
-  if (articles.length === 0 && locale !== "en") {
+  // Fall back to English if no locale-specific articles found
+  if (articles.length === 0 && locale === "ar") {
     articles = await Article.find({
       ...localeFilter("en"),
       status: "published",
@@ -139,21 +162,12 @@ export async function fetchAndTranslateArticle(
   locale: string,
   preview: boolean = false
 ): Promise<ArticleDoc | null> {
+  // First, try to find the locale-specific article (Arabic or English)
   let article = await getArticleBySlugOnly(slug, locale, preview);
 
-  if (!article) {
+  // If not found and locale is Arabic, try English as fallback
+  if (!article && locale === "ar") {
     article = await getArticleBySlugOnly(slug, "en", preview);
-    if (article && needsTranslation(locale, "en")) {
-      const [title, excerpt, body, keyTakeaways, finalThoughts] =
-        await Promise.all([
-          translateText(article.title, locale),
-          translateText(article.excerpt || "", locale),
-          translateHtml(article.bodyContent || "", locale),
-          translateHtml(article.keyTakeawaysContent || "", locale),
-          translateHtml(article.finalThoughtsContent || "", locale),
-        ]);
-      article = { ...article, title, excerpt, bodyContent: body, keyTakeawaysContent: keyTakeaways, finalThoughtsContent: finalThoughts };
-    }
   }
 
   return article;

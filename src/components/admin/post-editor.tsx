@@ -19,6 +19,10 @@ import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
 import { toast } from "sonner";
+import { Plus, Trash2, ChevronUp, ChevronDown } from "lucide-react";
+import { TranslateButton } from "./TranslateButton";
+
+type FaqItem = { q: string; a: string };
 
 type PostData = {
   _id?: string;
@@ -45,6 +49,7 @@ type PostData = {
   articleMedia: {
     heroCoverMedia: { url: string };
   };
+  faqs: FaqItem[];
   seo_metadata: {
     metaTitle: string;
     metaDescription: string;
@@ -74,6 +79,7 @@ const defaultPost: PostData = {
   date: new Date().toISOString().slice(0, 10),
   readTime: 5,
   articleMedia: { heroCoverMedia: { url: "" } },
+  faqs: [],
   seo_metadata: { metaTitle: "", metaDescription: "", ogImage: "" },
 };
 
@@ -93,6 +99,7 @@ function normalizePost(data?: PostData): PostData {
         url: d.articleMedia?.heroCoverMedia?.url ?? defaultPost.articleMedia.heroCoverMedia.url,
       },
     },
+    faqs: (d.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
     seo_metadata: {
       metaTitle: d.seo_metadata?.metaTitle ?? "",
       metaDescription: d.seo_metadata?.metaDescription ?? "",
@@ -106,9 +113,10 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
   const queryClient = useQueryClient();
   const [form, setForm] = React.useState<PostData>(() => normalizePost(initialData));
   const [tagInput, setTagInput] = React.useState("");
-  const [blogType, setBlogType] = React.useState<"country" | "city">(
-    initialData?.templateType === "service-city" ? "city" : initialBlogType
-  );
+  const blogType: "country" | "city" =
+    initialData?.templateType === "service-city" ? "city" : initialBlogType;
+
+  const templateType = blogType === "city" ? "service-city" : "service-country";
 
   // Fetch all services from database
   const { data: servicesData } = useQuery({
@@ -191,8 +199,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
       const service = key === "serviceSlug" ? (value as string) : prev.serviceSlug;
       const country = key === "countrySlug" ? (value as string) : prev.countrySlug;
       const city = key === "citySlug" ? (value as string) : prev.citySlug;
-      const type = (prev.templateType === "service-city" ? "city" : "country") as "country" | "city";
-      next.slug = generateSlug(service, country, city, type);
+      next.slug = generateSlug(service, country, city, blogType);
       return next;
     });
   };
@@ -209,6 +216,29 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
     updateField("tags", form.tags.filter((t) => t !== tag));
   };
 
+  // ── FAQ helpers ──────────────────────────────────────────
+  const addFaq = () => {
+    updateField("faqs", [...form.faqs, { q: "", a: "" }]);
+  };
+
+  const removeFaq = (index: number) => {
+    updateField("faqs", form.faqs.filter((_, i) => i !== index));
+  };
+
+  const updateFaq = (index: number, key: "q" | "a", value: string) => {
+    const faqs = [...form.faqs];
+    faqs[index] = { ...faqs[index], [key]: value };
+    updateField("faqs", faqs);
+  };
+
+  const moveFaq = (index: number, dir: -1 | 1) => {
+    const faqs = [...form.faqs];
+    const target = index + dir;
+    if (target < 0 || target >= faqs.length) return;
+    [faqs[index], faqs[target]] = [faqs[target], faqs[index]];
+    updateField("faqs", faqs);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.title.trim()) {
@@ -223,7 +253,11 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
       toast.error("Country is required");
       return;
     }
-    mutation.mutate(form);
+    if (blogType === "city" && !form.citySlug) {
+      toast.error("City is required for city-specific articles");
+      return;
+    }
+    mutation.mutate({ ...form, templateType });
   };
 
   return (
@@ -240,7 +274,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <Button
               type="button"
               variant="outline"
-              onClick={() => window.open(`/en-US/blog/${form.slug}?preview=true`, "_blank")}
+              onClick={() => window.open(`/en-US/services/${form.slug.replace(/^services\//, "")}?preview=true`, "_blank")}
             >
               Preview
             </Button>
@@ -257,7 +291,13 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <CardHeader><CardTitle>Content</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label>Title *</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Title *</Label>
+                  <TranslateButton
+                    text={form.title}
+                    onTranslated={(v) => updateField("title", v)}
+                  />
+                </div>
                 <Input value={form.title} onChange={(e) => updateField("title", e.target.value)} />
               </div>
               <div className="space-y-2">
@@ -265,11 +305,23 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 <Input value={form.slug} readOnly className="bg-muted" placeholder="Select service and location to generate slug" />
               </div>
               <div className="space-y-2">
-                <Label>Excerpt</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Excerpt</Label>
+                  <TranslateButton
+                    text={form.excerpt}
+                    onTranslated={(v) => updateField("excerpt", v)}
+                  />
+                </div>
                 <Textarea rows={3} value={form.excerpt} onChange={(e) => updateField("excerpt", e.target.value)} />
               </div>
               <div className="space-y-2">
-                <Label>Author Name</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Author Name</Label>
+                  <TranslateButton
+                    text={form.authorName}
+                    onTranslated={(v) => updateField("authorName", v)}
+                  />
+                </div>
                 <Input value={form.authorName} onChange={(e) => updateField("authorName", e.target.value)} placeholder="e.g. Admin" />
               </div>
               <div className="space-y-2">
@@ -286,7 +338,14 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <CardHeader><CardTitle>Body Content</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label>Content</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Content</Label>
+                  <TranslateButton
+                    text={form.bodyContent}
+                    onTranslated={(v) => updateField("bodyContent", v)}
+                    isHtml
+                  />
+                </div>
                 <WysiwygEditor
                   value={form.bodyContent}
                   onChange={(v) => updateField("bodyContent", v)}
@@ -294,7 +353,14 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 />
               </div>
               <div className="space-y-2">
-                <Label>Key Takeaways</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Key Takeaways</Label>
+                  <TranslateButton
+                    text={form.keyTakeawaysContent}
+                    onTranslated={(v) => updateField("keyTakeawaysContent", v)}
+                    isHtml
+                  />
+                </div>
                 <WysiwygEditor
                   value={form.keyTakeawaysContent}
                   onChange={(v) => updateField("keyTakeawaysContent", v)}
@@ -302,13 +368,79 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 />
               </div>
               <div className="space-y-2">
-                <Label>Final Thoughts</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Final Thoughts</Label>
+                  <TranslateButton
+                    text={form.finalThoughtsContent}
+                    onTranslated={(v) => updateField("finalThoughtsContent", v)}
+                    isHtml
+                  />
+                </div>
                 <WysiwygEditor
                   value={form.finalThoughtsContent}
                   onChange={(v) => updateField("finalThoughtsContent", v)}
                   placeholder="Wrap up your article..."
                 />
               </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex-row items-center justify-between">
+              <CardTitle>FAQs</CardTitle>
+              <Button type="button" size="sm" onClick={addFaq}>
+                <Plus className="mr-1 h-4 w-4" /> Add FAQ
+              </Button>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {form.faqs.length === 0 && (
+                <p className="text-sm text-muted-foreground">
+                  No FAQs yet. Add frequently asked questions for this article.
+                </p>
+              )}
+              {form.faqs.map((faq, faqIndex) => (
+                <div key={faqIndex} className="rounded-lg border p-3 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
+                    <div className="flex items-center gap-1">
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveFaq(faqIndex, -1)} disabled={faqIndex === 0}>
+                        <ChevronUp className="h-3 w-3" />
+                      </Button>
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveFaq(faqIndex, 1)} disabled={faqIndex === form.faqs.length - 1}>
+                        <ChevronDown className="h-3 w-3" />
+                      </Button>
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeFaq(faqIndex)}>
+                        <Trash2 className="h-3 w-3 text-destructive" />
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Input
+                      placeholder="Question"
+                      value={faq.q}
+                      onChange={(e) => updateFaq(faqIndex, "q", e.target.value)}
+                    />
+                    <TranslateButton
+                      text={faq.q}
+                      onTranslated={(v) => updateFaq(faqIndex, "q", v)}
+                    />
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Textarea
+                      rows={3}
+                      placeholder="Answer"
+                      value={faq.a}
+                      onChange={(e) => updateFaq(faqIndex, "a", e.target.value)}
+                      className="flex-1"
+                    />
+                    <TranslateButton
+                      text={faq.a}
+                      onTranslated={(v) => updateFaq(faqIndex, "a", v)}
+                      className="mt-2"
+                    />
+                  </div>
+                </div>
+              ))}
             </CardContent>
           </Card>
         </div>
@@ -386,7 +518,6 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                     if (blogType === "country") {
                       updateField("citySlug", "");
                       updateField("city", "");
-                      updateField("templateType", "service-country");
                     }
                   }}
                 >
@@ -412,7 +543,6 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                       const city = cityOptions.find((c: { slug: string; name: string }) => c.slug === v);
                       updateField("citySlug", v);
                       updateField("city", city?.name || "");
-                      updateField("templateType", "service-city");
                     }}
                   >
                     <SelectTrigger className="w-full"><SelectValue placeholder="Select a city" /></SelectTrigger>
@@ -434,11 +564,23 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <CardHeader><CardTitle>SEO</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label>Meta Title</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Meta Title</Label>
+                  <TranslateButton
+                    text={form.seo_metadata.metaTitle}
+                    onTranslated={(v) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: v })}
+                  />
+                </div>
                 <Input value={form.seo_metadata.metaTitle} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: e.target.value })} />
               </div>
               <div className="space-y-2">
-                <Label>Meta Description</Label>
+                <div className="flex items-center gap-2">
+                  <Label>Meta Description</Label>
+                  <TranslateButton
+                    text={form.seo_metadata.metaDescription}
+                    onTranslated={(v) => updateField("seo_metadata", { ...form.seo_metadata, metaDescription: v })}
+                  />
+                </div>
                 <Textarea rows={3} value={form.seo_metadata.metaDescription} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaDescription: e.target.value })} />
               </div>
               <div className="space-y-2">

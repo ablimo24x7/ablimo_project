@@ -2,7 +2,6 @@
 
 import { useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { locales, type Locale } from "@/app/[lang]/dictionaries";
 
 const languageLabels: Record<Locale, { flag: string; label: string }> = {
@@ -95,21 +94,31 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
           onMouseEnter={handlePanelMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {locales.map((locale) => (
-            <Link
-              key={locale}
-              href={getLocalePath(locale)}
-              onClick={onClose}
-              className={`flex items-center gap-2.5 px-4 py-3 text-sm transition-colors ${
-                locale === currentLang
-                  ? "bg-white/10 text-white"
-                  : "text-gray-300 hover:bg-white/5 hover:text-white"
-              }`}
-            >
-              <span>{languageLabels[locale].flag}</span>
-              <span>{languageLabels[locale].label}</span>
-            </Link>
-          ))}
+          {locales.map((locale) => {
+            const switchingLocale = currentLang !== locale;
+            const href = getLocalePath(locale);
+            return (
+              <a
+                key={locale}
+                href={href}
+                onClick={(e) => {
+                  onClose();
+                  if (switchingLocale) {
+                    e.preventDefault();
+                    window.location.href = href;
+                  }
+                }}
+                className={`flex items-center gap-2.5 px-4 py-3 text-sm transition-colors ${
+                  locale === currentLang
+                    ? "bg-white/10 text-white"
+                    : "text-gray-300 hover:bg-white/5 hover:text-white"
+                }`}
+              >
+                <span>{languageLabels[locale].flag}</span>
+                <span>{languageLabels[locale].label}</span>
+              </a>
+            );
+          })}
         </div>
       )}
     </div>

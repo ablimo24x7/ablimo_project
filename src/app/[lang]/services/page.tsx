@@ -7,7 +7,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
-import { getServiceCards } from "@/lib/services";
+import { getAllPublishedServices } from "@/lib/services";
 
 export async function generateMetadata({
   params,
@@ -22,21 +22,6 @@ export async function generateMetadata({
     description: dict.services.metadata.description,
   };
 }
-
-const categoryImages: Record<string, string> = {
-  "chauffeur-vip":
-    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=500&fit=crop",
-  "airport-transfers":
-    "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop",
-  "corporate-transportation":
-    "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&h=500&fit=crop",
-  "event-transportation":
-    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop",
-  "bus-coach-hire":
-    "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=500&fit=crop",
-  "tourism-transportation":
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=500&fit=crop",
-};
 
 const pillars = [
   {
@@ -71,14 +56,7 @@ export default async function ServicesPage({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
 
-  const categories = dict.services.categories.map((category) => ({
-    ...category,
-    image: categoryImages[category.slug],
-  }));
-
-  const services = await getServiceCards(
-    categories.map((c) => c.slug)
-  );
+  const services = await getAllPublishedServices();
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
@@ -131,16 +109,16 @@ export default async function ServicesPage({
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((category) => (
+          {services.map((service) => (
             <Link
-              key={category.slug}
-              href={`/${lang}/services/${category.slug}`}
+              key={service.slug}
+              href={`/${lang}/services/${service.slug}`}
               className="group bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src={category.image}
-                  alt={category.title}
+                  src={service.heroImage || "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop"}
+                  alt={service.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -148,13 +126,13 @@ export default async function ServicesPage({
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold">{category.title}</h3>
+                  <h3 className="text-lg font-bold">{service.title}</h3>
                   <span className="text-abGold text-xl group-hover:translate-x-1 transition-transform">
                     &rarr;
                   </span>
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  {category.desc}
+                  {service.desc}
                 </p>
               </div>
             </Link>

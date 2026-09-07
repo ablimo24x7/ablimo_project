@@ -1,60 +1,29 @@
-const localeToLang: Record<string, string> = {
-  "en-US": "en",
-  "en-GB": "en",
-  ar: "ar",
-};
-
-const MYMEMORY_API = "https://api.mymemory.translated.net/get";
+/**
+ * Translation utilities.
+ *
+ * All translation is now handled via dictionary files (ar.json, en-US.json, en-GB.json).
+ * These functions are kept as stubs to maintain API compatibility.
+ */
 
 export async function translateText(
   text: string,
-  targetLocale: string
+  _targetLocale: string
 ): Promise<string> {
-  if (!text || !text.trim()) return text;
-
-  const targetLang = localeToLang[targetLocale] || targetLocale;
-
-  try {
-    const url = `${MYMEMORY_API}?q=${encodeURIComponent(text)}&langpair=en|${targetLang}`;
-    const res = await fetch(url);
-    const data = await res.json();
-
-    if (data.responseStatus === 200 && data.responseData?.translatedText) {
-      return data.responseData.translatedText;
-    }
-    return text;
-  } catch {
-    return text;
-  }
+  return text;
 }
 
 export async function translateHtml(
   html: string,
-  targetLocale: string
+  _targetLocale: string
 ): Promise<string> {
-  if (!html || !html.trim()) return html;
-
-  const targetLang = localeToLang[targetLocale] || targetLocale;
-
-  try {
-    const url = `${MYMEMORY_API}?q=${encodeURIComponent(html)}&langpair=en|${targetLang}`;
-    const res = await fetch(url);
-    const data = await res.json();
-
-    if (data.responseStatus === 200 && data.responseData?.translatedText) {
-      return data.responseData.translatedText;
-    }
-    return html;
-  } catch {
-    return html;
-  }
+  return html;
 }
 
 export function needsTranslation(
-  articleLocale: string,
-  targetLocale: string
+  targetLocale: string,
+  sourceLocale: string
 ): boolean {
-  const articleShort = articleLocale.split("-")[0];
-  const targetShort = targetLocale.split("-")[0];
-  return articleShort !== targetShort;
+  const shortTarget = targetLocale.split("-")[0];
+  const shortSource = sourceLocale.split("-")[0];
+  return shortTarget !== shortSource;
 }

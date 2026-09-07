@@ -8,6 +8,8 @@ interface RelatedArticlesProps {
   lang: string;
   viewAllHref: string;
   viewAllLabel: string;
+  heading?: string;
+  minLabel?: string;
 }
 
 export function RelatedArticles({
@@ -15,19 +17,21 @@ export function RelatedArticles({
   lang,
   viewAllHref,
   viewAllLabel,
+  heading = "Related Articles",
+  minLabel = "min",
 }: RelatedArticlesProps) {
   if (!articles || articles.length === 0) return null;
 
   return (
     <section className="max-w-7xl mx-auto px-8 py-16 border-t border-gray-700">
       <h2 className="text-2xl font-serif font-bold text-white mb-8 text-center">
-        Related Articles
+        {heading}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {articles.map((article) => (
           <Link
             key={article.slug}
-            href={`/${lang}/blog/${article.slug}`}
+            href={`/${lang}/services/${article.slug.replace(/^services\//, "")}`}
             className="group block bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
           >
             <div className="relative h-40 w-full">
@@ -52,7 +56,7 @@ export function RelatedArticles({
                 </span>
                 <span className="flex items-center gap-1">
                   <Clock className="h-3 w-3" />
-                  {article.readTime} min
+                  {article.readTime} {minLabel}
                 </span>
               </div>
             </div>

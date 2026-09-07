@@ -3,17 +3,7 @@ import { getEnv } from "@/lib/env";
 import { Country, type CountryDoc, type CityDoc, type AirportDoc } from "@/lib/models/Country";
 import { LocationRoute, type RouteDoc } from "@/lib/models/Route";
 import { toSlug } from "@/lib/slug";
-import {
-  COUNTRIES,
-  CITY_ROUTES,
-  resolveAirport,
-  resolveCity,
-  resolveCountry,
-  type Airport,
-  type City,
-  type CityRoute,
-  type Country as CountryShape,
-} from "@/lib/locations";
+import { COUNTRIES, CITY_ROUTES, resolveAirport, resolveCity, resolveCountry, type Airport, type City, type CityRoute, type Country as CountryShape } from "@/lib/locations";
 
 export const LOCATION_API_TAG = "locations";
 
@@ -31,8 +21,10 @@ function mapAirport(doc: AirportDoc & { _id?: unknown }): Airport {
     _id: doc._id ? String(doc._id) : undefined,
     slug: doc.slug,
     name: doc.name,
+    nameAr: doc.nameAr ?? "",
     iata: doc.iata ?? "",
     description: doc.description ?? "",
+    descriptionAr: doc.descriptionAr ?? "",
     aliases: doc.aliases ?? [],
     type: doc.type ?? "international",
     status: doc.status ?? "published",
@@ -45,11 +37,15 @@ function mapCity(doc: CityDoc & { _id?: unknown }): City {
     _id: doc._id ? String(doc._id) : undefined,
     slug: doc.slug,
     name: doc.name,
+    nameAr: doc.nameAr ?? "",
     description: doc.description ?? "",
+    descriptionAr: doc.descriptionAr ?? "",
     aliases: doc.aliases ?? [],
     status: doc.status ?? "published",
     countrySlug: doc.countrySlug,
     airports: (doc.airports ?? []).map(mapAirport),
+    faqs: (doc.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
+    faqsAr: (doc.faqsAr ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
   };
 }
 
@@ -60,9 +56,13 @@ export function toCountryShape(doc: CountryDoc & { _id?: unknown }): CountryShap
     code: doc.code,
     slug: doc.slug,
     name: doc.name,
+    nameAr: doc.nameAr ?? "",
     description: doc.description ?? "",
+    descriptionAr: doc.descriptionAr ?? "",
     status: doc.status ?? "published",
     cities: (doc.cities ?? []).map(mapCity),
+    faqs: (doc.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
+    faqsAr: (doc.faqsAr ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
   };
 }
 
@@ -89,11 +89,13 @@ export async function seedLocationsIfEmpty(): Promise<void> {
     name: c.name,
     description: "",
     status: "published",
+    faqs: [],
     cities: c.cities.map((city) => ({
       slug: city.slug,
       name: city.name,
       countrySlug: c.slug,
       status: "published",
+      faqs: [],
       airports: city.airports.map((a) => ({
         slug: a.slug,
         name: a.name,

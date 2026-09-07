@@ -71,17 +71,23 @@ export async function POST(req: NextRequest) {
   const cityDocs = (data.cities ?? []).map((c) => ({
     slug: c.slug || toSlug(c.name),
     name: c.name,
+    nameAr: c.nameAr || "",
     countrySlug: slug,
+    description: c.description || "",
+    descriptionAr: c.descriptionAr || "",
     aliases: c.aliases ?? [],
     status: c.status || "published",
     airports: (c.airports ?? []).map((a) => ({
       slug: a.slug || toSlug(a.name),
       name: a.name,
+      nameAr: a.nameAr || "",
       iata: a.iata,
       citySlug: c.slug || toSlug(c.name),
       aliases: a.aliases ?? [],
       status: a.status || "published",
     })),
+    faqs: (c.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
+    faqsAr: (c.faqsAr ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
   }));
 
   // Alias / slug conflict checks for nested cities and airports
@@ -125,9 +131,13 @@ export async function POST(req: NextRequest) {
       code,
       slug,
       name,
+      nameAr: data.nameAr || "",
       description: data.description || "",
+      descriptionAr: data.descriptionAr || "",
       status: data.status || "published",
       cities: cityDocs,
+      faqs: (data.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
+      faqsAr: (data.faqsAr ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
     });
 
     return NextResponse.json(toCountryShape(doc), { status: 201 });

@@ -13,6 +13,7 @@ interface BlogArticleLayoutProps {
   keyTakeawaysLabel: string;
   finalThoughtsLabel: string;
   authorLabel: string;
+  faqTitle: string;
   isArabic: boolean;
   children: React.ReactNode;
 }
@@ -27,6 +28,7 @@ export function BlogArticleLayout({
   keyTakeawaysLabel,
   finalThoughtsLabel,
   authorLabel,
+  faqTitle,
   isArabic,
   children,
 }: BlogArticleLayoutProps) {
@@ -166,6 +168,62 @@ export function BlogArticleLayout({
                 dir={isArabic ? "rtl" : "ltr"}
                 dangerouslySetInnerHTML={{ __html: article.finalThoughtsContent }}
               />
+            </div>
+          )}
+
+          {/* FAQs */}
+          {article.faqs && article.faqs.length > 0 && (
+            <div className="mt-12">
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    mainEntity: article.faqs.map((item) => ({
+                      "@type": "Question",
+                      name: item.q,
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.a,
+                      },
+                    })),
+                  }),
+                }}
+              />
+              <h2 className="text-2xl font-serif font-bold text-white mb-6">
+                {faqTitle}
+              </h2>
+              <div className="space-y-4">
+                {article.faqs.map((item) => (
+                  <div
+                    key={item.q}
+                    className="bg-[#1c1d21] rounded-2xl overflow-hidden"
+                  >
+                    <details className="group">
+                      <summary className="w-full p-6 text-left flex items-center justify-between hover:bg-[#2a2c35] transition-colors cursor-pointer list-none">
+                        <h3 className="text-lg font-semibold pr-4">{item.q}</h3>
+                        <svg
+                          className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </summary>
+                      <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        {item.a}
+                      </div>
+                    </details>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>

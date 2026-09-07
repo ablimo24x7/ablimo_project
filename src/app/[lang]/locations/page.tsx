@@ -1,5 +1,6 @@
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
 import { getAllCountries } from "@/lib/locationData";
+import { translateText, needsTranslation } from "@/lib/translate";
 import CountriesClient from "./_components/CountriesClient";
 
 export const metadata = {
@@ -18,6 +19,13 @@ export default async function LocationsPage({
   const dict = await getDictionary(locale);
 
   const countries = await getAllCountries();
+
+  // Translate country names for non-English locales
+  if (needsTranslation(lang, "en")) {
+    for (const country of countries) {
+      country.name = await translateText(country.name, lang);
+    }
+  }
 
   return <CountriesClient dict={dict} lang={lang} countries={countries} />;
 }

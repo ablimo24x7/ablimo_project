@@ -1,8 +1,10 @@
 export interface Airport {
   slug: string;
   name: string;
+  nameAr?: string;
   iata: string;
   description?: string;
+  descriptionAr?: string;
   aliases?: string[];
   type?: string;
   status?: string; // draft | published | archived
@@ -10,14 +12,23 @@ export interface Airport {
   _id?: string;
 }
 
+export interface LocationFaq {
+  q: string;
+  a: string;
+}
+
 export interface City {
   slug: string;
   name: string;
+  nameAr?: string;
   airports: Airport[];
   description?: string;
+  descriptionAr?: string;
   aliases?: string[];
   status?: string; // draft | published | archived
   countrySlug?: string;
+  faqs?: LocationFaq[];
+  faqsAr?: LocationFaq[];
   _id?: string;
 }
 
@@ -25,9 +36,13 @@ export interface Country {
   code: string;
   slug: string;
   name: string;
+  nameAr?: string;
   cities: City[];
   description?: string;
+  descriptionAr?: string;
   status?: string; // draft | published | archived
+  faqs?: LocationFaq[];
+  faqsAr?: LocationFaq[];
   _id?: string;
 }
 

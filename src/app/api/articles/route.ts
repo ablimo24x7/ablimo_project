@@ -38,6 +38,46 @@ export async function POST(req: NextRequest) {
 
   try {
     const article = await Article.create(body);
+
+    // Auto-create Arabic version if article is English
+    if (article.locale === "en" || !article.locale) {
+      try {
+        const { googleTranslate, googleTranslateHtml } = await import("@/lib/googleTranslate");
+
+        const [title, excerpt, bodyContent, keyTakeawaysContent, finalThoughtsContent] =
+          await Promise.all([
+            googleTranslate(article.title || "", "ar"),
+            googleTranslate(article.excerpt || "", "ar"),
+            googleTranslateHtml(article.bodyContent || "", "ar"),
+            googleTranslateHtml(article.keyTakeawaysContent || "", "ar"),
+            googleTranslateHtml(article.finalThoughtsContent || "", "ar"),
+          ]);
+
+        const translatedFaqs = await Promise.all(
+          (article.faqs || []).map(async (faq: any) => ({
+            q: await googleTranslate(faq.q || "", "ar"),
+            a: await googleTranslate(faq.a || "", "ar"),
+          }))
+        );
+
+        await Article.create({
+          ...article,
+          _id: undefined,
+          title,
+          excerpt,
+          bodyContent,
+          keyTakeawaysContent,
+          finalThoughtsContent,
+          faqs: translatedFaqs,
+          locale: "ar",
+          createdAt: undefined,
+          updatedAt: undefined,
+        });
+      } catch (err) {
+        console.error("[articles] Failed to create Arabic version:", err);
+      }
+    }
+
     return NextResponse.json(article, { status: 201 });
   } catch (err: any) {
     if (err?.code === 11000) {

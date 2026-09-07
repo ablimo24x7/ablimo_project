@@ -23,7 +23,7 @@
         "affiliateLogin": "Affiliate Login",
         "chauffeurPortal": "Chauffeur Portal",
         "fleetPortal": "Fleet Portal",
-        "chauffeurPartnerPortal": "chauffeurPartnerPortal"
+        "chauffeurPartnerPortal": "Chauffeur Partner Portal"
       },
       "services": {
         "executiveChauffeur": "Executive Chauffeur Services",
@@ -93,7 +93,8 @@
         "miningStaff": "Mining Staff Transportation",
         "constructionStaff": "Construction Staff Transportation"
       }
-    }
+    },
+    "chauffeurPortal": "Chauffeur Partner Portal"
   },
   "booking": {
     "oneWay": "One way",
@@ -343,6 +344,122 @@
           "q": "Can I change or cancel my reservation?",
           "a": "Yes, changes and cancellations are possible subject to our booking terms and the timing of your request. We recommend notifying us as early as possible."
         }
+      ]
+    },
+    "heroSection": {
+      "badge": "GCC Premier Enterprise Logistics",
+      "title": "The Science of",
+      "titleHighlight": "Transportation.",
+      "desc": "Beyond standard transfers. AB.Limo engineers bespoke mobility architecture for mega-events, corporate roadshows, and government protocol across Saudi Arabia, UAE, and Qatar.",
+      "ctaExplore": "Explore Event Frameworks",
+      "ctaDutyOfCare": "View Duty of Care",
+      "tabs": {
+        "transfer": "Executive Transfer",
+        "asDirected": "As-Directed (Hourly)",
+        "event": "Event Logistics"
+      },
+      "form": {
+        "pickup": "Pickup (e.g., RUH Airport)",
+        "dropoff": "Drop-off (e.g., KAFD)",
+        "submit": "Source Executive Fleet",
+        "eventDesc": "Connect with our Transport Control Room team to engineer logistics for mega-events, exhibitions, or VIP tours.",
+        "selectType": "Select Logistics Type",
+        "exhibition": "Exhibition & Trade Show Shuttle",
+        "coach": "Executive Coach / Bus Charter",
+        "government": "Government & Protocol Event",
+        "sports": "Sports or Concert Transportation",
+        "pax": "Est. Pax",
+        "city": "Event City",
+        "submitEvent": "Request Logistics Consultation"
+      }
+    },
+    "dutyOfCare": {
+      "title": "Uncompromising Duty of Care.",
+      "desc": "We integrate seamlessly with your corporate travel policies, providing the technological transparency and rigorous safety standards required by global enterprises.",
+      "cards": [
+        {
+          "title": "Intelligent Transport Systems",
+          "desc": "Proprietary live GPS tracking allowing corporate security teams to monitor Executive Protection Services and standard rides in real-time."
+        },
+        {
+          "title": "Corporate Tech Integration",
+          "desc": "Centralized corporate billing with direct API integrations to expense management platforms like SAP Concur for frictionless accounting."
+        },
+        {
+          "title": "Vetted Professionalism",
+          "desc": "Mandatory comprehensive background checks, defensive driving certifications, and strict Non-Disclosure Agreements (NDAs) for all chauffeurs."
+        }
+      ]
+    },
+    "eventLogistics": {
+      "badge": "Core Pillar: Event Mobility",
+      "title": "Mastering Complex Route Architecture.",
+      "desc": "Moving 5,000 delegates requires more than just vehicles. It requires a Transport Control Room. We provide end-to-end logistics management for GCC mega-events, ensuring precision from tarmac to venue.",
+      "features": [
+        {
+          "title": "Delivery Schedules & Route Planning",
+          "desc": "Dynamic routing mapped to avoid local congestion, maximizing efficiency for convention shuttles and VIP movements."
+        },
+        {
+          "title": "Traffic & On-Site Parking Management",
+          "desc": "Ground coordinators dispatching our luxury coach and executive bus fleet to maintain seamless loading/unloading zones."
+        },
+        {
+          "title": "Post-Event Passenger Analytics",
+          "desc": "Comprehensive reporting on passenger volumes, vehicle utilization, and operational KPIs delivered to event organizers."
+        }
+      ],
+      "alt": "Executive Coach Fleet",
+      "dispatch": "Live Dispatch Status",
+      "coaches": "45 VIP Coaches",
+      "deployed": "Currently deployed (Riyadh Season)"
+    },
+    "fleetSection": {
+      "badge": "Our Vehicle Governance",
+      "title": "Strictly Black. Strictly Professional.",
+      "desc": "The AB.Limo brand standard mandates a uniform fleet of late-model, immaculate black vehicles. No exceptions. We procure and lease dedicated fleets for long-term government and corporate contracts.",
+      "link": "View Full Fleet Specifications",
+      "vehicles": [
+        {
+          "badge": "Executive Mobility",
+          "title": "Executive Sedan",
+          "subtitle": "Mercedes S-Class",
+          "pax": "3 Pax",
+          "bags": "2 Bags"
+        },
+        {
+          "badge": "Executive Mobility",
+          "title": "Executive SUV",
+          "subtitle": "Cadillac Escalade",
+          "pax": "6 Pax",
+          "bags": "5 Bags"
+        },
+        {
+          "badge": "High Event Demand",
+          "title": "Executive Van",
+          "subtitle": "Mercedes Sprinter",
+          "pax": "14 Pax",
+          "bags": "10 Bags"
+        },
+        {
+          "badge": "Executive Mobility",
+          "title": "Premium MPV",
+          "subtitle": "Mercedes V Class",
+          "pax": "6 Pax",
+          "bags": "5 Bags"
+        }
+      ]
+    },
+    "industrySolutions": {
+      "badge": "Dedicated Industry Solutions",
+      "title": "Tailored logistics for specialized procurement teams.",
+      "items": [
+        "Events & Exhibitions",
+        "Government & Ministries",
+        "Aviation & FBO Ops",
+        "Oil & Gas Logistics",
+        "Religious Tourism (Umrah/Hajj)",
+        "Sports & Tournament Transport"
       ]
     }
   },
@@ -995,7 +1112,7 @@
           "desc": "Stay updated with the latest news, announcements, and media coverage about AB.Limo."
         },
         {
-          "title": "Blog",
+          "title": "Blogs",
           "desc": "Discover travel tips, destination guides, and insights from our team of experts."
         }
       ]
@@ -1847,7 +1964,10 @@
       "airportTransferHeading": "Airport Transfer",
       "airportTransferLink": "{country} Airport Transfer",
       "limousineHeading": "Limousine Service",
-      "limousineLink": "{country} Limousine Service"
+      "limousineLink": "{country} Limousine Service",
+      "faqTitle": "Frequently Asked Questions",
+      "cityToCityHeading": "City-to-City Service",
+      "cityToCityRides": "City-to-City Rides"
     }
   },
   "strategicPartnerships": {
@@ -2503,7 +2623,7 @@
   },
   "blog": {
     "home": "Home",
-    "allArticles": "Blog",
+    "allArticles": "Blogs",
     "allArticlesDescription": "Explore our latest articles, guides, and news about premium transportation services.",
     "minRead": "min read",
     "keyTakeaways": "Key Takeaways",
@@ -2512,7 +2632,7 @@
     "viewAllArticles": "View all articles",
     "noArticles": "No articles found.",
     "readMore": "Read more",
-    "countries": "Countries",
+    "countries": "Country",
     "cities": "Cities",
     "cityToCity": "City to City",
     "airportTransfers": "Airport Transfers",
@@ -2521,7 +2641,18 @@
     "filterByType": "Filter by type",
     "all": "All",
     "publishedOn": "Published on",
-    "by": "by"
+    "by": "by",
+    "faqTitle": "Frequently Asked Questions",
+    "blog": "Blog",
+    "admin": "Admin",
+    "sideInfo": {
+      "aboutCountry": "About {country}",
+      "exploreCountry": "Explore our comprehensive limousine and ground transportation services in {country}. We provide premium airport transfers, city tours, and executive travel across the region.",
+      "viewAllCountryServices": "View all {country} services",
+      "limoServiceIn": "Limo Service in {city}",
+      "discoverCity": "Discover premium limousine and chauffeur services in {city}{countryDesc}. From airport transfers to city tours, we ensure a comfortable and luxurious travel experience.",
+      "viewCityDetails": "View {city} details"
+    }
   },
   "services": {
     "metadata": {
@@ -4009,5 +4140,41 @@
         }
       ]
     }
+  },
+  "notFound": {
+    "title": "404",
+    "heading": "Page Not Found",
+    "desc": "The page you are looking for does not exist or has been moved.",
+    "goHome": "Go Home"
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "inquiryAbout": "Inquiring about: ",
+    "defaultMessage": "We'll get back to you soon",
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Your Message",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "sent": "Message Sent!",
+    "sentDesc": "We'll get back to you as soon as possible.",
+    "close": "Close"
+  },
+  "inquiryForm": {
+    "title": "Quick Inquiry",
+    "about": "About: ",
+    "name": "Your Name",
+    "phone": "Phone Number",
+    "email": "Email (optional)",
+    "message": "Your message (optional)",
+    "sending": "Sending...",
+    "send": "Send Inquiry",
+    "sent": "Thank You!",
+    "sentDesc": "Your inquiry about ",
+    "sentEnd": " has been received.",
+    "sentBack": "We'll get back to you shortly.",
+    "service": "Service: ",
+    "url": "URL: "
   }
 }
