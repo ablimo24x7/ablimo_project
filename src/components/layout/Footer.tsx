@@ -9,6 +9,7 @@ import {
   resolveCity,
 } from "@/lib/locations";
 import ExpandableFooterLinks from "./ExpandableFooterLinks";
+import Image from "next/image";
 
 interface FooterProps {
   lang: Locale;
@@ -194,12 +195,21 @@ export default async function Footer({ lang }: FooterProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Row: Logo and Apps */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
-          <Link
-            href={`/${lang}`}
-            className="text-3xl font-bold tracking-widest uppercase"
-          >
-            {dict.header.logo}
-          </Link>
+          {/* Logo */}
+          <div className="flex-shrink-0 flex items-center">
+            <Link
+              href={`/${lang}`}
+              className="text-white text-2xl font-bold tracking-widest uppercase"
+            >
+              {/* {dict.header.logo} */}
+              <Image
+                src="/AB_LOGO-NEW.png"
+                alt="AB.Limo Logo"
+                width={100}
+                height={40}
+              />
+            </Link>
+          </div>
           {/* App download badges (Android & Apple) - hidden for all screens
           <div className="flex gap-4">
             <a href="#" className="hover:opacity-80 transition-opacity">

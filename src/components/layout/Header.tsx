@@ -20,18 +20,18 @@ export default async function Header({ lang }: HeaderProps) {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            {/* <Link
+            <Link
               href={`/${lang}`}
               className="text-white text-2xl font-bold tracking-widest uppercase"
             >
-              {dict.header.logo}
-            </Link> */}
-            <Image 
-              src="/AB_LOGO-NEW.png"
-              alt="AB.Limo Logo"
-              width={100}
-              height={40}
-            />
+              {/* {dict.header.logo} */}
+              <Image
+                src="/AB_LOGO-NEW.png"
+                alt="AB.Limo Logo"
+                width={100}
+                height={40}
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
