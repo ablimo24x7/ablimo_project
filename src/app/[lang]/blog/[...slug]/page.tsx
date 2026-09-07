@@ -92,6 +92,7 @@ export default async function BlogSlugPage({ params, searchParams }: Props) {
       keyTakeawaysLabel={b.keyTakeaways}
       finalThoughtsLabel={b.finalThoughts}
       authorLabel={article.authorName || "Admin"}
+      faqTitle={b.faqTitle}
       isArabic={isArabic}
     >
       {sideInfo}
