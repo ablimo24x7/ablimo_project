@@ -18,9 +18,13 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
+import { SectionEditor } from "./section-editor";
 import { toast } from "sonner";
-import { Plus, Trash2, ChevronUp, ChevronDown } from "lucide-react";
+import { Plus, Trash2, ChevronUp, ChevronDown, FileText, LayoutGrid } from "lucide-react";
 import { TranslateButton } from "./TranslateButton";
+import type { TextImageSectionType, CardsSectionType } from "@/lib/validations/location";
+
+type SectionUnion = TextImageSectionType | CardsSectionType;
 
 type FaqItem = { q: string; a: string };
 
@@ -38,9 +42,11 @@ type PostData = {
   country: string;
   citySlug: string;
   city: string;
+  contentMode: "wysiwyg" | "sections";
   bodyContent: string;
   keyTakeawaysContent: string;
   finalThoughtsContent: string;
+  sections: SectionUnion[];
   featured: boolean;
   tags: string[];
   authorName: string;
@@ -63,16 +69,18 @@ const defaultPost: PostData = {
   excerpt: "",
   category: "",
   categoryLabel: "",
-  status: "draft",
+  status: "published",
   templateType: "service-country",
   serviceSlug: "",
   countrySlug: "",
   country: "",
   citySlug: "",
   city: "",
+  contentMode: "wysiwyg",
   bodyContent: "",
   keyTakeawaysContent: "",
   finalThoughtsContent: "",
+  sections: [],
   featured: false,
   tags: [],
   authorName: "",
@@ -105,6 +113,7 @@ function normalizePost(data?: PostData): PostData {
       metaDescription: d.seo_metadata?.metaDescription ?? "",
       ogImage: d.seo_metadata?.ogImage ?? "",
     },
+    sections: d.sections ?? [],
   };
 }
 
@@ -335,53 +344,84 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
           </Card>
 
           <Card>
-            <CardHeader><CardTitle>Body Content</CardTitle></CardHeader>
+            <CardHeader className="flex-row items-center justify-between">
+              <CardTitle>Body Content</CardTitle>
+              <div className="flex items-center gap-2 bg-muted rounded-lg p-1">
+                <Button
+                  type="button"
+                  size="sm"
+                  variant={form.contentMode === "wysiwyg" ? "default" : "ghost"}
+                  className="h-7"
+                  onClick={() => updateField("contentMode", "wysiwyg")}
+                >
+                  <FileText className="h-3.5 w-3.5 mr-1" /> WYSIWYG
+                </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant={form.contentMode === "sections" ? "default" : "ghost"}
+                  className="h-7"
+                  onClick={() => updateField("contentMode", "sections")}
+                >
+                  <LayoutGrid className="h-3.5 w-3.5 mr-1" /> Sections
+                </Button>
+              </div>
+            </CardHeader>
             <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Label>Content</Label>
-                  <TranslateButton
-                    text={form.bodyContent}
-                    onTranslated={(v) => updateField("bodyContent", v)}
-                    isHtml
-                  />
-                </div>
-                <WysiwygEditor
-                  value={form.bodyContent}
-                  onChange={(v) => updateField("bodyContent", v)}
-                  placeholder="Write your article content here..."
+              {form.contentMode === "wysiwyg" ? (
+                <>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <Label>Content</Label>
+                      <TranslateButton
+                        text={form.bodyContent}
+                        onTranslated={(v) => updateField("bodyContent", v)}
+                        isHtml
+                      />
+                    </div>
+                    <WysiwygEditor
+                      value={form.bodyContent}
+                      onChange={(v) => updateField("bodyContent", v)}
+                      placeholder="Write your article content here..."
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <Label>Key Takeaways</Label>
+                      <TranslateButton
+                        text={form.keyTakeawaysContent}
+                        onTranslated={(v) => updateField("keyTakeawaysContent", v)}
+                        isHtml
+                      />
+                    </div>
+                    <WysiwygEditor
+                      value={form.keyTakeawaysContent}
+                      onChange={(v) => updateField("keyTakeawaysContent", v)}
+                      placeholder="Summarize the key points..."
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <Label>Final Thoughts</Label>
+                      <TranslateButton
+                        text={form.finalThoughtsContent}
+                        onTranslated={(v) => updateField("finalThoughtsContent", v)}
+                        isHtml
+                      />
+                    </div>
+                    <WysiwygEditor
+                      value={form.finalThoughtsContent}
+                      onChange={(v) => updateField("finalThoughtsContent", v)}
+                      placeholder="Wrap up your article..."
+                    />
+                  </div>
+                </>
+              ) : (
+                <SectionEditor
+                  sections={form.sections}
+                  onChange={(sections) => updateField("sections", sections)}
                 />
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Label>Key Takeaways</Label>
-                  <TranslateButton
-                    text={form.keyTakeawaysContent}
-                    onTranslated={(v) => updateField("keyTakeawaysContent", v)}
-                    isHtml
-                  />
-                </div>
-                <WysiwygEditor
-                  value={form.keyTakeawaysContent}
-                  onChange={(v) => updateField("keyTakeawaysContent", v)}
-                  placeholder="Summarize the key points..."
-                />
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Label>Final Thoughts</Label>
-                  <TranslateButton
-                    text={form.finalThoughtsContent}
-                    onTranslated={(v) => updateField("finalThoughtsContent", v)}
-                    isHtml
-                  />
-                </div>
-                <WysiwygEditor
-                  value={form.finalThoughtsContent}
-                  onChange={(v) => updateField("finalThoughtsContent", v)}
-                  placeholder="Wrap up your article..."
-                />
-              </div>
+              )}
             </CardContent>
           </Card>
 

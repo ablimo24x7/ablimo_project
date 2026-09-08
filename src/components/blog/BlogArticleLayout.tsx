@@ -2,6 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock, User, Tag } from "lucide-react";
 import type { ArticleDoc } from "@/lib/models/Article";
+import { TextImageSection } from "@/components/locations/TextImageSection";
+import { CardsSection } from "@/components/locations/CardsSection";
+import type { TextImageSectionType, CardsSectionType } from "@/lib/validations/location";
 
 interface BlogArticleLayoutProps {
   article: ArticleDoc;
@@ -121,54 +124,69 @@ export function BlogArticleLayout({
             </p>
           )}
 
-          {/* Body Content */}
-          {article.bodyContent && (
-            <div
-              className={`prose prose-lg prose-invert max-w-none
-                prose-headings:font-serif prose-headings:text-white
-                prose-p:text-gray-300 prose-p:leading-relaxed
-                prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
-                prose-strong:text-white
-                prose-img:rounded-2xl ${isArabic ? "text-right" : ""}`}
-              dir={isArabic ? "rtl" : "ltr"}
-              dangerouslySetInnerHTML={{ __html: article.bodyContent }}
-            />
-          )}
-
-          {/* Key Takeaways */}
-          {article.keyTakeawaysContent && (
-            <div className="mt-12 bg-[#1c1d21] rounded-2xl p-8">
-              <h2 className="text-2xl font-serif font-bold text-white mb-4">
-                {keyTakeawaysLabel}
-              </h2>
-              <div
-                className={`prose prose-lg prose-invert max-w-none
-                  prose-headings:font-serif prose-headings:text-white
-                  prose-p:text-gray-300 prose-p:leading-relaxed
-                  prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
-                  prose-strong:text-white ${isArabic ? "text-right" : ""}`}
-                dir={isArabic ? "rtl" : "ltr"}
-                dangerouslySetInnerHTML={{ __html: article.keyTakeawaysContent }}
-              />
+          {/* Content: WYSIWYG or Sections */}
+          {article.contentMode === "sections" && article.sections && article.sections.length > 0 ? (
+            <div className="space-y-0">
+              {(article.sections as unknown as (TextImageSectionType | CardsSectionType)[]).map((rawSection) => {
+                const section = JSON.parse(JSON.stringify(rawSection));
+                if (section.type === "cards") {
+                  return <CardsSection key={section.id} section={section} />;
+                }
+                return <TextImageSection key={section.id} section={section} />;
+              })}
             </div>
-          )}
+          ) : (
+            <>
+              {/* Body Content */}
+              {article.bodyContent && (
+                <div
+                  className={`prose prose-lg prose-invert max-w-none
+                    prose-headings:font-serif prose-headings:text-white
+                    prose-p:text-gray-300 prose-p:leading-relaxed
+                    prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
+                    prose-strong:text-white
+                    prose-img:rounded-2xl ${isArabic ? "text-right" : ""}`}
+                  dir={isArabic ? "rtl" : "ltr"}
+                  dangerouslySetInnerHTML={{ __html: article.bodyContent }}
+                />
+              )}
 
-          {/* Final Thoughts */}
-          {article.finalThoughtsContent && (
-            <div className="mt-12">
-              <h2 className="text-2xl font-serif font-bold text-white mb-4">
-                {finalThoughtsLabel}
-              </h2>
-              <div
-                className={`prose prose-lg prose-invert max-w-none
-                  prose-headings:font-serif prose-headings:text-white
-                  prose-p:text-gray-300 prose-p:leading-relaxed
-                  prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
-                  prose-strong:text-white ${isArabic ? "text-right" : ""}`}
-                dir={isArabic ? "rtl" : "ltr"}
-                dangerouslySetInnerHTML={{ __html: article.finalThoughtsContent }}
-              />
-            </div>
+              {/* Key Takeaways */}
+              {article.keyTakeawaysContent && (
+                <div className="mt-12 bg-[#1c1d21] rounded-2xl p-8">
+                  <h2 className="text-2xl font-serif font-bold text-white mb-4">
+                    {keyTakeawaysLabel}
+                  </h2>
+                  <div
+                    className={`prose prose-lg prose-invert max-w-none
+                      prose-headings:font-serif prose-headings:text-white
+                      prose-p:text-gray-300 prose-p:leading-relaxed
+                      prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
+                      prose-strong:text-white ${isArabic ? "text-right" : ""}`}
+                    dir={isArabic ? "rtl" : "ltr"}
+                    dangerouslySetInnerHTML={{ __html: article.keyTakeawaysContent }}
+                  />
+                </div>
+              )}
+
+              {/* Final Thoughts */}
+              {article.finalThoughtsContent && (
+                <div className="mt-12">
+                  <h2 className="text-2xl font-serif font-bold text-white mb-4">
+                    {finalThoughtsLabel}
+                  </h2>
+                  <div
+                    className={`prose prose-lg prose-invert max-w-none
+                      prose-headings:font-serif prose-headings:text-white
+                      prose-p:text-gray-300 prose-p:leading-relaxed
+                      prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
+                      prose-strong:text-white ${isArabic ? "text-right" : ""}`}
+                    dir={isArabic ? "rtl" : "ltr"}
+                    dangerouslySetInnerHTML={{ __html: article.finalThoughtsContent }}
+                  />
+                </div>
+              )}
+            </>
           )}
 
           {/* FAQs */}

@@ -18,8 +18,15 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
   if (body instanceof NextResponse) return body;
 
   try {
-    const item = await Article.findByIdAndUpdate(id, body, { new: true, runValidators: true }).lean();
-    if (!item) return NextResponse.json({ error: "Not found" }, { status: 404 });
+    const existing = await Article.findById(id);
+    if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
+
+    for (const key of Object.keys(body)) {
+      (existing as any)[key] = body[key];
+    }
+
+    await existing.save();
+    const item = await Article.findById(id).lean();
     return NextResponse.json(item);
   } catch (err: any) {
     if (err?.code === 11000) {

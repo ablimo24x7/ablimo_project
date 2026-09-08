@@ -22,6 +22,250 @@ const articleMediaSchema = new Schema(
   { _id: false }
 );
 
+const textImageElementSchema = new Schema(
+  {
+    id: { type: String, required: true },
+    type: {
+      type: String,
+      required: true,
+      enum: ["tag", "label", "heading", "paragraph", "button"],
+    },
+    content: { type: String, default: "" },
+    headingLevel: {
+      type: String,
+      enum: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      default: "h2",
+    },
+    url: { type: String, default: "" },
+    target: { type: String, default: "_self" },
+    icon: {
+      type: {
+        library: { type: String, default: "lucide" },
+        name: { type: String, default: "" },
+        position: { type: String, enum: ["left", "right"], default: "right" },
+      },
+      default: () => ({ library: "lucide", name: "", position: "right" }),
+    },
+    style: {
+      type: {
+        typography: {
+          fontFamily: { type: String, default: "" },
+          fontSize: { type: String, default: "" },
+          fontWeight: { type: String, default: "" },
+          lineHeight: { type: String, default: "" },
+          letterSpacing: { type: String, default: "" },
+          textTransform: { type: String, default: "" },
+        },
+        colors: {
+          text: { type: String, default: "" },
+          background: { type: String, default: "" },
+        },
+        spacing: {
+          marginTop: { type: String, default: "" },
+          marginBottom: { type: String, default: "" },
+          marginLeft: { type: String, default: "" },
+          marginRight: { type: String, default: "" },
+          paddingTop: { type: String, default: "" },
+          paddingBottom: { type: String, default: "" },
+          paddingLeft: { type: String, default: "" },
+          paddingRight: { type: String, default: "" },
+        },
+        borders: {
+          border: { type: String, default: "" },
+          borderRadius: { type: String, default: "" },
+        },
+      },
+      default: () => ({
+        typography: {},
+        colors: {},
+        spacing: {},
+        borders: {},
+      }),
+    },
+    visible: { type: Boolean, default: true },
+  },
+  { _id: false }
+);
+
+const textImageSectionSchema = new Schema(
+  {
+    id: { type: String, required: true },
+    type: { type: String, required: true, enum: ["text_image"] },
+    direction: {
+      type: String,
+      enum: ["image_left", "image_right"],
+      default: "image_left",
+    },
+    image: {
+      type: {
+        url: { type: String, default: "" },
+        alt: { type: String, default: "" },
+        title: { type: String, default: "" },
+        caption: { type: String, default: "" },
+        objectFit: { type: String, default: "cover" },
+        objectPosition: { type: String, default: "center" },
+        aspectRatio: { type: String, default: "" },
+        borderRadius: { type: String, default: "" },
+        width: { type: String, default: "" },
+        height: { type: String, default: "" },
+        maxWidth: { type: String, default: "" },
+        link: { type: String, default: "" },
+        overlay: { type: Boolean, default: false },
+        overlayOpacity: { type: String, default: "0.5" },
+      },
+      default: () => ({
+        url: "",
+        alt: "",
+        title: "",
+        caption: "",
+        objectFit: "cover",
+        objectPosition: "center",
+        aspectRatio: "",
+        borderRadius: "",
+        width: "",
+        height: "",
+        maxWidth: "",
+        link: "",
+        overlay: false,
+        overlayOpacity: "0.5",
+      }),
+    },
+    elements: { type: [textImageElementSchema], default: [] },
+    layout: {
+      type: {
+        containerWidth: { type: String, default: "" },
+        contentWidth: { type: String, default: "" },
+        imageWidth: { type: String, default: "" },
+        gap: { type: String, default: "" },
+        alignment: { type: String, default: "" },
+        verticalAlignment: { type: String, default: "" },
+      },
+      default: () => ({
+        containerWidth: "",
+        contentWidth: "",
+        imageWidth: "",
+        gap: "",
+        alignment: "",
+        verticalAlignment: "",
+      }),
+    },
+    spacing: {
+      type: {
+        padding: { type: String, default: "" },
+        margin: { type: String, default: "" },
+      },
+      default: () => ({
+        padding: "",
+        margin: "",
+      }),
+    },
+    background: {
+      type: {
+        color: { type: String, default: "" },
+        gradient: { type: String, default: "" },
+        image: { type: String, default: "" },
+      },
+      default: () => ({
+        color: "",
+        gradient: "",
+        image: "",
+      }),
+    },
+    responsive: {
+      type: {
+        mobile: {
+          direction: { type: String, enum: ["image_left", "image_right"], default: "image_left" },
+          stack: { type: Boolean, default: true },
+        },
+        tablet: {
+          direction: { type: String, enum: ["image_left", "image_right"], default: "image_left" },
+          stack: { type: Boolean, default: false },
+        },
+      },
+      default: () => ({
+        mobile: { direction: "image_left", stack: true },
+        tablet: { direction: "image_left", stack: false },
+      }),
+    },
+    visibility: {
+      type: {
+        desktop: { type: Boolean, default: true },
+        tablet: { type: Boolean, default: true },
+        mobile: { type: Boolean, default: true },
+      },
+      default: () => ({
+        desktop: true,
+        tablet: true,
+        mobile: true,
+      }),
+    },
+  },
+  { _id: false }
+);
+
+const cardCtaSchema = new Schema(
+  {
+    label: { type: String, default: "" },
+    url: { type: String, default: "" },
+    icon: { type: String, default: "" },
+  },
+  { _id: false }
+);
+
+const cardItemSchema = new Schema(
+  {
+    id: { type: String, required: true },
+    icon: { type: String, default: "" },
+    iconColor: { type: String, default: "" },
+    title: { type: String, default: "" },
+    description: { type: String, default: "" },
+    ctas: { type: [cardCtaSchema], default: [] },
+  },
+  { _id: false }
+);
+
+const cardsSectionSchema = new Schema(
+  {
+    id: { type: String, required: true },
+    type: { type: String, required: true, enum: ["cards"] },
+    title: { type: String, default: "" },
+    subtitle: { type: String, default: "" },
+    columns: { type: String, enum: ["2", "3"], default: "3" },
+    cards: { type: [cardItemSchema], default: [] },
+    layout: {
+      type: {
+        containerWidth: { type: String, default: "" },
+        contentWidth: { type: String, default: "" },
+        gap: { type: String, default: "" },
+      },
+      default: () => ({ containerWidth: "", contentWidth: "", gap: "" }),
+    },
+    spacing: {
+      type: {
+        padding: { type: String, default: "" },
+        margin: { type: String, default: "" },
+      },
+      default: () => ({ padding: "", margin: "" }),
+    },
+    background: {
+      type: {
+        color: { type: String, default: "" },
+        gradient: { type: String, default: "" },
+      },
+      default: () => ({ color: "", gradient: "" }),
+    },
+    visibility: {
+      type: {
+        desktop: { type: Boolean, default: true },
+        tablet: { type: Boolean, default: true },
+        mobile: { type: Boolean, default: true },
+      },
+      default: () => ({ desktop: true, tablet: true, mobile: true }),
+    },
+  },
+  { _id: false }
+);
+
 const articleSchema = new Schema(
   {
     slug: { type: String, required: true },
@@ -43,9 +287,21 @@ const articleSchema = new Schema(
       default: "published",
     },
     articleMedia: { type: articleMediaSchema, default: () => ({}) },
+
+    // ── Content Mode ────────────────────────────────────────
+    contentMode: {
+      type: String,
+      enum: ["wysiwyg", "sections"],
+      default: "wysiwyg",
+    },
+
+    // ── WYSIWYG Content ─────────────────────────────────────
     bodyContent: { type: String, default: "" },
     keyTakeawaysContent: { type: String, default: "" },
     finalThoughtsContent: { type: String, default: "" },
+
+    // ── Sections Content ────────────────────────────────────
+    sections: { type: Schema.Types.Mixed, default: [] },
 
     // ── ABLimo Template Fields ─────────────────────────────
     templateType: {

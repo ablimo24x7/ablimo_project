@@ -35,5 +35,7 @@ export default async function CityPage({
         }
     }
 
-    return <CityDetailClient dict={dict} lang={lang} country={res.country} city={res.city} routes={routes} />;
+    const sections = res.city.sections || [];
+
+    return <CityDetailClient dict={dict} lang={lang} country={res.country} city={res.city} routes={routes} sections={sections} />;
 }

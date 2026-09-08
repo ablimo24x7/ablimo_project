@@ -29,6 +29,7 @@ export interface City {
   countrySlug?: string;
   faqs?: LocationFaq[];
   faqsAr?: LocationFaq[];
+  sections?: import("@/lib/validations/location").TextImageSectionType[];
   _id?: string;
 }
 
@@ -93,7 +94,7 @@ export const COUNTRIES: Country[] = [
         airport("king-fahd-international-airport", "King Fahd International Airport", "DMM"),
       ]),
       city("tabuk", "Tabuk"),
-      city("alula", "Al Ula"),
+      city("al-ula", "Al Ula"),
       city("al-khobar", "Al Khobar"),
       city("al-qasim", "Al Qasim"),
       city("abha", "Abha"),
@@ -174,7 +175,7 @@ const cityAliases: Record<string, string> = {
   kuwait: "kuwait-city",
   "kuwait-city": "kuwait-city",
   "ras-al-khaymah": "ras-al-khaimah",
-  "al-ula": "alula",
+  "alula": "al-ula",
 };
 
 export function resolveCountry(input: string): Country | undefined {

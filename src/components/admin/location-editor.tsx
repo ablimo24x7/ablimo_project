@@ -21,6 +21,8 @@ import { Plus, Trash2, ChevronDown, ChevronUp, CheckCircle2, XCircle, Loader2 } 
 import { allIsoCountries, validateCountry } from "@/lib/iso3166";
 import { toSlug } from "@/lib/slug";
 import { TranslateButton } from "./TranslateButton";
+import { CitySectionEditor } from "./city-section-editor";
+import type { TextImageSectionType } from "@/lib/validations/location";
 
 type FaqRecord = {
   q: string;
@@ -50,6 +52,7 @@ type CityRecord = {
   airports: AirportRecord[];
   faqs: FaqRecord[];
   faqsAr: FaqRecord[];
+  sections: TextImageSectionType[];
 };
 
 type CountryRecord = {
@@ -87,7 +90,7 @@ function blankAirport(): AirportRecord {
 }
 
 function blankCity(): CityRecord {
-  return { slug: "", name: "", nameAr: "", description: "", descriptionAr: "", aliases: [], status: "published", airports: [], faqs: [], faqsAr: [] };
+  return { slug: "", name: "", nameAr: "", description: "", descriptionAr: "", aliases: [], status: "published", airports: [], faqs: [], faqsAr: [], sections: [] };
 }
 
 interface LocationEditorProps {
@@ -255,6 +258,14 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
           .map((a) => a.trim().toLowerCase())
           .filter(Boolean),
       };
+      return { ...prev, cities };
+    });
+  };
+
+  const updateCitySections = (cityIndex: number, sections: TextImageSectionType[]) => {
+    setForm((prev) => {
+      const cities = [...prev.cities];
+      cities[cityIndex] = { ...cities[cityIndex], sections };
       return { ...prev, cities };
     });
   };
@@ -877,6 +888,14 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                             </div>
                           ))}
                         </div>
+
+                        {/* City Sections */}
+                        <div className="pt-4">
+                          <CitySectionEditor
+                            sections={city.sections || []}
+                            onChange={(sections) => updateCitySections(cityIndex, sections)}
+                          />
+                        </div>
                       </div>
                     )}
                   </div>
@@ -929,6 +948,12 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
                 <span>FAQs</span>
                 <span className="font-medium text-foreground">
                   {form.faqs.length + form.cities.reduce((n, c) => n + c.faqs.length, 0)}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span>Sections</span>
+                <span className="font-medium text-foreground">
+                  {form.cities.reduce((n, c) => n + (c.sections?.length || 0), 0)}
                 </span>
               </div>
               <div className="flex justify-between">

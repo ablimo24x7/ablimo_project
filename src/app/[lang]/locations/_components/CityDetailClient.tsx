@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import BookingWidget from "@/components/layout/BookingWidget";
+import { TextImageSection } from "@/components/locations/TextImageSection";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
     airportUrl,
@@ -13,6 +14,7 @@ import {
     type CityRoute,
     type Country,
 } from "@/lib/locations";
+import type { TextImageSectionType } from "@/lib/validations/location";
 import ShowMoreGrid from "./ShowMoreGrid";
 
 const cityHeroImages: Record<string, string> = {
@@ -52,9 +54,10 @@ interface Props {
     country: Country;
     city: City;
     routes?: CityRoute[];
+    sections?: TextImageSectionType[];
 }
 
-export default function CityDetailClient({ dict, lang, country, city, routes = [] }: Props) {
+export default function CityDetailClient({ dict, lang, country, city, routes = [], sections = [] }: Props) {
     const cityName = city.name;
     const cDict = dict.countries;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -325,6 +328,15 @@ export default function CityDetailClient({ dict, lang, country, city, routes = [
                         />
                     </div>
                 </section>
+            )}
+
+            {/* Dynamic Content Sections */}
+            {sections.length > 0 && (
+                <div className="space-y-0">
+                    {sections.map((section) => (
+                        <TextImageSection key={section.id} section={section} />
+                    ))}
+                </div>
             )}
 
             {/* FAQ Section */}

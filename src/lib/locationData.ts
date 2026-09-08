@@ -46,6 +46,7 @@ function mapCity(doc: CityDoc & { _id?: unknown }): City {
     airports: (doc.airports ?? []).map(mapAirport),
     faqs: (doc.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
     faqsAr: (doc.faqsAr ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
+    sections: (doc.sections ?? []) as any,
   };
 }
 

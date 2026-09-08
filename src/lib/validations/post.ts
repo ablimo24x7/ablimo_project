@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { SectionSchema } from "./location";
 
 const MediaItemSchema = z.object({
   url: z.string().optional().default(""),
@@ -33,13 +34,21 @@ export const PostCreateSchema = z.object({
   featured: z.boolean().optional().default(false),
   tags: z.array(z.string()).optional().default([]),
   views: z.number().int().min(0).optional().default(0),
-  status: z.enum(["draft", "staging", "review", "published", "scheduled", "archived"]).optional().default("draft"),
+  status: z.enum(["draft", "staging", "review", "published", "scheduled", "archived"]).optional().default("published"),
   locale: z.string().max(10).optional().default("en"),
 
   articleMedia: ArticleMediaSchema,
+
+  // Content mode: "wysiwyg" uses the 3 HTML fields, "sections" uses structured sections
+  contentMode: z.enum(["wysiwyg", "sections"]).optional().default("wysiwyg"),
+
+  // WYSIWYG content fields
   bodyContent: z.string().optional().default(""),
   keyTakeawaysContent: z.string().optional().default(""),
   finalThoughtsContent: z.string().optional().default(""),
+
+  // Sections content (structured blocks)
+  sections: z.array(SectionSchema).optional().default([]),
 
   // ABLimo template fields
   templateType: z.enum(["service-country", "service-city"]).optional().default("service-country"),
