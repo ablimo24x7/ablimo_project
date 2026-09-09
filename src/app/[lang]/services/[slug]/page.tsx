@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Calendar, Clock } from "lucide-react";
 import ServicePage from "../_components/ServicePage";
+import PageRenderer from "@/components/services/sections/page-renderer";
 import { resolveServicePage } from "@/lib/services";
 import { getAllPublishedArticlesFiltered } from "@/lib/blog";
 import {
@@ -53,15 +54,25 @@ export default async function Page({
     limit: 3,
   });
 
+  const hasPageSections = resolved.pageSections && resolved.pageSections.length > 0;
+
   return (
     <>
-      <ServicePage
-        params={params}
-        content={resolved.content}
-        breadcrumb={resolved.breadcrumb}
-        serviceName={resolved.content.title}
-        serviceUrl={`/${lang}/services/${slug}`}
-      />
+      {hasPageSections ? (
+        <PageRenderer
+          sections={resolved.pageSections!}
+          serviceName={resolved.content.title}
+          serviceUrl={`/${lang}/services/${slug}`}
+        />
+      ) : (
+        <ServicePage
+          params={params}
+          content={resolved.content}
+          breadcrumb={resolved.breadcrumb}
+          serviceName={resolved.content.title}
+          serviceUrl={`/${lang}/services/${slug}`}
+        />
+      )}
 
       {relatedArticles.length > 0 && (
         <section className="max-w-7xl mx-auto px-8 pb-20">

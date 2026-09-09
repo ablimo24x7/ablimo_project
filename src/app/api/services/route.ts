@@ -96,12 +96,15 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const doc = await Service.create({
-      ...data,
-      slug,
-      order: typeof data.order === "number" ? data.order : await Service.countDocuments(),
-    });
-    return NextResponse.json(doc, { status: 201 });
+    const rawPageSections = Array.isArray(body.pageSections) ? body.pageSections : [];
+    const { pageSections: _, ...createData } = { ...data, slug, order: typeof data.order === "number" ? data.order : await Service.countDocuments() };
+    const doc = await Service.create(createData);
+    // Bypass Mongoose entirely — Mixed type fields are silently dropped by create()
+    if (rawPageSections.length > 0) {
+      await Service.collection.updateOne({ _id: doc._id }, { $set: { pageSections: rawPageSections } });
+    }
+    const saved = await Service.findById(doc._id).lean();
+    return NextResponse.json(saved, { status: 201 });
   } catch (err) {
     if ((err as { code?: number })?.code === 11000) {
       return NextResponse.json({ error: "A service with this slug already exists." }, { status: 409 });

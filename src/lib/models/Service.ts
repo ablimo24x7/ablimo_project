@@ -3,6 +3,23 @@ import { Schema, model, models, type InferSchemaType } from "mongoose";
 export const ServiceStatuses = ["draft", "published", "archived"] as const;
 export type ServiceStatus = (typeof ServiceStatuses)[number];
 
+// ── Page Section Schema (section builder) ────────────────────────
+
+const pageSectionSchema = new Schema(
+  {
+    id: { type: String, required: true },
+    type: { type: String, required: true },
+    variant: { type: String, default: "default" },
+    order: { type: Number, default: 0 },
+    enabled: { type: Boolean, default: true },
+    content: { type: Schema.Types.Mixed, default: () => ({}) },
+    items: { type: [Schema.Types.Mixed], default: () => [] },
+    settings: { type: Schema.Types.Mixed, default: () => ({}) },
+    appearance: { type: Schema.Types.Mixed, default: () => ({}) },
+  },
+  { _id: false }
+);
+
 const featureSchema = new Schema(
   {
     icon: { type: String, default: "" },
@@ -85,6 +102,10 @@ const serviceSchema = new Schema(
     ctaLabel: { type: String, default: "" },
     ctaHref: { type: String, default: "" },
 
+    // Section builder: flexible page sections (clean break from flat fields)
+    // Use Mixed type — Mongoose subdocument casting silently drops complex nested arrays
+    pageSections: { type: Schema.Types.Mixed, default: () => [] },
+
     seo: {
       type: seoSchema,
       default: () => ({}),
@@ -116,5 +137,6 @@ export type ServiceBulletItem = InferSchemaType<typeof bulletSchema>;
 export type ServiceSectionItem = InferSchemaType<typeof serviceSectionSchema>;
 export type ServiceFaqItem = InferSchemaType<typeof faqSchema>;
 export type ServiceSeoItem = InferSchemaType<typeof seoSchema>;
+export type PageSectionItem = InferSchemaType<typeof pageSectionSchema>;
 
 export const Service = models.Service || model("Service", serviceSchema);

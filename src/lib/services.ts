@@ -18,6 +18,8 @@ import type {
   ServiceStructure,
   ServiceFaq,
 } from "@/app/[lang]/services/_components/ServicePage";
+import type { PageSection } from "@/components/services/sections/section-types";
+import { migrateFlatServiceToSections } from "@/components/services/sections/section-defaults";
 import { renderServiceIcon } from "@/components/services/service-icons";
 import { translateText, needsTranslation } from "@/lib/translate";
 import enUS from "@/app/[lang]/dictionaries/en-US.json";
@@ -58,7 +60,9 @@ export interface ResolvedServicePage {
   source: "db" | "dict";
   /** Dictionary key when served from dictionaries. */
   dictKey?: string;
-seo?: {
+  /** Section builder: structured page sections. When populated, use PageRenderer. */
+  pageSections?: PageSection[];
+  seo?: {
     metaTitle?: string;
     metaDescription?: string;
     ogImage?: string;
@@ -100,6 +104,8 @@ export interface ServiceContentSource {
   ctaDesc?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  /** Section builder: structured page sections */
+  pageSections?: PageSection[];
   seo?: { metaTitle?: string; metaDescription?: string; ogImage?: string };
   status?: string;
   showInMenu?: boolean;
@@ -268,6 +274,28 @@ export function buildDefaultServiceDocs(): ServiceContentSource[] {
       ctaDesc: content.ctaDesc,
       ctaLabel: content.ctaLabel,
       ctaHref: "",
+      // Generate pageSections from flat data for clean-break migration
+      pageSections: migrateFlatServiceToSections({
+        slug: category.slug,
+        title: content.title,
+        subtitle: content.subtitle,
+        heroImage: structure?.heroImage ?? DEFAULT_HERO,
+        features: content.features.map((f) => ({ icon: "", title: f.title ?? "", desc: f.desc ?? "" })),
+        cards: content.cards.map((c, i) => ({ image: structure?.cardImages?.[i] ?? "", tag: c.tag ?? "", title: c.title ?? "", desc: c.desc ?? "" })),
+        sections: content.sections.map((s, i) => ({
+          image: structure?.sectionImages?.[i]?.image ?? "",
+          imageAlt: s.imageAlt ?? "",
+          title: s.title ?? "",
+          paragraphs: s.paragraphs ?? [],
+          bullets: s.bullets ?? [],
+          imageSide: (structure?.sectionImages?.[i]?.imageSide ?? "left") as "left" | "right",
+          dark: structure?.sectionImages?.[i]?.dark ?? false,
+        })),
+        faqs: content.faqs.map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
+        ctaTitle: content.ctaTitle,
+        ctaDesc: content.ctaDesc,
+        ctaLabel: content.ctaLabel,
+      }),
       seo: {
         metaTitle: texts.metadata?.title ?? content.title,
         metaDescription: texts.metadata?.description ?? content.subtitle ?? "",
@@ -531,7 +559,7 @@ async function translateService(
     }))
   );
 
-  return { ...doc, title, subtitle, desc, ctaTitle, ctaDesc, ctaLabel, faqs: faqsOut, features: featuresOut, cards: cardsOut, sections: sectionsOut };
+  return { ...doc, title, subtitle, desc, ctaTitle, ctaDesc, ctaLabel, faqs: faqsOut, features: featuresOut, cards: cardsOut, sections: sectionsOut, pageSections: doc.pageSections };
 }
 
 /**
@@ -550,12 +578,34 @@ export async function resolveServicePage(
     const locale = normalizeLocale(lang);
     const localized =
       needsTranslation(dbDoc.locale ?? "en", locale)
-        ? await translateService(dbDoc, locale)
+        ? await translateService(dbDoc as ServiceContentSource, locale)
         : dbDoc;
+
+    // Check for section builder data
+    const pageSections = (localized as Record<string, unknown>).pageSections as PageSection[] | undefined;
+
+    // If no pageSections, migrate from flat fields and persist back to DB
+    let sections: PageSection[];
+    if (pageSections && pageSections.length > 0) {
+      sections = pageSections;
+    } else {
+      sections = migrateFlatServiceToSections(localized as Record<string, unknown>);
+      // Persist migrated sections so subsequent requests don't re-migrate
+      try {
+        await Service.collection.updateOne(
+          { _id: (localized as { _id?: import("mongoose").Types.ObjectId })._id },
+          { $set: { pageSections: sections } }
+        );
+      } catch {
+        // Best effort - don't fail the page render if persist fails
+      }
+    }
+
     return {
-      content: toServiceContent(localized),
+      content: toServiceContent(localized as ServiceContentSource),
       breadcrumb: localized.breadcrumb || localized.title || "",
       source: "db",
+      pageSections: sections,
       seo: {
         metaTitle: (localized.seo as { metaTitle?: string } | undefined)?.metaTitle,
         metaDescription: (localized.seo as { metaDescription?: string } | undefined)?.metaDescription,
@@ -578,11 +628,31 @@ export async function resolveServicePage(
   );
   const content = buildServiceContent(texts, structure);
 
+  // For dict-based services, generate pageSections from content
+  const dictSections = migrateFlatServiceToSections({
+    slug,
+    title: content.title,
+    subtitle: content.subtitle,
+    heroImage: content.heroImage,
+    features: (content.features ?? []).map((f) => ({
+      icon: "",
+      title: f.title,
+      desc: f.desc,
+    })),
+    cards: content.cards,
+    sections: content.sections,
+    faqs: content.faqs,
+    ctaTitle: content.ctaTitle,
+    ctaDesc: content.ctaDesc,
+    ctaLabel: content.ctaLabel,
+  });
+
   return {
     content,
     breadcrumb: texts.title,
     source: "dict",
     dictKey,
+    pageSections: dictSections,
     seo: {
       metaTitle: texts.metadata?.title,
       metaDescription: texts.metadata?.description,

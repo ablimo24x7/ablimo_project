@@ -27,7 +27,12 @@ import {
   ArrowDown,
   ChevronDown,
   ChevronUp,
+  ExternalLink,
+  Layout,
 } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ServiceSectionEditor } from "@/components/admin/service-section-editor";
+import type { PageSection } from "@/components/services/sections/section-types";
 
 type ServiceFeature = {
   icon: string;
@@ -75,6 +80,7 @@ type ServiceData = {
   ctaDesc: string;
   ctaLabel: string;
   ctaHref: string;
+  pageSections: PageSection[];
   status: string;
   showInMenu: boolean;
   order: number;
@@ -103,6 +109,7 @@ const defaultService: ServiceData = {
   ctaDesc: "",
   ctaLabel: "",
   ctaHref: "",
+  pageSections: [],
   status: "published",
   showInMenu: true,
   order: 0,
@@ -133,6 +140,7 @@ function normalizeService(data?: ServiceData): ServiceData {
         dark: s.dark ?? false,
       })) ?? [],
     faqs: d.faqs?.map((f) => ({ q: f.q ?? "", a: f.a ?? "" })) ?? [],
+    pageSections: (d.pageSections ?? []) as PageSection[],
     seo: {
       metaTitle: d.seo?.metaTitle ?? "",
       metaDescription: d.seo?.metaDescription ?? "",
@@ -266,13 +274,22 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
             Cancel
           </Button>
           {isEdit && viewUrl && (
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => window.open(viewUrl, "_blank")}
-            >
-              View on Site
-            </Button>
+            <>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => window.open(viewUrl, "_blank")}
+              >
+                <ExternalLink className="h-4 w-4 mr-1" /> Preview Live
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => window.open(viewUrl, "_blank")}
+              >
+                View on Site
+              </Button>
+            </>
           )}
           <Button type="submit" disabled={mutation.isPending}>
             {mutation.isPending ? "Saving..." : isEdit ? "Update" : "Create"}
@@ -282,7 +299,39 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
 
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
-          <ParagraphCard title="Content">
+          <Card>
+            <CardContent className="p-4 space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-2">
+                  <Label>Title *</Label>
+                  <Input value={form.title} onChange={(e) => update("title", e.target.value)} placeholder="Executive & Corporate Mobility" />
+                </div>
+                <div className="space-y-2">
+                  <Label>Slug</Label>
+                  <Input value={form.slug} onChange={(e) => update("slug", e.target.value)} placeholder="executive-corporate-mobility" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Tabs defaultValue="sections">
+            <TabsList className="w-full">
+              <TabsTrigger value="sections" className="flex-1">
+                <Layout className="h-4 w-4 mr-1" /> Page Sections
+              </TabsTrigger>
+              <TabsTrigger value="legacy" className="flex-1">Legacy Content</TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="sections" className="mt-4">
+              <ServiceSectionEditor
+                sections={form.pageSections}
+                onChange={(sections) => update("pageSections", sections)}
+                serviceSlug={form.slug}
+              />
+            </TabsContent>
+
+            <TabsContent value="legacy" className="mt-4 space-y-6">
+              <ParagraphCard title="Content">
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label>Title *</Label>
@@ -602,6 +651,8 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
               </div>
             </div>
           </ParagraphCard>
+            </TabsContent>
+          </Tabs>
         </div>
 
         <div className="space-y-6">

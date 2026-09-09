@@ -41,6 +41,20 @@ export const ServiceSeoSchema = z.object({
   ogImage: z.string().max(1000).optional().default(""),
 });
 
+// ── Page Section Schema (section builder) ────────────────────────
+
+export const PageSectionSchema = z.object({
+  id: z.string().min(1),
+  type: z.string().min(1),
+  variant: z.string().optional().default("default"),
+  order: z.number().int().min(0).optional().default(0),
+  enabled: z.boolean().optional().default(true),
+  content: z.record(z.string(), z.unknown()).optional().default({}),
+  items: z.array(z.record(z.string(), z.unknown())).optional().default([]),
+  settings: z.record(z.string(), z.unknown()).optional().default({}),
+  appearance: z.record(z.string(), z.unknown()).optional().default({}),
+});
+
 export const ServiceCreateSchema = z.object({
   slug: z.string().min(1).max(200),
   title: z.string().min(1).max(200),
@@ -60,6 +74,9 @@ export const ServiceCreateSchema = z.object({
   ctaDesc: z.string().max(1000).optional().default(""),
   ctaLabel: z.string().max(200).optional().default(""),
   ctaHref: z.string().max(1000).optional().default(""),
+
+  // Section builder
+  pageSections: z.array(PageSectionSchema).optional().default([]),
 
   seo: ServiceSeoSchema.optional(),
 

@@ -5,6 +5,7 @@ import { parseJsonBody } from "@/lib/api/errors";
 import { ServiceUpdateSchema } from "@/lib/validations/service";
 import { isDatabaseEnabled } from "@/lib/services";
 import { toSlug } from "@/lib/slug";
+import { Types } from "mongoose";
 
 export async function GET(
   _req: NextRequest,
@@ -16,7 +17,7 @@ export async function GET(
   }
   await connectDB();
   const { id } = await params;
-  const item = await Service.findById(id).lean();
+  const item = await Service.collection.findOne({ _id: new Types.ObjectId(id) });
   if (!item) return NextResponse.json({ error: "Not found" }, { status: 404 });
   return NextResponse.json(item);
 }
@@ -61,12 +62,24 @@ export async function PUT(
   }
 
   try {
-    const item = await Service.findByIdAndUpdate(id, data, {
-      new: true,
-      runValidators: true,
-    }).lean();
+    const rawPageSections = Array.isArray(body.pageSections) ? body.pageSections : undefined;
+
+    // Use raw MongoDB driver for non-pageSections fields (Mongoose casting works fine for these)
+    const { pageSections: _, ...updateData } = data;
+    const item = await Service.findByIdAndUpdate(
+      id,
+      { $set: updateData },
+      { new: true, runValidators: true }
+    ).lean();
     if (!item) return NextResponse.json({ error: "Not found" }, { status: 404 });
-    return NextResponse.json(item);
+
+    // Bypass Mongoose entirely for pageSections — Mixed type fields silently dropped by $set
+    if (rawPageSections !== undefined) {
+      await Service.collection.updateOne({ _id: item._id }, { $set: { pageSections: rawPageSections } });
+    }
+
+    const saved = await Service.findById(id).lean();
+    return NextResponse.json(saved);
   } catch (err) {
     if ((err as { code?: number })?.code === 11000) {
       return NextResponse.json(
