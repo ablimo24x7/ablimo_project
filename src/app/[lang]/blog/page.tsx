@@ -22,6 +22,21 @@ export async function generateMetadata({
   return {
     title: dict.blog.allArticles,
     description: dict.blog.allArticlesDescription,
+    alternates: {
+      canonical: "https://ab.limo/blog",
+      languages: {
+        "en-US": "https://ab.limo/en-US/blog",
+        "en-GB": "https://ab.limo/en-GB/blog",
+        ar: "https://ab.limo/ar/blog",
+        "x-default": "https://ab.limo/en-US/blog",
+      },
+    },
+    openGraph: {
+      title: dict.blog.allArticles,
+      description: dict.blog.allArticlesDescription,
+      type: "website",
+      siteName: "AB.Limo",
+    },
   };
 }
 

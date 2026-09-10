@@ -21,6 +21,21 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     const existing = await Article.findById(id);
     if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
 
+    // Auto-generate SEO metadata if title/excerpt changed and SEO fields are empty
+    if (!body.seo_metadata) body.seo_metadata = {};
+    if (body.title && !body.seo_metadata.metaTitle && !existing.seo_metadata?.metaTitle) {
+      body.seo_metadata.metaTitle = body.title;
+    }
+    if (body.excerpt && !body.seo_metadata.metaDescription && !existing.seo_metadata?.metaDescription) {
+      body.seo_metadata.metaDescription = body.excerpt.slice(0, 160);
+    }
+    if (body.title && !body.seo_metadata.metaTitle && existing.seo_metadata?.metaTitle) {
+      // Keep existing SEO title — don't overwrite
+    }
+    if (body.excerpt && !body.seo_metadata.metaDescription && existing.seo_metadata?.metaDescription) {
+      // Keep existing SEO description — don't overwrite
+    }
+
     for (const key of Object.keys(body)) {
       (existing as any)[key] = body[key];
     }

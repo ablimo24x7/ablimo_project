@@ -36,6 +36,18 @@ export async function POST(req: NextRequest) {
   const body = await parseJsonBody(req);
   if (body instanceof NextResponse) return body;
 
+  // Auto-generate SEO metadata if not provided
+  if (!body.seo_metadata) body.seo_metadata = {};
+  if (!body.seo_metadata.metaTitle) {
+    body.seo_metadata.metaTitle = body.title || "";
+  }
+  if (!body.seo_metadata.metaDescription) {
+    body.seo_metadata.metaDescription = (body.excerpt || body.title || "").slice(0, 160);
+  }
+  if (!body.seo_metadata.ogImage) {
+    body.seo_metadata.ogImage = body.articleMedia?.heroCoverMedia?.url || "";
+  }
+
   try {
     const article = await Article.create(body);
 
@@ -60,6 +72,12 @@ export async function POST(req: NextRequest) {
           }))
         );
 
+        // Auto-translate SEO metadata for Arabic
+        const [arMetaTitle, arMetaDescription] = await Promise.all([
+          googleTranslate(body.seo_metadata?.metaTitle || article.title || "", "ar"),
+          googleTranslate(body.seo_metadata?.metaDescription || article.excerpt || "", "ar"),
+        ]);
+
         await Article.create({
           ...article,
           _id: undefined,
@@ -69,6 +87,11 @@ export async function POST(req: NextRequest) {
           keyTakeawaysContent,
           finalThoughtsContent,
           faqs: translatedFaqs,
+          seo_metadata: {
+            metaTitle: arMetaTitle,
+            metaDescription: arMetaDescription,
+            ogImage: body.seo_metadata?.ogImage || article.articleMedia?.heroCoverMedia?.url || "",
+          },
           locale: "ar",
           createdAt: undefined,
           updatedAt: undefined,

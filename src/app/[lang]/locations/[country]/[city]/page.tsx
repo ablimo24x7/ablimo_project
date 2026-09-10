@@ -1,10 +1,34 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import { getCityForRequest, getRoutesForCity } from "@/lib/locationData";
 import CityDetailClient from "../../_components/CityDetailClient";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; country: string; city: string }>;
+}): Promise<Metadata> {
+  const { lang, country: countryParam, city: cityParam } = await params;
+  const res = await getCityForRequest(countryParam, cityParam);
+  if (!res) return {};
+
+  const cityName = lang === "ar" && res.city.nameAr ? res.city.nameAr : res.city.name;
+  const countryName = lang === "ar" && res.country.nameAr ? res.country.nameAr : res.country.name;
+  const description = lang === "ar" && res.city.descriptionAr ? res.city.descriptionAr : res.city.description;
+
+  return generateSeoMetadata({
+    title: `Premium Chauffeur Service in ${cityName}, ${countryName} | AB.Limo`,
+    description: description || `AB.Limo provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`,
+    path: `/locations/${countryParam}/${cityParam}`,
+    lang,
+    keywords: `AB.Limo ${cityName}, chauffeur service ${cityName}, luxury transportation ${cityName}, airport transfer ${cityName}, ${cityName} limousine, ${countryName} executive travel`,
+  });
+}
 
 export default async function CityPage({
     params,

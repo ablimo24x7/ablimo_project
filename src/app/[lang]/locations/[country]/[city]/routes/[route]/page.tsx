@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -17,6 +18,39 @@ import {
     getCityForRequest,
     findRouteData,
 } from "@/lib/locationData";
+import { generateSeoMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; country: string; city: string; route: string }>;
+}): Promise<Metadata> {
+  const { lang, country: countryParam, city: cityParam, route: routeSlug } = await params;
+  const originCountry = await getCountryForRequest(countryParam);
+  if (!originCountry) return {};
+  const originRes = await getCityForRequest(countryParam, cityParam);
+  const originCity = originRes?.city ?? resolveCity(originCountry, cityParam);
+  if (!originCity) return {};
+
+  const [fromRaw, toRaw] = routeSlug.split("-to-");
+  if (!fromRaw || !toRaw) return {};
+  const from = resolveCity(originCountry, fromRaw) ?? { slug: fromRaw, name: titleFromSlug(fromRaw) };
+  const toCities = await getAllCountries();
+  let to: City | undefined;
+  for (const c of toCities) {
+    const found = resolveCity(c, toRaw);
+    if (found) { to = found; break; }
+  }
+  if (!to) to = { slug: toRaw, name: titleFromSlug(toRaw), airports: [] };
+
+  return generateSeoMetadata({
+    title: `${from.name} to ${to.name} Transfer | AB.Limo Long Distance`,
+    description: `Book a luxury ${from.name} to ${to.name} transfer with AB.Limo. Professional chauffeurs, fixed pricing, and premium vehicles for your long-distance journey.`,
+    path: `/locations/${countryParam}/${cityParam}/routes/${routeSlug}`,
+    lang,
+    keywords: `${from.name} to ${to.name}, ${from.name} transfer, long distance ${from.name}, AB.Limo route, intercity transfer ${to.name}`,
+  });
+}
 
 
 const cityImages: Record<string, string> = {

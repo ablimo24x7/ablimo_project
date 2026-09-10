@@ -1,6 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Corporate Mobility Solutions | AB.Limo Executive Transportation",
+    description:
+      "AB.Limo delivers tailored corporate mobility programs for enterprises. Dedicated account management, real-time reporting, and premium fleet access across the GCC and worldwide.",
+    path: "/corporations",
+    lang,
+    keywords:
+      "corporate mobility, executive transportation, business travel solutions, corporate fleet management, AB.Limo corporate, enterprise travel, dedicated chauffeur service, corporate account",
+  });
+}
 
 const gridImages = [
   "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=400&fit=crop",

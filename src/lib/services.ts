@@ -601,15 +601,41 @@ export async function resolveServicePage(
       }
     }
 
+    const serviceTitle = (localized as ServiceContentSource).title || "Service";
+    const serviceSubtitle = (localized as ServiceContentSource).subtitle || "";
+    const serviceDesc = (localized as ServiceContentSource).desc || "";
+    const rawSeo = (localized.seo as { metaTitle?: string; metaDescription?: string; ogImage?: string } | undefined);
+    const rawHeroImage = (localized as ServiceContentSource).heroImage || "";
+
+    // Extract SEO from pageSections if manual fields are empty
+    let sectionDescription = "";
+    if (sections?.length) {
+      for (const section of sections) {
+        const content = section.content as Record<string, unknown>;
+        if (content?.subtitle && typeof content.subtitle === "string" && content.subtitle.trim()) {
+          sectionDescription = content.subtitle.trim();
+          break;
+        }
+        if (content?.description && typeof content.description === "string" && content.description.trim()) {
+          sectionDescription = content.description.trim();
+          break;
+        }
+      }
+    }
+
+    const metaTitle = rawSeo?.metaTitle || `${serviceTitle} | AB.Limo`;
+    const metaDescription = rawSeo?.metaDescription || serviceSubtitle.trim().slice(0, 160) || serviceDesc.trim().slice(0, 160) || sectionDescription.slice(0, 160) || serviceTitle;
+    const ogImage = rawSeo?.ogImage || rawHeroImage;
+
     return {
       content: toServiceContent(localized as ServiceContentSource),
       breadcrumb: localized.breadcrumb || localized.title || "",
       source: "db",
       pageSections: sections,
       seo: {
-        metaTitle: (localized.seo as { metaTitle?: string } | undefined)?.metaTitle,
-        metaDescription: (localized.seo as { metaDescription?: string } | undefined)?.metaDescription,
-        ogImage: (localized.seo as { ogImage?: string } | undefined)?.ogImage,
+        metaTitle,
+        metaDescription,
+        ogImage,
       },
     };
   }

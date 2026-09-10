@@ -19,6 +19,21 @@ export async function generateMetadata({
   return {
     title: dict.industries.metadata.title,
     description: dict.industries.metadata.description,
+    alternates: {
+      canonical: "https://ab.limo/industries",
+      languages: {
+        "en-US": "https://ab.limo/en-US/industries",
+        "en-GB": "https://ab.limo/en-GB/industries",
+        ar: "https://ab.limo/ar/industries",
+        "x-default": "https://ab.limo/en-US/industries",
+      },
+    },
+    openGraph: {
+      title: dict.industries.metadata.title,
+      description: dict.industries.metadata.description,
+      type: "website",
+      siteName: "AB.Limo",
+    },
   };
 }
 

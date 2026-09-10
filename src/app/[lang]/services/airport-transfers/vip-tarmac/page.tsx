@@ -22,6 +22,21 @@ export async function generateMetadata({
   return {
     title: dict.servicePages.airportTransferVipTarmac.metadata.title,
     description: dict.servicePages.airportTransferVipTarmac.metadata.description,
+    alternates: {
+      canonical: "https://ab.limo/services/airport-transfers/vip-tarmac",
+      languages: {
+        "en-US": "https://ab.limo/en-US/services/airport-transfers/vip-tarmac",
+        "en-GB": "https://ab.limo/en-GB/services/airport-transfers/vip-tarmac",
+        ar: "https://ab.limo/ar/services/airport-transfers/vip-tarmac",
+        "x-default": "https://ab.limo/en-US/services/airport-transfers/vip-tarmac",
+      },
+    },
+    openGraph: {
+      title: dict.servicePages.airportTransferVipTarmac.metadata.title,
+      description: dict.servicePages.airportTransferVipTarmac.metadata.description,
+      type: "website",
+      siteName: "AB.Limo",
+    },
   };
 }
 

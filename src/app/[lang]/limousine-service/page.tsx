@@ -1,13 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import BookingWidget from "@/components/layout/BookingWidget";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-const metadata = {
-  title: "Limo Service Around the Globe | AB.Limo",
-  description:
-    "Premium limousine service in cities worldwide. Book your luxury ride with AB.Limo for airport transfers, business travel, and special events.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Limo Service Around the Globe",
+    description:
+      "Premium limousine service in cities worldwide. Book your luxury ride with AB.Limo for airport transfers, business travel, and special events.",
+    path: "/limousine-service",
+    lang,
+    keywords: "limousine service, limo service, luxury limo, AB.Limo, executive limousine, wedding limo, prom limo, airport limo",
+  });
+}
 
 const features = [
   {

@@ -64,8 +64,12 @@ async function discoverDynamicRoutes(): Promise<{
 
   try {
     const { getAllPublishedArticles } = await import("@/lib/blog");
-    const articles = await getAllPublishedArticles("en");
-    result.blogSlugs = articles.map((a) => a.slug);
+    const enArticles = await getAllPublishedArticles("en");
+    const arArticles = await getAllPublishedArticles("ar");
+    const allSlugs = new Set<string>();
+    for (const a of enArticles) allSlugs.add(a.slug);
+    for (const a of arArticles) allSlugs.add(a.slug);
+    result.blogSlugs = Array.from(allSlugs);
   } catch {
     // DB unavailable — skip dynamic blog
   }

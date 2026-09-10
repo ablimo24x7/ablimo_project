@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Careers at AB.Limo - Join Our Global Team",
-  description:
-    "Explore exciting career opportunities at AB.Limo. Join a growing international team and help shape the future of luxury ground transportation.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Careers at AB.Limo - Join Our Global Team",
+    description:
+      "Explore exciting career opportunities at AB.Limo. Join a growing international team and help shape the future of luxury ground transportation.",
+    path: "/career",
+    lang,
+    keywords: "AB.Limo careers, chauffeur jobs, luxury transport jobs, AB.Limo hiring, driver careers, corporate mobility careers",
+  });
+}
 
 export default async function CareerPage({
   params,

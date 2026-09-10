@@ -1,7 +1,26 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
 import { cityUrl, locationsUrl, resolveCity, resolveCountry } from "@/lib/locations";
+import { generateSeoMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "About AB.Limo | Premium Chauffeur & Corporate Mobility Provider",
+    description:
+      "Learn about AB.Limo, a leading executive mobility provider operating across 6 GCC countries with 25+ cities, 10+ years of experience, and over 1 million rides delivered. Our fleet of luxury vehicles serves airport transfers, corporate travel, and special events.",
+    path: "/about",
+    lang,
+    keywords:
+      "about AB.Limo, AB.Limo company, luxury transportation provider, GCC chauffeur service, corporate mobility company, executive travel provider, AB.Limo fleet, premium limousine company",
+  });
+}
 
 const statsData = [
   { number: "6", labelKey: "countries" },

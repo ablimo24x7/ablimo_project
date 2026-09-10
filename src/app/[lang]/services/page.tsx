@@ -20,6 +20,21 @@ export async function generateMetadata({
   return {
     title: dict.services.metadata.title,
     description: dict.services.metadata.description,
+    alternates: {
+      canonical: "https://ab.limo/services",
+      languages: {
+        "en-US": "https://ab.limo/en-US/services",
+        "en-GB": "https://ab.limo/en-GB/services",
+        ar: "https://ab.limo/ar/services",
+        "x-default": "https://ab.limo/en-US/services",
+      },
+    },
+    openGraph: {
+      title: dict.services.metadata.title,
+      description: dict.services.metadata.description,
+      type: "website",
+      siteName: "AB.Limo",
+    },
   };
 }
 

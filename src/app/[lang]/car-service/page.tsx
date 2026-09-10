@@ -1,13 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import BookingWidget from "@/components/layout/BookingWidget";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-const metadata = {
-  title: "Professional Car Service with AB.Limo | AB.Limo",
-  description:
-    "Premium private car service worldwide. Book your professional ride with AB.Limo for airport transfers, business travel, and daily commutes.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Professional Car Service with AB.Limo",
+    description:
+      "Premium private car service worldwide. Book your professional ride with AB.Limo for airport transfers, business travel, and daily commutes.",
+    path: "/car-service",
+    lang,
+    keywords: "car service, private car service, professional driver, AB.Limo, luxury car service, airport transfer, business travel",
+  });
+}
 
 const features = [
   {

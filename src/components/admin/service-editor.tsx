@@ -207,12 +207,54 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
         next.slug = slugify(String(value), { lower: true, strict: true });
         if (!next.breadcrumb) next.breadcrumb = String(value);
       }
+      // Auto-generate SEO metaTitle when title changes and SEO fields are empty
+      if (key === "title" && !prev.seo.metaTitle) {
+        next.seo = { ...next.seo, metaTitle: `${String(value)} | AB.Limo` };
+      }
+      // Auto-generate SEO metaDescription when subtitle/desc changes and SEO field is empty
+      if ((key === "subtitle" || key === "desc") && !prev.seo.metaDescription) {
+        const desc = String(value).trim();
+        if (desc) next.seo = { ...next.seo, metaDescription: desc.slice(0, 160) };
+      }
+      // Auto-generate SEO metaDescription from title if subtitle is set and desc is empty
+      if (key === "subtitle" && !prev.seo.metaDescription && prev.title) {
+        const subtitle = String(value).trim();
+        if (subtitle) {
+          next.seo = { ...next.seo, metaDescription: subtitle.slice(0, 160) };
+        }
+      }
       return next;
     });
   };
 
   const updateSeo = (patch: Partial<ServiceData["seo"]>) =>
     setForm((prev) => ({ ...prev, seo: { ...prev.seo, ...patch } }));
+
+  const regenerateSeo = () => {
+    setForm((prev) => {
+      const metaTitle = prev.seo.metaTitle || `${prev.title} | AB.Limo`;
+      let metaDescription = prev.seo.metaDescription;
+      if (!metaDescription) {
+        metaDescription = prev.subtitle?.trim().slice(0, 160) || prev.desc?.trim().slice(0, 160) || prev.title;
+      }
+      const keywords = [
+        prev.title,
+        "AB.Limo",
+        "luxury chauffeur",
+        "premium transportation",
+        "executive travel",
+      ].filter(Boolean).join(", ");
+      return {
+        ...prev,
+        seo: {
+          metaTitle,
+          metaDescription,
+          ogImage: prev.seo.ogImage || prev.heroImage || "",
+        },
+      };
+    });
+    toast.success("SEO fields regenerated from content");
+  };
 
   const addAt = <T,>(key: keyof ServiceData, item: T) =>
     setForm(
@@ -687,17 +729,32 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
 
           <ParagraphCard title="SEO">
             <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <Label className="text-sm font-medium">Search Engine Optimization</Label>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={regenerateSeo}
+                  className="text-xs h-7"
+                >
+                  Regenerate SEO
+                </Button>
+              </div>
               <div className="space-y-2">
                 <Label>Meta Title</Label>
-                <Input value={form.seo.metaTitle} onChange={(e) => updateSeo({ metaTitle: e.target.value })} />
+                <Input value={form.seo.metaTitle} onChange={(e) => updateSeo({ metaTitle: e.target.value })} placeholder={`${form.title || "Service Title"} | AB.Limo`} />
+                <p className="text-xs text-muted-foreground">{form.seo.metaTitle.length}/200 characters</p>
               </div>
               <div className="space-y-2">
                 <Label>Meta Description</Label>
-                <Textarea rows={3} value={form.seo.metaDescription} onChange={(e) => updateSeo({ metaDescription: e.target.value })} />
+                <Textarea rows={3} value={form.seo.metaDescription} onChange={(e) => updateSeo({ metaDescription: e.target.value })} placeholder="Auto-generated from subtitle or description..." />
+                <p className="text-xs text-muted-foreground">{form.seo.metaDescription.length}/160 characters</p>
               </div>
               <div className="space-y-2">
                 <Label>OG Image URL</Label>
                 <Input value={form.seo.ogImage} onChange={(e) => updateSeo({ ogImage: e.target.value })} placeholder="https://..." />
+                <p className="text-xs text-muted-foreground">Fallback: hero image</p>
               </div>
             </div>
           </ParagraphCard>

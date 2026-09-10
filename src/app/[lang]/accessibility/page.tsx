@@ -6,12 +6,23 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Accessibility | AB.Limo",
-  description:
-    "AB.Limo is committed to ensuring digital accessibility for all users. Read our accessibility statement and learn about our ongoing efforts.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Accessibility",
+    description:
+      "AB.Limo is committed to ensuring digital accessibility for all users. Read our accessibility statement and learn about our ongoing efforts.",
+    path: "/accessibility",
+    lang,
+    keywords: "AB.Limo accessibility, digital accessibility, accessible transportation, wheelchair accessible vehicle",
+  });
+}
 
 export default async function AccessibilityPage({
   params,

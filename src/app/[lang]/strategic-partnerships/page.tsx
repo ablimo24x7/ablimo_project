@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Partnership Opportunities with AB.Limo | Strategic Partnerships",
-  description:
-    "Explore strategic partnership opportunities with AB.Limo. Join forces with a leading luxury chauffeur service across aviation, cruise, financial, and hotel sectors.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Partnership Opportunities with AB.Limo",
+    description:
+      "Explore strategic partnership opportunities with AB.Limo. Join forces with a leading luxury chauffeur service across aviation, cruise, financial, and hotel sectors.",
+    path: "/strategic-partnerships",
+    lang,
+    keywords: "AB.Limo partnerships, strategic alliances, aviation partnership, hotel partnership, luxury transport collaboration",
+  });
+}
 
 export default async function StrategicPartnershipsPage({
   params,

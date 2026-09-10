@@ -61,6 +61,13 @@ export async function PUT(
     data.slug = slug;
   }
 
+  // Auto-generate SEO metadata if title changed and SEO fields are empty
+  if (data.seo) {
+    if (data.seo.metaTitle === undefined) data.seo.metaTitle = "";
+    if (data.seo.metaDescription === undefined) data.seo.metaDescription = "";
+    if (data.seo.ogImage === undefined) data.seo.ogImage = "";
+  }
+
   try {
     const rawPageSections = Array.isArray(body.pageSections) ? body.pageSections : undefined;
 

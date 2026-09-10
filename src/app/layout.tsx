@@ -10,8 +10,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AB Limo",
-  description: "AB Limo - Premium Limousine Service",
+  title: {
+    default: "AB.Limo | Premium Executive & Corporate Mobility",
+    template: "%s | AB.Limo",
+  },
+  description:
+    "AB.Limo provides premium chauffeur-driven transportation across the GCC and worldwide. Executive transfers, corporate mobility, event logistics, and airport services.",
+  metadataBase: new URL("https://ab.limo"),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon-32x32.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

@@ -10,12 +10,23 @@ import {
   findCityByName,
   routeUrl,
 } from "@/lib/locations";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "City-to-City Long Distance Car Service | AB.Limo",
-  description:
-    "Travel between cities in luxury and comfort. Book a long distance car service with professional chauffeurs and premium vehicles.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "City-to-City Long Distance Car Service",
+    description:
+      "Travel between cities in luxury and comfort. Book a long distance car service with professional chauffeurs and premium vehicles.",
+    path: "/city-to-city",
+    lang,
+    keywords: "city to city transfer, long distance car service, intercity travel, AB.Limo, luxury transfer, intercity chauffeur",
+  });
+}
 
 const topCities = [
   { name: "Dubai", country: "UAE", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop" },

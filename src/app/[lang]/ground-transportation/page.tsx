@@ -1,13 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import BookingWidget from "@/components/layout/BookingWidget";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-const metadata = {
-  title: "Comprehensive Ground Transportation | AB.Limo",
-  description:
-    "Complete ground transportation solutions for individuals and businesses. Airport transfers, corporate travel, and event transportation worldwide.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Comprehensive Ground Transportation",
+    description:
+      "Complete ground transportation solutions for individuals and businesses. Airport transfers, corporate travel, and event transportation worldwide.",
+    path: "/ground-transportation",
+    lang,
+    keywords: "ground transportation, corporate transportation, business travel, AB.Limo, executive transport, event logistics, airport shuttle",
+  });
+}
 
 export default async function GroundTransportationPage({
   params,

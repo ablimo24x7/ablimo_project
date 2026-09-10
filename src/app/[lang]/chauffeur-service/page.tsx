@@ -1,13 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import BookingWidget from "@/components/layout/BookingWidget";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-const metadata = {
-  title: "Your Professional Chauffeur Service | AB.Limo",
-  description:
-    "Hire a professional chauffeur for luxury transportation. Experienced drivers, premium vehicles, and exceptional service worldwide.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Your Professional Chauffeur Service",
+    description:
+      "Hire a professional chauffeur for luxury transportation. Experienced drivers, premium vehicles, and exceptional service worldwide.",
+    path: "/chauffeur-service",
+    lang,
+    keywords: "chauffeur service, professional chauffeur, executive driver, AB.Limo, private driver, luxury chauffeur, hire chauffeur",
+  });
+}
 
 const features = [
   {

@@ -7,12 +7,23 @@ import {
   type Locale,
   type Dictionary,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms of Use | AB.Limo",
-  description:
-    "Read the Terms of Use governing your use of AB.Limo's premium luxury chauffeur service and booking platform.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Terms of Use",
+    description:
+      "Read the Terms of Use governing your use of AB.Limo's premium luxury chauffeur service and booking platform.",
+    path: "/terms",
+    lang,
+    keywords: "AB.Limo terms, terms of use, booking terms, service agreement, terms and conditions",
+  });
+}
 
 const sections = [
   { id: "general-provisions", title: "1. General Provisions" },

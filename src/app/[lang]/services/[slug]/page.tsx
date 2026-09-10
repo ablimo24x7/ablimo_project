@@ -13,6 +13,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { ServiceJsonLd, BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 
 export async function generateMetadata({
   params,
@@ -25,12 +26,22 @@ export async function generateMetadata({
   const title = resolved.seo?.metaTitle || resolved.content.title || "Service";
   const description =
     resolved.seo?.metaDescription || resolved.content.subtitle || "";
+  const cleanPath = `/services/${slug}`;
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://ab.limo${cleanPath}`,
+      languages: {
+        "en-US": `https://ab.limo/en-US${cleanPath}`,
+        "en-GB": `https://ab.limo/en-GB${cleanPath}`,
+        ar: `https://ab.limo/ar${cleanPath}`,
+        "x-default": `https://ab.limo/en-US${cleanPath}`,
+      },
+    },
     openGraph: resolved.seo?.ogImage
       ? { title, description, images: [resolved.seo.ogImage] }
-      : undefined,
+      : { title, description, type: "website", siteName: "AB.Limo" },
   };
 }
 
@@ -58,6 +69,18 @@ export default async function Page({
 
   return (
     <>
+      <ServiceJsonLd
+        name={resolved.content.title}
+        description={resolved.content.subtitle || ""}
+        url={`/${lang}/services/${slug}`}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: `/${lang}` },
+          { name: "Services", url: `/${lang}/services` },
+          { name: resolved.content.title, url: `/${lang}/services/${slug}` },
+        ]}
+      />
       {hasPageSections ? (
         <PageRenderer
           sections={resolved.pageSections!}

@@ -95,6 +95,18 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Auto-generate SEO metadata if not provided
+  if (!data.seo) data.seo = { metaTitle: "", metaDescription: "", ogImage: "" };
+  if (!data.seo.metaTitle) {
+    data.seo.metaTitle = `${data.title} | AB.Limo`;
+  }
+  if (!data.seo.metaDescription) {
+    data.seo.metaDescription = (data.subtitle || data.desc || data.title || "").slice(0, 160);
+  }
+  if (!data.seo.ogImage) {
+    data.seo.ogImage = data.heroImage || "";
+  }
+
   try {
     const rawPageSections = Array.isArray(body.pageSections) ? body.pageSections : [];
     const { pageSections: _, ...createData } = { ...data, slug, order: typeof data.order === "number" ? data.order : await Service.countDocuments() };

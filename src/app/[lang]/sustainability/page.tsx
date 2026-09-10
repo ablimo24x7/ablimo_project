@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Sustainability - AB.Limo | Driving a Greener Future",
-  description:
-    "AB.Limo is committed to sustainability through electric vehicles, carbon offsetting, and net-zero initiatives. Learn about our journey towards a greener future.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Sustainability - Driving a Greener Future",
+    description:
+      "AB.Limo is committed to sustainability through electric vehicles, carbon offsetting, and net-zero initiatives. Learn about our journey towards a greener future.",
+    path: "/sustainability",
+    lang,
+    keywords: "AB.Limo sustainability, green transportation, electric vehicles, carbon offset, net zero, eco-friendly limousine",
+  });
+}
 
 export default async function SustainabilityPage({
   params,

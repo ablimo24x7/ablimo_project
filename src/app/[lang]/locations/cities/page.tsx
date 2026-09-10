@@ -1,14 +1,27 @@
+import type { Metadata } from "next";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
 import { allCities } from "@/lib/locations";
 import { getDynamicCityList } from "@/lib/locationData";
 import { translateText, needsTranslation } from "@/lib/translate";
 import CitiesClient from "../_components/CitiesClient";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "AB.Limo - All Cities",
-  description:
-    "Luxury chauffeur service across 50+ cities worldwide.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "All Cities | AB.Limo Premium Transportation in 25+ Cities",
+    description:
+      "AB.Limo serves 25+ cities across the GCC and worldwide. Find premium chauffeur services in Dubai, Riyadh, Doha, Abu Dhabi, Jeddah, Manama, Kuwait City, Muscat, and more.",
+    path: "/locations/cities",
+    lang,
+    keywords:
+      "AB.Limo cities, chauffeur service cities, luxury transportation Dubai, Riyadh limousine, Doha car service, Abu Dhabi chauffeur, GCC cities transportation",
+  });
+}
 
 export default async function CitiesPage({
   params,

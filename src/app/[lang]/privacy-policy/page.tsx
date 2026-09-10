@@ -7,12 +7,23 @@ import {
   type Locale,
   type Dictionary,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | AB.Limo",
-  description:
-    "Learn how AB.Limo collects, uses, and protects your personal data when you use our premium chauffeur services.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Privacy Policy",
+    description:
+      "Learn how AB.Limo collects, uses, and protects your personal data when you use our premium chauffeur services.",
+    path: "/privacy-policy",
+    lang,
+    keywords: "AB.Limo privacy, data protection, privacy policy, personal data, GDPR, cookie policy",
+  });
+}
 
 export default async function PrivacyPolicyPage({
   params,

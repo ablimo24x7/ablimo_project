@@ -38,12 +38,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = await getTranslatedArticle(slug, locale, true);
   if (!article) return { title: "Not Found" };
 
+  const title = article.seo_metadata?.metaTitle || article.title;
+  const description = article.seo_metadata?.metaDescription || article.excerpt;
+  const slugPath = slug.join("/");
+
   return {
-    title: article.seo_metadata?.metaTitle || article.title,
-    description: article.seo_metadata?.metaDescription || article.excerpt,
+    title,
+    description,
+    alternates: {
+      canonical: `https://ab.limo/blog/${slugPath}`,
+      languages: {
+        "en-US": `https://ab.limo/en-US/blog/${slugPath}`,
+        "en-GB": `https://ab.limo/en-GB/blog/${slugPath}`,
+        ar: `https://ab.limo/ar/blog/${slugPath}`,
+        "x-default": `https://ab.limo/en-US/blog/${slugPath}`,
+      },
+    },
     openGraph: {
-      title: article.seo_metadata?.metaTitle || article.title,
-      description: article.seo_metadata?.metaDescription || article.excerpt,
+      title,
+      description,
+      type: "article",
+      siteName: "AB.Limo",
       images: article.seo_metadata?.ogImage ? [article.seo_metadata.ogImage] : undefined,
     },
   };

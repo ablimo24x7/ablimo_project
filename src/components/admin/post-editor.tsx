@@ -209,8 +209,41 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
       const country = key === "countrySlug" ? (value as string) : prev.countrySlug;
       const city = key === "citySlug" ? (value as string) : prev.citySlug;
       next.slug = generateSlug(service, country, city, blogType);
+
+      // Auto-generate SEO from title when title changes and SEO fields are empty
+      if (key === "title" && !prev.seo_metadata.metaTitle) {
+        next.seo_metadata = { ...next.seo_metadata, metaTitle: `${String(value)} | AB.Limo` };
+      }
+      // Auto-generate SEO metaDescription from excerpt when excerpt changes and SEO field is empty
+      if (key === "excerpt" && !prev.seo_metadata.metaDescription) {
+        next.seo_metadata = { ...next.seo_metadata, metaDescription: String(value).slice(0, 160) };
+      }
+      // Auto-fill OG image from hero cover if empty
+      if (key === "articleMedia" && !prev.seo_metadata.ogImage) {
+        const media = value as PostData["articleMedia"];
+        if (media?.heroCoverMedia?.url) {
+          next.seo_metadata = { ...next.seo_metadata, ogImage: media.heroCoverMedia.url };
+        }
+      }
+
       return next;
     });
+  };
+
+  const regenerateSeo = () => {
+    setForm((prev) => {
+      const metaTitle = prev.seo_metadata.metaTitle || `${prev.title} | AB.Limo`;
+      let metaDescription = prev.seo_metadata.metaDescription;
+      if (!metaDescription) {
+        metaDescription = prev.excerpt?.trim().slice(0, 160) || prev.title;
+      }
+      const ogImage = prev.seo_metadata.ogImage || prev.articleMedia?.heroCoverMedia?.url || "";
+      return {
+        ...prev,
+        seo_metadata: { metaTitle, metaDescription, ogImage },
+      };
+    });
+    toast.success("SEO fields regenerated from content");
   };
 
   const addTag = () => {
@@ -601,7 +634,20 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
           </Card>
 
           <Card>
-            <CardHeader><CardTitle>SEO</CardTitle></CardHeader>
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <CardTitle>SEO</CardTitle>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={regenerateSeo}
+                  className="text-xs h-7"
+                >
+                  Regenerate SEO
+                </Button>
+              </div>
+            </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -611,7 +657,8 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                     onTranslated={(v) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: v })}
                   />
                 </div>
-                <Input value={form.seo_metadata.metaTitle} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: e.target.value })} />
+                <Input value={form.seo_metadata.metaTitle} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: e.target.value })} placeholder={`${form.title || "Article Title"} | AB.Limo`} />
+                <p className="text-xs text-muted-foreground">{form.seo_metadata.metaTitle.length}/200 characters</p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -621,11 +668,13 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                     onTranslated={(v) => updateField("seo_metadata", { ...form.seo_metadata, metaDescription: v })}
                   />
                 </div>
-                <Textarea rows={3} value={form.seo_metadata.metaDescription} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaDescription: e.target.value })} />
+                <Textarea rows={3} value={form.seo_metadata.metaDescription} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaDescription: e.target.value })} placeholder="Auto-generated from excerpt..." />
+                <p className="text-xs text-muted-foreground">{form.seo_metadata.metaDescription.length}/160 characters</p>
               </div>
               <div className="space-y-2">
                 <Label>OG Image URL</Label>
                 <Input value={form.seo_metadata.ogImage} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, ogImage: e.target.value })} placeholder="https://..." />
+                <p className="text-xs text-muted-foreground">Fallback: hero cover image</p>
               </div>
             </CardContent>
           </Card>

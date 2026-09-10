@@ -1,10 +1,33 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import { getCountryForRequest, getRoutesForCountry } from "@/lib/locationData";
 import CountryDetailClient from "../_components/CountryDetailClient";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; country: string }>;
+}): Promise<Metadata> {
+  const { lang, country: countryParam } = await params;
+  const country = await getCountryForRequest(countryParam);
+  if (!country) return {};
+
+  const name = lang === "ar" && country.nameAr ? country.nameAr : country.name;
+  const description = lang === "ar" && country.descriptionAr ? country.descriptionAr : country.description;
+
+  return generateSeoMetadata({
+    title: `Premium Chauffeur Service in ${name} | AB.Limo`,
+    description: description || `AB.Limo provides luxury chauffeur-driven transportation in ${name}. Airport transfers, corporate travel, and event logistics with premium vehicles and professional drivers.`,
+    path: `/locations/${countryParam}`,
+    lang,
+    keywords: `AB.Limo ${name}, chauffeur service ${name}, luxury transportation ${name}, airport transfer ${name}, ${name} limousine, executive travel ${name}`,
+  });
+}
 
 export default async function CountryPage({
     params,

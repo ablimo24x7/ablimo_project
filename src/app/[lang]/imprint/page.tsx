@@ -6,12 +6,23 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Legal Notice | AB.Limo",
-  description:
-    "Legal notice and company information for AB.Limo GmbH, including registration details and contact information.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Legal Notice",
+    description:
+      "Legal notice and company information for AB.Limo GmbH, including registration details and contact information.",
+    path: "/imprint",
+    lang,
+    keywords: "AB.Limo legal notice, company information, AB.Limo GmbH, legal disclosure, impressum",
+  });
+}
 
 export default async function ImprintPage({
   params,

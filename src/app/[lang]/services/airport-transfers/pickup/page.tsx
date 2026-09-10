@@ -22,6 +22,21 @@ export async function generateMetadata({
   return {
     title: dict.servicePages.airportTransferPickup.metadata.title,
     description: dict.servicePages.airportTransferPickup.metadata.description,
+    alternates: {
+      canonical: "https://ab.limo/services/airport-transfers/pickup",
+      languages: {
+        "en-US": "https://ab.limo/en-US/services/airport-transfers/pickup",
+        "en-GB": "https://ab.limo/en-GB/services/airport-transfers/pickup",
+        ar: "https://ab.limo/ar/services/airport-transfers/pickup",
+        "x-default": "https://ab.limo/en-US/services/airport-transfers/pickup",
+      },
+    },
+    openGraph: {
+      title: dict.servicePages.airportTransferPickup.metadata.title,
+      description: dict.servicePages.airportTransferPickup.metadata.description,
+      type: "website",
+      siteName: "AB.Limo",
+    },
   };
 }
 

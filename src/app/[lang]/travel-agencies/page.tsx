@@ -8,12 +8,23 @@ import {
   type Locale,
   type Dictionary,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Global Chauffeur Services for Travel Agencies | AB.Limo",
-  description:
-    "Partner with AB.Limo to offer your clients world-class chauffeur services. Earn commission and boost your brand reputation.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Global Chauffeur Services for Travel Agencies",
+    description:
+      "Partner with AB.Limo to offer your clients world-class chauffeur services. Earn commission and boost your brand reputation.",
+    path: "/travel-agencies",
+    lang,
+    keywords: "travel agency chauffeur, AB.Limo travel partner, wholesale chauffeur service, white label transportation, travel agency partnership",
+  });
+}
 
 export default async function TravelAgenciesPage({
   params,

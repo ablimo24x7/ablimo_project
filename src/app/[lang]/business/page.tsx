@@ -1,6 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Business Travel Solutions | AB.Limo Professional Transportation",
+    description:
+      "Reliable business transportation for professionals worldwide. AB.Limo offers airport transfers, intercity travel, and daily commute solutions with premium vehicles and professional chauffeurs.",
+    path: "/business",
+    lang,
+    keywords:
+      "business travel, corporate transportation, professional chauffeur, airport transfer, executive car service, AB.Limo business, business commute, intercity travel",
+  });
+}
 
 const featureIcons = ["🌍", "💰", "⚙️", "📞", "📊", "🌱"];
 const awardIcon = "🏆";
