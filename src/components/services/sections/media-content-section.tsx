@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { getIcon } from "./section-icons";
 import type { PageSection } from "./section-types";
 
@@ -6,10 +7,21 @@ interface MediaContentSectionProps {
   section: PageSection;
 }
 
+const PADDING_CLASSES = {
+  none: "",
+  sm: "py-12",
+  md: "py-16",
+  lg: "py-24",
+  xl: "py-32",
+} as const;
+
 export default function MediaContentSection({ section }: MediaContentSectionProps) {
   const c = section.content as Record<string, unknown>;
   const items = (c.items || []) as Array<{
     id: string; icon: string; heading: string; description: string;
+  }>;
+  const actions = (c.actions || []) as Array<{
+    label: string; href: string; style: string; icon?: string;
   }>;
   const settings = section.settings as Record<string, string>;
   const appearance = section.appearance as Record<string, unknown>;
@@ -17,14 +29,19 @@ export default function MediaContentSection({ section }: MediaContentSectionProp
   const mediaPosition = settings.mediaPosition || "right";
   const bgImage = (appearance.background as string) || "";
   const usePattern = appearance.pattern === true;
+  const padding = (appearance.padding as string) || "lg";
+  const border = appearance.border === "true" || appearance.border === true;
+  const textAlign = (appearance.textAlign as string) || "left";
 
   const themeClass =
     appearance.theme === "darker" ? "bg-abBlack text-white" :
     appearance.theme === "light" ? "bg-white text-gray-900" :
     "bg-abDarkGray text-white";
 
+  const textAlignClass = textAlign === "center" ? "text-center" : textAlign === "right" ? "text-right" : "text-left";
+
   return (
-    <section className={`py-24 ${themeClass} relative overflow-hidden border-t border-gray-800`}>
+    <section className={`${PADDING_CLASSES[padding as keyof typeof PADDING_CLASSES] || "py-24"} ${themeClass} relative overflow-hidden ${border ? "border-t border-gray-800" : ""}`}>
       {/* Pattern Background */}
       {usePattern && (
         <div
@@ -39,7 +56,7 @@ export default function MediaContentSection({ section }: MediaContentSectionProp
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content Side */}
-          <div className={mediaPosition === "left" ? "order-2 lg:order-1" : ""}>
+          <div className={`${mediaPosition === "left" ? "order-2 lg:order-1" : ""} ${textAlignClass}`}>
             {(c.eyebrow as string) && (
               <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-3">
                 {c.eyebrow as string}
@@ -72,6 +89,49 @@ export default function MediaContentSection({ section }: MediaContentSectionProp
                 ))}
               </ul>
             )}
+
+            {/* Action Buttons */}
+            {actions.length > 0 && (
+              <div className={`flex flex-wrap gap-4 ${textAlign === "center" ? "justify-center" : ""} ${textAlign === "right" ? "justify-end" : ""}`}>
+                {actions.map((action, i) => {
+                  const iconEl = action.icon ? getIcon(action.icon, "w-4 h-4") : null;
+                  if (action.style === "primary") {
+                    return (
+                      <Link
+                        key={i}
+                        href={action.href || "#"}
+                        className="inline-flex items-center bg-abGold hover:bg-yellow-600 text-white px-6 py-3 rounded text-sm font-semibold transition-all shadow-lg shadow-abGold/20"
+                      >
+                        {action.label}
+                        {iconEl && <span className="ml-2">{iconEl}</span>}
+                      </Link>
+                    );
+                  }
+                  if (action.style === "secondary") {
+                    return (
+                      <Link
+                        key={i}
+                        href={action.href || "#"}
+                        className="inline-flex items-center bg-transparent border border-abGold text-abGold hover:bg-abGold hover:text-white px-6 py-3 rounded text-sm font-semibold transition-all"
+                      >
+                        {action.label}
+                        {iconEl && <span className="ml-2">{iconEl}</span>}
+                      </Link>
+                    );
+                  }
+                  return (
+                    <Link
+                      key={i}
+                      href={action.href || "#"}
+                      className="inline-flex items-center bg-gray-800 hover:bg-gray-700 border border-gray-600 text-white px-6 py-3 rounded text-sm font-semibold transition-all"
+                    >
+                      {action.label}
+                      {iconEl && <span className="ml-2">{iconEl}</span>}
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           {/* Media Side */}
@@ -84,6 +144,9 @@ export default function MediaContentSection({ section }: MediaContentSectionProp
                     <div className="w-3 h-3 rounded-full bg-red-500" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500" />
                     <div className="w-3 h-3 rounded-full bg-green-500" />
+                    {(c.mediaTitle as string) && (
+                      <span className="ml-4 text-xs font-mono text-gray-500">{c.mediaTitle as string}</span>
+                    )}
                   </div>
                   <div className="p-6">
                     <Image

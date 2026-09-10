@@ -7,45 +7,74 @@ interface FleetGridSectionProps {
   section: PageSection;
 }
 
+const PADDING_CLASSES = {
+  none: "",
+  sm: "py-12",
+  md: "py-16",
+  lg: "py-24",
+  xl: "py-32",
+} as const;
+
 export default function FleetGridSection({ section }: FleetGridSectionProps) {
-  const c = section.content as Record<string, string>;
+  const c = section.content as Record<string, unknown>;
   const items = (section.items || []) as Array<{
     id: string; badge?: string; badgeStyle?: string; image: string; imageAlt?: string;
     category: string; name: string; capacity: string; bags: string;
     capacityIcon?: string; bagsIcon?: string;
     actions?: Array<{ label: string; href: string }>;
   }>;
-  const settings = section.settings as Record<string, string>;
-  const appearance = section.appearance as Record<string, string>;
+  const settings = section.settings as Record<string, unknown>;
+  const appearance = section.appearance as Record<string, unknown>;
 
   const columns = settings.columns || "4";
   const bgClass = appearance.theme === "darker" ? "bg-abBlack" : "bg-abDarkGray";
+  const padding = (appearance.padding as string) || "lg";
+  const border = appearance.border === "true" || appearance.border === true;
+  const textAlign = (appearance.textAlign as string) || "left";
+
+  const headerAction = c.headerAction as { label?: string; href?: string } | undefined;
+  const bottomCta = c.bottomCta as { label?: string; href?: string; style?: string; icon?: string } | undefined;
 
   const gridCols =
     columns === "2" ? "md:grid-cols-2" :
     columns === "3" ? "md:grid-cols-2 lg:grid-cols-3" :
     "md:grid-cols-2 lg:grid-cols-4";
 
+  const textAlignClass = textAlign === "center" ? "text-center" : textAlign === "right" ? "text-right" : "text-left";
+
   return (
-    <section id="fleet" className={`py-24 ${bgClass} border-t border-gray-800`}>
+    <section id="fleet" className={`${PADDING_CLASSES[padding as keyof typeof PADDING_CLASSES] || "py-24"} ${bgClass} ${border ? "border-t border-gray-800" : ""}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-          <div className="max-w-3xl">
-            {c.eyebrow && (
+          <div className={`max-w-3xl ${textAlignClass}`}>
+            {(c.eyebrow as string) && (
               <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-2">
-                {c.eyebrow}
+                {c.eyebrow as string}
               </h2>
             )}
-            {c.heading && (
+            {(c.heading as string) && (
               <h3 className="text-3xl md:text-4xl font-bold text-white">
-                {c.heading}
+                {c.heading as string}
               </h3>
             )}
-            {c.description && (
-              <p className="mt-4 text-gray-400">{c.description}</p>
+            {(c.description as string) && (
+              <p className="mt-4 text-gray-400">{c.description as string}</p>
             )}
           </div>
+          {headerAction?.label && (
+            <div className="mt-6 md:mt-0 flex flex-col items-end space-y-3">
+              <Link
+                href={headerAction.href || "#"}
+                className="text-abGold font-semibold hover:text-yellow-500 border-b-2 border-abGold pb-1 transition-colors inline-flex items-center text-sm"
+              >
+                {headerAction.label}
+                <svg className="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          )}
         </div>
 
         {/* Fleet Grid */}
@@ -59,7 +88,7 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
               <div className="bg-black h-48 flex items-center justify-center p-4 relative">
                 {vehicle.badge && (
                   <div
-                    className={`absolute top-4 left-4 text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded ${
+                    className={`absolute top-4 left-4 text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded shadow ${
                       vehicle.badgeStyle === "accent"
                         ? "bg-abGold/20 border border-abGold text-abGold"
                         : "bg-gray-900 border border-gray-700 text-white"
@@ -122,6 +151,25 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
             </div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        {bottomCta?.label && (
+          <div className="mt-12 text-center">
+            <Link
+              href={bottomCta.href || "#"}
+              className={`inline-flex items-center px-8 py-3.5 rounded text-sm font-semibold transition-all ${
+                bottomCta.style === "primary"
+                  ? "bg-abGold hover:bg-yellow-600 text-white shadow-lg shadow-abGold/20"
+                  : bottomCta.style === "secondary"
+                  ? "bg-transparent border border-abGold text-abGold hover:bg-abGold hover:text-white"
+                  : "bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white"
+              }`}
+            >
+              {bottomCta.label}
+              {bottomCta.icon && <span className="ml-2">{getIcon(bottomCta.icon, "w-4 h-4")}</span>}
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -409,6 +409,80 @@ function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
             <Label>Description</Label>
             <WysiwygEditor value={(c.description as string) || ""} onChange={(v) => updateContent("description", v)} />
           </div>
+          <div className="border-t pt-4 mt-4">
+            <Label className="text-sm font-medium mb-3 block">Header CTA Button</Label>
+            <div className="space-y-3">
+              <Input
+                value={((c.sectionCta as Record<string, string>)?.label) || ""}
+                onChange={(e) => updateContent("sectionCta", { ...(c.sectionCta as Record<string, string> || {}), label: e.target.value })}
+                placeholder="Button label (leave empty to hide)"
+              />
+              <Input
+                value={((c.sectionCta as Record<string, string>)?.href) || ""}
+                onChange={(e) => updateContent("sectionCta", { ...(c.sectionCta as Record<string, string> || {}), href: e.target.value })}
+                placeholder="Button URL"
+              />
+              <Select
+                value={((c.sectionCta as Record<string, string>)?.style) || "primary"}
+                onValueChange={(v) => updateContent("sectionCta", { ...(c.sectionCta as Record<string, string> || {}), style: v })}
+              >
+                <SelectTrigger><SelectValue /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="primary">Primary (Gold)</SelectItem>
+                  <SelectItem value="secondary">Secondary (Outlined)</SelectItem>
+                  <SelectItem value="outline">Outline (Gray)</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select
+                value={((c.sectionCta as Record<string, string>)?.icon) || ""}
+                onValueChange={(v) => updateContent("sectionCta", { ...(c.sectionCta as Record<string, string> || {}), icon: v })}
+              >
+                <SelectTrigger><SelectValue placeholder="No icon" /></SelectTrigger>
+                <SelectContent>
+                  {ICON_OPTIONS.map((opt) => (
+                    <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          <div className="border-t pt-4 mt-4">
+            <Label className="text-sm font-medium mb-3 block">Bottom CTA Button (below cards)</Label>
+            <div className="space-y-3">
+              <Input
+                value={((c.bottomCta as Record<string, string>)?.label) || ""}
+                onChange={(e) => updateContent("bottomCta", { ...(c.bottomCta as Record<string, string> || {}), label: e.target.value })}
+                placeholder="Button label (leave empty to hide)"
+              />
+              <Input
+                value={((c.bottomCta as Record<string, string>)?.href) || ""}
+                onChange={(e) => updateContent("bottomCta", { ...(c.bottomCta as Record<string, string> || {}), href: e.target.value })}
+                placeholder="Button URL"
+              />
+              <Select
+                value={((c.bottomCta as Record<string, string>)?.style) || "primary"}
+                onValueChange={(v) => updateContent("bottomCta", { ...(c.bottomCta as Record<string, string> || {}), style: v })}
+              >
+                <SelectTrigger><SelectValue /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="primary">Primary (Gold)</SelectItem>
+                  <SelectItem value="secondary">Secondary (Outlined)</SelectItem>
+                  <SelectItem value="outline">Outline (Gray)</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select
+                value={((c.bottomCta as Record<string, string>)?.icon) || ""}
+                onValueChange={(v) => updateContent("bottomCta", { ...(c.bottomCta as Record<string, string> || {}), icon: v })}
+              >
+                <SelectTrigger><SelectValue placeholder="No icon" /></SelectTrigger>
+                <SelectContent>
+                  {ICON_OPTIONS.map((opt) => (
+                    <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
         </div>
       );
 
@@ -427,6 +501,80 @@ function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
             <Label>Description</Label>
             <WysiwygEditor value={(c.description as string) || ""} onChange={(v) => updateContent("description", v)} />
           </div>
+          <div className="space-y-2">
+            <Label>Media Window Title</Label>
+            <Input
+              value={(c.mediaTitle as string) || ""}
+              onChange={(e) => updateContent("mediaTitle", e.target.value)}
+              placeholder="AB.Limo Command Center"
+            />
+          </div>
+          <div className="border-t pt-4 mt-4">
+            <Label className="text-sm font-medium mb-3 block">Action Buttons (below items list)</Label>
+            {((c.actions || []) as Array<Record<string, unknown>>).map((action, ai) => (
+              <div key={ai} className="flex gap-2 items-center mb-2">
+                <Input
+                  value={(action.label as string) || ""}
+                  onChange={(e) => {
+                    const actions = [...((c.actions || []) as Array<Record<string, unknown>>)];
+                    actions[ai] = { ...actions[ai], label: e.target.value };
+                    updateContent("actions", actions);
+                  }}
+                  placeholder="Label"
+                  className="flex-1"
+                />
+                <Input
+                  value={(action.href as string) || ""}
+                  onChange={(e) => {
+                    const actions = [...((c.actions || []) as Array<Record<string, unknown>>)];
+                    actions[ai] = { ...actions[ai], href: e.target.value };
+                    updateContent("actions", actions);
+                  }}
+                  placeholder="URL"
+                  className="flex-1"
+                />
+                <Select
+                  value={(action.style as string) || "primary"}
+                  onValueChange={(v) => {
+                    const actions = [...((c.actions || []) as Array<Record<string, unknown>>)];
+                    actions[ai] = { ...actions[ai], style: v };
+                    updateContent("actions", actions);
+                  }}
+                >
+                  <SelectTrigger className="w-28"><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="primary">Primary</SelectItem>
+                    <SelectItem value="secondary">Secondary</SelectItem>
+                    <SelectItem value="outline">Outline</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  className="h-7 w-7 p-0"
+                  onClick={() => {
+                    const actions = [...((c.actions || []) as Array<Record<string, unknown>>)];
+                    actions.splice(ai, 1);
+                    updateContent("actions", actions);
+                  }}
+                >
+                  <Trash2 className="h-3 w-3 text-destructive" />
+                </Button>
+              </div>
+            ))}
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                const actions = [...((c.actions || []) as Array<Record<string, unknown>>), { label: "", href: "", style: "primary" }];
+                updateContent("actions", actions);
+              }}
+            >
+              <Plus className="h-3 w-3 mr-1" /> Add Action Button
+            </Button>
+          </div>
         </div>
       );
 
@@ -444,6 +592,58 @@ function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
           <div className="space-y-2">
             <Label>Description</Label>
             <WysiwygEditor value={(c.description as string) || ""} onChange={(v) => updateContent("description", v)} />
+          </div>
+          <div className="border-t pt-4 mt-4">
+            <Label className="text-sm font-medium mb-3 block">Header Right-Side Link</Label>
+            <div className="space-y-3">
+              <Input
+                value={((c.headerAction as Record<string, string>)?.label) || ""}
+                onChange={(e) => updateContent("headerAction", { ...(c.headerAction as Record<string, string> || {}), label: e.target.value })}
+                placeholder="Link text (leave empty to hide)"
+              />
+              <Input
+                value={((c.headerAction as Record<string, string>)?.href) || ""}
+                onChange={(e) => updateContent("headerAction", { ...(c.headerAction as Record<string, string> || {}), href: e.target.value })}
+                placeholder="Link URL"
+              />
+            </div>
+          </div>
+          <div className="border-t pt-4 mt-4">
+            <Label className="text-sm font-medium mb-3 block">Bottom CTA Button</Label>
+            <div className="space-y-3">
+              <Input
+                value={((c.bottomCta as Record<string, string>)?.label) || ""}
+                onChange={(e) => updateContent("bottomCta", { ...(c.bottomCta as Record<string, string> || {}), label: e.target.value })}
+                placeholder="Button label (leave empty to hide)"
+              />
+              <Input
+                value={((c.bottomCta as Record<string, string>)?.href) || ""}
+                onChange={(e) => updateContent("bottomCta", { ...(c.bottomCta as Record<string, string> || {}), href: e.target.value })}
+                placeholder="Button URL"
+              />
+              <Select
+                value={((c.bottomCta as Record<string, string>)?.style) || "secondary"}
+                onValueChange={(v) => updateContent("bottomCta", { ...(c.bottomCta as Record<string, string> || {}), style: v })}
+              >
+                <SelectTrigger><SelectValue /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="primary">Primary (Gold)</SelectItem>
+                  <SelectItem value="secondary">Secondary (Outlined)</SelectItem>
+                  <SelectItem value="outline">Outline (Gray)</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select
+                value={((c.bottomCta as Record<string, string>)?.icon) || ""}
+                onValueChange={(v) => updateContent("bottomCta", { ...(c.bottomCta as Record<string, string> || {}), icon: v })}
+              >
+                <SelectTrigger><SelectValue placeholder="No icon" /></SelectTrigger>
+                <SelectContent>
+                  {ICON_OPTIONS.map((opt) => (
+                    <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
           </div>
         </div>
       );
@@ -493,6 +693,10 @@ function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
             <Label>Description</Label>
             <WysiwygEditor value={(c.description as string) || ""} onChange={(v) => updateContent("description", v)} />
           </div>
+          <div className="border-t pt-4 mt-4">
+            <Label className="text-sm font-medium mb-3 block">CTA Bar (below FAQ list)</Label>
+            <p className="text-xs text-muted-foreground mb-2">Configure the "Still have questions?" bar. Edit button labels, URLs, styles, and icons below.</p>
+          </div>
         </div>
       );
 
@@ -533,23 +737,23 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
       newItem = { ...newItem, icon: "", title: "", description: "", actions: [] };
     } else if (section.type === "fleetGrid") {
       newItem = { ...newItem, badge: "", image: "", category: "", name: "", capacity: "", bags: "" };
-    } else if (section.type === "faq") {
+    } else if (section.type === "faq" || section.type === "mediaContent") {
       const existingItems = (c.items || []) as Array<Record<string, unknown>>;
-      updateContentItem("items", [...existingItems, { id, question: "", answer: "" }]);
+      if (section.type === "faq") {
+        updateContentItem("items", [...existingItems, { id, question: "", answer: "" }]);
+      } else {
+        updateContentItem("items", [...existingItems, { id, icon: "", heading: "", description: "" }]);
+      }
       return;
     } else if (section.type === "hero" || section.type === "ctaBanner") {
       newItem = { label: "", href: "", style: "primary", icon: "" };
-    } else if (section.type === "mediaContent") {
-      newItem = { ...newItem, icon: "", heading: "", description: "" };
     }
 
-    if ((section.type as string) !== "faq") {
-      onUpdate({ items: [...items, newItem] });
-    }
+    onUpdate({ items: [...items, newItem] });
   };
 
   const removeItem = (index: number) => {
-    if (section.type === "faq") {
+    if (section.type === "faq" || section.type === "mediaContent") {
       const existingItems = (c.items || []) as Array<Record<string, unknown>>;
       updateContentItem("items", existingItems.filter((_, i) => i !== index));
     } else {
@@ -558,7 +762,7 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
   };
 
   const updateItem = (index: number, updates: Record<string, unknown>) => {
-    if (section.type === "faq") {
+    if (section.type === "faq" || section.type === "mediaContent") {
       const existingItems = (c.items || []) as Array<Record<string, unknown>>;
       const updated = [...existingItems];
       updated[index] = { ...updated[index], ...updates };
@@ -570,7 +774,7 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
     }
   };
 
-  const currentItems = section.type === "faq"
+  const currentItems = (section.type === "faq" || section.type === "mediaContent")
     ? ((c.items || []) as Array<Record<string, unknown>>)
     : items;
 
@@ -578,11 +782,12 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <Label className="text-sm font-medium">
-          {section.type === "faq" ? "FAQ Items" :
+          {section.type === "faq" ? "FAQ Questions" :
            section.type === "serviceCards" ? "Service Cards" :
            section.type === "fleetGrid" ? "Fleet Vehicles" :
            section.type === "hero" ? "CTA Buttons" :
            section.type === "ctaBanner" ? "CTA Buttons" :
+           section.type === "mediaContent" ? "Feature Items" :
            "Items"}
         </Label>
         <Button type="button" size="sm" variant="outline" onClick={addItem}>
@@ -608,6 +813,92 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
           />
         ))}
       </div>
+
+      {/* FAQ CTA Buttons (stored in section.items) */}
+      {section.type === "faq" && (
+        <div className="border-t pt-4 mt-4">
+          <Label className="text-sm font-medium mb-3 block">CTA Bar Buttons</Label>
+          <p className="text-xs text-muted-foreground mb-2">Buttons shown in the "Still have questions?" bar below FAQ items.</p>
+          {((section.items || []) as Array<Record<string, unknown>>).map((item, i) => (
+            <div key={i} className="flex gap-2 items-center mb-2">
+              <Input
+                value={(item.label as string) || ""}
+                onChange={(e) => {
+                  const items = [...((section.items || []) as Array<Record<string, unknown>>)];
+                  items[i] = { ...items[i], label: e.target.value };
+                  onUpdate({ items });
+                }}
+                placeholder="Button label"
+                className="flex-1"
+              />
+              <Input
+                value={(item.href as string) || ""}
+                onChange={(e) => {
+                  const items = [...((section.items || []) as Array<Record<string, unknown>>)];
+                  items[i] = { ...items[i], href: e.target.value };
+                  onUpdate({ items });
+                }}
+                placeholder="URL"
+                className="flex-1"
+              />
+              <Select
+                value={(item.style as string) || "primary"}
+                onValueChange={(v) => {
+                  const items = [...((section.items || []) as Array<Record<string, unknown>>)];
+                  items[i] = { ...items[i], style: v };
+                  onUpdate({ items });
+                }}
+              >
+                <SelectTrigger className="w-28"><SelectValue /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="primary">Primary (Gold)</SelectItem>
+                  <SelectItem value="secondary">Secondary (Border)</SelectItem>
+                  <SelectItem value="outline">Outline (Gray)</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select
+                value={(item.icon as string) || ""}
+                onValueChange={(v) => {
+                  const items = [...((section.items || []) as Array<Record<string, unknown>>)];
+                  items[i] = { ...items[i], icon: v };
+                  onUpdate({ items });
+                }}
+              >
+                <SelectTrigger className="w-32"><SelectValue placeholder="No icon" /></SelectTrigger>
+                <SelectContent>
+                  {ICON_OPTIONS.map((opt) => (
+                    <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="h-7 w-7 p-0"
+                onClick={() => {
+                  const items = [...((section.items || []) as Array<Record<string, unknown>>)];
+                  items.splice(i, 1);
+                  onUpdate({ items });
+                }}
+              >
+                <Trash2 className="h-3 w-3 text-destructive" />
+              </Button>
+            </div>
+          ))}
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              const items = [...((section.items || []) as Array<Record<string, unknown>>), { label: "", href: "", style: "primary", icon: "" }];
+              onUpdate({ items });
+            }}
+          >
+            <Plus className="h-3 w-3 mr-1" /> Add CTA Button
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
@@ -762,6 +1053,10 @@ function ItemEditor({ sectionType, item, index, onUpdate, onRemove }: ItemEditor
                   </div>
                 )}
               </div>
+              <div className="space-y-2">
+                <Label>Image Alt Text</Label>
+                <Input value={(item.imageAlt as string) || ""} onChange={(e) => onUpdate({ imageAlt: e.target.value })} placeholder="Mercedes S-Class Black" />
+              </div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-2">
                   <Label>Badge</Label>
@@ -797,6 +1092,81 @@ function ItemEditor({ sectionType, item, index, onUpdate, onRemove }: ItemEditor
                   <Label>Bags</Label>
                   <Input value={(item.bags as string) || ""} onChange={(e) => onUpdate({ bags: e.target.value })} placeholder="2 Bags" />
                 </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-2">
+                  <Label>Capacity Icon</Label>
+                  <Select value={(item.capacityIcon as string) || "Users"} onValueChange={(v) => onUpdate({ capacityIcon: v })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      {ICON_OPTIONS.map((opt) => (
+                        <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label>Bags Icon</Label>
+                  <Select value={(item.bagsIcon as string) || "Briefcase"} onValueChange={(v) => onUpdate({ bagsIcon: v })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      {ICON_OPTIONS.map((opt) => (
+                        <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <Label>Vehicle Actions</Label>
+                {((item.actions || []) as Array<Record<string, unknown>>).map((action, ai) => (
+                  <div key={ai} className="flex gap-2 items-center">
+                    <Input
+                      value={(action.label as string) || ""}
+                      onChange={(e) => {
+                        const actions = [...((item.actions || []) as Array<Record<string, unknown>>)];
+                        actions[ai] = { ...actions[ai], label: e.target.value };
+                        onUpdate({ actions });
+                      }}
+                      placeholder="Label"
+                      className="flex-1"
+                    />
+                    <Input
+                      value={(action.href as string) || ""}
+                      onChange={(e) => {
+                        const actions = [...((item.actions || []) as Array<Record<string, unknown>>)];
+                        actions[ai] = { ...actions[ai], href: e.target.value };
+                        onUpdate({ actions });
+                      }}
+                      placeholder="URL"
+                      className="flex-1"
+                    />
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      className="h-6 w-6 p-0"
+                      onClick={() => {
+                        const actions = [...((item.actions || []) as Array<Record<string, unknown>>)];
+                        actions.splice(ai, 1);
+                        onUpdate({ actions });
+                      }}
+                    >
+                      <Trash2 className="h-3 w-3 text-destructive" />
+                    </Button>
+                  </div>
+                ))}
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    const actions = [...((item.actions || []) as Array<Record<string, unknown>>), { label: "Request Allocation", href: "#contact" }];
+                    onUpdate({ actions });
+                  }}
+                >
+                  <Plus className="h-3 w-3 mr-1" /> Add Action
+                </Button>
               </div>
             </>
           )}
@@ -834,6 +1204,22 @@ function ItemEditor({ sectionType, item, index, onUpdate, onRemove }: ItemEditor
                       ))}
                     </SelectContent>
                   </Select>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-2">
+                  <Label>Icon Position</Label>
+                  <Select value={(item.iconPosition as string) || "left"} onValueChange={(v) => onUpdate({ iconPosition: v })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="left">Left</SelectItem>
+                      <SelectItem value="right">Right</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="flex items-center gap-2 pt-6">
+                  <Switch checked={!!item.openInNewTab} onCheckedChange={(v) => onUpdate({ openInNewTab: v })} />
+                  <Label className="text-xs">Open in new tab</Label>
                 </div>
               </div>
             </>
@@ -895,7 +1281,7 @@ function SettingsTab({ section, onUpdate }: SectionEditorPanelProps) {
         </div>
       )}
 
-      {/* Type-specific settings */}
+      {/* Hero settings */}
       {section.type === "hero" && (
         <>
           <div className="space-y-2">
@@ -903,6 +1289,7 @@ function SettingsTab({ section, onUpdate }: SectionEditorPanelProps) {
             <Select value={(settings.minHeight as string) || "85vh"} onValueChange={(v) => updateSettings("minHeight", v)}>
               <SelectTrigger><SelectValue /></SelectTrigger>
               <SelectContent>
+                <SelectItem value="50vh">50vh (Compact)</SelectItem>
                 <SelectItem value="60vh">60vh (Short)</SelectItem>
                 <SelectItem value="75vh">75vh (Medium)</SelectItem>
                 <SelectItem value="85vh">85vh (Tall)</SelectItem>
@@ -921,13 +1308,88 @@ function SettingsTab({ section, onUpdate }: SectionEditorPanelProps) {
               </SelectContent>
             </Select>
           </div>
+          <div className="space-y-2">
+            <Label>Overlay Opacity</Label>
+            <Select value={String(settings.overlayOpacity || 85)} onValueChange={(v) => updateSettings("overlayOpacity", Number(v))}>
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="50">50% (Light)</SelectItem>
+                <SelectItem value="65">65%</SelectItem>
+                <SelectItem value="75">75%</SelectItem>
+                <SelectItem value="85">85% (Default)</SelectItem>
+                <SelectItem value="95">95% (Heavy)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-2">
+            <Label>Button Layout</Label>
+            <Select value={(settings.buttonLayout as string) || "row"} onValueChange={(v) => updateSettings("buttonLayout", v)}>
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="row">Row (Side by side)</SelectItem>
+                <SelectItem value="column">Column (Stacked)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </>
       )}
 
+      {/* Service Cards settings */}
       {section.type === "serviceCards" && (
+        <>
+          <div className="space-y-2">
+            <Label>Columns</Label>
+            <Select value={(settings.columns as string) || "3"} onValueChange={(v) => updateSettings("columns", v)}>
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="2">2 Columns</SelectItem>
+                <SelectItem value="3">3 Columns</SelectItem>
+                <SelectItem value="4">4 Columns</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex items-center gap-2">
+            <Switch
+              checked={settings.showHeader !== false}
+              onCheckedChange={(v) => updateSettings("showHeader", v)}
+            />
+            <Label>Show section header</Label>
+          </div>
+        </>
+      )}
+
+      {/* Media Content settings */}
+      {section.type === "mediaContent" && (
+        <>
+          <div className="space-y-2">
+            <Label>Media Position</Label>
+            <Select value={(settings.mediaPosition as string) || "right"} onValueChange={(v) => updateSettings("mediaPosition", v)}>
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="left">Left</SelectItem>
+                <SelectItem value="right">Right</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-2">
+            <Label>Container Width</Label>
+            <Select value={(settings.containerWidth as string) || "default"} onValueChange={(v) => updateSettings("containerWidth", v)}>
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="narrow">Narrow</SelectItem>
+                <SelectItem value="default">Default</SelectItem>
+                <SelectItem value="wide">Wide</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </>
+      )}
+
+      {/* Fleet Grid settings */}
+      {section.type === "fleetGrid" && (
         <div className="space-y-2">
           <Label>Columns</Label>
-          <Select value={(settings.columns as string) || "3"} onValueChange={(v) => updateSettings("columns", v)}>
+          <Select value={(settings.columns as string) || "4"} onValueChange={(v) => updateSettings("columns", v)}>
             <SelectTrigger><SelectValue /></SelectTrigger>
             <SelectContent>
               <SelectItem value="2">2 Columns</SelectItem>
@@ -938,27 +1400,43 @@ function SettingsTab({ section, onUpdate }: SectionEditorPanelProps) {
         </div>
       )}
 
-      {section.type === "mediaContent" && (
+      {/* Contact Form settings */}
+      {section.type === "contactForm" && (
         <div className="space-y-2">
-          <Label>Media Position</Label>
-          <Select value={(settings.mediaPosition as string) || "right"} onValueChange={(v) => updateSettings("mediaPosition", v)}>
+          <Label>Form Layout</Label>
+          <Select value={(settings.layout as string) || "centered"} onValueChange={(v) => updateSettings("layout", v)}>
             <SelectTrigger><SelectValue /></SelectTrigger>
             <SelectContent>
-              <SelectItem value="left">Left</SelectItem>
-              <SelectItem value="right">Right</SelectItem>
+              <SelectItem value="centered">Centered</SelectItem>
+              <SelectItem value="full">Full Width</SelectItem>
             </SelectContent>
           </Select>
         </div>
       )}
 
-      {section.type === "fleetGrid" && (
+      {/* FAQ settings */}
+      {section.type === "faq" && (
         <div className="space-y-2">
-          <Label>Columns</Label>
-          <Select value={(settings.columns as string) || "4"} onValueChange={(v) => updateSettings("columns", v)}>
+          <Label>FAQ Style</Label>
+          <Select value={(settings.variant as string) || "default"} onValueChange={(v) => updateSettings("variant", v)}>
             <SelectTrigger><SelectValue /></SelectTrigger>
             <SelectContent>
-              <SelectItem value="3">3 Columns</SelectItem>
-              <SelectItem value="4">4 Columns</SelectItem>
+              <SelectItem value="default">Default Accordion</SelectItem>
+              <SelectItem value="compact">Compact</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      )}
+
+      {/* CTA Banner settings */}
+      {section.type === "ctaBanner" && (
+        <div className="space-y-2">
+          <Label>Banner Layout</Label>
+          <Select value={(settings.layout as string) || "centered"} onValueChange={(v) => updateSettings("layout", v)}>
+            <SelectTrigger><SelectValue /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="centered">Centered</SelectItem>
+              <SelectItem value="split">Split (Left/Right)</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -978,6 +1456,7 @@ function AppearanceTab({ section, onUpdate }: SectionEditorPanelProps) {
 
   return (
     <div className="space-y-4">
+      {/* Theme */}
       <div className="space-y-2">
         <Label>Theme</Label>
         <Select value={(appearance.theme as string) || "dark"} onValueChange={(v) => updateAppearance("theme", v)}>
@@ -985,13 +1464,98 @@ function AppearanceTab({ section, onUpdate }: SectionEditorPanelProps) {
           <SelectContent>
             <SelectItem value="dark">Dark (abDarkGray)</SelectItem>
             <SelectItem value="darker">Darker (abBlack)</SelectItem>
+            {section.type === "mediaContent" && (
+              <SelectItem value="light">Light (White)</SelectItem>
+            )}
           </SelectContent>
         </Select>
       </div>
 
+      {/* Vertical Padding */}
+      <div className="space-y-2">
+        <Label>Section Padding</Label>
+        <Select value={(appearance.padding as string) || "lg"} onValueChange={(v) => updateAppearance("padding", v)}>
+          <SelectTrigger><SelectValue /></SelectTrigger>
+          <SelectContent>
+            <SelectItem value="none">None (Hero)</SelectItem>
+            <SelectItem value="sm">Small (py-12)</SelectItem>
+            <SelectItem value="md">Medium (py-16)</SelectItem>
+            <SelectItem value="lg">Large (py-24)</SelectItem>
+            <SelectItem value="xl">Extra Large (py-32)</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Border Top */}
+      <div className="flex items-center gap-2">
+        <Switch
+          checked={appearance.border === true}
+          onCheckedChange={(v) => updateAppearance("border", v)}
+        />
+        <Label>Show top border divider</Label>
+      </div>
+
+      {/* Text Alignment */}
+      <div className="space-y-2">
+        <Label>Header Text Alignment</Label>
+        <Select value={(appearance.textAlign as string) || "left"} onValueChange={(v) => updateAppearance("textAlign", v)}>
+          <SelectTrigger><SelectValue /></SelectTrigger>
+          <SelectContent>
+            <SelectItem value="left">Left</SelectItem>
+            <SelectItem value="center">Center</SelectItem>
+            <SelectItem value="right">Right</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Hero-specific */}
       {section.type === "hero" && (
+        <>
+          <div className="space-y-2">
+            <Label>Background Image URL</Label>
+            <Input
+              value={(appearance.background as string) || ""}
+              onChange={(e) => updateAppearance("background", e.target.value)}
+              placeholder="https://..."
+            />
+            {(appearance.background as string) && (
+              <img
+                src={appearance.background as string}
+                alt="Background preview"
+                className="mt-2 h-32 w-full rounded-md object-cover"
+              />
+            )}
+          </div>
+          <div className="space-y-2">
+            <Label>Overlay Gradient Style</Label>
+            <Select value={(appearance.overlayGradient as string) || "default"} onValueChange={(v) => updateAppearance("overlayGradient", v)}>
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="default">Default (Left→Right dark fade)</SelectItem>
+                <SelectItem value="left-heavy">Left Heavy (Darkest left)</SelectItem>
+                <SelectItem value="bottom-heavy">Bottom Heavy (Bottom-to-top)</SelectItem>
+                <SelectItem value="center-heavy">Center Heavy (Dark vignette)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </>
+      )}
+
+      {/* Media Content-specific */}
+      {section.type === "mediaContent" && (
+        <div className="flex items-center gap-2">
+          <Switch
+            checked={appearance.pattern === true}
+            onCheckedChange={(v) => updateAppearance("pattern", v)}
+          />
+          <Label>Show dot pattern background</Label>
+        </div>
+      )}
+
+      {/* Background image for non-hero sections */}
+      {section.type !== "hero" && (
         <div className="space-y-2">
-          <Label>Background Image URL</Label>
+          <Label>Background Image URL (optional)</Label>
           <Input
             value={(appearance.background as string) || ""}
             onChange={(e) => updateAppearance("background", e.target.value)}
@@ -1004,16 +1568,6 @@ function AppearanceTab({ section, onUpdate }: SectionEditorPanelProps) {
               className="mt-2 h-32 w-full rounded-md object-cover"
             />
           )}
-        </div>
-      )}
-
-      {section.type === "mediaContent" && (
-        <div className="flex items-center gap-2">
-          <Switch
-            checked={appearance.pattern === true}
-            onCheckedChange={(v) => updateAppearance("pattern", v)}
-          />
-          <Label>Show dot pattern background</Label>
         </div>
       )}
     </div>

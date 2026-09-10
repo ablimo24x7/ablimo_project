@@ -8,13 +8,26 @@ interface ContactFormSectionProps {
   section: PageSection;
 }
 
+const PADDING_CLASSES = {
+  none: "",
+  sm: "py-12",
+  md: "py-16",
+  lg: "py-24",
+  xl: "py-32",
+} as const;
+
 export default function ContactFormSection({ section }: ContactFormSectionProps) {
   const c = section.content as Record<string, string>;
-  const appearance = section.appearance as Record<string, string>;
+  const appearance = section.appearance as Record<string, unknown>;
   const [submitted, setSubmitted] = React.useState(false);
   const [submitting, setSubmitting] = React.useState(false);
 
   const bgClass = appearance.theme === "darker" ? "bg-abBlack" : "bg-abDarkGray";
+  const padding = (appearance.padding as string) || "lg";
+  const border = appearance.border === "true" || appearance.border === true;
+  const textAlign = (appearance.textAlign as string) || "left";
+
+  const textAlignClass = textAlign === "center" ? "text-center" : textAlign === "right" ? "text-right" : "text-left";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,10 +39,10 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
   };
 
   return (
-    <section id="corporate-account" className={`py-24 ${bgClass} relative border-t border-gray-800`}>
+    <section id="corporate-account" className={`${PADDING_CLASSES[padding as keyof typeof PADDING_CLASSES] || "py-24"} ${bgClass} relative ${border ? "border-t border-gray-800" : ""}`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex justify-between items-end mb-10">
+        <div className={`flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4 ${textAlignClass}`}>
           <div>
             {c.eyebrow && (
               <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-2">

@@ -6,39 +6,85 @@ interface ServiceCardsSectionProps {
   section: PageSection;
 }
 
+const PADDING_CLASSES = {
+  none: "",
+  sm: "py-12",
+  md: "py-16",
+  lg: "py-24",
+  xl: "py-32",
+} as const;
+
+function CtaButton({ cta }: { cta: { label?: string; href?: string; style?: string; icon?: string; iconPosition?: string } }) {
+  if (!cta.label) return null;
+  const iconEl = cta.icon ? getIcon(cta.icon, "w-4 h-4 mr-2") : null;
+  const isRight = cta.iconPosition === "right";
+  return (
+    <Link
+      href={cta.href || "#"}
+      className={`inline-flex items-center justify-center px-8 py-3.5 rounded text-sm font-semibold transition-all ${
+        cta.style === "primary"
+          ? "bg-abGold hover:bg-yellow-600 text-white shadow-lg shadow-abGold/20"
+          : cta.style === "secondary"
+          ? "bg-transparent border border-abGold text-abGold hover:bg-abGold hover:text-white"
+          : "bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white"
+      }`}
+    >
+      {!isRight && iconEl}
+      {cta.label}
+      {isRight && iconEl && <span className="ml-2">{iconEl}</span>}
+    </Link>
+  );
+}
+
 export default function ServiceCardsSection({ section }: ServiceCardsSectionProps) {
-  const c = section.content as Record<string, string>;
+  const c = section.content as Record<string, unknown>;
   const items = (section.items || []) as Array<{
     id: string; icon: string; title: string; description: string; wide?: boolean;
     actions?: Array<{ label: string; href: string; style: string }>;
   }>;
-  const settings = section.settings as Record<string, string>;
-  const appearance = section.appearance as Record<string, string>;
+  const settings = section.settings as Record<string, unknown>;
+  const appearance = section.appearance as Record<string, unknown>;
 
   const columns = settings.columns || "3";
   const bgClass = appearance.theme === "darker" ? "bg-abBlack" : "bg-abDarkGray";
+  const padding = (appearance.padding as string) || "lg";
+  const border = appearance.border === "true" || appearance.border === true;
+  const textAlign = (appearance.textAlign as string) || "center";
+
+  const sectionCta = c.sectionCta as { label?: string; href?: string; style?: string; icon?: string } | undefined;
+  const bottomCta = c.bottomCta as { label?: string; href?: string; style?: string; icon?: string } | undefined;
 
   const gridCols =
     columns === "2" ? "md:grid-cols-2" :
     columns === "4" ? "md:grid-cols-2 lg:grid-cols-4" :
     "md:grid-cols-2 lg:grid-cols-3";
 
+  const textAlignClass = textAlign === "center" ? "text-center" : textAlign === "left" ? "text-left" : "text-right";
+
   return (
-    <section id="services" className={`py-24 ${bgClass} relative z-20 border-t border-gray-800`}>
+    <section id="services" className={`${PADDING_CLASSES[padding as keyof typeof PADDING_CLASSES] || "py-24"} ${bgClass} relative z-20 ${border ? "border-t border-gray-800" : ""}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        {c.eyebrow && (
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-3">
-              {c.eyebrow}
-            </h2>
-            {c.heading && (
+        {(!!c.eyebrow || !!c.heading || !!c.description || !!sectionCta?.label) && (
+          <div className={`${textAlignClass} max-w-3xl ${textAlign === "center" ? "mx-auto" : ""} mb-16`}>
+            {(c.eyebrow as string) && (
+              <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-3">
+                {c.eyebrow as string}
+              </h2>
+            )}
+            {(c.heading as string) && (
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                {c.heading}
+                {c.heading as string}
               </h3>
             )}
-            {c.description && (
-              <p className="text-gray-400 text-lg mb-8">{c.description}</p>
+            {(c.description as string) && (
+              <p className="text-gray-400 text-lg mb-8">{c.description as string}</p>
+            )}
+            {/* Header CTA */}
+            {sectionCta?.label && (
+              <div className={`flex gap-4 ${textAlign === "center" ? "justify-center" : ""}`}>
+                <CtaButton cta={sectionCta} />
+              </div>
             )}
           </div>
         )}
@@ -128,6 +174,13 @@ export default function ServiceCardsSection({ section }: ServiceCardsSectionProp
             );
           })}
         </div>
+
+        {/* Bottom CTA */}
+        {bottomCta?.label && (
+          <div className="mt-16 text-center">
+            <CtaButton cta={bottomCta} />
+          </div>
+        )}
       </div>
     </section>
   );

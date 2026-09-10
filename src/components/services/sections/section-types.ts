@@ -27,6 +27,17 @@ export interface PageSection {
   appearance: Record<string, unknown>;
 }
 
+// ── Shared Appearance ────────────────────────────────────────────
+
+export interface SectionAppearanceBase {
+  theme?: "dark" | "darker" | "light";
+  background?: string;
+  pattern?: boolean;
+  padding?: "none" | "sm" | "md" | "lg" | "xl";
+  border?: boolean;
+  textAlign?: "left" | "center";
+}
+
 // ── Hero ─────────────────────────────────────────────────────────
 
 export interface HeroContent {
@@ -42,6 +53,7 @@ export interface HeroAction {
   style: "primary" | "secondary" | "ghost" | "link";
   icon?: string;
   iconPosition?: "left" | "right";
+  openInNewTab?: boolean;
 }
 
 export interface HeroMedia {
@@ -54,11 +66,13 @@ export interface HeroSettings {
   minHeight?: string;
   overlayOpacity?: number;
   contentPosition?: "left" | "center" | "right";
+  buttonLayout?: "row" | "column";
 }
 
-export interface HeroAppearance {
+export interface HeroAppearance extends SectionAppearanceBase {
   theme?: "dark" | "darker";
   background?: string;
+  overlayGradient?: "default" | "left-heavy" | "bottom-heavy";
 }
 
 // ── Service Cards ────────────────────────────────────────────────
@@ -83,6 +97,18 @@ export interface ServiceCardsContent {
   eyebrow?: string;
   heading: string;
   description?: string;
+  sectionCta?: {
+    label?: string;
+    href?: string;
+    style?: "primary" | "secondary" | "outline";
+    icon?: string;
+  };
+  bottomCta?: {
+    label?: string;
+    href?: string;
+    style?: "primary" | "secondary" | "outline";
+    icon?: string;
+  };
 }
 
 export interface ServiceCardsSettings {
@@ -90,7 +116,7 @@ export interface ServiceCardsSettings {
   showHeader?: boolean;
 }
 
-export interface ServiceCardsAppearance {
+export interface ServiceCardsAppearance extends SectionAppearanceBase {
   theme?: "dark" | "darker";
 }
 
@@ -109,6 +135,7 @@ export interface MediaContentContent {
   description?: string;
   richContent?: string;
   items?: MediaContentItem[];
+  actions?: MediaContentActions[];
 }
 
 export interface MediaContentMedia {
@@ -116,6 +143,7 @@ export interface MediaContentMedia {
   url: string;
   alt?: string;
   caption?: string;
+  mediaTitle?: string;
 }
 
 export interface MediaContentActions {
@@ -130,7 +158,7 @@ export interface MediaContentSettings {
   containerWidth?: "default" | "narrow" | "wide";
 }
 
-export interface MediaContentAppearance {
+export interface MediaContentAppearance extends SectionAppearanceBase {
   theme?: "dark" | "darker" | "light";
   background?: string;
   pattern?: boolean;
@@ -157,13 +185,23 @@ export interface FleetGridContent {
   eyebrow?: string;
   heading: string;
   description?: string;
+  headerAction?: {
+    label?: string;
+    href?: string;
+  };
+  bottomCta?: {
+    label?: string;
+    href?: string;
+    style?: "primary" | "secondary" | "outline";
+    icon?: string;
+  };
 }
 
 export interface FleetGridSettings {
   columns?: "2" | "3" | "4";
 }
 
-export interface FleetGridAppearance {
+export interface FleetGridAppearance extends SectionAppearanceBase {
   theme?: "dark" | "darker";
 }
 
@@ -183,7 +221,7 @@ export interface ContactFormSettings {
   layout?: "full" | "centered";
 }
 
-export interface ContactFormAppearance {
+export interface ContactFormAppearance extends SectionAppearanceBase {
   theme?: "dark" | "darker";
 }
 
@@ -213,7 +251,7 @@ export interface FaqSettings {
   variant?: "default" | "compact";
 }
 
-export interface FaqAppearance {
+export interface FaqAppearance extends SectionAppearanceBase {
   theme?: "dark" | "darker";
 }
 
@@ -235,7 +273,7 @@ export interface CtaBannerSettings {
   layout?: "centered" | "split";
 }
 
-export interface CtaBannerAppearance {
+export interface CtaBannerAppearance extends SectionAppearanceBase {
   theme?: "dark" | "darker";
 }
 
@@ -277,10 +315,15 @@ export const SECTION_TYPES: SectionTypeConfig[] = [
         minHeight: "85vh",
         overlayOpacity: 85,
         contentPosition: "left",
+        buttonLayout: "row",
       },
       appearance: {
         theme: "darker",
         background: "",
+        padding: "none",
+        border: false,
+        textAlign: "left",
+        overlayGradient: "default",
       },
     }),
   },
@@ -304,10 +347,16 @@ export const SECTION_TYPES: SectionTypeConfig[] = [
         eyebrow: "Core Services",
         heading: "Scalable Mobility Solutions.",
         description: "Description of services goes here.",
+        sectionCta: {
+          label: "",
+          href: "",
+          style: "primary",
+          icon: "",
+        },
       },
       items: [],
       settings: { columns: "3", showHeader: true },
-      appearance: { theme: "dark" },
+      appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
     }),
   },
   {
@@ -330,10 +379,11 @@ export const SECTION_TYPES: SectionTypeConfig[] = [
         heading: "Feature Heading.",
         description: "Feature description.",
         items: [],
+        actions: [],
       },
       items: [],
       settings: { mediaPosition: "right", containerWidth: "default" },
-      appearance: { theme: "darker", pattern: false },
+      appearance: { theme: "darker", pattern: false, padding: "lg", border: true, textAlign: "left" },
     }),
   },
   {
@@ -355,10 +405,12 @@ export const SECTION_TYPES: SectionTypeConfig[] = [
         eyebrow: "Fleet",
         heading: "Our Fleet.",
         description: "Fleet description.",
+        headerAction: { label: "", href: "" },
+        bottomCta: { label: "", href: "", style: "secondary", icon: "" },
       },
       items: [],
       settings: { columns: "4" },
-      appearance: { theme: "darker" },
+      appearance: { theme: "darker", padding: "lg", border: true, textAlign: "left" },
     }),
   },
   {
@@ -387,7 +439,7 @@ export const SECTION_TYPES: SectionTypeConfig[] = [
       },
       items: [],
       settings: { layout: "centered" },
-      appearance: { theme: "dark" },
+      appearance: { theme: "dark", padding: "lg", border: true, textAlign: "left" },
     }),
   },
   {
@@ -413,7 +465,7 @@ export const SECTION_TYPES: SectionTypeConfig[] = [
       },
       items: [],
       settings: { variant: "default" },
-      appearance: { theme: "darker" },
+      appearance: { theme: "darker", padding: "lg", border: true, textAlign: "center" },
     }),
   },
   {
@@ -436,7 +488,7 @@ export const SECTION_TYPES: SectionTypeConfig[] = [
       },
       items: [],
       settings: { layout: "centered" },
-      appearance: { theme: "dark" },
+      appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
     }),
   },
 ];
