@@ -33,7 +33,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
-import { Plus, Pencil, Trash2 } from "lucide-react";
+import { Plus, Pencil, Trash2, ChevronLeft, ChevronRight } from "lucide-react";
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { SERVICE_OPTIONS } from "@/lib/constants";
@@ -42,6 +42,8 @@ const SERVICE_FILTER_OPTIONS = [
   { slug: "all", label: "All Services" },
   ...SERVICE_OPTIONS,
 ] as const;
+
+const PAGE_SIZE = 50;
 
 type Post = {
   _id: string;
@@ -64,19 +66,25 @@ function PostsPageContent() {
   const templateTypeFilter = viewParam === "country" ? "service-country" : viewParam === "city" ? "service-city" : "";
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [serviceFilter, setServiceFilter] = useState("all");
+  const [page, setPage] = useState(1);
 
   const { data, isLoading } = useQuery({
-    queryKey: ["posts", serviceFilter, templateTypeFilter],
+    queryKey: ["posts", serviceFilter, templateTypeFilter, page],
     queryFn: async () => {
       const params = new URLSearchParams();
       if (serviceFilter !== "all") params.set("service", serviceFilter);
       if (templateTypeFilter) params.set("templateType", templateTypeFilter);
+      params.set("page", String(page));
+      params.set("limit", String(PAGE_SIZE));
       const qs = params.toString();
       const res = await fetch(`/api/articles${qs ? `?${qs}` : ""}`);
       if (!res.ok) throw new Error("Failed");
-      return res.json() as Promise<{ items: Post[] }>;
+      return res.json() as Promise<{ items: Post[]; total: number; page: number; limit: number }>;
     },
   });
+
+  const totalCount = data?.total ?? 0;
+  const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
@@ -105,7 +113,7 @@ function PostsPageContent() {
       </div>
 
       <div className="flex items-center gap-3">
-        <Select value={serviceFilter} onValueChange={(v) => { if (v) setServiceFilter(v); }}>
+        <Select value={serviceFilter} onValueChange={(v) => { if (v) { setServiceFilter(v); setPage(1); } }}>
           <SelectTrigger className="w-[220px]">
             <SelectValue />
           </SelectTrigger>
@@ -115,6 +123,11 @@ function PostsPageContent() {
             ))}
           </SelectContent>
         </Select>
+        {!isLoading && (
+          <span className="text-sm text-muted-foreground tabular-nums">
+            {totalCount} {totalCount === 1 ? "article" : "articles"}
+          </span>
+        )}
       </div>
 
       <Card>
@@ -173,6 +186,55 @@ function PostsPageContent() {
           )}
         </CardContent>
       </Card>
+
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-muted-foreground">
+            Page {page} of {totalPages} ({totalCount} total)
+          </p>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={page <= 1}
+              onClick={() => setPage(p => Math.max(1, p - 1))}
+            >
+              <ChevronLeft className="h-4 w-4" /> Previous
+            </Button>
+            {Array.from({ length: Math.min(totalPages, 7) }, (_, i) => {
+              let pageNum: number;
+              if (totalPages <= 7) {
+                pageNum = i + 1;
+              } else if (page <= 4) {
+                pageNum = i + 1;
+              } else if (page >= totalPages - 3) {
+                pageNum = totalPages - 6 + i;
+              } else {
+                pageNum = page - 3 + i;
+              }
+              return (
+                <Button
+                  key={pageNum}
+                  variant={pageNum === page ? "default" : "outline"}
+                  size="sm"
+                  className="min-w-[36px]"
+                  onClick={() => setPage(pageNum)}
+                >
+                  {pageNum}
+                </Button>
+              );
+            })}
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={page >= totalPages}
+              onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+            >
+              Next <ChevronRight className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      )}
 
       <AlertDialog open={!!deleteId} onOpenChange={() => setDeleteId(null)}>
         <AlertDialogContent>

@@ -56,7 +56,7 @@ export default function MediaContentSection({ section }: MediaContentSectionProp
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content Side */}
-          <div className={`${mediaPosition === "left" ? "order-2 lg:order-1" : ""} ${textAlignClass}`}>
+          <div className={`${mediaPosition === "right" ? "order-2 lg:order-1" : ""} ${textAlignClass}`}>
             {(c.eyebrow as string) && (
               <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-3">
                 {c.eyebrow as string}
