@@ -6,6 +6,7 @@
 
 export type SectionType =
   | "hero"
+  | "marquee"
   | "serviceCards"
   | "mediaContent"
   | "fleetGrid"
@@ -36,6 +37,27 @@ export interface SectionAppearanceBase {
   padding?: "none" | "sm" | "md" | "lg" | "xl";
   border?: boolean;
   textAlign?: "left" | "center";
+}
+
+// ── Marquee ──────────────────────────────────────────────────────
+
+export interface MarqueeItem {
+  id: string;
+  icon: string;
+  label: string;
+}
+
+export interface MarqueeContent {
+  items: MarqueeItem[];
+}
+
+export interface MarqueeSettings {
+  speed?: "slow" | "normal" | "fast";
+  opacity?: number;
+}
+
+export interface MarqueeAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
 }
 
 // ── Hero ─────────────────────────────────────────────────────────
@@ -325,6 +347,28 @@ export const SECTION_TYPES: SectionTypeConfig[] = [
         textAlign: "left",
         overlayGradient: "default",
       },
+    }),
+  },
+  {
+    type: "marquee",
+    label: "Marquee",
+    description: "Auto-scrolling ticker of client logos or labels",
+    icon: "RefreshCw",
+    variants: [
+      { value: "default", label: "Default" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "marquee",
+      variant: "default",
+      order: 0,
+      enabled: true,
+      content: {
+        items: [],
+      },
+      items: [],
+      settings: { speed: "normal", opacity: 50 },
+      appearance: { theme: "darker", padding: "none", border: false, textAlign: "center" },
     }),
   },
   {

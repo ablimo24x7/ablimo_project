@@ -4,6 +4,7 @@ import { fetchAndTranslateArticle, getRelatedArticles } from "@/lib/blog";
 import { BlogArticleLayout } from "@/components/blog/BlogArticleLayout";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
+import CityPageRenderer from "./CityPageRenderer";
 
 
 export const revalidate = 0;
@@ -28,6 +29,19 @@ function getViewAllHref(templateType: string, lang: string, serviceSlug?: string
     case "service-city": return serviceSlug && countrySlug ? `/${lang}/services/${serviceSlug}/${countrySlug}` : `/${lang}/blogs`;
     default: return `/${lang}/blogs`;
   }
+}
+
+function isPageSectionArray(sections: unknown[]): boolean {
+  if (!sections || sections.length === 0) return false;
+  const first = sections[0] as Record<string, unknown>;
+  return (
+    typeof first === "object" &&
+    first !== null &&
+    "type" in first &&
+    "variant" in first &&
+    "order" in first &&
+    "enabled" in first
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -65,6 +79,19 @@ export default async function ServiceArticlePage({ params, searchParams }: Props
 
   const isCity = article.templateType === "service-city" && article.city;
   const isCountry = article.templateType === "service-country" && article.country;
+
+  // Check if this city article uses PageSection-based sections
+  const usePageRenderer = isCity && article.sections && article.sections.length > 0 && isPageSectionArray(article.sections as unknown[]);
+
+  if (usePageRenderer) {
+    return (
+      <CityPageRenderer
+        sections={article.sections as unknown as import("@/components/services/sections/section-types").PageSection[]}
+        serviceName={article.title}
+        serviceUrl={`/${lang}/services/${slug.join("/")}`}
+      />
+    );
+  }
 
   const templateLabel = isCity
     ? article.city

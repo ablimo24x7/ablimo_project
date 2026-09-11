@@ -33,7 +33,7 @@ import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Plus, Trash2, GripVertical, Copy, ChevronDown, ChevronUp, ExternalLink,
-  Layout, LayoutGrid, PanelLeft, Car, FileText, HelpCircle, Megaphone,
+  Layout, LayoutGrid, PanelLeft, Car, FileText, HelpCircle, Megaphone, RefreshCw,
 } from "lucide-react";
 import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
 import {
@@ -42,10 +42,11 @@ import {
   type SectionTypeConfig,
 } from "@/components/services/sections/section-types";
 import { ICON_OPTIONS } from "@/components/services/sections/section-icons";
-import { TEMPLATE_PRESETS } from "@/components/services/sections/section-defaults";
+import { TEMPLATE_PRESETS, type TemplatePreset } from "@/components/services/sections/section-defaults";
 
 const SECTION_ICONS: Record<string, React.ElementType> = {
   hero: Layout,
+  marquee: RefreshCw,
   serviceCards: LayoutGrid,
   mediaContent: PanelLeft,
   fleetGrid: Car,
@@ -58,13 +59,16 @@ interface ServiceSectionEditorProps {
   sections: PageSection[];
   onChange: (sections: PageSection[]) => void;
   serviceSlug?: string;
+  presets?: TemplatePreset[];
 }
 
 export function ServiceSectionEditor({
   sections,
   onChange,
   serviceSlug,
+  presets,
 }: ServiceSectionEditorProps) {
+  const activePresets = presets || TEMPLATE_PRESETS;
   const [expandedSections, setExpandedSections] = React.useState<Record<string, boolean>>({});
   const [showAddPanel, setShowAddPanel] = React.useState(false);
   const [showPresets, setShowPresets] = React.useState(false);
@@ -110,7 +114,7 @@ export function ServiceSectionEditor({
   };
 
   const applyPreset = (presetIndex: number) => {
-    const preset = TEMPLATE_PRESETS[presetIndex];
+    const preset = activePresets[presetIndex];
     if (!preset) return;
     const withOrder = preset.sections.map((s, i) => {
       const freshId = `sec-${Date.now()}-${i}-${Math.random().toString(36).substr(2, 9)}`;
@@ -161,7 +165,7 @@ export function ServiceSectionEditor({
           <CardContent className="p-4">
             <p className="text-sm text-muted-foreground mb-3">Replace all sections with a template:</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {TEMPLATE_PRESETS.map((preset, i) => (
+              {activePresets.map((preset, i) => (
                 <button
                   key={i}
                   type="button"
@@ -371,6 +375,12 @@ function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
     onUpdate({ content: { ...section.content, [key]: value } });
   };
 
+  const updateSettings = (key: string, value: unknown) => {
+    onUpdate({ settings: { ...section.settings, [key]: value } });
+  };
+
+  const sectionSettings = (section.settings || {}) as Record<string, unknown>;
+
   switch (section.type) {
     case "hero":
       return (
@@ -390,6 +400,90 @@ function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
           <div className="space-y-2">
             <Label>Description</Label>
             <WysiwygEditor value={(c.description as string) || ""} onChange={(v) => updateContent("description", v)} placeholder="Service description..." />
+          </div>
+        </div>
+      );
+
+    case "marquee":
+      return (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Speed</Label>
+            <Select
+              value={(sectionSettings.speed as string) || "normal"}
+              onValueChange={(v) => updateSettings("speed", v)}
+            >
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="slow">Slow</SelectItem>
+                <SelectItem value="normal">Normal</SelectItem>
+                <SelectItem value="fast">Fast</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-2">
+            <Label>Opacity (%)</Label>
+            <Input
+              type="number"
+              min={0}
+              max={100}
+              step={5}
+              value={((sectionSettings.opacity as number) ?? 50)}
+              onChange={(e) => updateSettings("opacity", parseInt(e.target.value) || 50)}
+            />
+          </div>
+          <div className="border-t pt-4 mt-4">
+            <Label className="text-sm font-medium mb-3 block">Marquee Items</Label>
+            {((c.items as Array<{id: string; icon: string; label: string}>) || []).map((item, idx) => (
+              <div key={item.id} className="flex items-center gap-2 mb-2">
+                <Select
+                  value={item.icon || ""}
+                  onValueChange={(v) => {
+                    if (!v) return;
+                    const newItems = [...((c.items as Array<{id: string; icon: string; label: string}>) || [])];
+                    newItems[idx] = { ...newItems[idx], icon: v };
+                    updateContent("items", newItems);
+                  }}
+                >
+                  <SelectTrigger className="w-[120px]"><SelectValue placeholder="Icon" /></SelectTrigger>
+                  <SelectContent>
+                    {ICON_OPTIONS.map((opt) => (
+                      <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Input
+                  value={item.label || ""}
+                  onChange={(e) => {
+                    const newItems = [...((c.items as Array<{id: string; icon: string; label: string}>) || [])];
+                    newItems[idx] = { ...newItems[idx], label: e.target.value };
+                    updateContent("items", newItems);
+                  }}
+                  placeholder="Label text"
+                  className="flex-1"
+                />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    const newItems = ((c.items as Array<{id: string; icon: string; label: string}>) || []).filter((_, i) => i !== idx);
+                    updateContent("items", newItems);
+                  }}
+                >
+                  <Trash2 className="h-4 w-4" />
+                </Button>
+              </div>
+            ))}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                const newItems = [...((c.items as Array<{id: string; icon: string; label: string}>) || []), { id: `item-${Date.now()}`, icon: "Building", label: "" }];
+                updateContent("items", newItems);
+              }}
+            >
+              <Plus className="h-4 w-4 mr-1" /> Add Item
+            </Button>
           </div>
         </div>
       );

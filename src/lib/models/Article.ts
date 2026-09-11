@@ -291,7 +291,7 @@ const articleSchema = new Schema(
     // ── Content Mode ────────────────────────────────────────
     contentMode: {
       type: String,
-      enum: ["wysiwyg", "sections"],
+      enum: ["wysiwyg", "sections", "page-sections"],
       default: "wysiwyg",
     },
 

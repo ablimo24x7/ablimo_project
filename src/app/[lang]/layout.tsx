@@ -4,6 +4,8 @@ import Footer from "@/components/layout/Footer";
 import { ChatWidget } from "@/components/chat/ChatWidget";
 import GoogleTranslate from "@/components/GoogleTranslate";
 import { hasLocale, defaultLocale, type Locale } from "./dictionaries";
+import { getSession } from "@/lib/auth/server";
+import ComingSoonPage from "./coming-soon/page";
 
 export async function generateStaticParams() {
   return [{ lang: "en-US" }, { lang: "en-GB" }, { lang: "ar" }];
@@ -60,6 +62,17 @@ export default async function LangLayout({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dir = locale === "ar" ? "rtl" : "ltr";
+
+  const session = await getSession();
+  const isAuthenticated = !!session?.user?.id;
+
+  if (!isAuthenticated) {
+    return (
+      <div dir={dir} lang={locale} className="dark">
+        <ComingSoonPage params={Promise.resolve({ lang })} />
+      </div>
+    );
+  }
 
   return (
     <div dir={dir} lang={locale} className="dark">

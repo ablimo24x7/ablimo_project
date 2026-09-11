@@ -2,6 +2,7 @@ import type { ComponentType } from "react";
 import type { PageSection } from "./section-types";
 
 import HeroSection from "./hero-section";
+import MarqueeSection from "./marquee-section";
 import ServiceCardsSection from "./service-cards-section";
 import FleetGridSection from "./fleet-grid-section";
 import MediaContentSection from "./media-content-section";
@@ -17,6 +18,7 @@ export interface SectionRendererProps {
 
 const SECTION_REGISTRY: Record<string, ComponentType<SectionRendererProps>> = {
   hero: HeroSection,
+  marquee: MarqueeSection,
   serviceCards: ServiceCardsSection,
   fleetGrid: FleetGridSection,
   mediaContent: MediaContentSection,
@@ -31,6 +33,7 @@ export function getSectionComponent(type: string): ComponentType<SectionRenderer
 
 export {
   HeroSection,
+  MarqueeSection,
   ServiceCardsSection,
   FleetGridSection,
   MediaContentSection,

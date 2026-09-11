@@ -19,12 +19,15 @@ import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
 import { SectionEditor } from "./section-editor";
+import { ServiceSectionEditor } from "./service-section-editor";
 import { toast } from "sonner";
 import { Plus, Trash2, ChevronUp, ChevronDown, FileText, LayoutGrid } from "lucide-react";
 import { TranslateButton } from "./TranslateButton";
 import type { TextImageSectionType, CardsSectionType } from "@/lib/validations/location";
+import { CITY_TEMPLATE_PRESETS } from "@/components/services/Templates/City";
+import type { PageSection } from "@/components/services/sections/section-types";
 
-type SectionUnion = TextImageSectionType | CardsSectionType;
+type SectionUnion = TextImageSectionType | CardsSectionType | PageSection;
 
 type FaqItem = { q: string; a: string };
 
@@ -42,7 +45,7 @@ type PostData = {
   country: string;
   citySlug: string;
   city: string;
-  contentMode: "wysiwyg" | "sections";
+  contentMode: "wysiwyg" | "sections" | "page-sections";
   bodyContent: string;
   keyTakeawaysContent: string;
   finalThoughtsContent: string;
@@ -161,6 +164,20 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
     () => selectedCountry?.cities ?? [],
     [selectedCountry]
   );
+
+  const [showCityPresets, setShowCityPresets] = React.useState(false);
+
+  const applyCityPreset = (presetIndex: number) => {
+    const preset = CITY_TEMPLATE_PRESETS[presetIndex];
+    if (!preset) return;
+    const withFreshIds = preset.sections.map((s: PageSection) => ({
+      ...JSON.parse(JSON.stringify(s)),
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    })) as PageSection[];
+    updateField("sections", withFreshIds);
+    updateField("contentMode", "page-sections");
+    setShowCityPresets(false);
+  };
 
   const isEdit = mode === "edit" && form._id;
 
@@ -379,29 +396,43 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
           <Card>
             <CardHeader className="flex-row items-center justify-between">
               <CardTitle>Body Content</CardTitle>
-              <div className="flex items-center gap-2 bg-muted rounded-lg p-1">
-                <Button
-                  type="button"
-                  size="sm"
-                  variant={form.contentMode === "wysiwyg" ? "default" : "ghost"}
-                  className="h-7"
-                  onClick={() => updateField("contentMode", "wysiwyg")}
-                >
-                  <FileText className="h-3.5 w-3.5 mr-1" /> WYSIWYG
-                </Button>
-                <Button
-                  type="button"
-                  size="sm"
-                  variant={form.contentMode === "sections" ? "default" : "ghost"}
-                  className="h-7"
-                  onClick={() => updateField("contentMode", "sections")}
-                >
-                  <LayoutGrid className="h-3.5 w-3.5 mr-1" /> Sections
-                </Button>
-              </div>
+              {blogType !== "city" && (
+                <div className="flex items-center gap-2 bg-muted rounded-lg p-1">
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant={form.contentMode === "wysiwyg" ? "default" : "ghost"}
+                    className="h-7"
+                    onClick={() => updateField("contentMode", "wysiwyg")}
+                  >
+                    <FileText className="h-3.5 w-3.5 mr-1" /> WYSIWYG
+                  </Button>
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant={form.contentMode === "sections" ? "default" : "ghost"}
+                    className="h-7"
+                    onClick={() => updateField("contentMode", "sections")}
+                  >
+                    <LayoutGrid className="h-3.5 w-3.5 mr-1" /> Sections
+                  </Button>
+                </div>
+              )}
+              {blogType === "city" && (
+                <div className="text-xs text-muted-foreground">Page Sections Builder</div>
+              )}
             </CardHeader>
             <CardContent className="space-y-4">
-              {form.contentMode === "wysiwyg" ? (
+              {blogType === "city" ? (
+                <ServiceSectionEditor
+                  sections={(form.sections as PageSection[]) || []}
+                  onChange={(sections) => {
+                    updateField("sections", sections as SectionUnion[]);
+                    updateField("contentMode", "page-sections");
+                  }}
+                  presets={CITY_TEMPLATE_PRESETS}
+                />
+              ) : form.contentMode === "wysiwyg" ? (
                 <>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
@@ -451,8 +482,8 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 </>
               ) : (
                 <SectionEditor
-                  sections={form.sections}
-                  onChange={(sections) => updateField("sections", sections)}
+                  sections={form.sections as (TextImageSectionType | CardsSectionType)[]}
+                  onChange={(sections) => updateField("sections", sections as SectionUnion[])}
                 />
               )}
             </CardContent>

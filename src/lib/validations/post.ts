@@ -40,7 +40,7 @@ export const PostCreateSchema = z.object({
   articleMedia: ArticleMediaSchema,
 
   // Content mode: "wysiwyg" uses the 3 HTML fields, "sections" uses structured sections
-  contentMode: z.enum(["wysiwyg", "sections"]).optional().default("wysiwyg"),
+  contentMode: z.enum(["wysiwyg", "sections", "page-sections"]).optional().default("wysiwyg"),
 
   // WYSIWYG content fields
   bodyContent: z.string().optional().default(""),
