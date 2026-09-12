@@ -37,7 +37,7 @@ export default function EventLogisticsSection({ dict }: { dict: Dictionary }) {
           <div className="relative">
             <div className="absolute inset-0 border border-abBlue/20 bg-[#050505] transform translate-x-4 translate-y-4 rounded-xl"></div>
             <Image
-              src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              src="/Team_Meet.jpeg"
               alt={dict.home.eventLogistics.alt}
               width={1000}
               height={600}
