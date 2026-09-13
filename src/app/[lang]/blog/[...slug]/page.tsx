@@ -5,6 +5,7 @@ import { BlogArticleLayout } from "@/components/blog/BlogArticleLayout";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
 import { translateText } from "@/lib/translate";
+import { generateSeoMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ lang: string; slug: string[] }>;
@@ -40,28 +41,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = article.seo_metadata?.metaTitle || article.title;
   const description = article.seo_metadata?.metaDescription || article.excerpt;
+  const keywords = `${title}, AB.Limo blog, luxury transportation, chauffeur service`;
   const slugPath = slug.join("/");
 
-  return {
+  return generateSeoMetadata({
     title,
     description,
-    alternates: {
-      canonical: `https://ab.limo/blog/${slugPath}`,
-      languages: {
-        "en-US": `https://ab.limo/en-US/blog/${slugPath}`,
-        "en-GB": `https://ab.limo/en-GB/blog/${slugPath}`,
-        ar: `https://ab.limo/ar/blog/${slugPath}`,
-        "x-default": `https://ab.limo/en-US/blog/${slugPath}`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      type: "article",
-      siteName: "AB.Limo",
-      images: article.seo_metadata?.ogImage ? [article.seo_metadata.ogImage] : undefined,
-    },
-  };
+    path: `/blog/${slugPath}`,
+    lang,
+    keywords,
+    ogImage: article.seo_metadata?.ogImage,
+  });
 }
 
 export default async function BlogSlugPage({ params, searchParams }: Props) {

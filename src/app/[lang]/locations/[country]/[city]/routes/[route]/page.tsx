@@ -19,6 +19,7 @@ import {
     findRouteData,
 } from "@/lib/locationData";
 import { generateSeoMetadata } from "@/lib/seo";
+import { RouteJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
 
 export async function generateMetadata({
   params,
@@ -105,8 +106,34 @@ export default async function RoutePage({
   const distance = routeInfo?.distance ?? rp.contactUs;
   const duration = routeInfo?.duration ?? rp.contactUs;
 
+  const routeDescription = `Book a luxury ${from.name} to ${to.name} transfer with AB.Limo. Professional chauffeurs, fixed pricing, and premium vehicles for your long-distance journey.`;
+
   return (
-    <main className="min-h-screen bg-[#292a30] text-white">
+    <>
+      <RouteJsonLd
+        fromCity={from.name}
+        toCity={to.name}
+        description={routeDescription}
+        url={`/locations/${countryParam}/${cityParam}/routes/${routeSlug}`}
+        distance={distance}
+        duration={duration}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: `/${lang}` },
+          { name: "Locations", url: `/${lang}/locations` },
+          { name: originCountry.name, url: `/${lang}/locations/${countryParam}` },
+          { name: originCity.name, url: `/${lang}/locations/${countryParam}/${cityParam}` },
+          { name: `${from.name} → ${to.name}`, url: `/${lang}/locations/${countryParam}/${cityParam}/routes/${routeSlug}` },
+        ]}
+      />
+      <FAQJsonLd
+        items={dict.cityToCity.faq.items.map((item: { q: string; a: string }) => ({
+          question: item.q,
+          answer: item.a,
+        }))}
+      />
+      <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
         <Image
@@ -338,6 +365,7 @@ export default async function RoutePage({
         </div>
       </section>
     </main>
+    </>
   );
 }
 

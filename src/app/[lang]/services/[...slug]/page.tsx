@@ -5,6 +5,7 @@ import { BlogArticleLayout } from "@/components/blog/BlogArticleLayout";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
 import CityPageRenderer from "./CityPageRenderer";
+import { generateSeoMetadata } from "@/lib/seo";
 
 
 export const revalidate = 0;
@@ -52,15 +53,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = await fetchAndTranslateArticle(dbSlug, locale, true);
   if (!article) return { title: dict.notFound?.title || "Not Found" };
 
-  return {
-    title: article.seo_metadata?.metaTitle || article.title,
-    description: article.seo_metadata?.metaDescription || article.excerpt,
-    openGraph: {
-      title: article.seo_metadata?.metaTitle || article.title,
-      description: article.seo_metadata?.metaDescription || article.excerpt,
-      images: article.seo_metadata?.ogImage ? [article.seo_metadata.ogImage] : undefined,
-    },
-  };
+  const title = article.seo_metadata?.metaTitle || article.title;
+  const description = article.seo_metadata?.metaDescription || article.excerpt;
+
+  return generateSeoMetadata({
+    title,
+    description,
+    path: `/services/${slug.join("/")}`,
+    lang,
+    keywords: `${title}, AB.Limo, luxury chauffeur service`,
+    ogImage: article.seo_metadata?.ogImage,
+    type: "article",
+  });
 }
 
 export default async function ServiceArticlePage({ params, searchParams }: Props) {

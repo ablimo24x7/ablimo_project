@@ -33,12 +33,12 @@ function discoverStaticRoutes(): string[] {
 /* ─── 2. DB-driven dynamic routes ────────────────────────── */
 
 async function discoverDynamicRoutes(): Promise<{
-  locations: { country: string; cities: string[] }[];
+  locations: { country: string; cities: string[]; routes: { city: string; route: string }[]; airports: { city: string; airport: string }[] }[];
   services: string[];
   blogSlugs: string[];
 }> {
   const result = {
-    locations: [] as { country: string; cities: string[] }[],
+    locations: [] as { country: string; cities: string[]; routes: { city: string; route: string }[]; airports: { city: string; airport: string }[] }[],
     services: [] as string[],
     blogSlugs: [] as string[],
   };
@@ -49,6 +49,32 @@ async function discoverDynamicRoutes(): Promise<{
     result.locations = countries.map((c) => ({
       country: c.slug,
       cities: c.cities.map((city) => city.slug),
+      routes: c.cities.flatMap((city) => {
+        const cityAny = city as unknown as Record<string, unknown>;
+        const cityRoutes = cityAny.routes;
+        if (Array.isArray(cityRoutes)) {
+          return cityRoutes
+            .filter((r): r is { slug: string } => r && typeof r === "object" && "slug" in r)
+            .map((route) => ({
+              city: city.slug,
+              route: route.slug,
+            }));
+        }
+        return [];
+      }),
+      airports: c.cities.flatMap((city) => {
+        const cityAny = city as unknown as Record<string, unknown>;
+        const cityAirports = cityAny.airports;
+        if (Array.isArray(cityAirports)) {
+          return cityAirports
+            .filter((a): a is { slug: string } => a && typeof a === "object" && "slug" in a)
+            .map((airport) => ({
+              city: city.slug,
+              airport: airport.slug,
+            }));
+        }
+        return [];
+      }),
     }));
   } catch {
     // DB unavailable — skip dynamic locations
@@ -84,12 +110,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const dynamic = await discoverDynamicRoutes();
   const entries: MetadataRoute.Sitemap = [];
 
-  const add = (routePath: string, priority = 0.8) => {
+  const add = (routePath: string, priority = 0.8, changeFreq: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" = "weekly") => {
     for (const lang of LOCALES) {
       entries.push({
         url: `${BASE_URL}/${lang}${routePath.startsWith("/") ? routePath : `/${routePath}`}`,
         lastModified: NOW,
-        changeFrequency: "weekly",
+        changeFrequency: changeFreq,
         priority,
       });
     }
@@ -103,20 +129,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Dynamic: locations → /locations/{country}, /locations/{country}/{city}
   for (const loc of dynamic.locations) {
-    add(`/locations/${loc.country}`, 0.7);
+    add(`/locations/${loc.country}`, 0.7, "monthly");
     for (const city of loc.cities) {
-      add(`/locations/${loc.country}/${city}`, 0.7);
+      add(`/locations/${loc.country}/${city}`, 0.7, "monthly");
+    }
+    // Dynamic: routes → /locations/{country}/{city}/routes/{route}
+    for (const route of loc.routes) {
+      add(`/locations/${loc.country}/${route.city}/routes/${route.route}`, 0.6, "monthly");
+    }
+    // Dynamic: airports → /locations/{country}/{city}/airport/{airport}
+    for (const airport of loc.airports) {
+      add(`/locations/${loc.country}/${airport.city}/airport/${airport.airport}`, 0.6, "monthly");
     }
   }
 
   // Dynamic: services → /services/{slug}
   for (const slug of dynamic.services) {
-    add(`/services/${slug}`, 0.8);
+    add(`/services/${slug}`, 0.8, "weekly");
   }
 
   // Dynamic: blog articles → /blog/{slug}
   for (const slug of dynamic.blogSlugs) {
-    add(`/blog/${slug}`, 0.6);
+    add(`/blog/${slug}`, 0.6, "weekly");
   }
 
   return entries;

@@ -5,6 +5,7 @@ import { Calendar, Clock } from "lucide-react";
 import { getAllPublishedArticles, getAllPublishedArticlesFiltered } from "@/lib/blog";
 import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
 import { SERVICE_OPTIONS } from "@/lib/constants";
+import { generateSeoMetadata } from "@/lib/seo";
 
 const SERVICE_TABS = [
   { slug: "all", label: "All" },
@@ -19,10 +20,13 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  return {
+  return generateSeoMetadata({
     title: dict.blog.allArticles,
     description: dict.blog.allArticlesDescription,
-  };
+    path: "/blogs",
+    lang,
+    keywords: "AB.Limo blog, luxury transportation articles, chauffeur service news, corporate travel tips, GCC mobility insights, airport transfer guide",
+  });
 }
 
 const templateColors: Record<string, string> = {

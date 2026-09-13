@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
 import { cityUrl, locationsUrl, resolveCity, resolveCountry } from "@/lib/locations";
 import { generateSeoMetadata } from "@/lib/seo";
+import { AboutPageJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
 
 export async function generateMetadata({
   params,
@@ -52,6 +53,21 @@ export default async function AboutPage({
   const dict = await getDictionary(locale);
   return (
     <>
+      <AboutPageJsonLd />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: `/${lang}` },
+          { name: "About", url: `/${lang}/about` },
+        ]}
+      />
+      {dict.about.faq && (
+        <FAQJsonLd
+          items={dict.about.faq.items.map((item: { q: string; a: string }) => ({
+            question: item.q,
+            answer: item.a,
+          }))}
+        />
+      )}
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <Image

@@ -4,6 +4,7 @@ import { getDictionary } from "@/app/[lang]/dictionaries";
 import { getCityForRequest, getRoutesForCity } from "@/lib/locationData";
 import CityDetailClient from "../../_components/CityDetailClient";
 import { generateSeoMetadata } from "@/lib/seo";
+import { CityJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
 
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
@@ -60,6 +61,35 @@ export default async function CityPage({
     }
 
     const sections = res.city.sections || [];
+    const cityName = isArabic && res.city.nameAr ? res.city.nameAr : res.city.name;
+    const countryName = isArabic && res.country.nameAr ? res.country.nameAr : res.country.name;
+    const cityDescription = res.city.description || `AB.Limo provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`;
 
-    return <CityDetailClient dict={dict} lang={lang} country={res.country} city={res.city} routes={routes} sections={sections} />;
+    return (
+      <>
+        <CityJsonLd
+          cityName={cityName}
+          countryName={countryName}
+          description={cityDescription}
+          url={`/locations/${countryParam}/${cityParam}`}
+        />
+        <BreadcrumbJsonLd
+          items={[
+            { name: "Home", url: `/${lang}` },
+            { name: "Locations", url: `/${lang}/locations` },
+            { name: countryName, url: `/${lang}/locations/${countryParam}` },
+            { name: cityName, url: `/${lang}/locations/${countryParam}/${cityParam}` },
+          ]}
+        />
+        {res.city.faqs && res.city.faqs.length > 0 && (
+          <FAQJsonLd
+            items={res.city.faqs.map((faq: { q: string; a: string }) => ({
+              question: faq.q,
+              answer: faq.a,
+            }))}
+          />
+        )}
+        <CityDetailClient dict={dict} lang={lang} country={res.country} city={res.city} routes={routes} sections={sections} />
+      </>
+    );
 }

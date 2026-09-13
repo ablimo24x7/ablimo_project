@@ -14,6 +14,7 @@ import {
   type Locale,
 } from "@/app/[lang]/dictionaries";
 import { ServiceJsonLd, BreadcrumbJsonLd } from "@/components/seo/StructuredData";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -26,23 +27,15 @@ export async function generateMetadata({
   const title = resolved.seo?.metaTitle || resolved.content.title || "Service";
   const description =
     resolved.seo?.metaDescription || resolved.content.subtitle || "";
-  const cleanPath = `/services/${slug}`;
-  return {
+  const keywords = `${title}, AB.Limo, luxury chauffeur, ${title} service, premium transportation`;
+  return generateSeoMetadata({
     title,
     description,
-    alternates: {
-      canonical: `https://ab.limo${cleanPath}`,
-      languages: {
-        "en-US": `https://ab.limo/en-US${cleanPath}`,
-        "en-GB": `https://ab.limo/en-GB${cleanPath}`,
-        ar: `https://ab.limo/ar${cleanPath}`,
-        "x-default": `https://ab.limo/en-US${cleanPath}`,
-      },
-    },
-    openGraph: resolved.seo?.ogImage
-      ? { title, description, images: [resolved.seo.ogImage] }
-      : { title, description, type: "website", siteName: "AB.Limo" },
-  };
+    path: `/services/${slug}`,
+    lang,
+    keywords,
+    ogImage: resolved.seo?.ogImage,
+  });
 }
 
 export default async function Page({

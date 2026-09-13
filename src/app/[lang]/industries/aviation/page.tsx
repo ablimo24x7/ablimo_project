@@ -10,6 +10,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -19,10 +20,14 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  return {
-    title: dict.industryPages.aviation.metadata.title,
-    description: dict.industryPages.aviation.metadata.description,
-  };
+  const texts = dict.industryPages.aviation;
+  return generateSeoMetadata({
+    title: texts.metadata.title,
+    description: texts.metadata.description,
+    path: "/industries/aviation",
+    lang,
+    keywords: "aviation mobility solutions, FBO transfers, private aviation ground transport, airport FBO meet and greet, aviation crew transportation, AB.Limo aviation",
+  });
 }
 
 const structure: IndustryStructure = {

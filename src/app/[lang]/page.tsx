@@ -6,7 +6,7 @@ import FleetSection from "@/app/[lang]/_components/FleetSection";
 import IndustrySolutionsSection from "@/app/[lang]/_components/IndustrySolutionsSection";
 import { getDictionary, type Locale } from "./dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
-import { OrganizationJsonLd, LocalBusinessJsonLd, WebsiteJsonLd } from "@/components/seo/StructuredData";
+import { OrganizationJsonLd, LocalBusinessJsonLd, WebsiteJsonLd, HowToBookJsonLd } from "@/components/seo/StructuredData";
 
 export async function generateMetadata({
   params,
@@ -38,6 +38,7 @@ export default async function Home({
       <OrganizationJsonLd />
       <LocalBusinessJsonLd />
       <WebsiteJsonLd />
+      <HowToBookJsonLd />
       <HeroSection dict={dict} />
       <EventLogisticsSection dict={dict} />
       <DutyOfCareSection dict={dict} />

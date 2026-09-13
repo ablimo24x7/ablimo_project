@@ -10,6 +10,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -19,10 +20,14 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  return {
-    title: dict.industryPages.governmentDiplomatic.metadata.title,
-    description: dict.industryPages.governmentDiplomatic.metadata.description,
-  };
+  const texts = dict.industryPages.governmentDiplomatic;
+  return generateSeoMetadata({
+    title: texts.metadata.title,
+    description: texts.metadata.description,
+    path: "/industries/government-diplomatic",
+    lang,
+    keywords: "government transportation, diplomatic mobility solutions, embassy transport, VIP government travel, diplomatic quarter access, protocol transportation, AB.Limo government",
+  });
 }
 
 const structure: IndustryStructure = {

@@ -10,6 +10,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -19,25 +20,13 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  return {
+  return generateSeoMetadata({
     title: dict.servicePages.airportTransferDropOff.metadata.title,
     description: dict.servicePages.airportTransferDropOff.metadata.description,
-    alternates: {
-      canonical: "https://ab.limo/services/airport-transfers/drop-off",
-      languages: {
-        "en-US": "https://ab.limo/en-US/services/airport-transfers/drop-off",
-        "en-GB": "https://ab.limo/en-GB/services/airport-transfers/drop-off",
-        ar: "https://ab.limo/ar/services/airport-transfers/drop-off",
-        "x-default": "https://ab.limo/en-US/services/airport-transfers/drop-off",
-      },
-    },
-    openGraph: {
-      title: dict.servicePages.airportTransferDropOff.metadata.title,
-      description: dict.servicePages.airportTransferDropOff.metadata.description,
-      type: "website",
-      siteName: "AB.Limo",
-    },
-  };
+    path: "/services/airport-transfers/drop-off",
+    lang,
+    keywords: "airport drop-off service, luxury airport transfer, chauffeur airport drop-off, AB.Limo airport",
+  });
 }
 
 const structure: ServiceStructure = {

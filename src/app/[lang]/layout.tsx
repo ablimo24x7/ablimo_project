@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { ChatWidget } from "@/components/chat/ChatWidget";
@@ -6,6 +7,20 @@ import GoogleTranslate from "@/components/GoogleTranslate";
 import { hasLocale, defaultLocale, type Locale } from "./dictionaries";
 import { getSession } from "@/lib/auth/server";
 import ComingSoonPage from "./coming-soon/page";
+
+const BOT_USER_AGENTS = [
+  "googlebot", "bingbot", "slurp", "duckduckbot", "baiduspider",
+  "yandexbot", "sogou", "exabot", "facebot", "facebookexternalhit",
+  "ia_archiver", "linkedinbot", " pinterestbot", "whatsapp",
+  "telegrambot", "applebot", "semrushbot", "ahrefbot", "dotbot",
+  "mj12bot", "seekportbot", "serpstatbot", "ccbot", "petalbot",
+];
+
+function isSearchEngineBot(userAgent: string | null): boolean {
+  if (!userAgent) return false;
+  const ua = userAgent.toLowerCase();
+  return BOT_USER_AGENTS.some((bot) => ua.includes(bot));
+}
 
 export async function generateStaticParams() {
   return [{ lang: "en-US" }, { lang: "en-GB" }, { lang: "ar" }];
@@ -63,10 +78,14 @@ export default async function LangLayout({
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dir = locale === "ar" ? "rtl" : "ltr";
 
+  const headerStore = await headers();
+  const userAgent = headerStore.get("user-agent");
+  const isBot = isSearchEngineBot(userAgent);
+
   const session = await getSession();
   const isAuthenticated = !!session?.user?.id;
 
-  if (!isAuthenticated) {
+  if (!isAuthenticated && !isBot) {
     return (
       <div dir={dir} lang={locale} className="dark">
         <ComingSoonPage params={Promise.resolve({ lang })} />

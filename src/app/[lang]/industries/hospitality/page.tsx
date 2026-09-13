@@ -10,6 +10,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -19,10 +20,14 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  return {
-    title: dict.industryPages.hospitality.metadata.title,
-    description: dict.industryPages.hospitality.metadata.description,
-  };
+  const texts = dict.industryPages.hospitality;
+  return generateSeoMetadata({
+    title: texts.metadata.title,
+    description: texts.metadata.description,
+    path: "/industries/hospitality",
+    lang,
+    keywords: "hospitality transportation, hotel shuttle service, luxury hotel transfers, hospitality mobility solutions, hotel guest transport, resort transportation, AB.Limo hospitality",
+  });
 }
 
 const structure: IndustryStructure = {

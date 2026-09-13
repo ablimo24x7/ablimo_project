@@ -8,6 +8,7 @@ import {
   type Locale,
 } from "@/app/[lang]/dictionaries";
 import { getAllPublishedServices } from "@/lib/services";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -17,25 +18,13 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  return {
+  return generateSeoMetadata({
     title: dict.services.metadata.title,
     description: dict.services.metadata.description,
-    alternates: {
-      canonical: "https://ab.limo/services",
-      languages: {
-        "en-US": "https://ab.limo/en-US/services",
-        "en-GB": "https://ab.limo/en-GB/services",
-        ar: "https://ab.limo/ar/services",
-        "x-default": "https://ab.limo/en-US/services",
-      },
-    },
-    openGraph: {
-      title: dict.services.metadata.title,
-      description: dict.services.metadata.description,
-      type: "website",
-      siteName: "AB.Limo",
-    },
-  };
+    path: "/services",
+    lang,
+    keywords: "AB.Limo services, luxury chauffeur, executive transport, airport transfer, corporate mobility, event logistics",
+  });
 }
 
 const pillars = [

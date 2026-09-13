@@ -10,6 +10,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -19,25 +20,13 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  return {
+  return generateSeoMetadata({
     title: dict.servicePages.airportTransferVipTarmac.metadata.title,
     description: dict.servicePages.airportTransferVipTarmac.metadata.description,
-    alternates: {
-      canonical: "https://ab.limo/services/airport-transfers/vip-tarmac",
-      languages: {
-        "en-US": "https://ab.limo/en-US/services/airport-transfers/vip-tarmac",
-        "en-GB": "https://ab.limo/en-GB/services/airport-transfers/vip-tarmac",
-        ar: "https://ab.limo/ar/services/airport-transfers/vip-tarmac",
-        "x-default": "https://ab.limo/en-US/services/airport-transfers/vip-tarmac",
-      },
-    },
-    openGraph: {
-      title: dict.servicePages.airportTransferVipTarmac.metadata.title,
-      description: dict.servicePages.airportTransferVipTarmac.metadata.description,
-      type: "website",
-      siteName: "AB.Limo",
-    },
-  };
+    path: "/services/airport-transfers/vip-tarmac",
+    lang,
+    keywords: "VIP tarmac service, private aviation transfer, FBO meet and greet, luxury airport VIP, AB.Limo VIP",
+  });
 }
 
 const structure: ServiceStructure = {

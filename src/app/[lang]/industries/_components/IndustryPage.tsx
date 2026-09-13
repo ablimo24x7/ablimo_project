@@ -7,6 +7,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { IndustryJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
 
 export interface IndustryFeature {
   icon: React.ReactNode;
@@ -150,7 +151,28 @@ export default async function IndustryPage({
   const faqTitle = dict.industries?.faqTitle ?? "Frequently Asked Questions";
 
   return (
-    <main className="min-h-screen bg-[#292a30] text-white">
+    <>
+      <IndustryJsonLd
+        industry={breadcrumb}
+        description={content.subtitle}
+        url={`/${lang}/industries/${breadcrumb.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}`}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: `/${lang}` },
+          { name: "Industries", url: `/${lang}/industries` },
+          { name: breadcrumb, url: `/${lang}/industries/${breadcrumb.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}` },
+        ]}
+      />
+      {content.faqs && content.faqs.length > 0 && (
+        <FAQJsonLd
+          items={content.faqs.map((item) => ({
+            question: item.q,
+            answer: item.a,
+          }))}
+        />
+      )}
+      <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden pt-24 pb-10">
         <Image
@@ -365,5 +387,6 @@ export default async function IndustryPage({
         </Link>
       </section>
     </main>
+    </>
   );
 }

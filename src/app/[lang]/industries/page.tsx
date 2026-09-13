@@ -7,6 +7,7 @@ import {
   defaultLocale,
   type Locale,
 } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -16,25 +17,13 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  return {
+  return generateSeoMetadata({
     title: dict.industries.metadata.title,
     description: dict.industries.metadata.description,
-    alternates: {
-      canonical: "https://ab.limo/industries",
-      languages: {
-        "en-US": "https://ab.limo/en-US/industries",
-        "en-GB": "https://ab.limo/en-GB/industries",
-        ar: "https://ab.limo/ar/industries",
-        "x-default": "https://ab.limo/en-US/industries",
-      },
-    },
-    openGraph: {
-      title: dict.industries.metadata.title,
-      description: dict.industries.metadata.description,
-      type: "website",
-      siteName: "AB.Limo",
-    },
-  };
+    path: "/industries",
+    lang,
+    keywords: "AB.Limo industries, corporate mobility, government transport, aviation ground handling, hospitality transportation",
+  });
 }
 
 const categoryImages: Record<string, string> = {
