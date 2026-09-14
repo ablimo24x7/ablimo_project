@@ -26,7 +26,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
           className="w-full h-full object-cover"
         >
           <source
-            src="https://www.beesocialpk.com/ABGroup/uri-ifs---V-HTVn_1NSA9V2yAtFgDm1DG1a6D9iEZCo4Z8v5tZBXs0.mp4"
+            src="https://www.beesocialpk.com/ABGroup/company-profile-ab.mp4"
             type="video/mp4"
           />
         </video>
