@@ -26,12 +26,12 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
           className="w-full h-full object-cover"
         >
           <source
-            src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FV%2FHTVn_1NSA9V2yAtFgDm1DG1a6D9iEZCo4Z8v5tZBXs0.mp4?csig=AAAAAAAAAAAAAAAAAAAAAK_CyTmwoiCKSIQAIw2zsX8EqAsChlO1-V9rqPNPgPzR&exp=1789221300&signer=video-rpc&token=AAIAAVYAL0hUVm5fMU5TQTlWMnlBdEZnRG0xREcxYTZEOWlFWkNvNFo4djV0WkJYczAubXA0AAAAAAGgleZnIM-2KVAifZaTJi5KiSx3EZXB11spKKDQ9kCq7SNTyw6k"
+            src="https://www.beesocialpk.com/ABGroup/uri-ifs---V-HTVn_1NSA9V2yAtFgDm1DG1a6D9iEZCo4Z8v5tZBXs0.mp4"
             type="video/mp4"
           />
         </video>
         {/* Overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-abBlack via-[#050505]/80 to-[#050505]/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-abBlack via-[#050505]/80 to-[#050505]/40 opacity-80"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
