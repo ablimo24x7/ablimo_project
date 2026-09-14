@@ -23,7 +23,7 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover repeat-none"
         >
           <source
             src="https://www.beesocialpk.com/ABGroup/company-profile-ab.mp4"
