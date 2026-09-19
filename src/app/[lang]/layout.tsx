@@ -6,7 +6,7 @@ import { ChatWidget } from "@/components/chat/ChatWidget";
 import GoogleTranslate from "@/components/GoogleTranslate";
 import { hasLocale, defaultLocale, type Locale } from "./dictionaries";
 import { getSession } from "@/lib/auth/server";
-import ComingSoonPage from "./coming-soon/page";
+// import ComingSoonPage from "./coming-soon/page";
 
 const BOT_USER_AGENTS = [
   "googlebot", "bingbot", "slurp", "duckduckbot", "baiduspider",
@@ -85,13 +85,14 @@ export default async function LangLayout({
   const session = await getSession();
   const isAuthenticated = !!session?.user?.id;
 
-  if (!isAuthenticated && !isBot) {
-    return (
-      <div dir={dir} lang={locale} className="dark">
-        <ComingSoonPage params={Promise.resolve({ lang })} />
-      </div>
-    );
-  }
+  // Coming soon page disabled - visitors can now see the website
+  // if (!isAuthenticated && !isBot) {
+  //   return (
+  //     <div dir={dir} lang={locale} className="dark">
+  //       <ComingSoonPage params={Promise.resolve({ lang })} />
+  //     </div>
+  //   );
+  // }
 
   return (
     <div dir={dir} lang={locale} className="dark">
