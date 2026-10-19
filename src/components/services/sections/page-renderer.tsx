@@ -20,17 +20,18 @@ export default function PageRenderer({ sections, serviceName, serviceUrl }: Page
   );
 
   return (
-    <main className="min-h-screen bg-abDarkGray text-white antialiased selection:bg-abGold selection:text-white">
+    <main className="min-h-screen bg-abDarkGray text-white antialiased selection:bg-abServiceBlue selection:text-white">
       {sorted.map((section) => {
         const Component = getSectionComponent(section.type);
         if (!Component) return null;
         return (
-          <Component
-            key={section.id}
-            section={section}
-            serviceName={serviceName}
-            serviceUrl={serviceUrl}
-          />
+          <div key={section.id} data-section-type={section.type}>
+            <Component
+              section={section}
+              serviceName={serviceName}
+              serviceUrl={serviceUrl}
+            />
+          </div>
         );
       })}
     </main>

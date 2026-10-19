@@ -1,10 +1,94 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { ChannelIcon } from "./ChannelList";
 import { WhatsAppPopup } from "./WhatsAppPopup";
 import { ContactForm } from "./ContactForm";
+import { useWidgetOverride } from "./widget-context";
+import { classifyContactMethod, extractWhatsAppNumber, trackContactClick } from "@/lib/analytics";
+import { resolveCity, resolveCountry } from "@/lib/locations";
+
+export type PageContext =
+  | { type: "service"; name: string; countryName?: string; cityName?: string }
+  | { type: "country"; name: string }
+  | { type: "city"; name: string };
+
+export type WidgetPage =
+  | { kind: "service"; countrySlug: string; citySlug: string }
+  | { kind: "location"; countrySlug: string; citySlug: string; isCity: boolean }
+  | { kind: "none"; countrySlug: "" };
+
+export function parseWidgetPath(pathname: string): WidgetPage {
+  const segments = pathname.split("/");
+  const servicesIndex = segments.indexOf("services");
+  if (servicesIndex !== -1 && segments[servicesIndex + 1]) {
+    return {
+      kind: "service",
+      countrySlug: segments[servicesIndex + 2] ?? "",
+      citySlug: segments[servicesIndex + 3] ?? "",
+    };
+  }
+  const locationsIndex = segments.indexOf("locations");
+  if (locationsIndex !== -1) {
+    const countrySlug = segments[locationsIndex + 1] ?? "";
+    if (countrySlug && countrySlug !== "cities") {
+      return {
+        kind: "location",
+        countrySlug,
+        citySlug: segments[locationsIndex + 2] ?? "",
+        isCity: Boolean(segments[locationsIndex + 2]),
+      };
+    }
+  }
+  return { kind: "none", countrySlug: "" };
+}
+
+function prettifySlug(slug: string): string {
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+function canonicalCountrySlug(slug: string): string {
+  if (!slug) return "";
+  return resolveCountry(slug)?.slug ?? slug;
+}
+
+export interface NumberConfig {
+  cityWhatsappNumber?: string;
+  countryWhatsappNumbers?: { countrySlug: string; number: string }[];
+  channels: { id: string; phone: string }[];
+}
+
+export function applyWhatsappNumber<C extends NumberConfig>(
+  config: C,
+  opts: {
+    countrySlug: string;
+    isCityPage: boolean;
+    pageWhatsappNumber?: string | null;
+  }
+): C {
+  const pageOverride = opts.pageWhatsappNumber?.trim();
+  const cityNumber = config.cityWhatsappNumber?.trim();
+  const countryNumber = opts.countrySlug
+    ? config.countryWhatsappNumbers?.find(
+        (c) =>
+          canonicalCountrySlug(c.countrySlug) === opts.countrySlug && c.number?.trim()
+      )?.number?.trim()
+    : undefined;
+  const override = opts.isCityPage
+    ? pageOverride || cityNumber || countryNumber || ""
+    : countryNumber || "";
+  if (!override) return config;
+  return {
+    ...config,
+    channels: config.channels.map((ch) =>
+      ch.id === "whatsapp" ? { ...ch, phone: override } : ch
+    ),
+  };
+}
 
 interface ChannelConfig {
   id: string;
@@ -37,6 +121,10 @@ interface WidgetConfig {
   whatsappPopup: boolean;
   whatsappPopupHeader: string;
   whatsappPopupMsg: string;
+  whatsappPopupMsgCountry: string;
+  whatsappPopupMsgCity: string;
+  cityWhatsappNumber: string;
+  countryWhatsappNumbers: { countrySlug: string; number: string }[];
   showAgents: boolean;
 }
 
@@ -85,28 +173,53 @@ export function ChatWidget() {
   const [showWhatsAppPopup, setShowWhatsAppPopup] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
   const [selectedChannel, setSelectedChannel] = useState<string>("");
+  const { isCityTemplate, pageWhatsappNumber } = useWidgetOverride();
 
-  const isServicePage = /\/[^/]+\/services\/[^/]+/.test(pathname);
+  const page = useMemo(() => parseWidgetPath(pathname), [pathname]);
+  const shouldRender = page.kind !== "none";
+  const countrySlug = useMemo(
+    () => canonicalCountrySlug(page.countrySlug),
+    [page.countrySlug]
+  );
 
-  const getServiceName = useCallback(() => {
-    const match = pathname.match(/\/[^/]+\/services\/([^/]+)/);
-    if (!match) return null;
-    const slug = match[1];
-    return slug
-      .split("-")
-      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-      .join(" ");
-  }, [pathname]);
+  const pageContext = useMemo<PageContext | null>(() => {
+    if (page.kind === "service") {
+      const match = pathname.match(/\/[^/]+\/services\/([^/]+)/);
+      const name = match ? prettifySlug(match[1]) : null;
+      if (!name) return null;
+      const country = page.countrySlug ? resolveCountry(page.countrySlug) : undefined;
+      const cityName =
+        country && page.citySlug
+          ? resolveCity(country, page.citySlug)?.name || prettifySlug(page.citySlug)
+          : undefined;
+      return {
+        type: "service",
+        name,
+        countryName: country?.name,
+        cityName,
+      };
+    }
+    if (page.kind === "location") {
+      const country = resolveCountry(page.countrySlug);
+      if (!country) return null;
+      if (page.isCity) {
+        const city = resolveCity(country, page.citySlug);
+        return { type: "city", name: city?.name || prettifySlug(page.citySlug) };
+      }
+      return { type: "country", name: country.name };
+    }
+    return null;
+  }, [page, pathname]);
 
   useEffect(() => {
-    if (!isServicePage) return;
+    if (!shouldRender) return;
     fetch("/api/chat/config")
       .then((r) => r.json())
       .then((data) => {
         if (data && data.enabled) setConfig(data);
       })
       .catch(() => {});
-  }, [isServicePage]);
+  }, [shouldRender]);
 
   const handleChannelClick = useCallback(
     (channelId: string, url: string) => {
@@ -123,18 +236,38 @@ export function ChatWidget() {
         return;
       }
       window.open(url, "_blank", "noopener,noreferrer");
+      trackContactClick({
+        method: classifyContactMethod(url) ?? "other",
+        location: "chat_widget",
+        label: `channel:${channelId}`,
+        page_path: pathname,
+        whatsapp_number: extractWhatsAppNumber(url),
+      });
     },
-    [config]
+    [config, pathname]
   );
 
-  if (!isServicePage || !config || !config.enabled) return null;
+  // Number priority: page override > global city number > country number > channel phone.
+  // Location country pages resolve the country number only; location city pages
+  // (and airport/route sub-pages) resolve like city templates.
+  const effectiveConfig = useMemo(() => {
+    if (!config) return null;
+    const isCityPage = isCityTemplate || (page.kind === "location" && page.isCity);
+    return applyWhatsappNumber(config, {
+      countrySlug,
+      isCityPage,
+      pageWhatsappNumber,
+    });
+  }, [config, isCityTemplate, page, pageWhatsappNumber, countrySlug]);
 
-  const enabledChannels = config.channels.filter((c) => c.enabled);
+  if (!shouldRender || !effectiveConfig || !effectiveConfig.enabled) return null;
+
+  const enabledChannels = effectiveConfig.channels.filter((c) => c.enabled);
   if (enabledChannels.length === 0) return null;
 
   const posClass =
-    config.position === "bottom-left" ? "left-4" : "right-4";
-  const animClass = ANIMATIONS[config.animation] || "";
+    effectiveConfig.position === "bottom-left" ? "left-4" : "right-4";
+  const animClass = ANIMATIONS[effectiveConfig.animation] || "";
 
   return (
     <>
@@ -146,18 +279,18 @@ export function ChatWidget() {
           <div
             className="rounded-xl shadow-2xl border overflow-hidden w-[320px] max-h-[480px] flex flex-col"
             style={{
-              backgroundColor: config.backgroundColor,
+              backgroundColor: effectiveConfig.backgroundColor,
               borderColor: "#e5e7eb",
             }}
           >
             <div
               className="px-4 py-3 text-center font-semibold text-sm"
               style={{
-                backgroundColor: config.primaryColor,
+                backgroundColor: effectiveConfig.primaryColor,
                 color: "#fff",
               }}
             >
-              {config.ctaMessage || "Chat with us!"}
+              {effectiveConfig.ctaMessage || "Chat with us!"}
             </div>
             <div className="overflow-y-auto flex-1 p-2">
               {enabledChannels.map((ch) => (
@@ -165,7 +298,7 @@ export function ChatWidget() {
                   key={ch.id}
                   channel={ch}
                   onClick={handleChannelClick}
-                  config={config}
+                  config={effectiveConfig}
                 />
               ))}
             </div>
@@ -176,9 +309,9 @@ export function ChatWidget() {
           onClick={() => setIsOpen(!isOpen)}
           className={`relative flex items-center justify-center rounded-full shadow-lg transition-all duration-300 hover:scale-110 ${animClass}`}
           style={{
-            width: config.iconSize,
-            height: config.iconSize,
-            backgroundColor: config.primaryColor,
+            width: effectiveConfig.iconSize,
+            height: effectiveConfig.iconSize,
+            backgroundColor: effectiveConfig.primaryColor,
           }}
           aria-label="Open chat"
         >
@@ -211,15 +344,15 @@ export function ChatWidget() {
               />
             </svg>
           )}
-          {config.showCta && !isOpen && config.ctaMessage && (
+          {effectiveConfig.showCta && !isOpen && effectiveConfig.ctaMessage && (
             <div
               className="absolute right-full mr-3 whitespace-nowrap px-3 py-1.5 rounded-lg text-sm font-medium shadow-md"
               style={{
-                backgroundColor: config.ctaBgColor,
-                color: config.ctaTextColor,
+                backgroundColor: effectiveConfig.ctaBgColor,
+                color: effectiveConfig.ctaTextColor,
               }}
             >
-              {config.ctaMessage}
+              {effectiveConfig.ctaMessage}
             </div>
           )}
         </button>
@@ -227,16 +360,16 @@ export function ChatWidget() {
 
       {showWhatsAppPopup && (
         <WhatsAppPopup
-          config={config}
-          serviceName={getServiceName()}
+          config={effectiveConfig}
+          pageContext={pageContext}
           onClose={() => setShowWhatsAppPopup(false)}
         />
       )}
 
       {showContactForm && (
         <ContactForm
-          config={config}
-          serviceName={getServiceName()}
+          config={effectiveConfig}
+          pageContext={pageContext}
           onClose={() => setShowContactForm(false)}
         />
       )}

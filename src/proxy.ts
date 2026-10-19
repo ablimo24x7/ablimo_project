@@ -1,24 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { match } from "@formatjs/intl-localematcher";
-import Negotiator from "negotiator";
 
-const locales = ["en-US", "en-GB", "ar"];
 const defaultLocale = "en-US";
+const legacyEnglishPrefixes = ["/en-US", "/en-GB"];
 
 const protectedPaths = ["/dashboard", "/api/articles", "/api/categories", "/api/users", "/api/settings", "/api/dashboard", "/api/invitations", "/api/locations"];
 
 function isProtectedPath(pathname: string): boolean {
   return protectedPaths.some((p) => pathname.startsWith(p));
-}
-
-function getLocale(request: NextRequest): string {
-  const headers = { "accept-language": request.headers.get("accept-language") || "" };
-  const languages = new Negotiator({ headers }).languages();
-  try {
-    return match(languages, locales, defaultLocale);
-  } catch {
-    return defaultLocale;
-  }
 }
 
 export function proxy(request: NextRequest) {
@@ -41,20 +29,26 @@ export function proxy(request: NextRequest) {
     }
   }
 
-  // Locale redirect logic
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  // Legacy English locale prefixes → prefix-less (permanent for SEO)
+  const legacyPrefix = legacyEnglishPrefixes.find(
+    (p) => pathname === p || pathname.startsWith(`${p}/`)
   );
+  if (legacyPrefix) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.slice(legacyPrefix.length) || "/";
+    return NextResponse.redirect(url, 308);
+  }
 
-  if (pathnameHasLocale) return;
+  // Arabic keeps its /ar prefix
+  if (pathname === "/ar" || pathname.startsWith("/ar/")) return;
 
   // Skip internal paths
-  if (pathname.startsWith("/_next") || pathname.startsWith("/api") || pathname.startsWith("/auth") || pathname.startsWith("/dashboard") || pathname.includes(".")) return;
+  if (pathname.startsWith("/_next") || pathname.startsWith("/api") || pathname.startsWith("/auth") || pathname.startsWith("/dashboard") || pathname.startsWith("/invite") || pathname.includes(".")) return;
 
-  // Redirect to the locale-prefixed path
-  const locale = getLocale(request);
-  request.nextUrl.pathname = `/${locale}${pathname}`;
-  return NextResponse.redirect(request.nextUrl);
+  // English is the default locale: serve it at the clean, prefix-less URL
+  const url = request.nextUrl.clone();
+  url.pathname = pathname === "/" ? `/${defaultLocale}` : `/${defaultLocale}${pathname}`;
+  return NextResponse.rewrite(url);
 }
 
 export const config = {

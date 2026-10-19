@@ -49,7 +49,7 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div className={`max-w-3xl ${textAlignClass}`}>
             {(c.eyebrow as string) && (
-              <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-2">
+              <h2 className="text-sm font-bold tracking-widest text-abServiceBlue uppercase mb-2">
                 {c.eyebrow as string}
               </h2>
             )}
@@ -66,7 +66,7 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
             <div className="mt-6 md:mt-0 flex flex-col items-end space-y-3">
               <Link
                 href={headerAction.href || "#"}
-                className="text-abGold font-semibold hover:text-yellow-500 border-b-2 border-abGold pb-1 transition-colors inline-flex items-center text-sm"
+                className="text-abServiceBlue font-semibold hover:text-sky-400 border-b-2 border-abServiceBlue pb-1 transition-colors inline-flex items-center text-sm"
               >
                 {headerAction.label}
                 <svg className="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +90,7 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
                   <div
                     className={`absolute top-4 left-4 text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded shadow ${
                       vehicle.badgeStyle === "accent"
-                        ? "bg-abGold/20 border border-abGold text-abGold"
+                        ? "bg-abServiceBlue/20 border border-abServiceBlue text-abServiceBlue"
                         : "bg-gray-900 border border-gray-700 text-white"
                     }`}
                   >
@@ -118,7 +118,7 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
               {/* Vehicle Info */}
               <div className="p-6">
                 <h4 className="text-lg font-bold text-white mb-1">{vehicle.category}</h4>
-                <p className="text-sm text-abGold font-medium mb-4">{vehicle.name}</p>
+                <p className="text-sm text-abServiceBlue font-medium mb-4">{vehicle.name}</p>
                 <div className="flex justify-between items-center text-xs text-gray-400 border-t border-gray-800 pt-4 mb-4">
                   <span className="flex items-center">
                     {getIcon(vehicle.capacityIcon || "Users", "w-3.5 h-3.5 mr-1.5 text-gray-500")}
@@ -159,9 +159,9 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
               href={bottomCta.href || "#"}
               className={`inline-flex items-center px-8 py-3.5 rounded text-sm font-semibold transition-all ${
                 bottomCta.style === "primary"
-                  ? "bg-abGold hover:bg-yellow-600 text-white shadow-lg shadow-abGold/20"
+                  ? "bg-abServiceBlue hover:bg-sky-700 text-white shadow-lg shadow-abServiceBlue/20"
                   : bottomCta.style === "secondary"
-                  ? "bg-transparent border border-abGold text-abGold hover:bg-abGold hover:text-white"
+                  ? "bg-transparent border border-abServiceBlue text-abServiceBlue hover:bg-abServiceBlue hover:text-white"
                   : "bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white"
               }`}
             >

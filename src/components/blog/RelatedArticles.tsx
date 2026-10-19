@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock } from "lucide-react";
 import type { ArticleDoc } from "@/lib/models/Article";
+import { localeBase } from "@/app/[lang]/dictionaries";
 
 interface RelatedArticlesProps {
   articles: ArticleDoc[];
@@ -31,7 +32,7 @@ export function RelatedArticles({
         {articles.map((article) => (
           <Link
             key={article.slug}
-            href={`/${lang}/services/${article.slug.replace(/^services\//, "")}`}
+            href={`${localeBase(lang)}/services/${article.slug.replace(/^services\//, "")}`}
             className="group block bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
           >
             <div className="relative h-40 w-full">
@@ -46,7 +47,7 @@ export function RelatedArticles({
               />
             </div>
             <div className="p-4">
-              <h3 className="text-sm font-semibold text-white line-clamp-2 mb-2 group-hover:text-abGold transition-colors">
+              <h3 className="text-sm font-semibold text-white line-clamp-2 mb-2 group-hover:text-abBlue transition-colors">
                 {article.title}
               </h3>
               <div className="flex items-center gap-3 text-xs text-gray-500">
@@ -66,7 +67,7 @@ export function RelatedArticles({
       <div className="text-center mt-8">
         <Link
           href={viewAllHref}
-          className="inline-flex items-center gap-2 text-abGold hover:text-abGold/80 font-medium transition-colors"
+          className="inline-flex items-center gap-2 text-abBlue hover:text-abBlue/80 font-medium transition-colors"
         >
           {viewAllLabel} →
         </Link>

@@ -16,6 +16,14 @@ const channelConfigSchema = new Schema(
   { _id: false }
 );
 
+const countryWhatsappSchema = new Schema(
+  {
+    countrySlug: { type: String, default: "" },
+    number: { type: String, default: "" },
+  },
+  { _id: false }
+);
+
 const targetingSchema = new Schema(
   {
     pages: { type: [String], default: [] },
@@ -61,6 +69,19 @@ const chatWidgetSchema = new Schema(
       type: String,
       default: "Hi! I have a question about your services.",
     },
+    whatsappPopupMsgCountry: {
+      type: String,
+      default: "Hi! I have a question about your services in {country}.",
+    },
+    whatsappPopupMsgCity: {
+      type: String,
+      default: "Hi! I have a question about your services in {city}.",
+    },
+    cityWhatsappNumber: { type: String, default: "" },
+    countryWhatsappNumbers: {
+      type: [countryWhatsappSchema],
+      default: [],
+    },
     showAgents: { type: Boolean, default: false },
     targeting: { type: targetingSchema, default: () => ({}) },
     showOnPages: { type: [String], default: ["*"] },
@@ -70,6 +91,7 @@ const chatWidgetSchema = new Schema(
 
 export type ChatWidgetDoc = InferSchemaType<typeof chatWidgetSchema>;
 export type ChannelConfig = InferSchemaType<typeof channelConfigSchema>;
+export type CountryWhatsapp = InferSchemaType<typeof countryWhatsappSchema>;
 
 export const ChatWidget =
   models.ChatWidget || model("ChatWidget", chatWidgetSchema);

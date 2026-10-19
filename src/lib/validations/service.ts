@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { SectionInstanceSchema } from "@/components/section-library/types";
 
 export const SERVICE_STATUSES = ["draft", "published", "archived"] as const;
 export const SERVICE_IMAGE_SIDES = ["left", "right"] as const;
@@ -42,18 +43,10 @@ export const ServiceSeoSchema = z.object({
 });
 
 // ── Page Section Schema (section builder) ────────────────────────
+// Canonical definition lives in the section library; this alias keeps
+// every existing services import working unchanged.
 
-export const PageSectionSchema = z.object({
-  id: z.string().min(1),
-  type: z.string().min(1),
-  variant: z.string().optional().default("default"),
-  order: z.number().int().min(0).optional().default(0),
-  enabled: z.boolean().optional().default(true),
-  content: z.record(z.string(), z.unknown()).optional().default({}),
-  items: z.array(z.record(z.string(), z.unknown())).optional().default([]),
-  settings: z.record(z.string(), z.unknown()).optional().default({}),
-  appearance: z.record(z.string(), z.unknown()).optional().default({}),
-});
+export const PageSectionSchema = SectionInstanceSchema;
 
 export const ServiceCreateSchema = z.object({
   slug: z.string().min(1).max(200),

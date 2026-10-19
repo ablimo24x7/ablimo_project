@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getDictionary } from "@/app/[lang]/dictionaries";
+import { getDictionary, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import { getCityForRequest, getRoutesForCity } from "@/lib/locationData";
+import { getCityServicesForLocation } from "@/lib/blog";
 import CityDetailClient from "../../_components/CityDetailClient";
 import { generateSeoMetadata } from "@/lib/seo";
 import { CityJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
+import { getCityTemplate } from "@/lib/location-template";
+import type { SectionRenderContext } from "@/components/section-library/types";
 
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
@@ -40,6 +43,12 @@ export default async function CityPage({
     const res = await getCityForRequest(countryParam, cityParam);
     if (!res) notFound();
 
+    const services = await getCityServicesForLocation(
+        res.country.slug,
+        res.city.slug,
+        lang,
+        lang
+    );
     const routes = await getRoutesForCity(res.city.slug);
     const dict = await getDictionary(lang as "en-US" | "en-GB" | "ar");
 
@@ -60,10 +69,20 @@ export default async function CityPage({
         }
     }
 
-    const sections = res.city.sections || [];
     const cityName = isArabic && res.city.nameAr ? res.city.nameAr : res.city.name;
     const countryName = isArabic && res.country.nameAr ? res.country.nameAr : res.country.name;
     const cityDescription = res.city.description || `AB.Limo provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`;
+
+    const template = await getCityTemplate(res.country.slug, res.city.slug, lang);
+    const context: SectionRenderContext = {
+        kind: "location",
+        lang,
+        country: res.country,
+        city: res.city,
+        services,
+        routes,
+        dict,
+    };
 
     return (
       <>
@@ -75,10 +94,10 @@ export default async function CityPage({
         />
         <BreadcrumbJsonLd
           items={[
-            { name: "Home", url: `/${lang}` },
-            { name: "Locations", url: `/${lang}/locations` },
-            { name: countryName, url: `/${lang}/locations/${countryParam}` },
-            { name: cityName, url: `/${lang}/locations/${countryParam}/${cityParam}` },
+            { name: "Home", url: `${localeHome(lang)}` },
+            { name: "Locations", url: `${localeBase(lang)}/locations` },
+            { name: countryName, url: `${localeBase(lang)}/locations/${countryParam}` },
+            { name: cityName, url: `${localeBase(lang)}/locations/${countryParam}/${cityParam}` },
           ]}
         />
         {res.city.faqs && res.city.faqs.length > 0 && (
@@ -89,7 +108,7 @@ export default async function CityPage({
             }))}
           />
         )}
-        <CityDetailClient dict={dict} lang={lang} country={res.country} city={res.city} routes={routes} sections={sections} />
+        <CityDetailClient template={template} context={context} />
       </>
     );
 }

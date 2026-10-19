@@ -116,6 +116,13 @@ const iconClassMap: Record<string, string> = {
   FileSearch: "fa-solid fa-file-circle-question",
   FolderOpen: "fa-solid fa-folder-open",
   LockKeyhole: "fa-solid fa-lock",
+  City: "fa-solid fa-city",
+  BuildingShield: "fa-solid fa-building-shield",
+  Passport: "fa-solid fa-passport",
+  Calendar: "fa-solid fa-calendar",
+  ArrowDown: "fa-solid fa-arrow-down",
+  Network: "fa-solid fa-network-wired",
+  Timer: "fa-solid fa-timer",
 };
 
 export function getIcon(name: string | undefined, className?: string): React.ReactNode {

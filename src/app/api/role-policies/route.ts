@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { RolePolicy } from "@/lib/models/RolePolicy";
@@ -9,6 +10,8 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  const auth = await authorizeApi("manage");
+  if (!auth.ok) return auth.response;
   await connectDB();
   try {
     const body = await req.json();

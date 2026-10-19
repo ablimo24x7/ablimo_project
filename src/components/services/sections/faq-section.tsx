@@ -4,9 +4,11 @@ import * as React from "react";
 import Link from "next/link";
 import { getIcon } from "./section-icons";
 import type { PageSection } from "./section-types";
+import type { SectionInstance, SectionRenderContext } from "@/components/section-library/types";
 
 interface FAQSectionProps {
-  section: PageSection;
+  section: PageSection | SectionInstance;
+  context?: SectionRenderContext;
 }
 
 const PADDING_CLASSES = {
@@ -17,14 +19,32 @@ const PADDING_CLASSES = {
   xl: "py-32",
 } as const;
 
-export default function FAQSection({ section }: FAQSectionProps) {
+export default function FAQSection({ section, context }: FAQSectionProps) {
   const c = section.content as Record<string, unknown>;
-  const items = (c.items || []) as Array<{
+  const settings = section.settings as Record<string, unknown>;
+  const source = (settings.source as string) || "inline";
+
+  // context-bound: live FAQs from the country/city entity
+  const contextFaqs =
+    source === "context.faqs" && context?.kind === "location"
+      ? ((context.city ? context.city.faqs : context.country.faqs) ?? [])
+          .filter((f) => f.q && f.a)
+          .map((f) => ({ id: `${f.q}`, question: f.q, answer: f.a }))
+      : null;
+
+  // Template-authored extras (content.items) — for context-bound sections
+  // these render AFTER the live entity FAQs; for inline sections they are
+  // the whole list. Half-filled items are hidden either way.
+  const inlineItems = ((c.items || []) as Array<{
     id: string; question: string; answer: string;
-  }>;
+  }>).filter((f) => f.question && f.answer);
+  const items = contextFaqs ? [...contextFaqs, ...inlineItems] : inlineItems;
   const actions = (section.items || []) as Array<{
     label: string; href: string; style: string; icon?: string;
   }>;
+  // Match the original location pages: hide the section entirely when there
+  // is nothing to show (e.g. entity has no FAQs yet).
+  if (items.length === 0) return null;
   const appearance = section.appearance as Record<string, unknown>;
 
   const bgClass = appearance.theme === "darker" ? "bg-abBlack" : "bg-abDarkGray";
@@ -61,7 +81,7 @@ export default function FAQSection({ section }: FAQSectionProps) {
         {/* Header */}
         <div className={`${textAlignClass} mb-16`}>
           {(c.eyebrow as string) && (
-            <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-3">
+            <h2 className="text-sm font-bold tracking-widest text-abServiceBlue uppercase mb-3">
               {c.eyebrow as string}
             </h2>
           )}
@@ -98,7 +118,7 @@ export default function FAQSection({ section }: FAQSectionProps) {
                     href={action.href || "#"}
                     className={`px-6 py-3 rounded text-sm font-semibold transition-colors flex items-center ${
                       action.style === "primary"
-                        ? "bg-abGold hover:bg-yellow-600 text-white"
+                        ? "bg-abServiceBlue hover:bg-sky-700 text-white"
                         : "bg-abDarkGray hover:bg-black border border-gray-700 text-white"
                     }`}
                   >
@@ -127,7 +147,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
       >
         <h4 className="text-lg font-bold text-white pr-4">{question}</h4>
         <svg
-          className={`w-5 h-5 text-abGold flex-shrink-0 transition-transform duration-300 ${
+          className={`w-5 h-5 text-abServiceBlue flex-shrink-0 transition-transform duration-300 ${
             open ? "rotate-180" : ""
           }`}
           fill="none"

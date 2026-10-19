@@ -19,13 +19,15 @@ import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
 import { SectionEditor } from "./section-editor";
-import { ServiceSectionEditor } from "./service-section-editor";
+import { SectionLibraryEditor } from "./section-library-editor";
 import { toast } from "sonner";
 import { Plus, Trash2, ChevronUp, ChevronDown, FileText, LayoutGrid } from "lucide-react";
 import { TranslateButton } from "./TranslateButton";
 import type { TextImageSectionType, CardsSectionType } from "@/lib/validations/location";
 import { CITY_TEMPLATE_PRESETS } from "@/components/services/Templates/City";
 import type { PageSection } from "@/components/services/sections/section-types";
+import { usePermissions } from "@/hooks/use-permissions";
+import { StructurePermissionsProvider } from "@/components/providers/structure-permissions";
 
 type SectionUnion = TextImageSectionType | CardsSectionType | PageSection;
 
@@ -45,6 +47,7 @@ type PostData = {
   country: string;
   citySlug: string;
   city: string;
+  whatsappNumber: string;
   contentMode: "wysiwyg" | "sections" | "page-sections";
   bodyContent: string;
   keyTakeawaysContent: string;
@@ -79,6 +82,7 @@ const defaultPost: PostData = {
   country: "",
   citySlug: "",
   city: "",
+  whatsappNumber: "",
   contentMode: "wysiwyg",
   bodyContent: "",
   keyTakeawaysContent: "",
@@ -116,7 +120,7 @@ function normalizePost(data?: PostData): PostData {
       metaDescription: d.seo_metadata?.metaDescription ?? "",
       ogImage: d.seo_metadata?.ogImage ?? "",
     },
-    sections: d.sections ?? [],
+    sections: Array.isArray(d.sections) ? d.sections : [],
   };
 }
 
@@ -125,6 +129,16 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
   const queryClient = useQueryClient();
   const [form, setForm] = React.useState<PostData>(() => normalizePost(initialData));
   const [tagInput, setTagInput] = React.useState("");
+  const isDirtyRef = React.useRef(false);
+  const { canCreate, canUpdate, canManageStructure } = usePermissions();
+
+  // Repopulate the form when fresh server data arrives (e.g. a background
+  // refetch returning the saved post), unless the user already made edits.
+  React.useEffect(() => {
+    if (!initialData || isDirtyRef.current) return;
+    setForm(normalizePost(initialData));
+  }, [initialData]);
+
   const blogType: "country" | "city" =
     initialData?.templateType === "service-city" ? "city" : initialBlogType;
 
@@ -165,20 +179,6 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
     [selectedCountry]
   );
 
-  const [showCityPresets, setShowCityPresets] = React.useState(false);
-
-  const applyCityPreset = (presetIndex: number) => {
-    const preset = CITY_TEMPLATE_PRESETS[presetIndex];
-    if (!preset) return;
-    const withFreshIds = preset.sections.map((s: PageSection) => ({
-      ...JSON.parse(JSON.stringify(s)),
-      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-    })) as PageSection[];
-    updateField("sections", withFreshIds);
-    updateField("contentMode", "page-sections");
-    setShowCityPresets(false);
-  };
-
   const isEdit = mode === "edit" && form._id;
 
   const generateSlug = React.useCallback(
@@ -196,12 +196,19 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
 
   const mutation = useMutation({
     mutationFn: async (payload: PostData) => {
+      const body = { ...payload } as Record<string, unknown>;
+      // Mongoose owns these — sending them back can desync the version key.
+      delete body._id;
+      delete body.__v;
+      delete body.createdAt;
+      delete body.updatedAt;
+
       const url = isEdit ? `/api/articles/${form._id}` : "/api/articles";
       const method = isEdit ? "PUT" : "POST";
       const res = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(body),
       });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
@@ -212,6 +219,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
     onSuccess: () => {
       toast.success(isEdit ? "Post updated" : "Post created");
       queryClient.invalidateQueries({ queryKey: ["posts"] });
+      if (form._id) queryClient.invalidateQueries({ queryKey: ["post", form._id] });
       router.push("/dashboard/posts");
     },
     onError: (err: Error) => {
@@ -220,6 +228,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
   });
 
   const updateField = <K extends keyof PostData>(key: K, value: PostData[K]) => {
+    isDirtyRef.current = true;
     setForm((prev) => {
       const next = { ...prev, [key]: value };
       const service = key === "serviceSlug" ? (value as string) : prev.serviceSlug;
@@ -248,6 +257,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
   };
 
   const regenerateSeo = () => {
+    isDirtyRef.current = true;
     setForm((prev) => {
       const metaTitle = prev.seo_metadata.metaTitle || `${prev.title} | AB.Limo`;
       let metaDescription = prev.seo_metadata.metaDescription;
@@ -319,7 +329,19 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
     mutation.mutate({ ...form, templateType });
   };
 
+  if (!isEdit && !canCreate) {
+    return (
+      <div className="px-4 lg:px-6">
+        <div className="max-w-lg rounded-lg border bg-muted/40 p-6 text-sm text-muted-foreground">
+          Your role can edit existing posts only. Ask an administrator to create
+          new posts.
+        </div>
+      </div>
+    );
+  }
+
   return (
+    <StructurePermissionsProvider canManage={canManageStructure}>
     <form onSubmit={handleSubmit} className="grid gap-6 px-4 lg:px-6">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold">
@@ -333,14 +355,16 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <Button
               type="button"
               variant="outline"
-              onClick={() => window.open(`/en-US/services/${form.slug.replace(/^services\//, "")}?preview=true`, "_blank")}
+              onClick={() => window.open(`/services/${form.slug.replace(/^services\//, "")}?preview=true`, "_blank")}
             >
               Preview
             </Button>
           )}
-          <Button type="submit" disabled={mutation.isPending}>
-            {mutation.isPending ? "Saving..." : isEdit ? "Update" : "Create"}
-          </Button>
+          {canUpdate && (
+            <Button type="submit" disabled={mutation.isPending}>
+              {mutation.isPending ? "Saving..." : isEdit ? "Update" : "Create"}
+            </Button>
+          )}
         </div>
       </div>
 
@@ -424,13 +448,14 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             </CardHeader>
             <CardContent className="space-y-4">
               {blogType === "city" ? (
-                <ServiceSectionEditor
+                <SectionLibraryEditor
                   sections={(form.sections as PageSection[]) || []}
                   onChange={(sections) => {
                     updateField("sections", sections as SectionUnion[]);
                     updateField("contentMode", "page-sections");
                   }}
                   presets={CITY_TEMPLATE_PRESETS}
+                  citySlug={form.citySlug}
                 />
               ) : form.contentMode === "wysiwyg" ? (
                 <>
@@ -492,9 +517,11 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
           <Card>
             <CardHeader className="flex-row items-center justify-between">
               <CardTitle>FAQs</CardTitle>
-              <Button type="button" size="sm" onClick={addFaq}>
-                <Plus className="mr-1 h-4 w-4" /> Add FAQ
-              </Button>
+              {canManageStructure && (
+                <Button type="button" size="sm" onClick={addFaq}>
+                  <Plus className="mr-1 h-4 w-4" /> Add FAQ
+                </Button>
+              )}
             </CardHeader>
             <CardContent className="space-y-3">
               {form.faqs.length === 0 && (
@@ -513,9 +540,11 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                       <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveFaq(faqIndex, 1)} disabled={faqIndex === form.faqs.length - 1}>
                         <ChevronDown className="h-3 w-3" />
                       </Button>
-                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeFaq(faqIndex)}>
-                        <Trash2 className="h-3 w-3 text-destructive" />
-                      </Button>
+                      {canManageStructure && (
+                        <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeFaq(faqIndex)}>
+                          <Trash2 className="h-3 w-3 text-destructive" />
+                        </Button>
+                      )}
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -661,6 +690,21 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
               <p className="text-xs text-muted-foreground">
                 Slug: {form.slug || "(auto-generated from selections)"}
               </p>
+              {blogType === "city" && (
+                <div className="space-y-2">
+                  <Label>WhatsApp Number (page override)</Label>
+                  <Input
+                    value={form.whatsappNumber}
+                    onChange={(e) => updateField("whatsappNumber", e.target.value)}
+                    placeholder="+1234567890"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Optional. When set, the chat widget on this city service page sends
+                    WhatsApp messages to this number instead of the country or city
+                    service number. Leave empty to inherit the global number.
+                  </p>
+                </div>
+              )}
             </CardContent>
           </Card>
 
@@ -713,15 +757,23 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
           <Card>
             <CardHeader><CardTitle>Tags</CardTitle></CardHeader>
             <CardContent className="space-y-3">
-              <div className="flex gap-2">
-                <Input value={tagInput} onChange={(e) => setTagInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addTag(); } }} placeholder="Add tag" />
-                <Button type="button" size="sm" onClick={addTag}>Add</Button>
-              </div>
+              {canManageStructure && (
+                <div className="flex gap-2">
+                  <Input value={tagInput} onChange={(e) => setTagInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addTag(); } }} placeholder="Add tag" />
+                  <Button type="button" size="sm" onClick={addTag}>Add</Button>
+                </div>
+              )}
               <div className="flex flex-wrap gap-1">
                 {form.tags.map((t) => (
-                  <Badge key={t} variant="secondary" className="cursor-pointer" onClick={() => removeTag(t)}>
-                    {t} &times;
-                  </Badge>
+                  canManageStructure ? (
+                    <Badge key={t} variant="secondary" className="cursor-pointer" onClick={() => removeTag(t)}>
+                      {t} &times;
+                    </Badge>
+                  ) : (
+                    <Badge key={t} variant="secondary">
+                      {t}
+                    </Badge>
+                  )
                 ))}
               </div>
             </CardContent>
@@ -729,5 +781,6 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
         </div>
       </div>
     </form>
+    </StructurePermissionsProvider>
   );
 }

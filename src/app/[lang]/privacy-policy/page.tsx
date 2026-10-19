@@ -5,7 +5,7 @@ import {
   hasLocale,
   defaultLocale,
   type Locale,
-  type Dictionary,
+  localeHome,
 } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
@@ -15,13 +15,17 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Privacy Policy",
-    description:
-      "Learn how AB.Limo collects, uses, and protects your personal data when you use our premium chauffeur services.",
+    title: isAr ? dict.privacy.title : "Privacy Policy",
+    description: isAr
+      ? "تعرّف على كيفية جمع AB.Limo لبياناتك الشخصية واستخدامها وحمايتها عند استخدامك لخدماتنا الفاخرة."
+      : "Learn how AB.Limo collects, uses, and protects your personal data when you use our premium chauffeur services.",
     path: "/privacy-policy",
     lang,
-    keywords: "AB.Limo privacy, data protection, privacy policy, personal data, GDPR, cookie policy",
+    keywords: "AB.Limo privacy, data protection, privacy policy, personal data, cookie policy",
   });
 }
 
@@ -33,7 +37,7 @@ export default async function PrivacyPolicyPage({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  const t = (dict as any).privacy;
+  const t = dict.privacy;
 
   return (
     <>
@@ -41,11 +45,11 @@ export default async function PrivacyPolicyPage({
       <section className="relative w-full h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-[#1c1d21]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30] via-[#1c1d21] to-[#292a30]" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide text-white">
             {t.title}
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {t.breadcrumb.home}
             </Link>
             <span>/</span>
@@ -275,10 +279,10 @@ export default async function PrivacyPolicyPage({
                   To exercise any of these rights, please contact our Data
                   Protection Officer at{" "}
                   <a
-                    href="mailto:privacy@ablimo.com"
+                    href="mailto:hello@ab.limo"
                     className="text-white underline hover:text-gray-300 transition-colors"
                   >
-                    privacy@ablimo.com
+                    hello@ab.limo
                   </a>
                   . We will respond to your request within 30 days.
                 </p>
@@ -327,27 +331,27 @@ export default async function PrivacyPolicyPage({
                 </p>
                 <div className="bg-[#1c1d21] rounded-lg p-8 border border-gray-700/50 mt-6 space-y-3">
                   <p>
-                    <strong className="text-white">AB.Limo GmbH</strong>
+                    <strong className="text-white">AB.Limo</strong>
                   </p>
                   <p>Data Protection Officer</p>
-                  <p>Friedrichstraße 123</p>
-                  <p>10117 Berlin, Germany</p>
+                  <p>Malaz Area, Umar Ibn Abdulaziz Road, Building Number 59</p>
+                  <p>Second Floor, Riyadh 12626, Kingdom of Saudi Arabia</p>
                   <p className="pt-2">
                     Email:{" "}
                     <a
-                      href="mailto:privacy@ablimo.com"
+                      href="mailto:hello@ab.limo"
                       className="text-white underline hover:text-gray-300 transition-colors"
                     >
-                      privacy@ablimo.com
+                      hello@ab.limo
                     </a>
                   </p>
                   <p>
                     Phone:{" "}
                     <a
-                      href="tel:+4930123456789"
+                      href="tel:+923135237377"
                       className="text-white underline hover:text-gray-300 transition-colors"
                     >
-                      +49 30 123 456 789
+                      +92 313 523 7377
                     </a>
                   </p>
                 </div>

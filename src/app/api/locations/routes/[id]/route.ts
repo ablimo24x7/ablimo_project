@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import mongoose from "mongoose";
 import { connectDB } from "@/lib/db";
@@ -36,6 +37,8 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
 }
 
 export async function PUT(req: NextRequest, { params }: Ctx) {
+  const auth = await authorizeApi("update");
+  if (!auth.ok) return auth.response;
   if (!isDatabaseEnabled()) {
     return NextResponse.json({ error: "Database is disabled." }, { status: 400 });
   }
@@ -99,6 +102,8 @@ export async function PUT(req: NextRequest, { params }: Ctx) {
 }
 
 export async function DELETE(_req: NextRequest, { params }: Ctx) {
+  const auth = await authorizeApi("delete");
+  if (!auth.ok) return auth.response;
   if (!isDatabaseEnabled()) {
     return NextResponse.json({ error: "Database is disabled." }, { status: 400 });
   }

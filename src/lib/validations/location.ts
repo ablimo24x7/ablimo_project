@@ -4,6 +4,7 @@ import {
   allIsoCountries,
 } from "@/lib/iso3166";
 import { toSlug } from "@/lib/slug";
+import { SectionInstanceSchema } from "@/components/section-library/types";
 
 const statusSchema = z.enum(["draft", "published", "archived"]).optional();
 
@@ -328,5 +329,52 @@ export const RouteCreateSchema = z.object({
 export const slugFromName = (name: string) => {
   return toSlug(name.trim());
 };
+
+// ── Location page templates (Section Library) ────────────────────
+
+export const LocationPageTemplateCreateSchema = z.object({
+  pageType: z.enum(["country", "city", "route"]),
+  refKey: z.string().trim().min(1).max(500),
+  lang: z.string().trim().min(2).max(10).optional().default("en-US"),
+  template: z.array(SectionInstanceSchema).optional().default([]),
+  status: statusSchema,
+});
+
+export const LocationPageTemplateUpdateSchema = z.object({
+  pageType: z.enum(["country", "city", "route"]).optional(),
+  refKey: z.string().trim().min(1).max(500).optional(),
+  lang: z.string().trim().min(2).max(10).optional(),
+  template: z.array(SectionInstanceSchema).optional(),
+  status: statusSchema,
+});
+
+export type LocationPageTemplateCreateInput = z.infer<
+  typeof LocationPageTemplateCreateSchema
+>;
+
+// ── Country update ───────────────────────────────────────────────
+// PUT /api/locations/[id] previously did ad-hoc, unvalidated input
+// handling — this mirrors CountryCreateSchema with everything optional.
+
+export const CountryUpdateSchema = z.object({
+  name: z
+    .string()
+    .trim()
+    .min(1, "Country is required")
+    .max(200)
+    .refine((v) => validateCountry(v) !== undefined, {
+      message: "Invalid or unknown country. Please use a real ISO-3166 country.",
+    })
+    .optional(),
+  nameAr: z.string().optional(),
+  code: z.string().min(2).max(2).optional(),
+  slug: z.string().min(1).max(200).optional(),
+  description: z.string().optional(),
+  descriptionAr: z.string().optional(),
+  cities: z.array(CitySchema).optional(),
+  faqs: z.array(FaqSchema).optional(),
+  faqsAr: z.array(FaqSchema).optional(),
+  status: statusSchema,
+});
 
 export const isoCountryOptions = allIsoCountries();

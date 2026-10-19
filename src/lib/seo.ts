@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { localeBase } from "@/app/[lang]/dictionaries";
 
-const BASE_URL = "https://ab.limo";
-const LOCALES = ["en-US", "en-GB", "ar"] as const;
+const BASE_URL = "https://www.ab.limo";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/opengraph-image.png`;
 const TWITTER_HANDLE = "@ablimo";
 
@@ -33,20 +33,22 @@ export function generateSeoMetadata({
   authors,
 }: SeoOptions): Metadata {
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
-  const canonical = `${BASE_URL}/${lang}${cleanPath}`;
+  // Root resolves to the bare origin so the canonical never 308-redirects
+  const suffix = cleanPath === "/" ? "" : cleanPath;
+  const canonical = `${BASE_URL}${localeBase(lang)}${suffix}`;
   const image = ogImage || DEFAULT_OG_IMAGE;
 
-  const languages: Record<string, string> = {};
-  for (const locale of LOCALES) {
-    languages[locale] = `${BASE_URL}/${locale}${cleanPath}`;
-  }
-  languages["x-default"] = `${BASE_URL}/${LOCALES[0]}${cleanPath}`;
+  // English is served at the prefix-less URL, Arabic at /ar
+  const languages: Record<string, string> = {
+    en: `${BASE_URL}${suffix}`,
+    ar: `${BASE_URL}/ar${suffix}`,
+    "x-default": `${BASE_URL}${suffix}`,
+  };
 
   // og:locale mapping
-  const ogLocale = lang === "ar" ? "ar_SA" : "en_US";
-  const alternateLocales = LOCALES.filter((l) => l !== lang).map((l) =>
-    l === "ar" ? "ar_SA" : "en_US"
-  );
+  const isArabic = lang.split("-")[0] === "ar";
+  const ogLocale = isArabic ? "ar_SA" : "en_US";
+  const alternateLocales = [isArabic ? "en_US" : "ar_SA"];
 
   return {
     title,
@@ -83,4 +85,4 @@ export function generateSeoMetadata({
 
 export const SITE_NAME = "AB.Limo";
 export const SITE_URL = BASE_URL;
-export { LOCALES, DEFAULT_OG_IMAGE, TWITTER_HANDLE };
+export { DEFAULT_OG_IMAGE, TWITTER_HANDLE };

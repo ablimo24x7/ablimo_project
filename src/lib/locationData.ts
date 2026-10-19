@@ -4,6 +4,7 @@ import { Country, type CountryDoc, type CityDoc, type AirportDoc } from "@/lib/m
 import { LocationRoute, type RouteDoc } from "@/lib/models/Route";
 import { toSlug } from "@/lib/slug";
 import { COUNTRIES, CITY_ROUTES, resolveAirport, resolveCity, resolveCountry, type Airport, type City, type CityRoute, type Country as CountryShape } from "@/lib/locations";
+import type { TextImageSectionType } from "@/lib/validations/location";
 
 export const LOCATION_API_TAG = "locations";
 
@@ -46,7 +47,7 @@ function mapCity(doc: CityDoc & { _id?: unknown }): City {
     airports: (doc.airports ?? []).map(mapAirport),
     faqs: (doc.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
     faqsAr: (doc.faqsAr ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
-    sections: (doc.sections ?? []) as any,
+    sections: (doc.sections ?? []) as TextImageSectionType[],
   };
 }
 
@@ -71,6 +72,8 @@ function toRouteShape(doc: RouteDoc): CityRoute {
   return {
     fromSlug: doc.fromCity,
     toSlug: doc.toCity,
+    fromName: doc.fromCityName || "",
+    toName: doc.toCityName || "",
     distance: doc.distance || "",
     duration: doc.duration || "",
   };
@@ -88,18 +91,21 @@ export async function seedLocationsIfEmpty(): Promise<void> {
     code: c.code,
     slug: c.slug,
     name: c.name,
+    nameAr: c.nameAr ?? "",
     description: "",
     status: "published",
     faqs: [],
     cities: c.cities.map((city) => ({
       slug: city.slug,
       name: city.name,
+      nameAr: city.nameAr ?? "",
       countrySlug: c.slug,
       status: "published",
       faqs: [],
       airports: city.airports.map((a) => ({
         slug: a.slug,
         name: a.name,
+        nameAr: a.nameAr ?? "",
         iata: a.iata,
         citySlug: city.slug,
         status: "published",
@@ -122,6 +128,37 @@ export async function seedLocationsIfEmpty(): Promise<void> {
   await LocationRoute.insertMany(routeDocs).catch(() => undefined);
 }
 
+/** Backfill empty nameAr fields from the bundled static dataset. */
+function backfillNameAr<T extends { slug: string; nameAr?: string }>(
+  items: T[],
+  staticItems: readonly T[]
+): T[] {
+  const bySlug = new Map(staticItems.map((item) => [item.slug, item]));
+  return items.map((item) => {
+    if (item.nameAr) return item;
+    const match = bySlug.get(item.slug);
+    if (match?.nameAr) return { ...item, nameAr: match.nameAr };
+    return item;
+  });
+}
+
+function backfillCountryNameAr(country: CountryShape): CountryShape {
+  const staticCountry = COUNTRIES.find((c) => c.slug === country.slug);
+  if (!staticCountry) return country;
+  const cities = backfillNameAr(country.cities ?? [], staticCountry.cities).map((city) => {
+    const staticCity = staticCountry.cities.find((c) => c.slug === city.slug);
+    return {
+      ...city,
+      airports: backfillNameAr(city.airports ?? [], staticCity?.airports ?? []),
+    };
+  });
+  return {
+    ...country,
+    nameAr: country.nameAr || staticCountry.nameAr || "",
+    cities,
+  };
+}
+
 /** Fetch all countries. Falls back to static data when DB is off/empty. */
 export async function getAllCountries(): Promise<CountryShape[]> {
   if (!isDatabaseEnabled()) return COUNTRIES;
@@ -130,20 +167,43 @@ export async function getAllCountries(): Promise<CountryShape[]> {
   const docs = await Country.find({ status: { $ne: "archived" } }).sort({ name: 1 }).lean();
   if (!docs.length) return COUNTRIES;
   const active = docs.filter((d) => d.status === "published");
-  return (active.length ? active : docs).map(toCountryShape);
+  return (active.length ? active : docs)
+    .map(toCountryShape)
+    .map(backfillCountryNameAr);
 }
 
-/** Fetch a single country by slug or code. */
+const countryAliases: Record<string, string> = {
+  "united-arab-emirates": "uae",
+};
+
+/** Expand a country input to all lookup candidates (itself + alias variants). */
+function countryLookupKeys(input: string): string[] {
+  const key = input.toLowerCase();
+  const keys = new Set<string>([key]);
+  // forward: "united-arab-emirates" -> "uae"
+  const forward = countryAliases[key];
+  if (forward) keys.add(forward);
+  // reverse: "uae" -> "united-arab-emirates"
+  for (const [alias, target] of Object.entries(countryAliases)) {
+    if (target === key) keys.add(alias);
+  }
+  return [...keys];
+}
+
+/** Fetch a single country by slug, code, or alias. */
 export async function getCountryBySlug(input: string): Promise<CountryShape | undefined> {
   const enabled = isDatabaseEnabled();
-  const key = input.toLowerCase();
   if (!enabled) {
+    const key = input.toLowerCase();
     return COUNTRIES.find((c) => c.slug === key || c.code === key);
   }
   await connectDB();
-  const doc = await Country.findOne({ $or: [{ slug: key }, { code: key }] }).lean();
+  const keys = countryLookupKeys(input);
+  const doc = await Country.findOne({
+    $or: [{ slug: { $in: keys } }, { code: { $in: keys } }, { aliases: { $in: keys } }],
+  }).lean();
   if (!doc || doc.status === "archived") return undefined;
-  return toCountryShape(doc);
+  return backfillCountryNameAr(toCountryShape(doc));
 }
 
 /** Fetch all routes. */
@@ -179,10 +239,9 @@ export async function generateUniqueSlug(
  */
 
 export async function getCountryForRequest(input: string): Promise<CountryShape | undefined> {
-  const key = input.toLowerCase();
-  const db = await getCountryBySlug(key);
+  const db = await getCountryBySlug(input.toLowerCase());
   if (db) return db;
-  return resolveCountry(key);
+  return resolveCountry(input.toLowerCase());
 }
 
 export async function getCityForRequest(
@@ -224,10 +283,34 @@ export async function getRoutesForCountry(country: CountryShape): Promise<CityRo
   return routes.filter((r) => citySlugs.has(r.fromSlug));
 }
 
-/** Routes where the given city is the origin (dynamic + static). */
+/**
+ * Routes involving the given city, always oriented with the city as origin
+ * (dynamic + static). Deduped by destination, preferring the original direction.
+ */
 export async function getRoutesForCity(citySlug: string): Promise<CityRoute[]> {
   const routes = await getAllRoutes();
-  return routes.filter((r) => r.fromSlug === citySlug);
+  const seen = new Set<string>();
+  const result: CityRoute[] = [];
+  for (const r of routes) {
+    if (r.fromSlug === citySlug) {
+      if (!seen.has(r.toSlug)) {
+        seen.add(r.toSlug);
+        result.push(r);
+      }
+    } else if (r.toSlug === citySlug) {
+      if (!seen.has(r.fromSlug)) {
+        seen.add(r.fromSlug);
+        result.push({
+          ...r,
+          fromSlug: r.toSlug,
+          toSlug: r.fromSlug,
+          fromName: r.toName,
+          toName: r.fromName,
+        });
+      }
+    }
+  }
+  return result;
 }
 
 /** Look up a single route by origin/destination slugs (dynamic + static). */

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { getIcon } from "./section-icons";
 import type { PageSection } from "./section-types";
+import type { SectionInstance } from "@/components/section-library/types";
 
 interface CTABannerSectionProps {
-  section: PageSection;
+  section: PageSection | SectionInstance;
 }
 
 const PADDING_CLASSES = {
@@ -47,7 +48,7 @@ export default function CTABannerSection({ section }: CTABannerSectionProps) {
                   <Link
                     key={i}
                     href={action.href || "#"}
-                    className="inline-flex items-center justify-center bg-abGold hover:bg-yellow-600 text-white px-10 py-4 rounded font-bold transition-all shadow-lg shadow-abGold/20"
+                    className="inline-flex items-center justify-center bg-abServiceBlue hover:bg-sky-700 text-white px-10 py-4 rounded font-bold transition-all shadow-lg shadow-abServiceBlue/20"
                   >
                     {!isRight && iconEl}
                     {action.label}
@@ -60,7 +61,7 @@ export default function CTABannerSection({ section }: CTABannerSectionProps) {
                   <Link
                     key={i}
                     href={action.href || "#"}
-                    className="inline-flex items-center justify-center bg-transparent border border-abGold text-abGold hover:bg-abGold hover:text-white px-8 py-3.5 rounded text-sm font-semibold transition-all"
+                    className="inline-flex items-center justify-center bg-transparent border border-abServiceBlue text-abServiceBlue hover:bg-abServiceBlue hover:text-white px-8 py-3.5 rounded text-sm font-semibold transition-all"
                   >
                     {!isRight && iconEl}
                     {action.label}

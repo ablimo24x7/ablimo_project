@@ -49,6 +49,7 @@ import {
   MousePointerClick,
 } from "lucide-react";
 import type { TextImageSectionType, TextImageElementType, CardsSectionType, CardItemType, CardCtaType } from "@/lib/validations/location";
+import { useCanManageStructure } from "@/components/providers/structure-permissions";
 
 type SectionUnion = TextImageSectionType | CardsSectionType;
 
@@ -152,6 +153,7 @@ const defaultStyleValues = {
 
 export function SectionEditor({ sections, onChange }: SectionEditorProps) {
   const [expandedSections, setExpandedSections] = React.useState<Record<string, boolean>>({});
+  const canManage = useCanManageStructure();
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -214,15 +216,21 @@ export function SectionEditor({ sections, onChange }: SectionEditorProps) {
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold">Content Sections</h3>
         <div className="flex gap-2">
-          <Button type="button" size="sm" variant="outline" onClick={() => addSection("image_left")}>
-            <Plus className="h-4 w-4 mr-1" /> Image Left
-          </Button>
-          <Button type="button" size="sm" variant="outline" onClick={() => addSection("image_right")}>
-            <Plus className="h-4 w-4 mr-1" /> Image Right
-          </Button>
-          <Button type="button" size="sm" variant="outline" onClick={addCardsSection}>
-            <Plus className="h-4 w-4 mr-1" /> Cards
-          </Button>
+          {canManage && (
+            <Button type="button" size="sm" variant="outline" onClick={() => addSection("image_left")}>
+              <Plus className="h-4 w-4 mr-1" /> Image Left
+            </Button>
+          )}
+          {canManage && (
+            <Button type="button" size="sm" variant="outline" onClick={() => addSection("image_right")}>
+              <Plus className="h-4 w-4 mr-1" /> Image Right
+            </Button>
+          )}
+          {canManage && (
+            <Button type="button" size="sm" variant="outline" onClick={addCardsSection}>
+              <Plus className="h-4 w-4 mr-1" /> Cards
+            </Button>
+          )}
         </div>
       </div>
 
@@ -230,12 +238,16 @@ export function SectionEditor({ sections, onChange }: SectionEditorProps) {
         <div className="border-2 border-dashed rounded-lg p-8 text-center">
           <p className="text-muted-foreground mb-4">No sections yet. Add a section to get started.</p>
           <div className="flex gap-2 justify-center">
-            <Button type="button" variant="outline" onClick={() => addSection("image_left")}>
-              + Image Left Section
-            </Button>
-            <Button type="button" variant="outline" onClick={() => addSection("image_right")}>
-              + Image Right Section
-            </Button>
+            {canManage && (
+              <Button type="button" variant="outline" onClick={() => addSection("image_left")}>
+                + Image Left Section
+              </Button>
+            )}
+            {canManage && (
+              <Button type="button" variant="outline" onClick={() => addSection("image_right")}>
+                + Image Right Section
+              </Button>
+            )}
           </div>
         </div>
       )}
@@ -271,6 +283,7 @@ interface SortableSectionItemProps {
 }
 
 function SortableSectionItem({ section, isExpanded, onToggle, onRemove, onDuplicate, onUpdate }: SortableSectionItemProps) {
+  const canManage = useCanManageStructure();
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: section.id });
 
   const style = {
@@ -305,12 +318,16 @@ function SortableSectionItem({ section, isExpanded, onToggle, onRemove, onDuplic
           </div>
         </div>
         <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
-          <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onDuplicate}>
-            <Copy className="h-3.5 w-3.5" />
-          </Button>
-          <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onRemove}>
-            <Trash2 className="h-3.5 w-3.5 text-destructive" />
-          </Button>
+          {canManage && (
+            <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onDuplicate}>
+              <Copy className="h-3.5 w-3.5" />
+            </Button>
+          )}
+          {canManage && (
+            <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onRemove}>
+              <Trash2 className="h-3.5 w-3.5 text-destructive" />
+            </Button>
+          )}
           {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </div>
       </button>
@@ -557,6 +574,7 @@ interface ElementsEditorProps {
 }
 
 function ElementsEditor({ section, onUpdate }: ElementsEditorProps) {
+  const canManage = useCanManageStructure();
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
@@ -598,13 +616,15 @@ function ElementsEditor({ section, onUpdate }: ElementsEditorProps) {
     <div className="space-y-3">
       <div className="flex items-center justify-between">
         <Label>Content Elements</Label>
-        <div className="flex flex-wrap gap-1">
-          {elementTypes.map(({ type, label, icon: Icon }) => (
-            <Button key={type} type="button" size="sm" variant="outline" onClick={() => addElement(type)}>
-              <Icon className="h-3 w-3 mr-1" /> {label}
-            </Button>
-          ))}
-        </div>
+        {canManage && (
+          <div className="flex flex-wrap gap-1">
+            {elementTypes.map(({ type, label, icon: Icon }) => (
+              <Button key={type} type="button" size="sm" variant="outline" onClick={() => addElement(type)}>
+                <Icon className="h-3 w-3 mr-1" /> {label}
+              </Button>
+            ))}
+          </div>
+        )}
       </div>
 
       {section.elements.length === 0 && (
@@ -638,6 +658,7 @@ interface SortableElementItemProps {
 }
 
 function SortableElementItem({ element, onRemove, onUpdate }: SortableElementItemProps) {
+  const canManage = useCanManageStructure();
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: element.id });
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -688,9 +709,11 @@ function SortableElementItem({ element, onRemove, onUpdate }: SortableElementIte
         >
           {isExpanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
         </Button>
-        <Button type="button" variant="ghost" size="sm" className="h-6 w-6 p-0" onClick={onRemove}>
-          <Trash2 className="h-3 w-3 text-destructive" />
-        </Button>
+        {canManage && (
+          <Button type="button" variant="ghost" size="sm" className="h-6 w-6 p-0" onClick={onRemove}>
+            <Trash2 className="h-3 w-3 text-destructive" />
+          </Button>
+        )}
       </div>
 
       {isExpanded && (
@@ -968,7 +991,7 @@ function ElementEditorPanel({ element, onUpdate }: ElementEditorPanelProps) {
             <div className="p-4 bg-muted rounded-lg">
               {element.type === "tag" && (
                 <span
-                  className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-abGold/20 text-abGold rounded-full"
+                  className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-abBlue/20 text-abBlue rounded-full"
                   style={{
                     fontFamily: element.style?.typography?.fontFamily,
                     fontSize: element.style?.typography?.fontSize,
@@ -1016,7 +1039,7 @@ function ElementEditorPanel({ element, onUpdate }: ElementEditorPanelProps) {
               )}
               {element.type === "button" && (
                 <span
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-abGold text-white font-semibold rounded-lg"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-abBlue text-white font-semibold rounded-lg"
                   style={{
                     fontFamily: element.style?.typography?.fontFamily,
                     fontSize: element.style?.typography?.fontSize,
@@ -1051,6 +1074,7 @@ interface CardsSectionPanelProps {
 }
 
 function CardsSectionPanel({ section, onUpdate }: CardsSectionPanelProps) {
+  const canManage = useCanManageStructure();
   const updateCard = (cardIndex: number, updates: Partial<CardItemType>) => {
     const cards = [...section.cards];
     cards[cardIndex] = { ...cards[cardIndex], ...updates };
@@ -1121,9 +1145,11 @@ function CardsSectionPanel({ section, onUpdate }: CardsSectionPanelProps) {
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-sm">Card {ci + 1}</CardTitle>
-                  <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCard(ci)}>
-                    <Trash2 className="h-3.5 w-3.5 text-destructive" />
-                  </Button>
+                  {canManage && (
+                    <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCard(ci)}>
+                      <Trash2 className="h-3.5 w-3.5 text-destructive" />
+                    </Button>
+                  )}
                 </div>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -1157,26 +1183,32 @@ function CardsSectionPanel({ section, onUpdate }: CardsSectionPanelProps) {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <Label>CTA Buttons</Label>
-                    <Button type="button" variant="ghost" size="sm" className="h-6 text-xs" onClick={() => addCta(ci)}>
-                      <Plus className="h-3 w-3 mr-1" /> Add CTA
-                    </Button>
+                    {canManage && (
+                      <Button type="button" variant="ghost" size="sm" className="h-6 text-xs" onClick={() => addCta(ci)}>
+                        <Plus className="h-3 w-3 mr-1" /> Add CTA
+                      </Button>
+                    )}
                   </div>
                   {card.ctas.map((cta, ti) => (
                     <div key={ti} className="flex gap-2 items-center">
                       <Input value={cta.label} onChange={(e) => updateCta(ci, ti, { label: e.target.value })} placeholder="Button text" className="flex-1" />
                       <Input value={cta.url} onChange={(e) => updateCta(ci, ti, { url: e.target.value })} placeholder="/link" className="flex-1" />
-                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCta(ci, ti)}>
-                        <Trash2 className="h-3 w-3 text-destructive" />
-                      </Button>
+                      {canManage && (
+                        <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCta(ci, ti)}>
+                          <Trash2 className="h-3 w-3 text-destructive" />
+                        </Button>
+                      )}
                     </div>
                   ))}
                 </div>
               </CardContent>
             </Card>
           ))}
-          <Button type="button" variant="outline" className="w-full" onClick={addCard}>
-            <Plus className="h-4 w-4 mr-1" /> Add Card
-          </Button>
+          {canManage && (
+            <Button type="button" variant="outline" className="w-full" onClick={addCard}>
+              <Plus className="h-4 w-4 mr-1" /> Add Card
+            </Button>
+          )}
         </TabsContent>
 
         <TabsContent value="style" className="space-y-4 mt-4">

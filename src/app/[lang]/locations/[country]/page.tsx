@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/app/[lang]/dictionaries";
-import { getCountryForRequest, getRoutesForCountry } from "@/lib/locationData";
+import { getCountryForRequest } from "@/lib/locationData";
+import { getCountryServicesForLocation } from "@/lib/blog";
 import CountryDetailClient from "../_components/CountryDetailClient";
 import { generateSeoMetadata } from "@/lib/seo";
+import { FAQJsonLd } from "@/components/seo/StructuredData";
+import { getCountryTemplate } from "@/lib/location-template";
+import type { SectionRenderContext } from "@/components/section-library/types";
 
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
@@ -38,7 +42,7 @@ export default async function CountryPage({
     const country = await getCountryForRequest(countryParam);
     if (!country) notFound();
 
-    const routes = await getRoutesForCountry(country);
+    const services = await getCountryServicesForLocation(country.slug, lang, lang);
     const dict = await getDictionary(lang as "en-US" | "en-GB" | "ar");
 
     const isArabic = lang === "ar";
@@ -60,5 +64,30 @@ export default async function CountryPage({
         }
     }
 
-    return <CountryDetailClient dict={dict} lang={lang} country={country} routes={routes} />;
+    const template = await getCountryTemplate(country.slug, lang);
+    const context: SectionRenderContext = {
+        kind: "location",
+        lang,
+        country,
+        services,
+        routes: [],
+        dict,
+    };
+    const countryFaqs = (country.faqs ?? []).filter(
+        (f: { q: string; a: string }) => f.q && f.a
+    );
+
+    return (
+      <>
+        {countryFaqs.length > 0 && (
+          <FAQJsonLd
+            items={countryFaqs.map((f: { q: string; a: string }) => ({
+              question: f.q,
+              answer: f.a,
+            }))}
+          />
+        )}
+        <CountryDetailClient template={template} context={context} />
+      </>
+    );
 }

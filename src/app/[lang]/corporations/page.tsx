@@ -10,10 +10,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Corporate Mobility Solutions | AB.Limo Executive Transportation",
-    description:
-      "AB.Limo delivers tailored corporate mobility programs for enterprises. Dedicated account management, real-time reporting, and premium fleet access across the GCC and worldwide.",
+    title: isAr ? dict.corporations.meta.title : "Corporate Mobility Solutions | AB.Limo Executive Transportation",
+    description: isAr
+      ? dict.corporations.meta.description
+      : "AB.Limo delivers tailored corporate mobility programs for enterprises. Dedicated account management, real-time reporting, and premium fleet access across the GCC and worldwide.",
     path: "/corporations",
     lang,
     keywords:
@@ -56,7 +60,7 @@ export default async function CorporationsPage({
           <p className="text-gray-400 text-sm tracking-widest uppercase mb-4">
             {dict.corporations.breadcrumb.home} &gt; {dict.corporations.breadcrumb.corporations}
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
             {dict.corporations.hero.heading}
           </h1>
         </div>

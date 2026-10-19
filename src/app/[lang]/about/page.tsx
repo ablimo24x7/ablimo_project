@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { getDictionary, hasLocale, defaultLocale, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import { cityUrl, locationsUrl, resolveCity, resolveCountry } from "@/lib/locations";
 import { generateSeoMetadata } from "@/lib/seo";
 import { AboutPageJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
@@ -12,10 +12,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "About AB.Limo | Premium Chauffeur & Corporate Mobility Provider",
-    description:
-      "Learn about AB.Limo, a leading executive mobility provider operating across 6 GCC countries with 25+ cities, 10+ years of experience, and over 1 million rides delivered. Our fleet of luxury vehicles serves airport transfers, corporate travel, and special events.",
+    title: isAr ? dict.about.meta.title : "About AB.Limo | Premium Chauffeur & Corporate Mobility Provider",
+    description: isAr
+      ? dict.about.meta.description
+      : "Learn about AB.Limo, a leading executive mobility provider operating across 6 GCC countries with 25+ cities, 10+ years of experience, and over 1 million rides delivered. Our fleet of luxury vehicles serves airport transfers, corporate travel, and special events.",
     path: "/about",
     lang,
     keywords:
@@ -56,8 +60,8 @@ export default async function AboutPage({
       <AboutPageJsonLd />
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: `/${lang}` },
-          { name: "About", url: `/${lang}/about` },
+          { name: "Home", url: `${localeHome(lang)}` },
+          { name: "About", url: `${localeBase(lang)}/about` },
         ]}
       />
       {dict.about.faq && (
@@ -79,11 +83,11 @@ export default async function AboutPage({
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/70 via-[#292a30]/50 to-[#292a30]" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide text-white">
             {dict.about.title}
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {dict.about.breadcrumb.home}
             </Link>
             <span>/</span>

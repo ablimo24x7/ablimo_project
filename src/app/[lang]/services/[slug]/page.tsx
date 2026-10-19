@@ -12,6 +12,8 @@ import {
   hasLocale,
   defaultLocale,
   type Locale,
+  localeBase,
+  localeHome,
 } from "@/app/[lang]/dictionaries";
 import { ServiceJsonLd, BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 import { generateSeoMetadata } from "@/lib/seo";
@@ -65,20 +67,20 @@ export default async function Page({
       <ServiceJsonLd
         name={resolved.content.title}
         description={resolved.content.subtitle || ""}
-        url={`/${lang}/services/${slug}`}
+        url={`${localeBase(lang)}/services/${slug}`}
       />
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: `/${lang}` },
-          { name: "Services", url: `/${lang}/services` },
-          { name: resolved.content.title, url: `/${lang}/services/${slug}` },
+          { name: "Home", url: `${localeHome(lang)}` },
+          { name: "Services", url: `${localeBase(lang)}/services` },
+          { name: resolved.content.title, url: `${localeBase(lang)}/services/${slug}` },
         ]}
       />
       {hasPageSections ? (
         <PageRenderer
           sections={resolved.pageSections!}
           serviceName={resolved.content.title}
-          serviceUrl={`/${lang}/services/${slug}`}
+          serviceUrl={`${localeBase(lang)}/services/${slug}`}
         />
       ) : (
         <ServicePage
@@ -86,7 +88,7 @@ export default async function Page({
           content={resolved.content}
           breadcrumb={resolved.breadcrumb}
           serviceName={resolved.content.title}
-          serviceUrl={`/${lang}/services/${slug}`}
+          serviceUrl={`${localeBase(lang)}/services/${slug}`}
         />
       )}
 
@@ -99,7 +101,7 @@ export default async function Page({
             {relatedArticles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/${lang}/services/${article.slug.replace(/^services\//, "")}`}
+                href={`${localeBase(lang)}/services/${article.slug.replace(/^services\//, "")}`}
                 className="group block bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
               >
                 <div className="relative h-48 w-full">
@@ -114,7 +116,7 @@ export default async function Page({
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold text-white line-clamp-2 mb-2 group-hover:text-abGold transition-colors">
+                  <h3 className="text-lg font-semibold text-white line-clamp-2 mb-2 group-hover:text-abBlue transition-colors">
                     {article.title}
                   </h3>
                   {article.excerpt && (

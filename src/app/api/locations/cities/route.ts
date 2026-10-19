@@ -1,11 +1,41 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
-import { Country } from "@/lib/models/Country";
+import { Country, type CityDoc } from "@/lib/models/Country";
 import { isDatabaseEnabled } from "@/lib/locationData";
 import { CityCreateSchema, slugFromName } from "@/lib/validations/location";
 import { toSlug } from "@/lib/slug";
 
+export async function GET() {
+  if (!isDatabaseEnabled()) {
+    return NextResponse.json({ cities: [], databaseEnabled: false });
+  }
+
+  await connectDB();
+  const docs = await Country.find({ status: { $ne: "archived" } })
+    .sort({ name: 1 })
+    .lean();
+
+  const cities = docs.flatMap((d) =>
+    (d.cities ?? []).map((c: CityDoc) => ({
+      slug: c.slug,
+      name: c.name,
+      nameAr: c.nameAr ?? "",
+      status: c.status ?? "published",
+      airportCount: c.airports?.length ?? 0,
+      faqCount: c.faqs?.length ?? 0,
+      countryId: String(d._id),
+      countryName: d.name,
+      countrySlug: d.slug,
+    }))
+  );
+
+  return NextResponse.json({ cities });
+}
+
 export async function POST(req: NextRequest) {
+  const auth = await authorizeApi("create");
+  if (!auth.ok) return auth.response;
   if (!isDatabaseEnabled()) {
     return NextResponse.json({ error: "Database is disabled." }, { status: 400 });
   }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import { getDictionary, hasLocale, defaultLocale, type Locale, localeHome } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -10,10 +10,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Partnership Opportunities with AB.Limo",
-    description:
-      "Explore strategic partnership opportunities with AB.Limo. Join forces with a leading luxury chauffeur service across aviation, cruise, financial, and hotel sectors.",
+    title: isAr ? dict.strategicPartnerships.meta.title : "Partnership Opportunities with AB.Limo",
+    description: isAr
+      ? dict.strategicPartnerships.meta.description
+      : "Explore strategic partnership opportunities with AB.Limo. Join forces with a leading luxury chauffeur service across aviation, cruise, financial, and hotel sectors.",
     path: "/strategic-partnerships",
     lang,
     keywords: "AB.Limo partnerships, strategic alliances, aviation partnership, hotel partnership, luxury transport collaboration",
@@ -80,13 +84,13 @@ export default async function StrategicPartnershipsPage({
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/80 via-[#292a30]/60 to-[#292a30]" />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300 mb-4">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {dict.strategicPartnerships.breadcrumb.home}
             </Link>
             <span>/</span>
             <span className="text-white">{dict.strategicPartnerships.breadcrumb.partnerships}</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
             {dict.strategicPartnerships.hero.heading}
           </h1>
         </div>

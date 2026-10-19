@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { Article } from "@/lib/models/Article";
 import { parseJsonBody } from "@/lib/api/errors";
+import { authorizeApi } from "@/lib/api/guard";
 
 export async function GET(req: NextRequest) {
   await connectDB();
@@ -32,6 +33,9 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const auth = await authorizeApi("create");
+  if (!auth.ok) return auth.response;
+
   await connectDB();
   const body = await parseJsonBody(req);
   if (body instanceof NextResponse) return body;

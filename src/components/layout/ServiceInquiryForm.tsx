@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useWidgetOverride } from "@/components/chat/widget-context";
+import { classifyContactMethod, extractWhatsAppNumber, trackContactClick, trackEvent } from "@/lib/analytics";
 
 interface ChannelConfig {
   id: string;
@@ -15,6 +17,8 @@ interface ChannelConfig {
 interface WidgetConfig {
   channels: ChannelConfig[];
   whatsappPopup: boolean;
+  cityWhatsappNumber?: string;
+  countryWhatsappNumbers?: { countrySlug: string; number: string }[];
 }
 
 interface ServiceInquiryFormDict {
@@ -44,7 +48,7 @@ interface ServiceInquiryFormProps {
 export default function ServiceInquiryForm({
   serviceName,
   serviceUrl,
-  primaryColor = "#C8A951",
+  primaryColor = "#259DCC",
   dict,
 }: ServiceInquiryFormProps) {
   const [form, setForm] = useState({
@@ -56,6 +60,7 @@ export default function ServiceInquiryForm({
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [widgetConfig, setWidgetConfig] = useState<WidgetConfig | null>(null);
+  const { isCityTemplate, pageWhatsappNumber } = useWidgetOverride();
 
   const t = dict?.inquiryForm ?? {
     title: "Quick Inquiry",
@@ -81,6 +86,29 @@ export default function ServiceInquiryForm({
       .catch(() => {});
   }, []);
 
+  const getCountrySlug = (): string => {
+    const segments = serviceUrl.split("/");
+    const servicesIndex = segments.indexOf("services");
+    if (servicesIndex === -1) return "";
+    return segments[servicesIndex + 2] ?? "";
+  };
+
+  // Number priority: page override > global city number > country number > channel phone.
+  const resolveWhatsappNumber = (fallback: string): string => {
+    const countryNumber = widgetConfig?.countryWhatsappNumbers?.find(
+      (c) => c.countrySlug === getCountrySlug() && c.number?.trim()
+    )?.number?.trim();
+    if (isCityTemplate) {
+      return (
+        pageWhatsappNumber?.trim() ||
+        widgetConfig?.cityWhatsappNumber?.trim() ||
+        countryNumber ||
+        fallback
+      );
+    }
+    return countryNumber || fallback;
+  };
+
   const getEnabledChannel = (): ChannelConfig | null => {
     if (!widgetConfig) return null;
     const enabled = widgetConfig.channels.filter((c) => c.enabled);
@@ -94,7 +122,8 @@ export default function ServiceInquiryForm({
 
     switch (channel.id) {
       case "whatsapp": {
-        const phone = channel.phone?.replace(/[^0-9]/g, "") || "";
+        const phone =
+          resolveWhatsappNumber(channel.phone || "").replace(/[^0-9]/g, "") || "";
         return `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
       }
       case "messenger":
@@ -138,8 +167,19 @@ export default function ServiceInquiryForm({
         const url = buildChannelUrl(channel, form.message);
         if (url !== "#") {
           window.open(url, "_blank", "noopener,noreferrer");
+          trackContactClick({
+            method: classifyContactMethod(url) ?? "other",
+            location: "service_inquiry_form",
+            label: `channel:${channel.id}`,
+            whatsapp_number: extractWhatsAppNumber(url),
+          });
         }
       }
+
+      trackEvent("lead_captured", {
+        form_id: "service_inquiry",
+        form_location: "service_inquiry_form",
+      });
 
       setSent(true);
     } catch {

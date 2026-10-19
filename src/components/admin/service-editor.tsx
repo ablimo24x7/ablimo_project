@@ -31,7 +31,7 @@ import {
   Layout,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ServiceSectionEditor } from "@/components/admin/service-section-editor";
+import { SectionLibraryEditor } from "@/components/admin/section-library-editor";
 import type { PageSection } from "@/components/services/sections/section-types";
 
 type ServiceFeature = {
@@ -303,7 +303,7 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
     });
   };
 
-  const viewUrl = form.slug ? `/en-US/services/${form.slug}` : null;
+  const viewUrl = form.slug ? `/services/${form.slug}` : null;
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-6 px-4 pb-8 lg:px-6">
@@ -365,7 +365,7 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
             </TabsList>
 
             <TabsContent value="sections" className="mt-4">
-              <ServiceSectionEditor
+              <SectionLibraryEditor
                 sections={form.pageSections}
                 onChange={(sections) => update("pageSections", sections)}
                 serviceSlug={form.slug}

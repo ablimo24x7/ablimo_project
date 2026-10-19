@@ -9,6 +9,7 @@ import {
   hasLocale,
   defaultLocale,
   type Locale,
+  localeBase,
 } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
@@ -62,7 +63,7 @@ export default async function Page({
       content={buildServiceContent(texts, structure)}
       breadcrumb={texts.title}
       serviceName={texts.title}
-      serviceUrl={`/${lang}/services/airport-transfers/pickup`}
+      serviceUrl={`${localeBase(lang)}/services/airport-transfers/pickup`}
     />
   );
 }

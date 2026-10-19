@@ -5,6 +5,7 @@ import {
   hasLocale,
   defaultLocale,
   type Locale,
+  localeHome,
 } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
@@ -14,10 +15,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Accessibility",
-    description:
-      "AB.Limo is committed to ensuring digital accessibility for all users. Read our accessibility statement and learn about our ongoing efforts.",
+    title: isAr ? dict.accessibilityPage.title : "Accessibility",
+    description: isAr
+      ? "ملتزم AB.Limo بضمان إمكانية الوصول الرقمي لجميع المستخدمين. اقرأ بيان إمكانية الوصول وتعرّف على جهودنا المستمرة."
+      : "AB.Limo is committed to ensuring digital accessibility for all users. Read our accessibility statement and learn about our ongoing efforts.",
     path: "/accessibility",
     lang,
     keywords: "AB.Limo accessibility, digital accessibility, accessible transportation, wheelchair accessible vehicle",
@@ -39,11 +44,11 @@ export default async function AccessibilityPage({
       <section className="relative w-full h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-[#1c1d21]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30] via-[#1c1d21] to-[#292a30]" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide text-white">
             {dict.accessibilityPage.title}
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {dict.accessibilityPage.breadcrumb.home}
             </Link>
             <span>/</span>
@@ -62,14 +67,14 @@ export default async function AccessibilityPage({
             </h2>
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
-                AB.Limo GmbH is committed to ensuring digital accessibility for
+                AB.Limo is committed to ensuring digital accessibility for
                 people with disabilities. We are continually improving the user
                 experience for everyone and applying the relevant accessibility
                 standards to ensure we provide equal access to all users.
               </p>
               <p>
                 This Accessibility Statement applies to the AB.Limo website
-                (www.ablimo.com) and the AB.Limo mobile application. We strive
+                (www.ab.limo) and the AB.Limo mobile application. We strive
                 to conform to the Web Content Accessibility Guidelines (WCAG)
                 2.1 at the AA level as published by the World Wide Web
                 Consortium (W3C).
@@ -240,25 +245,25 @@ export default async function AccessibilityPage({
                 <p>
                   <strong className="text-white">Accessibility Team</strong>
                 </p>
-                <p>AB.Limo GmbH</p>
-                <p>Friedrichstraße 123</p>
-                <p>10117 Berlin, Germany</p>
+                <p>AB.Limo</p>
+                <p>Malaz Area, Umar Ibn Abdulaziz Road, Building Number 59</p>
+                <p>Second Floor, Riyadh 12626, Kingdom of Saudi Arabia</p>
                 <p className="pt-2">
                   Email:{" "}
                   <a
-                    href="mailto:accessibility@ablimo.com"
+                    href="mailto:hello@ab.limo"
                     className="text-white underline hover:text-gray-300 transition-colors"
                   >
-                    accessibility@ablimo.com
+                    hello@ab.limo
                   </a>
                 </p>
                 <p>
                   Phone:{" "}
                   <a
-                    href="tel:+4930123456789"
+                    href="tel:+923135237377"
                     className="text-white underline hover:text-gray-300 transition-colors"
                   >
-                    +49 30 123 456 789
+                    +92 313 523 7377
                   </a>
                 </p>
                 <p className="pt-2 text-gray-400 text-sm">
@@ -277,27 +282,22 @@ export default async function AccessibilityPage({
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
                 If you are not satisfied with our response to your
-                accessibility concern, you may contact the competent
-                supervisory authority:
+                accessibility concern, you may escalate the matter directly to
+                our team. We will review your case and provide a final
+                response:
               </p>
               <div className="bg-[#1c1d21] rounded-lg p-8 border border-gray-700/50 mt-6 space-y-3">
                 <p>
-                  <strong className="text-white">
-                    Berlin Commissioner for Data Protection and Freedom of
-                    Information
-                  </strong>
+                  <strong className="text-white">Accessibility Escalations</strong>
                 </p>
-                <p>Friedrichstraße 219</p>
-                <p>10969 Berlin, Germany</p>
-                <p>
-                  Website:{" "}
+                <p>AB.Limo</p>
+                <p className="pt-2">
+                  Email:{" "}
                   <a
-                    href="https://www.berlin.de/datenschutz"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:hello@ab.limo"
                     className="text-white underline hover:text-gray-300 transition-colors"
                   >
-                    www.berlin.de/datenschutz
+                    hello@ab.limo
                   </a>
                 </p>
               </div>

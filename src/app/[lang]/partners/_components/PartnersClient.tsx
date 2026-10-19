@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { localeHome } from "@/app/[lang]/dictionaries";
 
 export default function PartnersClient({ dict, lang }: { dict: Dictionary; lang: string }) {
   const [activeTab, setActiveTab] = useState(dict.partners.tabs.onboarding);
@@ -70,13 +71,13 @@ export default function PartnersClient({ dict, lang }: { dict: Dictionary; lang:
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/70 via-[#292a30]/50 to-[#292a30]" />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300 mb-4">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {dict.partners.breadcrumb.home}
             </Link>
             <span>/</span>
             <span className="text-white">{dict.partners.breadcrumb.partners}</span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
             {dict.partners.hero.heading}
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">

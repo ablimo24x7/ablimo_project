@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { Service } from "@/lib/models/Service";
@@ -62,6 +63,8 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const auth = await authorizeApi("create");
+  if (!auth.ok) return auth.response;
   const enabled = isDatabaseEnabled();
   if (!enabled) {
     return NextResponse.json(

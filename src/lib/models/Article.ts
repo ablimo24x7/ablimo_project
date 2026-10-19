@@ -329,6 +329,7 @@ const articleSchema = new Schema(
     citySlug: { type: String, default: "" },
     country: { type: String, default: "" },
     city: { type: String, default: "" },
+    whatsappNumber: { type: String, default: "" },
     routeFrom: { type: String, default: "" },
     routeTo: { type: String, default: "" },
 

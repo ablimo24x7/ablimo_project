@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { Country } from "@/lib/models/Country";
@@ -20,6 +21,8 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  const auth = await authorizeApi("create");
+  if (!auth.ok) return auth.response;
   if (!isDatabaseEnabled()) {
     return NextResponse.json(
       { error: "Database is disabled. Set USE_DATABASE=true to manage locations." },
@@ -88,6 +91,8 @@ export async function POST(req: NextRequest) {
     })),
     faqs: (c.faqs ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
     faqsAr: (c.faqsAr ?? []).map((f) => ({ q: f.q ?? "", a: f.a ?? "" })),
+    // legacy field — kept intact in storage (rendering ignores it per plan §4.1)
+    sections: c.sections ?? [],
   }));
 
   // Alias / slug conflict checks for nested cities and airports

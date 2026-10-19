@@ -17,7 +17,7 @@ function genItemId(): string {
 
 // ── Corporate City Service Template ──────────────────────────────
 // Full replica of the Riyadh Corporate Mobility HTML page
-// Uses PageSection types: hero, serviceCards, mediaContent, fleetGrid, contactForm, faq, ctaBanner
+// Uses PageSection types: hero, marquee, serviceCards, textMediaGrid, mediaContent, fleetGrid, contactForm, faq, ctaBanner
 
 export const corporateCityTemplate: CityTemplatePreset = {
   name: "Corporate City Service",
@@ -110,28 +110,37 @@ export const corporateCityTemplate: CityTemplatePreset = {
       appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
     },
 
-    // ── Section 3: Media Content — Vision 2030 (media right) ────
+    // ── Section 3: Text + Media Grid — Vision 2030 Infrastructure
     {
       id: genId(),
-      type: "mediaContent",
+      type: "textMediaGrid",
       variant: "media-right",
       order: 3,
       enabled: true,
       content: {
         eyebrow: "Infrastructure Alignment",
-        heading: "Powering Riyadh's Vision 2030 Corporate Ecosystem.",
-        description: "As the Kingdom undergoes unprecedented economic diversification under the Vision 2030 mandate, the demands on Riyadh's corporate travel infrastructure have evolved exponentially. AB.Limo operates at the nexus of this transformation, providing highly secure, scalable, and meticulously managed executive mobility solutions for multinational corporations entering the Saudi market.\n\nOur strategic dispatch capabilities are engineered specifically for the capital's premier economic hubs. We maintain a continuous, vetted presence within the King Abdullah Financial District (KAFD), offering seamless, secure transitions between architectural marvels and corporate headquarters.",
+        eyebrowIcon: "City",
+        heading: "Powering Riyadh's",
+        headingHighlight: "Vision 2030",
+        headingAfter: "Corporate Ecosystem.",
+        description:
+          '<p class="mb-6 leading-relaxed">As the Kingdom undergoes unprecedented economic diversification under the <strong>Vision 2030</strong> mandate, the demands on Riyadh\'s corporate travel infrastructure have evolved exponentially. AB.Limo operates at the nexus of this transformation, providing highly secure, scalable, and meticulously managed executive mobility solutions for multinational corporations entering the Saudi market.</p>' +
+          '<p class="mb-6 leading-relaxed">Our strategic dispatch capabilities are engineered specifically for the capital\'s premier economic hubs. We maintain a continuous, vetted presence within the <strong>King Abdullah Financial District (KAFD)</strong>, offering seamless, secure transitions between architectural marvels and corporate headquarters. For international delegations and foreign missions, our chauffeurs possess the necessary clearances to navigate the rigorous security protocols of the <strong>Diplomatic Quarter (DQ)</strong> with absolute discretion and efficiency.</p>' +
+          '<p class="leading-relaxed">Beyond standard point-to-point transfers, our <em>As-Directed</em> hourly services provide global executives with the fluid mobility required to execute complex business roadshows across Riyadh\'s expanding urban footprint—from the historic Diriyah Gate developments to the high-tech corridors of northern Riyadh.</p>',
         items: [
-          { id: genItemId(), icon: "Building", heading: "KAFD Operations", description: "Dedicated fleet positioning for immediate financial district deployments." },
+          { id: genItemId(), icon: "BuildingShield", heading: "KAFD Operations", description: "Dedicated fleet positioning for immediate financial district deployments." },
           { id: genItemId(), icon: "Passport", heading: "DQ Protocol", description: "Vetted personnel trained in embassy and diplomatic security standards." },
         ],
-        actions: [
-          { label: "Explore City Operations", href: "#ruh-services", style: "outline", icon: "ArrowRight" },
+        media: [
+          { id: genItemId(), type: "image", column: "left", size: "tall", image: "https://images.unsplash.com/photo-1588726588629-19e48f7d9834?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", imageAlt: "KAFD Riyadh Architecture", overlay: "blue" },
+          { id: genItemId(), type: "image", column: "left", size: "short", image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop&q=80", imageAlt: "Executive Sedan Riyadh", overlay: "none", contain: true },
+          { id: genItemId(), type: "stat", column: "right", size: "short", statValue: "100%", statLabel: "TGA Compliant" },
+          { id: genItemId(), type: "image", column: "right", size: "tall", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", imageAlt: "Corporate Logistics Data", overlay: "gradient" },
         ],
       },
       items: [],
-      settings: { mediaPosition: "right", containerWidth: "default" },
-      appearance: { theme: "darker", pattern: true, background: "https://images.unsplash.com/photo-1588726588629-19e48f7d9834?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", padding: "lg", border: true, textAlign: "left" },
+      settings: { mediaPosition: "right" },
+      appearance: { theme: "darker", pattern: true, padding: "lg", border: true, textAlign: "left" },
     },
 
     // ── Section 4: Media Content — Event Logistics (media left) ──

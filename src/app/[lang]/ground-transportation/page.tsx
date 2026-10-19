@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import BookingWidget from "@/components/layout/BookingWidget";
-import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import HeroInquiryForm from "@/app/[lang]/locations/_components/HeroInquiryForm";
+import { getDictionary, hasLocale, defaultLocale, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -11,10 +11,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Comprehensive Ground Transportation",
-    description:
-      "Complete ground transportation solutions for individuals and businesses. Airport transfers, corporate travel, and event transportation worldwide.",
+    title: isAr ? dict.groundTransportation.title : "Comprehensive Ground Transportation",
+    description: isAr
+      ? dict.groundTransportation.subtitle
+      : "Complete ground transportation solutions for individuals and businesses. Airport transfers, corporate travel, and event transportation worldwide.",
     path: "/ground-transportation",
     lang,
     keywords: "ground transportation, corporate transportation, business travel, AB.Limo, executive transport, event logistics, airport shuttle",
@@ -44,21 +48,21 @@ export default async function GroundTransportationPage({
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#292a30]" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white">
               {dict.groundTransportation.title}
             </h1>
             <p className="text-lg text-gray-300">
               {dict.groundTransportation.subtitle}
             </p>
           </div>
-          <BookingWidget dict={dict} />
+          <HeroInquiryForm dict={dict} />
         </div>
       </section>
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+          <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
             {dict.groundTransportation.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
@@ -213,7 +217,7 @@ export default async function GroundTransportationPage({
           {dict.groundTransportation.cta.desc}
         </p>
         <Link
-          href={`/${lang}`}
+          href={`${localeBase(lang)}/contact`}
           className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
         >
           {dict.groundTransportation.cta.bookNow}

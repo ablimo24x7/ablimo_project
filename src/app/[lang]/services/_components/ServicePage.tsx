@@ -6,6 +6,8 @@ import {
   hasLocale,
   defaultLocale,
   type Locale,
+  localeBase,
+  localeHome,
 } from "@/app/[lang]/dictionaries";
 
 export interface ServiceFeature {
@@ -91,6 +93,13 @@ export function buildServiceContent(
   texts: ServicePageTexts,
   structure: ServiceStructure
 ): ServiceContent {
+  const fallbackCardImage = structure.cardImages[0] ?? "";
+  const fallbackSection = structure.sectionImages[0] ?? { image: "" };
+  const sectionAt = (i: number) =>
+    structure.sectionImages[i] ??
+    structure.sectionImages[structure.sectionImages.length - 1] ??
+    fallbackSection;
+
   return {
     title: texts.title,
     subtitle: texts.subtitle,
@@ -106,19 +115,19 @@ export function buildServiceContent(
     cardsHeading: texts.cardsHeading,
     cardsDesc: texts.cardsDesc,
     cards: texts.cards.map((c, i) => ({
-      image: structure.cardImages[i],
+      image: structure.cardImages[i] ?? fallbackCardImage,
       tag: c.tag,
       title: c.title,
       desc: c.desc,
     })),
     sections: (texts.sections ?? []).map((s, i) => ({
-      image: structure.sectionImages[i].image,
+      image: sectionAt(i).image,
       imageAlt: s.imageAlt,
       title: s.title,
       paragraphs: s.paragraphs,
       bullets: s.bullets,
-      dark: structure.sectionImages[i].dark,
-      imageSide: structure.sectionImages[i].imageSide,
+      dark: sectionAt(i).dark,
+      imageSide: sectionAt(i).imageSide,
     })),
     faqs: texts.faqs,
   };
@@ -165,13 +174,13 @@ export default async function ServicePage({
         <div className="absolute inset-0 bg-gradient-to-r from-abBlack/70 via-abBlack/30 to-transparent" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abGold/10 border border-abGold/30 mb-5">
-              <span className="w-2 h-2 rounded-full bg-abGold animate-pulse"></span>
-              <span className="text-abGold text-xs font-bold tracking-widest uppercase">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abBlue/10 border border-abBlue/30 mb-5">
+              <span className="w-2 h-2 rounded-full bg-abBlue animate-pulse"></span>
+              <span className="text-abBlue text-xs font-bold tracking-widest uppercase">
                 {dict.services?.luxuryMobility ?? "AB.Limo Luxury Mobility"}
               </span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white">
               {content.title}
             </h1>
             <p className="text-lg text-gray-300">{content.subtitle}</p>
@@ -186,11 +195,11 @@ export default async function ServicePage({
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+          <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
             {homeLabel}
           </Link>
           <span className="mx-2">/</span>
-          <Link href={`/${lang}/services`} className="hover:text-white transition-colors">
+          <Link href={`${localeBase(lang)}/services`} className="hover:text-white transition-colors">
             {servicesLabel}
           </Link>
           <span className="mx-2">/</span>
@@ -207,7 +216,7 @@ export default async function ServicePage({
                 key={feature.title}
                 className="bg-[#1c1d21] p-8 rounded-2xl hover:bg-[#2a2c35] transition-colors"
               >
-                <div className="text-abGold mb-4">{feature.icon}</div>
+                <div className="text-abBlue mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {feature.desc}
@@ -246,7 +255,7 @@ export default async function ServicePage({
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     {card.tag && (
-                      <span className="absolute top-4 left-4 bg-abGold text-black text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                      <span className="absolute top-4 left-4 bg-abBlue text-black text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                         {card.tag}
                       </span>
                     )}
@@ -379,8 +388,8 @@ export default async function ServicePage({
         </h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">{content.ctaDesc}</p>
         <Link
-          href={content.ctaHref ?? `/${lang}/services`}
-          className="inline-block bg-abGold hover:bg-yellow-600 text-white px-8 py-3 text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abGold/20"
+          href={content.ctaHref ?? `${localeBase(lang)}/services`}
+          className="inline-block bg-abBlue hover:bg-abServiceBlue text-white px-8 py-3 text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abBlue/20"
         >
           {content.ctaLabel}
         </Link>

@@ -25,10 +25,13 @@ import type { Redirect } from "next/dist/lib/load-custom-routes";
  * The `:lang` parameter mirrors the `[lang]` dynamic segment used by the
  * App Router, so every locale (en-US, en-GB, ar, ...) is redirected.
  *
+ * English is served at prefix-less URLs, so every rule is also mirrored
+ * without the `/:lang` segment (see `redirects()` below).
+ *
  * All rules use `permanent: true` (308) so search engines cache and
  * re-index the new hierarchy, preserving SEO equity.
  */
-export const redirects: () => Promise<Redirect[]> = async () => [
+const rules: Redirect[] = [
   // ---- City index ------------------------------------------------------
   // The legacy /cities page was merged into the /locations hierarchy.
   {
@@ -121,4 +124,14 @@ export const redirects: () => Promise<Redirect[]> = async () => [
     destination: "/:lang/services/:path*",
     permanent: true,
   },
+];
+
+export const redirects: () => Promise<Redirect[]> = async () => [
+  ...rules,
+  // English URLs carry no locale prefix — mirror every rule without /:lang.
+  ...rules.map((rule) => ({
+    ...rule,
+    source: rule.source.replace("/:lang", ""),
+    destination: rule.destination.replace("/:lang", ""),
+  })),
 ];

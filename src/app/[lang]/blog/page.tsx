@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock } from "lucide-react";
 import { getAllPublishedArticles, getAllPublishedArticlesFiltered } from "@/lib/blog";
-import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
+import { hasLocale, defaultLocale, getDictionary, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import { SERVICE_OPTIONS } from "@/lib/constants";
 
 const SERVICE_TABS = [
@@ -23,12 +23,11 @@ export async function generateMetadata({
     title: dict.blog.allArticles,
     description: dict.blog.allArticlesDescription,
     alternates: {
-      canonical: "https://ab.limo/blog",
+      canonical: "https://www.ab.limo/blog",
       languages: {
-        "en-US": "https://ab.limo/en-US/blog",
-        "en-GB": "https://ab.limo/en-GB/blog",
-        ar: "https://ab.limo/ar/blog",
-        "x-default": "https://ab.limo/en-US/blog",
+        en: "https://www.ab.limo/blog",
+        ar: "https://www.ab.limo/ar/blog",
+        "x-default": "https://www.ab.limo/blog",
       },
     },
     openGraph: {
@@ -87,7 +86,7 @@ export default async function BlogPage({
         <nav aria-label="Breadcrumb" className="flex justify-center">
           <ol className="flex items-center gap-2 text-sm text-gray-400 flex-wrap text-center" dir="ltr">
             <li className="flex items-center gap-2">
-              <Link href={`/${lang}`} className="hover:text-white transition-colors">
+              <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
                 {b.home}
               </Link>
               <span aria-hidden="true">{isArabic ? "←" : "→"}</span>
@@ -107,15 +106,15 @@ export default async function BlogPage({
           {SERVICE_TABS.map((tab) => {
             const isActive = activeService === tab.slug;
             const href = tab.slug === "all"
-              ? `/${lang}/blog`
-              : `/${lang}/blog?service=${tab.slug}`;
+              ? `${localeBase(lang)}/blog`
+              : `${localeBase(lang)}/blog?service=${tab.slug}`;
             return (
               <Link
                 key={tab.slug}
                 href={href}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   isActive
-                    ? "bg-abGold text-white"
+                    ? "bg-abBlue text-white"
                     : "bg-[#1c1d21] text-gray-400 hover:text-white hover:bg-[#2a2c35]"
                 }`}
               >
@@ -137,7 +136,7 @@ export default async function BlogPage({
             {articles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/${lang}/blog/${article.slug}`}
+                href={`${localeBase(lang)}/blog/${article.slug}`}
                 className="group block bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
               >
                 <div className="relative h-48 w-full">
@@ -157,7 +156,7 @@ export default async function BlogPage({
                   </div>
                 </div>
                 <div className="p-5">
-                  <h2 className="text-lg font-semibold text-white line-clamp-2 mb-2 group-hover:text-abGold transition-colors">
+                  <h2 className="text-lg font-semibold text-white line-clamp-2 mb-2 group-hover:text-abBlue transition-colors">
                     {article.title}
                   </h2>
                   {article.excerpt && (

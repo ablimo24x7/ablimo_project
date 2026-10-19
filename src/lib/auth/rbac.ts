@@ -16,7 +16,7 @@ export async function getRolePolicies(forceRefresh = false): Promise<Record<stri
 
   const map: Record<string, string[]> = {};
   policies.forEach((policy: any) => {
-    map[policy.roleName] = policy.permissions || [];
+    map[policy.role] = policy.permissions || [];
   });
 
   cachedPolicies = map;

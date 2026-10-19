@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
+import type { PageContext } from "./ChatWidget";
 
 interface WidgetConfig {
   primaryColor: string;
@@ -34,12 +36,12 @@ interface ContactFormDict {
 
 interface ContactFormProps {
   config: WidgetConfig;
-  serviceName: string | null;
+  pageContext: PageContext | null;
   onClose: () => void;
   dict?: ContactFormDict;
 }
 
-export function ContactForm({ config, serviceName, onClose, dict }: ContactFormProps) {
+export function ContactForm({ config, pageContext, onClose, dict }: ContactFormProps) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -69,11 +71,15 @@ export function ContactForm({ config, serviceName, onClose, dict }: ContactFormP
         body: JSON.stringify({
           channel: "contact-form",
           ...form,
-          serviceName: serviceName || "",
+          serviceName: pageContext?.name || "",
           pageUrl: window.location.href,
         }),
       });
       setSent(true);
+      trackEvent("lead_captured", {
+        form_id: "chat_contact_form",
+        form_location: "chat_widget",
+      });
     } catch {
     } finally {
       setSending(false);
@@ -131,7 +137,7 @@ export function ContactForm({ config, serviceName, onClose, dict }: ContactFormP
           </button>
           <h3 className="font-semibold text-lg">{t.title}</h3>
           <p className="text-sm opacity-90 mt-1">
-            {serviceName ? `${t.inquiryAbout}${serviceName}` : t.defaultMessage}
+            {pageContext ? `${t.inquiryAbout}${pageContext.name}` : t.defaultMessage}
           </p>
         </div>
 

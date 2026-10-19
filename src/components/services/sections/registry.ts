@@ -6,6 +6,7 @@ import MarqueeSection from "./marquee-section";
 import ServiceCardsSection from "./service-cards-section";
 import FleetGridSection from "./fleet-grid-section";
 import MediaContentSection from "./media-content-section";
+import TextMediaGridSection from "./text-media-grid-section";
 import ContactFormSection from "./contact-form-section";
 import FAQSection from "./faq-section";
 import CTABannerSection from "./cta-banner-section";
@@ -22,6 +23,7 @@ const SECTION_REGISTRY: Record<string, ComponentType<SectionRendererProps>> = {
   serviceCards: ServiceCardsSection,
   fleetGrid: FleetGridSection,
   mediaContent: MediaContentSection,
+  textMediaGrid: TextMediaGridSection,
   contactForm: ContactFormSection,
   faq: FAQSection,
   ctaBanner: CTABannerSection,
@@ -37,6 +39,7 @@ export {
   ServiceCardsSection,
   FleetGridSection,
   MediaContentSection,
+  TextMediaGridSection,
   ContactFormSection,
   FAQSection,
   CTABannerSection,

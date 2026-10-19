@@ -4,16 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { localeHome } from "@/app/[lang]/dictionaries";
 import { countryUrl, type Country } from "@/lib/locations";
-
-const countryImages: Record<string, string> = {
-  bh: "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  kw: "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=800&h=600&fit=crop",
-  om: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  qa: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  sa: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  ae: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
-};
+import { countryImages } from "@/lib/country-images";
 
 const featureIcons = [
   <svg key="globe" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,14 +40,14 @@ export default function CountriesClient({ dict, lang, countries }: { dict: Dicti
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#292a30]" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
             {dict.countries.hero.heading}
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8">
             {dict.countries.hero.desc}
           </p>
           <Link
-            href={`/${lang}`}
+            href={`${localeHome(lang)}`}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.countries.bookNow}
@@ -65,7 +58,7 @@ export default function CountriesClient({ dict, lang, countries }: { dict: Dicti
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+          <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
             {dict.countries.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
@@ -171,7 +164,7 @@ export default function CountriesClient({ dict, lang, countries }: { dict: Dicti
             {dict.countries.cta.desc}
           </p>
           <Link
-            href={`/${lang}`}
+            href={`${localeHome(lang)}`}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.countries.cta.button}

@@ -9,6 +9,7 @@ export type SectionType =
   | "marquee"
   | "serviceCards"
   | "mediaContent"
+  | "textMediaGrid"
   | "fleetGrid"
   | "contactForm"
   | "faq"
@@ -33,6 +34,7 @@ export interface PageSection {
 export interface SectionAppearanceBase {
   theme?: "dark" | "darker" | "light";
   background?: string;
+  backgroundAlt?: string;
   pattern?: boolean;
   padding?: "none" | "sm" | "md" | "lg" | "xl";
   border?: boolean;
@@ -183,6 +185,48 @@ export interface MediaContentSettings {
 export interface MediaContentAppearance extends SectionAppearanceBase {
   theme?: "dark" | "darker" | "light";
   background?: string;
+  pattern?: boolean;
+}
+
+// ── Text Media Grid ──────────────────────────────────────────────
+
+export interface TextMediaGridFeature {
+  id: string;
+  icon: string;
+  heading: string;
+  description: string;
+}
+
+export interface TextMediaGridMediaItem {
+  id: string;
+  type: "image" | "stat";
+  column: "left" | "right";
+  size: "tall" | "short";
+  image?: string;
+  imageAlt?: string;
+  overlay?: "none" | "blue" | "gradient";
+  contain?: boolean;
+  statValue?: string;
+  statLabel?: string;
+}
+
+export interface TextMediaGridContent {
+  eyebrow?: string;
+  eyebrowIcon?: string;
+  heading: string;
+  headingHighlight?: string;
+  headingAfter?: string;
+  description?: string;
+  items?: TextMediaGridFeature[];
+  media?: TextMediaGridMediaItem[];
+}
+
+export interface TextMediaGridSettings {
+  mediaPosition?: "left" | "right";
+}
+
+export interface TextMediaGridAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
   pattern?: boolean;
 }
 
@@ -428,6 +472,39 @@ export const SECTION_TYPES: SectionTypeConfig[] = [
       items: [],
       settings: { mediaPosition: "right", containerWidth: "default" },
       appearance: { theme: "darker", pattern: false, padding: "lg", border: true, textAlign: "left" },
+    }),
+  },
+  {
+    type: "textMediaGrid",
+    label: "Text + Media Grid",
+    description: "SEO text block with feature highlights and an image/stat mosaic",
+    icon: "Columns2",
+    variants: [
+      { value: "media-right", label: "Media Right" },
+      { value: "media-left", label: "Media Left" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "textMediaGrid",
+      variant: "media-right",
+      order: 0,
+      enabled: true,
+      content: {
+        eyebrow: "Infrastructure Alignment",
+        eyebrowIcon: "City",
+        heading: "Powering Riyadh's",
+        headingHighlight: "Vision 2030",
+        headingAfter: "Corporate Ecosystem.",
+        description: "<p>Rich text description goes here. Use bold and emphasis to highlight key terms for SEO.</p>",
+        items: [],
+        media: [
+          { id: `itm-${Date.now()}-a-${Math.random().toString(36).substr(2, 9)}`, type: "image", column: "left", size: "tall", image: "", imageAlt: "", overlay: "blue" },
+          { id: `itm-${Date.now()}-b-${Math.random().toString(36).substr(2, 9)}`, type: "stat", column: "right", size: "short", statValue: "100%", statLabel: "Compliant" },
+        ],
+      },
+      items: [],
+      settings: { mediaPosition: "right" },
+      appearance: { theme: "darker", pattern: true, padding: "lg", border: true, textAlign: "left" },
     }),
   },
   {

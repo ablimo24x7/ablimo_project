@@ -33,7 +33,7 @@ import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Plus, Trash2, GripVertical, Copy, ChevronDown, ChevronUp, ExternalLink,
-  Layout, LayoutGrid, PanelLeft, Car, FileText, HelpCircle, Megaphone, RefreshCw,
+  Layout, LayoutGrid, PanelLeft, Car, FileText, HelpCircle, Megaphone, RefreshCw, Columns2,
 } from "lucide-react";
 import { WysiwygEditor } from "@/components/ui/wysiwyg-editor";
 import {
@@ -43,12 +43,14 @@ import {
 } from "@/components/services/sections/section-types";
 import { ICON_OPTIONS } from "@/components/services/sections/section-icons";
 import { TEMPLATE_PRESETS, type TemplatePreset } from "@/components/services/sections/section-defaults";
+import { useCanManageStructure } from "@/components/providers/structure-permissions";
 
 const SECTION_ICONS: Record<string, React.ElementType> = {
   hero: Layout,
   marquee: RefreshCw,
   serviceCards: LayoutGrid,
   mediaContent: PanelLeft,
+  textMediaGrid: Columns2,
   fleetGrid: Car,
   contactForm: FileText,
   faq: HelpCircle,
@@ -72,6 +74,7 @@ export function ServiceSectionEditor({
   const [expandedSections, setExpandedSections] = React.useState<Record<string, boolean>>({});
   const [showAddPanel, setShowAddPanel] = React.useState(false);
   const [showPresets, setShowPresets] = React.useState(false);
+  const canManage = useCanManageStructure();
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -150,12 +153,16 @@ export function ServiceSectionEditor({
               <ExternalLink className="h-4 w-4 mr-1" /> Preview
             </Button>
           )}
-          <Button type="button" size="sm" variant="outline" onClick={() => setShowPresets(!showPresets)}>
-            Templates
-          </Button>
-          <Button type="button" size="sm" onClick={() => setShowAddPanel(!showAddPanel)}>
-            <Plus className="h-4 w-4 mr-1" /> Add Section
-          </Button>
+          {canManage && (
+            <Button type="button" size="sm" variant="outline" onClick={() => setShowPresets(!showPresets)}>
+              Templates
+            </Button>
+          )}
+          {canManage && (
+            <Button type="button" size="sm" onClick={() => setShowAddPanel(!showAddPanel)}>
+              <Plus className="h-4 w-4 mr-1" /> Add Section
+            </Button>
+          )}
         </div>
       </div>
 
@@ -174,7 +181,7 @@ export function ServiceSectionEditor({
                 >
                   <div className="font-medium text-sm">{preset.name}</div>
                   <div className="text-xs text-muted-foreground mt-1">{preset.description}</div>
-                  <div className="text-xs text-abGold mt-2">{preset.sections.length} sections</div>
+                  <div className="text-xs text-abBlue mt-2">{preset.sections.length} sections</div>
                 </button>
               ))}
             </div>
@@ -213,12 +220,16 @@ export function ServiceSectionEditor({
         <div className="border-2 border-dashed rounded-lg p-8 text-center">
           <p className="text-muted-foreground mb-4">No sections yet. Add a section or choose a template.</p>
           <div className="flex gap-2 justify-center">
-            <Button type="button" variant="outline" onClick={() => setShowPresets(true)}>
-              Choose Template
-            </Button>
-            <Button type="button" onClick={() => setShowAddPanel(true)}>
-              <Plus className="h-4 w-4 mr-1" /> Add Section
-            </Button>
+            {canManage && (
+              <Button type="button" variant="outline" onClick={() => setShowPresets(true)}>
+                Choose Template
+              </Button>
+            )}
+            {canManage && (
+              <Button type="button" onClick={() => setShowAddPanel(true)}>
+                <Plus className="h-4 w-4 mr-1" /> Add Section
+              </Button>
+            )}
           </div>
         </div>
       )}
@@ -227,8 +238,8 @@ export function ServiceSectionEditor({
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <SortableContext items={sections.map((s) => s.id)} strategy={verticalListSortingStrategy}>
           <div className="space-y-3">
-            {sections
-              .sort((a, b) => a.order - b.order)
+            {[...sections]
+              .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
               .map((section) => (
                 <SortableSectionItem
                   key={section.id}
@@ -266,6 +277,7 @@ function SortableSectionItem({
   onDuplicate,
   onUpdate,
 }: SortableSectionItemProps) {
+  const canManage = useCanManageStructure();
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: section.id });
   const config = SECTION_TYPES.find((s) => s.type === section.type);
   const Icon = SECTION_ICONS[section.type] || Layout;
@@ -311,12 +323,16 @@ function SortableSectionItem({
             onCheckedChange={(v) => onUpdate({ enabled: v })}
             className="scale-75"
           />
-          <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onDuplicate}>
-            <Copy className="h-3.5 w-3.5" />
-          </Button>
-          <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onRemove}>
-            <Trash2 className="h-3.5 w-3.5 text-destructive" />
-          </Button>
+          {canManage && (
+            <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onDuplicate}>
+              <Copy className="h-3.5 w-3.5" />
+            </Button>
+          )}
+          {canManage && (
+            <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onRemove}>
+              <Trash2 className="h-3.5 w-3.5 text-destructive" />
+            </Button>
+          )}
           {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </div>
       </button>
@@ -369,6 +385,7 @@ function SectionEditorPanel({ section, onUpdate }: SectionEditorPanelProps) {
 // ── Content Tab ──────────────────────────────────────────────────
 
 function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
+  const canManage = useCanManageStructure();
   const c = section.content as Record<string, unknown>;
 
   const updateContent = (key: string, value: unknown) => {
@@ -462,28 +479,32 @@ function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
                   placeholder="Label text"
                   className="flex-1"
                 />
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => {
-                    const newItems = ((c.items as Array<{id: string; icon: string; label: string}>) || []).filter((_, i) => i !== idx);
-                    updateContent("items", newItems);
-                  }}
-                >
-                  <Trash2 className="h-4 w-4" />
-                </Button>
+                {canManage && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => {
+                      const newItems = ((c.items as Array<{id: string; icon: string; label: string}>) || []).filter((_, i) => i !== idx);
+                      updateContent("items", newItems);
+                    }}
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                )}
               </div>
             ))}
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => {
-                const newItems = [...((c.items as Array<{id: string; icon: string; label: string}>) || []), { id: `item-${Date.now()}`, icon: "Building", label: "" }];
-                updateContent("items", newItems);
-              }}
-            >
-              <Plus className="h-4 w-4 mr-1" /> Add Item
-            </Button>
+            {canManage && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  const newItems = [...((c.items as Array<{id: string; icon: string; label: string}>) || []), { id: `item-${Date.now()}`, icon: "Building", label: "" }];
+                  updateContent("items", newItems);
+                }}
+              >
+                <Plus className="h-4 w-4 mr-1" /> Add Item
+              </Button>
+            )}
           </div>
         </div>
       );
@@ -642,32 +663,73 @@ function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
                     <SelectItem value="outline">Outline</SelectItem>
                   </SelectContent>
                 </Select>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="sm"
-                  className="h-7 w-7 p-0"
-                  onClick={() => {
-                    const actions = [...((c.actions || []) as Array<Record<string, unknown>>)];
-                    actions.splice(ai, 1);
-                    updateContent("actions", actions);
-                  }}
-                >
-                  <Trash2 className="h-3 w-3 text-destructive" />
-                </Button>
+                {canManage && (
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="sm"
+                    className="h-7 w-7 p-0"
+                    onClick={() => {
+                      const actions = [...((c.actions || []) as Array<Record<string, unknown>>)];
+                      actions.splice(ai, 1);
+                      updateContent("actions", actions);
+                    }}
+                  >
+                    <Trash2 className="h-3 w-3 text-destructive" />
+                  </Button>
+                )}
               </div>
             ))}
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                const actions = [...((c.actions || []) as Array<Record<string, unknown>>), { label: "", href: "", style: "primary" }];
-                updateContent("actions", actions);
-              }}
-            >
-              <Plus className="h-3 w-3 mr-1" /> Add Action Button
-            </Button>
+            {canManage && (
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  const actions = [...((c.actions || []) as Array<Record<string, unknown>>), { label: "", href: "", style: "primary" }];
+                  updateContent("actions", actions);
+                }}
+              >
+                <Plus className="h-3 w-3 mr-1" /> Add Action Button
+              </Button>
+            )}
+          </div>
+        </div>
+      );
+
+    case "textMediaGrid":
+      return (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Eyebrow</Label>
+            <Input value={(c.eyebrow as string) || ""} onChange={(e) => updateContent("eyebrow", e.target.value)} placeholder="Infrastructure Alignment" />
+          </div>
+          <div className="space-y-2">
+            <Label>Eyebrow Icon</Label>
+            <Select value={(c.eyebrowIcon as string) || ""} onValueChange={(v) => updateContent("eyebrowIcon", v)}>
+              <SelectTrigger><SelectValue placeholder="Select icon" /></SelectTrigger>
+              <SelectContent>
+                {ICON_OPTIONS.map((opt) => (
+                  <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-2">
+            <Label>Heading (before highlight)</Label>
+            <Input value={(c.heading as string) || ""} onChange={(e) => updateContent("heading", e.target.value)} placeholder="Powering Riyadh's" />
+          </div>
+          <div className="space-y-2">
+            <Label>Heading Highlight (blue text)</Label>
+            <Input value={(c.headingHighlight as string) || ""} onChange={(e) => updateContent("headingHighlight", e.target.value)} placeholder="Vision 2030" />
+          </div>
+          <div className="space-y-2">
+            <Label>Heading (after highlight)</Label>
+            <Input value={(c.headingAfter as string) || ""} onChange={(e) => updateContent("headingAfter", e.target.value)} placeholder="Corporate Ecosystem." />
+          </div>
+          <div className="space-y-2">
+            <Label>Description (rich text paragraphs)</Label>
+            <WysiwygEditor value={(c.description as string) || ""} onChange={(v) => updateContent("description", v)} placeholder="SEO paragraphs..." />
           </div>
         </div>
       );
@@ -816,6 +878,7 @@ function ContentTab({ section, onUpdate }: SectionEditorPanelProps) {
 // ── Items Tab ────────────────────────────────────────────────────
 
 function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
+  const canManage = useCanManageStructure();
   const c = section.content as Record<string, unknown>;
   const items = (section.items || []) as Record<string, unknown>[];
 
@@ -831,7 +894,7 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
       newItem = { ...newItem, icon: "", title: "", description: "", actions: [] };
     } else if (section.type === "fleetGrid") {
       newItem = { ...newItem, badge: "", image: "", category: "", name: "", capacity: "", bags: "" };
-    } else if (section.type === "faq" || section.type === "mediaContent") {
+    } else if (section.type === "faq" || section.type === "mediaContent" || section.type === "textMediaGrid") {
       const existingItems = (c.items || []) as Array<Record<string, unknown>>;
       if (section.type === "faq") {
         updateContentItem("items", [...existingItems, { id, question: "", answer: "" }]);
@@ -847,7 +910,7 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
   };
 
   const removeItem = (index: number) => {
-    if (section.type === "faq" || section.type === "mediaContent") {
+    if (section.type === "faq" || section.type === "mediaContent" || section.type === "textMediaGrid") {
       const existingItems = (c.items || []) as Array<Record<string, unknown>>;
       updateContentItem("items", existingItems.filter((_, i) => i !== index));
     } else {
@@ -856,7 +919,7 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
   };
 
   const updateItem = (index: number, updates: Record<string, unknown>) => {
-    if (section.type === "faq" || section.type === "mediaContent") {
+    if (section.type === "faq" || section.type === "mediaContent" || section.type === "textMediaGrid") {
       const existingItems = (c.items || []) as Array<Record<string, unknown>>;
       const updated = [...existingItems];
       updated[index] = { ...updated[index], ...updates };
@@ -868,7 +931,7 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
     }
   };
 
-  const currentItems = (section.type === "faq" || section.type === "mediaContent")
+  const currentItems = (section.type === "faq" || section.type === "mediaContent" || section.type === "textMediaGrid")
     ? ((c.items || []) as Array<Record<string, unknown>>)
     : items;
 
@@ -881,12 +944,14 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
            section.type === "fleetGrid" ? "Fleet Vehicles" :
            section.type === "hero" ? "CTA Buttons" :
            section.type === "ctaBanner" ? "CTA Buttons" :
-           section.type === "mediaContent" ? "Feature Items" :
+           section.type === "mediaContent" || section.type === "textMediaGrid" ? "Feature Items" :
            "Items"}
         </Label>
-        <Button type="button" size="sm" variant="outline" onClick={addItem}>
-          <Plus className="h-3 w-3 mr-1" /> Add
-        </Button>
+        {canManage && (
+          <Button type="button" size="sm" variant="outline" onClick={addItem}>
+            <Plus className="h-3 w-3 mr-1" /> Add
+          </Button>
+        )}
       </div>
 
       {currentItems.length === 0 && (
@@ -965,32 +1030,164 @@ function ItemsTab({ section, onUpdate }: SectionEditorPanelProps) {
                   ))}
                 </SelectContent>
               </Select>
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                className="h-7 w-7 p-0"
-                onClick={() => {
-                  const items = [...((section.items || []) as Array<Record<string, unknown>>)];
-                  items.splice(i, 1);
-                  onUpdate({ items });
-                }}
-              >
-                <Trash2 className="h-3 w-3 text-destructive" />
-              </Button>
+              {canManage && (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  className="h-7 w-7 p-0"
+                  onClick={() => {
+                    const items = [...((section.items || []) as Array<Record<string, unknown>>)];
+                    items.splice(i, 1);
+                    onUpdate({ items });
+                  }}
+                >
+                  <Trash2 className="h-3 w-3 text-destructive" />
+                </Button>
+              )}
             </div>
           ))}
-          <Button
-            type="button"
-            variant="ghost"
-            size="sm"
-            onClick={() => {
-              const items = [...((section.items || []) as Array<Record<string, unknown>>), { label: "", href: "", style: "primary", icon: "" }];
-              onUpdate({ items });
-            }}
-          >
-            <Plus className="h-3 w-3 mr-1" /> Add CTA Button
-          </Button>
+          {canManage && (
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                const items = [...((section.items || []) as Array<Record<string, unknown>>), { label: "", href: "", style: "primary", icon: "" }];
+                onUpdate({ items });
+              }}
+            >
+              <Plus className="h-3 w-3 mr-1" /> Add CTA Button
+            </Button>
+          )}
+        </div>
+      )}
+
+      {/* Media Grid Tiles (textMediaGrid) */}
+      {section.type === "textMediaGrid" && (
+        <div className="border-t pt-4 mt-4">
+          <Label className="text-sm font-medium mb-1 block">Media Grid Tiles</Label>
+          <p className="text-xs text-muted-foreground mb-3">
+            Mosaic tiles shown beside the text. Mix images and stat cards across the left/right columns.
+          </p>
+          {((c.media || []) as Array<Record<string, unknown>>).map((tile, ti) => {
+            const updateTile = (updates: Record<string, unknown>) => {
+              const tiles = [...((c.media || []) as Array<Record<string, unknown>>)];
+              tiles[ti] = { ...tiles[ti], ...updates };
+              updateContentItem("media", tiles);
+            };
+            const isImage = (tile.type as string) !== "stat";
+            return (
+              <div key={(tile.id as string) || ti} className="border rounded-lg p-3 mb-3 space-y-2 bg-muted/30">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-muted-foreground">Tile {ti + 1}</span>
+                  {canManage && (
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      className="h-6 w-6 p-0"
+                      onClick={() =>
+                        updateContentItem(
+                          "media",
+                          ((c.media || []) as Array<Record<string, unknown>>).filter((_, i) => i !== ti)
+                        )
+                      }
+                    >
+                      <Trash2 className="h-3 w-3 text-destructive" />
+                    </Button>
+                  )}
+                </div>
+                <div className="grid grid-cols-3 gap-2">
+                  <Select value={(tile.type as string) || "image"} onValueChange={(v) => updateTile({ type: v })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="image">Image</SelectItem>
+                      <SelectItem value="stat">Stat Card</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <Select value={(tile.column as string) || "left"} onValueChange={(v) => updateTile({ column: v })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="left">Left Col</SelectItem>
+                      <SelectItem value="right">Right Col</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <Select value={(tile.size as string) || "tall"} onValueChange={(v) => updateTile({ size: v })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="tall">Tall</SelectItem>
+                      <SelectItem value="short">Short</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                {isImage ? (
+                  <>
+                    <Input
+                      value={(tile.image as string) || ""}
+                      onChange={(e) => updateTile({ image: e.target.value })}
+                      placeholder="Image URL"
+                    />
+                    {(tile.image as string) && (
+                      <img
+                        src={tile.image as string}
+                        alt={(tile.imageAlt as string) || ""}
+                        className="h-20 w-full rounded object-cover border border-gray-700"
+                      />
+                    )}
+                    <Input
+                      value={(tile.imageAlt as string) || ""}
+                      onChange={(e) => updateTile({ imageAlt: e.target.value })}
+                      placeholder="Alt text"
+                    />
+                    <div className="grid grid-cols-2 gap-2">
+                      <Select value={(tile.overlay as string) || "none"} onValueChange={(v) => updateTile({ overlay: v })}>
+                        <SelectTrigger><SelectValue /></SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="none">No Overlay</SelectItem>
+                          <SelectItem value="blue">Blue Tint</SelectItem>
+                          <SelectItem value="gradient">Bottom Gradient</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <div className="flex items-center gap-2">
+                        <Switch checked={!!tile.contain} onCheckedChange={(v) => updateTile({ contain: v })} />
+                        <Label className="text-xs">Contain on dark bg</Label>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div className="grid grid-cols-2 gap-2">
+                    <Input
+                      value={(tile.statValue as string) || ""}
+                      onChange={(e) => updateTile({ statValue: e.target.value })}
+                      placeholder="100%"
+                    />
+                    <Input
+                      value={(tile.statLabel as string) || ""}
+                      onChange={(e) => updateTile({ statLabel: e.target.value })}
+                      placeholder="TGA Compliant"
+                    />
+                  </div>
+                )}
+              </div>
+            );
+          })}
+          {canManage && (
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                const id = `itm-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+                updateContentItem("media", [
+                  ...((c.media || []) as Array<Record<string, unknown>>),
+                  { id, type: "image", column: "right", size: "tall", image: "", imageAlt: "", overlay: "none" },
+                ]);
+              }}
+            >
+              <Plus className="h-3 w-3 mr-1" /> Add Media Tile
+            </Button>
+          )}
         </div>
       )}
     </div>
@@ -1319,7 +1516,7 @@ function ItemEditor({ sectionType, item, index, onUpdate, onRemove }: ItemEditor
             </>
           )}
 
-          {sectionType === "mediaContent" && (
+          {(sectionType === "mediaContent" || sectionType === "textMediaGrid") && (
             <>
               <div className="space-y-2">
                 <Label>Icon</Label>
@@ -1479,6 +1676,20 @@ function SettingsTab({ section, onUpdate }: SectionEditorPanelProps) {
         </>
       )}
 
+      {/* Text Media Grid settings */}
+      {section.type === "textMediaGrid" && (
+        <div className="space-y-2">
+          <Label>Media Position</Label>
+          <Select value={(settings.mediaPosition as string) || "right"} onValueChange={(v) => updateSettings("mediaPosition", v)}>
+            <SelectTrigger><SelectValue /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="left">Left</SelectItem>
+              <SelectItem value="right">Right</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      )}
+
       {/* Fleet Grid settings */}
       {section.type === "fleetGrid" && (
         <div className="space-y-2">
@@ -1615,10 +1826,18 @@ function AppearanceTab({ section, onUpdate }: SectionEditorPanelProps) {
             {(appearance.background as string) && (
               <img
                 src={appearance.background as string}
-                alt="Background preview"
+                alt={(appearance.backgroundAlt as string) || "Background preview"}
                 className="mt-2 h-32 w-full rounded-md object-cover"
               />
             )}
+          </div>
+          <div className="space-y-2">
+            <Label>Background Image Alt Text</Label>
+            <Input
+              value={(appearance.backgroundAlt as string) || ""}
+              onChange={(e) => updateAppearance("backgroundAlt", e.target.value)}
+              placeholder="Describe the background image"
+            />
           </div>
           <div className="space-y-2">
             <Label>Overlay Gradient Style</Label>
@@ -1635,8 +1854,8 @@ function AppearanceTab({ section, onUpdate }: SectionEditorPanelProps) {
         </>
       )}
 
-      {/* Media Content-specific */}
-      {section.type === "mediaContent" && (
+      {/* Media Content / Text Media Grid-specific */}
+      {(section.type === "mediaContent" || section.type === "textMediaGrid") && (
         <div className="flex items-center gap-2">
           <Switch
             checked={appearance.pattern === true}
@@ -1658,10 +1877,16 @@ function AppearanceTab({ section, onUpdate }: SectionEditorPanelProps) {
           {(appearance.background as string) && (
             <img
               src={appearance.background as string}
-              alt="Background preview"
+              alt={(appearance.backgroundAlt as string) || "Background preview"}
               className="mt-2 h-32 w-full rounded-md object-cover"
             />
           )}
+          <Label>Background Image Alt Text</Label>
+          <Input
+            value={(appearance.backgroundAlt as string) || ""}
+            onChange={(e) => updateAppearance("backgroundAlt", e.target.value)}
+            placeholder="Describe the background image"
+          />
         </div>
       )}
     </div>

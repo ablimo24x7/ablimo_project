@@ -1,6 +1,15 @@
 import { connectDB } from "@/lib/db";
 import { getEnv } from "@/lib/env";
 import { Article, type ArticleDoc } from "@/lib/models/Article";
+import {
+  normalizeCitySlug,
+  normalizeCountrySlug,
+  resolveCity,
+  resolveCountry,
+  titleFromSlug,
+} from "@/lib/locations";
+import { getAllPublishedServices } from "@/lib/services";
+import { localeBase } from "@/app/[lang]/dictionaries";
 
 /** True when the database is available (USE_DATABASE=true). */
 function isDatabaseEnabled(): boolean {
@@ -157,6 +166,76 @@ export async function getAllPublishedArticles(
   return articles as ArticleDoc[];
 }
 
+/**
+ * Count published service-country template articles per country
+ * (e.g. /services/airport-transfers/saudi-arabia) for the homepage carousel.
+ * Returns {} when the DB is off or the query fails, so callers can fall back
+ * to showing countries without counts instead of breaking the page/build.
+ */
+export async function getCountryServiceCounts(): Promise<Record<string, number>> {
+  if (!isDatabaseEnabled()) return {};
+  try {
+    await connectDB();
+    const rows = (await Article.aggregate([
+      {
+        $match: {
+          status: "published",
+          templateType: "service-country",
+        },
+      },
+      { $group: { _id: "$countrySlug", slugs: { $addToSet: "$slug" } } },
+      { $project: { _id: 0, country: "$_id", count: { $size: "$slugs" } } },
+    ])) as { country: string; count: number }[];
+    const counts: Record<string, number> = {};
+    for (const row of rows) {
+      if (row.country) counts[row.country] = row.count;
+    }
+    return counts;
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Count distinct published services per city (homepage cities section).
+ * Returns entries keyed by `${countrySlug}/${citySlug}` with the number of
+ * distinct serviceSlug values. Falls back to [] on DB-off or query failure.
+ */
+export async function getCityServiceCounts(): Promise<
+  { countrySlug: string; citySlug: string; count: number }[]
+> {
+  if (!isDatabaseEnabled()) return [];
+  try {
+    await connectDB();
+    const rows = (await Article.aggregate([
+      {
+        $match: {
+          status: "published",
+          templateType: "service-city",
+          citySlug: { $ne: "" },
+        },
+      },
+      {
+        $group: {
+          _id: { country: "$countrySlug", city: "$citySlug" },
+          services: { $addToSet: "$serviceSlug" },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          countrySlug: "$_id.country",
+          citySlug: "$_id.city",
+          count: { $size: "$services" },
+        },
+      },
+    ])) as { countrySlug: string; citySlug: string; count: number }[];
+    return rows;
+  } catch {
+    return [];
+  }
+}
+
 export async function fetchAndTranslateArticle(
   slug: string,
   locale: string,
@@ -171,4 +250,229 @@ export async function fetchAndTranslateArticle(
   }
 
   return article;
+}
+
+// ── Location pages: service tabs ─────────────────────────────────
+
+export interface LocationServiceCity {
+  name: string;
+  href: string;
+}
+
+export interface LocationServiceItem {
+  serviceSlug: string;
+  name: string;
+  href: string;
+  description: string;
+  cities?: LocationServiceCity[];
+}
+
+const SERVICE_FALLBACK_ORDER = 999;
+
+function localeInFilter(locale: string) {
+  const short = locale.split("-")[0];
+  return { $in: Array.from(new Set([locale, short, "en"])) };
+}
+
+function prefersLocale(docLocale: string | undefined, locale: string) {
+  const short = locale.split("-")[0];
+  return docLocale === locale || docLocale === short;
+}
+
+/** Published service articles for a locale with English fallback, deduped by slug. */
+async function findServiceArticlesForLocale(
+  filter: Record<string, unknown>,
+  locale: string,
+  select: string
+): Promise<ArticleDoc[]> {
+  const docs = (await Article.find({
+    ...filter,
+    status: "published",
+    locale: localeInFilter(locale),
+  })
+    .select(select)
+    .lean()) as ArticleDoc[];
+  const bySlug = new Map<string, ArticleDoc>();
+  for (const doc of docs) {
+    const existing = bySlug.get(doc.slug);
+    if (
+      !existing ||
+      (prefersLocale(doc.locale, locale) && !prefersLocale(existing.locale, locale))
+    ) {
+      bySlug.set(doc.slug, doc);
+    }
+  }
+  return Array.from(bySlug.values());
+}
+
+async function getServiceMeta() {
+  const services = await getAllPublishedServices();
+  const nameBySlug = new Map<string, string>();
+  const orderKeys: string[] = [];
+  for (const s of services) {
+    nameBySlug.set(s.slug, s.title || titleFromSlug(s.slug));
+    orderKeys.push(s.slug);
+  }
+  return { nameBySlug, orderKeys };
+}
+
+function serviceOrderIndex(orderKeys: string[], serviceSlug: string) {
+  const i = orderKeys.indexOf(serviceSlug);
+  return i === -1 ? SERVICE_FALLBACK_ORDER : i;
+}
+
+/**
+ * Published country-level services for a location country page
+ * (/services/{service}/{country}), each with the country's city pages of
+ * that service as chips. Returns [] when the DB is off or nothing matches.
+ */
+export async function getCountryServicesForLocation(
+  countrySlugParam: string,
+  lang: string,
+  locale: string
+): Promise<LocationServiceItem[]> {
+  if (!isDatabaseEnabled()) return [];
+  try {
+    await connectDB();
+    const countrySlug = normalizeCountrySlug(countrySlugParam);
+    if (!countrySlug) return [];
+
+    const [countryArticles, cityArticles, { nameBySlug, orderKeys }] =
+      await Promise.all([
+        findServiceArticlesForLocale(
+          { templateType: "service-country", countrySlug },
+          locale,
+          "slug title excerpt serviceSlug countrySlug locale seo_metadata"
+        ),
+        Article.find({
+          status: "published",
+          templateType: "service-city",
+          countrySlug,
+          citySlug: { $ne: "" },
+          locale: localeInFilter(locale),
+        })
+          .select("slug serviceSlug citySlug city locale")
+          .lean() as Promise<ArticleDoc[]>,
+        getServiceMeta(),
+      ]);
+
+    const isArabic = locale.split("-")[0] === "ar";
+    const country = resolveCountry(countrySlug);
+
+    const cityByService = new Map<string, Map<string, LocationServiceCity>>();
+    const cityDocLocale = new Map<string, string | undefined>();
+    for (const doc of cityArticles) {
+      const serviceSlug = doc.serviceSlug || "";
+      const citySlug = normalizeCitySlug(countrySlug, doc.citySlug || "");
+      if (!serviceSlug || !citySlug) continue;
+      const key = `${serviceSlug}/${citySlug}`;
+      const prevLocale = cityDocLocale.get(key);
+      if (
+        prevLocale !== undefined &&
+        prefersLocale(prevLocale, locale) &&
+        !prefersLocale(doc.locale, locale)
+      ) {
+        continue;
+      }
+      cityDocLocale.set(key, doc.locale);
+      const cityObj = country
+        ? resolveCity(country, doc.citySlug || "") ?? resolveCity(country, citySlug)
+        : undefined;
+      const name = cityObj
+        ? isArabic && cityObj.nameAr
+          ? cityObj.nameAr
+          : cityObj.name
+        : doc.city || titleFromSlug(citySlug);
+      if (!cityByService.has(serviceSlug)) cityByService.set(serviceSlug, new Map());
+      cityByService
+        .get(serviceSlug)!
+        .set(citySlug, { name, href: `${localeBase(lang)}/${doc.slug}` });
+    }
+
+    const seen = new Set<string>();
+    const items: LocationServiceItem[] = [];
+    for (const article of countryArticles) {
+      const serviceSlug = article.serviceSlug || "";
+      if (!serviceSlug || seen.has(serviceSlug)) continue;
+      seen.add(serviceSlug);
+      const cities = Array.from((cityByService.get(serviceSlug) ?? new Map()).values());
+      items.push({
+        serviceSlug,
+        name: nameBySlug.get(serviceSlug) || titleFromSlug(serviceSlug),
+        href: `${localeBase(lang)}/${article.slug}`,
+        description:
+          article.excerpt || article.seo_metadata?.metaDescription || "",
+        cities: cities.length ? cities : undefined,
+      });
+    }
+    items.sort(
+      (a, b) =>
+        serviceOrderIndex(orderKeys, a.serviceSlug) -
+          serviceOrderIndex(orderKeys, b.serviceSlug) ||
+        a.name.localeCompare(b.name)
+    );
+    return items;
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Published city-level services for a location city page
+ * (/services/{service}/{country}/{city}). Returns [] when the DB is off or
+ * nothing matches.
+ */
+export async function getCityServicesForLocation(
+  countrySlugParam: string,
+  citySlugParam: string,
+  lang: string,
+  locale: string
+): Promise<LocationServiceItem[]> {
+  if (!isDatabaseEnabled()) return [];
+  try {
+    await connectDB();
+    const countrySlug = normalizeCountrySlug(countrySlugParam);
+    const citySlug =
+      normalizeCitySlug(countrySlug, citySlugParam) || citySlugParam;
+    if (!countrySlug || !citySlug) return [];
+
+    const [articles, { nameBySlug, orderKeys }] = await Promise.all([
+      findServiceArticlesForLocale(
+        {
+          templateType: "service-city",
+          countrySlug,
+          citySlug: {
+            $in: Array.from(new Set([citySlug, citySlugParam].filter(Boolean))),
+          },
+        },
+        locale,
+        "slug title excerpt serviceSlug countrySlug citySlug locale seo_metadata"
+      ),
+      getServiceMeta(),
+    ]);
+
+    const seen = new Set<string>();
+    const items: LocationServiceItem[] = [];
+    for (const article of articles) {
+      const serviceSlug = article.serviceSlug || "";
+      if (!serviceSlug || seen.has(serviceSlug)) continue;
+      seen.add(serviceSlug);
+      items.push({
+        serviceSlug,
+        name: nameBySlug.get(serviceSlug) || titleFromSlug(serviceSlug),
+        href: `${localeBase(lang)}/${article.slug}`,
+        description:
+          article.excerpt || article.seo_metadata?.metaDescription || "",
+      });
+    }
+    items.sort(
+      (a, b) =>
+        serviceOrderIndex(orderKeys, a.serviceSlug) -
+          serviceOrderIndex(orderKeys, b.serviceSlug) ||
+        a.name.localeCompare(b.name)
+    );
+    return items;
+  } catch {
+    return [];
+  }
 }

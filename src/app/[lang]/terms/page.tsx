@@ -5,7 +5,7 @@ import {
   hasLocale,
   defaultLocale,
   type Locale,
-  type Dictionary,
+  localeHome,
 } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
@@ -15,10 +15,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Terms of Use",
-    description:
-      "Read the Terms of Use governing your use of AB.Limo's premium luxury chauffeur service and booking platform.",
+    title: isAr ? dict.terms.title : "Terms of Use",
+    description: isAr
+      ? "اقرأ شروط الاستخدام التي تحكم استخدامك لخدمة AB.Limo الفاخرة ومنصة الحجز."
+      : "Read the Terms of Use governing your use of AB.Limo's premium luxury chauffeur service and booking platform.",
     path: "/terms",
     lang,
     keywords: "AB.Limo terms, terms of use, booking terms, service agreement, terms and conditions",
@@ -50,7 +54,7 @@ export default async function TermsPage({
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
-  const t = (dict as any).terms;
+  const t = dict.terms;
 
   return (
     <>
@@ -58,11 +62,11 @@ export default async function TermsPage({
       <section className="relative w-full h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-[#1c1d21]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30] via-[#1c1d21] to-[#292a30]" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide text-white">
             {t.title}
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {t.breadcrumb.home}
             </Link>
             <span>/</span>
@@ -101,7 +105,7 @@ export default async function TermsPage({
               Welcome to AB.Limo. These Terms of Use (&quot;Terms&quot;) govern
               your access to and use of the AB.Limo website, mobile application,
               and related services (collectively, the &quot;Services&quot;)
-              operated by AB.Limo GmbH (&quot;AB.Limo&quot;, &quot;we&quot;,
+              operated by AB.Limo (&quot;AB.Limo&quot;, &quot;we&quot;,
               &quot;us&quot;, or &quot;our&quot;). By accessing or using the
               Services, you agree to be bound by these Terms. If you do not
               agree, please do not use the Services.
@@ -196,8 +200,8 @@ export default async function TermsPage({
                 <p>
                   4.2 The arbitration shall be conducted by a neutral arbitrator
                   under the rules of the International Chamber of Commerce (ICC).
-                  The place of arbitration shall be Berlin, Germany. The language
-                  of arbitration shall be English.
+                  The place of arbitration shall be Riyadh, Kingdom of Saudi
+                  Arabia. The language of arbitration shall be English.
                 </p>
                 <p>
                   4.3 You agree that any arbitration shall be conducted on an
@@ -267,7 +271,7 @@ export default async function TermsPage({
                 </p>
                 <p>
                   6.3 The AB.Limo name, logo, and all related marks are
-                  trademarks of AB.Limo GmbH. You may not use these trademarks
+                  trademarks of AB.Limo. You may not use these trademarks
                   without our prior written permission.
                 </p>
               </div>
@@ -403,7 +407,7 @@ export default async function TermsPage({
               <div className="text-gray-300 leading-relaxed space-y-4">
                 <p>
                   12.1 These Terms shall be governed by and construed in
-                  accordance with the laws of the Federal Republic of Germany,
+                  accordance with the laws of the Kingdom of Saudi Arabia,
                   without regard to its conflict of law principles.
                 </p>
                 <p>
@@ -421,8 +425,8 @@ export default async function TermsPage({
                   13.1 Subject to the Arbitration Agreement in Section 4, any
                   legal action or proceeding arising under these Terms shall be
                   brought exclusively in the courts of competent jurisdiction in
-                  Berlin, Germany, and you consent to the personal jurisdiction
-                  of such courts.
+                  Riyadh, Kingdom of Saudi Arabia, and you consent to the
+                  personal jurisdiction of such courts.
                 </p>
                 <p>
                   13.2 Notwithstanding the foregoing, AB.Limo may seek interim
@@ -471,10 +475,10 @@ export default async function TermsPage({
                   14.6 <strong>Contact:</strong> If you have any questions about
                   these Terms, please contact us at{" "}
                   <a
-                    href="mailto:legal@ablimo.com"
+                    href="mailto:hello@ab.limo"
                     className="text-white underline hover:text-gray-300 transition-colors"
                   >
-                    legal@ablimo.com
+                    hello@ab.limo
                   </a>
                   .
                 </p>

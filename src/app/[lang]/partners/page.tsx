@@ -9,10 +9,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Strategic Partners & Alliances | AB.Limo Global Network",
-    description:
-      "AB.Limo partners with leading airlines, hotels, and travel companies worldwide. Explore our strategic partnerships delivering seamless premium mobility experiences.",
+    title: isAr ? dict.partners.meta.title : "Strategic Partners & Alliances | AB.Limo Global Network",
+    description: isAr
+      ? dict.partners.meta.description
+      : "AB.Limo partners with leading airlines, hotels, and travel companies worldwide. Explore our strategic partnerships delivering seamless premium mobility experiences.",
     path: "/partners",
     lang,
     keywords:

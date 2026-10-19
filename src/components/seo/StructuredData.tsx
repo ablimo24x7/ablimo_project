@@ -12,7 +12,7 @@ export function JsonLd({ data }: JsonLdProps) {
   );
 }
 
-const SITE_URL = "https://ab.limo";
+const SITE_URL = "https://www.ab.limo";
 
 export function OrganizationJsonLd() {
   const data = {
@@ -23,24 +23,30 @@ export function OrganizationJsonLd() {
     url: SITE_URL,
     logo: `${SITE_URL}/AB_LOGO-NEW.png`,
     description:
-      "AB.Limo provides premium chauffeur-driven transportation across the GCC and worldwide. Executive transfers, corporate mobility, event logistics, and airport services.",
-    foundingDate: "2014",
+      "AB.Limo is a premier provider of VIP and executive chauffeur services, corporate ground transportation, airport protocol meet & assist, and event logistics across the GCC — Saudi Arabia, UAE, Qatar, Oman, Bahrain, and Kuwait. Founded in 1999 and trusted by global corporations, event organizers, and government delegations, AB.Limo delivers 24/7 dispatch, GPS-tracked vehicles, and fully licensed operations.",
+    foundingDate: "1999",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+971-4-570-7700",
+      telephone: "+923135237377",
       contactType: "customer service",
       availableLanguage: ["English", "Arabic"],
     },
-    sameAs: [
-      "https://www.linkedin.com/company/ab-limo",
-      "https://www.facebook.com/ablimo",
-      "https://www.instagram.com/ablimo",
-      "https://x.com/ablimo",
+    sameAs: ["https://www.linkedin.com/company/ablimo24x7"],
+    areaServed: [
+      { "@type": "Country", name: "Saudi Arabia" },
+      { "@type": "Country", name: "United Arab Emirates" },
+      { "@type": "Country", name: "Qatar" },
+      { "@type": "Country", name: "Oman" },
+      { "@type": "Country", name: "Bahrain" },
+      { "@type": "Country", name: "Kuwait" },
     ],
     address: {
       "@type": "PostalAddress",
-      addressCountry: "AE",
-      addressLocality: "Dubai",
+      streetAddress:
+        "Malaz Area, Umar Ibn Abdulaziz Road, Building Number 59, Second Floor",
+      addressLocality: "Riyadh",
+      postalCode: "12626",
+      addressCountry: "SA",
     },
   };
 
@@ -54,17 +60,20 @@ export function LocalBusinessJsonLd() {
     name: "AB.Limo",
     image: `${SITE_URL}/AB_LOGO-NEW.png`,
     url: SITE_URL,
-    telephone: "+971-4-570-7700",
+    telephone: "+923135237377",
     priceRange: "$$$$",
     address: {
       "@type": "PostalAddress",
-      addressCountry: "AE",
-      addressLocality: "Dubai",
+      streetAddress:
+        "Malaz Area, Umar Ibn Abdulaziz Road, Building Number 59, Second Floor",
+      addressLocality: "Riyadh",
+      postalCode: "12626",
+      addressCountry: "SA",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 25.2048,
-      longitude: 55.2708,
+      latitude: 24.6646,
+      longitude: 46.7324,
     },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -72,12 +81,7 @@ export function LocalBusinessJsonLd() {
       opens: "00:00",
       closes: "23:59",
     },
-    sameAs: [
-      "https://www.linkedin.com/company/ab-limo",
-      "https://www.facebook.com/ablimo",
-      "https://www.instagram.com/ablimo",
-      "https://x.com/ablimo",
-    ],
+    sameAs: ["https://www.linkedin.com/company/ablimo24x7"],
   };
 
   return <JsonLd data={data} />;
@@ -277,17 +281,20 @@ export function AboutPageJsonLd() {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: "About AB.Limo",
-    description: "Learn about AB.Limo, a leading executive mobility provider operating across 6 GCC countries with 25+ cities, 10+ years of experience, and over 1 million rides delivered.",
+    description:
+      "Learn about AB.Limo, a premier executive mobility provider founded in 1999 in Saudi Arabia and operating across 6 GCC countries and 25+ cities with a 24/7 GPS-tracked fleet.",
     url: `${SITE_URL}/about`,
     mainEntity: {
       "@type": "Organization",
       name: "AB.Limo",
+      alternateName: "AB Limo",
       url: SITE_URL,
       logo: `${SITE_URL}/AB_LOGO-NEW.png`,
-      foundingDate: "2014",
+      foundingDate: "1999",
       numberOfEmployees: {
         "@type": "QuantitativeValue",
-        value: 500,
+        minValue: 51,
+        maxValue: 200,
       },
     },
   };
@@ -334,25 +341,25 @@ export function HowToBookJsonLd() {
         "@type": "HowToStep",
         name: "Choose Your Service",
         text: "Select from executive transfers, as-directed hourly service, or event logistics.",
-        url: "https://ab.limo/services",
+        url: "https://www.ab.limo/services",
       },
       {
         "@type": "HowToStep",
         name: "Select Vehicle & Route",
         text: "Pick your vehicle class and enter pickup/drop-off locations with date and time.",
-        url: "https://ab.limo",
+        url: "https://www.ab.limo",
       },
       {
         "@type": "HowToStep",
         name: "Confirm Booking",
         text: "Review your booking details and confirm. Receive instant confirmation with chauffeur details.",
-        url: "https://ab.limo",
+        url: "https://www.ab.limo",
       },
       {
         "@type": "HowToStep",
         name: "Enjoy Your Ride",
         text: "Your professional chauffeur arrives on time. Track your ride in real-time via the AB.Limo app.",
-        url: "https://ab.limo",
+        url: "https://www.ab.limo",
       },
     ],
   };

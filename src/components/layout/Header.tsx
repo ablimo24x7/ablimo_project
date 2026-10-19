@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import { getDictionary, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import { getNavServices, type NavServiceItem } from "@/lib/services";
 import DesktopNav from "./DesktopNav";
 import HeaderSocialLinks from "./HeaderSocialLinks";
@@ -21,7 +21,7 @@ export default async function Header({ lang }: HeaderProps) {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link
-              href={`/${lang}`}
+              href={`${localeHome(lang)}`}
               className="text-white text-2xl font-bold tracking-widest uppercase"
             >
               {/* {dict.header.logo} */}
@@ -43,14 +43,14 @@ export default async function Header({ lang }: HeaderProps) {
           <div className="hidden lg:flex items-center space-x-5">
             <HeaderSocialLinks />
             <Link
-              href={`/${lang}`}
-              className="bg-transparent border border-abGold text-abGold hover:bg-abGold hover:text-white px-5 py-2 rounded text-sm font-semibold transition-colors"
+              href={`${localeBase(lang)}/contact`}
+              className="bg-transparent border border-abBlue text-abBlue hover:bg-abBlue hover:border-abBlue hover:text-white px-5 py-2 rounded text-sm font-semibold transition-colors"
             >
               {dict.header.nav.bookNow}
             </Link>
             <Link
               href="mailto:hello@ab.limo"
-              className="text-xs font-medium text-gray-400 hover:text-white transition-colors"
+              className="text-xs font-medium text-gray-400 hover:text-abBlue transition-colors"
             >
               hello@ab.limo
             </Link>

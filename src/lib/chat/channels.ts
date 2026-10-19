@@ -178,7 +178,12 @@ export function buildChannelUrl(
   config: Record<string, string>
 ): string {
   let url = channel.urlPattern;
-  const phone = (config.phone || "").replace(/[^0-9]/g, "");
+  const digits = (config.phone || "").replace(/[^0-9]/g, "");
+  const needsInternationalPrefix =
+    (channel.urlPattern.startsWith("tel:") ||
+      channel.urlPattern.startsWith("sms:")) &&
+    digits.length > 0;
+  const phone = needsInternationalPrefix ? `+${digits}` : digits;
   const message = encodeURIComponent(config.presetMessage || "");
   const subject = encodeURIComponent("Contact from website");
 

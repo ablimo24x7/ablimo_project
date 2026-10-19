@@ -9,10 +9,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Press Releases & Media | AB.Limo News",
-    description:
-      "Latest news, press releases, and media coverage from AB.Limo. Stay updated on our corporate mobility services, fleet expansion, and industry partnerships.",
+    title: isAr ? dict.press.meta.title : "Press Releases & Media | AB.Limo News",
+    description: isAr
+      ? dict.press.meta.description
+      : "Latest news, press releases, and media coverage from AB.Limo. Stay updated on our corporate mobility services, fleet expansion, and industry partnerships.",
     path: "/press/releases",
     lang,
     keywords:

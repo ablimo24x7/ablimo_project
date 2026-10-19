@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { Service } from "@/lib/models/Service";
@@ -11,6 +12,8 @@ import {
  * existing services are skipped (matched by slug).
  */
 export async function POST() {
+  const auth = await authorizeApi("manage");
+  if (!auth.ok) return auth.response;
   if (!isDatabaseEnabled()) {
     return NextResponse.json(
       { error: "Database is disabled. Set USE_DATABASE=true to manage services." },

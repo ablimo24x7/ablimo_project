@@ -7,11 +7,11 @@
 
 @theme inline {
   --color-abBlack: #050505;
-  --color-abGold: #c5a059;
   --color-abGray: #f4f4f5;
   --color-abDarkGray: #111111;
   --color-abDarkerGray: #0a0a0a;
-  --color-abBlue: #26ade3;
+  --color-abBlue: #259FCF;
+  --color-abServiceBlue: #1A93C4;
   --color-abOrange: #f58731;
   --color-abGreen: #a8cf46;
   --color-abRed: #ee2e3a;
@@ -64,6 +64,50 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Pointer cursor on all interactive elements site-wide */
+a[href],
+a[onclick],
+a[role="link"],
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+[role="link"],
+[role="menuitem"],
+[role="menuitemcheckbox"],
+[role="menuitemradio"],
+[role="option"],
+[role="tab"],
+[role="checkbox"],
+[role="radio"],
+[role="switch"],
+[role="slider"],
+[role="combobox"],
+[role="treeitem"],
+[role="spinbutton"],
+[role="searchbox"],
+[role="textbox"][contenteditable],
+summary,
+select:not(:disabled),
+label,
+input[type="button"]:not(:disabled),
+input[type="submit"]:not(:disabled),
+input[type="reset"]:not(:disabled),
+input[type="checkbox"]:not(:disabled),
+input[type="radio"]:not(:disabled),
+input[type="file"]:not(:disabled),
+input[type="range"]:not(:disabled),
+input[type="color"]:not(:disabled),
+[data-slot="button"],
+[data-sonner-toast] {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"],
+select:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+
 /* Custom scrollbar for a premium feel */
 ::-webkit-scrollbar {
   width: 8px;
@@ -72,8 +116,17 @@ body {
   background: #050505;
 }
 ::-webkit-scrollbar-thumb {
-  background: #26ade3;
+  background: #259FCF;
   border-radius: 4px;
+}
+
+/* Hide scrollbar on horizontal carousels */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* Mega menu styles */

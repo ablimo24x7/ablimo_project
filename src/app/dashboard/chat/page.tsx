@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
+import { Plus, Trash2 } from "lucide-react";
 import { CHANNELS, type ChannelDefinition } from "@/lib/chat/channels";
 
 interface ChannelConfig {
@@ -55,6 +56,10 @@ interface WidgetConfig {
   whatsappPopup: boolean;
   whatsappPopupHeader: string;
   whatsappPopupMsg: string;
+  whatsappPopupMsgCountry: string;
+  whatsappPopupMsgCity: string;
+  cityWhatsappNumber: string;
+  countryWhatsappNumbers: { countrySlug: string; number: string }[];
   showAgents: boolean;
 }
 
@@ -86,6 +91,10 @@ const DEFAULT_WIDGET: Omit<WidgetConfig, "_id"> = {
   whatsappPopup: false,
   whatsappPopupHeader: "Chat with us on WhatsApp",
   whatsappPopupMsg: "Hi! I have a question about your services.",
+  whatsappPopupMsgCountry: "Hi! I have a question about your services in {country}.",
+  whatsappPopupMsgCity: "Hi! I have a question about your services in {city}.",
+  cityWhatsappNumber: "",
+  countryWhatsappNumbers: [],
   showAgents: false,
 };
 
@@ -94,13 +103,21 @@ export default function ChatWidgetPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [activeChannel, setActiveChannel] = useState<string | null>(null);
+  const [countries, setCountries] = useState<{ slug: string; name: string }[]>([]);
+
+  useEffect(() => {
+    fetch("/api/locations")
+      .then((r) => r.json())
+      .then((data) => setCountries(data?.countries ?? []))
+      .catch(() => setCountries([]));
+  }, []);
 
   useEffect(() => {
     fetch("/api/chat/config")
       .then((r) => r.json())
       .then((data) => {
         if (data && data._id) {
-          setConfig(data);
+          setConfig({ ...DEFAULT_WIDGET, ...data } as WidgetConfig);
         } else {
           setConfig({ ...DEFAULT_WIDGET, _id: "" } as WidgetConfig);
         }
@@ -144,6 +161,30 @@ export default function ChatWidgetPage() {
   const updateConfig = (field: string, value: any) => {
     if (!config) return;
     setConfig({ ...config, [field]: value });
+  };
+
+  const countryNumbers = config?.countryWhatsappNumbers ?? [];
+
+  const updateCountryNumber = (index: number, field: string, value: string) => {
+    if (!config) return;
+    const next = countryNumbers.map((c, i) => (i === index ? { ...c, [field]: value } : c));
+    updateConfig("countryWhatsappNumbers", next);
+  };
+
+  const addCountryNumber = () => {
+    if (!config) return;
+    updateConfig("countryWhatsappNumbers", [
+      ...countryNumbers,
+      { countrySlug: "", number: "" },
+    ]);
+  };
+
+  const removeCountryNumber = (index: number) => {
+    if (!config) return;
+    updateConfig(
+      "countryWhatsappNumbers",
+      countryNumbers.filter((_, i) => i !== index)
+    );
   };
 
   if (isLoading) {
@@ -382,11 +423,119 @@ export default function ChatWidgetPage() {
                       placeholder="Hi! I have a question about your {service} service."
                     />
                     <p className="text-xs text-muted-foreground">
-                      Use <code className="bg-muted px-1 rounded">{'{service}'}</code> to auto-insert the current service name. Leave empty for default message.
+                      Used on service pages and when no page context applies. Use <code className="bg-muted px-1 rounded">{'{service}'}</code> to auto-insert the current service name. On country/city service pages the location is added automatically (e.g. &quot;...service in Dammam.&quot;) — use <code className="bg-muted px-1 rounded">{'{country}'}</code> or <code className="bg-muted px-1 rounded">{'{city}'}</code> in the message to place it yourself instead. Leave empty for default message.
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Country Pages Message</Label>
+                    <Textarea
+                      value={config.whatsappPopupMsgCountry}
+                      onChange={(e) =>
+                        updateConfig("whatsappPopupMsgCountry", e.target.value)
+                      }
+                      rows={3}
+                      placeholder="Hi! I have a question about your services in {country}."
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Used on country location pages (e.g. <code className="bg-muted px-1 rounded">/locations/uae</code>). Use <code className="bg-muted px-1 rounded">{'{country}'}</code> to auto-insert the country name.
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label>City Pages Message</Label>
+                    <Textarea
+                      value={config.whatsappPopupMsgCity}
+                      onChange={(e) =>
+                        updateConfig("whatsappPopupMsgCity", e.target.value)
+                      }
+                      rows={3}
+                      placeholder="Hi! I have a question about your services in {city}."
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Used on city location pages (e.g. <code className="bg-muted px-1 rounded">/locations/uae/abu-dhabi</code>). Use <code className="bg-muted px-1 rounded">{'{city}'}</code> to auto-insert the city name.
                     </p>
                   </div>
                 </>
               )}
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Country WhatsApp Numbers</CardTitle>
+              <CardDescription>
+                Route WhatsApp messages to a country-specific number on that
+                country&apos;s service pages (including its city service pages)
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {countryNumbers.length === 0 && (
+                <p className="text-xs text-muted-foreground">
+                  No country numbers yet. The WhatsApp channel phone number is used
+                  as the fallback for every country.
+                </p>
+              )}
+              {countryNumbers.map((entry, index) => (
+                <div key={index} className="grid grid-cols-[1fr_1fr_auto] items-center gap-2">
+                  <Select
+                    value={entry.countrySlug}
+                    onValueChange={(v) => v && updateCountryNumber(index, "countrySlug", v)}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a country" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {countries.map((c) => (
+                        <SelectItem key={c.slug} value={c.slug}>
+                          {c.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <Input
+                    value={entry.number}
+                    onChange={(e) => updateCountryNumber(index, "number", e.target.value)}
+                    placeholder="+1234567890"
+                  />
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => removeCountryNumber(index)}
+                    aria-label="Remove country number"
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                </div>
+              ))}
+              <Button type="button" variant="outline" size="sm" onClick={addCountryNumber}>
+                <Plus className="h-4 w-4 mr-1" /> Add Country Number
+              </Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>City Services Template</CardTitle>
+              <CardDescription>
+                Route the floating widget&apos;s WhatsApp messages to a dedicated
+                number on city services template pages. Individual city service
+                pages can override this from the post editor.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <Label>City WhatsApp Number</Label>
+                <Input
+                  value={config.cityWhatsappNumber || ""}
+                  onChange={(e) =>
+                    updateConfig("cityWhatsappNumber", e.target.value)
+                  }
+                  placeholder="+1234567890"
+                />
+                <p className="text-xs text-muted-foreground">
+                  When set, pages using the city services template will send
+                  WhatsApp messages to this number instead of the WhatsApp
+                  channel number. Leave empty to use the default channel number.
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>

@@ -131,7 +131,7 @@ function Card({ card }: { card: CardItemType }) {
             <Link
               key={i}
               href={cta.url || "#"}
-              className="inline-flex items-center gap-2 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-abBlue hover:text-abBlue/80 font-medium transition-colors text-sm"
             >
               {cta.label}
               <ArrowRight className="w-4 h-4" />

@@ -1,10 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { trackContactClick } from "@/lib/analytics";
+import type { PageContext } from "./ChatWidget";
 
 interface WidgetConfig {
   whatsappPopupHeader: string;
-  whatsappPopupMsg: string;
+  whatsappPopupMsg?: string;
+  whatsappPopupMsgCountry?: string;
+  whatsappPopupMsgCity?: string;
   primaryColor: string;
   channels: Array<{
     id: string;
@@ -18,20 +22,72 @@ interface WidgetConfig {
 
 interface WhatsAppPopupProps {
   config: WidgetConfig;
-  serviceName: string | null;
+  pageContext: PageContext | null;
   onClose: () => void;
 }
 
-export function WhatsAppPopup({ config, serviceName, onClose }: WhatsAppPopupProps) {
-  const defaultMsg = serviceName
-    ? `Hi! I have a question about your ${serviceName} service.`
-    : "Hi! I have a question about your services.";
-  const baseMessage = config.whatsappPopupMsg
-    ? (serviceName
-        ? config.whatsappPopupMsg.replace("{service}", serviceName)
-        : config.whatsappPopupMsg)
-    : defaultMsg;
-  const [message, setMessage] = useState(baseMessage);
+function insertLocation(message: string, location: string): string {
+  const suffix = ` in ${location}`;
+  if (/[.!?]\s*$/.test(message)) {
+    return message.replace(/([.!?])\s*$/, `${suffix}$1`);
+  }
+  return `${message}${suffix}`;
+}
+
+export function buildWhatsAppMessage(
+  config: Pick<
+    WidgetConfig,
+    "whatsappPopupMsg" | "whatsappPopupMsgCountry" | "whatsappPopupMsgCity"
+  >,
+  pageContext: PageContext | null
+): string {
+  if (pageContext?.type === "service") {
+    const template = config.whatsappPopupMsg?.trim();
+    const location = pageContext.cityName || pageContext.countryName;
+    if (template) {
+      const hasLocationPlaceholder =
+        template.includes("{country}") || template.includes("{city}");
+      let message = template
+        .split("{service}")
+        .join(pageContext.name)
+        .split("{country}")
+        .join(pageContext.countryName ?? "")
+        .split("{city}")
+        .join(pageContext.cityName ?? "");
+      if (location && !hasLocationPlaceholder) {
+        message = insertLocation(message, location);
+      }
+      return message;
+    }
+    const message = `Hi! I have a question about your ${pageContext.name} service.`;
+    return location ? insertLocation(message, location) : message;
+  }
+
+  if (pageContext?.type === "country") {
+    const template = config.whatsappPopupMsgCountry?.trim();
+    return template
+      ? template.split("{country}").join(pageContext.name)
+      : `Hi! I have a question about your services in ${pageContext.name}.`;
+  }
+
+  if (pageContext?.type === "city") {
+    const template = config.whatsappPopupMsgCity?.trim();
+    return template
+      ? template.split("{city}").join(pageContext.name)
+      : `Hi! I have a question about your services in ${pageContext.name}.`;
+  }
+
+  return config.whatsappPopupMsg?.trim() || "Hi! I have a question about your services.";
+}
+
+export function WhatsAppPopup({
+  config,
+  pageContext,
+  onClose,
+}: WhatsAppPopupProps) {
+  const [message, setMessage] = useState(() =>
+    buildWhatsAppMessage(config, pageContext)
+  );
   const whatsappChannel = config.channels.find((c) => c.id === "whatsapp");
 
   const phone = whatsappChannel?.phone?.replace(/[^0-9]/g, "") || "";
@@ -39,6 +95,16 @@ export function WhatsAppPopup({ config, serviceName, onClose }: WhatsAppPopupPro
   const sendMessage = () => {
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank", "noopener,noreferrer");
+    trackContactClick({
+      method: "whatsapp",
+      location: "whatsapp_popup",
+      label: pageContext
+        ? pageContext.type === "service"
+          ? pageContext.name
+          : `${pageContext.type}:${pageContext.name}`
+        : "general_inquiry",
+      whatsapp_number: phone,
+    });
     onClose();
   };
 
@@ -75,9 +141,9 @@ export function WhatsAppPopup({ config, serviceName, onClose }: WhatsAppPopupPro
           <div className="bg-green-50 border border-green-200 rounded-xl p-3">
             <p className="text-sm text-green-800">
               Hi there! 👋 How can we help you?
-              {serviceName && (
+              {pageContext && (
                 <span className="block mt-1 font-medium">
-                  You&apos;re inquiring about: {serviceName}
+                  You&apos;re inquiring about: {pageContext.name}
                 </span>
               )}
             </p>

@@ -5,7 +5,10 @@
  * a full 16-section corporate city page for each city+service combo.
  * English only — no Arabic auto-translation.
  *
- * Usage: npx tsx scripts/seed-tier1-city-services.ts [--dry-run] [--service=chauffeur-vip] [--city=riyadh]
+ * Usage: npx tsx scripts/seed-tier1-city-services.ts [--dry-run] [--convert] [--service=chauffeur-vip] [--city=riyadh]
+ *
+ * --convert: upgrade existing WYSIWYG (old template) city articles to the
+ *            new City PageSection template instead of skipping them.
  */
 
 import mongoose from "mongoose";
@@ -15,6 +18,7 @@ import path from "path";
 // ── Config ───────────────────────────────────────────────────────
 const MONGO_URI = "mongodb+srv://mohsinreddragon260_db_user:vrlzo58zqDOVVneU@cluster0.gpfinl2.mongodb.net/ablimo-db";
 const DRY_RUN = process.argv.includes("--dry-run");
+const CONVERT = process.argv.includes("--convert");
 const FILTER_SERVICE = process.argv.find(a => a.startsWith("--service="))?.split("=")[1];
 const FILTER_CITY = process.argv.find(a => a.startsWith("--city="))?.split("=")[1];
 
@@ -576,7 +580,19 @@ async function main() {
 
   // 3. Connect to MongoDB
   console.log("Connecting to MongoDB...");
-  await mongoose.connect(MONGO_URI);
+  try {
+    await mongoose.connect(MONGO_URI);
+  } catch (err: any) {
+    if (err?.code === "ECONNREFUSED" || /querySrv/i.test(err?.message || "")) {
+      // Local DNS can't answer SRV queries — retry via public DNS
+      console.log("SRV lookup failed, retrying with public DNS...");
+      const dns = await import("dns");
+      dns.setServers(["8.8.8.8", "1.1.1.1"]);
+      await mongoose.connect(MONGO_URI);
+    } else {
+      throw err;
+    }
+  }
   console.log("Connected.\n");
 
   // 4. Get existing slugs to skip duplicates
@@ -590,13 +606,14 @@ async function main() {
     locale: String,
   }, { timestamps: true }));
 
-  const existingSlugs = new Set(
-    (await Article.find({ templateType: "service-city" }).select("slug").lean()).map((a: any) => a.slug)
+  const existingBySlug = new Map(
+    (await Article.find({ templateType: "service-city" }).select("slug contentMode").lean()).map((a: any) => [a.slug, a])
   );
-  console.log(`Found ${existingSlugs.size} existing city service articles.\n`);
+  console.log(`Found ${existingBySlug.size} existing city service articles.\n`);
 
   // 5. Generate articles
   let created = 0;
+  let converted = 0;
   let skipped = 0;
   let errors = 0;
 
@@ -611,14 +628,37 @@ async function main() {
     }
 
     const slug = `services/${d.serviceSlug}/${d.countrySlug}/${d.citySlug}`;
-    if (existingSlugs.has(slug)) {
-      console.log(`  SKIP: /${slug} (already exists)`);
+    const existing = existingBySlug.get(slug);
+    const isNewTemplate = existing && existing.contentMode === "page-sections";
+    if (existing && (isNewTemplate || !CONVERT)) {
+      console.log(`  SKIP: /${slug} (already exists${isNewTemplate ? ", new template" : " — pass --convert to upgrade"})`);
       skipped++;
       continue;
     }
 
     try {
       const sections = generateSections(d, cityMeta, svcMeta, d.keywords);
+
+      if (existing) {
+        // Upgrade old WYSIWYG article to the new City template in place
+        await Article.updateOne(
+          { _id: existing._id },
+          {
+            $set: {
+              contentMode: "page-sections",
+              sections,
+              bodyContent: "",
+              faqs: svcMeta.faq.map(f => ({
+                q: f.q.replace(/city|RUH|Dubai|Doha/gi, cityMeta.name),
+                a: f.a.replace(/city|RUH|Dubai|Doha/gi, cityMeta.name),
+              })),
+            },
+          }
+        );
+        converted++;
+        console.log(`  CONVERTED: /${slug} (${d.keywords.length} keywords, ${sections.length} sections)`);
+        continue;
+      }
 
       const article = {
         slug,
@@ -668,8 +708,9 @@ async function main() {
   console.log("\n═══════════════════════════════════════════════════════════");
   console.log("  Generation Complete");
   console.log("═══════════════════════════════════════════════════════════");
-  console.log(`  Created: ${created}`);
-  console.log(`  Skipped: ${skipped}`);
+  console.log(`  Created:  ${created}`);
+  console.log(`  Converted: ${converted}`);
+  console.log(`  Skipped:  ${skipped}`);
   console.log(`  Errors:  ${errors}`);
   console.log(`  Total:   ${data.length}`);
   console.log("═══════════════════════════════════════════════════════════\n");

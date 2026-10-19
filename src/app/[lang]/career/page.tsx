@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import { getDictionary, hasLocale, defaultLocale, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -10,10 +10,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Careers at AB.Limo - Join Our Global Team",
-    description:
-      "Explore exciting career opportunities at AB.Limo. Join a growing international team and help shape the future of luxury ground transportation.",
+    title: isAr ? dict.career.meta.title : "Careers at AB.Limo - Join Our Global Team",
+    description: isAr
+      ? dict.career.meta.description
+      : "Explore exciting career opportunities at AB.Limo. Join a growing international team and help shape the future of luxury ground transportation.",
     path: "/career",
     lang,
     keywords: "AB.Limo careers, chauffeur jobs, luxury transport jobs, AB.Limo hiring, driver careers, corporate mobility careers",
@@ -101,11 +105,11 @@ export default async function CareerPage({
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/70 via-[#292a30]/50 to-[#292a30]" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide max-w-4xl mx-auto leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide max-w-4xl mx-auto leading-tight text-white">
             {dict.career.hero.heading}
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {dict.career.breadcrumb.home}
             </Link>
             <span>/</span>
@@ -305,7 +309,7 @@ export default async function CareerPage({
             {dict.career.chauffeurCta.desc}
           </p>
           <Link
-            href={`/${lang}/partners`}
+            href={`${localeBase(lang)}/partners`}
             className="inline-block bg-white text-[#292a30] px-10 py-4 text-sm font-semibold tracking-wider uppercase hover:bg-gray-200 transition-all duration-300 rounded-full"
           >
             {dict.career.chauffeurCta.button}

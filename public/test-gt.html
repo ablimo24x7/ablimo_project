@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head><meta charset="utf-8"><title>gt test</title>
+<script>document.cookie="googtrans=/en/ar; path=/";</script></head>
+<body>
+<div id="google_translate_element" style="position:absolute;left:-9999px"></div>
+<img id="img-notranslate" class="notranslate" alt="مرسيدس فئة V" src="/AB_LOGO-NEW.png">
+<img id="img-plain" alt="مرسيدس فئة S" src="/AB_LOGO-NEW.png">
+<a id="a-notranslate" class="notranslate" title="كاديلاك اسكاليد" href="#">link</a>
+<a id="a-plain" title="مرسيدس سبرينتر" href="#">link</a>
+<span id="txt-notranslate" class="notranslate">علم النقل.</span>
+<span id="txt-plain">علم النقل.</span>
+<p id="en-plain">The Science of Transportation and premium chauffeur services.</p>
+<p id="en-notranslate" class="notranslate">The Science of Transportation and premium chauffeur services.</p>
+<p id="mixed">مرسيدس فئة V - The Science of Transportation.</p>
+<img id="img-translateno" translate="no" alt="كاديلاك اسكاليد" src="/AB_LOGO-NEW.png">
+<span id="txt-translateno" translate="no">العلامات التجارية للفعاليات.</span>
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ar',layout:'SIMPLE'},'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+var tries=0;
+var iv=setInterval(function(){
+  var c=document.querySelector('.goog-te-combo');
+  if(c){c.value='ar';c.dispatchEvent(new Event('change',{bubbles:true}));clearInterval(iv);}
+  if(++tries>60)clearInterval(iv);
+},250);
+</script>
+</body>
+</html>

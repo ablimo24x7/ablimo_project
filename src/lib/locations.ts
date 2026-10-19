@@ -1,3 +1,5 @@
+import { localeBase } from "@/app/[lang]/dictionaries";
+
 export interface Airport {
   slug: string;
   name: string;
@@ -47,120 +49,136 @@ export interface Country {
   _id?: string;
 }
 
-const airport = (slug: string, name: string, iata: string): Airport => ({ slug, name, iata });
-const city = (slug: string, name: string, airports: Airport[] = []): City => ({ slug, name, airports });
+const airport = (slug: string, name: string, iata: string, nameAr = ""): Airport => ({
+  slug,
+  name,
+  iata,
+  nameAr,
+});
+const city = (slug: string, name: string, airports: Airport[] = [], nameAr = ""): City => ({
+  slug,
+  name,
+  airports,
+  nameAr,
+});
 
 export const COUNTRIES: Country[] = [
   {
     code: "ae",
     slug: "uae",
     name: "UAE",
+    nameAr: "الإمارات العربية المتحدة",
     cities: [
       city("dubai", "Dubai", [
-        airport("dubai-international-airport", "Dubai International Airport", "DXB"),
-        airport("al-maktoum-international-airport", "Al Maktoum International Airport", "DWC"),
-      ]),
+        airport("dubai-international-airport", "Dubai International Airport", "DXB", "مطار دبي الدولي"),
+        airport("al-maktoum-international-airport", "Al Maktoum International Airport", "DWC", "مطار آل مكتوم الدولي"),
+      ], "دبي"),
       city("abu-dhabi", "Abu Dhabi", [
-        airport("zayed-international-airport", "Zayed International Airport", "AUH"),
-      ]),
+        airport("zayed-international-airport", "Zayed International Airport", "AUH", "مطار زايد الدولي"),
+      ], "أبوظبي"),
       city("sharjah", "Sharjah", [
-        airport("sharjah-international-airport", "Sharjah International Airport", "SHJ"),
-      ]),
-      city("ajman", "Ajman"),
+        airport("sharjah-international-airport", "Sharjah International Airport", "SHJ", "مطار الشارقة الدولي"),
+      ], "الشارقة"),
+      city("ajman", "Ajman", [], "عجمان"),
       city("ras-al-khaimah", "Ras Al Khaimah", [
-        airport("ras-al-khaimah-international-airport", "Ras Al Khaimah International Airport", "RKT"),
-      ]),
-      city("al-ain", "Al Ain"),
-      city("fujairah", "Fujairah"),
-      city("umm-al-quwain", "Umm Al Quwain"),
+        airport("ras-al-khaimah-international-airport", "Ras Al Khaimah International Airport", "RKT", "مطار رأس الخيمة الدولي"),
+      ], "رأس الخيمة"),
+      city("al-ain", "Al Ain", [], "العين"),
+      city("fujairah", "Fujairah", [], "الفجيرة"),
+      city("umm-al-quwain", "Umm Al Quwain", [], "أم القيوين"),
     ],
   },
   {
     code: "sa",
     slug: "saudi-arabia",
     name: "Saudi Arabia",
+    nameAr: "المملكة العربية السعودية",
     cities: [
       city("riyadh", "Riyadh", [
-        airport("king-khalid-international-airport", "King Khalid International Airport", "RUH"),
-      ]),
+        airport("king-khalid-international-airport", "King Khalid International Airport", "RUH", "مطار الملك خالد الدولي"),
+      ], "الرياض"),
       city("jeddah", "Jeddah", [
-        airport("king-abdulaziz-international-airport", "King Abdulaziz International Airport", "JED"),
-      ]),
-      city("mecca", "Mecca"),
+        airport("king-abdulaziz-international-airport", "King Abdulaziz International Airport", "JED", "مطار الملك عبدالعزيز الدولي"),
+      ], "جدة"),
+      city("mecca", "Mecca", [], "مكة المكرمة"),
       city("medina", "Medina", [
-        airport("prince-mohammad-bin-abdulaziz-international-airport", "Prince Mohammad bin Abdulaziz International Airport", "MED"),
-      ]),
+        airport("prince-mohammad-bin-abdulaziz-international-airport", "Prince Mohammad bin Abdulaziz International Airport", "MED", "مطار الأمير محمد بن عبدالعزيز الدولي"),
+      ], "المدينة المنورة"),
       city("dammam", "Dammam", [
-        airport("king-fahd-international-airport", "King Fahd International Airport", "DMM"),
-      ]),
-      city("tabuk", "Tabuk"),
-      city("al-ula", "Al Ula"),
-      city("al-khobar", "Al Khobar"),
-      city("al-qasim", "Al Qasim"),
-      city("abha", "Abha"),
-      city("jizan", "Jizan"),
-      city("neom", "NEOM"),
-      city("hail", "Hail"),
-      city("jubail", "Jubail"),
-      city("najran", "Najran"),
-      city("taif", "Taif"),
-      city("yanbu", "Yanbu"),
+        airport("king-fahd-international-airport", "King Fahd International Airport", "DMM", "مطار الملك فهد الدولي"),
+      ], "الدمام"),
+      city("tabuk", "Tabuk", [], "تبوك"),
+      city("al-ula", "Al Ula", [], "العلا"),
+      city("al-khobar", "Al Khobar", [], "الخبر"),
+      city("al-qasim", "Al Qasim", [], "القصيم"),
+      city("abha", "Abha", [], "أبها"),
+      city("jizan", "Jizan", [], "جازان"),
+      city("neom", "NEOM", [], "نيوم"),
+      city("hail", "Hail", [], "حائل"),
+      city("jubail", "Jubail", [], "الجبيل"),
+      city("najran", "Najran", [], "نجران"),
+      city("taif", "Taif", [], "الطائف"),
+      city("yanbu", "Yanbu", [], "ينبع"),
     ],
   },
   {
     code: "qa",
     slug: "qatar",
     name: "Qatar",
+    nameAr: "قطر",
     cities: [
       city("doha", "Doha", [
-        airport("hamad-international-airport", "Hamad International Airport", "DOH"),
-      ]),
-      city("al-khor", "Al Khor"),
-      city("lusail", "Lusail"),
-      city("al-wakrah", "Al Wakrah"),
+        airport("hamad-international-airport", "Hamad International Airport", "DOH", "مطار حمد الدولي"),
+      ], "الدوحة"),
+      city("al-khor", "Al Khor", [], "الخور"),
+      city("lusail", "Lusail", [], "لوسيل"),
+      city("al-wakrah", "Al Wakrah", [], "الوكرة"),
     ],
   },
   {
     code: "bh",
     slug: "bahrain",
     name: "Bahrain",
+    nameAr: "البحرين",
     cities: [
       city("manama", "Manama", [
-        airport("bahrain-international-airport", "Bahrain International Airport", "BAH"),
-      ]),
-      city("riffa", "Riffa"),
-      city("muharraq", "Muharraq"),
+        airport("bahrain-international-airport", "Bahrain International Airport", "BAH", "مطار البحرين الدولي"),
+      ], "المنامة"),
+      city("riffa", "Riffa", [], "الرفاع"),
+      city("muharraq", "Muharraq", [], "المحرق"),
     ],
   },
   {
     code: "kw",
     slug: "kuwait",
     name: "Kuwait",
+    nameAr: "الكويت",
     cities: [
       city("kuwait-city", "Kuwait City", [
-        airport("kuwait-international-airport", "Kuwait International Airport", "KWI"),
-      ]),
-      city("hawalli", "Hawalli"),
-      city("farwaniya", "Farwaniya"),
-      city("al-ahmadi", "Al Ahmadi"),
-      city("salmiya", "Salmiya"),
+        airport("kuwait-international-airport", "Kuwait International Airport", "KWI", "مطار الكويت الدولي"),
+      ], "مدينة الكويت"),
+      city("hawalli", "Hawalli", [], "حولي"),
+      city("farwaniya", "Farwaniya", [], "الفروانية"),
+      city("al-ahmadi", "Al Ahmadi", [], "الأحمدي"),
+      city("salmiya", "Salmiya", [], "السالمية"),
     ],
   },
   {
     code: "om",
     slug: "oman",
     name: "Oman",
+    nameAr: "عمان",
     cities: [
       city("muscat", "Muscat", [
-        airport("muscat-international-airport", "Muscat International Airport", "MCT"),
-      ]),
+        airport("muscat-international-airport", "Muscat International Airport", "MCT", "مطار مسقط الدولي"),
+      ], "مسقط"),
       city("salalah", "Salalah", [
-        airport("salalah-airport", "Salalah Airport", "SLL"),
-      ]),
+        airport("salalah-airport", "Salalah Airport", "SLL", "مطار صلالة"),
+      ], "صلالة"),
       city("sohar", "Sohar", [
-        airport("sohar-international-airport", "Sohar International Airport", "SOH"),
-      ]),
-      city("nizwa", "Nizwa"),
+        airport("sohar-international-airport", "Sohar International Airport", "SOH", "مطار صحار الدولي"),
+      ], "صحار"),
+      city("nizwa", "Nizwa", [], "نزوى"),
     ],
   },
 ];
@@ -214,28 +232,65 @@ export function findCityByName(name: string): { country: Country; city: City } |
 export interface CityRoute {
   fromSlug: string;
   toSlug: string;
+  fromName?: string;
+  toName?: string;
   distance: string;
   duration: string;
 }
 
 export const CITY_ROUTES: CityRoute[] = [
   { fromSlug: "riyadh", toSlug: "dammam", distance: "400 km", duration: "4h 00m" },
+  { fromSlug: "dammam", toSlug: "riyadh", distance: "400 km", duration: "4h 00m" },
   { fromSlug: "riyadh", toSlug: "jeddah", distance: "950 km", duration: "9h 00m" },
-  { fromSlug: "jeddah", toSlug: "mecca", distance: "80 km", duration: "1h 00m" },
   { fromSlug: "jeddah", toSlug: "riyadh", distance: "950 km", duration: "9h 00m" },
+  { fromSlug: "jeddah", toSlug: "mecca", distance: "80 km", duration: "1h 00m" },
+  { fromSlug: "mecca", toSlug: "jeddah", distance: "80 km", duration: "1h 00m" },
   { fromSlug: "mecca", toSlug: "medina", distance: "420 km", duration: "4h 15m" },
+  { fromSlug: "medina", toSlug: "mecca", distance: "420 km", duration: "4h 15m" },
   { fromSlug: "abu-dhabi", toSlug: "dubai", distance: "140 km", duration: "1h 30m" },
   { fromSlug: "dubai", toSlug: "abu-dhabi", distance: "140 km", duration: "1h 30m" },
   { fromSlug: "dubai", toSlug: "sharjah", distance: "30 km", duration: "30m" },
+  { fromSlug: "sharjah", toSlug: "dubai", distance: "30 km", duration: "30m" },
   { fromSlug: "dubai", toSlug: "ras-al-khaimah", distance: "100 km", duration: "1h 00m" },
+  { fromSlug: "ras-al-khaimah", toSlug: "dubai", distance: "100 km", duration: "1h 00m" },
   { fromSlug: "dubai", toSlug: "ajman", distance: "35 km", duration: "30m" },
+  { fromSlug: "ajman", toSlug: "dubai", distance: "35 km", duration: "30m" },
+  { fromSlug: "dubai", toSlug: "al-ain", distance: "130 km", duration: "1h 30m" },
+  { fromSlug: "al-ain", toSlug: "dubai", distance: "130 km", duration: "1h 30m" },
+  { fromSlug: "abu-dhabi", toSlug: "al-ain", distance: "150 km", duration: "1h 30m" },
+  { fromSlug: "al-ain", toSlug: "abu-dhabi", distance: "150 km", duration: "1h 30m" },
+  { fromSlug: "abu-dhabi", toSlug: "sharjah", distance: "125 km", duration: "1h 30m" },
+  { fromSlug: "sharjah", toSlug: "abu-dhabi", distance: "125 km", duration: "1h 30m" },
+  { fromSlug: "abu-dhabi", toSlug: "ajman", distance: "150 km", duration: "1h 45m" },
+  { fromSlug: "ajman", toSlug: "abu-dhabi", distance: "150 km", duration: "1h 45m" },
+  { fromSlug: "abu-dhabi", toSlug: "ras-al-khaimah", distance: "250 km", duration: "2h 30m" },
+  { fromSlug: "ras-al-khaimah", toSlug: "abu-dhabi", distance: "250 km", duration: "2h 30m" },
+  { fromSlug: "sharjah", toSlug: "ajman", distance: "15 km", duration: "20m" },
+  { fromSlug: "ajman", toSlug: "sharjah", distance: "15 km", duration: "20m" },
+  { fromSlug: "sharjah", toSlug: "ras-al-khaimah", distance: "80 km", duration: "1h 00m" },
+  { fromSlug: "ras-al-khaimah", toSlug: "sharjah", distance: "80 km", duration: "1h 00m" },
+  { fromSlug: "sharjah", toSlug: "al-ain", distance: "140 km", duration: "1h 45m" },
+  { fromSlug: "al-ain", toSlug: "sharjah", distance: "140 km", duration: "1h 45m" },
+  { fromSlug: "ajman", toSlug: "ras-al-khaimah", distance: "90 km", duration: "1h 10m" },
+  { fromSlug: "ras-al-khaimah", toSlug: "ajman", distance: "90 km", duration: "1h 10m" },
+  { fromSlug: "ajman", toSlug: "al-ain", distance: "155 km", duration: "1h 45m" },
+  { fromSlug: "al-ain", toSlug: "ajman", distance: "155 km", duration: "1h 45m" },
+  { fromSlug: "ras-al-khaimah", toSlug: "al-ain", distance: "160 km", duration: "1h 45m" },
+  { fromSlug: "al-ain", toSlug: "ras-al-khaimah", distance: "160 km", duration: "1h 45m" },
   { fromSlug: "muscat", toSlug: "abu-dhabi", distance: "350 km", duration: "3h 30m" },
+  { fromSlug: "abu-dhabi", toSlug: "muscat", distance: "350 km", duration: "3h 30m" },
   { fromSlug: "muscat", toSlug: "sohar", distance: "230 km", duration: "2h 30m" },
+  { fromSlug: "sohar", toSlug: "muscat", distance: "230 km", duration: "2h 30m" },
   { fromSlug: "doha", toSlug: "al-khor", distance: "50 km", duration: "45m" },
+  { fromSlug: "al-khor", toSlug: "doha", distance: "50 km", duration: "45m" },
   { fromSlug: "doha", toSlug: "lusail", distance: "25 km", duration: "20m" },
-  { fromSlug: "kuwait", toSlug: "al-ahmadi", distance: "40 km", duration: "30m" },
-  { fromSlug: "kuwait", toSlug: "doha", distance: "550 km", duration: "5h 30m" },
+  { fromSlug: "lusail", toSlug: "doha", distance: "25 km", duration: "20m" },
+  { fromSlug: "kuwait-city", toSlug: "al-ahmadi", distance: "40 km", duration: "30m" },
+  { fromSlug: "al-ahmadi", toSlug: "kuwait-city", distance: "40 km", duration: "30m" },
+  { fromSlug: "kuwait-city", toSlug: "doha", distance: "550 km", duration: "5h 30m" },
+  { fromSlug: "doha", toSlug: "kuwait-city", distance: "550 km", duration: "5h 30m" },
   { fromSlug: "manama", toSlug: "al-khobar", distance: "110 km", duration: "1h 30m" },
+  { fromSlug: "al-khobar", toSlug: "manama", distance: "110 km", duration: "1h 30m" },
 ];
 
 function locateCity(slug: string): { country: Country; city: City } | undefined {
@@ -284,16 +339,29 @@ export function titleFromSlug(slug: string): string {
     .join(" ");
 }
 
+/** Canonical country slug (alias-aware), e.g. "united-arab-emirates" -> "uae". */
+export function normalizeCountrySlug(slug: string): string {
+  if (!slug) return "";
+  return resolveCountry(slug)?.slug ?? slug;
+}
+
+/** Canonical city slug within a country, e.g. "alula" -> "al-ula". Unknown slugs pass through. */
+export function normalizeCitySlug(countryInput: string, citySlug: string): string {
+  if (!citySlug) return "";
+  const country = resolveCountry(countryInput);
+  return (country ? resolveCity(country, citySlug)?.slug : undefined) ?? citySlug;
+}
+
 export function cityNameBySlug(slug: string): string {
   return locateCity(slug)?.city.name ?? titleFromSlug(slug);
 }
 
 export function locationsUrl(lang: string): string {
-  return `/${lang}/locations`;
+  return `${localeBase(lang)}/locations`;
 }
 
 export function citiesUrl(lang: string): string {
-  return `/${lang}/locations/cities`;
+  return `${localeBase(lang)}/locations/cities`;
 }
 
 export function allCities(): { country: Country; city: City }[] {
@@ -307,15 +375,15 @@ export function allCities(): { country: Country; city: City }[] {
 }
 
 export function countryUrl(lang: string, country: Country): string {
-  return `/${lang}/locations/${country.slug}`;
+  return `${localeBase(lang)}/locations/${country.slug}`;
 }
 
 export function cityUrl(lang: string, country: Country, cityObj: City): string {
-  return `/${lang}/locations/${country.slug}/${cityObj.slug}`;
+  return `${localeBase(lang)}/locations/${country.slug}/${cityObj.slug}`;
 }
 
 export function airportUrl(lang: string, country: Country, cityObj: City, airport: Airport): string {
-  return `/${lang}/locations/${country.slug}/${cityObj.slug}/airport/${airport.slug}`;
+  return `${localeBase(lang)}/locations/${country.slug}/${cityObj.slug}/airport/${airport.slug}`;
 }
 
 export function routeUrl(lang: string, originCountry: Country, originCity: City, route: CityRoute): string {

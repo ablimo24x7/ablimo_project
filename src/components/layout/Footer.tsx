@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import { getDictionary, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import {
   COUNTRIES,
   cityUrl,
@@ -32,40 +32,40 @@ export default async function Footer({ lang }: FooterProps) {
     {
       title: d.aboutUs.title,
       links: [
-        { label: d.aboutUs.homepage, href: `/${lang}` },
-        { label: d.aboutUs.aboutAB, href: `/${lang}/about` },
-        { label: d.aboutUs.leadership, href: `/${lang}/leadership-team` },
-        { label: d.aboutUs.awards, href: `/${lang}/awards` },
-        { label: d.aboutUs.chauffeurRecruitment, href: `/${lang}/partners` },
-        { label: d.aboutUs.corporateCareers, href: `/${lang}/career` },
-        { label: d.aboutUs.press, href: `/${lang}/press/releases` },
-        { label: d.aboutUs.sustainability, href: `/${lang}/sustainability` },
-        { label: d.aboutUs.contactUs, href: `/${lang}/contact` },
+        { label: d.aboutUs.homepage, href: `${localeHome(lang)}` },
+        { label: d.aboutUs.aboutAB, href: `${localeBase(lang)}/about` },
+        { label: d.aboutUs.leadership, href: `${localeBase(lang)}/about` },
+        { label: d.aboutUs.awards, href: `${localeBase(lang)}/about` },
+        { label: d.aboutUs.chauffeurRecruitment, href: `${localeBase(lang)}/partners` },
+        { label: d.aboutUs.corporateCareers, href: `${localeBase(lang)}/career` },
+        { label: d.aboutUs.press, href: `${localeBase(lang)}/press/releases` },
+        { label: d.aboutUs.sustainability, href: `${localeBase(lang)}/sustainability` },
+        { label: d.aboutUs.contactUs, href: `${localeBase(lang)}/contact` },
       ],
     },
     {
       title: d.supportLegal.title,
       links: [
-        { label: d.supportLegal.helpCenter, href: `/${lang}/help-center` },
-        { label: d.supportLegal.contactCallback, href: `/${lang}/contact` },
-        { label: d.supportLegal.liveChat, href: `/${lang}/live-chat` },
-        { label: d.supportLegal.terms, href: `/${lang}/terms` },
-        { label: d.supportLegal.privacy, href: `/${lang}/privacy-policy` },
-        { label: d.supportLegal.cookie, href: `/${lang}/cookie-policy` },
-        { label: d.supportLegal.modernSlavery, href: `/${lang}/modern-slavery` },
-        { label: d.supportLegal.codeOfConduct, href: `/${lang}/code-of-conduct` },
+        { label: d.supportLegal.helpCenter, href: `${localeBase(lang)}/faqs` },
+        { label: d.supportLegal.contactCallback, href: `${localeBase(lang)}/contact` },
+        { label: d.supportLegal.liveChat, href: `${localeBase(lang)}/contact` },
+        { label: d.supportLegal.terms, href: `${localeBase(lang)}/terms` },
+        { label: d.supportLegal.privacy, href: `${localeBase(lang)}/privacy-policy` },
+        { label: d.supportLegal.cookie, href: `${localeBase(lang)}/terms` },
+        { label: d.supportLegal.modernSlavery, href: `${localeBase(lang)}/terms` },
+        { label: d.supportLegal.codeOfConduct, href: `${localeBase(lang)}/terms` },
       ],
     },
     {
       title: d.fleet.title,
       links: [
-        { label: d.fleet.landing, href: `/${lang}/fleet` },
-        { label: d.fleet.luxurySedan, href: `/${lang}/fleet/luxury-sedan` },
-        { label: d.fleet.businessSedan, href: `/${lang}/fleet/business-sedan` },
-        { label: d.fleet.luxurySuv, href: `/${lang}/fleet/luxury-suv` },
-        { label: d.fleet.businessVan, href: `/${lang}/fleet/business-van` },
-        { label: d.fleet.mpv, href: `/${lang}/fleet/mpv` },
-        { label: d.fleet.miniBus, href: `/${lang}/fleet/mini-bus` },
+        { label: d.fleet.landing, href: `${localeBase(lang)}/fleet` },
+        { label: d.fleet.luxurySedan, href: `${localeBase(lang)}/fleet/luxury-sedan` },
+        { label: d.fleet.businessSedan, href: `${localeBase(lang)}/fleet/business-sedan` },
+        { label: d.fleet.luxurySuv, href: `${localeBase(lang)}/fleet/luxury-suv` },
+        { label: d.fleet.businessVan, href: `${localeBase(lang)}/fleet/business-van` },
+        { label: d.fleet.mpv, href: `${localeBase(lang)}/fleet/mpv` },
+        { label: d.fleet.miniBus, href: `${localeBase(lang)}/fleet/mini-bus` },
       ],
     },
     {
@@ -111,17 +111,17 @@ export default async function Footer({ lang }: FooterProps) {
     {
       title: d.explore.title,
       links: [
-        { label: d.explore.asDirected, href: `/${lang}/as-directed` },
-        { label: d.explore.executiveMobility, href: `/${lang}/executive-mobility` },
+        { label: d.explore.asDirected, href: `${localeBase(lang)}/services/chauffeur-vip` },
+        { label: d.explore.executiveMobility, href: `${localeBase(lang)}/services/corporate-transportation` },
         { label: d.explore.airportTransfers, href: locationsUrl(lang) },
-        { label: d.explore.vipDiplomatic, href: `/${lang}/vip-diplomatic` },
-        { label: d.explore.corporateTransportation, href: `/${lang}/services/corporate-transportation` },
-        { label: d.explore.eventTransportation, href: `/${lang}/event-transportation` },
-        { label: d.explore.groupCharter, href: `/${lang}/group-charter` },
-        { label: d.explore.tourism, href: `/${lang}/tourism` },
-        { label: d.explore.religiousTourism, href: `/${lang}/services/religious-tourism` },
-        { label: d.explore.crossBorder, href: `/${lang}/cross-border` },
-        { label: d.explore.premiumLifestyle, href: `/${lang}/premium-lifestyle` },
+        { label: d.explore.vipDiplomatic, href: `${localeBase(lang)}/industries/government-diplomatic` },
+        { label: d.explore.corporateTransportation, href: `${localeBase(lang)}/services/corporate-transportation` },
+        { label: d.explore.eventTransportation, href: `${localeBase(lang)}/services/event-transportation` },
+        { label: d.explore.groupCharter, href: `${localeBase(lang)}/services/bus-coach-hire` },
+        { label: d.explore.tourism, href: `${localeBase(lang)}/services/tourism-transportation` },
+        { label: d.explore.religiousTourism, href: `${localeBase(lang)}/services/religious-tourism` },
+        { label: d.explore.crossBorder, href: `${localeBase(lang)}/city-to-city` },
+        { label: d.explore.premiumLifestyle, href: `${localeBase(lang)}/services/chauffeur-vip` },
       ],
     },
   ];
@@ -129,7 +129,7 @@ export default async function Footer({ lang }: FooterProps) {
   const socialLinks = [
     {
       label: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/company/ablimo24x7",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -184,21 +184,21 @@ export default async function Footer({ lang }: FooterProps) {
   ];
 
   const bottomLinks = [
-    { label: d.supportLegal.terms, href: `/${lang}/terms` },
-    { label: d.supportLegal.privacy, href: `/${lang}/privacy-policy` },
-    { label: d.imprint, href: `/${lang}/imprint` },
-    { label: d.accessibility, href: `/${lang}/accessibility` },
+    { label: d.supportLegal.terms, href: `${localeBase(lang)}/terms` },
+    { label: d.supportLegal.privacy, href: `${localeBase(lang)}/privacy-policy` },
+    { label: d.imprint, href: `${localeBase(lang)}/imprint` },
+    { label: d.accessibility, href: `${localeBase(lang)}/accessibility` },
   ];
 
   return (
-    <footer className="bg-abBlack text-white pt-20 pb-8 border-t-[4px] border-abGold">
+    <footer className="bg-abBlack text-white pt-20 pb-8 border-t-[4px] border-abBlue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Row: Logo and Apps */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link
-              href={`/${lang}`}
+              href={`${localeHome(lang)}`}
               className="text-white text-2xl font-bold tracking-widest uppercase"
             >
               {/* {dict.header.logo} */}
@@ -275,7 +275,7 @@ export default async function Footer({ lang }: FooterProps) {
               <a
                 key={social.label}
                 href={social.href}
-                className="h-10 w-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-abGold hover:text-white transition-colors"
+                className="h-10 w-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-abBlue hover:text-white transition-colors"
                 aria-label={social.label}
               >
                 {social.icon}

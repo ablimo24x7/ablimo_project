@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { Service } from "@/lib/models/Service";
@@ -26,6 +27,8 @@ export async function PUT(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const auth = await authorizeApi("update");
+  if (!auth.ok) return auth.response;
   const enabled = isDatabaseEnabled();
   if (!enabled) {
     return NextResponse.json(
@@ -103,6 +106,8 @@ export async function DELETE(
   _req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const auth = await authorizeApi("delete");
+  if (!auth.ok) return auth.response;
   const enabled = isDatabaseEnabled();
   if (!enabled) {
     return NextResponse.json(

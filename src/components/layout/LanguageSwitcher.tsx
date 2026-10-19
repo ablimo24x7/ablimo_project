@@ -2,11 +2,12 @@
 
 import { useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { locales, type Locale } from "@/app/[lang]/dictionaries";
+import { locales, hasLocale, localeBase, type Locale } from "@/app/[lang]/dictionaries";
+import { setGoogleTranslateCookie } from "@/components/GoogleTranslate";
 
 const languageLabels: Record<Locale, { flag: string; label: string }> = {
-  "en-US": { flag: "🇺🇸", label: "English (US)" },
-  "en-GB": { flag: "🇬🇧", label: "English (UK)" },
+  "en-US": { flag: "🇺🇸", label: "English" },
+  "en-GB": { flag: "🇬🇧", label: "English" },
   ar: { flag: "🇸🇦", label: "العربية" },
 };
 
@@ -67,9 +68,14 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
   }, [isOpen, onClose]);
 
   const getLocalePath = (locale: Locale) => {
+    // Strip the current locale prefix (if any) to get the clean remainder.
     const segments = pathname.split("/");
-    segments[1] = locale;
-    return segments.join("/");
+    const hasPrefix = hasLocale(segments[1] ?? "");
+    const rest = hasPrefix ? `/${segments.slice(2).join("/")}` : pathname;
+    const clean = rest.length > 1 ? rest : "/";
+    const base = localeBase(locale);
+    if (clean === "/") return base || "/";
+    return `${base}${clean}`;
   };
 
   const isRtl = currentLang.split("-")[0] === "ar";
@@ -80,7 +86,7 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
         onClick={onToggle}
         onMouseEnter={handleButtonMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="flex items-center justify-center w-9 h-9 text-gray-300 hover:text-white transition-colors cursor-pointer rounded-full hover:bg-white/10"
+        className="flex items-center justify-center w-9 h-9 text-gray-300 hover:text-abBlue transition-colors cursor-pointer rounded-full hover:bg-white/10"
         title={languageLabels[currentLang].label}
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,13 +111,18 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
                   onClose();
                   if (switchingLocale) {
                     e.preventDefault();
+                    if (locale === "ar") {
+                      setGoogleTranslateCookie("ar");
+                    } else if (currentLang === "ar") {
+                      setGoogleTranslateCookie(null);
+                    }
                     window.location.href = href;
                   }
                 }}
                 className={`flex items-center gap-2.5 px-4 py-3 text-sm transition-colors ${
                   locale === currentLang
                     ? "bg-white/10 text-white"
-                    : "text-gray-300 hover:bg-white/5 hover:text-white"
+                    : "text-gray-300 hover:bg-white/5 hover:text-abBlue"
                 }`}
               >
                 <span>{languageLabels[locale].flag}</span>

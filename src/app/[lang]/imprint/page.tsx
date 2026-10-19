@@ -5,6 +5,7 @@ import {
   hasLocale,
   defaultLocale,
   type Locale,
+  localeHome,
 } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
@@ -14,13 +15,17 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Legal Notice",
-    description:
-      "Legal notice and company information for AB.Limo GmbH, including registration details and contact information.",
+    title: isAr ? dict.imprint.title : "Legal Notice",
+    description: isAr
+      ? "إشعار قانوني ومعلومات الشركة لـ AB.Limo، بما في ذلك مواقع المكاتب في دول الخليج وتفاصيل الاتصال."
+      : "Legal notice and company information for AB.Limo, including our GCC office locations and contact details.",
     path: "/imprint",
     lang,
-    keywords: "AB.Limo legal notice, company information, AB.Limo GmbH, legal disclosure, impressum",
+    keywords: "AB.Limo legal notice, company information, AB.Limo, legal disclosure, impressum",
   });
 }
 
@@ -39,11 +44,11 @@ export default async function ImprintPage({
       <section className="relative w-full h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-[#1c1d21]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30] via-[#1c1d21] to-[#292a30]" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide text-white">
             {dict.imprint.title}
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {dict.imprint.breadcrumb.home}
             </Link>
             <span>/</span>
@@ -60,67 +65,78 @@ export default async function ImprintPage({
             <h2 className="text-2xl font-bold mb-8">Company Information</h2>
             <div className="bg-[#1c1d21] rounded-lg p-8 border border-gray-700/50 text-gray-300 leading-relaxed space-y-4">
               <p>
-                <strong className="text-white">AB.Limo GmbH</strong>
+                <strong className="text-white">AB.Limo</strong>
               </p>
-              <p>Friedrichstraße 123</p>
-              <p>10117 Berlin</p>
-              <p>Germany</p>
+              <p>Headquarters: Malaz Area, Umar Ibn Abdulaziz Road</p>
+              <p>Building Number 59, Second Floor</p>
+              <p>Riyadh 12626</p>
+              <p>Kingdom of Saudi Arabia</p>
               <div className="pt-4 space-y-2">
                 <p>
                   Phone:{" "}
                   <a
-                    href="tel:+4930123456789"
+                    href="tel:+923135237377"
                     className="text-white underline hover:text-gray-300 transition-colors"
                   >
-                    +49 30 123 456 789
+                    +92 313 523 7377
                   </a>
                 </p>
                 <p>
                   Email:{" "}
                   <a
-                    href="mailto:info@ablimo.com"
+                    href="mailto:hello@ab.limo"
                     className="text-white underline hover:text-gray-300 transition-colors"
                   >
-                    info@ablimo.com
+                    hello@ab.limo
                   </a>
                 </p>
                 <p>
                   Website:{" "}
                   <a
-                    href="https://www.ablimo.com"
+                    href="https://www.ab.limo"
                     className="text-white underline hover:text-gray-300 transition-colors"
                   >
-                    www.ablimo.com
+                    www.ab.limo
                   </a>
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Registration Details */}
+          {/* Regional Offices */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold mb-8">Registration Details</h2>
-            <div className="bg-[#1c1d21] rounded-lg p-8 border border-gray-700/50 text-gray-300 leading-relaxed space-y-4">
-              <p>
-                <strong className="text-white">Registered Office:</strong>{" "}
-                Berlin, Germany
-              </p>
-              <p>
-                <strong className="text-white">Court of Registration:</strong>{" "}
-                Amtsgericht Berlin-Charlottenburg
-              </p>
-              <p>
-                <strong className="text-white">Registration Number:</strong>{" "}
-                HRB 210 456
-              </p>
-              <p>
-                <strong className="text-white">VAT Identification Number:</strong>{" "}
-                DE 312 456 789
-              </p>
-              <p>
-                <strong className="text-white">Managing Director:</strong>{" "}
-                Ahmad Al-Rashid
-              </p>
+            <h2 className="text-2xl font-bold mb-8">Regional Offices</h2>
+            <div className="bg-[#1c1d21] rounded-lg p-8 border border-gray-700/50 text-gray-300 leading-relaxed space-y-6">
+              <div>
+                <p>
+                  <strong className="text-white">
+                    Headquarters (Primary):
+                  </strong>
+                </p>
+                <p>Malaz Area, Umar Ibn Abdulaziz Road, Building Number 59</p>
+                <p>Second Floor, Riyadh 12626, Saudi Arabia</p>
+              </div>
+              <div>
+                <p>
+                  <strong className="text-white">Dubai:</strong>
+                </p>
+                <p>Al Khabaisi, Deira, Suite 206, DBC Building</p>
+                <p>Dubai, United Arab Emirates</p>
+              </div>
+              <div>
+                <p>
+                  <strong className="text-white">Abu Dhabi:</strong>
+                </p>
+                <p>Muhammad Bin Zayed City, Office 3, Building C57</p>
+                <p>Abu Dhabi, United Arab Emirates</p>
+              </div>
+              <div>
+                <p>
+                  <strong className="text-white">Doha:</strong>
+                </p>
+                <p>Street No. 830, Al Maarif Al Rufaa, Building No. 54, Zone 17</p>
+                <p>Doha, Qatar</p>
+              </div>
             </div>
           </section>
 
@@ -130,11 +146,11 @@ export default async function ImprintPage({
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
                 The content on our website and application has been created with
-                the utmost care. However, AB.Limo GmbH cannot guarantee the
+                the utmost care. However, AB.Limo cannot guarantee the
                 accuracy, completeness, or timeliness of the content provided.
                 As a service provider, we are responsible for our own content on
-                these pages in accordance with general laws pursuant to Section 7
-                of the German Telemedia Act (TMG).
+                these pages in accordance with applicable laws in the
+                jurisdictions where we operate.
               </p>
               <p>
                 However, we are not obligated to monitor transmitted or stored
@@ -170,7 +186,7 @@ export default async function ImprintPage({
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
                 The content and works created by the site operators on these
-                pages are subject to German copyright law. Duplication,
+                pages are subject to applicable copyright law. Duplication,
                 processing, distribution, or any form of commercialization of
                 such material beyond the scope of the copyright law requires
                 the prior written consent of its respective author or creator.
@@ -186,34 +202,28 @@ export default async function ImprintPage({
                 immediately.
               </p>
               <p>
-                &copy; {new Date().getFullYear()} AB.Limo GmbH. All rights
+                &copy; {new Date().getFullYear()} AB.Limo. All rights
                 reserved.
               </p>
             </div>
           </section>
 
-          {/* EU Dispute Resolution */}
+          {/* Dispute Resolution */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-8">
-              EU Dispute Resolution
+              Dispute Resolution
             </h2>
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
-                The European Commission provides a platform for online dispute
-                resolution (ODR):{" "}
-                <a
-                  href="https://ec.europa.eu/consumers/odr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white underline hover:text-gray-300 transition-colors"
-                >
-                  https://ec.europa.eu/consumers/odr
-                </a>
+                Any dispute, claim, or controversy arising out of or relating
+                to our Services shall be resolved in accordance with our Terms
+                of Use, which provide for binding arbitration administered by
+                the International Chamber of Commerce (ICC) with the seat of
+                arbitration in Riyadh, Kingdom of Saudi Arabia.
               </p>
               <p>
-                Our email address can be found above in the site notice. We are
-                not willing or obliged to participate in dispute resolution
-                proceedings before a consumer arbitration board.
+                Our contact details for any dispute-related correspondence can
+                be found above in this legal notice.
               </p>
             </div>
           </section>
@@ -225,9 +235,10 @@ export default async function ImprintPage({
             </h2>
             <div className="text-gray-300 leading-relaxed space-y-4">
               <p>
-                AB.Limo GmbH operates in compliance with all applicable German
-                and European Union regulations governing transportation
-                services, data protection, and consumer rights.
+                AB.Limo operates in compliance with all applicable laws and
+                transportation regulations in each jurisdiction where we
+                operate, including the Kingdom of Saudi Arabia, the United
+                Arab Emirates, Qatar, Oman, Bahrain, and Kuwait.
               </p>
               <p>
                 Our chauffeur services are provided in accordance with local
@@ -238,10 +249,10 @@ export default async function ImprintPage({
               <p>
                 For regulatory inquiries, please contact our compliance team at{" "}
                 <a
-                  href="mailto:compliance@ablimo.com"
+                  href="mailto:hello@ab.limo"
                   className="text-white underline hover:text-gray-300 transition-colors"
                 >
-                  compliance@ablimo.com
+                  hello@ab.limo
                 </a>
                 .
               </p>

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Dictionary } from "@/app/[lang]/dictionaries";
+import Link from "next/link";
+import { Dictionary, localeBase } from "@/app/[lang]/dictionaries";
 
 const vehicles = [
   {
@@ -40,7 +41,13 @@ const vehicles = [
   },
 ];
 
-export default function FleetSection({ dict }: { dict: Dictionary }) {
+export default function FleetSection({
+  dict,
+  lang,
+}: {
+  dict: Dictionary;
+  lang: string;
+}) {
   return (
     <section id="fleet" className="py-24 bg-[#0a0a0a] border-b border-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,9 +58,9 @@ export default function FleetSection({ dict }: { dict: Dictionary }) {
             <p className="mt-4 text-gray-400">{dict.home.fleetSection.desc}</p>
           </div>
           <div className="mt-6 md:mt-0">
-            <a href="#" className="text-gray-300 font-semibold hover:text-abBlue border-b border-gray-600 hover:border-abBlue pb-1 transition-colors inline-flex items-center text-sm">
+            <Link href={`${localeBase(lang)}/fleet`} className="text-gray-300 font-semibold hover:text-abBlue border-b border-gray-600 hover:border-abBlue pb-1 transition-colors inline-flex items-center text-sm">
               {dict.home.fleetSection.link} <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -79,7 +86,7 @@ export default function FleetSection({ dict }: { dict: Dictionary }) {
                   <span className="flex items-center"><i className={`${vehicles[i].paxIcon} mr-1.5 text-gray-400`}></i> {vehicle.pax}</span>
                   <span className="flex items-center"><i className="fa-solid fa-suitcase mr-1.5 text-gray-400"></i> {vehicle.bags}</span>
                 </div>
-                <a href="#corporate-account" className={`block w-full text-center bg-[#111] hover:bg-[#1a1a1a] text-white text-xs font-semibold py-2.5 rounded transition-colors border border-gray-700 ${vehicles[i].buttonHover}`}>Request Allocation</a>
+                <Link href={`${localeBase(lang)}/contact`} className={`block w-full text-center bg-[#111] hover:bg-[#1a1a1a] text-white text-xs font-semibold py-2.5 rounded transition-colors border border-gray-700 ${vehicles[i].buttonHover}`}>Request Allocation</Link>
               </div>
             </div>
           ))}

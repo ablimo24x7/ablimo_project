@@ -1,10 +1,15 @@
 import type { MetadataRoute } from "next";
 import fs from "node:fs";
 import path from "node:path";
+import { FLEET_VEHICLES } from "@/lib/fleet";
 
-const BASE_URL = "https://ab.limo";
-const LOCALES = ["en-US", "en-GB", "ar"];
-const NOW = new Date();
+const BASE_URL = "https://www.ab.limo";
+// English is served at prefix-less URLs, Arabic at /ar
+const SITEMAP_LANGS = ["en", "ar"] as const;
+
+// Sitemap must reflect the database on every request: pages created from the
+// dashboard (services, cities, articles) show up without waiting for a redeploy.
+export const dynamic = "force-dynamic";
 
 /* ─── 1. Auto-scan static routes from filesystem ─────────── */
 
@@ -32,22 +37,38 @@ function discoverStaticRoutes(): string[] {
 
 /* ─── 2. DB-driven dynamic routes ────────────────────────── */
 
+type ArticleEntry = {
+  path: string;
+  lastModified?: Date | string;
+};
+
+function articleLastModified(article: Record<string, unknown>): Date | string | undefined {
+  const updated = article.updatedAt;
+  if (updated instanceof Date || typeof updated === "string") return updated;
+  const created = article.createdAt;
+  if (created instanceof Date || typeof created === "string") return created;
+  return undefined;
+}
+
 async function discoverDynamicRoutes(): Promise<{
   locations: { country: string; cities: string[]; routes: { city: string; route: string }[]; airports: { city: string; airport: string }[] }[];
   services: string[];
-  blogSlugs: string[];
+  articles: ArticleEntry[];
 }> {
   const result = {
     locations: [] as { country: string; cities: string[]; routes: { city: string; route: string }[]; airports: { city: string; airport: string }[] }[],
     services: [] as string[],
-    blogSlugs: [] as string[],
+    articles: [] as ArticleEntry[],
   };
 
   try {
     const { getAllCountries } = await import("@/lib/locationData");
+    const { resolveCountry } = await import("@/lib/locations");
     const countries = await getAllCountries();
     result.locations = countries.map((c) => ({
-      country: c.slug,
+      // Canonical slug (e.g. "united-arab-emirates" → "uae") so the sitemap
+      // never lists URLs that only answer with a 308 redirect.
+      country: resolveCountry(c.slug)?.slug ?? c.slug,
       cities: c.cities.map((city) => city.slug),
       routes: c.cities.flatMap((city) => {
         const cityAny = city as unknown as Record<string, unknown>;
@@ -92,10 +113,22 @@ async function discoverDynamicRoutes(): Promise<{
     const { getAllPublishedArticles } = await import("@/lib/blog");
     const enArticles = await getAllPublishedArticles("en");
     const arArticles = await getAllPublishedArticles("ar");
-    const allSlugs = new Set<string>();
-    for (const a of enArticles) allSlugs.add(a.slug);
-    for (const a of arArticles) allSlugs.add(a.slug);
-    result.blogSlugs = Array.from(allSlugs);
+    const seen = new Map<string, ArticleEntry>();
+    for (const article of [...enArticles, ...arArticles]) {
+      const slug = article.slug;
+      if (!slug || seen.has(slug)) continue;
+      const record = article as unknown as Record<string, unknown>;
+      const isServicePage =
+        article.templateType === "service-city" ||
+        article.templateType === "service-country" ||
+        slug.startsWith("services/");
+      seen.set(slug, {
+        // Service templates live under /services/..., regular posts under /blog/...
+        path: isServicePage ? `/${slug}` : `/blog/${slug}`,
+        lastModified: articleLastModified(record),
+      });
+    }
+    result.articles = Array.from(seen.values());
   } catch {
     // DB unavailable — skip dynamic blog
   }
@@ -106,15 +139,24 @@ async function discoverDynamicRoutes(): Promise<{
 /* ─── 3. Build sitemap entries ────────────────────────────── */
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const NOW = new Date();
   const staticRoutes = discoverStaticRoutes();
-  const dynamic = await discoverDynamicRoutes();
+  const dynamicRoutes = await discoverDynamicRoutes();
   const entries: MetadataRoute.Sitemap = [];
 
-  const add = (routePath: string, priority = 0.8, changeFreq: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" = "weekly") => {
-    for (const lang of LOCALES) {
+  const add = (
+    routePath: string,
+    priority = 0.8,
+    changeFreq: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" = "weekly",
+    lastModified?: Date | string,
+  ) => {
+    const path = routePath.startsWith("/") ? routePath : `/${routePath}`;
+    const suffix = path === "/" ? "" : path;
+    for (const lang of SITEMAP_LANGS) {
+      const prefix = lang === "en" ? "" : `/${lang}`;
       entries.push({
-        url: `${BASE_URL}/${lang}${routePath.startsWith("/") ? routePath : `/${routePath}`}`,
-        lastModified: NOW,
+        url: `${BASE_URL}${prefix}${suffix}`,
+        lastModified: lastModified ?? NOW,
         changeFrequency: changeFreq,
         priority,
       });
@@ -127,8 +169,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     add(route, p);
   }
 
+  // Fleet vehicle detail pages (dynamic [vehicle] segment is skipped by the scanner)
+  for (const vehicle of FLEET_VEHICLES) {
+    add(`/fleet/${vehicle.slug}`, 0.7, "weekly");
+  }
+
   // Dynamic: locations → /locations/{country}, /locations/{country}/{city}
-  for (const loc of dynamic.locations) {
+  for (const loc of dynamicRoutes.locations) {
     add(`/locations/${loc.country}`, 0.7, "monthly");
     for (const city of loc.cities) {
       add(`/locations/${loc.country}/${city}`, 0.7, "monthly");
@@ -144,14 +191,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Dynamic: services → /services/{slug}
-  for (const slug of dynamic.services) {
+  for (const slug of dynamicRoutes.services) {
     add(`/services/${slug}`, 0.8, "weekly");
   }
 
-  // Dynamic: blog articles → /blog/{slug}
-  for (const slug of dynamic.blogSlugs) {
-    add(`/blog/${slug}`, 0.6, "weekly");
+  // Dynamic: articles → service templates under /services/..., posts under /blog/...
+  for (const article of dynamicRoutes.articles) {
+    const isServicePage = article.path.startsWith("/services/");
+    add(article.path, isServicePage ? 0.8 : 0.6, "weekly", article.lastModified);
   }
 
-  return entries;
+  // Drop duplicate URLs (overlapping sources, e.g. alias-normalised locations)
+  const seenUrls = new Set<string>();
+  return entries.filter((entry) => {
+    if (seenUrls.has(entry.url)) return false;
+    seenUrls.add(entry.url);
+    return true;
+  });
 }

@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import BookingWidget from "@/components/layout/BookingWidget";
+import HeroInquiryForm from "@/app/[lang]/locations/_components/HeroInquiryForm";
 import {
   getDictionary,
   hasLocale,
   defaultLocale,
   type Locale,
+  localeBase,
+  localeHome,
 } from "@/app/[lang]/dictionaries";
 import { IndustryJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
 
@@ -155,13 +157,13 @@ export default async function IndustryPage({
       <IndustryJsonLd
         industry={breadcrumb}
         description={content.subtitle}
-        url={`/${lang}/industries/${breadcrumb.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}`}
+        url={`${localeBase(lang)}/industries/${breadcrumb.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}`}
       />
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: `/${lang}` },
-          { name: "Industries", url: `/${lang}/industries` },
-          { name: breadcrumb, url: `/${lang}/industries/${breadcrumb.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}` },
+          { name: "Home", url: `${localeHome(lang)}` },
+          { name: "Industries", url: `${localeBase(lang)}/industries` },
+          { name: breadcrumb, url: `${localeBase(lang)}/industries/${breadcrumb.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}` },
         ]}
       />
       {content.faqs && content.faqs.length > 0 && (
@@ -186,29 +188,29 @@ export default async function IndustryPage({
         <div className="absolute inset-0 bg-gradient-to-r from-abBlack/70 via-abBlack/30 to-transparent" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abGold/10 border border-abGold/30 mb-5">
-              <span className="w-2 h-2 rounded-full bg-abGold animate-pulse"></span>
-              <span className="text-abGold text-xs font-bold tracking-widest uppercase">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abBlue/10 border border-abBlue/30 mb-5">
+              <span className="w-2 h-2 rounded-full bg-abBlue animate-pulse"></span>
+              <span className="text-abBlue text-xs font-bold tracking-widest uppercase">
                 {content.badge}
               </span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white">
               {content.title}
             </h1>
             <p className="text-lg text-gray-300">{content.subtitle}</p>
           </div>
-          <BookingWidget dict={dict} />
+          <HeroInquiryForm dict={dict} />
         </div>
       </section>
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+          <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
             {homeLabel}
           </Link>
           <span className="mx-2">/</span>
-          <Link href={`/${lang}/industries`} className="hover:text-white transition-colors">
+          <Link href={`${localeBase(lang)}/industries`} className="hover:text-white transition-colors">
             {industriesLabel}
           </Link>
           <span className="mx-2">/</span>
@@ -225,7 +227,7 @@ export default async function IndustryPage({
                 key={feature.title}
                 className="bg-[#1c1d21] p-8 rounded-2xl hover:bg-[#2a2c35] transition-colors"
               >
-                <div className="text-abGold mb-4">{feature.icon}</div>
+                <div className="text-abBlue mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {feature.desc}
@@ -264,7 +266,7 @@ export default async function IndustryPage({
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     {card.tag && (
-                      <span className="absolute top-4 left-4 bg-abGold text-black text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                      <span className="absolute top-4 left-4 bg-abBlue text-black text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                         {card.tag}
                       </span>
                     )}
@@ -380,8 +382,8 @@ export default async function IndustryPage({
         </h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">{content.ctaDesc}</p>
         <Link
-          href={content.ctaHref ?? `/${lang}/industries`}
-          className="inline-block bg-abGold hover:bg-yellow-600 text-white px-8 py-3 text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abGold/20"
+          href={content.ctaHref ?? `${localeBase(lang)}/contact`}
+          className="inline-block bg-abBlue hover:bg-abServiceBlue text-white px-8 py-3 text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abBlue/20"
         >
           {content.ctaLabel}
         </Link>

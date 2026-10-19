@@ -37,6 +37,7 @@ import { Plus, Pencil, Trash2, ChevronLeft, ChevronRight } from "lucide-react";
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { SERVICE_OPTIONS } from "@/lib/constants";
+import { usePermissions } from "@/hooks/use-permissions";
 
 const SERVICE_FILTER_OPTIONS = [
   { slug: "all", label: "All Services" },
@@ -67,6 +68,7 @@ function PostsPageContent() {
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [serviceFilter, setServiceFilter] = useState("all");
   const [page, setPage] = useState(1);
+  const { canCreate, canDelete } = usePermissions();
 
   const { data, isLoading } = useQuery({
     queryKey: ["posts", serviceFilter, templateTypeFilter, page],
@@ -105,11 +107,13 @@ function PostsPageContent() {
     <div className="space-y-4 px-4 lg:px-6">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold">Posts</h2>
-        <Button asChild>
-          <Link href={templateTypeFilter === "service-city" ? "/dashboard/posts/new?type=city" : templateTypeFilter === "service-country" ? "/dashboard/posts/new?type=country" : "/dashboard/posts/new"}>
-            <Plus className="mr-2 h-4 w-4" /> New Post
-          </Link>
-        </Button>
+        {canCreate && (
+          <Button asChild>
+            <Link href={templateTypeFilter === "service-city" ? "/dashboard/posts/new?type=city" : templateTypeFilter === "service-country" ? "/dashboard/posts/new?type=country" : "/dashboard/posts/new"}>
+              <Plus className="mr-2 h-4 w-4" /> New Post
+            </Link>
+          </Button>
+        )}
       </div>
 
       <div className="flex items-center gap-3">
@@ -152,7 +156,7 @@ function PostsPageContent() {
                 {posts.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={6} className="py-8 text-center text-muted-foreground">
-                      No posts yet. Create your first post.
+                      {canCreate ? "No posts yet. Create your first post." : "No posts found."}
                     </TableCell>
                   </TableRow>
                 ) : (
@@ -173,9 +177,11 @@ function PostsPageContent() {
                           <Button variant="ghost" size="sm" asChild>
                             <Link href={`/dashboard/posts/${p._id}/edit`}><Pencil className="h-4 w-4" /></Link>
                           </Button>
-                          <Button variant="ghost" size="sm" onClick={() => setDeleteId(p._id)}>
-                            <Trash2 className="h-4 w-4 text-destructive" />
-                          </Button>
+                          {canDelete && (
+                            <Button variant="ghost" size="sm" onClick={() => setDeleteId(p._id)}>
+                              <Trash2 className="h-4 w-4 text-destructive" />
+                            </Button>
+                          )}
                         </div>
                       </TableCell>
                     </TableRow>

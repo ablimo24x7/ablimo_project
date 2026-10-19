@@ -5,6 +5,7 @@ import type { ArticleDoc } from "@/lib/models/Article";
 import { TextImageSection } from "@/components/locations/TextImageSection";
 import { CardsSection } from "@/components/locations/CardsSection";
 import type { TextImageSectionType, CardsSectionType } from "@/lib/validations/location";
+import { localeHome } from "@/app/[lang]/dictionaries";
 
 interface BlogArticleLayoutProps {
   article: ArticleDoc;
@@ -65,7 +66,7 @@ export function BlogArticleLayout({
         <nav aria-label="Breadcrumb" className="flex justify-center">
           <ol className="flex items-center gap-2 text-sm text-gray-400 flex-wrap text-center" dir="ltr">
             <li className="flex items-center gap-2">
-              <Link href={`/${lang}`} className="hover:text-white transition-colors">
+              <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
                 {homeLabel}
               </Link>
               <span aria-hidden="true">{isArabic ? "←" : "→"}</span>
@@ -143,7 +144,7 @@ export function BlogArticleLayout({
                   className={`prose prose-lg prose-invert max-w-none
                     prose-headings:font-serif prose-headings:text-white
                     prose-p:text-gray-300 prose-p:leading-relaxed
-                    prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
+                    prose-a:text-abBlue prose-a:no-underline hover:prose-a:underline
                     prose-strong:text-white
                     prose-img:rounded-2xl ${isArabic ? "text-right" : ""}`}
                   dir={isArabic ? "rtl" : "ltr"}
@@ -161,7 +162,7 @@ export function BlogArticleLayout({
                     className={`prose prose-lg prose-invert max-w-none
                       prose-headings:font-serif prose-headings:text-white
                       prose-p:text-gray-300 prose-p:leading-relaxed
-                      prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
+                      prose-a:text-abBlue prose-a:no-underline hover:prose-a:underline
                       prose-strong:text-white ${isArabic ? "text-right" : ""}`}
                     dir={isArabic ? "rtl" : "ltr"}
                     dangerouslySetInnerHTML={{ __html: article.keyTakeawaysContent }}
@@ -179,7 +180,7 @@ export function BlogArticleLayout({
                     className={`prose prose-lg prose-invert max-w-none
                       prose-headings:font-serif prose-headings:text-white
                       prose-p:text-gray-300 prose-p:leading-relaxed
-                      prose-a:text-abGold prose-a:no-underline hover:prose-a:underline
+                      prose-a:text-abBlue prose-a:no-underline hover:prose-a:underline
                       prose-strong:text-white ${isArabic ? "text-right" : ""}`}
                     dir={isArabic ? "rtl" : "ltr"}
                     dangerouslySetInnerHTML={{ __html: article.finalThoughtsContent }}

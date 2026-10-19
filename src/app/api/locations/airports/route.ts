@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { Country } from "@/lib/models/Country";
@@ -6,6 +7,8 @@ import { AirportCreateSchema } from "@/lib/validations/location";
 import { toSlug } from "@/lib/slug";
 
 export async function POST(req: NextRequest) {
+  const auth = await authorizeApi("create");
+  if (!auth.ok) return auth.response;
   if (!isDatabaseEnabled()) {
     return NextResponse.json({ error: "Database is disabled." }, { status: 400 });
   }

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,15 +22,14 @@ import { Plus, Trash2, ChevronDown, ChevronUp, CheckCircle2, XCircle, Loader2 } 
 import { allIsoCountries, validateCountry } from "@/lib/iso3166";
 import { toSlug } from "@/lib/slug";
 import { TranslateButton } from "./TranslateButton";
-import { CitySectionEditor } from "./city-section-editor";
-import type { TextImageSectionType } from "@/lib/validations/location";
+import { LocationTemplateEditorCard } from "./location-template-editor-card";
 
-type FaqRecord = {
+export type FaqRecord = {
   q: string;
   a: string;
 };
 
-type AirportRecord = {
+export type AirportRecord = {
   _id?: string;
   slug: string;
   name: string;
@@ -40,7 +40,7 @@ type AirportRecord = {
   status: string;
 };
 
-type CityRecord = {
+export type CityRecord = {
   _id?: string;
   slug: string;
   name: string;
@@ -52,10 +52,9 @@ type CityRecord = {
   airports: AirportRecord[];
   faqs: FaqRecord[];
   faqsAr: FaqRecord[];
-  sections: TextImageSectionType[];
 };
 
-type CountryRecord = {
+export type CountryRecord = {
   _id?: string;
   name: string;
   nameAr: string;
@@ -67,6 +66,10 @@ type CountryRecord = {
   cities: CityRecord[];
   faqs: FaqRecord[];
   faqsAr: FaqRecord[];
+};
+
+type CountryPayload = Omit<CountryRecord, "cities"> & {
+  cities?: CityRecord[];
 };
 
 const DEFAULTS: CountryRecord = {
@@ -85,14 +88,6 @@ const DEFAULTS: CountryRecord = {
 const STATUS_OPTIONS = ["draft", "published", "archived"] as const;
 const AIRPORT_TYPES = ["international", "domestic", "regional"] as const;
 
-function blankAirport(): AirportRecord {
-  return { slug: "", name: "", nameAr: "", iata: "", aliases: [], type: "international", status: "published" };
-}
-
-function blankCity(): CityRecord {
-  return { slug: "", name: "", nameAr: "", description: "", descriptionAr: "", aliases: [], status: "published", airports: [], faqs: [], faqsAr: [], sections: [] };
-}
-
 interface LocationEditorProps {
   initialData?: CountryRecord;
   mode?: "create" | "edit";
@@ -106,12 +101,11 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
   const [form, setForm] = React.useState<CountryRecord>(
     initialData ? { ...DEFAULTS, ...initialData } : DEFAULTS
   );
-  const [expandedCity, setExpandedCity] = React.useState<number | null>(null);
 
   const isoCountries = React.useMemo(() => allIsoCountries(), []);
 
   const mutation = useMutation({
-    mutationFn: async (payload: CountryRecord) => {
+    mutationFn: async (payload: CountryPayload) => {
       const url = isEdit && initialData?._id
         ? `/api/locations/${initialData._id}`
         : "/api/locations";
@@ -127,11 +121,19 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
       }
       return res.json();
     },
-    onSuccess: () => {
+    onSuccess: (data) => {
       toast.success(isEdit ? "Country updated" : "Country created");
       queryClient.invalidateQueries({ queryKey: ["locations"] });
       queryClient.invalidateQueries({ queryKey: ["locations-meta"] });
-      router.push("/dashboard/locations");
+      const createdId = !isEdit
+        ? (data as { _id?: string } | undefined)?._id
+        : undefined;
+      if (createdId) {
+        queryClient.invalidateQueries({ queryKey: ["location", createdId] });
+        router.push(`/dashboard/locations/${createdId}`);
+      } else {
+        router.push("/dashboard/locations");
+      }
     },
     onError: (err: Error) => toast.error(err.message),
   });
@@ -151,122 +153,6 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
         next.slug = name.trim() ? toSlug(name) : next.slug;
       }
       return next;
-    });
-  };
-
-  const addCity = () => {
-    const nextIndex = form.cities.length;
-    setForm((prev) => ({ ...prev, cities: [...prev.cities, blankCity()] }));
-    setExpandedCity(nextIndex);
-  };
-
-  const removeCity = (index: number) => {
-    setForm((prev) => ({
-      ...prev,
-      cities: prev.cities.filter((_, i) => i !== index),
-    }));
-  };
-
-  const updateCity = (
-    index: number,
-    key: Exclude<keyof CityRecord, "airports" | "aliases">,
-    value: string
-  ) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      cities[index] = {
-        ...cities[index],
-        [key]: value,
-        ...(key === "name" && !cities[index]._id
-          ? { slug: value.trim() ? toSlug(value) : cities[index].slug }
-          : {}),
-      };
-      return { ...prev, cities };
-    });
-  };
-
-  const addAirport = (cityIndex: number) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      cities[cityIndex] = {
-        ...cities[cityIndex],
-        airports: [...cities[cityIndex].airports, blankAirport()],
-      };
-      return { ...prev, cities };
-    });
-  };
-
-  const removeAirport = (cityIndex: number, airportIndex: number) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      cities[cityIndex] = {
-        ...cities[cityIndex],
-        airports: cities[cityIndex].airports.filter((_, i) => i !== airportIndex),
-      };
-      return { ...prev, cities };
-    });
-  };
-
-  const updateAirport = (
-    cityIndex: number,
-    airportIndex: number,
-    key: keyof AirportRecord,
-    value: string
-  ) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      const airports = [...cities[cityIndex].airports];
-      airports[airportIndex] = {
-        ...airports[airportIndex],
-        [key]: value,
-        ...(key === "name" && !airports[airportIndex]._id
-          ? { slug: value.trim() ? toSlug(value) : airports[airportIndex].slug }
-          : {}),
-      };
-      cities[cityIndex] = { ...cities[cityIndex], airports };
-      return { ...prev, cities };
-    });
-  };
-
-  const updateAirportAliases = (
-    cityIndex: number,
-    airportIndex: number,
-    value: string
-  ) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      const airports = [...cities[cityIndex].airports];
-      airports[airportIndex] = {
-        ...airports[airportIndex],
-        aliases: value
-          .split(",")
-          .map((a) => a.trim().toLowerCase())
-          .filter(Boolean),
-      };
-      cities[cityIndex] = { ...cities[cityIndex], airports };
-      return { ...prev, cities };
-    });
-  };
-
-  const updateCityAliases = (cityIndex: number, value: string) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      cities[cityIndex] = {
-        ...cities[cityIndex],
-        aliases: value
-          .split(",")
-          .map((a) => a.trim().toLowerCase())
-          .filter(Boolean),
-      };
-      return { ...prev, cities };
-    });
-  };
-
-  const updateCitySections = (cityIndex: number, sections: TextImageSectionType[]) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      cities[cityIndex] = { ...cities[cityIndex], sections };
-      return { ...prev, cities };
     });
   };
 
@@ -297,45 +183,6 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
     });
   };
 
-  // ── City FAQ helpers ─────────────────────────────────────
-  const addCityFaq = (cityIndex: number) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      cities[cityIndex] = { ...cities[cityIndex], faqs: [...cities[cityIndex].faqs, { q: "", a: "" }] };
-      return { ...prev, cities };
-    });
-  };
-
-  const removeCityFaq = (cityIndex: number, faqIndex: number) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      cities[cityIndex] = { ...cities[cityIndex], faqs: cities[cityIndex].faqs.filter((_, i) => i !== faqIndex) };
-      return { ...prev, cities };
-    });
-  };
-
-  const updateCityFaq = (cityIndex: number, faqIndex: number, key: "q" | "a", value: string) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      const faqs = [...cities[cityIndex].faqs];
-      faqs[faqIndex] = { ...faqs[faqIndex], [key]: value };
-      cities[cityIndex] = { ...cities[cityIndex], faqs };
-      return { ...prev, cities };
-    });
-  };
-
-  const moveCityFaq = (cityIndex: number, faqIndex: number, dir: -1 | 1) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      const faqs = [...cities[cityIndex].faqs];
-      const target = faqIndex + dir;
-      if (target < 0 || target >= faqs.length) return prev;
-      [faqs[faqIndex], faqs[target]] = [faqs[target], faqs[faqIndex]];
-      cities[cityIndex] = { ...cities[cityIndex], faqs };
-      return { ...prev, cities };
-    });
-  };
-
   // ── Country Arabic FAQ helpers ──────────────────────────────
   const addCountryFaqAr = () => {
     setForm((prev) => ({ ...prev, faqsAr: [...prev.faqsAr, { q: "", a: "" }] }));
@@ -353,33 +200,6 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
     });
   };
 
-  // ── City Arabic FAQ helpers ─────────────────────────────────
-  const addCityFaqAr = (cityIndex: number) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      cities[cityIndex] = { ...cities[cityIndex], faqsAr: [...cities[cityIndex].faqsAr, { q: "", a: "" }] };
-      return { ...prev, cities };
-    });
-  };
-
-  const removeCityFaqAr = (cityIndex: number, faqIndex: number) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      cities[cityIndex] = { ...cities[cityIndex], faqsAr: cities[cityIndex].faqsAr.filter((_, i) => i !== faqIndex) };
-      return { ...prev, cities };
-    });
-  };
-
-  const updateCityFaqAr = (cityIndex: number, faqIndex: number, key: "q" | "a", value: string) => {
-    setForm((prev) => {
-      const cities = [...prev.cities];
-      const faqsAr = [...cities[cityIndex].faqsAr];
-      faqsAr[faqIndex] = { ...faqsAr[faqIndex], [key]: value };
-      cities[cityIndex] = { ...cities[cityIndex], faqsAr };
-      return { ...prev, cities };
-    });
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim()) {
@@ -390,7 +210,10 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
       toast.error("Invalid or unknown country. Please pick a real ISO-3166 country.");
       return;
     }
-    mutation.mutate(form);
+    const payload: CountryPayload = { ...form };
+    // Cities have their own screen — leave the stored array untouched on save.
+    if (isEdit) delete payload.cities;
+    mutation.mutate(payload);
   };
 
   return (
@@ -409,559 +232,283 @@ export function LocationEditor({ initialData, mode = "create" }: LocationEditorP
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 space-y-6">
-          <Card>
-            <CardHeader><CardTitle>Country</CardTitle></CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Label htmlFor="country-name">Country name *</Label>
-                  <TranslateButton
-                    text={form.name}
-                    onTranslated={(v, dir) => dir === "ar" ? updateField("nameAr", v) : updateField("nameAr", "")}
-                  />
-                </div>
-                <Input
-                  id="country-name"
-                  list="iso-countries"
-                  placeholder="Start typing a country, e.g. United Arab Emirates"
-                  value={form.name}
-                  onChange={(e) => handleCountryName(e.target.value)}
-                />
-                <datalist id="iso-countries">
-                  {isoCountries.map((c) => (
-                    <option key={c.code} value={c.name} />
-                  ))}
-                </datalist>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="country-name-ar">Arabic Name</Label>
-                <Input
-                  id="country-name-ar"
-                  placeholder="الاسم بالعربية"
-                  value={form.nameAr}
-                  onChange={(e) => updateField("nameAr", e.target.value)}
-                  dir="rtl"
-                />
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4">
+      <div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 space-y-6">
+            <Card>
+              <CardHeader><CardTitle>Country</CardTitle></CardHeader>
+              <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="country-code">ISO Code</Label>
+                  <div className="flex items-center gap-2">
+                    <Label htmlFor="country-name">Country name *</Label>
+                    <TranslateButton
+                      text={form.name}
+                      onTranslated={(v, dir) => dir === "ar" ? updateField("nameAr", v) : updateField("nameAr", "")}
+                    />
+                  </div>
                   <Input
-                    id="country-code"
-                    className="uppercase"
-                    placeholder="ae"
-                    maxLength={2}
-                    value={form.code}
-                    onChange={(e) => updateField("code", e.target.value.toLowerCase())}
+                    id="country-name"
+                    list="iso-countries"
+                    placeholder="Start typing a country, e.g. United Arab Emirates"
+                    value={form.name}
+                    onChange={(e) => handleCountryName(e.target.value)}
                   />
+                  <datalist id="iso-countries">
+                    {isoCountries.map((c) => (
+                      <option key={c.code} value={c.name} />
+                    ))}
+                  </datalist>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="country-slug">Slug</Label>
+                  <Label htmlFor="country-name-ar">Arabic Name</Label>
                   <Input
-                    id="country-slug"
-                    value={form.slug}
-                    onChange={(e) => updateField("slug", toSlug(e.target.value))}
+                    id="country-name-ar"
+                    placeholder="الاسم بالعربية"
+                    value={form.nameAr}
+                    onChange={(e) => updateField("nameAr", e.target.value)}
+                    dir="rtl"
                   />
                 </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Label htmlFor="country-description">Description</Label>
-                  <TranslateButton
-                    text={form.description}
-                    onTranslated={(v, dir) => dir === "ar" ? updateField("descriptionAr", v) : updateField("descriptionAr", "")}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="country-code">ISO Code</Label>
+                    <Input
+                      id="country-code"
+                      className="uppercase"
+                      placeholder="ae"
+                      maxLength={2}
+                      value={form.code}
+                      onChange={(e) => updateField("code", e.target.value.toLowerCase())}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="country-slug">Slug</Label>
+                    <Input
+                      id="country-slug"
+                      value={form.slug}
+                      onChange={(e) => updateField("slug", toSlug(e.target.value))}
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <Label htmlFor="country-description">Description</Label>
+                    <TranslateButton
+                      text={form.description}
+                      onTranslated={(v, dir) => dir === "ar" ? updateField("descriptionAr", v) : updateField("descriptionAr", "")}
+                    />
+                  </div>
+                  <Textarea
+                    id="country-description"
+                    rows={3}
+                    value={form.description}
+                    onChange={(e) => updateField("description", e.target.value)}
                   />
                 </div>
-                <Textarea
-                  id="country-description"
-                  rows={3}
-                  value={form.description}
-                  onChange={(e) => updateField("description", e.target.value)}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="country-description-ar">Arabic Description</Label>
-                <Textarea
-                  id="country-description-ar"
-                  rows={3}
-                  placeholder="الوصف بالعربية"
-                  value={form.descriptionAr}
-                  onChange={(e) => updateField("descriptionAr", e.target.value)}
-                  dir="rtl"
-                />
-              </div>
-            </CardContent>
-          </Card>
+                <div className="space-y-2">
+                  <Label htmlFor="country-description-ar">Arabic Description</Label>
+                  <Textarea
+                    id="country-description-ar"
+                    rows={3}
+                    placeholder="الوصف بالعربية"
+                    value={form.descriptionAr}
+                    onChange={(e) => updateField("descriptionAr", e.target.value)}
+                    dir="rtl"
+                  />
+                </div>
+              </CardContent>
+            </Card>
 
-          <Card>
-            <CardHeader className="flex-row items-center justify-between">
-              <CardTitle>Country FAQs</CardTitle>
-              <Button type="button" size="sm" onClick={addCountryFaq}>
-                <Plus className="mr-1 h-4 w-4" /> Add FAQ
-              </Button>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              {form.faqs.length === 0 && (
-                <p className="text-sm text-muted-foreground">
-                  No FAQs yet. Add frequently asked questions about this country.
-                </p>
-              )}
-              {form.faqs.map((faq, faqIndex) => (
-                <div key={faqIndex} className="rounded-lg border p-3 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
-                    <div className="flex items-center gap-1">
-                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCountryFaq(faqIndex, -1)} disabled={faqIndex === 0}>
-                        <ChevronUp className="h-3 w-3" />
-                      </Button>
-                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCountryFaq(faqIndex, 1)} disabled={faqIndex === form.faqs.length - 1}>
-                        <ChevronDown className="h-3 w-3" />
-                      </Button>
-                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCountryFaq(faqIndex)}>
+            <Card>
+              <CardHeader className="flex-row items-center justify-between">
+                <CardTitle>Country FAQs</CardTitle>
+                <Button type="button" size="sm" onClick={addCountryFaq}>
+                  <Plus className="mr-1 h-4 w-4" /> Add FAQ
+                </Button>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {form.faqs.length === 0 && (
+                  <p className="text-sm text-muted-foreground">
+                    No FAQs yet. Add frequently asked questions about this country.
+                  </p>
+                )}
+                {form.faqs.map((faq, faqIndex) => (
+                  <div key={faqIndex} className="rounded-lg border p-3 space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
+                      <div className="flex items-center gap-1">
+                        <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCountryFaq(faqIndex, -1)} disabled={faqIndex === 0}>
+                          <ChevronUp className="h-3 w-3" />
+                        </Button>
+                        <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCountryFaq(faqIndex, 1)} disabled={faqIndex === form.faqs.length - 1}>
+                          <ChevronDown className="h-3 w-3" />
+                        </Button>
+                        <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCountryFaq(faqIndex)}>
+                          <Trash2 className="h-3 w-3 text-destructive" />
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Input
+                        placeholder="Question"
+                        value={faq.q}
+                        onChange={(e) => updateCountryFaq(faqIndex, "q", e.target.value)}
+                      />
+                      <TranslateButton
+                        text={faq.q}
+                        onTranslated={(v, dir) => {
+                          if (dir === "ar") updateCountryFaqAr(faqIndex, "q", v);
+                          else updateCountryFaqAr(faqIndex, "q", "");
+                        }}
+                      />
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Textarea
+                        rows={3}
+                        placeholder="Answer"
+                        value={faq.a}
+                        onChange={(e) => updateCountryFaq(faqIndex, "a", e.target.value)}
+                        className="flex-1"
+                      />
+                      <TranslateButton
+                        text={faq.a}
+                        onTranslated={(v, dir) => {
+                          if (dir === "ar") updateCountryFaqAr(faqIndex, "a", v);
+                          else updateCountryFaqAr(faqIndex, "a", "");
+                        }}
+                        className="mt-2"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="flex-row items-center justify-between">
+                <CardTitle>Country FAQs (Arabic)</CardTitle>
+                <Button type="button" size="sm" onClick={addCountryFaqAr}>
+                  <Plus className="mr-1 h-4 w-4" /> Add FAQ
+                </Button>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {form.faqsAr.length === 0 && (
+                  <p className="text-sm text-muted-foreground">
+                    No Arabic FAQs yet.
+                  </p>
+                )}
+                {form.faqsAr.map((faq, faqIndex) => (
+                  <div key={faqIndex} className="rounded-lg border p-3 space-y-3" dir="rtl">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
+                      <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCountryFaqAr(faqIndex)}>
                         <Trash2 className="h-3 w-3 text-destructive" />
                       </Button>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-2">
                     <Input
-                      placeholder="Question"
+                      placeholder="السؤال"
                       value={faq.q}
-                      onChange={(e) => updateCountryFaq(faqIndex, "q", e.target.value)}
+                      onChange={(e) => updateCountryFaqAr(faqIndex, "q", e.target.value)}
                     />
-                    <TranslateButton
-                      text={faq.q}
-                      onTranslated={(v, dir) => {
-                        if (dir === "ar") updateCountryFaqAr(faqIndex, "q", v);
-                        else updateCountryFaqAr(faqIndex, "q", "");
-                      }}
-                    />
-                  </div>
-                  <div className="flex items-start gap-2">
                     <Textarea
                       rows={3}
-                      placeholder="Answer"
+                      placeholder="الإجابة"
                       value={faq.a}
-                      onChange={(e) => updateCountryFaq(faqIndex, "a", e.target.value)}
-                      className="flex-1"
-                    />
-                    <TranslateButton
-                      text={faq.a}
-                      onTranslated={(v, dir) => {
-                        if (dir === "ar") updateCountryFaqAr(faqIndex, "a", v);
-                        else updateCountryFaqAr(faqIndex, "a", "");
-                      }}
-                      className="mt-2"
+                      onChange={(e) => updateCountryFaqAr(faqIndex, "a", e.target.value)}
                     />
                   </div>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
+                ))}
+              </CardContent>
+            </Card>
 
-          <Card>
-            <CardHeader className="flex-row items-center justify-between">
-              <CardTitle>Country FAQs (Arabic)</CardTitle>
-              <Button type="button" size="sm" onClick={addCountryFaqAr}>
-                <Plus className="mr-1 h-4 w-4" /> Add FAQ
-              </Button>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              {form.faqsAr.length === 0 && (
+            <Card>
+              <CardHeader>
+                <CardTitle>Page Templates</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  No Arabic FAQs yet.
+                  Sections that render this country&apos;s page. One template
+                  serves every language — Arabic pages show it translated
+                  automatically on the frontend.
                 </p>
-              )}
-              {form.faqsAr.map((faq, faqIndex) => (
-                <div key={faqIndex} className="rounded-lg border p-3 space-y-3" dir="rtl">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
-                    <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCountryFaqAr(faqIndex)}>
-                      <Trash2 className="h-3 w-3 text-destructive" />
-                    </Button>
-                  </div>
-                  <Input
-                    placeholder="السؤال"
-                    value={faq.q}
-                    onChange={(e) => updateCountryFaqAr(faqIndex, "q", e.target.value)}
+              </CardHeader>
+              <CardContent>
+                {isEdit && form.slug ? (
+                  <LocationTemplateEditorCard
+                    pageType="country"
+                    refKey={form.slug}
+                    scope="country"
+                    title="Country Page Template"
+                    description={`Renders the /locations/${form.slug} page`}
+                    faqContextItems={form.faqs}
                   />
-                  <Textarea
-                    rows={3}
-                    placeholder="الإجابة"
-                    value={faq.a}
-                    onChange={(e) => updateCountryFaqAr(faqIndex, "a", e.target.value)}
-                  />
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="flex-row items-center justify-between">
-              <CardTitle>Cities</CardTitle>
-              <Button type="button" size="sm" onClick={addCity}>
-                <Plus className="mr-1 h-4 w-4" /> Add City
-              </Button>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {form.cities.length === 0 && (
-                <p className="text-sm text-muted-foreground">
-                  No cities yet. Add the main cities you serve in this country.
-                </p>
-              )}
-
-              {form.cities.map((city, cityIndex) => {
-                const isOpen = expandedCity === cityIndex;
-                return (
-                  <div key={`${city._id ?? "new"}-${cityIndex}`} className="rounded-lg border">
-                    <div className="flex items-center gap-2 p-3">
-                      <Button
-                        type="button"
-                        variant="ghost"
-                        size="sm"
-                        className="h-7 w-7 p-0"
-                        onClick={() => setExpandedCity(isOpen ? null : cityIndex)}
-                      >
-                        {isOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-                      </Button>
-                      <div className="flex-1">
-                        <div className="font-medium">
-                          {city.name || <span className="text-muted-foreground">Unnamed city</span>}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          /{city.slug}
-                          {city.airports.length > 0 && ` · ${city.airports.length} airport${city.airports.length === 1 ? "" : "s"}`}
-                        </div>
-                      </div>
-                      <Button type="button" variant="ghost" size="sm" onClick={() => removeCity(cityIndex)}>
-                        <Trash2 className="h-4 w-4 text-destructive" />
-                      </Button>
-                    </div>
-
-                    {isOpen && (
-                      <div className="space-y-4 border-t p-4">
-                        <div className="grid sm:grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <div className="flex items-center gap-2">
-                              <Label>City name</Label>
-                              <TranslateButton
-                                text={city.name}
-                                onTranslated={(v, dir) => dir === "ar" ? updateCity(cityIndex, "nameAr", v) : updateCity(cityIndex, "nameAr", "")}
-                              />
-                            </div>
-                            <Input
-                              value={city.name}
-                              onChange={(e) => updateCity(cityIndex, "name", e.target.value)}
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <Label>Arabic Name</Label>
-                            <Input
-                              value={city.nameAr}
-                              onChange={(e) => updateCity(cityIndex, "nameAr", e.target.value)}
-                              dir="rtl"
-                              placeholder="الاسم بالعربية"
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <Label>Slug</Label>
-                            <Input
-                              value={city.slug}
-                              onChange={(e) => updateCity(cityIndex, "slug", toSlug(e.target.value))}
-                            />
-                          </div>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2">
-                            <Label>Description</Label>
-                            <TranslateButton
-                              text={city.description}
-                              onTranslated={(v, dir) => dir === "ar" ? updateCity(cityIndex, "descriptionAr", v) : updateCity(cityIndex, "descriptionAr", "")}
-                            />
-                          </div>
-                          <Textarea
-                            rows={2}
-                            value={city.description}
-                            onChange={(e) => updateCity(cityIndex, "description", e.target.value)}
-                            placeholder="City description"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label>Arabic Description</Label>
-                          <Textarea
-                            rows={2}
-                            value={city.descriptionAr}
-                            onChange={(e) => updateCity(cityIndex, "descriptionAr", e.target.value)}
-                            dir="rtl"
-                            placeholder="الوصف بالعربية"
-                          />
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="flex-1 space-y-2">
-                            <Label>Aliases (comma-separated)</Label>
-                            <Input
-                              value={(city.aliases ?? []).join(", ")}
-                              placeholder="e.g. Madinah, Madina"
-                              onChange={(e) => updateCityAliases(cityIndex, e.target.value)}
-                            />
-                          </div>
-                          <AvailabilityBadge
-                            type="city"
-                            slug={city.slug}
-                            aliases={city.aliases ?? []}
-                            countryCode={form.code}
-                            exclude={form._id}
-                          />
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <Label>Airports</Label>
-                          <Button type="button" size="sm" variant="outline" onClick={() => addAirport(cityIndex)}>
-                            <Plus className="mr-1 h-4 w-4" /> Add Airport
-                          </Button>
-                        </div>
-
-                        {city.airports.length === 0 && (
-                          <p className="text-sm text-muted-foreground">
-                            No airports for {city.name || "this city"}. Optional.
-                          </p>
-                        )}
-
-                        <div className="space-y-3">
-                          {city.airports.map((airport, airportIndex) => (
-                            <div key={`${airport._id ?? "new"}-${airportIndex}`} className="rounded-lg bg-muted/50 p-3">
-                              <div className="grid gap-4 sm:grid-cols-2">
-                                <div className="space-y-2">
-                                  <Label>Airport name</Label>
-                                  <Input
-                                    value={airport.name}
-                                    onChange={(e) => updateAirport(cityIndex, airportIndex, "name", e.target.value)}
-                                  />
-                                </div>
-                                <div className="space-y-2">
-                                  <Label>IATA</Label>
-                                  <Input
-                                    className="uppercase"
-                                    placeholder="DXB"
-                                    maxLength={3}
-                                    value={airport.iata}
-                                    onChange={(e) => updateAirport(cityIndex, airportIndex, "iata", e.target.value.toUpperCase())}
-                                  />
-                                </div>
-                                <div className="space-y-2">
-                                  <Label>Slug</Label>
-                                  <Input
-                                    value={airport.slug}
-                                    onChange={(e) => updateAirport(cityIndex, airportIndex, "slug", toSlug(e.target.value))}
-                                  />
-                                </div>
-                                <div className="space-y-2">
-                                  <Label>Type</Label>
-                                  <Select
-                                    value={airport.type}
-                                    onValueChange={(v) => v && updateAirport(cityIndex, airportIndex, "type", v)}
-                                  >
-                                    <SelectTrigger className="w-full"><SelectValue /></SelectTrigger>
-                                    <SelectContent>
-                                      {AIRPORT_TYPES.map((t) => (
-                                        <SelectItem key={t} value={t} className="capitalize">{t}</SelectItem>
-                                      ))}
-                                    </SelectContent>
-                                  </Select>
-                                </div>
-                                <div className="flex items-center gap-2 sm:col-span-2">
-                                  <div className="flex-1 space-y-2">
-                                    <Label>Aliases (comma-separated)</Label>
-                                    <Input
-                                      value={(airport.aliases ?? []).join(", ")}
-                                      placeholder="e.g. Doha Intl, Old Doha Airport"
-                                      onChange={(e) => updateAirportAliases(cityIndex, airportIndex, e.target.value)}
-                                    />
-                                  </div>
-                                  <AvailabilityBadge
-                                    type="airport"
-                                    slug={airport.slug}
-                                    aliases={airport.aliases ?? []}
-                                    countryCode={form.code}
-                                    citySlug={city.slug || toSlug(city.name)}
-                                    exclude={form._id}
-                                  />
-                                </div>
-                              </div>
-                              <div className="mt-3 flex items-center justify-end">
-                                <Button type="button" size="sm" variant="ghost" onClick={() => removeAirport(cityIndex, airportIndex)}>
-                                  <Trash2 className="mr-1 h-4 w-4 text-destructive" /> Remove
-                                </Button>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="space-y-3 pt-2">
-                          <div className="flex items-center justify-between">
-                            <Label>City FAQs</Label>
-                            <Button type="button" size="sm" variant="outline" onClick={() => addCityFaq(cityIndex)}>
-                              <Plus className="mr-1 h-4 w-4" /> Add FAQ
-                            </Button>
-                          </div>
-                          {city.faqs.length === 0 && (
-                            <p className="text-sm text-muted-foreground">
-                              No FAQs yet for {city.name || "this city"}.
-                            </p>
-                          )}
-                          {city.faqs.map((faq, faqIndex) => (
-                            <div key={faqIndex} className="rounded-lg bg-muted/50 p-3 space-y-3">
-                              <div className="flex items-center justify-between">
-                                <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
-                                <div className="flex items-center gap-1">
-                                  <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCityFaq(cityIndex, faqIndex, -1)} disabled={faqIndex === 0}>
-                                    <ChevronUp className="h-3 w-3" />
-                                  </Button>
-                                  <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => moveCityFaq(cityIndex, faqIndex, 1)} disabled={faqIndex === city.faqs.length - 1}>
-                                    <ChevronDown className="h-3 w-3" />
-                                  </Button>
-                                  <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCityFaq(cityIndex, faqIndex)}>
-                                    <Trash2 className="h-3 w-3 text-destructive" />
-                                  </Button>
-                                </div>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <Input
-                                  placeholder="Question"
-                                  value={faq.q}
-                                  onChange={(e) => updateCityFaq(cityIndex, faqIndex, "q", e.target.value)}
-                                />
-                                <TranslateButton
-                                  text={faq.q}
-                                  onTranslated={(v, dir) => dir === "ar" ? updateCityFaqAr(cityIndex, faqIndex, "q", v) : updateCityFaqAr(cityIndex, faqIndex, "q", "")}
-                                />
-                              </div>
-                              <div className="flex items-start gap-2">
-                                <Textarea
-                                  rows={3}
-                                  placeholder="Answer"
-                                  value={faq.a}
-                                  onChange={(e) => updateCityFaq(cityIndex, faqIndex, "a", e.target.value)}
-                                  className="flex-1"
-                                />
-                                <TranslateButton
-                                  text={faq.a}
-                                  onTranslated={(v, dir) => dir === "ar" ? updateCityFaqAr(cityIndex, faqIndex, "a", v) : updateCityFaqAr(cityIndex, faqIndex, "a", "")}
-                                  className="mt-2"
-                                />
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="space-y-3 pt-2">
-                          <div className="flex items-center justify-between">
-                            <Label>City FAQs (Arabic)</Label>
-                            <Button type="button" size="sm" variant="outline" onClick={() => addCityFaqAr(cityIndex)}>
-                              <Plus className="mr-1 h-4 w-4" /> Add FAQ
-                            </Button>
-                          </div>
-                          {city.faqsAr.length === 0 && (
-                            <p className="text-sm text-muted-foreground">
-                              No Arabic FAQs yet.
-                            </p>
-                          )}
-                          {city.faqsAr.map((faq, faqIndex) => (
-                            <div key={faqIndex} className="rounded-lg bg-muted/50 p-3 space-y-3" dir="rtl">
-                              <div className="flex items-center justify-between">
-                                <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
-                                <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => removeCityFaqAr(cityIndex, faqIndex)}>
-                                  <Trash2 className="h-3 w-3 text-destructive" />
-                                </Button>
-                              </div>
-                              <Input
-                                placeholder="السؤال"
-                                value={faq.q}
-                                onChange={(e) => updateCityFaqAr(cityIndex, faqIndex, "q", e.target.value)}
-                              />
-                              <Textarea
-                                rows={3}
-                                placeholder="الإجابة"
-                                value={faq.a}
-                                onChange={(e) => updateCityFaqAr(cityIndex, faqIndex, "a", e.target.value)}
-                              />
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* City Sections */}
-                        <div className="pt-4">
-                          <CitySectionEditor
-                            sections={city.sections || []}
-                            onChange={(sections) => updateCitySections(cityIndex, sections)}
-                          />
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="space-y-6">
-          <Card>
-            <CardHeader><CardTitle>Publish</CardTitle></CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label>Status</Label>
-                <Select
-                  value={form.status}
-                  onValueChange={(v) => v && updateField("status", v)}
-                >
-                  <SelectTrigger className="w-full"><SelectValue /></SelectTrigger>
-                  <SelectContent>
-                    {STATUS_OPTIONS.map((s) => (
-                      <SelectItem key={s} value={s} className="capitalize">{s}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="flex flex-wrap gap-1">
-                {form.status !== "published" && (
-                  <Badge variant="outline">Hidden from site</Badge>
+                ) : (
+                  <p className="text-sm text-muted-foreground">
+                    Save the country first — page templates are stored against its
+                    slug and appear here once the country exists.
+                  </p>
                 )}
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
 
-          <Card>
-            <CardHeader><CardTitle>Summary</CardTitle></CardHeader>
-            <CardContent className="space-y-2 text-sm text-muted-foreground">
-              <div className="flex justify-between">
-                <span>Cities</span>
-                <span className="font-medium text-foreground">{form.cities.length}</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Airports</span>
-                <span className="font-medium text-foreground">
-                  {form.cities.reduce((n, c) => n + c.airports.length, 0)}
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span>FAQs</span>
-                <span className="font-medium text-foreground">
-                  {form.faqs.length + form.cities.reduce((n, c) => n + c.faqs.length, 0)}
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span>Sections</span>
-                <span className="font-medium text-foreground">
-                  {form.cities.reduce((n, c) => n + (c.sections?.length || 0), 0)}
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span>Slug</span>
-                <span className="font-medium text-foreground break-all text-right">/{form.slug}</span>
-              </div>
-            </CardContent>
-          </Card>
+          <aside className="space-y-6">
+            <Card>
+              <CardHeader><CardTitle>Publish</CardTitle></CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <Label>Status</Label>
+                  <Select
+                    value={form.status}
+                    onValueChange={(v) => v && updateField("status", v)}
+                  >
+                    <SelectTrigger className="w-full"><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      {STATUS_OPTIONS.map((s) => (
+                        <SelectItem key={s} value={s} className="capitalize">{s}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="flex flex-wrap gap-1">
+                  {form.status !== "published" && (
+                    <Badge variant="outline">Hidden from site</Badge>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader><CardTitle>Summary</CardTitle></CardHeader>
+              <CardContent className="space-y-2 text-sm text-muted-foreground">
+                <div className="flex justify-between">
+                  <span>Cities</span>
+                  <span className="font-medium text-foreground">{form.cities.length}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Airports</span>
+                  <span className="font-medium text-foreground">
+                    {form.cities.reduce((n, c) => n + c.airports.length, 0)}
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span>FAQs</span>
+                  <span className="font-medium text-foreground">
+                    {form.faqs.length + form.cities.reduce((n, c) => n + c.faqs.length, 0)}
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Slug</span>
+                  <span className="font-medium text-foreground break-all text-right">/{form.slug}</span>
+                </div>
+                {isEdit && form._id && (
+                  <Button asChild variant="outline" className="w-full">
+                    <Link href={`/dashboard/locations/${form._id}/city`}>
+                      Manage Cities
+                    </Link>
+                  </Button>
+                )}
+              </CardContent>
+            </Card>
+          </aside>
         </div>
       </div>
     </form>
@@ -977,7 +524,7 @@ interface AvailabilityBadgeProps {
   exclude?: string;
 }
 
-function AvailabilityBadge({
+export function AvailabilityBadge({
   type,
   slug,
   aliases,

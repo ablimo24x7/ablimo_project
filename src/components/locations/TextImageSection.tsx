@@ -133,7 +133,7 @@ function ElementRenderer({ element }: ElementRendererProps) {
     case "tag":
       return (
         <span
-          className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-abGold/20 text-abGold rounded-full"
+          className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-abBlue/20 text-abBlue rounded-full"
           style={style}
         >
           {element.content}
@@ -143,7 +143,7 @@ function ElementRenderer({ element }: ElementRendererProps) {
     case "label":
       return (
         <span
-          className="inline-block text-sm font-medium text-abGold"
+          className="inline-block text-sm font-medium text-abBlue"
           style={style}
         >
           {element.content}
@@ -183,7 +183,7 @@ function ElementRenderer({ element }: ElementRendererProps) {
           <Link
             href={element.url || "#"}
             target={element.target}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-abGold text-white font-semibold rounded-lg hover:bg-abGold/90 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-abBlue text-white font-semibold rounded-lg hover:bg-abBlue/90 transition-colors"
           >
             {element.icon?.position === "left" && element.icon?.name && (
               <span className="w-4 h-4">{/* Icon placeholder */}</span>

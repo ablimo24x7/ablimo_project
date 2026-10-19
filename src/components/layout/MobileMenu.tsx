@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { type Locale } from "@/app/[lang]/dictionaries";
+import { type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import type { NavServiceItem } from "@/lib/services";
 import HeaderSocialLinks from "./HeaderSocialLinks";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -25,7 +25,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
     { label: dd.technology.affiliateLogin, href: "#" },
     { label: dd.technology.chauffeurPortal, href: "#" },
     { label: dd.technology.fleetPortal, href: "#" },
-    { label: dd.technology.chauffeurPartnerPortal, href: `/${lang}/chauffeur-partner-portal` },
+    { label: dd.technology.chauffeurPartnerPortal, href: `${localeBase(lang)}/chauffeur-partner-portal` },
   ];
 
   const tourismLinks = [
@@ -39,10 +39,10 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
   ];
 
   const corporateLinks = [
-    { label: dd.corporate.overview, href: `/${lang}/business` },
+    { label: dd.corporate.overview, href: `${localeBase(lang)}/business` },
     { label: dd.corporate.eventMice, href: "#" },
     { label: dd.corporate.vipChauffeur, href: "#" },
-    { label: dd.corporate.cityToCity, href: `/${lang}/city-to-city` },
+    { label: dd.corporate.cityToCity, href: `${localeBase(lang)}/city-to-city` },
     { label: dd.corporate.corporateShuttle, href: "#" },
     { label: dd.corporate.staffTransport, href: "#" },
     { label: dd.corporate.schoolTransport, href: "#" },
@@ -128,7 +128,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
       {/* Hamburger button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-gray-300 hover:text-white focus:outline-none cursor-pointer"
+        className="text-gray-300 hover:text-abBlue focus:outline-none cursor-pointer"
       >
         {isOpen ? (
           <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
           {/* Close button */}
           <div className="flex justify-between items-center px-6 py-5 border-b border-gray-800">
             <Link
-              href={`/${lang}`}
+              href={`${localeHome(lang)}`}
               className="text-white text-2xl font-bold tracking-widest uppercase"
               onClick={() => setIsOpen(false)}
             >
@@ -153,7 +153,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
             </Link>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-gray-300 hover:text-white cursor-pointer p-1"
+              className="text-gray-300 hover:text-abBlue cursor-pointer p-1"
             >
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -165,9 +165,9 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
           <nav className="flex flex-col px-6 py-4 gap-1">
             {/* Home link */}
             <Link
-              href={`/${lang}`}
+              href={`${localeHome(lang)}`}
               onClick={() => setIsOpen(false)}
-              className="text-gray-300 hover:text-abGold text-lg font-medium py-3 border-b border-gray-800 transition-colors"
+              className="text-gray-300 hover:text-abBlue text-lg font-medium py-3 border-b border-gray-800 transition-colors"
             >
               {nav.home}
             </Link>
@@ -176,7 +176,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
             <div className="border-b border-gray-800">
               <button
                 onClick={() => toggleDropdown("solutions")}
-                className="flex items-center justify-between w-full text-left text-gray-300 hover:text-abGold text-lg font-medium py-3 cursor-pointer transition-colors"
+                className="flex items-center justify-between w-full text-left text-gray-300 hover:text-abBlue text-lg font-medium py-3 cursor-pointer transition-colors"
               >
                 {nav.ourSolution}
                 <svg
@@ -194,7 +194,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
                     <div key={section.id}>
                       <button
                         onClick={() => toggleDropdown(`solution-${section.id}`)}
-                        className="flex items-center justify-between w-full text-left text-gray-400 hover:text-abGold text-base font-medium py-2.5 cursor-pointer transition-colors"
+                        className="flex items-center justify-between w-full text-left text-gray-400 hover:text-abBlue text-base font-medium py-2.5 cursor-pointer transition-colors"
                       >
                         {section.label}
                         <svg
@@ -213,7 +213,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
                               key={item.label}
                               href={item.href}
                               onClick={() => setIsOpen(false)}
-                              className="block py-2 text-gray-500 hover:text-abGold transition-colors text-sm"
+                              className="block py-2 text-gray-500 hover:text-abBlue transition-colors text-sm"
                             >
                               {item.label}
                             </Link>
@@ -231,7 +231,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
               <div key={section.id} className="border-b border-gray-800">
                 <button
                   onClick={() => toggleDropdown(section.id)}
-                  className="flex items-center justify-between w-full text-left text-gray-300 hover:text-abGold text-lg font-medium py-3 cursor-pointer transition-colors"
+                  className="flex items-center justify-between w-full text-left text-gray-300 hover:text-abBlue text-lg font-medium py-3 cursor-pointer transition-colors"
                 >
                   {section.label}
                   <svg
@@ -250,7 +250,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
                         key={item.label}
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block py-2.5 text-gray-500 hover:text-abGold transition-colors"
+                        className="block py-2.5 text-gray-500 hover:text-abBlue transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -264,7 +264,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
             <div className="border-b border-gray-800">
               <button
                 onClick={() => toggleDropdown("technology")}
-                className="flex items-center justify-between w-full text-left text-gray-300 hover:text-abGold text-lg font-medium py-3 cursor-pointer transition-colors"
+                className="flex items-center justify-between w-full text-left text-gray-300 hover:text-abBlue text-lg font-medium py-3 cursor-pointer transition-colors"
               >
                 <span className="flex items-center gap-2">
                   {nav.technology}
@@ -285,7 +285,7 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
                       key={item.label}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="block py-2.5 text-gray-500 hover:text-abGold transition-colors"
+                      className="block py-2.5 text-gray-500 hover:text-abBlue transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -300,14 +300,14 @@ export default function MobileMenu({ dict, lang, dbServiceLinks }: MobileMenuPro
               <Link
                 href="mailto:hello@ab.limo"
                 onClick={() => setIsOpen(false)}
-                className="block text-center text-gray-300 hover:text-abGold text-sm font-medium py-3 border border-gray-700 rounded transition-colors"
+                className="block text-center text-gray-300 hover:text-abBlue text-sm font-medium py-3 border border-gray-700 rounded transition-colors"
               >
                 hello@ab.limo
               </Link>
               <Link
-                href={`/${lang}`}
+                href={`${localeHome(lang)}`}
                 onClick={() => setIsOpen(false)}
-                className="block text-center bg-transparent border border-abGold text-abGold hover:bg-abGold hover:text-white px-5 py-3 rounded text-sm font-semibold transition-colors"
+                className="block text-center bg-transparent border border-abBlue text-abBlue hover:bg-abBlue hover:border-abBlue hover:text-white px-5 py-3 rounded text-sm font-semibold transition-colors"
               >
                 {nav.bookNow}
               </Link>

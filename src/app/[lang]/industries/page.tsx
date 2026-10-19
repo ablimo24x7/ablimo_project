@@ -6,6 +6,8 @@ import {
   hasLocale,
   defaultLocale,
   type Locale,
+  localeBase,
+  localeHome,
 } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
@@ -88,15 +90,15 @@ export default async function IndustriesPage({
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#292a30]" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8">
-          <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abGold/10 border border-abGold/30 mb-6">
-            <span className="w-2 h-2 rounded-full bg-abGold animate-pulse"></span>
-            <span className="text-abGold text-xs font-bold tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abBlue/10 border border-abBlue/30 mb-6">
+            <span className="w-2 h-2 rounded-full bg-abBlue animate-pulse"></span>
+            <span className="text-abBlue text-xs font-bold tracking-widest uppercase">
               {dict.industries.hero.badge}
             </span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight max-w-3xl">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight max-w-3xl text-white">
             {dict.industries.hero.titleStart}{" "}
-            <span className="text-abGold">{dict.industries.hero.titleHighlight}</span>
+            <span className="text-abBlue">{dict.industries.hero.titleHighlight}</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
             {dict.industries.hero.desc}
@@ -107,7 +109,7 @@ export default async function IndustriesPage({
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-8 py-6">
         <nav className="text-sm text-gray-400">
-          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+          <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
             {dict.industries.breadcrumb.home}
           </Link>
           <span className="mx-2">/</span>
@@ -129,7 +131,7 @@ export default async function IndustriesPage({
           {categories.map((industry) => (
             <Link
               key={industry.slug}
-              href={`/${lang}/industries/${industry.slug}`}
+              href={`${localeBase(lang)}/industries/${industry.slug}`}
               className="group bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
             >
               <div className="relative h-56 overflow-hidden">
@@ -140,14 +142,14 @@ export default async function IndustriesPage({
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1c1d21]/90 via-transparent to-transparent" />
-                <span className="absolute top-4 left-4 bg-abGold text-black text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                <span className="absolute top-4 left-4 bg-abBlue text-black text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                   {industry.tag}
                 </span>
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-xl font-bold">{industry.title}</h3>
-                  <span className="text-abGold text-xl group-hover:translate-x-1 transition-transform">
+                  <span className="text-abBlue text-xl group-hover:translate-x-1 transition-transform">
                     &rarr;
                   </span>
                 </div>
@@ -172,7 +174,7 @@ export default async function IndustriesPage({
                 key={index}
                 className="bg-[#292a30] p-8 rounded-2xl hover:bg-[#2a2c35] transition-colors"
               >
-                <div className="text-abGold mb-4">{pillar.icon}</div>
+                <div className="text-abBlue mb-4">{pillar.icon}</div>
                 <h3 className="text-xl font-bold mb-3">
                   {dict.industries.pillars.items[index].title}
                 </h3>
@@ -194,8 +196,8 @@ export default async function IndustriesPage({
           {dict.industries.cta.desc}
         </p>
         <Link
-          href={`/${lang}/industries/corporate-enterprise`}
-          className="inline-block bg-abGold hover:bg-yellow-600 text-white px-8 py-3 text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abGold/20"
+          href={`${localeBase(lang)}/industries/corporate-enterprise`}
+          className="inline-block bg-abBlue hover:bg-abServiceBlue text-white px-8 py-3 text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abBlue/20"
         >
           {dict.industries.cta.label}
         </Link>

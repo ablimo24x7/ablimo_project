@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
+import { getDictionary, hasLocale, defaultLocale, type Locale, localeHome } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -10,10 +10,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Sustainability - Driving a Greener Future",
-    description:
-      "AB.Limo is committed to sustainability through electric vehicles, carbon offsetting, and net-zero initiatives. Learn about our journey towards a greener future.",
+    title: isAr ? dict.sustainability.meta.title : "Sustainability - Driving a Greener Future",
+    description: isAr
+      ? dict.sustainability.meta.description
+      : "AB.Limo is committed to sustainability through electric vehicles, carbon offsetting, and net-zero initiatives. Learn about our journey towards a greener future.",
     path: "/sustainability",
     lang,
     keywords: "AB.Limo sustainability, green transportation, electric vehicles, carbon offset, net zero, eco-friendly limousine",
@@ -84,13 +88,13 @@ export default async function SustainabilityPage({
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/70 via-[#292a30]/50 to-[#292a30]" />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="flex items-center justify-center gap-2 text-sm text-gray-300 mb-4">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {dict.sustainability.breadcrumb.home}
             </Link>
             <span>/</span>
             <span className="text-white">{dict.sustainability.breadcrumb.sustainability}</span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
             {dict.sustainability.hero.heading1}
             <br />
             <span className="italic font-light text-gray-300">{dict.sustainability.hero.heading2}</span>

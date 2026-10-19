@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { fetchAndTranslateArticle, getRelatedArticles } from "@/lib/blog";
 import { BlogArticleLayout } from "@/components/blog/BlogArticleLayout";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
-import { hasLocale, defaultLocale, getDictionary } from "@/app/[lang]/dictionaries";
+import { hasLocale, defaultLocale, getDictionary, localeBase } from "@/app/[lang]/dictionaries";
 import CityPageRenderer from "./CityPageRenderer";
 import { generateSeoMetadata } from "@/lib/seo";
 
@@ -26,9 +26,9 @@ function getBreadcrumbKey(templateType: string, dict: { countries?: string; citi
 
 function getViewAllHref(templateType: string, lang: string, serviceSlug?: string, countrySlug?: string): string {
   switch (templateType) {
-    case "service-country": return serviceSlug ? `/${lang}/services/${serviceSlug}` : `/${lang}/blogs`;
-    case "service-city": return serviceSlug && countrySlug ? `/${lang}/services/${serviceSlug}/${countrySlug}` : `/${lang}/blogs`;
-    default: return `/${lang}/blogs`;
+    case "service-country": return serviceSlug ? `${localeBase(lang)}/services/${serviceSlug}` : `${localeBase(lang)}/blogs`;
+    case "service-city": return serviceSlug && countrySlug ? `${localeBase(lang)}/services/${serviceSlug}/${countrySlug}` : `${localeBase(lang)}/blogs`;
+    default: return `${localeBase(lang)}/blogs`;
   }
 }
 
@@ -92,7 +92,8 @@ export default async function ServiceArticlePage({ params, searchParams }: Props
       <CityPageRenderer
         sections={article.sections as unknown as import("@/components/services/sections/section-types").PageSection[]}
         serviceName={article.title}
-        serviceUrl={`/${lang}/services/${slug.join("/")}`}
+        serviceUrl={`${localeBase(lang)}/services/${slug.join("/")}`}
+        whatsappNumber={article.whatsappNumber || ""}
       />
     );
   }
@@ -170,8 +171,8 @@ function getTranslatedSideInfo(
             <h2 className="text-xl font-serif font-bold text-white mb-4">{title}</h2>
             <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
             <a
-              href={`/${lang}/services/${article.serviceSlug || "chauffeur-vip"}/${article.countrySlug || article.country?.toLowerCase().replace(/\s+/g, "-")}`}
-              className="inline-flex items-center gap-2 mt-4 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
+              href={`${localeBase(lang)}/services/${article.serviceSlug || "chauffeur-vip"}/${article.countrySlug || article.country?.toLowerCase().replace(/\s+/g, "-")}`}
+              className="inline-flex items-center gap-2 mt-4 text-abBlue hover:text-abBlue/80 font-medium transition-colors text-sm"
             >
               {linkText} {isArabic ? "←" : "→"}
             </a>
@@ -193,8 +194,8 @@ function getTranslatedSideInfo(
             <div className="flex flex-wrap gap-3 mt-4">
               {article.serviceSlug && article.countrySlug && article.citySlug && (
                 <a
-                  href={`/${lang}/services/${article.serviceSlug}/${article.countrySlug}/${article.citySlug}`}
-                  className="inline-flex items-center gap-2 text-abGold hover:text-abGold/80 font-medium transition-colors text-sm"
+                  href={`${localeBase(lang)}/services/${article.serviceSlug}/${article.countrySlug}/${article.citySlug}`}
+                  className="inline-flex items-center gap-2 text-abBlue hover:text-abBlue/80 font-medium transition-colors text-sm"
                 >
                   {detailText} {isArabic ? "←" : "→"}
                 </a>

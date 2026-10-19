@@ -221,6 +221,34 @@ export const serviceDictKeyBySlug: Record<string, string> = {
 };
 
 /**
+ * Structures only exist for the 6 core verticals. Every other dictionary slug
+ * reuses the structure of its core vertical, so dictionary-backed service
+ * pages never crash on a missing structure.
+ */
+const STRUCTURE_SLUG_BY_DICT_KEY: Record<string, string> = {};
+for (const [slug, dictKey] of Object.entries(serviceDictKeyBySlug)) {
+  if (serviceStructures[slug] && !(dictKey in STRUCTURE_SLUG_BY_DICT_KEY)) {
+    STRUCTURE_SLUG_BY_DICT_KEY[dictKey] = slug;
+  }
+}
+
+const STRUCTURE_BY_DICT_KEY_FALLBACK: Record<string, string> = {
+  religiousTourism: "tourism-transportation",
+};
+
+export function getStructureForService(
+  slug: string,
+  dictKey?: string
+): ServiceStructure | undefined {
+  const direct = serviceStructures[slug];
+  if (direct) return direct;
+  if (!dictKey) return undefined;
+  const mapped =
+    STRUCTURE_SLUG_BY_DICT_KEY[dictKey] ?? STRUCTURE_BY_DICT_KEY_FALLBACK[dictKey];
+  return mapped ? serviceStructures[mapped] : undefined;
+}
+
+/**
  * Fallback card image per service used by the services index page when the
  * service has no hero / card image of its own.
  */

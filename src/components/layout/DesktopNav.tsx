@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { type Locale } from "@/app/[lang]/dictionaries";
+import { type Locale, localeBase } from "@/app/[lang]/dictionaries";
 import type { NavServiceItem } from "@/lib/services";
 import NavDropdown from "./NavDropdown";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -23,7 +23,7 @@ export default function DesktopNav({ dict, lang, dbServiceLinks }: DesktopNavPro
     { label: dd.technology.affiliateLogin, href: "#" },
     { label: dd.technology.chauffeurPortal, href: "#" },
     { label: dd.technology.fleetPortal, href: "#" },
-    { label: dd.technology.chauffeurPartnerPortal, href: `/${lang}/chauffeur-partner-portal` },
+    { label: dd.technology.chauffeurPartnerPortal, href: `${localeBase(lang)}/chauffeur-partner-portal` },
   ];
 
   const tourismLinks = [
@@ -37,10 +37,10 @@ export default function DesktopNav({ dict, lang, dbServiceLinks }: DesktopNavPro
   ];
 
   const corporateLinks = [
-    { label: dd.corporate.overview, href: `/${lang}/business` },
+    { label: dd.corporate.overview, href: `${localeBase(lang)}/business` },
     { label: dd.corporate.eventMice, href: "#" },
     { label: dd.corporate.vipChauffeur, href: "#" },
-    { label: dd.corporate.cityToCity, href: `/${lang}/city-to-city` },
+    { label: dd.corporate.cityToCity, href: `${localeBase(lang)}/city-to-city` },
     { label: dd.corporate.corporateShuttle, href: "#" },
     { label: dd.corporate.staffTransport, href: "#" },
     { label: dd.corporate.schoolTransport, href: "#" },

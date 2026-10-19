@@ -116,7 +116,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
         onClick={onToggle}
         onMouseEnter={handleButtonMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={`flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-abGold transition-colors cursor-pointer ${triggerClassName ?? ""}`}
+        className={`flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-abBlue transition-colors cursor-pointer ${triggerClassName ?? ""}`}
       >
         {children}
         {label}
@@ -125,7 +125,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
 
       {isOpen && (
         <div
-          className={`absolute top-full ${isRtl ? "right-0" : "left-0"} bg-white shadow-2xl rounded-b-xl border-t-[3px] border-abGold z-50 ${
+          className={`absolute top-full ${isRtl ? "right-0" : "left-0"} bg-white shadow-2xl rounded-b-xl border-t-[3px] border-abBlue z-50 ${
             groups
               ? `flex min-w-[280px]`
               : columns > 1
@@ -145,8 +145,8 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
                     onMouseLeave={handleGroupMouseLeave}
                     className={`px-5 py-3 text-sm cursor-pointer transition-colors ${
                       hoveredGroup?.title === group.title
-                        ? "bg-gray-50 text-abGold"
-                        : "text-gray-900 hover:bg-gray-50 hover:text-abGold"
+                        ? "bg-gray-50 text-abBlue"
+                        : "text-gray-900 hover:bg-gray-50 hover:text-abBlue"
                     }`}
                   >
                     <div className="flex items-center justify-between font-semibold">
@@ -167,7 +167,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
                         key={item.href + item.label}
                         href={item.href}
                         onClick={onClose}
-                        className="block px-5 py-3 text-sm font-semibold text-gray-900 hover:text-abGold hover:bg-gray-50 transition-colors"
+                        className="block px-5 py-3 text-sm font-semibold text-gray-900 hover:text-abBlue hover:bg-gray-50 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -182,7 +182,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
                 key={item.href + item.label}
                 href={item.href}
                 onClick={onClose}
-                className="block px-5 py-3 text-sm font-semibold text-gray-900 hover:text-abGold hover:bg-gray-50 transition-colors"
+                className="block px-5 py-3 text-sm font-semibold text-gray-900 hover:text-abBlue hover:bg-gray-50 transition-colors"
               >
                 {item.label}
               </Link>

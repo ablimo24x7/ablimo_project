@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import mongoose from "mongoose";
 import { connectDB } from "@/lib/db";
@@ -5,22 +6,11 @@ import { Country } from "@/lib/models/Country";
 import { isDatabaseEnabled, toCountryShape } from "@/lib/locationData";
 import { validateCountry } from "@/lib/iso3166";
 import { toSlug } from "@/lib/slug";
+import { parseJsonBody } from "@/lib/api/errors";
+import { CountryUpdateSchema } from "@/lib/validations/location";
 
 interface Ctx {
   params: Promise<{ id: string }>;
-}
-
-interface CountryUpdateInput {
-  name?: string;
-  nameAr?: string;
-  code?: string;
-  slug?: string;
-  description?: string;
-  descriptionAr?: string;
-  status?: string;
-  cities?: unknown;
-  faqs?: Array<{ q?: string; a?: string }>;
-  faqsAr?: Array<{ q?: string; a?: string }>;
 }
 
 export async function GET(_req: NextRequest, { params }: Ctx) {
@@ -35,6 +25,8 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
 }
 
 export async function PUT(req: NextRequest, { params }: Ctx) {
+  const auth = await authorizeApi("update");
+  if (!auth.ok) return auth.response;
   if (!isDatabaseEnabled()) {
     return NextResponse.json({ error: "Database is disabled." }, { status: 400 });
   }
@@ -43,13 +35,16 @@ export async function PUT(req: NextRequest, { params }: Ctx) {
     return NextResponse.json({ error: "Invalid id" }, { status: 400 });
   }
 
-  let body: unknown;
-  try {
-    body = await req.json();
-  } catch {
-    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+  const body = await parseJsonBody(req);
+  if (body instanceof NextResponse) return body;
+  const parsed = CountryUpdateSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: "Validation error", details: parsed.error.flatten() },
+      { status: 400 }
+    );
   }
-  const data = body as CountryUpdateInput;
+  const data = parsed.data;
 
   await connectDB();
 
@@ -107,6 +102,8 @@ export async function PUT(req: NextRequest, { params }: Ctx) {
 }
 
 export async function DELETE(_req: NextRequest, { params }: Ctx) {
+  const auth = await authorizeApi("delete");
+  if (!auth.ok) return auth.response;
   if (!isDatabaseEnabled()) {
     return NextResponse.json({ error: "Database is disabled." }, { status: 400 });
   }

@@ -22,7 +22,10 @@ const invitationSchema = new Schema(
     invitedBy: {
       type: Schema.Types.ObjectId,
       ref: "User",
-      required: true
+    },
+    acceptedAt: {
+      type: Date,
+      default: null,
     },
     expiresAt: {
       type: Date,

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { getIcon } from "./section-icons";
+import { trackEvent } from "@/lib/analytics";
 import type { PageSection } from "./section-types";
 
 interface ContactFormSectionProps {
@@ -35,6 +36,10 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
     setTimeout(() => {
       setSubmitting(false);
       setSubmitted(true);
+      trackEvent("lead_captured", {
+        form_id: section.id || "corporate-account",
+        form_location: "corporate_account_section",
+      });
     }, 1200);
   };
 
@@ -45,7 +50,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
         <div className={`flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4 ${textAlignClass}`}>
           <div>
             {c.eyebrow && (
-              <h2 className="text-sm font-bold tracking-widest text-abGold uppercase mb-2">
+              <h2 className="text-sm font-bold tracking-widest text-abServiceBlue uppercase mb-2">
                 {c.eyebrow}
               </h2>
             )}
@@ -56,7 +61,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
           <div className="hidden sm:block">
             <a
               href="mailto:sales@ab.limo"
-              className="text-white hover:text-abGold transition-colors text-sm font-semibold flex items-center"
+              className="text-white hover:text-abServiceBlue transition-colors text-sm font-semibold flex items-center"
             >
               {getIcon("Mail", "w-4 h-4 mr-2")} Contact Sales Directly
             </a>
@@ -67,10 +72,10 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
         <div className="bg-abBlack rounded-2xl shadow-2xl border border-gray-800 overflow-hidden">
           {/* Form Header */}
           <div className="bg-gray-900/50 px-8 py-10 text-center relative overflow-hidden border-b border-gray-800">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-abGold via-yellow-400 to-abGold" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-abServiceBlue via-sky-400 to-abServiceBlue" />
             {c.icon && (
               <div className="mb-4">
-                {getIcon(c.icon, "w-10 h-10 text-abGold mx-auto")}
+                {getIcon(c.icon, "w-10 h-10 text-abServiceBlue mx-auto")}
               </div>
             )}
             <h2 className="text-2xl font-bold text-white mb-2">Corporate Account Application</h2>
@@ -87,14 +92,14 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
                 <input
                   type="text"
                   required
-                  className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abGold focus:ring-1 focus:ring-abGold outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abServiceBlue focus:ring-1 focus:ring-abServiceBlue outline-none transition-colors"
                 />
               </div>
               <div>
                 <label className="block text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">
                   Primary Industry *
                 </label>
-                <select className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abGold focus:ring-1 focus:ring-abGold outline-none transition-colors appearance-none">
+                <select className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abServiceBlue focus:ring-1 focus:ring-abServiceBlue outline-none transition-colors appearance-none">
                   <option>Oil & Gas</option>
                   <option>Government & Ministries</option>
                   <option>Corporate & Finance</option>
@@ -113,7 +118,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
                 <input
                   type="text"
                   required
-                  className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abGold focus:ring-1 focus:ring-abGold outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abServiceBlue focus:ring-1 focus:ring-abServiceBlue outline-none transition-colors"
                 />
               </div>
               <div>
@@ -123,7 +128,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
                 <input
                   type="email"
                   required
-                  className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abGold focus:ring-1 focus:ring-abGold outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abServiceBlue focus:ring-1 focus:ring-abServiceBlue outline-none transition-colors"
                 />
               </div>
             </div>
@@ -141,7 +146,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
                     >
                       <input
                         type="checkbox"
-                        className="text-abGold focus:ring-abGold border-gray-600 rounded bg-black"
+                        className="text-abServiceBlue focus:ring-abServiceBlue border-gray-600 rounded bg-black"
                       />
                       <span className="text-sm font-medium text-gray-300">{opt}</span>
                     </label>
@@ -154,7 +159,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
               <label className="block text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">
                 Est. Monthly Volume (Trips)
               </label>
-              <select className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abGold focus:ring-1 focus:ring-abGold outline-none transition-colors appearance-none">
+              <select className="w-full px-4 py-3 bg-abDarkGray border border-gray-700 text-white rounded focus:bg-black focus:border-abServiceBlue focus:ring-1 focus:ring-abServiceBlue outline-none transition-colors appearance-none">
                 <option>10 - 50 Trips</option>
                 <option>51 - 200 Trips</option>
                 <option>201 - 500 Trips</option>
@@ -166,7 +171,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-abGold hover:bg-yellow-600 text-white font-bold py-4 px-6 rounded transition-colors shadow-lg shadow-abGold/10 text-lg flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full bg-abServiceBlue hover:bg-sky-700 text-white font-bold py-4 px-6 rounded transition-colors shadow-lg shadow-abServiceBlue/10 text-lg flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed"
               >
                 {submitting ? (
                   <>
@@ -207,7 +212,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
         <div className="mt-8 text-center sm:hidden">
           <a
             href="mailto:sales@ab.limo"
-            className="text-abGold hover:text-white transition-colors text-sm font-semibold flex items-center justify-center"
+            className="text-abServiceBlue hover:text-white transition-colors text-sm font-semibold flex items-center justify-center"
           >
             {getIcon("Mail", "w-4 h-4 mr-2")} Contact Sales Directly
           </a>

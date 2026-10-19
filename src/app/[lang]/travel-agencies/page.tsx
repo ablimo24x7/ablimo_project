@@ -7,6 +7,7 @@ import {
   defaultLocale,
   type Locale,
   type Dictionary,
+  localeHome,
 } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 
@@ -16,10 +17,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Global Chauffeur Services for Travel Agencies",
-    description:
-      "Partner with AB.Limo to offer your clients world-class chauffeur services. Earn commission and boost your brand reputation.",
+    title: isAr ? dict.travelAgencies.meta.title : "Global Chauffeur Services for Travel Agencies",
+    description: isAr
+      ? dict.travelAgencies.meta.description
+      : "Partner with AB.Limo to offer your clients world-class chauffeur services. Earn commission and boost your brand reputation.",
     path: "/travel-agencies",
     lang,
     keywords: "travel agency chauffeur, AB.Limo travel partner, wholesale chauffeur service, white label transportation, travel agency partnership",
@@ -69,12 +74,12 @@ export default async function TravelAgenciesPage({
         <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/80 via-[#292a30]/60 to-[#292a30]" />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <p className="text-gray-400 text-sm tracking-widest uppercase mb-4">
-            <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
               {t.breadcrumb.home}
             </Link>{" "}
             &gt; {t.breadcrumb.travelAgencies}
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
             {t.hero.heading}
           </h1>
         </div>

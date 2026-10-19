@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { SimpleCategory } from "@/lib/models/SimpleCategory";
@@ -48,6 +49,8 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  const auth = await authorizeApi("create");
+  if (!auth.ok) return auth.response;
   await connectDB();
   const body = await parseJsonBody(req);
   if (body instanceof NextResponse) return body;

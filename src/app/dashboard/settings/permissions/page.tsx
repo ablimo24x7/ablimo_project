@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
@@ -14,7 +15,9 @@ import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { Shield, Plus, Trash2 } from "lucide-react";
+import { Shield, Plus, Trash2, ShieldAlert } from "lucide-react";
+import { usePermissions } from "@/hooks/use-permissions";
+import { BUILTIN_ROLE_ACTIONS } from "@/lib/auth/permissions";
 
 type RolePolicy = {
   _id: string;
@@ -41,12 +44,14 @@ const availablePermissions = [
 
 export default function PermissionsPage() {
   const queryClient = useQueryClient();
+  const { status, isAuthenticated, canManage } = usePermissions();
   const [addOpen, setAddOpen] = useState(false);
   const [newRole, setNewRole] = useState("");
   const [newPerms, setNewPerms] = useState<string[]>([]);
 
   const { data, isLoading } = useQuery({
     queryKey: ["role-policies"],
+    enabled: canManage,
     queryFn: async () => {
       const res = await fetch("/api/role-policies");
       if (!res.ok) return { items: [] };
@@ -94,6 +99,43 @@ export default function PermissionsPage() {
     );
   };
 
+  if (status === "loading") {
+    return (
+      <div className="space-y-6 px-4 lg:px-6">
+        <Skeleton className="h-8 w-48" />
+        <Skeleton className="h-64 w-full" />
+      </div>
+    );
+  }
+
+  if (!isAuthenticated || !canManage) {
+    return (
+      <div className="px-4 lg:px-6">
+        <div className="flex max-w-lg items-start gap-3 rounded-lg border bg-muted/40 p-6">
+          <ShieldAlert className="mt-0.5 h-5 w-5 text-muted-foreground" />
+          <div className="text-sm text-muted-foreground">
+            Permission settings are restricted to administrators.
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const defaultSummaries = (Object.keys(BUILTIN_ROLE_ACTIONS) as string[])
+    .filter((r) => r !== "viewer")
+    .map((role) => {
+      const actions = BUILTIN_ROLE_ACTIONS[role];
+      const desc =
+        role === "super_admin"
+          ? "Everything, including users and permissions"
+          : role === "admin"
+          ? "Full access to all features"
+          : actions.includes("create") || actions.includes("delete")
+          ? "Can create, edit and delete content"
+          : "Edit existing content only (no create/delete)";
+      return { role, desc };
+    });
+
   return (
     <div className="space-y-6 px-4 lg:px-6">
       <div className="flex items-center justify-between">
@@ -105,9 +147,11 @@ export default function PermissionsPage() {
             Manage role-based access control policies.
           </p>
         </div>
-        <Button onClick={() => setAddOpen(true)}>
-          <Plus className="mr-2 h-4 w-4" /> Add Role Policy
-        </Button>
+        {canManage && (
+          <Button onClick={() => setAddOpen(true)}>
+            <Plus className="mr-2 h-4 w-4" /> Add Role Policy
+          </Button>
+        )}
       </div>
 
       <Card>
@@ -139,9 +183,11 @@ export default function PermissionsPage() {
                       </div>
                     </TableCell>
                     <TableCell>
-                      <Button variant="ghost" size="sm" onClick={() => deleteMutation.mutate(p._id)}>
-                        <Trash2 className="h-4 w-4 text-destructive" />
-                      </Button>
+                      {canManage && (
+                        <Button variant="ghost" size="sm" onClick={() => deleteMutation.mutate(p._id)}>
+                          <Trash2 className="h-4 w-4 text-destructive" />
+                        </Button>
+                      )}
                     </TableCell>
                   </TableRow>
                 ))}
@@ -158,12 +204,7 @@ export default function PermissionsPage() {
         </CardHeader>
         <CardContent>
           <div className="grid gap-3 md:grid-cols-2">
-            {[
-              { role: "admin", desc: "Full access to all features" },
-              { role: "editor", desc: "Can manage posts and categories" },
-              { role: "author", desc: "Can create and edit own posts" },
-              { role: "viewer", desc: "Read-only access to dashboard" },
-            ].map((r) => (
+            {defaultSummaries.map((r) => (
               <div key={r.role} className="flex items-start gap-3 rounded-lg border p-3">
                 <Badge variant="secondary" className="capitalize">{r.role}</Badge>
                 <span className="text-sm text-muted-foreground">{r.desc}</span>

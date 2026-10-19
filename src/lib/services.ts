@@ -5,11 +5,13 @@ import {
   serviceStructures,
   serviceDictKeyBySlug,
   getFallbackImage,
+  getStructureForService,
 } from "@/app/[lang]/services/_components/serviceStructures";
 import {
   getDictionary,
   defaultLocale,
   hasLocale,
+  localeBase,
   type Locale,
 } from "@/app/[lang]/dictionaries";
 import type {
@@ -648,7 +650,8 @@ export async function resolveServicePage(
   const texts = servicePages[dictKey];
   if (!texts) return null;
 
-  const structure = serviceStructures[slug];
+  const structure = getStructureForService(slug, dictKey);
+  if (!structure) return null;
   const { buildServiceContent } = await import(
     "@/app/[lang]/services/_components/ServicePage"
   );
@@ -725,11 +728,10 @@ export async function getServiceCards(
 /** Navigation menu items surfaced from the DB (merged by the Header). */
 export async function getNavServices(lang: string): Promise<NavServiceItem[]> {
   const items = await getAllPublishedServices();
-  const prefix = normalizeLocale(lang);
   return items
     .filter((s) => s.showInMenu && s.status === "published")
     .map((s) => ({
       label: s.title,
-      href: `/${prefix}/services/${s.slug}`,
+      href: `${localeBase(lang)}/services/${s.slug}`,
     }));
 }

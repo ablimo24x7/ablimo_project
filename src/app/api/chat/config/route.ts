@@ -1,3 +1,4 @@
+import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { ChatWidget } from "@/lib/models/ChatWidget";
@@ -11,6 +12,8 @@ export async function GET() {
 }
 
 export async function PUT(req: NextRequest) {
+  const auth = await authorizeApi("update");
+  if (!auth.ok) return auth.response;
   await connectDB();
   try {
     const body = await req.json();
@@ -36,6 +39,8 @@ export async function PUT(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const auth = await authorizeApi("manage");
+  if (!auth.ok) return auth.response;
   await connectDB();
   try {
     const body = await req.json();

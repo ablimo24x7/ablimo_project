@@ -11,10 +11,14 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: "Global Locations | AB.Limo in 50+ Countries Worldwide",
-    description:
-      "AB.Limo operates in 50+ countries across the GCC, Europe, Asia, and the Americas. Find premium chauffeur services in Dubai, Riyadh, Doha, London, and hundreds of cities worldwide.",
+    title: isAr ? dict.locations.metadata.title : "Global Locations | AB.Limo in 50+ Countries Worldwide",
+    description: isAr
+      ? dict.locations.metadata.description
+      : "AB.Limo operates in 50+ countries across the GCC, Europe, Asia, and the Americas. Find premium chauffeur services in Dubai, Riyadh, Doha, London, and hundreds of cities worldwide.",
     path: "/locations",
     lang,
     keywords:

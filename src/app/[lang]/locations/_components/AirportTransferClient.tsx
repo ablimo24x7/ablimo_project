@@ -3,8 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useCallback } from "react";
-import BookingWidget from "@/components/layout/BookingWidget";
+import HeroInquiryForm from "./HeroInquiryForm";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { localeHome } from "@/app/[lang]/dictionaries";
 import {
     cityUrl,
     countryUrl,
@@ -114,9 +115,9 @@ export default function AirportTransferClient({ dict, lang, country, city, airpo
         <div className="absolute inset-0 flex items-end">
           <div className="w-full max-w-7xl mx-auto px-8 pb-8 flex flex-col lg:flex-row items-end justify-between gap-8">
             <div className="max-w-xl">
-              <h1 className="text-3xl md:text-5xl font-bold tracking-tight">{atcDict.heroTitle.replace("{city}", airport.name)}</h1>
+              <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white">{atcDict.heroTitle.replace("{city}", airport.name)}</h1>
             </div>
-            <BookingWidget dict={dict} />
+            <HeroInquiryForm dict={dict} locationName={airport.name} />
           </div>
         </div>
       </section>
@@ -124,7 +125,7 @@ export default function AirportTransferClient({ dict, lang, country, city, airpo
       <section className="max-w-7xl mx-auto px-8 py-6">
         <nav aria-label="Breadcrumb navigation">
           <ol className="flex items-center gap-2 text-sm text-gray-400 flex-wrap">
-            <li className="flex items-center gap-2"><Link href={`/${lang}`} className="hover:text-white transition-colors">{atcDict.breadcrumb.home}</Link><span aria-hidden="true">→</span></li>
+            <li className="flex items-center gap-2"><Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">{atcDict.breadcrumb.home}</Link><span aria-hidden="true">→</span></li>
             <li className="flex items-center gap-2"><Link href={locationsUrl(lang)} className="hover:text-white transition-colors">{atcDict.breadcrumb.countries}</Link><span aria-hidden="true">→</span></li>
             <li className="flex items-center gap-2"><Link href={countryUrl(lang, country)} className="hover:text-white transition-colors">{country.name}</Link><span aria-hidden="true">→</span></li>
             <li className="flex items-center gap-2"><Link href={cityUrl(lang, country, city)} className="hover:text-white transition-colors">{cityName}</Link><span aria-hidden="true">→</span></li>
