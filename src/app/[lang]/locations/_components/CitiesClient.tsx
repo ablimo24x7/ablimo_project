@@ -28,10 +28,17 @@ const countryImages: Record<string, string> = {
 
 export default function CitiesClient({ dict, lang, cities: allCitiesList }: { dict: Dictionary; lang: string; cities: CityEntry[] }) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [filteredCountry, setFilteredCountry] = useState<Country | null>(null);
 
-  const cities = allCitiesList.filter(({ city }) =>
-    city.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const countries: Country[] = [];
+  for (const { country } of allCitiesList) {
+    if (!countries.some((c) => c.code === country.code)) countries.push(country);
+  }
+
+  const cities = allCitiesList.filter(({ country, city }) => {
+    if (filteredCountry && country.code !== filteredCountry.code) return false;
+    return city.name.toLowerCase().includes(searchQuery.toLowerCase());
+  });
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
@@ -99,6 +106,35 @@ export default function CitiesClient({ dict, lang, cities: allCitiesList }: { di
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full bg-[#1c1d21] border border-gray-700/50 rounded-full pl-12 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-white/50 transition-colors"
           />
+        </div>
+      </section>
+
+      {/* Countries Filter Tabs For Cities */}
+      <section className="max-w-7xl mx-auto px-8 py-8">
+        <div className="flex flex-wrap gap-4">
+          <button
+            onClick={() => setFilteredCountry(null)}
+            className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+              filteredCountry === null
+                ? "bg-white text-[#292a30]"
+                : "bg-[#1c1d21] text-gray-400 hover:bg-gray-600"
+            }`}
+          >
+            {dict.countries.filter.all}
+          </button>
+          {countries.map((country) => (
+            <button
+              key={country.code}
+              onClick={() => setFilteredCountry(country)}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+                filteredCountry?.code === country.code
+                  ? "bg-white text-[#292a30]"
+                  : "bg-[#1c1d21] text-gray-400 hover:bg-gray-600"
+              }`}
+            >
+              {country.name}
+            </button>
+          ))}
         </div>
       </section>
 

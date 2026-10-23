@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { getIcon } from "./section-icons";
+import { useDispatchPhone } from "@/components/chat/use-dispatch-phone";
 import type { PageSection } from "./section-types";
 import type { SectionInstance, SectionRenderContext } from "@/components/section-library/types";
 
@@ -19,10 +20,22 @@ const PADDING_CLASSES = {
   xl: "py-32",
 } as const;
 
+function resolveActionLabel(
+  label: string,
+  names: { cityName?: string; countryName?: string }
+): string {
+  let out = label;
+  if (names.cityName) out = out.split("{city}").join(names.cityName);
+  if (names.countryName) out = out.split("{country}").join(names.countryName);
+  // Strip tokens with no matching name and collapse leftover spaces.
+  return out.replace(/\s*\{(city|country)\}\s*/g, " ").replace(/\s{2,}/g, " ").trim();
+}
+
 export default function FAQSection({ section, context }: FAQSectionProps) {
   const c = section.content as Record<string, unknown>;
   const settings = section.settings as Record<string, unknown>;
   const source = (settings.source as string) || "inline";
+  const dispatch = useDispatchPhone();
 
   // context-bound: live FAQs from the country/city entity
   const contextFaqs =
@@ -112,17 +125,21 @@ export default function FAQSection({ section, context }: FAQSectionProps) {
             <div className="flex gap-4">
               {actions.map((action, i) => {
                 const iconEl = action.icon ? getIcon(action.icon, "w-4 h-4") : null;
+                const isTel = action.href?.startsWith("tel:");
+                const href =
+                  isTel && dispatch.phone ? `tel:${dispatch.phone}` : action.href || "#";
+                const label = resolveActionLabel(action.label || "", dispatch);
                 return (
                   <Link
                     key={i}
-                    href={action.href || "#"}
+                    href={href}
                     className={`px-6 py-3 rounded text-sm font-semibold transition-colors flex items-center ${
                       action.style === "primary"
                         ? "bg-abServiceBlue hover:bg-sky-700 text-white"
                         : "bg-abDarkGray hover:bg-black border border-gray-700 text-white"
                     }`}
                   >
-                    {action.label}
+                    {label}
                     {iconEl && <span className="ml-2">{iconEl}</span>}
                   </Link>
                 );

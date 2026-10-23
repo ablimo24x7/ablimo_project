@@ -14,7 +14,13 @@ export function buildTokenMap(context?: SectionRenderContext): Record<string, st
 
   const tokens: Record<string, string> = {};
 
-  if (context.lang) tokens.lang = context.lang;
+  if (context.lang) {
+    tokens.lang = context.lang;
+    // URL prefix for the locale: Arabic lives at /ar, English is prefix-less
+    // ("/"), so "{langPrefix}/contact" resolves to "/contact" or "/ar/contact"
+    // — never a locale-prefixed English URL like "/en-US/contact".
+    tokens.langPrefix = ar ? "/ar" : "";
+  }
 
   if (context.country) {
     tokens.country = pick(context.country.name, context.country.nameAr) || context.country.slug;

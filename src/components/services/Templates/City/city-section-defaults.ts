@@ -434,7 +434,7 @@ export const corporateCityTemplate: CityTemplatePreset = {
         ],
       },
       items: [
-        { label: "Call Riyadh Dispatch", href: "tel:+966500000000", style: "secondary", icon: "Phone" },
+        { label: "Call {city} Dispatch", href: "tel:+966500000000", style: "secondary", icon: "Phone" },
       ],
       settings: { variant: "default" },
       appearance: { theme: "darker", padding: "lg", border: true, textAlign: "center" },

@@ -44,6 +44,8 @@ const sections = [
   { id: "choice-of-law", title: "12. Choice of Law" },
   { id: "choice-of-forum", title: "13. Choice of Forum" },
   { id: "final-provisions", title: "14. Final Provisions" },
+  { id: "modern-slavery", title: "15. Modern Slavery Statement" },
+  { id: "code-of-conduct", title: "16. Code of Conduct" },
 ];
 
 export default async function TermsPage({
@@ -100,7 +102,7 @@ export default async function TermsPage({
           </div>
 
           {/* Introduction */}
-          <div className="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6 mb-16">
+          <div className="prose prose-invert max-w-none bg-abBlack text-white leading-relaxed space-y-6 mb-16 rounded-xl p-6 md:p-8">
             <p>
               Welcome to AB.Limo. These Terms of Use (&quot;Terms&quot;) govern
               your access to and use of the AB.Limo website, mobile application,
@@ -116,7 +118,7 @@ export default async function TermsPage({
           <div className="space-y-16">
             <section id="general-provisions">
               <h2 className="text-2xl font-bold mb-6">1. General Provisions</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   1.1 AB.Limo provides a premium luxury chauffeur service
                   connecting passengers with professional chauffeurs through our
@@ -140,7 +142,7 @@ export default async function TermsPage({
 
             <section id="eligibility">
               <h2 className="text-2xl font-bold mb-6">2. Eligibility</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   2.1 The Services are available to individuals who are at least
                   18 years of age and possess the legal capacity to enter into
@@ -165,7 +167,7 @@ export default async function TermsPage({
               <h2 className="text-2xl font-bold mb-6">
                 3. Modification of Terms
               </h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   3.1 AB.Limo may update these Terms from time to time to
                   reflect changes in our practices, technology, legal
@@ -190,7 +192,7 @@ export default async function TermsPage({
               <h2 className="text-2xl font-bold mb-6">
                 4. Arbitration Agreement
               </h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   4.1 Any dispute, claim, or controversy arising out of or
                   relating to these Terms or the use of the Services shall be
@@ -220,7 +222,7 @@ export default async function TermsPage({
 
             <section id="payment">
               <h2 className="text-2xl font-bold mb-6">5. Payment</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   5.1 All fares, fees, and charges for rides are displayed in
                   the application at the time of booking. Prices may vary based
@@ -251,7 +253,7 @@ export default async function TermsPage({
               <h2 className="text-2xl font-bold mb-6">
                 6. Intellectual Property
               </h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   6.1 All content, features, and functionality of the Services,
                   including but not limited to text, graphics, logos, icons,
@@ -279,7 +281,7 @@ export default async function TermsPage({
 
             <section id="disclaimers">
               <h2 className="text-2xl font-bold mb-6">7. Disclaimers</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   7.1 THE SERVICES ARE PROVIDED ON AN &quot;AS IS&quot; AND
                   &quot;AS AVAILABLE&quot; BASIS WITHOUT WARRANTIES OF ANY
@@ -307,7 +309,7 @@ export default async function TermsPage({
               <h2 className="text-2xl font-bold mb-6">
                 8. Limitation of Liability
               </h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   8.1 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO
                   EVENT SHALL AB.LIMO, ITS DIRECTORS, EMPLOYEES, PARTNERS,
@@ -334,7 +336,7 @@ export default async function TermsPage({
 
             <section id="indemnity">
               <h2 className="text-2xl font-bold mb-6">9. Indemnity</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   9.1 You agree to defend, indemnify, and hold harmless
                   AB.Limo and its officers, directors, employees, contractors,
@@ -355,7 +357,7 @@ export default async function TermsPage({
 
             <section id="force-majeure">
               <h2 className="text-2xl font-bold mb-6">10. Force Majeure</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   10.1 AB.Limo shall not be liable for any failure or delay in
                   performing its obligations under these Terms where such failure
@@ -378,7 +380,7 @@ export default async function TermsPage({
               <h2 className="text-2xl font-bold mb-6">
                 11. Term and Termination
               </h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   11.1 These Terms remain in effect for as long as you use the
                   Services or maintain an account with AB.Limo. You may
@@ -404,7 +406,7 @@ export default async function TermsPage({
 
             <section id="choice-of-law">
               <h2 className="text-2xl font-bold mb-6">12. Choice of Law</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   12.1 These Terms shall be governed by and construed in
                   accordance with the laws of the Kingdom of Saudi Arabia,
@@ -420,7 +422,7 @@ export default async function TermsPage({
 
             <section id="choice-of-forum">
               <h2 className="text-2xl font-bold mb-6">13. Choice of Forum</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   13.1 Subject to the Arbitration Agreement in Section 4, any
                   legal action or proceeding arising under these Terms shall be
@@ -441,7 +443,7 @@ export default async function TermsPage({
               <h2 className="text-2xl font-bold mb-6">
                 14. Final Provisions
               </h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   14.1 <strong>Entire Agreement:</strong> These Terms, together
                   with the Privacy Policy and any other legal notices or
@@ -481,6 +483,61 @@ export default async function TermsPage({
                     hello@ab.limo
                   </a>
                   .
+                </p>
+              </div>
+            </section>
+
+            <section id="modern-slavery">
+              <h2 className="text-2xl font-bold mb-6">
+                15. Modern Slavery Statement
+              </h2>
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
+                <p>
+                  15.1 AB.Limo is committed to conducting business ethically
+                  and responsibly. We do not tolerate modern slavery,
+                  forced labour, human trafficking, or child labour in any part
+                  of our operations or supply chain, and we expect the same
+                  standard from our suppliers, partners, and subcontractors.
+                </p>
+                <p>
+                  15.2 We take reasonable steps to identify and assess modern
+                  slavery risks in our operations and supply chain, to conduct
+                  appropriate due diligence on suppliers and partners, and to
+                  maintain reporting channels through which concerns can be
+                  raised confidentially at{" "}
+                  <a
+                    href="mailto:hello@ab.limo"
+                    className="text-white underline hover:text-gray-300 transition-colors"
+                  >
+                    hello@ab.limo
+                  </a>
+                  .
+                </p>
+              </div>
+            </section>
+
+            <section id="code-of-conduct">
+              <h2 className="text-2xl font-bold mb-6">16. Code of Conduct</h2>
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
+                <p>
+                  16.1 AB.Limo and its personnel are expected to act with
+                  integrity, professionalism, and respect in every interaction.
+                  Our Code of Conduct requires compliance with applicable laws,
+                  honest and fair dealing, protection of passenger privacy and
+                  safety, and zero tolerance for discrimination, harassment,
+                  bribery, or corruption.
+                </p>
+                <p>
+                  16.2 Chauffeurs, staff, contractors, and business partners
+                  are expected to uphold these standards, to report suspected
+                  violations promptly to{" "}
+                  <a
+                    href="mailto:hello@ab.limo"
+                    className="text-white underline hover:text-gray-300 transition-colors"
+                  >
+                    hello@ab.limo
+                  </a>
+                  , and to cooperate with any review of such reports.
                 </p>
               </div>
             </section>

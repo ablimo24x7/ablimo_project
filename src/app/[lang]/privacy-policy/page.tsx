@@ -66,7 +66,7 @@ export default async function PrivacyPolicyPage({
           </p>
 
           {/* Introduction */}
-          <div className="text-gray-300 leading-relaxed space-y-6 mb-16">
+          <div className="bg-abBlack text-white leading-relaxed space-y-6 mb-16 rounded-xl p-6 md:p-8">
             <p>
               At AB.Limo, we value your privacy and are committed to protecting
               your personal data. This Privacy Policy explains how we collect,
@@ -87,7 +87,7 @@ export default async function PrivacyPolicyPage({
               <h2 className="text-2xl font-bold mb-6">
                 1. Information We Collect
               </h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   <strong>Personal Identification Information:</strong> When you
                   create an account or book a ride, we collect information such
@@ -125,7 +125,7 @@ export default async function PrivacyPolicyPage({
               <h2 className="text-2xl font-bold mb-6">
                 2. How We Use Your Information
               </h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   We use the information we collect for the following purposes:
                 </p>
@@ -169,7 +169,7 @@ export default async function PrivacyPolicyPage({
               <h2 className="text-2xl font-bold mb-6">
                 3. Sharing Your Information
               </h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   We do not sell your personal information. We may share your
                   data with the following categories of recipients:
@@ -205,7 +205,7 @@ export default async function PrivacyPolicyPage({
 
             <section>
               <h2 className="text-2xl font-bold mb-6">4. Data Security</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   We implement industry-standard security measures to protect
                   your personal data, including:
@@ -239,7 +239,7 @@ export default async function PrivacyPolicyPage({
 
             <section>
               <h2 className="text-2xl font-bold mb-6">5. Your Rights</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   Depending on your jurisdiction, you may have the following
                   rights regarding your personal data:
@@ -290,8 +290,8 @@ export default async function PrivacyPolicyPage({
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6">6. Cookies</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <h2 id="cookies" className="text-2xl font-bold mb-6">6. Cookies</h2>
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   We use cookies and similar tracking technologies to enhance
                   your experience on our website and application. Cookies are
@@ -324,7 +324,7 @@ export default async function PrivacyPolicyPage({
 
             <section>
               <h2 className="text-2xl font-bold mb-6">7. Contact Us</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
+              <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   If you have any questions, concerns, or requests regarding
                   this Privacy Policy or our data practices, please contact us:

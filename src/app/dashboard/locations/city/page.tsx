@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
@@ -14,7 +15,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Pencil, Plane, MessageSquare } from "lucide-react";
+import { Pencil, Plane, MessageSquare, Search } from "lucide-react";
+import { useState } from "react";
 
 export type CityListItem = {
   slug: string;
@@ -31,6 +33,7 @@ export type CityListItem = {
 type CitiesResponse = { cities: CityListItem[] };
 
 export default function CitiesPage() {
+  const [search, setSearch] = useState("");
   const { data, isLoading, isError } = useQuery({
     queryKey: ["location-cities"],
     queryFn: async () => {
@@ -41,6 +44,16 @@ export default function CitiesPage() {
   });
 
   const cities = data?.cities ?? [];
+  const q = search.trim().toLowerCase();
+  const filteredCities = q
+    ? cities.filter(
+        (c) =>
+          c.name.toLowerCase().includes(q) ||
+          c.slug.toLowerCase().includes(q) ||
+          c.countryName.toLowerCase().includes(q) ||
+          c.countrySlug.toLowerCase().includes(q)
+      )
+    : cities;
 
   return (
     <div className="space-y-4 px-4 lg:px-6">
@@ -58,6 +71,17 @@ export default function CitiesPage() {
 
       <Card>
         <CardContent className="p-0">
+          <div className="border-b p-3">
+            <div className="relative max-w-xs">
+              <Search className="pointer-events-none absolute top-1/2 left-2.5 size-3.5 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search by city or country..."
+                className="pl-8"
+              />
+            </div>
+          </div>
           {isLoading ? (
             <div className="p-4 space-y-2">
               {[...Array(5)].map((_, i) => <Skeleton key={i} className="h-12 w-full" />)}
@@ -77,14 +101,14 @@ export default function CitiesPage() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {cities.length === 0 ? (
+                {filteredCities.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={6} className="py-8 text-center text-muted-foreground">
-                      No cities yet. Open a country and add its cities.
+                      {q ? "No cities match your search." : "No cities yet. Open a country and add its cities."}
                     </TableCell>
                   </TableRow>
                 ) : (
-                  cities.map((c) => (
+                  filteredCities.map((c) => (
                     <TableRow key={`${c.countrySlug}/${c.slug}`}>
                       <TableCell>
                         <div className="font-medium">{c.name}</div>

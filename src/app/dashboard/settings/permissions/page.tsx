@@ -132,7 +132,7 @@ export default function PermissionsPage() {
           ? "Full access to all features"
           : actions.includes("create") || actions.includes("delete")
           ? "Can create, edit and delete content"
-          : "Edit existing content only (no create/delete)";
+          : "Edit existing content and upload media (no create/delete)";
       return { role, desc };
     });
 

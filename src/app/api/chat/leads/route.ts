@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
   const page = parseInt(searchParams.get("page") || "1", 10);
   const limit = parseInt(searchParams.get("limit") || "20", 10);
 
-  const filter: Record<string, any> = {};
+  const filter: Record<string, unknown> = {};
   if (status) filter.status = status;
   if (channel) filter.channel = channel;
 
@@ -30,17 +30,38 @@ export async function POST(req: NextRequest) {
   await connectDB();
   try {
     const body = await req.json();
+    const { recaptchaToken, ...rest } = body;
+
+    // Validate reCAPTCHA v3 token when present (contact form sends it; other forms may not yet).
+    if (recaptchaToken !== undefined) {
+      const secret = process.env.RECAPTCHA_SECRET_KEY;
+      if (secret) {
+        const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `secret=${encodeURIComponent(secret)}&response=${encodeURIComponent(recaptchaToken)}`,
+        });
+        const verifyData = await verifyRes.json();
+        const score = typeof verifyData.score === "number" ? verifyData.score : 0;
+        if (!verifyData.success || score < 0.5) {
+          return NextResponse.json({ error: "reCAPTCHA verification failed" }, { status: 400 });
+        }
+      } else {
+        console.warn("RECAPTCHA_SECRET_KEY not set — skipping reCAPTCHA validation");
+      }
+    }
+
     const ip =
       req.headers.get("x-forwarded-for")?.split(",")[0] || "";
     const lead = await Lead.create({
-      ...body,
+      ...rest,
       ip,
       userAgent: req.headers.get("user-agent") || "",
       referrer: req.headers.get("referer") || "",
     });
     return NextResponse.json(lead, { status: 201 });
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 400 });
+  } catch (err) {
+    return NextResponse.json({ error: err instanceof Error ? err.message : "Unknown error" }, { status: 400 });
   }
 }
 
@@ -57,7 +78,7 @@ export async function PATCH(req: NextRequest) {
       runValidators: true,
     }).lean();
     return NextResponse.json(lead);
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 400 });
+  } catch (err) {
+    return NextResponse.json({ error: err instanceof Error ? err.message : "Unknown error" }, { status: 400 });
   }
 }

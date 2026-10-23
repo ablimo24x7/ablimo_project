@@ -58,7 +58,7 @@ export default function PartnersClient({ dict, lang }: { dict: Dictionary; lang:
   const tabs = [dict.partners.tabs.onboarding, dict.partners.tabs.requirements];
 
   return (
-    <main className="min-h-screen bg-[#292a30]">
+    <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <Image

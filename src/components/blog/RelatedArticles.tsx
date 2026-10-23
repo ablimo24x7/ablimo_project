@@ -11,6 +11,8 @@ interface RelatedArticlesProps {
   viewAllLabel: string;
   heading?: string;
   minLabel?: string;
+  /** Link builder per card — defaults to the /services/... article URL. */
+  itemHref?: (article: ArticleDoc) => string;
 }
 
 export function RelatedArticles({
@@ -20,8 +22,14 @@ export function RelatedArticles({
   viewAllLabel,
   heading = "Related Articles",
   minLabel = "min",
+  itemHref,
 }: RelatedArticlesProps) {
   if (!articles || articles.length === 0) return null;
+
+  const hrefFor = (article: ArticleDoc) =>
+    itemHref
+      ? itemHref(article)
+      : `${localeBase(lang)}/services/${article.slug.replace(/^services\//, "")}`;
 
   return (
     <section className="max-w-7xl mx-auto px-8 py-16 border-t border-gray-700">
@@ -32,7 +40,7 @@ export function RelatedArticles({
         {articles.map((article) => (
           <Link
             key={article.slug}
-            href={`${localeBase(lang)}/services/${article.slug.replace(/^services\//, "")}`}
+            href={hrefFor(article)}
             className="group block bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
           >
             <div className="relative h-40 w-full">

@@ -65,7 +65,7 @@ export default async function AccessibilityPage({
             <h2 className="text-2xl font-bold mb-8">
               Accessibility Statement
             </h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 AB.Limo is committed to ensuring digital accessibility for
                 people with disabilities. We are continually improving the user
@@ -85,7 +85,7 @@ export default async function AccessibilityPage({
           {/* Conformance Status */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Conformance Status</h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 We aim to conform to the{" "}
                 <strong className="text-white">
@@ -129,7 +129,7 @@ export default async function AccessibilityPage({
             <h2 className="text-2xl font-bold mb-8">
               Accessibility Features
             </h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 The AB.Limo platform includes the following accessibility
                 features:
@@ -171,7 +171,7 @@ export default async function AccessibilityPage({
           {/* Known Limitations */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Known Limitations</h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 Despite our best efforts, some areas of the platform may not
                 fully conform to accessibility standards. We are aware of the
@@ -203,7 +203,7 @@ export default async function AccessibilityPage({
             <h2 className="text-2xl font-bold mb-8">
               Technical Specifications
             </h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 Accessibility of the AB.Limo platform relies on the following
                 technologies to work with the web browser and assistive
@@ -235,7 +235,7 @@ export default async function AccessibilityPage({
             <h2 className="text-2xl font-bold mb-8">
               Feedback &amp; Contact Information
             </h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 We welcome your feedback on the accessibility of the AB.Limo
                 platform. If you encounter accessibility barriers or have
@@ -279,7 +279,7 @@ export default async function AccessibilityPage({
             <h2 className="text-2xl font-bold mb-8">
               Enforcement Procedure
             </h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 If you are not satisfied with our response to your
                 accessibility concern, you may escalate the matter directly to

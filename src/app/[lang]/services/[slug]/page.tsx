@@ -16,7 +16,8 @@ import {
   localeHome,
 } from "@/app/[lang]/dictionaries";
 import { ServiceJsonLd, BreadcrumbJsonLd } from "@/components/seo/StructuredData";
-import { generateSeoMetadata } from "@/lib/seo";
+import { generateSeoMetadata, heroHeadingToTitle } from "@/lib/seo";
+import type { PageSection } from "@/components/services/sections/section-types";
 
 export async function generateMetadata({
   params,
@@ -26,7 +27,22 @@ export async function generateMetadata({
   const { lang, slug } = await params;
   const resolved = await resolveServicePage(slug, lang);
   if (!resolved) return {};
-  const title = resolved.seo?.metaTitle || resolved.content.title || "Service";
+
+  // Tab title mirrors the hero H1 (content.title + content.titleHighlight).
+  const hero = resolved.pageSections?.find(
+    (s: PageSection) => s.type === "hero" && s.enabled
+  );
+  const heroContent = hero?.content as Record<string, unknown> | undefined;
+  const heroTitle = heroHeadingToTitle(
+    heroContent?.title as string | undefined,
+    heroContent?.titleHighlight as string | undefined
+  );
+
+  const title =
+    heroTitle ||
+    resolved.seo?.metaTitle ||
+    resolved.content.title ||
+    "Service";
   const description =
     resolved.seo?.metaDescription || resolved.content.subtitle || "";
   const keywords = `${title}, AB.Limo, luxury chauffeur, ${title} service, premium transportation`;
@@ -90,6 +106,36 @@ export default async function Page({
           serviceName={resolved.content.title}
           serviceUrl={`${localeBase(lang)}/services/${slug}`}
         />
+      )}
+
+      {slug === "airport-transfers" && (
+        <section
+          aria-label={dict.footer.explore.airportTransfers}
+          className="max-w-7xl mx-auto px-8 pb-12 text-center"
+        >
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm">
+              <Link
+                href={`${localeBase(lang)}/services/airport-transfers/pickup`}
+                className="text-gray-400 hover:text-white transition-colors underline underline-offset-4 decoration-gray-700"
+              >
+                {dict.servicePages.airportTransferPickup.title}
+              </Link>
+              <Link
+                href={`${localeBase(lang)}/services/airport-transfers/drop-off`}
+                className="text-gray-400 hover:text-white transition-colors underline underline-offset-4 decoration-gray-700"
+              >
+                {dict.servicePages.airportTransferDropOff.title}
+              </Link>
+              <Link
+                href={`${localeBase(lang)}/services/airport-transfers/vip-tarmac`}
+                className="text-gray-400 hover:text-white transition-colors underline underline-offset-4 decoration-gray-700"
+              >
+                {dict.servicePages.airportTransferVipTarmac.title}
+              </Link>
+            </div>
+          </div>
+        </section>
       )}
 
       {relatedArticles.length > 0 && (

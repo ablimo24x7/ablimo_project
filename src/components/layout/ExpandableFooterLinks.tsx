@@ -23,12 +23,16 @@ export default function ExpandableFooterLinks({
 }: ExpandableFooterLinksProps) {
   const [expanded, setExpanded] = useState(false);
   const hasMore = links.length > MAX_VISIBLE;
-  const visibleLinks = expanded || !hasMore ? links : links.slice(0, MAX_VISIBLE);
 
+  // Every link is rendered into the DOM (collapsed items are only visually
+  // hidden) so crawlers and assistive tech always see the full link set.
   return (
     <ul className="space-y-3 text-sm text-gray-400">
-      {visibleLinks.map((link) => (
-        <li key={link.label}>
+      {links.map((link, index) => (
+        <li
+          key={link.label}
+          className={!expanded && hasMore && index >= MAX_VISIBLE ? "hidden" : undefined}
+        >
           <Link
             href={link.href}
             className="hover:text-white transition-colors"

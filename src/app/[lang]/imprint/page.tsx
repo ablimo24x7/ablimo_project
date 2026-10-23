@@ -63,7 +63,7 @@ export default async function ImprintPage({
           {/* Company Information */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Company Information</h2>
-            <div className="bg-[#1c1d21] rounded-lg p-8 border border-gray-700/50 text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack rounded-xl p-6 md:p-8 text-white leading-relaxed space-y-4">
               <p>
                 <strong className="text-white">AB.Limo</strong>
               </p>
@@ -106,7 +106,7 @@ export default async function ImprintPage({
           {/* Regional Offices */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Regional Offices</h2>
-            <div className="bg-[#1c1d21] rounded-lg p-8 border border-gray-700/50 text-gray-300 leading-relaxed space-y-6">
+            <div className="bg-abBlack rounded-xl p-6 md:p-8 text-white leading-relaxed space-y-6">
               <div>
                 <p>
                   <strong className="text-white">
@@ -143,7 +143,7 @@ export default async function ImprintPage({
           {/* Disclaimer */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Disclaimer</h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 The content on our website and application has been created with
                 the utmost care. However, AB.Limo cannot guarantee the
@@ -183,7 +183,7 @@ export default async function ImprintPage({
           {/* Copyright */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Copyright Notice</h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 The content and works created by the site operators on these
                 pages are subject to applicable copyright law. Duplication,
@@ -213,7 +213,7 @@ export default async function ImprintPage({
             <h2 className="text-2xl font-bold mb-8">
               Dispute Resolution
             </h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 Any dispute, claim, or controversy arising out of or relating
                 to our Services shall be resolved in accordance with our Terms
@@ -233,7 +233,7 @@ export default async function ImprintPage({
             <h2 className="text-2xl font-bold mb-8">
               Regulatory Compliance
             </h2>
-            <div className="text-gray-300 leading-relaxed space-y-4">
+            <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 AB.Limo operates in compliance with all applicable laws and
                 transportation regulations in each jurisdiction where we

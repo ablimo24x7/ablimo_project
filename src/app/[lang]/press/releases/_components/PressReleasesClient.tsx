@@ -14,8 +14,6 @@ export default function PressReleasesClient({ dict, lang }: { dict: Dictionary; 
 
   const tabs = [
     { name: dict.press.tabs.releases, href: "/press/releases", active: true },
-    { name: dict.press.tabs.coverage, href: "/press/coverage", active: false },
-    { name: dict.press.tabs.presskit, href: "/press/presskit", active: false },
   ];
 
   const filteredReleases = dict.press.releases.filter(
@@ -27,7 +25,7 @@ export default function PressReleasesClient({ dict, lang }: { dict: Dictionary; 
   };
 
   return (
-    <main className="min-h-screen bg-[#292a30]">
+    <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[360px] flex items-center justify-center overflow-hidden">
         <Image

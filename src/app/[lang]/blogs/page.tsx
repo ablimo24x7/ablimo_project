@@ -2,15 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock } from "lucide-react";
-import { getAllPublishedArticles, getAllPublishedArticlesFiltered } from "@/lib/blog";
+import { getPublishedBlogs } from "@/lib/blog";
 import { hasLocale, defaultLocale, getDictionary, localeBase, localeHome } from "@/app/[lang]/dictionaries";
-import { SERVICE_OPTIONS } from "@/lib/constants";
 import { generateSeoMetadata } from "@/lib/seo";
-
-const SERVICE_TABS = [
-  { slug: "all", label: "All" },
-  ...SERVICE_OPTIONS.map((s) => ({ slug: s.slug, label: s.label.split(" ")[0] })),
-] as const;
 
 export async function generateMetadata({
   params,
@@ -29,35 +23,18 @@ export async function generateMetadata({
   });
 }
 
-const templateColors: Record<string, string> = {
-  "service-country": "bg-blue-500/20 text-blue-300",
-  "service-city": "bg-green-500/20 text-green-300",
-};
-
-const templateLabels: Record<string, string> = {
-  "service-country": "Country",
-  "service-city": "City",
-};
-
 export default async function BlogsPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ lang: string }>;
-  searchParams: Promise<{ service?: string }>;
 }) {
   const { lang } = await params;
-  const sp = await searchParams;
   const locale = hasLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionary(locale);
   const b = dict.blog;
   const isArabic = locale.split("-")[0] === "ar";
 
-  const activeService = sp.service || "all";
-
-  const articles = activeService === "all"
-    ? await getAllPublishedArticles(locale)
-    : await getAllPublishedArticlesFiltered({ serviceSlug: activeService, locale });
+  const articles = await getPublishedBlogs(locale);
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
@@ -90,32 +67,7 @@ export default async function BlogsPage({
         </nav>
       </section>
 
-      {/* Service Filter Tabs */}
-      <section className="max-w-7xl mx-auto px-8 pb-8">
-        <div className="flex flex-wrap gap-2 justify-center">
-          {SERVICE_TABS.map((tab) => {
-            const isActive = activeService === tab.slug;
-            const href = tab.slug === "all"
-              ? `${localeBase(lang)}/blogs`
-              : `${localeBase(lang)}/blogs?service=${tab.slug}`;
-            return (
-              <Link
-                key={tab.slug}
-                href={href}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  isActive
-                    ? "bg-abBlue text-white"
-                    : "bg-[#1c1d21] text-gray-400 hover:text-white hover:bg-[#2a2c35]"
-                }`}
-              >
-                {tab.label}
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Articles Grid */}
+      {/* Blog Posts Grid */}
       <section className="max-w-7xl mx-auto px-8 pb-20">
         {articles.length === 0 ? (
           <div className="text-center py-20">
@@ -125,8 +77,8 @@ export default async function BlogsPage({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article) => (
               <Link
-                key={article.slug}
-                href={`${localeBase(lang)}/services/${article.slug.replace(/^services\//, "")}`}
+                key={`${article.slug}-${article.locale ?? ""}`}
+                href={`${localeBase(lang)}/blogs/${article.slug}`}
                 className="group block bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
               >
                 <div className="relative h-48 w-full">
@@ -139,11 +91,13 @@ export default async function BlogsPage({
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-3 left-3">
-                    <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${templateColors[article.templateType] || "bg-gray-500/20 text-gray-300"}`}>
-                      {templateLabels[article.templateType] || article.templateType}
-                    </span>
-                  </div>
+                  {article.categoryLabel && article.categoryLabel !== "Uncategorized" && (
+                    <div className="absolute top-3 left-3">
+                      <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-abBlue/20 text-abBlue">
+                        {article.categoryLabel}
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <div className="p-5">
                   <h2 className="text-lg font-semibold text-white line-clamp-2 mb-2 group-hover:text-abBlue transition-colors">

@@ -140,6 +140,7 @@
       "chauffeurRecruitment": "Chauffeur Recruitment",
       "corporateCareers": "Corporate Careers",
       "press": "Press / Newsroom",
+      "blog": "Blog",
       "sustainability": "Sustainability",
       "contactUs": "Contact Us"
     },
@@ -198,10 +199,11 @@
       "rasAlKhaymah": "Ras Al Khaymah",
       "kuwaitCity": "Kuwait City",
       "manama": "Manama",
-      "muscat": "Muscat"
+      "muscat": "Muscat",
+      "viewMore": "View All Cities"
     },
     "explore": {
-      "title": "Explore",
+      "title": "Our Services",
       "asDirected": "As Directed Services",
       "executiveMobility": "Executive & Corporate Mobility",
       "airportTransfers": "Airport Transfers",
@@ -212,7 +214,16 @@
       "tourism": "Tourism & Leisure",
       "religiousTourism": "Religious Tourism",
       "crossBorder": "Cross-Border Mobility",
-      "premiumLifestyle": "Premium Lifestyle & Specialty"
+      "premiumLifestyle": "Premium Lifestyle & Specialty",
+      "carService": "Car Service",
+      "chauffeurService": "Chauffeur Service",
+      "limousineService": "Limousine Service",
+      "groundTransportation": "Ground Transportation",
+      "business": "Business Travel",
+      "corporations": "Corporations",
+      "travelAgencies": "Travel Agencies",
+      "strategicPartnerships": "Strategic Partnerships",
+      "industries": "Industries"
     },
     "copyright": "©2026 AB.Limo",
     "imprint": "Imprint",
@@ -1944,6 +1955,9 @@
     "search": {
       "placeholder": "Search countries..."
     },
+    "filter": {
+      "all": "All"
+    },
     "features": [
       {
         "title": "Global availability",
@@ -2673,6 +2687,24 @@
     "faqTitle": "Frequently Asked Questions",
     "blog": "Blog",
     "admin": "Admin",
+    "insights": "Insights",
+    "published": "Published",
+    "tocTitle": "Table of Contents",
+    "tocQuickNav": "QUICK NAVIGATION",
+    "viewAllInsights": "View all Insights",
+    "readArticle": "Read Article",
+    "shareIntelligence": "Share Intelligence",
+    "exploreService": "Explore Service",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "subscribeTitle": "The Corporate Mobility Briefing.",
+    "subscribeDesc": "Join 5,000+ procurement managers and executive assistants receiving our monthly digest on GCC transport regulations, fleet strategy, and event logistics planning.",
+    "subscribePlaceholder": "Enter corporate email address",
+    "subscribeButton": "Subscribe",
+    "subscribeDisclaimer": "We respect your inbox. Unsubscribe at any time.",
+    "subscribeSuccess": "Successfully subscribed to the briefing.",
+    "subscribeError": "Please enter a valid email address.",
+    "subscribeLoading": "Subscribing...",
     "sideInfo": {
       "aboutCountry": "About {country}",
       "exploreCountry": "Explore our comprehensive limousine and ground transportation services in {country}. We provide premium airport transfers, city tours, and executive travel across the region.",
@@ -4219,6 +4251,7 @@
     "name": "Your Name",
     "email": "Email Address",
     "phone": "Phone Number",
+    "selectService": "Select a Service",
     "message": "Your Message",
     "sending": "Sending...",
     "send": "Send Message",

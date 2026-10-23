@@ -116,7 +116,7 @@ export function FaqsClient({ faqs }: FaqsClientProps) {
                   Require a customized RFP response?
                 </p>
                 <Link
-                  href="/corporate-account"
+                  href="/contact"
                   className="block w-full bg-[#111] hover:bg-[#1a1a1a] border border-gray-700 hover:border-abBlue text-white text-xs font-bold py-3 rounded transition-colors"
                 >
                   Contact Enterprise Sales
@@ -202,13 +202,13 @@ export function FaqsClient({ faqs }: FaqsClientProps) {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="mailto:rfp@ab.limo"
+                href="mailto:hello@ab.limo"
                 className="bg-[#111] border border-gray-700 text-white hover:border-abBlue hover:text-abBlue px-6 py-3 rounded text-sm font-semibold transition-all flex items-center"
               >
-                <Mail className="w-4 h-4 mr-2" /> Email rfp@ab.limo
+                <Mail className="w-4 h-4 mr-2" /> Email hello@ab.limo
               </a>
               <Link
-                href="/corporate-account"
+                href="/contact"
                 className="bg-abBlue hover:bg-[#1a93c4] text-white px-8 py-3 rounded text-sm font-semibold transition-all shadow-lg"
               >
                 Open a Support Ticket

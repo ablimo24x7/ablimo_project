@@ -11,9 +11,8 @@ import {
   Settings,
   MapPinned,
   CarFront,
-  Globe,
-  Building2,
   MessageSquare,
+  ImageIcon,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -42,8 +41,17 @@ const adminNav: {
 }[] = [
   { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
   { title: "Posts", url: "/dashboard/posts", icon: FileText },
+  { title: "Media", url: "/dashboard/media", icon: ImageIcon },
   { title: "Categories", url: "/dashboard/categories", icon: FolderTree },
-  { title: "Services", url: "/dashboard/services", icon: CarFront },
+  {
+    title: "Services",
+    url: "/dashboard/services",
+    icon: CarFront,
+    subItems: [
+      { title: "Country Services", url: "/dashboard/services/country" },
+      { title: "City Services", url: "/dashboard/services/city" },
+    ],
+  },
   { title: "Chat Widget", url: "/dashboard/chat", icon: MessageSquare },
   {
     title: "Locations",
@@ -57,11 +65,6 @@ const adminNav: {
   { title: "Users", url: "/dashboard/users", icon: Users, requiresManage: true },
   { title: "Permissions", url: "/dashboard/settings/permissions", icon: ShieldCheck, requiresManage: true },
   { title: "Settings", url: "/dashboard/settings", icon: Settings },
-];
-
-const locationNav = [
-  { title: "Blog by Country", url: "/dashboard/posts?view=country", icon: Globe },
-  { title: "Blog by City", url: "/dashboard/posts?view=city", icon: Building2 },
 ];
 
 export function AdminSidebar() {
@@ -93,7 +96,6 @@ export function AdminSidebar() {
             <SidebarMenu>
               {visibleNav.map((item) => {
                 const inSection = pathname.startsWith(item.url);
-                const isCityPage = inSection && pathname.includes("/city");
                 return (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
@@ -109,11 +111,7 @@ export function AdminSidebar() {
                         <SidebarMenuSubItem key={subItem.title}>
                           <SidebarMenuSubButton
                             render={<Link href={subItem.url} />}
-                            isActive={
-                              subItem.url.endsWith("/city")
-                                ? isCityPage
-                                : inSection && !isCityPage
-                            }
+                            isActive={pathname === subItem.url}
                           >
                             <span>{subItem.title}</span>
                           </SidebarMenuSubButton>
@@ -124,21 +122,6 @@ export function AdminSidebar() {
                 </SidebarMenuItem>
                 );
               })}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-        <SidebarGroup>
-          <SidebarGroupLabel>Blog By Services</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {locationNav.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton render={<Link href={item.url} />}>
-                    <item.icon />
-                    <span>{item.title}</span>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

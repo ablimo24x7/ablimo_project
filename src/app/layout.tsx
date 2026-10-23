@@ -13,8 +13,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "AB.Limo | Premium Executive & Corporate Mobility",
-    template: "%s | AB.Limo",
+    default: "AB | Premium Executive & Corporate Mobility",
+    template: "%s | AB",
   },
   description:
     "AB.Limo provides premium chauffeur-driven transportation across the GCC and worldwide. Executive transfers, corporate mobility, event logistics, and airport services.",

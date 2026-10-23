@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
-import { Plus, Pencil, Trash2, Save } from "lucide-react";
+import { Plus, Pencil, Trash2, Save, Search } from "lucide-react";
 import { useState } from "react";
 
 type Category = { _id: string; label: string; slug: string };
@@ -16,6 +16,7 @@ export default function CategoriesPage() {
   const [newLabel, setNewLabel] = useState("");
   const [editId, setEditId] = useState<string | null>(null);
   const [editLabel, setEditLabel] = useState("");
+  const [search, setSearch] = useState("");
 
   const { data, isLoading } = useQuery({
     queryKey: ["categories"],
@@ -63,6 +64,10 @@ export default function CategoriesPage() {
   });
 
   const categories = data?.items ?? [];
+  const q = search.trim().toLowerCase();
+  const filtered = q
+    ? categories.filter((c) => c.label.toLowerCase().includes(q) || c.slug.toLowerCase().includes(q))
+    : categories;
 
   return (
     <div className="space-y-4 px-4 lg:px-6">
@@ -81,11 +86,22 @@ export default function CategoriesPage() {
 
       <Card>
         <CardContent className="p-0">
+          <div className="border-b p-3">
+            <div className="relative max-w-xs">
+              <Search className="pointer-events-none absolute top-1/2 left-2.5 size-3.5 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search categories..."
+                className="pl-8"
+              />
+            </div>
+          </div>
           {isLoading ? (
             <div className="p-4 space-y-2">{[...Array(3)].map((_, i) => <Skeleton key={i} className="h-10 w-full" />)}</div>
           ) : (
             <div className="divide-y">
-              {categories.map((c) => (
+              {filtered.map((c) => (
                 <div key={c._id} className="flex items-center gap-3 p-3">
                   {editId === c._id ? (
                     <>
@@ -102,7 +118,11 @@ export default function CategoriesPage() {
                   )}
                 </div>
               ))}
-              {categories.length === 0 && <div className="p-6 text-center text-sm text-muted-foreground">No categories yet.</div>}
+              {filtered.length === 0 && (
+                <div className="p-6 text-center text-sm text-muted-foreground">
+                  {q ? "No categories match your search." : "No categories yet."}
+                </div>
+              )}
             </div>
           )}
         </CardContent>

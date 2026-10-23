@@ -64,6 +64,17 @@ export default async function Page({
       breadcrumb={texts.title}
       serviceName={texts.title}
       serviceUrl={`${localeBase(lang)}/services/airport-transfers/pickup`}
+      relatedTitle={dict.footer.explore.airportTransfers}
+      relatedLinks={[
+        {
+          label: dict.servicePages.airportTransferDropOff.title,
+          href: `${localeBase(lang)}/services/airport-transfers/drop-off`,
+        },
+        {
+          label: dict.servicePages.airportTransferVipTarmac.title,
+          href: `${localeBase(lang)}/services/airport-transfers/vip-tarmac`,
+        },
+      ]}
     />
   );
 }

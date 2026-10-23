@@ -23,15 +23,43 @@ import { SectionLibraryEditor } from "./section-library-editor";
 import { toast } from "sonner";
 import { Plus, Trash2, ChevronUp, ChevronDown, FileText, LayoutGrid } from "lucide-react";
 import { TranslateButton } from "./TranslateButton";
+import { MediaInput } from "./media-input";
 import type { TextImageSectionType, CardsSectionType } from "@/lib/validations/location";
 import { CITY_TEMPLATE_PRESETS } from "@/components/services/Templates/City";
+import { COUNTRY_TEMPLATE_PRESETS } from "@/components/services/Templates/Country";
 import type { PageSection } from "@/components/services/sections/section-types";
 import { usePermissions } from "@/hooks/use-permissions";
 import { StructurePermissionsProvider } from "@/components/providers/structure-permissions";
+import { toSlug } from "@/lib/slug";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  buildArabicSections,
+  collectSectionTextPaths,
+  getPathValue,
+  sectionPath,
+  type TranslationMap,
+} from "@/lib/arabic-content";
 
 type SectionUnion = TextImageSectionType | CardsSectionType | PageSection;
 
 type FaqItem = { q: string; a: string };
+
+/** Languages the editor can edit on a single post. */
+type EditorLang = "en" | "ar";
+
+/**
+ * Distinguish PageSection-shaped content (or empty, i.e. never built yet)
+ * from legacy TextImageSection/CardsSection content, so opening a country
+ * article never wipes its saved legacy sections.
+ */
+function looksLikePageSections(secs: SectionUnion[]): boolean {
+  return (
+    secs.length === 0 ||
+    secs.every(
+      (s) => typeof (s as PageSection).order === "number" && typeof (s as PageSection).enabled === "boolean",
+    )
+  );
+}
 
 type PostData = {
   _id?: string;
@@ -48,6 +76,7 @@ type PostData = {
   citySlug: string;
   city: string;
   whatsappNumber: string;
+  archiveTag: string;
   contentMode: "wysiwyg" | "sections" | "page-sections";
   bodyContent: string;
   keyTakeawaysContent: string;
@@ -67,6 +96,15 @@ type PostData = {
     metaDescription: string;
     ogImage: string;
   };
+  /**
+   * Arabic content for this post.
+   * `ar` holds hand-written Arabic, `autoAr` the Google translations used
+   * when a field has no hand-written value.
+   */
+  translations: {
+    ar: TranslationMap;
+    autoAr: TranslationMap;
+  };
 };
 
 const defaultPost: PostData = {
@@ -83,6 +121,7 @@ const defaultPost: PostData = {
   citySlug: "",
   city: "",
   whatsappNumber: "",
+  archiveTag: "",
   contentMode: "wysiwyg",
   bodyContent: "",
   keyTakeawaysContent: "",
@@ -96,16 +135,69 @@ const defaultPost: PostData = {
   articleMedia: { heroCoverMedia: { url: "" } },
   faqs: [],
   seo_metadata: { metaTitle: "", metaDescription: "", ogImage: "" },
+  translations: { ar: {}, autoAr: {} },
 };
 
 interface PostEditorProps {
   initialData?: PostData;
-  initialBlogType?: "country" | "city";
+  initialBlogType?: "country" | "city" | "blog";
   mode?: "create" | "edit";
 }
 
-function normalizePost(data?: PostData): PostData {
-  const d: Partial<PostData> = data ?? {};
+/** Marks a field whose Arabic value comes from the automatic translation. */
+function AutoBadge() {
+  return (
+    <span className="rounded bg-muted px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+      auto
+    </span>
+  );
+}
+
+/** A single Arabic field of the post editor. */
+function ArField({
+  label,
+  value,
+  onChange,
+  placeholder,
+  multiline,
+  rows = 3,
+  auto,
+}: {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  multiline?: boolean;
+  rows?: number;
+  auto?: boolean;
+}) {
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center gap-2">
+        <Label>{label}</Label>
+        {auto && <AutoBadge />}
+      </div>
+      {multiline ? (
+        <Textarea
+          dir="rtl"
+          rows={rows}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+        />
+      ) : (
+        <Input
+          dir="rtl"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+        />
+      )}
+    </div>
+  );
+}
+
+function normalizePost(data?: PostData): PostData {  const d: Partial<PostData> = data ?? {};
   return {
     ...defaultPost,
     ...d,
@@ -120,6 +212,10 @@ function normalizePost(data?: PostData): PostData {
       metaDescription: d.seo_metadata?.metaDescription ?? "",
       ogImage: d.seo_metadata?.ogImage ?? "",
     },
+    translations: {
+      ar: { ...(d.translations?.ar ?? {}) },
+      autoAr: { ...(d.translations?.autoAr ?? {}) },
+    },
     sections: Array.isArray(d.sections) ? d.sections : [],
   };
 }
@@ -129,8 +225,98 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
   const queryClient = useQueryClient();
   const [form, setForm] = React.useState<PostData>(() => normalizePost(initialData));
   const [tagInput, setTagInput] = React.useState("");
+  const [activeLang, setActiveLang] = React.useState<EditorLang>("en");
   const isDirtyRef = React.useRef(false);
   const { canCreate, canUpdate, canManageStructure } = usePermissions();
+
+  // ── Arabic helpers ───────────────────────────────────────
+  // `ar` holds hand-written Arabic, `autoAr` the Google translations the
+  // server generated for the fields the editor left empty. A field resolves
+  // to hand-written Arabic first, then to the automatic translation.
+  const arMap = form.translations.ar;
+  const autoMap = form.translations.autoAr;
+
+  const arValue = React.useCallback(
+    (path: string) => arMap[path] ?? autoMap[path] ?? "",
+    [arMap, autoMap]
+  );
+
+  const setTranslations = React.useCallback(
+    (
+      updater: (prev: PostData["translations"]) => PostData["translations"]
+    ) => {
+      isDirtyRef.current = true;
+      setForm((prev) => ({ ...prev, translations: updater(prev.translations) }));
+    },
+    []
+  );
+
+  /** Write (or clear) a hand-written Arabic value for a content path. */
+  const setArValue = React.useCallback(
+    (path: string, value: string) => {
+      setTranslations((prev) => {
+        const next = { ...prev.ar };
+        if (value.trim()) next[path] = value;
+        else delete next[path];
+        return { ...prev, ar: next };
+      });
+    },
+    [setTranslations]
+  );
+
+  /** True when the Arabic value of a path comes from the auto-translation. */
+  const isAutoAr = React.useCallback(
+    (path: string) => !(path in arMap) && path in autoMap,
+    [arMap, autoMap]
+  );
+
+  /** The template sections with their Arabic text applied. */
+  const arabicSections = React.useMemo(
+    () => buildArabicSections(form.sections as unknown[], arValue),
+    [form.sections, arValue]
+  );
+
+  /**
+   * Persist edits made in the Arabic tab. Only text that actually changed
+   * becomes hand-written Arabic; everything else keeps following the
+   * automatic translation.
+   */
+  const handleArabicSectionsChange = React.useCallback(
+    (next: SectionUnion[]) => {
+      const previousArabic = arabicSections as unknown as Array<{ id?: string }>;
+      const english = form.sections as unknown as Array<{ id?: string }>;
+      const nextMap: TranslationMap = { ...arMap };
+
+      next.forEach((section) => {
+        const id = typeof section?.id === "string" ? section.id : "";
+        if (!id) return;
+        const previousSection = previousArabic.find((s) => s?.id === id);
+        const englishSection = english.find((s) => s?.id === id);
+
+        collectSectionTextPaths(section).forEach((relative) => {
+          const nextValue = getPathValue(section, relative);
+          const previousValue = previousSection
+            ? getPathValue(previousSection, relative)
+            : undefined;
+          const baseline =
+            previousValue !== undefined
+              ? previousValue
+              : getPathValue(englishSection, relative);
+          if (nextValue === baseline) return;
+
+          const path = sectionPath(id, relative);
+          if (typeof nextValue === "string" && nextValue.trim()) {
+            nextMap[path] = nextValue;
+          } else {
+            delete nextMap[path];
+          }
+        });
+      });
+
+      setTranslations((prev) => ({ ...prev, ar: nextMap }));
+    },
+    [arabicSections, form.sections, arMap, setTranslations]
+  );
 
   // Repopulate the form when fresh server data arrives (e.g. a background
   // refetch returning the saved post), unless the user already made edits.
@@ -139,10 +325,22 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
     setForm(normalizePost(initialData));
   }, [initialData]);
 
-  const blogType: "country" | "city" =
-    initialData?.templateType === "service-city" ? "city" : initialBlogType;
+  const blogType: "country" | "city" | "blog" =
+    initialData?.templateType === "service-city"
+      ? "city"
+      : initialData?.templateType === "blog"
+        ? "blog"
+        : initialBlogType;
 
-  const templateType = blogType === "city" ? "service-city" : "service-country";
+  const templateType =
+    blogType === "city" ? "service-city" : blogType === "blog" ? "blog" : "service-country";
+
+  /** True when the post is rendered through the PageSection template system. */
+  const usesPageSections =
+    blogType === "city" ||
+    (blogType === "country" &&
+      form.contentMode !== "wysiwyg" &&
+      looksLikePageSections(form.sections));
 
   // Fetch all services from database
   const { data: servicesData } = useQuery({
@@ -234,7 +432,15 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
       const service = key === "serviceSlug" ? (value as string) : prev.serviceSlug;
       const country = key === "countrySlug" ? (value as string) : prev.countrySlug;
       const city = key === "citySlug" ? (value as string) : prev.citySlug;
-      next.slug = generateSlug(service, country, city, blogType);
+      if (blogType === "blog") {
+        // Standalone blog: the slug starts from the title, then stays stable
+        // (and editable) so published /blogs/... URLs never break on rename.
+        if (key === "title" && !prev.slug) {
+          next.slug = toSlug(String(value));
+        }
+      } else {
+        next.slug = generateSlug(service, country, city, blogType === "city" ? "city" : "country");
+      }
 
       // Auto-generate SEO from title when title changes and SEO fields are empty
       if (key === "title" && !prev.seo_metadata.metaTitle) {
@@ -314,17 +520,24 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
       toast.error("Title is required");
       return;
     }
-    if (!form.serviceSlug) {
-      toast.error("Service is required");
-      return;
-    }
-    if (!form.countrySlug) {
-      toast.error("Country is required");
-      return;
-    }
-    if (blogType === "city" && !form.citySlug) {
-      toast.error("City is required for city-specific articles");
-      return;
+    if (blogType === "blog") {
+      if (!form.slug.trim()) {
+        toast.error("Slug is required — it is generated from the title");
+        return;
+      }
+    } else {
+      if (!form.serviceSlug) {
+        toast.error("Service is required");
+        return;
+      }
+      if (!form.countrySlug) {
+        toast.error("Country is required");
+        return;
+      }
+      if (blogType === "city" && !form.citySlug) {
+        toast.error("City is required for city-specific articles");
+        return;
+      }
     }
     mutation.mutate({ ...form, templateType });
   };
@@ -343,10 +556,21 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
   return (
     <StructurePermissionsProvider canManage={canManageStructure}>
     <form onSubmit={handleSubmit} className="grid gap-6 px-4 lg:px-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold">
-          {isEdit ? "Edit Post" : "New Post"}
-        </h2>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-3">
+          <h2 className="text-lg font-semibold">
+            {isEdit ? "Edit Post" : "New Post"}
+          </h2>
+          <Tabs
+            value={activeLang}
+            onValueChange={(value) => setActiveLang(value as EditorLang)}
+          >
+            <TabsList>
+              <TabsTrigger value="en">English</TabsTrigger>
+              <TabsTrigger value="ar">العربية</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
         <div className="flex gap-2">
           <Button type="button" variant="outline" onClick={() => router.back()}>
             Cancel
@@ -355,9 +579,18 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
             <Button
               type="button"
               variant="outline"
-              onClick={() => window.open(`/services/${form.slug.replace(/^services\//, "")}?preview=true`, "_blank")}
+              onClick={() =>
+                window.open(
+                  `${activeLang === "ar" ? "/ar" : ""}/${
+                    blogType === "blog"
+                      ? `blogs/${form.slug}`
+                      : `services/${form.slug.replace(/^services\//, "")}`
+                  }?preview=true`,
+                  "_blank"
+                )
+              }
             >
-              Preview
+              Preview{activeLang === "ar" ? " (AR)" : ""}
             </Button>
           )}
           {canUpdate && (
@@ -368,11 +601,68 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
         </div>
       </div>
 
+      {activeLang === "ar" && (
+        <p className="text-xs text-muted-foreground">
+          Arabic overrides the English copy. Any field left empty keeps the
+          automatic Google translation of the English text — type over it to
+          replace the translation with your own wording.
+        </p>
+      )}
+
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <Card>
-            <CardHeader><CardTitle>Content</CardTitle></CardHeader>
+            <CardHeader>
+              <CardTitle>
+                Content{activeLang === "ar" ? " (Arabic)" : ""}
+              </CardTitle>
+            </CardHeader>
             <CardContent className="space-y-4">
+              {activeLang === "ar" ? (
+                <>
+                  <ArField
+                    label="Title (Arabic) *"
+                    value={arValue("title")}
+                    auto={isAutoAr("title")}
+                    onChange={(v) => setArValue("title", v)}
+                    placeholder="Automatic translation of the English title"
+                  />
+                  <ArField
+                    label="Excerpt (Arabic)"
+                    value={arValue("excerpt")}
+                    auto={isAutoAr("excerpt")}
+                    multiline
+                    onChange={(v) => setArValue("excerpt", v)}
+                    placeholder="Automatic translation of the English excerpt"
+                  />
+                  <ArField
+                    label="Author Name (Arabic)"
+                    value={arValue("authorName")}
+                    auto={isAutoAr("authorName")}
+                    onChange={(v) => setArValue("authorName", v)}
+                    placeholder="Automatic translation of the English author name"
+                  />
+                  {blogType === "blog" && (
+                    <>
+                      <ArField
+                        label="Category (Arabic)"
+                        value={arValue("categoryLabel")}
+                        auto={isAutoAr("categoryLabel")}
+                        onChange={(v) => setArValue("categoryLabel", v)}
+                        placeholder="Automatic translation of the English category"
+                      />
+                      <ArField
+                        label="Archive Tag (Arabic)"
+                        value={arValue("archiveTag")}
+                        auto={isAutoAr("archiveTag")}
+                        onChange={(v) => setArValue("archiveTag", v)}
+                        placeholder="Automatic translation of the English archive tag"
+                      />
+                    </>
+                  )}
+                </>
+              ) : (
+                <>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Label>Title *</Label>
@@ -384,8 +674,22 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 <Input value={form.title} onChange={(e) => updateField("title", e.target.value)} />
               </div>
               <div className="space-y-2">
-                <Label>Slug (auto-generated)</Label>
-                <Input value={form.slug} readOnly className="bg-muted" placeholder="Select service and location to generate slug" />
+                <Label>Slug {blogType === "blog" ? "" : "(auto-generated)"}</Label>
+                <Input
+                  value={form.slug}
+                  readOnly={blogType !== "blog"}
+                  onChange={
+                    blogType === "blog"
+                      ? (e) => updateField("slug", toSlug(e.target.value))
+                      : undefined
+                  }
+                  className={blogType !== "blog" ? "bg-muted" : undefined}
+                  placeholder={
+                    blogType === "blog"
+                      ? "Generated from the title — edit to customize"
+                      : "Select service and location to generate slug"
+                  }
+                />
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -407,20 +711,39 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 </div>
                 <Input value={form.authorName} onChange={(e) => updateField("authorName", e.target.value)} placeholder="e.g. Admin" />
               </div>
-              <div className="space-y-2">
-                <Label>Cover Image URL</Label>
-                <Input value={form.articleMedia.heroCoverMedia.url} onChange={(e) => updateField("articleMedia", { heroCoverMedia: { url: e.target.value } })} placeholder="https://..." />
-                {form.articleMedia.heroCoverMedia.url && (
-                  <img src={form.articleMedia.heroCoverMedia.url} alt="Cover preview" className="mt-2 h-32 w-full rounded-md object-cover" />
-                )}
-              </div>
+              <MediaInput
+                label="Cover Image"
+                value={form.articleMedia.heroCoverMedia.url}
+                onChange={(url) => updateField("articleMedia", { heroCoverMedia: { url } })}
+                accept="image"
+              />
+              {form.articleMedia.heroCoverMedia.url && (
+                <img src={form.articleMedia.heroCoverMedia.url} alt="Cover preview" className="mt-2 h-32 w-full rounded-md object-cover" />
+              )}
+              {blogType === "blog" && (
+                <div className="space-y-2">
+                  <Label>Archive Tag</Label>
+                  <Input
+                    value={form.archiveTag}
+                    onChange={(e) => updateField("archiveTag", e.target.value)}
+                    placeholder="e.g. Control Room Archive: Riyadh"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Chip shown on the featured image (leave empty to hide).
+                  </p>
+                </div>
+              )}
+                </>
+              )}
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex-row items-center justify-between">
-              <CardTitle>Body Content</CardTitle>
-              {blogType !== "city" && (
+              <CardTitle>
+                Body Content{activeLang === "ar" ? " (Arabic)" : ""}
+              </CardTitle>
+              {activeLang === "en" && blogType !== "city" && (
                 <div className="flex items-center gap-2 bg-muted rounded-lg p-1">
                   <Button
                     type="button"
@@ -442,12 +765,90 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                   </Button>
                 </div>
               )}
-              {blogType === "city" && (
+              {activeLang === "en" && blogType !== "blog" && (
                 <div className="text-xs text-muted-foreground">Page Sections Builder</div>
               )}
             </CardHeader>
             <CardContent className="space-y-4">
-              {blogType === "city" ? (
+              {activeLang === "ar" ? (
+                <>
+                  {usesPageSections ? (
+                    <>
+                      <div dir="rtl">
+                        <SectionLibraryEditor
+                          sections={(arabicSections as unknown as PageSection[]) || []}
+                          onChange={(sections) =>
+                            handleArabicSectionsChange(sections as SectionUnion[])
+                          }
+                          structureLocked
+                          textOnly
+                        />
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        Section structure, images and styling are managed in the
+                        English tab — only the copy is translated here.
+                      </p>
+                    </>
+                  ) : form.contentMode === "wysiwyg" ? (
+                    <>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <Label>Content (Arabic)</Label>
+                          {isAutoAr("bodyContent") && <AutoBadge />}
+                        </div>
+                        <div dir="rtl">
+                          <WysiwygEditor
+                            value={arValue("bodyContent")}
+                            onChange={(v) => setArValue("bodyContent", v)}
+                            placeholder="Automatic translation of the English content"
+                          />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <Label>Key Takeaways (Arabic)</Label>
+                          {isAutoAr("keyTakeawaysContent") && <AutoBadge />}
+                        </div>
+                        <div dir="rtl">
+                          <WysiwygEditor
+                            value={arValue("keyTakeawaysContent")}
+                            onChange={(v) => setArValue("keyTakeawaysContent", v)}
+                            placeholder="Automatic translation of the English key takeaways"
+                          />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <Label>Final Thoughts (Arabic)</Label>
+                          {isAutoAr("finalThoughtsContent") && <AutoBadge />}
+                        </div>
+                        <div dir="rtl">
+                          <WysiwygEditor
+                            value={arValue("finalThoughtsContent")}
+                            onChange={(v) => setArValue("finalThoughtsContent", v)}
+                            placeholder="Automatic translation of the English final thoughts"
+                          />
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <SectionEditor
+                        sections={
+                          (arabicSections as unknown as (TextImageSectionType | CardsSectionType)[]) || []
+                        }
+                        onChange={(sections) =>
+                          handleArabicSectionsChange(sections as SectionUnion[])
+                        }
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        Section structure is managed in the English tab — only
+                        the copy is translated here.
+                      </p>
+                    </>
+                  )}
+                </>
+              ) : blogType === "city" ? (
                 <SectionLibraryEditor
                   sections={(form.sections as PageSection[]) || []}
                   onChange={(sections) => {
@@ -456,6 +857,18 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                   }}
                   presets={CITY_TEMPLATE_PRESETS}
                   citySlug={form.citySlug}
+                />
+              ) : blogType === "country" &&
+                form.contentMode !== "wysiwyg" &&
+                looksLikePageSections(form.sections) ? (
+                <SectionLibraryEditor
+                  sections={(form.sections as PageSection[]) || []}
+                  onChange={(sections) => {
+                    updateField("sections", sections as SectionUnion[]);
+                    updateField("contentMode", "page-sections");
+                  }}
+                  presets={COUNTRY_TEMPLATE_PRESETS}
+                  countrySlug={form.countrySlug}
                 />
               ) : form.contentMode === "wysiwyg" ? (
                 <>
@@ -516,8 +929,8 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
 
           <Card>
             <CardHeader className="flex-row items-center justify-between">
-              <CardTitle>FAQs</CardTitle>
-              {canManageStructure && (
+              <CardTitle>FAQs{activeLang === "ar" ? " (Arabic)" : ""}</CardTitle>
+              {activeLang === "en" && canManageStructure && (
                 <Button type="button" size="sm" onClick={addFaq}>
                   <Plus className="mr-1 h-4 w-4" /> Add FAQ
                 </Button>
@@ -529,7 +942,30 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                   No FAQs yet. Add frequently asked questions for this article.
                 </p>
               )}
-              {form.faqs.map((faq, faqIndex) => (
+              {form.faqs.map((faq, faqIndex) =>
+                activeLang === "ar" ? (
+                  <div key={faqIndex} className="rounded-lg border p-3 space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium text-muted-foreground">
+                        FAQ {faqIndex + 1}
+                      </span>
+                      {isAutoAr(`faq.${faqIndex}.q`) && <AutoBadge />}
+                    </div>
+                    <Input
+                      dir="rtl"
+                      placeholder="Question (Arabic)"
+                      value={arValue(`faq.${faqIndex}.q`)}
+                      onChange={(e) => setArValue(`faq.${faqIndex}.q`, e.target.value)}
+                    />
+                    <Textarea
+                      dir="rtl"
+                      rows={3}
+                      placeholder="Answer (Arabic)"
+                      value={arValue(`faq.${faqIndex}.a`)}
+                      onChange={(e) => setArValue(`faq.${faqIndex}.a`, e.target.value)}
+                    />
+                  </div>
+                ) : (
                 <div key={faqIndex} className="rounded-lg border p-3 space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-medium text-muted-foreground">FAQ {faqIndex + 1}</span>
@@ -573,16 +1009,53 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                     />
                   </div>
                 </div>
-              ))}
+                )
+              )}
             </CardContent>
           </Card>
         </div>
 
         <div className="space-y-6">
           <Card>
-            <CardHeader><CardTitle>Publish</CardTitle></CardHeader>
+            <CardHeader>
+              <CardTitle>Publish{activeLang === "ar" ? " (Arabic)" : ""}</CardTitle>
+            </CardHeader>
             <CardContent className="space-y-4">
-              {form.categoryLabel && (
+              {activeLang === "ar" ? (
+                blogType === "blog" ? (
+                  <ArField
+                    label="Category (Arabic)"
+                    value={arValue("categoryLabel")}
+                    auto={isAutoAr("categoryLabel")}
+                    onChange={(v) => setArValue("categoryLabel", v)}
+                    placeholder="Automatic translation of the English category"
+                  />
+                ) : form.categoryLabel ? (
+                  <div className="space-y-2">
+                    <Label>Category</Label>
+                    <p className="text-sm text-muted-foreground">{form.categoryLabel}</p>
+                  </div>
+                ) : null
+              ) : (
+                <>
+              {blogType === "blog" && (
+                <div className="space-y-2">
+                  <Label>Category</Label>
+                  <Input
+                    value={form.categoryLabel}
+                    onChange={(e) => {
+                      const label = e.target.value;
+                      updateField("categoryLabel", label);
+                      updateField("category", toSlug(label) || "uncategorized");
+                    }}
+                    placeholder="e.g. Travel Tips"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Optional. Shown as the badge on the blog listing.
+                  </p>
+                </div>
+              )}
+              {form.categoryLabel && blogType !== "blog" && (
                 <div className="space-y-2">
                   <Label>Category</Label>
                   <p className="text-sm text-muted-foreground">{form.categoryLabel}</p>
@@ -613,9 +1086,12 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 <Label>Read Time (minutes)</Label>
                 <Input type="number" min={1} value={form.readTime} onChange={(e) => updateField("readTime", Number(e.target.value))} />
               </div>
+                </>
+              )}
             </CardContent>
           </Card>
 
+          {blogType !== "blog" && activeLang === "en" && (
           <Card>
             <CardHeader><CardTitle>Service Location</CardTitle></CardHeader>
             <CardContent className="space-y-4">
@@ -690,40 +1166,64 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
               <p className="text-xs text-muted-foreground">
                 Slug: {form.slug || "(auto-generated from selections)"}
               </p>
-              {blogType === "city" && (
-                <div className="space-y-2">
-                  <Label>WhatsApp Number (page override)</Label>
-                  <Input
-                    value={form.whatsappNumber}
-                    onChange={(e) => updateField("whatsappNumber", e.target.value)}
-                    placeholder="+1234567890"
-                  />
-                  <p className="text-xs text-muted-foreground">
-                    Optional. When set, the chat widget on this city service page sends
-                    WhatsApp messages to this number instead of the country or city
-                    service number. Leave empty to inherit the global number.
-                  </p>
-                </div>
-              )}
+              <div className="space-y-2">
+                <Label>WhatsApp Override Number</Label>
+                <Input
+                  value={form.whatsappNumber}
+                  onChange={(e) => updateField("whatsappNumber", e.target.value)}
+                  placeholder="+1234567890"
+                />
+                <p className="text-xs text-muted-foreground">
+                  Optional. When set, the chat widget on this service page sends
+                  WhatsApp messages to this number instead of the country or city
+                  service number. Leave empty to inherit the global number.
+                </p>
+              </div>
             </CardContent>
           </Card>
+          )}
 
           <Card>
             <CardHeader>
               <div className="flex items-center justify-between">
-                <CardTitle>SEO</CardTitle>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={regenerateSeo}
-                  className="text-xs h-7"
-                >
-                  Regenerate SEO
-                </Button>
+                <CardTitle>SEO{activeLang === "ar" ? " (Arabic)" : ""}</CardTitle>
+                {activeLang === "en" && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={regenerateSeo}
+                    className="text-xs h-7"
+                  >
+                    Regenerate SEO
+                  </Button>
+                )}
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
+              {activeLang === "ar" ? (
+                <>
+                  <ArField
+                    label="Meta Title (Arabic)"
+                    value={arValue("seo.metaTitle")}
+                    auto={isAutoAr("seo.metaTitle")}
+                    onChange={(v) => setArValue("seo.metaTitle", v)}
+                    placeholder="Automatic translation of the English meta title"
+                  />
+                  <ArField
+                    label="Meta Description (Arabic)"
+                    value={arValue("seo.metaDescription")}
+                    auto={isAutoAr("seo.metaDescription")}
+                    multiline
+                    onChange={(v) => setArValue("seo.metaDescription", v)}
+                    placeholder="Automatic translation of the English meta description"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    The social image is shared between both languages.
+                  </p>
+                </>
+              ) : (
+                <>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Label>Meta Title</Label>
@@ -746,14 +1246,19 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                 <Textarea rows={3} value={form.seo_metadata.metaDescription} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaDescription: e.target.value })} placeholder="Auto-generated from excerpt..." />
                 <p className="text-xs text-muted-foreground">{form.seo_metadata.metaDescription.length}/160 characters</p>
               </div>
-              <div className="space-y-2">
-                <Label>OG Image URL</Label>
-                <Input value={form.seo_metadata.ogImage} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, ogImage: e.target.value })} placeholder="https://..." />
-                <p className="text-xs text-muted-foreground">Fallback: hero cover image</p>
-              </div>
+              <MediaInput
+                label="OG Image"
+                value={form.seo_metadata.ogImage}
+                onChange={(url) => updateField("seo_metadata", { ...form.seo_metadata, ogImage: url })}
+                accept="image"
+              />
+              <p className="text-xs text-muted-foreground">Fallback: hero cover image</p>
+                </>
+              )}
             </CardContent>
           </Card>
 
+          {activeLang === "en" && (
           <Card>
             <CardHeader><CardTitle>Tags</CardTitle></CardHeader>
             <CardContent className="space-y-3">
@@ -778,6 +1283,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
               </div>
             </CardContent>
           </Card>
+          )}
         </div>
       </div>
     </form>

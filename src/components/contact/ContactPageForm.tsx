@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
+import { useRecaptchaV3 } from "@/hooks/use-recaptcha-v3";
 
 interface ContactFormLabels {
   title: string;
   name: string;
   email: string;
   phone: string;
+  selectService: string;
   message: string;
   sending: string;
   send: string;
@@ -16,37 +18,50 @@ interface ContactFormLabels {
   close: string;
 }
 
+interface ServiceOption {
+  slug: string;
+  title: string;
+}
+
 interface ContactPageFormProps {
   labels: ContactFormLabels;
   heading: string;
   hint: string;
+  services: ServiceOption[];
+  recaptchaSiteKey?: string;
 }
 
-export default function ContactPageForm({ labels, heading, hint }: ContactPageFormProps) {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+export default function ContactPageForm({ labels, heading, hint, services, recaptchaSiteKey }: ContactPageFormProps) {
+  const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const { execute: executeRecaptcha } = useRecaptchaV3(recaptchaSiteKey);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
     try {
+      const { service, ...fields } = form;
+      const serviceTitle = services.find((s) => s.slug === service)?.title || "";
+      const captchaToken = await executeRecaptcha("contact_form");
+      const payload: Record<string, unknown> = {
+        channel: "contact-form",
+        ...fields,
+        serviceName: serviceTitle,
+        pageUrl: window.location.href,
+      };
+      if (captchaToken) payload.recaptchaToken = captchaToken;
       await fetch("/api/chat/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          channel: "contact-form",
-          ...form,
-          serviceName: "",
-          pageUrl: window.location.href,
-        }),
+        body: JSON.stringify(payload),
       });
       trackEvent("lead_captured", {
         form_id: "contact_page_form",
         form_location: "contact_page",
       });
       setSent(true);
-      setForm({ name: "", email: "", phone: "", message: "" });
+      setForm({ name: "", email: "", phone: "", service: "", message: "" });
     } catch {
     } finally {
       setSending(false);
@@ -105,6 +120,23 @@ export default function ContactPageForm({ labels, heading, hint }: ContactPageFo
               className="w-full text-sm text-gray-900 placeholder-gray-400 outline-none bg-transparent"
             />
           </div>
+
+          {/* Dynamic Services Selection */}
+          <div className="rounded-xl bg-gray-100 px-3.5 py-2.5 focus-within:ring-1 focus-within:ring-gray-800">
+            <select
+              value={form.service}
+              onChange={(e) => setForm({ ...form, service: e.target.value })}
+              className="w-full text-sm text-gray-900 outline-none bg-transparent cursor-pointer"
+            >
+              <option value="">{labels.selectService}</option>
+              {services.map((s) => (
+                <option key={s.slug} value={s.slug}>
+                  {s.title}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <div className="rounded-xl bg-gray-100 px-3.5 py-2.5 focus-within:ring-1 focus-within:ring-gray-800">
             <input
               type="tel"

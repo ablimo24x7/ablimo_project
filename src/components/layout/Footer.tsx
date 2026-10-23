@@ -8,6 +8,7 @@ import {
   locationsUrl,
   resolveCity,
 } from "@/lib/locations";
+import { getNavServices } from "@/lib/services";
 import ExpandableFooterLinks from "./ExpandableFooterLinks";
 import Image from "next/image";
 
@@ -15,9 +16,21 @@ interface FooterProps {
   lang: Locale;
 }
 
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
+interface FooterColumn {
+  title: string;
+  links: FooterLink[];
+  viewMore?: FooterLink;
+}
+
 export default async function Footer({ lang }: FooterProps) {
   const dict = await getDictionary(lang);
   const d = dict.footer;
+  const serviceLinks = await getNavServices(lang);
 
   const country = (code: string) => {
     const found = COUNTRIES.find((c) => c.code === code)!;
@@ -28,44 +41,18 @@ export default async function Footer({ lang }: FooterProps) {
     return cityUrl(lang, c, resolveCity(c, citySlug)!);
   };
 
-  const footerColumns = [
+  const footerColumns: FooterColumn[] = [
     {
       title: d.aboutUs.title,
       links: [
         { label: d.aboutUs.homepage, href: `${localeHome(lang)}` },
         { label: d.aboutUs.aboutAB, href: `${localeBase(lang)}/about` },
-        { label: d.aboutUs.leadership, href: `${localeBase(lang)}/about` },
-        { label: d.aboutUs.awards, href: `${localeBase(lang)}/about` },
         { label: d.aboutUs.chauffeurRecruitment, href: `${localeBase(lang)}/partners` },
         { label: d.aboutUs.corporateCareers, href: `${localeBase(lang)}/career` },
         { label: d.aboutUs.press, href: `${localeBase(lang)}/press/releases` },
+        { label: d.aboutUs.blog, href: `${localeBase(lang)}/blogs` },
         { label: d.aboutUs.sustainability, href: `${localeBase(lang)}/sustainability` },
         { label: d.aboutUs.contactUs, href: `${localeBase(lang)}/contact` },
-      ],
-    },
-    {
-      title: d.supportLegal.title,
-      links: [
-        { label: d.supportLegal.helpCenter, href: `${localeBase(lang)}/faqs` },
-        { label: d.supportLegal.contactCallback, href: `${localeBase(lang)}/contact` },
-        { label: d.supportLegal.liveChat, href: `${localeBase(lang)}/contact` },
-        { label: d.supportLegal.terms, href: `${localeBase(lang)}/terms` },
-        { label: d.supportLegal.privacy, href: `${localeBase(lang)}/privacy-policy` },
-        { label: d.supportLegal.cookie, href: `${localeBase(lang)}/terms` },
-        { label: d.supportLegal.modernSlavery, href: `${localeBase(lang)}/terms` },
-        { label: d.supportLegal.codeOfConduct, href: `${localeBase(lang)}/terms` },
-      ],
-    },
-    {
-      title: d.fleet.title,
-      links: [
-        { label: d.fleet.landing, href: `${localeBase(lang)}/fleet` },
-        { label: d.fleet.luxurySedan, href: `${localeBase(lang)}/fleet/luxury-sedan` },
-        { label: d.fleet.businessSedan, href: `${localeBase(lang)}/fleet/business-sedan` },
-        { label: d.fleet.luxurySuv, href: `${localeBase(lang)}/fleet/luxury-suv` },
-        { label: d.fleet.businessVan, href: `${localeBase(lang)}/fleet/business-van` },
-        { label: d.fleet.mpv, href: `${localeBase(lang)}/fleet/mpv` },
-        { label: d.fleet.miniBus, href: `${localeBase(lang)}/fleet/mini-bus` },
       ],
     },
     {
@@ -77,7 +64,6 @@ export default async function Footer({ lang }: FooterProps) {
         { label: d.locations.kuwait, href: country("kw") },
         { label: d.locations.bahrain, href: country("bh") },
         { label: d.locations.oman, href: country("om") },
-        { label: d.locations.europeUkUsa, href: locationsUrl(lang) },
         { label: d.locations.allCities, href: citiesUrl(lang) },
         { label: d.locations.allCountries, href: locationsUrl(lang) },
       ],
@@ -86,43 +72,17 @@ export default async function Footer({ lang }: FooterProps) {
       title: d.globalHubs.title,
       links: [
         { label: d.globalHubs.doha, href: hubCity("qa", "doha") },
-        { label: d.globalHubs.jeddah, href: hubCity("sa", "jeddah") },
-        { label: d.globalHubs.mecca, href: hubCity("sa", "mecca") },
         { label: d.globalHubs.riyadh, href: hubCity("sa", "riyadh") },
-        { label: d.globalHubs.tabuk, href: hubCity("sa", "tabuk") },
-        { label: d.globalHubs.madinah, href: hubCity("sa", "medina") },
-        { label: d.globalHubs.alUla, href: hubCity("sa", "al-ula") },
-        { label: d.globalHubs.dammam, href: hubCity("sa", "dammam") },
-        { label: d.globalHubs.alKhobar, href: hubCity("sa", "al-khobar") },
-        { label: d.globalHubs.alQasim, href: hubCity("sa", "al-qasim") },
-        { label: d.globalHubs.abha, href: hubCity("sa", "abha") },
-        { label: d.globalHubs.jizan, href: hubCity("sa", "jizan") },
-        { label: d.globalHubs.neom, href: hubCity("sa", "neom") },
-        { label: d.globalHubs.abuDhabi, href: hubCity("ae", "abu-dhabi") },
         { label: d.globalHubs.dubai, href: hubCity("ae", "dubai") },
-        { label: d.globalHubs.sharjah, href: hubCity("ae", "sharjah") },
-        { label: d.globalHubs.ajman, href: hubCity("ae", "ajman") },
-        { label: d.globalHubs.rasAlKhaymah, href: hubCity("ae", "ras-al-khaimah") },
         { label: d.globalHubs.kuwaitCity, href: hubCity("kw", "kuwait") },
         { label: d.globalHubs.manama, href: hubCity("bh", "manama") },
         { label: d.globalHubs.muscat, href: hubCity("om", "muscat") },
       ],
+      viewMore: { label: d.globalHubs.viewMore, href: citiesUrl(lang) },
     },
     {
       title: d.explore.title,
-      links: [
-        { label: d.explore.asDirected, href: `${localeBase(lang)}/services/chauffeur-vip` },
-        { label: d.explore.executiveMobility, href: `${localeBase(lang)}/services/corporate-transportation` },
-        { label: d.explore.airportTransfers, href: locationsUrl(lang) },
-        { label: d.explore.vipDiplomatic, href: `${localeBase(lang)}/industries/government-diplomatic` },
-        { label: d.explore.corporateTransportation, href: `${localeBase(lang)}/services/corporate-transportation` },
-        { label: d.explore.eventTransportation, href: `${localeBase(lang)}/services/event-transportation` },
-        { label: d.explore.groupCharter, href: `${localeBase(lang)}/services/bus-coach-hire` },
-        { label: d.explore.tourism, href: `${localeBase(lang)}/services/tourism-transportation` },
-        { label: d.explore.religiousTourism, href: `${localeBase(lang)}/services/religious-tourism` },
-        { label: d.explore.crossBorder, href: `${localeBase(lang)}/city-to-city` },
-        { label: d.explore.premiumLifestyle, href: `${localeBase(lang)}/services/chauffeur-vip` },
-      ],
+      links: serviceLinks,
     },
   ];
 
@@ -186,7 +146,7 @@ export default async function Footer({ lang }: FooterProps) {
   const bottomLinks = [
     { label: d.supportLegal.terms, href: `${localeBase(lang)}/terms` },
     { label: d.supportLegal.privacy, href: `${localeBase(lang)}/privacy-policy` },
-    { label: d.imprint, href: `${localeBase(lang)}/imprint` },
+    // { label: d.imprint, href: `${localeBase(lang)}/imprint` },
     { label: d.accessibility, href: `${localeBase(lang)}/accessibility` },
   ];
 
@@ -235,7 +195,7 @@ export default async function Footer({ lang }: FooterProps) {
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {footerColumns.map((section) => (
             <div key={section.title}>
               <h4 className="text-sm font-bold text-gray-200 uppercase tracking-wider mb-6">
@@ -246,6 +206,14 @@ export default async function Footer({ lang }: FooterProps) {
                 showMoreText={d.showMore}
                 showLessText={d.showLess}
               />
+              {section.viewMore && (
+                <Link
+                  href={section.viewMore.href}
+                  className="inline-block mt-3 text-sm text-abBlue hover:text-white transition-colors"
+                >
+                  {section.viewMore.label}
+                </Link>
+              )}
             </div>
           ))}
         </div>

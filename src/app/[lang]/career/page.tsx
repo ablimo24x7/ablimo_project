@@ -94,229 +94,231 @@ export default async function CareerPage({
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop"
-          alt="AB.Limo office and team"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/70 via-[#292a30]/50 to-[#292a30]" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide max-w-4xl mx-auto leading-tight text-white">
-            {dict.career.hero.heading}
-          </h1>
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-            <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
-              {dict.career.breadcrumb.home}
-            </Link>
-            <span>/</span>
-            <span className="text-white">{dict.career.breadcrumb.career}</span>
+      <main className="min-h-screen bg-[#292a30] text-white">
+        {/* Hero Section */}
+        <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop"
+            alt="AB.Limo office and team"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#292a30]/70 via-[#292a30]/50 to-[#292a30]" />
+          <div className="relative z-10 text-center px-4">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-wide max-w-4xl mx-auto leading-tight text-white">
+              {dict.career.hero.heading}
+            </h1>
+            <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
+              <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
+                {dict.career.breadcrumb.home}
+              </Link>
+              <span>/</span>
+              <span className="text-white">{dict.career.breadcrumb.career}</span>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Intro Section */}
-      <section className="py-24 px-8 max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
-          <div className="lg:w-1/2">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              {dict.career.intro.heading1}
+        {/* Intro Section */}
+        <section className="py-24 px-8 max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            <div className="lg:w-1/2">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                {dict.career.intro.heading1}
+                <br />
+                <span className="italic font-light text-gray-300">
+                  {dict.career.intro.heading2}
+                </span>
+              </h2>
+              <div className="space-y-6 text-gray-300 leading-relaxed">
+                <p>{dict.career.intro.p1}</p>
+                <p>{dict.career.intro.p2}</p>
+              </div>
+            </div>
+            <div className="lg:w-1/2">
+              <div className="relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+                  alt="AB.Limo team collaboration"
+                  width={800}
+                  height={600}
+                  className="rounded-lg shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Growing International Team */}
+        <section className="py-24 bg-[#1c1d21]">
+          <div className="max-w-7xl mx-auto px-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight">
+              {dict.career.team.heading1}
               <br />
               <span className="italic font-light text-gray-300">
-                {dict.career.intro.heading2}
+                {dict.career.team.heading2}
               </span>
             </h2>
-            <div className="space-y-6 text-gray-300 leading-relaxed">
-              <p>{dict.career.intro.p1}</p>
-              <p>{dict.career.intro.p2}</p>
-            </div>
-          </div>
-          <div className="lg:w-1/2">
-            <div className="relative">
-              <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
-                alt="AB.Limo team collaboration"
-                width={800}
-                height={600}
-                className="rounded-lg shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Growing International Team */}
-      <section className="py-24 bg-[#1c1d21]">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight">
-            {dict.career.team.heading1}
-            <br />
-            <span className="italic font-light text-gray-300">
-              {dict.career.team.heading2}
-            </span>
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: "500+", label: dict.career.team.members },
-              { number: "30+", label: dict.career.team.nationalities },
-              { number: "15+", label: dict.career.team.offices },
-              { number: "4.5", label: dict.career.team.rating },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-5xl md:text-6xl font-bold mb-4">
-                  {stat.number}
-                </p>
-                <p className="text-gray-400 text-lg">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quote Section */}
-      <section className="py-24 px-8 max-w-5xl mx-auto text-center">
-        <div className="text-6xl text-gray-700 mb-8">&ldquo;</div>
-        <blockquote className="text-3xl md:text-4xl font-light leading-relaxed mb-8 italic">
-          {dict.career.quote.text}
-        </blockquote>
-        <div>
-          <p className="font-semibold text-lg">{dict.career.quote.title}</p>
-          <p className="text-gray-400 text-sm">{dict.career.quote.company}</p>
-        </div>
-      </section>
-
-      {/* Teams Section */}
-      <section className="py-24 bg-[#1c1d21]">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight">
-            {dict.career.departments.heading1}
-            <br />
-            <span className="italic font-light text-gray-300">
-              {dict.career.departments.heading2}
-            </span>
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teams.map((team) => (
-              <div
-                key={team.abbrev}
-                className="bg-[#292a30] rounded-lg overflow-hidden border border-gray-700/50 hover:border-gray-500/50 transition-all duration-300 group cursor-pointer"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={team.image}
-                    alt={team.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#292a30] to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-white/10 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
-                      {team.abbrev}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-gray-300 transition-colors">
-                    {team.name}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {team.description}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { number: "500+", label: dict.career.team.members },
+                { number: "30+", label: dict.career.team.nationalities },
+                { number: "15+", label: dict.career.team.offices },
+                { number: "4.5", label: dict.career.team.rating },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <p className="text-5xl md:text-6xl font-bold mb-4">
+                    {stat.number}
                   </p>
+                  <p className="text-gray-400 text-lg">{stat.label}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-24 px-8 max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight">
-          {dict.career.benefits.heading1}
-          <br />
-          <span className="italic font-light text-gray-300">
-            {dict.career.benefits.heading2}
-          </span>
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {benefits.map((benefit) => (
-            <div
-              key={benefit.title}
-              className="bg-[#1c1d21] p-8 rounded-lg border border-gray-700/50 text-center hover:border-gray-500/50 transition-all duration-300"
-            >
-              <div className="text-white mb-6 flex justify-center">
-                {benefit.icon}
-              </div>
-              <h3 className="text-lg font-bold mb-4">{benefit.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {benefit.description}
-              </p>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* Latest News */}
-      <section className="py-24 bg-[#1c1d21]">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight">
-            {dict.career.news.heading1}
-            <br />
-            <span className="italic font-light text-gray-300">{dict.career.news.heading2}</span>
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {newsItems.map((news) => (
-              <article
-                key={news.title}
-                className="bg-[#292a30] rounded-lg overflow-hidden border border-gray-700/50 hover:border-gray-500/50 transition-all duration-300 group cursor-pointer"
-              >
-                <div className="relative h-56 overflow-hidden">
-                  <Image
-                    src={news.image}
-                    alt={news.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs text-gray-500 uppercase tracking-wider">
-                      {news.category}
-                    </span>
-                    <span className="text-xs text-gray-600">•</span>
-                    <span className="text-xs text-gray-500">{news.date}</span>
+        {/* Quote Section */}
+        <section className="py-24 px-8 max-w-5xl mx-auto text-center">
+          <div className="text-6xl text-gray-700 mb-8">&ldquo;</div>
+          <blockquote className="text-3xl md:text-4xl font-light leading-relaxed mb-8 italic">
+            {dict.career.quote.text}
+          </blockquote>
+          <div>
+            <p className="font-semibold text-lg">{dict.career.quote.title}</p>
+            <p className="text-gray-400 text-sm">{dict.career.quote.company}</p>
+          </div>
+        </section>
+
+        {/* Teams Section */}
+        <section className="py-24 bg-[#1c1d21]">
+          <div className="max-w-7xl mx-auto px-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight">
+              {dict.career.departments.heading1}
+              <br />
+              <span className="italic font-light text-gray-300">
+                {dict.career.departments.heading2}
+              </span>
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {teams.map((team) => (
+                <div
+                  key={team.abbrev}
+                  className="bg-[#292a30] rounded-lg overflow-hidden border border-gray-700/50 hover:border-gray-500/50 transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={team.image}
+                      alt={team.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#292a30] to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <span className="bg-white/10 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        {team.abbrev}
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold group-hover:text-gray-300 transition-colors">
-                    {news.title}
-                  </h3>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold mb-2 group-hover:text-gray-300 transition-colors">
+                      {team.name}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {team.description}
+                    </p>
+                  </div>
                 </div>
-              </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-24 px-8 max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight">
+            {dict.career.benefits.heading1}
+            <br />
+            <span className="italic font-light text-gray-300">
+              {dict.career.benefits.heading2}
+            </span>
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {benefits.map((benefit) => (
+              <div
+                key={benefit.title}
+                className="bg-[#1c1d21] p-8 rounded-lg border border-gray-700/50 text-center hover:border-gray-500/50 transition-all duration-300"
+              >
+                <div className="text-white mb-6 flex justify-center">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-lg font-bold mb-4">{benefit.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Chauffeur CTA */}
-      <section className="py-24 px-8 max-w-4xl mx-auto text-center">
-        <div className="bg-[#1c1d21] rounded-2xl p-12 border border-gray-700/50">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {dict.career.chauffeurCta.heading}
-          </h2>
-          <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-            {dict.career.chauffeurCta.desc}
-          </p>
-          <Link
-            href={`${localeBase(lang)}/partners`}
-            className="inline-block bg-white text-[#292a30] px-10 py-4 text-sm font-semibold tracking-wider uppercase hover:bg-gray-200 transition-all duration-300 rounded-full"
-          >
-            {dict.career.chauffeurCta.button}
-          </Link>
-        </div>
-      </section>
+        {/* Latest News */}
+        <section className="py-24 bg-[#1c1d21]">
+          <div className="max-w-7xl mx-auto px-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight">
+              {dict.career.news.heading1}
+              <br />
+              <span className="italic font-light text-gray-300">{dict.career.news.heading2}</span>
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {newsItems.map((news) => (
+                <article
+                  key={news.title}
+                  className="bg-[#292a30] rounded-lg overflow-hidden border border-gray-700/50 hover:border-gray-500/50 transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="relative h-56 overflow-hidden">
+                    <Image
+                      src={news.image}
+                      alt={news.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs text-gray-500 uppercase tracking-wider">
+                        {news.category}
+                      </span>
+                      <span className="text-xs text-gray-600">•</span>
+                      <span className="text-xs text-gray-500">{news.date}</span>
+                    </div>
+                    <h3 className="text-lg font-bold group-hover:text-gray-300 transition-colors">
+                      {news.title}
+                    </h3>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
+        {/* Chauffeur CTA */}
+        <section className="py-24 px-8 max-w-4xl mx-auto text-center">
+          <div className="bg-[#1c1d21] rounded-2xl p-12 border border-gray-700/50">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {dict.career.chauffeurCta.heading}
+            </h2>
+            <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+              {dict.career.chauffeurCta.desc}
+            </p>
+            <Link
+              href={`${localeBase(lang)}/partners`}
+              className="inline-block bg-white text-[#292a30] px-10 py-4 text-sm font-semibold tracking-wider uppercase hover:bg-gray-200 transition-all duration-300 rounded-full"
+            >
+              {dict.career.chauffeurCta.button}
+            </Link>
+          </div>
+        </section>
+
+      </main>
     </>
   );
 }

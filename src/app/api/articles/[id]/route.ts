@@ -42,7 +42,22 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     const updates: Record<string, unknown> = {};
     for (const key of Object.keys(body)) {
       if (SERVER_MANAGED_FIELDS.has(key)) continue;
+      if (key === "translations") continue;
       updates[key] = body[key];
+    }
+
+    // Rebuild the Arabic translations against the *new* English content:
+    // hand-written Arabic wins, empty fields fall back to Google Translate.
+    try {
+      const { buildArticleTranslations } = await import("@/lib/article-translation");
+      const merged = { ...existing, ...updates } as Record<string, unknown>;
+      const translations = await buildArticleTranslations(
+        merged,
+        body.translations?.ar
+      );
+      updates.translations = translations;
+    } catch (err) {
+      console.error("[articles] Failed to build Arabic translations:", err);
     }
 
     // Atomic update — bypasses the document version check entirely, so stale

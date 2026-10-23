@@ -304,14 +304,16 @@ const articleSchema = new Schema(
     sections: { type: Schema.Types.Mixed, default: [] },
 
     // ── ABLimo Template Fields ─────────────────────────────
+    // "blog" = standalone post under /blogs/... (no service/location)
     templateType: {
       type: String,
-      enum: ["service-country", "service-city"],
+      enum: ["service-country", "service-city", "blog"],
       default: "service-country",
     },
     serviceSlug: {
       type: String,
       enum: [
+        "",
         "chauffeur-vip",
         "airport-transfers",
         "corporate-transportation",
@@ -323,13 +325,15 @@ const articleSchema = new Schema(
     },
     countrySlug: {
       type: String,
-      enum: ["saudi-arabia", "uae", "qatar", "bahrain", "kuwait", "oman", "gcc"],
+      enum: ["", "saudi-arabia", "uae", "qatar", "bahrain", "kuwait", "oman", "gcc"],
       default: "",
     },
     citySlug: { type: String, default: "" },
     country: { type: String, default: "" },
     city: { type: String, default: "" },
     whatsappNumber: { type: String, default: "" },
+    /** Blog-template hero chip, e.g. "Control Room Archive: Riyadh". */
+    archiveTag: { type: String, default: "" },
     routeFrom: { type: String, default: "" },
     routeTo: { type: String, default: "" },
 
@@ -345,6 +349,12 @@ const articleSchema = new Schema(
 
     // ── Locale ─────────────────────────────────────────────
     locale: { type: String, default: "en" },
+
+    // ── Arabic translations ────────────────────────────────
+    // One document holds every language. `translations.ar` keeps the
+    // hand-written Arabic (keyed by content path) and `translations.autoAr`
+    // the Google translations used when no hand-written value exists.
+    translations: { type: Schema.Types.Mixed, default: () => ({}) },
   },
   {
     timestamps: true,

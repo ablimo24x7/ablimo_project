@@ -61,7 +61,7 @@ export default async function TravelAgenciesPage({
   const faqs = t.faq.items;
 
   return (
-    <main className="min-h-screen bg-[#292a30]">
+    <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <Image

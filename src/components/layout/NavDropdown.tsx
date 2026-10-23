@@ -130,7 +130,7 @@ export default function NavDropdown({ label, items, groups, isOpen, onToggle, on
               ? `flex min-w-[280px]`
               : columns > 1
               ? `grid grid-cols-2 min-w-[440px]`
-              : `min-w-[240px]`
+              : `min-w-[296px]`
           }`}
           onMouseEnter={handlePanelMouseEnter}
           onMouseLeave={handleMouseLeave}

@@ -17,6 +17,7 @@ import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { MediaInput } from "@/components/admin/media-input";
 import {
   Dialog,
   DialogContent,
@@ -348,17 +349,11 @@ function Toolbar({ editor }: { editor: Editor }) {
           <DialogHeader>
             <DialogTitle>Insert Image</DialogTitle>
           </DialogHeader>
-          <Input
+          <MediaInput
             value={imageUrl}
-            onChange={(e) => setImageUrl(e.target.value)}
+            onChange={setImageUrl}
+            accept="image"
             placeholder="Image URL (https://...)"
-            className="bg-muted border-border"
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                addImage();
-              }
-            }}
           />
           {imageUrl && (
             <img

@@ -77,6 +77,7 @@ const chatWidgetSchema = new Schema(
       type: String,
       default: "Hi! I have a question about your services in {city}.",
     },
+    universalWhatsappNumber: { type: String, default: "" },
     cityWhatsappNumber: { type: String, default: "" },
     countryWhatsappNumbers: {
       type: [countryWhatsappSchema],
@@ -92,6 +93,14 @@ const chatWidgetSchema = new Schema(
 export type ChatWidgetDoc = InferSchemaType<typeof chatWidgetSchema>;
 export type ChannelConfig = InferSchemaType<typeof channelConfigSchema>;
 export type CountryWhatsapp = InferSchemaType<typeof countryWhatsappSchema>;
+
+// Next.js dev-mode hot reloads re-evaluate this module, but the global
+// mongoose model registry persists — so a schema edit would keep using the
+// stale compiled model (and strict mode would strip new fields on save).
+// Drop the stale model when the compiled schema is out of date.
+if (models.ChatWidget && !models.ChatWidget.schema.path("universalWhatsappNumber")) {
+  delete models.ChatWidget;
+}
 
 export const ChatWidget =
   models.ChatWidget || model("ChatWidget", chatWidgetSchema);

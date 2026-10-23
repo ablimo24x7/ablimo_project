@@ -5,6 +5,7 @@ import { ChatWidget } from "@/components/chat/ChatWidget";
 import { WidgetOverrideProvider } from "@/components/chat/widget-context";
 import GoogleTranslate from "@/components/GoogleTranslate";
 import { hasLocale, defaultLocale, type Locale } from "./dictionaries";
+import { stripBrandSuffix } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return [{ lang: "en-US" }, { lang: "en-GB" }, { lang: "ar" }];
@@ -21,14 +22,19 @@ export async function generateMetadata({
     (m) => m.default
   );
 
-  const siteTitle = dict.metadata.siteTitle;
+  const siteTitle = stripBrandSuffix(dict.metadata.siteTitle);
   const siteDescription = dict.metadata.siteDescription;
 
   return {
-    title: siteTitle,
+    // default gets the root "%s | AB" template applied; template here
+    // re-asserts the suffix for deeper segments where the stash is lost.
+    title: {
+      default: siteTitle,
+      template: "%s | AB",
+    },
     description: siteDescription,
     openGraph: {
-      title: siteTitle,
+      title: `${siteTitle} | AB`,
       description: siteDescription,
       siteName: "AB.Limo",
       locale: locale === "ar" ? "ar_SA" : "en_US",
@@ -44,7 +50,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: siteTitle,
+      title: `${siteTitle} | AB`,
       description: siteDescription,
       images: ["https://www.ab.limo/opengraph-image.png"],
     },

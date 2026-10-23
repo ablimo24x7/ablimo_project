@@ -4,6 +4,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
@@ -25,7 +26,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
-import { Plus, Pencil, Trash2, MapPin, Plane, Building2 } from "lucide-react";
+import { Plus, Pencil, Trash2, MapPin, Plane, Building2, Search } from "lucide-react";
 import { useState } from "react";
 
 export type AirportShape = { slug: string; name: string; iata: string; citySlug?: string };
@@ -37,6 +38,7 @@ type LocationsResponse = { countries: CountryShape[]; routes: unknown[] };
 export default function CountriesPage() {
   const queryClient = useQueryClient();
   const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [search, setSearch] = useState("");
 
   const { data, isLoading } = useQuery({
     queryKey: ["locations"],
@@ -75,6 +77,12 @@ export default function CountriesPage() {
   });
 
   const countries = meta?.countries ?? [];
+  const q = search.trim().toLowerCase();
+  const filteredCountries = q
+    ? countries.filter(
+        (c) => c.name.toLowerCase().includes(q) || c.slug.toLowerCase().includes(q) || c.code.toLowerCase().includes(q)
+      )
+    : countries;
 
   return (
     <div className="space-y-4 px-4 lg:px-6">
@@ -94,6 +102,17 @@ export default function CountriesPage() {
 
       <Card>
         <CardContent className="p-0">
+          <div className="border-b p-3">
+            <div className="relative max-w-xs">
+              <Search className="pointer-events-none absolute top-1/2 left-2.5 size-3.5 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search by name, slug or code..."
+                className="pl-8"
+              />
+            </div>
+          </div>
           {isLoading ? (
             <div className="p-4 space-y-2">
               {[...Array(5)].map((_, i) => <Skeleton key={i} className="h-12 w-full" />)}
@@ -110,14 +129,14 @@ export default function CountriesPage() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {countries.length === 0 ? (
+                {filteredCountries.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={5} className="py-8 text-center text-muted-foreground">
-                      No locations yet. Create your first country.
+                      {q ? "No countries match your search." : "No locations yet. Create your first country."}
                     </TableCell>
                   </TableRow>
                 ) : (
-                  countries.map((c) => (
+                  filteredCountries.map((c) => (
                     <TableRow key={c._id}>
                       <TableCell>
                         <div className="font-medium">{c.name}</div>

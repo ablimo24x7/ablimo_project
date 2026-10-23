@@ -10,6 +10,7 @@ import {
 } from "@/lib/locations";
 import { getAllPublishedServices } from "@/lib/services";
 import { localeBase } from "@/app/[lang]/dictionaries";
+import { applyArabicToArticle, type ArticleTranslations } from "@/lib/arabic-content";
 
 /** True when the database is available (USE_DATABASE=true). */
 function isDatabaseEnabled(): boolean {
@@ -20,9 +21,26 @@ function isDatabaseEnabled(): boolean {
   }
 }
 
+/**
+ * Arabic content lives on the base document (`translations.ar`), so Arabic
+ * pages always read the English document and overlay the Arabic text on it.
+ * Legacy `locale: "ar"` duplicates are ignored — see
+ * `scripts/migrate-arabic-articles.mjs`.
+ */
 function localeFilter(locale: string) {
   const short = locale.split("-")[0];
+  if (short === "ar") return { locale: { $ne: "ar" } };
   return { locale: { $in: [locale, short] } };
+}
+
+/** Overlay the Arabic content of an article when Arabic is requested. */
+function withLocaleContent<T extends Record<string, unknown>>(
+  doc: T | null,
+  locale: string
+): T | null {
+  if (!doc) return doc;
+  if (locale.split("-")[0] !== "ar") return doc;
+  return applyArabicToArticle(doc, doc.translations as ArticleTranslations);
 }
 
 export async function getArticleBySlugOnly(
@@ -40,7 +58,7 @@ export async function getArticleBySlugOnly(
     filter.status = "published";
   }
   const article = await Article.findOne(filter).lean();
-  return article ? (article as ArticleDoc) : null;
+  return withLocaleContent(article ? (article as ArticleDoc) : null, locale) as ArticleDoc | null;
 }
 
 export async function getArticleBySlug(
@@ -56,7 +74,7 @@ export async function getArticleBySlug(
     ...localeFilter(locale),
     status: "published",
   }).lean();
-  return article ? (article as ArticleDoc) : null;
+  return withLocaleContent(article ? (article as ArticleDoc) : null, locale) as ArticleDoc | null;
 }
 
 export async function getRelatedArticles(params: {
@@ -99,7 +117,7 @@ export async function getRelatedArticles(params: {
       .lean();
   }
 
-  return articles as ArticleDoc[];
+  return articles.map((doc) => withLocaleContent(doc as ArticleDoc, params.locale)) as ArticleDoc[];
 }
 
 export async function getAllPublishedArticlesFiltered(params: {
@@ -138,7 +156,7 @@ export async function getAllPublishedArticlesFiltered(params: {
       .lean();
   }
 
-  return articles as ArticleDoc[];
+  return articles.map((doc) => withLocaleContent(doc as ArticleDoc, params.locale)) as ArticleDoc[];
 }
 
 export async function getAllPublishedArticles(
@@ -163,7 +181,98 @@ export async function getAllPublishedArticles(
       .lean();
   }
 
-  return articles as ArticleDoc[];
+  return articles.map((doc) => withLocaleContent(doc as ArticleDoc, locale)) as ArticleDoc[];
+}
+
+// ── Standalone blog posts (templateType "blog") ──────────────────
+
+/** Published blog posts for a locale, newest first, with English fallback. */
+export async function getPublishedBlogs(locale: string = "en"): Promise<ArticleDoc[]> {
+  if (!isDatabaseEnabled()) return [];
+  await connectDB();
+  let articles = await Article.find({
+    templateType: "blog",
+    ...localeFilter(locale),
+    status: "published",
+  })
+    .sort({ date: -1 })
+    .lean();
+
+  if (articles.length === 0 && locale === "ar") {
+    articles = await Article.find({
+      templateType: "blog",
+      ...localeFilter("en"),
+      status: "published",
+    })
+      .sort({ date: -1 })
+      .lean();
+  }
+
+  return articles.map((doc) => withLocaleContent(doc as ArticleDoc, locale)) as ArticleDoc[];
+}
+
+/**
+ * Resolve one blog post by ObjectId or slug. Locale-aware with English
+ * fallback; `preview` bypasses the published filter for dashboard previews.
+ */
+export async function getBlogByIdOrSlug(
+  idOrSlug: string,
+  locale: string = "en",
+  preview: boolean = false
+): Promise<ArticleDoc | null> {
+  if (!isDatabaseEnabled()) return null;
+  await connectDB();
+
+  const isObjectId = /^[0-9a-fA-F]{24}$/.test(idOrSlug);
+  const match: Record<string, unknown> = isObjectId
+    ? { $or: [{ _id: idOrSlug }, { slug: idOrSlug }] }
+    : { slug: idOrSlug };
+
+  const tryLocale = async (loc: string): Promise<ArticleDoc | null> => {
+    const doc = await Article.findOne({
+      templateType: "blog",
+      ...match,
+      ...localeFilter(loc),
+      ...(preview ? {} : { status: "published" }),
+    }).lean();
+    return withLocaleContent(doc ? (doc as ArticleDoc) : null, loc);
+  };
+
+  const article = await tryLocale(locale);
+  if (article) return article;
+  if (locale.split("-")[0] !== "en") return tryLocale("en");
+  return null;
+}
+
+/** Other published blog posts for the related section of a blog post. */
+export async function getRelatedBlogs(params: {
+  locale: string;
+  excludeSlug: string;
+  limit?: number;
+}): Promise<ArticleDoc[]> {
+  if (!isDatabaseEnabled()) return [];
+  await connectDB();
+
+  const build = (locale: string) => ({
+    templateType: "blog",
+    ...localeFilter(locale),
+    status: "published",
+    slug: { $ne: params.excludeSlug },
+  });
+
+  let articles = await Article.find(build(params.locale))
+    .sort({ date: -1 })
+    .limit(params.limit ?? 4)
+    .lean();
+
+  if (articles.length === 0 && params.locale === "ar") {
+    articles = await Article.find(build("en"))
+      .sort({ date: -1 })
+      .limit(params.limit ?? 4)
+      .lean();
+  }
+
+  return articles.map((doc) => withLocaleContent(doc as ArticleDoc, params.locale)) as ArticleDoc[];
 }
 
 /**
@@ -271,6 +380,8 @@ const SERVICE_FALLBACK_ORDER = 999;
 
 function localeInFilter(locale: string) {
   const short = locale.split("-")[0];
+  // Arabic content lives on the base document (translations.ar).
+  if (short === "ar") return { $ne: "ar" };
   return { $in: Array.from(new Set([locale, short, "en"])) };
 }
 
@@ -302,7 +413,9 @@ async function findServiceArticlesForLocale(
       bySlug.set(doc.slug, doc);
     }
   }
-  return Array.from(bySlug.values());
+  return Array.from(bySlug.values()).map(
+    (doc) => withLocaleContent(doc, locale) as ArticleDoc
+  );
 }
 
 async function getServiceMeta() {

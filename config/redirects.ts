@@ -31,6 +31,14 @@ import type { Redirect } from "next/dist/lib/load-custom-routes";
  * All rules use `permanent: true` (308) so search engines cache and
  * re-index the new hierarchy, preserving SEO equity.
  */
+/**
+ * `:lang` is constrained to the locales the [lang] segment accepts so the
+ * rules cannot swallow real two-segment pages (e.g. `/:lang/cities` used to
+ * match `/locations/cities` and redirect it to `/locations/locations/cities`).
+ * Applied centrally in `redirects()` below.
+ */
+const LANG = "(en-US|en-GB|ar)";
+
 const rules: Redirect[] = [
   // ---- City index ------------------------------------------------------
   // The legacy /cities page was merged into the /locations hierarchy.
@@ -124,14 +132,37 @@ const rules: Redirect[] = [
     destination: "/:lang/services/:path*",
     permanent: true,
   },
+  // Any other legacy /blog/... path → the new blog tree. Keep this rule
+  // AFTER the more specific /blog/services/* rule above — order matters.
+  {
+    source: "/:lang/blog/:path*",
+    destination: "/:lang/blogs/:path*",
+    permanent: true,
+  },
+
+  // ---- Maintenance screen -------------------------------------------------
+  // The old coming-soon page was replaced by the reusable maintenance page
+  // at the bare /maintenance URL (no locale prefix — it is one global screen).
+  {
+    source: "/:lang/coming-soon",
+    destination: "/maintenance",
+    permanent: true,
+  },
 ];
 
-export const redirects: () => Promise<Redirect[]> = async () => [
-  ...rules,
-  // English URLs carry no locale prefix — mirror every rule without /:lang.
-  ...rules.map((rule) => ({
+export const redirects: () => Promise<Redirect[]> = async () => {
+  // Constrain :lang so e.g. `/locations/cities` is never treated as
+  // lang="locations" + path="cities".
+  const localized = rules.map((rule) => ({
     ...rule,
-    source: rule.source.replace("/:lang", ""),
+    source: rule.source.replace("/:lang", `/:lang${LANG}`),
+  }));
+  // English URLs carry no locale prefix — mirror every rule without /:lang
+  // (strip the optional constraint group along with the parameter).
+  const mirrored = localized.map((rule) => ({
+    ...rule,
+    source: rule.source.replace(/\/:lang(?:\([^)]*\))?/, ""),
     destination: rule.destination.replace("/:lang", ""),
-  })),
-];
+  }));
+  return [...localized, ...mirrored];
+};

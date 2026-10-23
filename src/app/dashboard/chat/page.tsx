@@ -23,7 +23,8 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
 import { Plus, Trash2 } from "lucide-react";
-import { CHANNELS, type ChannelDefinition } from "@/lib/chat/channels";
+import { MediaInput } from "@/components/admin/media-input";
+import { CHANNELS } from "@/lib/chat/channels";
 
 interface ChannelConfig {
   id: string;
@@ -58,6 +59,7 @@ interface WidgetConfig {
   whatsappPopupMsg: string;
   whatsappPopupMsgCountry: string;
   whatsappPopupMsgCity: string;
+  universalWhatsappNumber: string;
   cityWhatsappNumber: string;
   countryWhatsappNumbers: { countrySlug: string; number: string }[];
   showAgents: boolean;
@@ -93,6 +95,7 @@ const DEFAULT_WIDGET: Omit<WidgetConfig, "_id"> = {
   whatsappPopupMsg: "Hi! I have a question about your services.",
   whatsappPopupMsgCountry: "Hi! I have a question about your services in {country}.",
   whatsappPopupMsgCity: "Hi! I have a question about your services in {city}.",
+  universalWhatsappNumber: "",
   cityWhatsappNumber: "",
   countryWhatsappNumbers: [],
   showAgents: false,
@@ -148,19 +151,19 @@ export default function ChatWidgetPage() {
     }
   };
 
-  const updateChannel = (channelId: string, field: string, value: any) => {
+  const updateChannel = (channelId: string, field: string, value: unknown) => {
     if (!config) return;
     setConfig({
       ...config,
       channels: config.channels.map((ch) =>
-        ch.id === channelId ? { ...ch, [field]: value } : ch
+        ch.id === channelId ? ({ ...ch, [field]: value } as ChannelConfig) : ch
       ),
     });
   };
 
-  const updateConfig = (field: string, value: any) => {
+  const updateConfig = (field: string, value: unknown) => {
     if (!config) return;
-    setConfig({ ...config, [field]: value });
+    setConfig({ ...config, [field]: value } as WidgetConfig);
   };
 
   const countryNumbers = config?.countryWhatsappNumbers ?? [];
@@ -248,7 +251,7 @@ export default function ChatWidgetPage() {
                   <Label>Animation</Label>
                   <Select
                     value={config.animation}
-                    onValueChange={(v: any) => updateConfig("animation", v)}
+                    onValueChange={(v) => updateConfig("animation", v)}
                   >
                     <SelectTrigger>
                       <SelectValue />
@@ -460,10 +463,38 @@ export default function ChatWidgetPage() {
           </Card>
           <Card>
             <CardHeader>
+              <CardTitle>Universal WhatsApp Number</CardTitle>
+              <CardDescription>
+                The general company number used on the homepage, main service
+                pages, and every other page that is not a country/city service
+                or location page.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <Label>Universal WhatsApp Number</Label>
+                <Input
+                  value={config.universalWhatsappNumber || ""}
+                  onChange={(e) =>
+                    updateConfig("universalWhatsappNumber", e.target.value)
+                  }
+                  placeholder="+1234567890"
+                />
+                <p className="text-xs text-muted-foreground">
+                  Country and city numbers below override this on their
+                  respective pages. Leave empty to use the WhatsApp channel
+                  number everywhere.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
               <CardTitle>Country WhatsApp Numbers</CardTitle>
               <CardDescription>
                 Route WhatsApp messages to a country-specific number on that
-                country&apos;s service pages (including its city service pages)
+                country&apos;s service pages (e.g. /services/chauffeur-vip/qatar)
+                and location pages (e.g. /locations/qatar)
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -515,9 +546,10 @@ export default function ChatWidgetPage() {
             <CardHeader>
               <CardTitle>City Services Template</CardTitle>
               <CardDescription>
-                Route the floating widget&apos;s WhatsApp messages to a dedicated
-                number on city services template pages. Individual city service
-                pages can override this from the post editor.
+                Route WhatsApp messages to a dedicated number on city service
+                template pages (e.g. /services/chauffeur-vip/qatar/doha) and
+                city location pages (e.g. /locations/qatar/doha). Individual
+                city service pages can override this from the post editor.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -693,7 +725,7 @@ function ChannelConfigCard({
 }: {
   channelId: string;
   config: WidgetConfig;
-  onUpdate: (channelId: string, field: string, value: any) => void;
+  onUpdate: (channelId: string, field: string, value: unknown) => void;
 }) {
   const channelDef = CHANNELS.find((c) => c.id === channelId);
   const channelConfig = config.channels.find((c) => c.id === channelId);
@@ -787,16 +819,12 @@ function ChannelConfigCard({
             placeholder="e.g. Sales Team"
           />
         </div>
-        <div className="space-y-2">
-          <Label>Agent Avatar URL (optional)</Label>
-          <Input
-            value={channelConfig.agentAvatar}
-            onChange={(e) =>
-              onUpdate(channelId, "agentAvatar", e.target.value)
-            }
-            placeholder="https://..."
-          />
-        </div>
+        <MediaInput
+          label="Agent Avatar (optional)"
+          value={channelConfig.agentAvatar}
+          onChange={(url) => onUpdate(channelId, "agentAvatar", url)}
+          accept="image"
+        />
       </CardContent>
     </Card>
   );

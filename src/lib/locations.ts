@@ -375,15 +375,18 @@ export function allCities(): { country: Country; city: City }[] {
 }
 
 export function countryUrl(lang: string, country: Country): string {
-  return `${localeBase(lang)}/locations/${country.slug}`;
+  return `${localeBase(lang)}/locations/${normalizeCountrySlug(country.slug)}`;
 }
 
 export function cityUrl(lang: string, country: Country, cityObj: City): string {
-  return `${localeBase(lang)}/locations/${country.slug}/${cityObj.slug}`;
+  const countrySlug = normalizeCountrySlug(country.slug);
+  return `${localeBase(lang)}/locations/${countrySlug}/${normalizeCitySlug(countrySlug, cityObj.slug)}`;
 }
 
 export function airportUrl(lang: string, country: Country, cityObj: City, airport: Airport): string {
-  return `${localeBase(lang)}/locations/${country.slug}/${cityObj.slug}/airport/${airport.slug}`;
+  const countrySlug = normalizeCountrySlug(country.slug);
+  const citySlug = normalizeCitySlug(countrySlug, cityObj.slug);
+  return `${localeBase(lang)}/locations/${countrySlug}/${citySlug}/airport/${airport.slug}`;
 }
 
 export function routeUrl(lang: string, originCountry: Country, originCity: City, route: CityRoute): string {

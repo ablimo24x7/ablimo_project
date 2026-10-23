@@ -5,7 +5,8 @@ import { BlogArticleLayout } from "@/components/blog/BlogArticleLayout";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
 import { hasLocale, defaultLocale, getDictionary, localeBase } from "@/app/[lang]/dictionaries";
 import CityPageRenderer from "./CityPageRenderer";
-import { generateSeoMetadata } from "@/lib/seo";
+import { generateSeoMetadata, heroHeadingToTitle } from "@/lib/seo";
+import type { PageSection } from "@/components/services/sections/section-types";
 
 
 export const revalidate = 0;
@@ -53,7 +54,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = await fetchAndTranslateArticle(dbSlug, locale, true);
   if (!article) return { title: dict.notFound?.title || "Not Found" };
 
-  const title = article.seo_metadata?.metaTitle || article.title;
+  // Tab title mirrors the page H1: hero section title for PageSection
+  // templates, otherwise article.title (the BlogArticleLayout H1).
+  const sections = (article.sections ?? []) as unknown[];
+  let h1Title = "";
+  if (isPageSectionArray(sections)) {
+    const hero = (sections as PageSection[]).find(
+      (s) => s.type === "hero" && s.enabled
+    );
+    const c = hero?.content as Record<string, unknown> | undefined;
+    h1Title = heroHeadingToTitle(
+      c?.title as string | undefined,
+      c?.titleHighlight as string | undefined
+    );
+  }
+  const title = h1Title || article.title;
+
   const description = article.seo_metadata?.metaDescription || article.excerpt;
 
   return generateSeoMetadata({
@@ -84,8 +100,13 @@ export default async function ServiceArticlePage({ params, searchParams }: Props
   const isCity = article.templateType === "service-city" && article.city;
   const isCountry = article.templateType === "service-country" && article.country;
 
-  // Check if this city article uses PageSection-based sections
-  const usePageRenderer = isCity && article.sections && article.sections.length > 0 && isPageSectionArray(article.sections as unknown[]);
+  // City and country template articles may use PageSection-based sections;
+  // legacy/WYSIWYG articles fall through to BlogArticleLayout below.
+  const usePageRenderer =
+    (isCity || isCountry) &&
+    article.sections &&
+    article.sections.length > 0 &&
+    isPageSectionArray(article.sections as unknown[]);
 
   if (usePageRenderer) {
     return (

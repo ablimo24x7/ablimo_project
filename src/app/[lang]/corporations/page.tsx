@@ -45,7 +45,7 @@ export default async function CorporationsPage({
   const dict = await getDictionary(locale);
 
   return (
-    <main className="min-h-screen bg-[#292a30]">
+    <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <Image

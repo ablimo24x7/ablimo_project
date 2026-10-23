@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Orchestrating Ground Logistics for FII | AB.Limo Insights</title>
+    <meta name="description" content="An in-depth look at how AB.Limo deployed its centralized Transport Control Room to manage over 2,500 VIP delegate movements for the Future Investment Initiative.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        abBlack: '#050505',
+                        abDarkGray: '#111111',
+                        abDarkerGray: '#0a0a0a',
+                        abBlue: '#26ade3',
+                        abOrange: '#f58731',
+                        abGreen: '#a8cf46',
+                        abRed: '#ee2e3a',
+                        abYellow: '#ffcd2b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #d1d5db; overflow-x: hidden; }
+        
+        /* Custom scrollbar using primary brand color */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #26ade3; border-radius: 4px; }
+
+        /* Mega Menu Configuration */
+        .mega-menu:hover .mega-menu-content { display: block; opacity: 1; visibility: visible; transform: translateY(0); }
+        .mega-menu-content { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform: translateY(15px); }
+
+        /* Article specific styling */
+        .article-content p { margin-bottom: 1.5rem; line-height: 1.8; color: #9ca3af; font-size: 1.125rem; }
+        .article-content h2 { color: #ffffff; font-size: 2rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1.5rem; }
+        .article-content h3 { color: #ffffff; font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content ul { list-style-type: none; margin-bottom: 2rem; padding-left: 0.5rem; }
+        .article-content ul li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; color: #9ca3af; line-height: 1.6; }
+        .article-content ul li::before { content: ''; position: absolute; left: 0; top: 0.5rem; width: 6px; height: 6px; background-color: #a8cf46; border-radius: 50%; }
+        
+        .article-content blockquote { border-left: 4px solid #a8cf46; background-color: #111111; padding: 1.5rem; margin: 2rem 0; font-style: italic; color: #e5e7eb; border-radius: 0 4px 4px 0; }
+
+        /* Reveal Animation */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-abBlack antialiased selection:bg-abBlue selection:text-white">
+
+    <header class="fixed w-full bg-[#050505]/95 backdrop-blur-md border-b border-gray-800 z-50 transition-all">
+        <div class="w-full px-4 sm:px-8 lg:px-12">
+            <div class="flex justify-between items-center h-20 w-full">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/">
+                        <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2Fded4bb97-72ca-40cd-b4fa-b62f10839a94/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAALQqizjI9mfEJfYgWU-_FEblD6lddK0oRcSN96aYQhmQ&exp=1789221988&osig=AAAAAAAAAAAAAAAAAAAAACjWFIQrgYe21gXCWY4AcyqvirJBmzRRCqgNfqt3J8MX&signer=media-rpc&x-canva-quality=screen" alt="AB.Limo Logo" class="h-12 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation & Right Controls -->
+                <div class="hidden lg:flex flex-1 justify-end items-center space-x-5 xl:space-x-8">
+                    <nav class="flex space-x-6 items-center">
+                        <!-- Our Services -->
+                        <div class="relative group h-20 flex items-center cursor-pointer mega-menu">
+                            <span class="text-gray-200 hover:text-white font-medium flex items-center text-sm transition-colors">
+                                Our Services <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                            </span>
+                            <div class="absolute top-20 -left-4 w-64 bg-[#111] shadow-2xl opacity-0 invisible mega-menu-content border-t-[3px] border-abBlue p-5 rounded-b border-x border-b border-gray-800">
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abBlue mb-3">Executive & Corporate Mobility</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abBlue mb-3">As Directed Services</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abBlue mb-3">Airport Transfers</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abBlue mb-3">VIP, Diplomatic & Government</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abBlue mb-3">Cross-Border Mobility</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abBlue mb-3">Tourism & Leisure</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abBlue mb-3">Religious Tourism</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abBlue">Premium Lifestyle & Specialty</a>
+                            </div>
+                        </div>
+                        <!-- Our Solutions -->
+                        <div class="relative group h-20 flex items-center cursor-pointer mega-menu">
+                            <span class="text-gray-200 hover:text-white font-medium flex items-center text-sm transition-colors">
+                                Our Solutions <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                            </span>
+                            <div class="absolute top-20 -left-4 w-64 bg-[#111] shadow-2xl opacity-0 invisible mega-menu-content border-t-[3px] border-abOrange p-5 rounded-b border-x border-b border-gray-800">
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abOrange mb-3">Corporate Fleet & Workforce Mobility</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abOrange mb-3">Event Transportation</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abOrange mb-3">Group & Coach Charter</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abOrange">Long-Term Vehicle Leasing</a>
+                            </div>
+                        </div>
+                        <!-- Mobility by Industry -->
+                        <div class="relative group h-20 flex items-center cursor-pointer mega-menu">
+                            <span class="text-gray-200 hover:text-white font-medium flex items-center text-sm transition-colors">
+                                Mobility by Industry <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                            </span>
+                            <div class="absolute top-20 -left-4 w-64 bg-[#111] shadow-2xl opacity-0 invisible mega-menu-content border-t-[3px] border-abGreen p-5 rounded-b border-x border-b border-gray-800">
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abGreen mb-3">Government & Ministries</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abGreen mb-3">Aviation & FBO Ops</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abGreen mb-3">Events & Exhibitions</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abGreen mb-3">Oil, Gas & Energy</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abGreen mb-3">Mega Projects & PIF</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abGreen mb-3">Luxury Hospitality</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abGreen">Sports Transport</a>
+                            </div>
+                        </div>
+                        <!-- Technology -->
+                        <div class="relative group h-20 flex items-center cursor-pointer mega-menu">
+                            <span class="text-gray-200 hover:text-white font-medium flex items-center text-sm transition-colors">
+                                Technology <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                            </span>
+                            <div class="absolute top-20 -left-4 w-64 bg-[#111] shadow-2xl opacity-0 invisible mega-menu-content border-t-[3px] border-abRed p-5 rounded-b border-x border-b border-gray-800">
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abRed mb-3">Duty of Care Protocols</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abRed mb-3">Intelligent Transport Systems</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abRed mb-3">SAP Concur Integration</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abRed mb-3">Corporate Billing Dashboard</a>
+                                <a href="#" class="block text-sm text-gray-400 hover:text-abRed">Enterprise APIs</a>
+                            </div>
+                        </div>
+                        <!-- Insights (Active) -->
+                        <div class="relative group h-20 flex items-center cursor-pointer">
+                            <span class="text-abBlue font-medium flex items-center text-sm transition-colors border-b-2 border-abBlue">
+                                Insights
+                            </span>
+                        </div>
+                    </nav>
+
+                    <div class="h-6 w-px bg-gray-700"></div>
+                    
+                    <button class="text-gray-300 hover:text-white transition-colors text-lg"><i class="fa-solid fa-globe"></i></button>
+
+                    <div class="flex items-center space-x-4 text-gray-400 text-lg">
+                        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+
+                    <a href="#" class="border border-abBlue text-abBlue hover:bg-abBlue hover:text-abBlack px-5 py-2 rounded-sm text-sm font-semibold transition-colors">
+                        Book now
+                    </a>
+
+                    <a href="mailto:hello@ab.limo" class="text-gray-300 text-sm hover:text-white transition-colors">hello@ab.limo</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <article class="pt-32 pb-16 relative z-10">
+        <div class="w-full px-4 sm:px-8 lg:px-12 reveal active">
+            
+            <!-- Breadcrumbs & Category -->
+            <div class="flex items-center space-x-3 mb-8">
+                <a href="#" class="text-gray-500 hover:text-white text-xs font-bold uppercase tracking-wider transition-colors">Insights</a>
+                <span class="text-gray-700">/</span>
+                <span class="bg-[#111] border border-abGreen text-abGreen px-2.5 py-1 rounded-sm text-[10px] font-bold uppercase tracking-wider">Event Logistics</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+                Orchestrating Ground Logistics for the Future Investment Initiative (FII).
+            </h1>
+
+            <!-- Meta Information -->
+            <div class="flex flex-wrap items-center justify-between border-y border-gray-800 py-4 mb-12">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center border border-gray-700">
+                        <i class="fa-solid fa-user-tie text-abBlue text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="text-white text-sm font-bold">AB.Limo Logistics Desk</p>
+                        <p class="text-gray-500 text-xs font-mono">Published Oct 20, 2026</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-500 font-mono mt-4 sm:mt-0">
+                    <span class="flex items-center"><i class="fa-regular fa-clock mr-2 text-abGreen"></i> 8 min read</span>
+                    <div class="flex space-x-3">
+                        <a href="#" class="hover:text-abBlue transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="#" class="hover:text-abBlue transition-colors"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+                        <a href="#" class="hover:text-abBlue transition-colors"><i class="fa-solid fa-link text-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Featured Image -->
+            <div class="w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden border border-gray-800 mb-8 relative group">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Transport Control Room" class="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100">
+                
+                <!-- Archive Tag -->
+                <div class="absolute bottom-4 right-4 bg-[#050505]/90 border border-gray-700 px-3 py-1.5 rounded-sm text-xs font-mono text-gray-400 flex items-center backdrop-blur-sm z-20 shadow-lg">
+                    <span class="w-2 h-2 rounded-full bg-abRed animate-pulse mr-2"></span> Control Room Archive: Riyadh
+                </div>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="w-full border border-gray-800 bg-[#0a0a0a] rounded-xl p-6 md:p-8 mb-16 shadow-lg">
+                <div class="flex items-center justify-between mb-6 border-b border-gray-800/60 pb-4">
+                    <div class="inline-flex items-center space-x-2 py-1 px-3 bg-[#111] border border-abBlue text-abBlue text-[10px] font-bold uppercase tracking-widest rounded-sm">
+                        <i class="fa-solid fa-list-ul text-abBlue"></i>
+                        <span>Table of Contents</span>
+                    </div>
+                    <span class="text-gray-500 font-mono text-[10px] tracking-widest hidden sm:block">QUICK NAVIGATION</span>
+                </div>
+                
+                <ul class="flex flex-col space-y-2">
+                    <!-- Section 01 -->
+                    <li>
+                        <a href="#challenge" class="flex items-center space-x-4 p-3 bg-[#111] border border-transparent hover:border-gray-800 rounded-md transition-all group cursor-pointer">
+                            <span class="font-black text-2xl text-gray-700 group-hover:text-abBlue transition-colors w-10 text-right">01</span>
+                            <div class="h-6 w-px bg-gray-800 group-hover:bg-abBlue transition-colors"></div>
+                            <h4 class="text-gray-400 font-medium tracking-wide group-hover:text-white transition-colors">The Logistical Challenge</h4>
+                        </a>
+                    </li>
+                    <!-- Section 02 -->
+                    <li>
+                        <a href="#solution" class="flex items-center space-x-4 p-3 bg-[#111] border border-transparent hover:border-gray-800 rounded-md transition-all group cursor-pointer">
+                            <span class="font-black text-2xl text-gray-700 group-hover:text-abOrange transition-colors w-10 text-right">02</span>
+                            <div class="h-6 w-px bg-gray-800 group-hover:bg-abOrange transition-colors"></div>
+                            <h4 class="text-gray-400 font-medium tracking-wide group-hover:text-white transition-colors">Transport Control Room</h4>
+                        </a>
+                    </li>
+                    <!-- Section 03 -->
+                    <li>
+                        <a href="#agility" class="flex items-center space-x-4 p-3 bg-[#111] border border-transparent hover:border-gray-800 rounded-md transition-all group cursor-pointer">
+                            <span class="font-black text-2xl text-gray-700 group-hover:text-abGreen transition-colors w-10 text-right">03</span>
+                            <div class="h-6 w-px bg-gray-800 group-hover:bg-abGreen transition-colors"></div>
+                            <h4 class="text-gray-400 font-medium tracking-wide group-hover:text-white transition-colors">As-Directed Agility</h4>
+                        </a>
+                    </li>
+                    <!-- Section 04 -->
+                    <li>
+                        <a href="#conclusion" class="flex items-center space-x-4 p-3 bg-[#111] border border-transparent hover:border-gray-800 rounded-md transition-all group cursor-pointer">
+                            <span class="font-black text-2xl text-gray-700 group-hover:text-abRed transition-colors w-10 text-right">04</span>
+                            <div class="h-6 w-px bg-gray-800 group-hover:bg-abRed transition-colors"></div>
+                            <h4 class="text-gray-400 font-medium tracking-wide group-hover:text-white transition-colors">Strategic Conclusion</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="w-full px-4 sm:px-8 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+                
+                <!-- Left Main Content -->
+                <div class="lg:col-span-8 article-content reveal">
+                    
+                    <p class="text-xl text-white font-medium mb-8 leading-relaxed">
+                        When global investors, state leaders, and Fortune 500 CEOs converge in Riyadh for the Future Investment Initiative (FII), the logistical demands placed on the city's infrastructure are monumental. Standard transportation models collapse under the weight of such concentrated VIP volume.
+                    </p>
+
+                    <p>
+                        In October 2026, AB.Limo was tasked with a critical mandate: engineer, deploy, and manage a flawless ground transportation network for over 2,500 VIP delegates operating on highly fluid, unpredictable schedules over a 72-hour period.
+                    </p>
+
+                    <h2 id="challenge" class="scroll-mt-32">The Challenge: Volume Meets Strict Protocol</h2>
+                    <p>
+                        Executing event logistics in the Kingdom requires a profound understanding of local security protocols, especially when navigating the King Abdulaziz International Conference Center (KAICC) and the Diplomatic Quarter. The challenges were threefold:
+                    </p>
+                    <ul>
+                        <li><strong>Dynamic Routing:</strong> Avoiding localized traffic congestion triggered by rolling security cordons.</li>
+                        <li><strong>Tarmac-to-Venue Friction:</strong> Seamlessly integrating private aviation arrivals (FBOs) at King Khalid International Airport directly into the event ecosystem.</li>
+                        <li><strong>Asset Allocation:</strong> Maintaining a massive standby fleet of premium vehicles (S-Class, V-Class, and VIP Coaches) to accommodate impromptu meeting changes.</li>
+                    </ul>
+
+                    <blockquote>
+                        "You cannot manage a Tier-1 global summit with spreadsheets and walkie-talkies. It requires a dedicated Transport Control Room viewing the entire city as a dynamic chess board." <br><span class="text-sm font-bold text-white mt-2 block">— Director of Event Operations, AB.Limo</span>
+                    </blockquote>
+
+                    <h2 id="solution" class="scroll-mt-32">The Solution: The AB.Limo Transport Control Room</h2>
+                    <p>
+                        To conquer the complexity of the FII, AB.Limo bypassed traditional dispatch methods and activated a centralized <strong>Transport Control Room</strong>. This operational nerve center utilized proprietary Intelligent Transport Systems (ITS) to ingest live GPS telemetry from every deployed vehicle in the fleet.
+                    </p>
+                    <p>
+                        Rather than waiting for bottlenecks to occur at the KAICC loading zones, our dispatchers actively monitored traffic density and rerouted VIP convoys in real-time. By communicating directly with Saudi event security and on-site parking management, AB.Limo ground coordinators maintained a continuous, fluid motion of vehicles.
+                    </p>
+
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Telemetry Dashboard" class="w-full rounded-xl border border-gray-800 my-10 grayscale opacity-80">
+
+                    <h2 id="agility" class="scroll-mt-32">Executing As-Directed Agility</h2>
+                    <p>
+                        A defining characteristic of the FII is the "meeting after the meeting." Delegates frequently require immediate transportation from the main venue to private dinners at KAFD or impromptu hotel summits. 
+                    </p>
+                    <p>
+                        To support this, AB.Limo deployed an extensive <em>As-Directed</em> fleet. Hundreds of vetted chauffeurs remained on active standby within dedicated staging zones, allowing for sub-5-minute extraction times for high-profile targets, ensuring the momentum of corporate deal-making was never hindered by transport delays.
+                    </p>
+
+                    <h3 id="conclusion" class="scroll-mt-32">Conclusion</h3>
+                    <p>
+                        The successful orchestration of the Future Investment Initiative logistics underscores a fundamental truth in B2B mobility: moving thousands of VIPs is not a driving task; it is a complex data and communications operation. By combining a strictly governed black fleet with rigorous Duty of Care and centralized technological dispatch, AB.Limo delivered absolute precision at scale.
+                    </p>
+                    
+                    <!-- Content Tags -->
+                    <div class="flex flex-wrap gap-3 mt-12 pt-8 border-t border-gray-800">
+                        <span class="px-3 py-1 bg-[#111] border border-gray-700 rounded-sm text-xs text-gray-400 font-mono">#Riyadh</span>
+                        <span class="px-3 py-1 bg-[#111] border border-gray-700 rounded-sm text-xs text-gray-400 font-mono">#EventLogistics</span>
+                        <span class="px-3 py-1 bg-[#111] border border-gray-700 rounded-sm text-xs text-gray-400 font-mono">#ControlRoom</span>
+                        <span class="px-3 py-1 bg-[#111] border border-gray-700 rounded-sm text-xs text-gray-400 font-mono">#FII</span>
+                    </div>
+
+                </div>
+
+                <div class="lg:col-span-4 relative">
+                    <div class="sticky top-32 space-y-8 reveal">
+                        
+                        <!-- CTA Card -->
+                        <div class="bg-[#111] border border-abGreen rounded-xl p-6 shadow-2xl relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-abGreen/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                            <h3 class="text-xl font-bold text-white mb-3">Managing a Mega-Event?</h3>
+                            <p class="text-sm text-gray-400 mb-6 leading-relaxed">Download our comprehensive 20-page technical framework for deploying a Transport Control Room in the GCC.</p>
+                            <a href="#" class="block w-full bg-[#050505] border border-gray-700 hover:border-abGreen text-white text-center font-bold py-3 rounded-sm transition-colors text-sm flex items-center justify-center">
+                                <i class="fa-solid fa-file-pdf text-abGreen mr-2"></i> Download Case Study
+                            </a>
+                        </div>
+
+                        <!-- Enterprise Sales Contact -->
+                        <div class="bg-[#111] border border-gray-800 rounded-xl p-6">
+                            <h4 class="text-sm font-bold tracking-widest text-gray-500 uppercase mb-4">Enterprise Procurement</h4>
+                            <p class="text-sm text-gray-400 mb-4">Require a fleet of 50+ vehicles for an upcoming summit? Contact our B2B sales desk directly.</p>
+                            <a href="mailto:rfp@ab.limo" class="text-abBlue font-semibold text-sm hover:text-white transition-colors flex items-center">
+                                <i class="fa-regular fa-envelope mr-2"></i> rfp@ab.limo
+                            </a>
+                        </div>
+
+                        <!-- Intercity Travel Cross-Sell -->
+                        <div class="bg-[#111] border border-gray-800 hover:border-abOrange transition-colors rounded-xl p-6 group">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-sm font-bold tracking-widest text-gray-400 uppercase group-hover:text-abOrange transition-colors">Intercity Travel</h4>
+                                <i class="fa-solid fa-map-location-dot text-abOrange text-lg"></i>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-4 leading-relaxed">Seamless, premium transfers between Riyadh, Dammam, Jeddah, and GCC cross-border destinations via our V-Class & S-Class fleets.</p>
+                            <a href="#" class="text-abOrange font-semibold text-sm flex items-center group-hover:underline">
+                                Explore GCC Routes <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+
+                        <!-- As-Directed Cross-Sell -->
+                        <div class="bg-[#111] border border-gray-800 hover:border-abYellow transition-colors rounded-xl p-6 group">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-sm font-bold tracking-widest text-gray-400 uppercase group-hover:text-abYellow transition-colors">Hourly As-Directed</h4>
+                                <i class="fa-regular fa-clock text-abYellow text-lg"></i>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-4 leading-relaxed">Maintain absolute agility during financial roadshows with a dedicated executive chauffeur on continuous standby.</p>
+                            <a href="#" class="text-abYellow font-semibold text-sm flex items-center group-hover:underline">
+                                Book Standby Service <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+
+                        <!-- Share Links -->
+                        <div class="border-t border-gray-800 pt-6">
+                            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest block mb-4">Share Intelligence</span>
+                            <div class="flex space-x-3">
+                                <a href="#" class="w-10 h-10 rounded-full bg-[#111] border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-abBlue transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-[#111] border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-abBlue transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-[#111] border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-abBlue transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <section class="py-20 bg-[#0a0a0a] border-t border-gray-900">
+        <div class="w-full px-4 sm:px-8 lg:px-12">
+            <div class="flex justify-between items-end mb-10 reveal">
+                <h3 class="text-2xl font-bold text-white">Related <span class="text-abBlue">Intelligence</span></h3>
+                <a href="/insights" class="text-sm font-bold text-abBlue hover:text-white transition-colors hidden sm:block border-b border-abBlue pb-0.5">View all Insights</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Related Article 1 -->
+                <article class="bg-[#111] border border-gray-800 rounded-xl overflow-hidden hover:border-abOrange transition-colors group reveal">
+                    <div class="p-6 flex flex-col h-full">
+                        <span class="text-[10px] font-bold text-abOrange uppercase tracking-wider mb-3 block">Corporate & Fleet</span>
+                        <h4 class="text-lg font-bold text-white mb-3 group-hover:text-abOrange transition-colors">The ROI of Outsourcing Executive Fleets in Saudi Arabia.</h4>
+                        <p class="text-sm text-gray-500 mb-6 flex-grow line-clamp-3">Why massive enterprises are abandoning owned fleets to eliminate depreciation and scale transport instantly.</p>
+                        <a href="#" class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">Read Article &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Related Article 2 -->
+                <article class="bg-[#111] border border-gray-800 rounded-xl overflow-hidden hover:border-abRed transition-colors group reveal reveal-delay-1">
+                    <div class="p-6 flex flex-col h-full">
+                        <span class="text-[10px] font-bold text-abRed uppercase tracking-wider mb-3 block">Duty of Care</span>
+                        <h4 class="text-lg font-bold text-white mb-3 group-hover:text-abRed transition-colors">Live Telemetry: Inside the AB.Limo Transport System (ITS).</h4>
+                        <p class="text-sm text-gray-500 mb-6 flex-grow line-clamp-3">How providing direct API access to corporate security teams allows for real-time monitoring of executives.</p>
+                        <a href="#" class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">Read Article &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Related Article 3 -->
+                <article class="bg-[#111] border border-gray-800 rounded-xl overflow-hidden hover:border-abYellow transition-colors group reveal reveal-delay-2">
+                    <div class="p-6 flex flex-col h-full">
+                        <span class="text-[10px] font-bold text-abYellow uppercase tracking-wider mb-3 block">Aviation & FBO</span>
+                        <h4 class="text-lg font-bold text-white mb-3 group-hover:text-abYellow transition-colors">FBO and Tarmac Protocols at King Khalid International.</h4>
+                        <p class="text-sm text-gray-500 mb-6 flex-grow line-clamp-3">Understanding the strict security clearances required for executing flawless private jet Meet & Greet services.</p>
+                        <a href="#" class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">Read Article &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[#050505] border-t border-gray-900 relative">
+        <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(#26ade3 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="w-full px-4 sm:px-8 lg:px-12 relative z-10 text-center reveal">
+            <i class="fa-regular fa-envelope-open text-4xl text-abBlue mb-6"></i>
+            <h2 class="text-3xl font-bold text-white mb-4">The Corporate Mobility Briefing.</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Join 5,000+ procurement managers and executive assistants receiving our monthly digest on GCC transport regulations, fleet strategy, and event logistics planning.</p>
+            
+            <form class="flex flex-col sm:flex-row max-w-xl mx-auto gap-3" onsubmit="event.preventDefault(); this.innerHTML = '<div class=\'w-full bg-[#111] border border-abGreen text-abGreen p-4 font-bold text-sm rounded-sm\'><i class=\'fa-solid fa-check mr-2\'></i> Successfully subscribed to the briefing.</div>';">
+                <input type="email" required placeholder="Enter corporate email address" class="flex-grow bg-[#111] border border-gray-700 text-white px-4 py-3.5 focus:outline-none focus:border-abBlue focus:ring-1 focus:ring-abBlue rounded-sm transition-colors text-sm">
+                <button type="submit" class="bg-abBlue hover:bg-[#1a93c4] text-[#050505] font-bold px-8 py-3.5 rounded-sm transition-colors text-sm whitespace-nowrap">Subscribe</button>
+            </form>
+            <p class="text-xs text-gray-600 mt-4">We respect your inbox. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <footer class="bg-abBlack text-white pt-20 pb-8 border-t-[4px] border-abBlue font-sans">
+        <div class="w-full px-4 sm:px-8 lg:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+                <!-- Column 1: About Us -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6">About Us</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Homepage</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">About AB Transportation</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Leadership Team</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Awards & Recognition</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Chauffeur Recruitment</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Corporate Careers</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Press / Newsroom</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2: Support & Legal -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Support & Legal</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Contact / Callback Request</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Live Chat / AI Assistant</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Terms and Conditions</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Cookie Policy / Settings</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Modern Slavery Statement</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Code of Conduct</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Fleet -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Fleet</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Fleet Landing Page</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Luxury Sedan (S-Class)</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Business Sedan</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Luxury SUV (Escalade/GMC)</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Business Van (V-Class)</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">MPV (Hyundai Staria)</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Mini Bus / Coach / VIP Luxury Bus</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Locations -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Locations</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Qatar</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Saudi Arabia</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">United Arab Emirates</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Kuwait</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Bahrain</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Oman</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Europe / UK / USA / Asia / Australia</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">All Cities</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">All Countries</a></li>
+                    </ul>
+                </div>
+                <!-- Column 5: Global Hubs -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Global Hubs</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Doha</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Jeddah</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Mecca / Makkah</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Riyadh</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Tabuk</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Madinah</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Al Ula</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Dammam</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Al Khobar</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Al Qasim</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">more..</a></li>
+                    </ul>
+                </div>
+                <!-- Column 6: Explore -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Explore</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-abBlue transition-colors">As Directed Services</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Executive & Corporate Mobility</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Airport Transfers</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">VIP, Diplomatic & Government</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Corporate Fleet & Workforce Mobility</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Event Transportation</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Group & Coach Charter</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Tourism & Leisure</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Religious Tourism</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Cross-Border Mobility</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">Premium Lifestyle & Specialty</a></li>
+                        <li><a href="#" class="hover:text-abBlue transition-colors">less</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <img src="https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2FM%2Fded4bb97-72ca-40cd-b4fa-b62f10839a94/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAALQqizjI9mfEJfYgWU-_FEblD6lddK0oRcSN96aYQhmQ&exp=1789221988&osig=AAAAAAAAAAAAAAAAAAAAACjWFIQrgYe21gXCWY4AcyqvirJBmzRRCqgNfqt3J8MX&signer=media-rpc&x-canva-quality=screen" alt="AB.Limo Logo" class="h-8 w-auto object-contain grayscale opacity-70">
+                    <p class="text-gray-600 text-xs">
+                        &copy; 2026 Arabian Bespoke (AB.Limo). All rights reserved.
+                    </p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="h-8 w-8 rounded-full bg-abDarkGray border border-gray-800 flex items-center justify-center text-gray-500 hover:text-white hover:border-abBlue transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+                    <a href="#" class="h-8 w-8 rounded-full bg-abDarkGray border border-gray-800 flex items-center justify-center text-gray-500 hover:text-white hover:border-abBlue transition-colors"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+                    <a href="#" class="h-8 w-8 rounded-full bg-abDarkGray border border-gray-800 flex items-center justify-center text-gray-500 hover:text-white hover:border-abBlue transition-colors"><i class="fa-brands fa-instagram text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animations
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+    </script>
+</body>
+</html>

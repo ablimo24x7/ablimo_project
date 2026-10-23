@@ -176,7 +176,7 @@ export function buildRouteTemplate(
         {
           id: "cta-contact",
           label: c2c.cta.bookNow,
-          href: "/{lang}/contact",
+          href: "{langPrefix}/contact",
           style: "primary",
           icon: "",
         },

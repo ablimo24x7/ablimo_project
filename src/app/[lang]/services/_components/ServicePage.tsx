@@ -145,12 +145,16 @@ export default async function ServicePage({
   breadcrumb,
   serviceName,
   serviceUrl,
+  relatedTitle,
+  relatedLinks,
 }: {
   params: Promise<{ lang: string }>;
   content: ServiceContent;
   breadcrumb: string;
   serviceName: string;
   serviceUrl: string;
+  relatedTitle?: string;
+  relatedLinks?: { label: string; href: string }[];
 }) {
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
@@ -377,6 +381,29 @@ export default async function ServicePage({
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related options (sibling sub-services) */}
+      {relatedLinks && relatedLinks.length > 0 && (
+        <section
+          aria-label={relatedTitle}
+          className="max-w-4xl mx-auto px-8 pt-4 pb-12 text-center"
+        >
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-4">
+            {relatedTitle}
+          </h2>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm">
+            {relatedLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-gray-400 hover:text-white transition-colors underline underline-offset-4 decoration-gray-700"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </section>
       )}

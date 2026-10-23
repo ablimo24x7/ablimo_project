@@ -53,58 +53,17 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const article = await Article.create(body);
-
-    // Auto-create Arabic version if article is English
-    if (article.locale === "en" || !article.locale) {
-      try {
-        const { googleTranslate, googleTranslateHtml } = await import("@/lib/googleTranslate");
-
-        const [title, excerpt, bodyContent, keyTakeawaysContent, finalThoughtsContent] =
-          await Promise.all([
-            googleTranslate(article.title || "", "ar"),
-            googleTranslate(article.excerpt || "", "ar"),
-            googleTranslateHtml(article.bodyContent || "", "ar"),
-            googleTranslateHtml(article.keyTakeawaysContent || "", "ar"),
-            googleTranslateHtml(article.finalThoughtsContent || "", "ar"),
-          ]);
-
-        const translatedFaqs = await Promise.all(
-          (article.faqs || []).map(async (faq: any) => ({
-            q: await googleTranslate(faq.q || "", "ar"),
-            a: await googleTranslate(faq.a || "", "ar"),
-          }))
-        );
-
-        // Auto-translate SEO metadata for Arabic
-        const [arMetaTitle, arMetaDescription] = await Promise.all([
-          googleTranslate(body.seo_metadata?.metaTitle || article.title || "", "ar"),
-          googleTranslate(body.seo_metadata?.metaDescription || article.excerpt || "", "ar"),
-        ]);
-
-        await Article.create({
-          ...article,
-          _id: undefined,
-          title,
-          excerpt,
-          bodyContent,
-          keyTakeawaysContent,
-          finalThoughtsContent,
-          faqs: translatedFaqs,
-          seo_metadata: {
-            metaTitle: arMetaTitle,
-            metaDescription: arMetaDescription,
-            ogImage: body.seo_metadata?.ogImage || article.articleMedia?.heroCoverMedia?.url || "",
-          },
-          locale: "ar",
-          createdAt: undefined,
-          updatedAt: undefined,
-        });
-      } catch (err) {
-        console.error("[articles] Failed to create Arabic version:", err);
-      }
+    // Arabic lives on the same document: hand-written Arabic wins, and
+    // every field left empty falls back to the Google translation.
+    try {
+      const { buildArticleTranslations } = await import("@/lib/article-translation");
+      body.translations = await buildArticleTranslations(body, body.translations?.ar);
+    } catch (err) {
+      console.error("[articles] Failed to build Arabic translations:", err);
+      body.translations = { ar: body.translations?.ar ?? {}, autoAr: {} };
     }
 
+    const article = await Article.create(body);
     return NextResponse.json(article, { status: 201 });
   } catch (err: any) {
     if (err?.code === 11000) {

@@ -25,6 +25,7 @@ import { migrateFlatServiceToSections } from "@/components/services/sections/sec
 import { renderServiceIcon } from "@/components/services/service-icons";
 import { translateText, needsTranslation } from "@/lib/translate";
 import enUS from "@/app/[lang]/dictionaries/en-US.json";
+import { cache } from "react";
 
 export const SERVICES_API_TAG = "services";
 
@@ -438,8 +439,8 @@ export function toServiceContent(doc: ServiceContentSource): ServiceContent {
   };
 }
 
-/** Fetch all published services (used by the services index + nav). */
-export async function getAllPublishedServices(): Promise<ServiceListItem[]> {
+/** Fetch all published services (used by the services index + nav + footer). */
+export const getAllPublishedServices = cache(async (): Promise<ServiceListItem[]> => {
   const enabled = isDatabaseEnabled();
   if (!enabled) {
     return buildDefaultServiceDocs()
@@ -475,7 +476,7 @@ export async function getAllPublishedServices(): Promise<ServiceListItem[]> {
     updatedAt: d.updatedAt ? String(d.updatedAt) : undefined,
     faqCount: ((d.faqs as Array<ServiceFaq> | undefined) ?? []).length,
   }));
-}
+});
 
 /** Fetch a single service doc by slug (any status). */
 export async function getServiceBySlug(

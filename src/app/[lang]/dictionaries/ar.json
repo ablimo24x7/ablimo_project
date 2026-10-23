@@ -140,6 +140,7 @@
       "chauffeurRecruitment": "توظيف السائقين",
       "corporateCareers": "الوظائف الشركاتية",
       "press": "الصحافة / غرفة الأخبار",
+      "blog": "المدونة",
       "sustainability": "الاستدامة",
       "contactUs": "اتصل بنا"
     },
@@ -198,10 +199,11 @@
       "rasAlKhaymah": "رأس الخيمة",
       "kuwaitCity": "مدينة الكويت",
       "manama": "المنامة",
-      "muscat": "مسقط"
+      "muscat": "مسقط",
+      "viewMore": "عرض جميع المدن"
     },
     "explore": {
-      "title": "استكشف",
+      "title": "خدماتنا",
       "asDirected": "خدمات حسب الطلب",
       "executiveMobility": "التنقل التنفيذي والمؤسسي",
       "airportTransfers": "نقل المطار",
@@ -212,7 +214,16 @@
       "tourism": "السياحة والترفيه",
       "religiousTourism": "السياحة الدينية",
       "crossBorder": "التنقل العابر للحدود",
-      "premiumLifestyle": "أسلوب الحياة الفاخر والمتخصص"
+      "premiumLifestyle": "أسلوب الحياة الفاخر والمتخصص",
+      "carService": "خدمة السيارات",
+      "chauffeurService": "خدمة السائق الشخصي",
+      "limousineService": "خدمة الليموزين",
+      "groundTransportation": "خدمات النقل البري",
+      "business": "سفر الأعمال",
+      "corporations": "الشركات",
+      "travelAgencies": "وكالات السفر",
+      "strategicPartnerships": "الشراكات الاستراتيجية",
+      "industries": "القطاعات"
     },
     "copyright": "©2026 AB.Limo",
     "imprint": "الإخلاء",
@@ -1948,6 +1959,9 @@
     "search": {
       "placeholder": "بحث عن الدول..."
     },
+    "filter": {
+      "all": "الكل"
+    },
     "features": [
       {
         "title": "توفر خليجي",
@@ -2668,6 +2682,24 @@
     "faqTitle": "الأسئلة الشائعة",
     "blog": "المدونة",
     "admin": "الإدارة",
+    "insights": "الرؤى",
+    "published": "نُشر في",
+    "tocTitle": "جدول المحتويات",
+    "tocQuickNav": "تنقل سريع",
+    "viewAllInsights": "عرض جميع الرؤى",
+    "readArticle": "اقرأ المقال",
+    "shareIntelligence": "مشاركة",
+    "exploreService": "استكشف الخدمة",
+    "copyLink": "نسخ الرابط",
+    "linkCopied": "تم نسخ الرابط!",
+    "subscribeTitle": "نشرة الحركة المؤسسية.",
+    "subscribeDesc": "انضم إلى أكثر من 5000 مدير مشتريات ومساعد تنفيذي يستلمون نشرتنا الشهرية عن أنظمة النقل في الخليج وأسطول الشركات وتخطيط لوجستيك الفعاليات.",
+    "subscribePlaceholder": "أدخل بريدك الإلكتروني المؤسسي",
+    "subscribeButton": "اشترك",
+    "subscribeDisclaimer": "نحترم بريدك. يمكنك إلغاء الاشتراك في أي وقت.",
+    "subscribeSuccess": "تم الاشتراك في النشرة بنجاح.",
+    "subscribeError": "يرجى إدخال بريد إلكتروني صالح.",
+    "subscribeLoading": "جارٍ الاشتراك...",
     "sideInfo": {
       "aboutCountry": "عن {country}",
       "exploreCountry": "استكشف خدمات النقل والليموزين الشاملة في {country}. نقدم خدمات نقل مطار فاخرة وجولات المدينة والسفر التنفيذي في جميع أنحاء المنطقة.",
@@ -4223,6 +4255,7 @@
     "name": "اسمك",
     "email": "البريد الإلكتروني",
     "phone": "رقم الهاتف",
+    "selectService": "اختر خدمة",
     "message": "رسالتك",
     "sending": "جاري الإرسال...",
     "send": "إرسال الرسالة",

@@ -32,6 +32,7 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { MediaInput } from "@/components/admin/media-input";
 import {
   Plus,
   Trash2,
@@ -435,14 +436,13 @@ function SectionEditorPanel({ section, onUpdate }: SectionEditorPanelProps) {
 
         <TabsContent value="image" className="space-y-4 mt-4">
           <div className="grid sm:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label>Image URL *</Label>
-              <Input
-                value={section.image.url}
-                onChange={(e) => onUpdate({ image: { ...section.image, url: e.target.value } })}
-                placeholder="https://..."
-              />
-            </div>
+            <MediaInput
+              label="Image"
+              required
+              value={section.image.url}
+              onChange={(url) => onUpdate({ image: { ...section.image, url } })}
+              accept="image"
+            />
             <div className="space-y-2">
               <Label>Alt Text</Label>
               <Input

@@ -30,6 +30,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
+import { MediaInput } from "@/components/admin/media-input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Plus, Trash2, GripVertical, Copy, ChevronDown, ChevronUp, ExternalLink,
@@ -48,6 +49,7 @@ import { useCanManageStructure } from "@/components/providers/structure-permissi
 import type { SectionScope, SectionInstance } from "@/components/section-library/types";
 import { getDefinitionsForScope, getDefinition } from "@/components/section-library/definitions";
 import { resolveCityMeta, localizeSectionsForCity } from "@/lib/city-localization";
+import { resolveCountryMeta, localizeSectionsForCountry } from "@/lib/country-localization";
 
 const SECTION_ICONS: Record<string, React.ElementType> = {
   hero: Layout,
@@ -85,8 +87,26 @@ interface SectionLibraryEditorProps {
    * this city instead of pasting the Riyadh-hardcoded wording.
    */
   citySlug?: string;
+  /**
+   * Country context — when set (and no citySlug), applying a template
+   * localizes country-specific copy (textMediaGrid regeneration + UAE
+   * token substitution) for this country instead of pasting the
+   * UAE-flagship wording. UAE keeps the template's original wording.
+   */
+  countrySlug?: string;
   /** Live entity FAQs (country/city) — shown read-only in context-bound FAQ sections. */
   faqContextItems?: Array<{ q: string; a: string }>;
+  /**
+   * Lock the section structure: no adding, removing, duplicating, reordering
+   * or applying templates. Used by the Arabic tab, where only the copy of the
+   * existing sections may change.
+   */
+  structureLocked?: boolean;
+  /**
+   * Show only the copy fields (Content + Items) and hide styling/behaviour
+   * tabs. Used by the Arabic tab.
+   */
+  textOnly?: boolean;
 }
 
 export function SectionLibraryEditor({
@@ -97,7 +117,10 @@ export function SectionLibraryEditor({
   scope = "service",
   presets,
   citySlug,
+  countrySlug,
   faqContextItems,
+  structureLocked = false,
+  textOnly = false,
 }: SectionLibraryEditorProps) {
   // Location scopes get no service templates by default — callers pass
   // scope-specific presets (or none, which shows the empty state).
@@ -169,11 +192,16 @@ export function SectionLibraryEditor({
     });
     // Localize city-specific copy for the target city. Riyadh keeps the
     // template's original hand-written wording; unknown/empty cities fall
-    // back to the raw preset.
+    // back to the raw preset. Country presets are written in UAE voice —
+    // the same rule applies: UAE (or no country selected) keeps the base.
     const cityMeta = citySlug ? resolveCityMeta(citySlug) : null;
-    const localized =
-      cityMeta && cityMeta.slug !== "riyadh"
+    const countryMeta = !citySlug && countrySlug ? resolveCountryMeta(countrySlug) : null;
+    const localized = cityMeta
+      ? cityMeta.slug !== "riyadh"
         ? localizeSectionsForCity(withOrder as unknown as Record<string, unknown>[], cityMeta)
+        : withOrder
+      : countryMeta && countryMeta.slug !== "uae"
+        ? localizeSectionsForCountry(withOrder as unknown as Record<string, unknown>[], countryMeta)
         : withOrder;
     onChange(localized as unknown as PageSection[]);
     setShowPresets(false);
@@ -197,12 +225,12 @@ export function SectionLibraryEditor({
               <ExternalLink className="h-4 w-4 mr-1" /> Preview
             </Button>
           )}
-          {canManage && (
+          {canManage && !structureLocked && (
             <Button type="button" size="sm" variant="outline" onClick={() => setShowPresets(!showPresets)}>
               Templates
             </Button>
           )}
-          {canManage && (
+          {canManage && !structureLocked && (
             <Button type="button" size="sm" onClick={() => setShowAddPanel(!showAddPanel)}>
               <Plus className="h-4 w-4 mr-1" /> Add Section
             </Button>
@@ -269,12 +297,12 @@ export function SectionLibraryEditor({
         <div className="border-2 border-dashed rounded-lg p-8 text-center">
           <p className="text-muted-foreground mb-4">No sections yet. Add a section or choose a template.</p>
           <div className="flex gap-2 justify-center">
-            {canManage && (
+            {canManage && !structureLocked && (
               <Button type="button" variant="outline" onClick={() => setShowPresets(true)}>
                 Choose Template
               </Button>
             )}
-            {canManage && (
+            {canManage && !structureLocked && (
               <Button type="button" onClick={() => setShowAddPanel(true)}>
                 <Plus className="h-4 w-4 mr-1" /> Add Section
               </Button>
@@ -295,6 +323,8 @@ export function SectionLibraryEditor({
                   scope={scope}
                   section={section}
                   faqContextItems={faqContextItems}
+                  structureLocked={structureLocked}
+                  textOnly={textOnly}
                   isExpanded={expandedSections[section.id] || false}
                   onToggle={() => setExpandedSections((p) => ({ ...p, [section.id]: !p[section.id] }))}
                   onRemove={() => removeSection(section.id)}
@@ -315,6 +345,8 @@ interface SortableSectionItemProps {
   scope: SectionScope;
   section: PageSection;
   faqContextItems?: Array<{ q: string; a: string }>;
+  structureLocked?: boolean;
+  textOnly?: boolean;
   isExpanded: boolean;
   onToggle: () => void;
   onRemove: () => void;
@@ -326,6 +358,8 @@ function SortableSectionItem({
   scope,
   section,
   faqContextItems,
+  structureLocked = false,
+  textOnly = false,
   isExpanded,
   onToggle,
   onRemove,
@@ -333,7 +367,10 @@ function SortableSectionItem({
   onUpdate,
 }: SortableSectionItemProps) {
   const canManage = useCanManageStructure();
-  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: section.id });
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
+    id: section.id,
+    disabled: structureLocked,
+  });
   const config =
     SECTION_TYPES.find((s) => s.type === section.type) ??
     (getDefinition(section.type) as unknown as SectionTypeConfig | undefined);
@@ -366,7 +403,11 @@ function SortableSectionItem({
         className="w-full flex items-center justify-between p-3 text-left cursor-pointer hover:bg-muted/50"
       >
         <div className="flex items-center gap-3">
-          <div {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing">
+          <div
+            {...attributes}
+            {...listeners}
+            className={structureLocked ? "opacity-40" : "cursor-grab active:cursor-grabbing"}
+          >
             <GripVertical className="h-4 w-4 text-muted-foreground" />
           </div>
           <Icon className="h-4 w-4 text-muted-foreground" />
@@ -378,17 +419,19 @@ function SortableSectionItem({
           </div>
         </div>
         <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
-          <Switch
-            checked={section.enabled}
-            onCheckedChange={(v) => onUpdate({ enabled: v })}
-            className="scale-75"
-          />
-          {canManage && (
+          {!structureLocked && (
+            <Switch
+              checked={section.enabled}
+              onCheckedChange={(v) => onUpdate({ enabled: v })}
+              className="scale-75"
+            />
+          )}
+          {canManage && !structureLocked && (
             <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onDuplicate}>
               <Copy className="h-3.5 w-3.5" />
             </Button>
           )}
-          {canManage && (
+          {canManage && !structureLocked && (
             <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={onRemove}>
               <Trash2 className="h-3.5 w-3.5 text-destructive" />
             </Button>
@@ -398,7 +441,13 @@ function SortableSectionItem({
       </button>
 
       {isExpanded && (
-        <SectionEditorPanel section={section} scope={scope} faqContextItems={faqContextItems} onUpdate={onUpdate} />
+        <SectionEditorPanel
+          section={section}
+          scope={scope}
+          faqContextItems={faqContextItems}
+          textOnly={textOnly}
+          onUpdate={onUpdate}
+        />
       )}
     </div>
   );
@@ -410,35 +459,51 @@ interface SectionEditorPanelProps {
   scope?: SectionScope;
   section: PageSection;
   faqContextItems?: Array<{ q: string; a: string }>;
+  structureLocked?: boolean;
+  textOnly?: boolean;
   onUpdate: (updates: Partial<PageSection>) => void;
 }
 
-function SectionEditorPanel({ section, scope = "service", faqContextItems, onUpdate }: SectionEditorPanelProps) {
+function SectionEditorPanel({ section, scope = "service", faqContextItems, structureLocked = false, textOnly = false, onUpdate }: SectionEditorPanelProps) {
   return (
     <div className="px-4 pb-4 border-t pt-4">
       <Tabs defaultValue="content">
         <TabsList className="w-full">
           <TabsTrigger value="content" className="flex-1">Content</TabsTrigger>
           <TabsTrigger value="items" className="flex-1">Items</TabsTrigger>
-          <TabsTrigger value="settings" className="flex-1">Settings</TabsTrigger>
-          <TabsTrigger value="appearance" className="flex-1">Style</TabsTrigger>
+          {!textOnly && (
+            <>
+              <TabsTrigger value="settings" className="flex-1">Settings</TabsTrigger>
+              <TabsTrigger value="appearance" className="flex-1">Style</TabsTrigger>
+            </>
+          )}
         </TabsList>
 
         <TabsContent value="content" className="mt-4">
-          <ContentTab section={section} scope={scope} onUpdate={onUpdate} />
+          <ContentTab section={section} scope={scope} structureLocked={structureLocked} onUpdate={onUpdate} />
         </TabsContent>
 
         <TabsContent value="items" className="mt-4">
-          <ItemsTab section={section} scope={scope} faqContextItems={faqContextItems} onUpdate={onUpdate} />
+          <ItemsTab
+            section={section}
+            scope={scope}
+            faqContextItems={faqContextItems}
+            structureLocked={structureLocked}
+            onUpdate={onUpdate}
+          />
         </TabsContent>
 
-        <TabsContent value="settings" className="mt-4">
-          <SettingsTab section={section} scope={scope} onUpdate={onUpdate} />
-        </TabsContent>
+        {!textOnly && (
+          <>
+            <TabsContent value="settings" className="mt-4">
+              <SettingsTab section={section} scope={scope} onUpdate={onUpdate} />
+            </TabsContent>
 
-        <TabsContent value="appearance" className="mt-4">
-          <AppearanceTab section={section} scope={scope} onUpdate={onUpdate} />
-        </TabsContent>
+            <TabsContent value="appearance" className="mt-4">
+              <AppearanceTab section={section} scope={scope} onUpdate={onUpdate} />
+            </TabsContent>
+          </>
+        )}
       </Tabs>
     </div>
   );
@@ -446,7 +511,7 @@ function SectionEditorPanel({ section, scope = "service", faqContextItems, onUpd
 
 // ── Content Tab ──────────────────────────────────────────────────
 
-function ContentTab({ section, scope = "service", onUpdate }: SectionEditorPanelProps) {
+function ContentTab({ section, scope = "service", structureLocked = false, onUpdate }: SectionEditorPanelProps) {
   const canManage = useCanManageStructure();
   const c = section.content as Record<string, unknown>;
 
@@ -480,24 +545,26 @@ function ContentTab({ section, scope = "service", onUpdate }: SectionEditorPanel
             placeholder="City slug (e.g. dubai)"
             className="flex-1"
           />
-          <Input
-            value={url}
-            onChange={(e) => {
-              const next = imageRows.slice();
-              next[i] = [slug, e.target.value];
-              writeImageRows(next);
-            }}
-            placeholder="https://... image URL"
-            className="flex-[2]"
-          />
-          {canManage && (
+          <div className="flex-[2] min-w-0">
+            <MediaInput
+              value={url}
+              onChange={(nextUrl) => {
+                const next = imageRows.slice();
+                next[i] = [slug, nextUrl];
+                writeImageRows(next);
+              }}
+              accept="image"
+              placeholder="https://... image URL"
+            />
+          </div>
+          {canManage && !structureLocked && (
             <Button type="button" variant="ghost" size="sm" className="h-7 w-7 p-0" onClick={() => writeImageRows(imageRows.filter((_, idx) => idx !== i))}>
               <Trash2 className="h-3 w-3 text-destructive" />
             </Button>
           )}
         </div>
       ))}
-      {canManage && (
+      {canManage && !structureLocked && (
         <Button type="button" variant="outline" size="sm" onClick={() => writeImageRows([...imageRows, ["", ""]])}>
           <Plus className="h-4 w-4 mr-1" /> Add Image
         </Button>
@@ -587,7 +654,7 @@ function ContentTab({ section, scope = "service", onUpdate }: SectionEditorPanel
                   placeholder="Label text"
                   className="flex-1"
                 />
-                {canManage && (
+                {canManage && !structureLocked && (
                   <Button
                     variant="ghost"
                     size="sm"
@@ -601,7 +668,7 @@ function ContentTab({ section, scope = "service", onUpdate }: SectionEditorPanel
                 )}
               </div>
             ))}
-            {canManage && (
+            {canManage && !structureLocked && (
               <Button
                 variant="outline"
                 size="sm"
@@ -1003,7 +1070,7 @@ function ContentTab({ section, scope = "service", onUpdate }: SectionEditorPanel
                     updateContent("paragraphs", next);
                   }}
                 />
-                {canManage && (
+                {canManage && !structureLocked && (
                   <Button
                     type="button"
                     variant="ghost"
@@ -1016,7 +1083,7 @@ function ContentTab({ section, scope = "service", onUpdate }: SectionEditorPanel
                 )}
               </div>
             ))}
-            {canManage && (
+            {canManage && !structureLocked && (
               <Button type="button" variant="outline" size="sm" onClick={() => updateContent("paragraphs", [...((c.paragraphs as string[]) || []), ""])}>
                 <Plus className="h-4 w-4 mr-1" /> Add Paragraph
               </Button>
@@ -1093,7 +1160,7 @@ function ContentTab({ section, scope = "service", onUpdate }: SectionEditorPanel
 
 // ── Items Tab ────────────────────────────────────────────────────
 
-function ItemsTab({ section, onUpdate, faqContextItems }: SectionEditorPanelProps) {
+function ItemsTab({ section, onUpdate, faqContextItems, structureLocked = false }: SectionEditorPanelProps) {
   const canManage = useCanManageStructure();
   const c = section.content as Record<string, unknown>;
   const items = (section.items || []) as Record<string, unknown>[];
@@ -1169,7 +1236,7 @@ function ItemsTab({ section, onUpdate, faqContextItems }: SectionEditorPanelProp
            section.type === "mediaContent" || section.type === "textMediaGrid" ? "Feature Items" :
            "Items"}
         </Label>
-        {canManage && (
+        {canManage && !structureLocked && (
           <Button type="button" size="sm" variant="outline" onClick={addItem}>
             <Plus className="h-3 w-3 mr-1" /> Add
           </Button>
@@ -1218,6 +1285,7 @@ function ItemsTab({ section, onUpdate, faqContextItems }: SectionEditorPanelProp
             sectionType={section.type}
             item={item}
             index={i}
+            structureLocked={structureLocked}
             onUpdate={(updates) => updateItem(i, updates)}
             onRemove={() => removeItem(i)}
           />
@@ -1281,7 +1349,7 @@ function ItemsTab({ section, onUpdate, faqContextItems }: SectionEditorPanelProp
                   ))}
                 </SelectContent>
               </Select>
-              {canManage && (
+              {canManage && !structureLocked && (
                 <Button
                   type="button"
                   variant="ghost"
@@ -1298,7 +1366,7 @@ function ItemsTab({ section, onUpdate, faqContextItems }: SectionEditorPanelProp
               )}
             </div>
           ))}
-          {canManage && (
+          {canManage && !structureLocked && (
             <Button
               type="button"
               variant="ghost"
@@ -1332,7 +1400,7 @@ function ItemsTab({ section, onUpdate, faqContextItems }: SectionEditorPanelProp
               <div key={(tile.id as string) || ti} className="border rounded-lg p-3 mb-3 space-y-2 bg-muted/30">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-muted-foreground">Tile {ti + 1}</span>
-                  {canManage && (
+                  {canManage && !structureLocked && (
                     <Button
                       type="button"
                       variant="ghost"
@@ -1374,9 +1442,10 @@ function ItemsTab({ section, onUpdate, faqContextItems }: SectionEditorPanelProp
                 </div>
                 {isImage ? (
                   <>
-                    <Input
+                    <MediaInput
                       value={(tile.image as string) || ""}
-                      onChange={(e) => updateTile({ image: e.target.value })}
+                      onChange={(url) => updateTile({ image: url })}
+                      accept="image"
                       placeholder="Image URL"
                     />
                     {(tile.image as string) && (
@@ -1423,7 +1492,7 @@ function ItemsTab({ section, onUpdate, faqContextItems }: SectionEditorPanelProp
               </div>
             );
           })}
-          {canManage && (
+          {canManage && !structureLocked && (
             <Button
               type="button"
               variant="ghost"
@@ -1451,11 +1520,12 @@ interface ItemEditorProps {
   sectionType: string;
   item: Record<string, unknown>;
   index: number;
+  structureLocked?: boolean;
   onUpdate: (updates: Record<string, unknown>) => void;
   onRemove: () => void;
 }
 
-function ItemEditor({ sectionType, item, index, onUpdate, onRemove }: ItemEditorProps) {
+function ItemEditor({ sectionType, item, index, structureLocked = false, onUpdate, onRemove }: ItemEditorProps) {
   const [expanded, setExpanded] = React.useState(false);
 
   const getItemLabel = () => {
@@ -1475,9 +1545,11 @@ function ItemEditor({ sectionType, item, index, onUpdate, onRemove }: ItemEditor
           <span className="text-sm font-medium truncate">{getItemLabel()}</span>
         </button>
         <div className="flex items-center gap-1">
-          <Button type="button" variant="ghost" size="sm" className="h-6 w-6 p-0" onClick={onRemove}>
-            <Trash2 className="h-3 w-3 text-destructive" />
-          </Button>
+          {!structureLocked && (
+            <Button type="button" variant="ghost" size="sm" className="h-6 w-6 p-0" onClick={onRemove}>
+              <Trash2 className="h-3 w-3 text-destructive" />
+            </Button>
+          )}
           {expanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
         </div>
       </div>
@@ -1581,8 +1653,12 @@ function ItemEditor({ sectionType, item, index, onUpdate, onRemove }: ItemEditor
           {sectionType === "fleetGrid" && (
             <>
               <div className="space-y-2">
-                <Label>Vehicle Image URL</Label>
-                <Input value={(item.image as string) || ""} onChange={(e) => onUpdate({ image: e.target.value })} placeholder="https://images.unsplash.com/..." />
+                <MediaInput
+                  label="Vehicle Image"
+                  value={(item.image as string) || ""}
+                  onChange={(url) => onUpdate({ image: url })}
+                  accept="image"
+                />
                 {(item.image as string) ? (
                   <div className="mt-2 relative h-32 rounded-md overflow-hidden border border-gray-700 bg-black">
                     <img src={item.image as string} alt={item.name as string || "Vehicle preview"} className="w-full h-full object-contain" />
@@ -2116,11 +2192,11 @@ function AppearanceTab({ section, onUpdate }: SectionEditorPanelProps) {
       {section.type === "hero" && (
         <>
           <div className="space-y-2">
-            <Label>Background Image URL</Label>
-            <Input
+            <MediaInput
+              label="Background Image"
               value={(appearance.background as string) || ""}
-              onChange={(e) => updateAppearance("background", e.target.value)}
-              placeholder="https://..."
+              onChange={(url) => updateAppearance("background", url)}
+              accept="image"
             />
             {(appearance.background as string) && (
               <img
@@ -2167,11 +2243,11 @@ function AppearanceTab({ section, onUpdate }: SectionEditorPanelProps) {
       {/* Background image for non-hero sections */}
       {section.type !== "hero" && (
         <div className="space-y-2">
-          <Label>Background Image URL (optional)</Label>
-          <Input
+          <MediaInput
+            label="Background Image (optional)"
             value={(appearance.background as string) || ""}
-            onChange={(e) => updateAppearance("background", e.target.value)}
-            placeholder="https://..."
+            onChange={(url) => updateAppearance("background", url)}
+            accept="image"
           />
           {(appearance.background as string) && (
             <img

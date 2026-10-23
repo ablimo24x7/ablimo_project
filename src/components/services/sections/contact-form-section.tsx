@@ -60,7 +60,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
           </div>
           <div className="hidden sm:block">
             <a
-              href="mailto:sales@ab.limo"
+              href="mailto:hello@ab.limo"
               className="text-white hover:text-abServiceBlue transition-colors text-sm font-semibold flex items-center"
             >
               {getIcon("Mail", "w-4 h-4 mr-2")} Contact Sales Directly
@@ -211,7 +211,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
         {/* Mobile Contact */}
         <div className="mt-8 text-center sm:hidden">
           <a
-            href="mailto:sales@ab.limo"
+            href="mailto:hello@ab.limo"
             className="text-abServiceBlue hover:text-white transition-colors text-sm font-semibold flex items-center justify-center"
           >
             {getIcon("Mail", "w-4 h-4 mr-2")} Contact Sales Directly

@@ -158,20 +158,75 @@ type Post = {
 - `POST /api/articles` — create (body: full article object)
 - `PUT /api/articles/${id}` — update
 
+### Post Editor — English / Arabic Tabs
+
+Every post (country, city and blog templates) is edited in **one document**.
+The editor has a language switcher with two tabs — `English` and `العربية` —
+and the Arabic tab only exposes translatable text.
+
+**Storage (`Article.translations`)**
+
+```ts
+translations: {
+  ar:     { [contentPath]: string },  // hand-written Arabic
+  autoAr: { [contentPath]: string },  // Google translations (fallback)
+}
+```
+
+Content paths address every translatable string:
+
+| Path | Field |
+|---|---|
+| `title`, `excerpt`, `authorName`, `archiveTag`, `categoryLabel` | top-level fields |
+| `bodyContent`, `keyTakeawaysContent`, `finalThoughtsContent` | WYSIWYG blocks |
+| `seo.metaTitle`, `seo.metaDescription` | SEO metadata |
+| `faq.<i>.q`, `faq.<i>.a` | FAQ list |
+| `section.<sectionId>.<relative path>` | template section copy, e.g. `section.sec-1.content.title`, `section.sec-1.items.0.label` |
+
+**Resolution order:** `ar[path]` → `autoAr[path]` → the English value.
+A hand-written Arabic value always wins; an empty Arabic field falls back to
+the Google translation.
+
+**Who fills the automatic translations**
+- `POST /api/articles` and `PUT /api/articles/${id}` call
+  `buildArticleTranslations()` (`src/lib/article-translation.ts`) on every
+  save: every path without hand-written Arabic is translated with
+  `googleTranslate` / `googleTranslateHtml` (6 requests in parallel) and
+  cached in `translations.autoAr`. Hand-written Arabic is never overwritten.
+- The Arabic tab shows the cached automatic translation with an `auto` badge;
+  typing over it converts the field to hand-written Arabic, clearing it sends
+  the field back to automatic.
+
+**Template sections (`PageSection[]`)**
+- The Arabic tab renders the same section list with `structureLocked` and
+  `textOnly` (`section-library-editor.tsx`): adding, removing, reordering,
+  images and styling stay in the English tab, only the copy is translated.
+- Only translatable keys are sent to the translator — URLs, icons, ids,
+  numbers and `{token}` placeholders are skipped.
+
+**Rendering**
+- `src/lib/blog.ts` resolves Arabic requests against the **base** document
+  (`localeFilter("ar")` ignores the legacy `locale: "ar"` duplicates) and
+  overlays the Arabic text with `applyArabicToArticle()`.
+- Arabic pages therefore always render the English structure with Arabic copy.
+
+**Migration:** `scripts/migrate-arabic-articles.ts` folds the legacy
+`locale: "ar"` duplicate documents into `translations.autoAr` of the base
+document and deletes them (`--dry-run`, `--backfill` flags).
+
 ### Website Rendering (Blog)
 
-**Blog List:** `GET /${lang}/blog`
-- Server Component: `src/app/[lang]/blog/page.tsx`
-- Data: `getAllPublishedArticles(locale)` from `src/lib/blog.ts`
-- Fetches published articles from MongoDB, renders card grid with Image, Calendar, Clock icons
+**Blog List:** `GET /${lang}/blogs`
+- Server Component: `src/app/[lang]/blogs/page.tsx`
+- Data: `getPublishedBlogs(locale)` from `src/lib/blog.ts`
+- Fetches published blog articles from MongoDB, renders card grid with Image, Calendar, Clock icons
 
-**Blog Article:** `GET /${lang}/blog/${slug}`
-- Server Component: `src/app/[lang]/blog/[slug]/page.tsx`
-- Params: `slug`, `lang`; searchParams: `preview`
-- Data: `fetchAndTranslateArticle(slug, locale, isPreview)` from `src/lib/blog.ts`
-- Related articles: `getRelatedArticles(templateType, locale, slug, 4)`
-- Translation: `translateText()` from `src/lib/translate.ts`
-- Components: `BlogArticleLayout`, `RelatedArticles`
+**Blog Article:** `GET /${lang}/blogs/${id}`
+- Server Component: `src/app/[lang]/blogs/[id]/page.tsx`
+- Params: `id` (ObjectId **or** slug), `lang`; searchParams: `preview`
+- Data: `getBlogByIdOrSlug(id, locale, isPreview)` from `src/lib/blog.ts`
+- Related articles: `getRelatedBlogs(locale, slug, 4)`
+- Components: `BlogArticleTemplate` (blog template) / `BlogArticleLayout`, `RelatedArticles`
 - Template-aware rendering based on `article.templateType`:
   - `"country"` → links to `/${lang}/locations/${country}`
   - `"city"` → links to `/${lang}/locations/${country}/${city}`

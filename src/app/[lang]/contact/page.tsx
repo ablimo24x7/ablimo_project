@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getDictionary, hasLocale, defaultLocale, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
+import { getDictionary, hasLocale, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 import { getContactChannelLinks } from "@/lib/contact-channels";
+import { getAllPublishedServices } from "@/lib/services";
 import { BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 import ContactChannels from "@/components/contact/ContactChannels";
 import ContactPageForm from "@/components/contact/ContactPageForm";
@@ -41,6 +42,11 @@ export default async function ContactPage({
   const c = dict.contact;
   const cf = dict.contactForm;
   const channels = await getContactChannelLinks(4);
+  const serviceOptions = (await getAllPublishedServices()).map((s) => ({
+    slug: s.slug,
+    title: s.title,
+  }));
+  const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY;
 
   const infoCards = [
     {
@@ -98,7 +104,7 @@ export default async function ContactPage({
         data-section-type="contact_hero"
         className="relative w-full h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-[#1c1d21]"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#292a30] via-[#1c1d21] to-[#292a30]" />
+        <div className="absolute inset-0 opacity-50 bg-gradient-to-b from-[#292a30] via-[#1c1d21] to-[#292a30]" style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2015/01/02/00/01/telephone-586268_1280.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-wide text-white">
             {cf.title}
@@ -143,6 +149,8 @@ export default async function ContactPage({
               labels={cf}
               heading={c.formHeading}
               hint={c.formHint}
+              services={serviceOptions}
+              recaptchaSiteKey={recaptchaSiteKey}
             />
           </div>
         </div>

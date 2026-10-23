@@ -344,7 +344,7 @@ select:focus {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* Coming Soon Page Animations */
+/* Maintenance Page Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -359,6 +359,19 @@ select:focus {
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
   opacity: 0;
+}
+
+@keyframes maintenanceSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+.animate-maintenance-sweep {
+  animation: maintenanceSweep 2.4s ease-in-out infinite;
 }
 
 .animation-delay-100 {

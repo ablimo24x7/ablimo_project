@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/select";
 import { toast } from "sonner";
 import { useState } from "react";
-import { Plus, Trash2, Send, ShieldAlert } from "lucide-react";
+import { Plus, Trash2, Send, ShieldAlert, Search } from "lucide-react";
 import { usePermissions } from "@/hooks/use-permissions";
 import { assignableRoles } from "@/lib/auth/permissions";
 
@@ -66,6 +66,7 @@ export default function UsersPage() {
   const [inviteEmail, setInviteEmail] = useState("");
   const [inviteRole, setInviteRole] = useState("");
   const [inviteLink, setInviteLink] = useState<string | null>(null);
+  const [search, setSearch] = useState("");
 
   const { data, isLoading } = useQuery({
     queryKey: ["users"],
@@ -168,6 +169,15 @@ export default function UsersPage() {
   }
 
   const users = data?.items ?? [];
+  const q = search.trim().toLowerCase();
+  const filteredUsers = q
+    ? users.filter(
+        (u) =>
+          u.name.toLowerCase().includes(q) ||
+          u.email.toLowerCase().includes(q) ||
+          u.roles.some((r) => r.toLowerCase().includes(q))
+      )
+    : users;
   const canSubmitCreate = name.trim() && email.trim() && password.trim() && role;
   const canSubmitInvite = inviteEmail.trim() && inviteRole;
 
@@ -187,6 +197,17 @@ export default function UsersPage() {
 
       <Card>
         <CardContent className="p-0">
+          <div className="border-b p-3">
+            <div className="relative max-w-xs">
+              <Search className="pointer-events-none absolute top-1/2 left-2.5 size-3.5 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search by name, email or role..."
+                className="pl-8"
+              />
+            </div>
+          </div>
           {isLoading ? (
             <div className="p-4 space-y-2">{[...Array(3)].map((_, i) => <Skeleton key={i} className="h-12 w-full" />)}</div>
           ) : (
@@ -201,10 +222,10 @@ export default function UsersPage() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {users.length === 0 ? (
-                  <TableRow><TableCell colSpan={5} className="py-8 text-center text-muted-foreground">No users found.</TableCell></TableRow>
+                {filteredUsers.length === 0 ? (
+                  <TableRow><TableCell colSpan={5} className="py-8 text-center text-muted-foreground">{q ? "No users match your search." : "No users found."}</TableCell></TableRow>
                 ) : (
-                  users.map((u) => (
+                  filteredUsers.map((u) => (
                     <TableRow key={u._id}>
                       <TableCell className="font-medium">{u.name}</TableCell>
                       <TableCell>{u.email}</TableCell>

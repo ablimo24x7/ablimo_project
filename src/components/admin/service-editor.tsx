@@ -32,6 +32,7 @@ import {
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SectionLibraryEditor } from "@/components/admin/section-library-editor";
+import { MediaInput } from "@/components/admin/media-input";
 import type { PageSection } from "@/components/services/sections/section-types";
 
 type ServiceFeature = {
@@ -395,13 +396,15 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
                 <Label>Short Description (menu / index)</Label>
                 <Textarea rows={2} value={form.desc} onChange={(e) => update("desc", e.target.value)} />
               </div>
-              <div className="space-y-2">
-                <Label>Hero Image URL</Label>
-                <Input value={form.heroImage} onChange={(e) => update("heroImage", e.target.value)} placeholder="https://..." />
-                {form.heroImage && (
-                  <img src={form.heroImage} alt="Hero preview" className="mt-2 h-40 w-full rounded-md object-cover" />
-                )}
-              </div>
+              <MediaInput
+                label="Hero Image"
+                value={form.heroImage}
+                onChange={(url) => update("heroImage", url)}
+                accept="image"
+              />
+              {form.heroImage && (
+                <img src={form.heroImage} alt="Hero preview" className="mt-2 h-40 w-full rounded-md object-cover" />
+              )}
             </div>
           </ParagraphCard>
 
@@ -498,10 +501,12 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-3">
-                    <div className="space-y-2">
-                      <Label>Image URL</Label>
-                      <Input value={c.image} onChange={(e) => updateAt("cards", i, { ...c, image: e.target.value })} />
-                    </div>
+                    <MediaInput
+                      label="Image"
+                      value={c.image}
+                      onChange={(url) => updateAt("cards", i, { ...c, image: url })}
+                      accept="image"
+                    />
                     <div className="space-y-2">
                       <Label>Tag</Label>
                       <Input value={c.tag} onChange={(e) => updateAt("cards", i, { ...c, tag: e.target.value })} />
@@ -572,10 +577,12 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
                           <Input value={s.imageAlt} onChange={(e) => updateAt("sections", i, { ...s, imageAlt: e.target.value })} />
                         </div>
                       </div>
-                      <div className="space-y-2">
-                        <Label>Image URL</Label>
-                        <Input value={s.image} onChange={(e) => updateAt("sections", i, { ...s, image: e.target.value })} />
-                      </div>
+                      <MediaInput
+                        label="Image"
+                        value={s.image}
+                        onChange={(url) => updateAt("sections", i, { ...s, image: url })}
+                        accept="image"
+                      />
                       <div className="grid sm:grid-cols-2 gap-3">
                         <div className="space-y-2">
                           <Label>Image Side</Label>
@@ -751,11 +758,13 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
                 <Textarea rows={3} value={form.seo.metaDescription} onChange={(e) => updateSeo({ metaDescription: e.target.value })} placeholder="Auto-generated from subtitle or description..." />
                 <p className="text-xs text-muted-foreground">{form.seo.metaDescription.length}/160 characters</p>
               </div>
-              <div className="space-y-2">
-                <Label>OG Image URL</Label>
-                <Input value={form.seo.ogImage} onChange={(e) => updateSeo({ ogImage: e.target.value })} placeholder="https://..." />
-                <p className="text-xs text-muted-foreground">Fallback: hero image</p>
-              </div>
+              <MediaInput
+                label="OG Image"
+                value={form.seo.ogImage}
+                onChange={(url) => updateSeo({ ogImage: url })}
+                accept="image"
+              />
+              <p className="text-xs text-muted-foreground">Fallback: hero image</p>
             </div>
           </ParagraphCard>
         </div>

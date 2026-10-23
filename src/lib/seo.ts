@@ -5,6 +5,38 @@ const BASE_URL = "https://www.ab.limo";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/opengraph-image.png`;
 const TWITTER_HANDLE = "@ablimo";
 
+/**
+ * Strips baked-in brand suffixes/prefixes (e.g. " | AB.Limo", "AB.Limo - ")
+ * and trailing periods from a title so the root layout template
+ * ("%s | AB") is the single source of branding.
+ */
+export function stripBrandSuffix(title: string): string {
+  let t = title.trim();
+  // Trailing brand segments: "… | AB.Limo", "… - AB", repeated
+  t = t.replace(/(?:\s*[|–—-]\s*(?:AB\.Limo|AB))+\s*$/i, "");
+  // Leading brand segments: "AB.Limo | …", "AB - …"
+  t = t.replace(/^\s*(?:AB\.Limo|AB)\s*[|–—-]\s*/i, "");
+  // Trailing period
+  t = t.replace(/\.+$/, "");
+  return t.trim() || title.trim();
+}
+
+/**
+ * Builds a metadata title from the hero section's H1 parts
+ * (content.title + content.titleHighlight), dropping trailing periods.
+ */
+export function heroHeadingToTitle(
+  title?: string | null,
+  titleHighlight?: string | null
+): string {
+  return [title, titleHighlight]
+    .map((part) => (typeof part === "string" ? part.trim() : ""))
+    .filter(Boolean)
+    .join(" ")
+    .replace(/\.+$/, "")
+    .trim();
+}
+
 interface SeoOptions {
   title: string;
   description: string;
@@ -37,6 +69,9 @@ export function generateSeoMetadata({
   const suffix = cleanPath === "/" ? "" : cleanPath;
   const canonical = `${BASE_URL}${localeBase(lang)}${suffix}`;
   const image = ogImage || DEFAULT_OG_IMAGE;
+  // Brand suffix is applied here (not via the layout template) so nested
+  // pages always get exactly one "| AB" regardless of segment depth.
+  const brandedTitle = `${stripBrandSuffix(title)} | AB`;
 
   // English is served at the prefix-less URL, Arabic at /ar
   const languages: Record<string, string> = {
@@ -51,7 +86,9 @@ export function generateSeoMetadata({
   const alternateLocales = [isArabic ? "en_US" : "ar_SA"];
 
   return {
-    title,
+    // absolute bypasses the root "%s | AB" template so the suffix
+    // is never duplicated or dropped on deeply nested routes.
+    title: { absolute: brandedTitle },
     description,
     keywords,
     alternates: {
@@ -59,14 +96,14 @@ export function generateSeoMetadata({
       languages,
     },
     openGraph: {
-      title,
+      title: brandedTitle,
       description,
       url: canonical,
       siteName: "AB.Limo",
       type,
       locale: ogLocale,
       alternateLocale: alternateLocales,
-      images: [{ url: image, width: 1200, height: 630, alt: title }],
+      images: [{ url: image, width: 1200, height: 630, alt: brandedTitle }],
       ...(publishedTime ? { publishedTime } : {}),
       ...(modifiedTime ? { modifiedTime } : {}),
       ...(authors ? { authors } : {}),
@@ -75,7 +112,7 @@ export function generateSeoMetadata({
       card: "summary_large_image",
       site: TWITTER_HANDLE,
       creator: TWITTER_HANDLE,
-      title,
+      title: brandedTitle,
       description,
       images: [image],
     },

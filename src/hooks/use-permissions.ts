@@ -47,6 +47,10 @@ export function usePermissions() {
   const canCreate = can("create");
   const canUpdate = can("update");
   const canDelete = can("delete");
+  // Uploading media is part of authoring: allowed for roles that can
+  // create content (admins) or update it (editors/authors). Deleting
+  // media stays gated by canDelete.
+  const canUpload = canCreate || canUpdate;
 
   return {
     status,
@@ -58,6 +62,7 @@ export function usePermissions() {
     canCreate,
     canUpdate,
     canDelete,
+    canUpload,
     canManage: can("manage"),
     /** Adding/removing sections, FAQs, tags and other structural items. */
     canManageStructure: canCreate && canDelete,
