@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Dictionary } from "@/app/[lang]/dictionaries";
+import Link from "next/link";
 
 export default function HeroSection({ dict }: { dict: Dictionary }) {
   const [activeTab, setActiveTab] = useState("transfer");
@@ -59,25 +60,28 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
           {/* Hero Content */}
-          <div className="lg:col-span-7 text-start">
+          <div className="lg:col-span-8 text-start">
             <div className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full bg-abDarkGray border border-abBlue/30 mb-6 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-abBlue animate-pulse"></span>
-              <span className="text-abBlue text-xs font-bold tracking-widest uppercase">{dict.home.heroSection.badge}</span>
+              <span className="text-abBlue text-[10px] font-bold tracking-widest uppercase">{dict.home.heroSection.badge}</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white txt-justify mb-5">
               {dict.home.heroSection.title} <br/>
               <span className="text-abBlue">{dict.home.heroSection.titleHighlight}</span>
             </h1>
-            <p className="text-lg text-gray-300 mb-10 max-w-2xl leading-relaxed">
+            <p className="text-md text-gray-300 mb-10 max-w-3xl leading-relaxed text-justify">
               {dict.home.heroSection.desc}
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#logistics" className="bg-abBlue hover:bg-[#1a93c4] text-white px-8 py-3.5 rounded text-sm font-semibold transition-colors shadow-lg shadow-abBlue/20">
+              <Link href="/services" className="bg-abBlue hover:bg-[#1a93c4] text-white px-8 py-3.5 rounded text-sm font-semibold transition-colors shadow-lg shadow-abBlue/20">
                 {dict.home.heroSection.ctaExplore}
-              </a>
-              <a href="#duty-of-care" className="bg-transparent border border-gray-700 text-white hover:border-abBlue hover:text-abBlue px-8 py-3.5 rounded text-sm font-semibold transition-colors flex items-center">
+              </Link>
+              <Link href="/contact" className="bg-transparent border border-gray-700 text-white hover:border-abBlue hover:text-abBlue px-8 py-3.5 rounded text-sm font-semibold transition-colors flex items-center">
+                <i className="fa-solid fa-envelope mr-2"></i> {dict.home.heroSection.ctaRequestAProposal}
+              </Link>
+              <Link href="#duty-of-care" className="bg-transparent border border-gray-700 text-white hover:border-abBlue hover:text-abBlue px-8 py-3.5 rounded text-sm font-semibold transition-colors flex items-center">
                 <i className="fa-solid fa-shield-halved mr-2"></i> {dict.home.heroSection.ctaDutyOfCare}
-              </a>
+              </Link>
             </div>
           </div>
 

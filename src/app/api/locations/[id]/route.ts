@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import mongoose from "mongoose";
 import { connectDB } from "@/lib/db";
 import { Country } from "@/lib/models/Country";
-import { isDatabaseEnabled, toCountryShape } from "@/lib/locationData";
+import { isDatabaseEnabled, syncMissingCitiesToDatabase, toCountryShape } from "@/lib/locationData";
 import { validateCountry } from "@/lib/iso3166";
 import { toSlug } from "@/lib/slug";
 import { parseJsonBody } from "@/lib/api/errors";
@@ -19,6 +19,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
   }
   const { id } = await params;
   await connectDB();
+  await syncMissingCitiesToDatabase();
   const doc = await Country.findById(id).lean();
   if (!doc) return NextResponse.json({ error: "Not found" }, { status: 404 });
   return NextResponse.json(toCountryShape(doc));

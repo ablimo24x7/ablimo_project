@@ -334,36 +334,41 @@
       "heading1": "Answers to the questions",
       "heading2": "you ask most often",
       "askMore": "ASK MORE QUESTIONS",
+      "tellUsTitle": "Tell us what you need to move",
+      "tellUsDesc": "Share a delegation, an event or a long-term requirement. An operations planner will reply within 12 hours.",
+      "ctaProposal": "Request a Proposal",
+      "ctaTransfer": "Book a Transfer",
       "items": [
         {
-          "q": "What documents do I need to book a chauffeur service?",
-          "a": "To book a chauffeur service with AB.Limo, we typically require a valid government-issued photo ID and your booking details. Additional information may be requested for airport transfers or special arrangements."
+          "q": "What does AB do?",
+          "a": "AB plans and operates ground transportation (chauffeur, airport, corporate, event, bus and coach, and workforce) across Saudi Arabia, the UAE and Qatar, with 24/7 dispatch and reservations team based on each of the country with local knowledge and expertise."
         },
         {
-          "q": "Is there a minimum age requirement for passengers?",
-          "a": "There is no minimum age requirement for passengers travelling with our chauffeur service. For bookings involving minors, additional arrangements may be needed in advance."
+          "q": "Do you work with companies on long-term contracts?",
+          "a": "Yes. Corporate accounts cover dedicated vehicles, staff routes and on-demand chauffeurs under one contract with monthly invoicing. See Corporate Accounts."
         },
         {
-          "q": "Do I need to pay in advance for my booking?",
-          "a": "Depending on the journey type and location, a booking confirmation, card authorisation, or advance payment may be required to secure your reservation."
+          "q": "Can AB handle large events?",
+          "a": "We plan and run event transport from VIP car pools to delegate shuttles, including on-site coordinators and live vehicle monitoring. The largest event we manage was 725 vehicles on a single day during Riyadh Season 2024."
         },
         {
-          "q": "Are airport pickups included in the service?",
-          "a": "Yes, our airport transfer service includes flight monitoring, punctual meet-and-greet support, and assistance with luggage whenever required."
+          "q": "Which cities do you cover?",
+          "a": "We operate directly in Saudi Arabia, UAE and Qatar (all major cities) and serve other cities on request through partners. We are also member of Global Passenger network from UAE and Saudi and this allow us access to partner globally in more then 50 markets."
         },
         {
-          "q": "Can I change or cancel my reservation?",
-          "a": "Yes, changes and cancellations are possible subject to our booking terms and the timing of your request. We recommend notifying us as early as possible."
+          "q": "How do I book a single airport transfer?",
+          "a": "Use Book a transfer, or call or WhatsApp dispatch with your flight number."
         }
       ]
     },
     "heroSection": {
-      "badge": "GCC Premier Enterprise Logistics",
-      "title": "The Science of",
-      "titleHighlight": "Transportation.",
-      "desc": "Beyond standard transfers. AB.Limo engineers bespoke mobility architecture for mega-events, corporate roadshows, and government protocol across Saudi Arabia, UAE, and Qatar.",
-      "ctaExplore": "Explore Event Frameworks",
-      "ctaDutyOfCare": "View Duty of Care",
+      "badge": "Chauffeur, corporate and event transportation · Saudi Arabia, UAE, Qatar and Beyond",
+      "title": "The Science of Ground Transportation for",
+      "titleHighlight": "The Gulf's Most Demanding Journeys.",
+      "desc": "Beyond standard transfers. AB engineers’ bespoke mobility architecture for mega-events, corporate roadshows, tourism companies and government protocol across Saudi Arabia, UAE, and Qatar. From one VIP arrival to hundreds of vehicles over a multi-week event, planned and dispatched 24/7 across all major cities in the Gulf.",
+      "ctaExplore": "Explore our Solutions",
+      "ctaRequestAProposal": "Request a Proposal",
+      "ctaDutyOfCare": "Duty of Care",
       "tabs": {
         "transfer": "Executive Transfer",
         "asDirected": "As-Directed (Hourly)",
@@ -385,8 +390,8 @@
       }
     },
     "dutyOfCare": {
-      "title": "Uncompromising Duty of Care.",
-      "desc": "We integrate seamlessly with your corporate travel policies, providing the technological transparency and rigorous safety standards required by global enterprises.",
+      "title": "Built around duty of care",
+      "desc": "Every vehicle is GPS-tracked. Every chauffeur is licensed, background checked and Our chauffeurs receive professional training in chauffeur services, defensive driving, first aid, and protocol through our dedicated internal training and development teams, tailored to specific client and operational requirements. For each major programme, standby vehicles are positioned before the first pickup. When something changes at 3 a.m., a 24/7 local dispatch answer in each country we operate.",
       "cards": [
         {
           "title": "Intelligent Transport Systems",
@@ -394,7 +399,7 @@
         },
         {
           "title": "Corporate Tech Integration",
-          "desc": "Centralized corporate billing with direct API integrations to expense management platforms like SAP Concur for frictionless accounting."
+          "desc": "Centralise client portals and direct billing with the possibility of API integration where required by the clients or tech platforms."
         },
         {
           "title": "Vetted Professionalism",
@@ -403,32 +408,61 @@
       ]
     },
     "eventLogistics": {
-      "badge": "Core Pillar: Event Mobility",
-      "title": "Mastering Complex Route Architecture.",
-      "desc": "Moving 5,000 delegates requires more than just vehicles. It requires a Transport Control Room. We provide end-to-end logistics management for GCC mega-events, ensuring precision from tarmac to venue.",
-      "features": [
-        {
-          "title": "Delivery Schedules & Route Planning",
-          "desc": "Dynamic routing mapped to avoid local congestion, maximizing efficiency for convention shuttles and VIP movements."
-        },
-        {
-          "title": "Traffic & On-Site Parking Management",
-          "desc": "Ground coordinators dispatching our luxury coach and executive bus fleet to maintain seamless loading/unloading zones."
-        },
-        {
-          "title": "Post-Event Passenger Analytics",
-          "desc": "Comprehensive reporting on passenger volumes, vehicle utilization, and operational KPIs delivered to event organizers."
-        }
-      ],
+      "badge": "Two ways we move people",
+      "chauffeur": {
+        "title": "Chauffeur services",
+        "desc": "For the individual travellers and the people who book for them. A vetted chauffeur, a late-model vehicle and a fixed plan for every pickup: executive and VIP travel, airport meet and greet, and chauffeurs by the hour, day or month.",
+        "linkText": "Explore chauffeur services"
+      },
+      "managed": {
+        "title": "Mastering Complex Route Architecture:",
+        "desc": "For operations that move many people at once. We design the vehicle plan, supply the fleet and drivers, put coordinators on the ground and monitor every vehicle from the control room. This covers events and conferences, staff and workforce routes, bus and coach programmes, and tourism groups.",
+        "linkText": "Explore managed transportation"
+      },
+      "whatWeRun": {
+        "badge": "Operational Reach",
+        "title": "What we run",
+        "desc": "Comprehensive ground transportation solutions operated with precision, vetted chauffeurs, and 24/7 control room oversight across Saudi Arabia, UAE, and Qatar.",
+        "items": [
+          {
+            "title": "Executive & VIP chauffeurs",
+            "desc": "Sedans and SUVs with protocol-trained chauffeurs, booked by the trip, the hour or the month."
+          },
+          {
+            "title": "Airport transfers",
+            "desc": "Flight-tracked pickups with a named meeting point at RUH, JED, MED, DMM, DXB, AUH and DOH and all other major cities across the Gulf."
+          },
+          {
+            "title": "Corporate & staff transportation",
+            "desc": "Dedicated vehicles, staff routes and roadshows under one contract and one monthly invoice."
+          },
+          {
+            "title": "Event & conference transportation",
+            "desc": "Vehicle planning, shuttle loops, VIP car pools, on-site coordinators and post-event reporting."
+          },
+          {
+            "title": "Bus & coach hire",
+            "desc": "From 9-seater to 50-seater buses and licensed drivers for groups, crews and site transfers."
+          },
+          {
+            "title": "Workforce & project-site transport",
+            "desc": "Shift-based routes for large teams, including remote locations."
+          },
+          {
+            "title": "Tourism & religious tourism",
+            "desc": "Guest transfers, multi-day itineraries, day tours and Jeddah–Makkah–Madinah transport for Umrah groups."
+          }
+        ]
+      },
       "alt": "Executive Coach Fleet",
       "dispatch": "Live Dispatch Status",
-      "coaches": "45 VIP Coaches",
-      "deployed": "Currently deployed (Riyadh Season)"
+      "coaches": "725 Vehicles",
+      "deployed": "Peak deployment (Riyadh Season)"
     },
     "fleetSection": {
       "badge": "Our Vehicle Governance",
-      "title": "Strictly Black. Strictly Professional.",
-      "desc": "The AB.Limo brand standard mandates a uniform fleet of late-model, immaculate black vehicles. No exceptions. We procure and lease dedicated fleets for long-term government and corporate contracts.",
+      "title": "Strictly maintained. Strictly professional.",
+      "desc": "Every AB vehicle—from executive sedans to 50-seat coaches—is a late-model vehicle, meticulously maintained and operated by a vetted professional. We also procure and lease dedicated fleets for long- term government and corporate contracts. Our chauffeur fleet is uniformly black.",
       "link": "View Full Fleet Specifications",
       "vehicles": [
         {
@@ -461,11 +495,57 @@
         }
       ]
     },
+    "caseStudies": {
+      "badge": "Case Studies",
+      "title": "Proven on the region's biggest stages.",
+      "desc": "From mega-festivals to giga-projects. Filter by sector and open any project for the full story.",
+      "filters": {
+        "all": "All projects",
+        "events": "Events & festivals",
+        "sports": "Sports",
+        "energy": "Energy & giga-projects",
+        "corporate": "Corporate"
+      },
+      "viewCaseStudy": "View case study",
+      "openAria": "Open case study: {title}",
+      "modalClose": "Close case study",
+      "prev": "Previous case study",
+      "next": "Next case study",
+      "ctaTitle": "Your programme could be next.",
+      "ctaDesc": "Share your dates, passenger numbers and locations, and our planners will design the operation around them.",
+      "ctaBtn": "Start your brief",
+      "modalCta": "Plan a similar programme"
+    },
+    "awards": {
+      "badge": "AB Achievements & Awards",
+      "title": "A decade of recognised excellence.",
+      "desc": "A proven record in event transportation across Saudi Arabia and the region, recognised by the industry.",
+      "counters": [
+        { "value": "10", "suffix": "+", "label": "Years in Saudi event transportation" },
+        { "value": "50", "suffix": "+", "label": "International events delivered" },
+        { "value": "725", "suffix": "", "label": "Vehicles operated at a single event peak" },
+        { "value": "4", "suffix": "", "label": "Industry recognitions in 2025" }
+      ],
+      "recordTitle": "Trusted for every kind of event",
+      "recordItems": [
+        "Government summits and conferences",
+        "International sporting events",
+        "Music festivals and concerts",
+        "Corporate conferences and seminars"
+      ],
+      "recordDesc": "Our operations scale and adapt to events of every size and level of complexity. We have provided consulting and implemented transportation and logistics solutions for more than 50 prominent international events across the region.",
+      "bestSupplier": {
+        "title": "Best Supplier Award in the Middle East",
+        "sub": "Presidential delegation, 2025"
+      },
+      "clientsLabel": "Events & clients we have served",
+      "lightboxClose": "Close"
+    },
     "countriesSection": {
       "badge": "Global Coverage",
       "title": "Wherever business takes you.",
-      "desc": "Explore our premium chauffeur network across the GCC — pick a country to view its cities and services.",
-      "link": "View All Locations",
+      "desc": "Explore our premium chauffeur network across the GCC and beyond — pick a country to view its cities and services. We operate directly in Saudi Arabia, United Arab Emirates and Qatar with our own fleet and other GCC cities and globally on request through vetted partners.",
+      "link": "See locations",
       "servicesInCities": "{services} services in {cities} cities",
       "prev": "Previous",
       "next": "Next"
@@ -474,18 +554,107 @@
       "badge": "Cities We Serve",
       "title": "Chauffeur services across key GCC cities.",
       "servicesCount": "{count} services",
-      "serviceCountOne": "1 service"
+      "serviceCountOne": "1 service",
+      "viewAllCities": "Explore All Cities"
     },
     "industrySolutions": {
-      "badge": "Dedicated Industry Solutions",
-      "title": "Tailored logistics for specialized procurement teams.",
+      "badge": "Mobility by Industry",
+      "title": "Industries We Work With",
+      "note": "Seven sectors, one operating standard. Choose yours to see how we move it.",
+      "exploreCta": "Explore industry",
       "items": [
-        "Events & Exhibitions",
-        "Government & Ministries",
-        "Aviation & FBO Ops",
-        "Oil & Gas Logistics",
-        "Religious Tourism (Umrah/Hajj)",
-        "Sports & Tournament Transport"
+        {
+          "title": "Events and exhibitions",
+          "desc": "Delegate shuttles, VIP arrivals and venue loading zones run from one control room."
+        },
+        {
+          "title": "Government and protocol",
+          "desc": "Motorcade planning, protocol-trained chauffeurs and discreet delegation movements."
+        },
+        {
+          "title": "Aviation and crew",
+          "desc": "Crew rotations, FBO transfers and standby fleets ready for schedule disruption."
+        },
+        {
+          "title": "Energy and giga-projects",
+          "desc": "Workforce transport and executive site visits for remote, large-scale projects."
+        },
+        {
+          "title": "Hospitality and DMCs",
+          "desc": "Guest transfers, tours and group movements for hotels and destination partners."
+        },
+        {
+          "title": "Sports and entertainment",
+          "desc": "Team, talent and fan movements built around match days and show schedules."
+        },
+        {
+          "title": "Corporate and enterprise",
+          "desc": "Roadshows, executive travel and staff mobility with centralised billing."
+        }
+      ],
+      "ctaCard": {
+        "title": "Not sure where you fit?",
+        "desc": "Tell us how your people move and a planner will map it to the right programme.",
+        "cta": "Talk to a planner"
+      }
+    },
+    "managedTransportation": {
+      "badge": "Managed Transportation",
+      "title": "How a managed Transportation works with AB",
+      "note": "Four stages, one accountable partner. Select a stage to see what happens.",
+      "cta": "Start your brief",
+      "tablistAria": "Managed transportation stages",
+      "prevAria": "Previous stage",
+      "nextAria": "Next stage",
+      "liveLabel": "Every vehicle tracked in real time",
+      "stages": [
+        {
+          "name": "Brief.",
+          "short": "You tell us what you need",
+          "icon": "fa-solid fa-clipboard-list",
+          "text": "You share dates, passenger numbers, locations and service levels and other requirements.",
+          "chips": [
+            { "icon": "fa-regular fa-calendar", "label": "Dates" },
+            { "icon": "fa-solid fa-users", "label": "Passenger numbers" },
+            { "icon": "fa-solid fa-location-dot", "label": "Locations" },
+            { "icon": "fa-solid fa-star", "label": "Service levels" }
+          ]
+        },
+        {
+          "name": "Plan.",
+          "short": "We design and agree it",
+          "icon": "fa-solid fa-route",
+          "text": "Our planners set the vehicle mix, routes, timings and standby fleet, and agree with you in writing and create SLAs.",
+          "chips": [
+            { "icon": "fa-solid fa-car-side", "label": "Vehicle mix" },
+            { "icon": "fa-solid fa-map", "label": "Routes & timings" },
+            { "icon": "fa-solid fa-layer-group", "label": "Standby fleet" },
+            { "icon": "fa-solid fa-file-signature", "label": "Written SLAs" }
+          ]
+        },
+        {
+          "name": "Operate.",
+          "short": "We run it, live",
+          "icon": "fa-solid fa-satellite-dish",
+          "text": "Chauffeurs, drivers and on-site coordinators run the plan. The event control room tracks every vehicle and handles changes as they happen. Our Teams in each Country Operational control room monitors and assist the deliverables.",
+          "chips": [
+            { "icon": "fa-solid fa-user-tie", "label": "Chauffeurs & coordinators" },
+            { "icon": "fa-solid fa-display", "label": "Event control room" },
+            { "icon": "fa-solid fa-earth-asia", "label": "Country control rooms" }
+          ],
+          "live": true
+        },
+        {
+          "name": "Report.",
+          "short": "You see every result",
+          "icon": "fa-solid fa-chart-pie",
+          "text": "You receive trip records, on-time performance and a single consolidated invoice.",
+          "chips": [
+            { "icon": "fa-solid fa-list-check", "label": "Trip records" },
+            { "icon": "fa-solid fa-stopwatch", "label": "On-time performance" },
+            { "icon": "fa-solid fa-file-invoice", "label": "One consolidated invoice" }
+          ]
+        }
       ]
     }
   },

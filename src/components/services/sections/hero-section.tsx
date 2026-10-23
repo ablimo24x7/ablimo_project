@@ -172,8 +172,14 @@ export default function HeroSection({ section, serviceName, context }: HeroSecti
           )}
 
           {/* Title */}
-          <h1 className="text-4xl text-justify md:text-6xl font-bold text-white leading-tight mb-6">
-            {c.title}<br/><span className="text-abServiceBlue">{c.titleHighlight}</span>
+          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+            {c.title}
+            {c.titleHighlight ? (
+              <>
+                <br />
+                <span className="text-abServiceBlue">{c.titleHighlight}</span>
+              </>
+            ) : null}
           </h1>
 
           {/* Description */}

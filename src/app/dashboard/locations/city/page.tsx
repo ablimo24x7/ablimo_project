@@ -15,7 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Pencil, Plane, MessageSquare, Search } from "lucide-react";
+import { Pencil, Plane, MessageSquare, Search, ExternalLink } from "lucide-react";
 import { useState } from "react";
 
 export type CityListItem = {
@@ -134,8 +134,15 @@ export default function CitiesPage() {
                       </TableCell>
                       <TableCell className="text-right">
                         <div className="flex gap-1 justify-end">
+                          <Button variant="ghost" size="sm" asChild title="View on site">
+                            <Link href={`/locations/${c.countrySlug}/${c.slug}`} target="_blank">
+                              <ExternalLink className="h-4 w-4" />
+                            </Link>
+                          </Button>
                           <Button variant="ghost" size="sm" asChild title="Manage cities of this country">
-                            <Link href={`/dashboard/locations/${c.countryId}/city`}><Pencil className="h-4 w-4" /></Link>
+                            <Link href={`/dashboard/locations/${c.countryId}/city`}>
+                              <Pencil className="h-4 w-4" />
+                            </Link>
                           </Button>
                         </div>
                       </TableCell>

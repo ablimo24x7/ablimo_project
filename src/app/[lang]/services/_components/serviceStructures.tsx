@@ -143,6 +143,10 @@ export const serviceStructures: Record<string, ServiceStructure> = {
 
 /**
  * Maps a top-level service URL slug to its key inside `dict.servicePages`.
+ *
+ * Only the six live service verticals are mapped here. The 59 archived service
+ * pages (and their previous template mappings) live in
+ * `src/lib/archived-services.ts` so they cannot render on the website.
  */
 export const serviceDictKeyBySlug: Record<string, string> = {
   "chauffeur-vip": "chauffeurVip",
@@ -151,79 +155,11 @@ export const serviceDictKeyBySlug: Record<string, string> = {
   "event-transportation": "eventTransportation",
   "bus-coach-hire": "busCoachHire",
   "tourism-transportation": "tourismTransportation",
-  "religious-tourism": "religiousTourism",
-  "executive-chauffeur": "chauffeurVip",
-  "chauffeur-hailing": "chauffeurVip",
-  "hourly-chauffeur": "chauffeurVip",
-  "city-transfers": "chauffeurVip",
-  "intercity-transfers": "chauffeurVip",
-  "limousine-services": "chauffeurVip",
-  "bus-charter": "busCoachHire",
-  "mini-bus-charter": "busCoachHire",
-  "coach-charter": "busCoachHire",
-  "airport-coach-transfers": "airportTransfers",
-  "executive-corporate-mobility": "chauffeurVip",
-  "vip-diplomatic-government": "chauffeurVip",
-  "corporate-fleet": "corporateTransportation",
-  "group-coach-charter": "busCoachHire",
-  "tourism-leisure": "tourismTransportation",
-  "premium-lifestyle": "chauffeurVip",
-  "cross-border-mobility": "chauffeurVip",
-
-  // Tourism Mobility Solutions
-  "tourism-dmc": "tourismTransportation",
-  "hospitality-mobility": "tourismTransportation",
-  "tourism-roadshows": "tourismTransportation",
-  "mice-transportation": "eventTransportation",
-  "hotel-shuttle": "tourismTransportation",
-
-  // Corporate Mobility Solutions
-  "event-mice-mobility": "eventTransportation",
-  "city-to-city": "chauffeurVip",
-  "corporate-shuttle": "corporateTransportation",
-  "staff-transport": "corporateTransportation",
-  "school-transport": "corporateTransportation",
-  "university-transport": "corporateTransportation",
-  "financial-roadshows": "corporateTransportation",
-
-  // Events Mobility Solutions
-  "exhibition-transportation": "eventTransportation",
-  "conference-transportation": "eventTransportation",
-  "sports-team-transportation": "eventTransportation",
-  "artists-transportation": "eventTransportation",
-  "crew-transportation": "eventTransportation",
-  "vip-delegation": "chauffeurVip",
-
-  // Industry Mobility Solutions
-  "government-mobility": "chauffeurVip",
-  "embassy-transportation": "chauffeurVip",
-  "aviation-mobility": "chauffeurVip",
-  "workforce-mobility": "corporateTransportation",
-  "energy-mobility": "corporateTransportation",
-  "construction-mobility": "corporateTransportation",
-  "industrial-mobility": "corporateTransportation",
-  "sports-entertainment-mobility": "eventTransportation",
-  "healthcare-mobility": "corporateTransportation",
-  "education-mobility": "corporateTransportation",
-  "retail-mobility": "corporateTransportation",
-  "media-production-mobility": "corporateTransportation",
-  "marine-mobility": "corporateTransportation",
-  "mining-mobility": "corporateTransportation",
-  "technology-mobility": "corporateTransportation",
-  "ngo-mobility": "corporateTransportation",
-  "real-estate-mobility": "corporateTransportation",
-  "luxury-vip-mobility": "chauffeurVip",
-  "media-entertainment-mobility": "eventTransportation",
-  "medical-transportation": "corporateTransportation",
-  "oil-gas-mobility": "corporateTransportation",
-  "mining-staff-transport": "corporateTransportation",
-  "construction-staff-transport": "corporateTransportation",
 };
 
 /**
- * Structures only exist for the 6 core verticals. Every other dictionary slug
- * reuses the structure of its core vertical, so dictionary-backed service
- * pages never crash on a missing structure.
+ * Structures only exist for the 6 core verticals. Dictionary-backed pages map
+ * to the structure of the vertical they belong to.
  */
 const STRUCTURE_SLUG_BY_DICT_KEY: Record<string, string> = {};
 for (const [slug, dictKey] of Object.entries(serviceDictKeyBySlug)) {
@@ -232,9 +168,6 @@ for (const [slug, dictKey] of Object.entries(serviceDictKeyBySlug)) {
   }
 }
 
-const STRUCTURE_BY_DICT_KEY_FALLBACK: Record<string, string> = {
-  religiousTourism: "tourism-transportation",
-};
 
 export function getStructureForService(
   slug: string,
@@ -243,8 +176,7 @@ export function getStructureForService(
   const direct = serviceStructures[slug];
   if (direct) return direct;
   if (!dictKey) return undefined;
-  const mapped =
-    STRUCTURE_SLUG_BY_DICT_KEY[dictKey] ?? STRUCTURE_BY_DICT_KEY_FALLBACK[dictKey];
+  const mapped = STRUCTURE_SLUG_BY_DICT_KEY[dictKey];
   return mapped ? serviceStructures[mapped] : undefined;
 }
 

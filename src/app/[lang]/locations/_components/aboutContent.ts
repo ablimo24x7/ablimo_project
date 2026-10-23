@@ -197,6 +197,51 @@ const cityAbout: Record<string, AboutContent> = {
         description:
             "Sohar — legendary home of Sinbad the Sailor and Oman's northern port powerhouse — blends history with industry. AB.Limo delivers professional chauffeur service for business travel, port transfers, and journeys to Muscat.",
     },
+    hail: {
+        title: "Chauffeur Service in Hail",
+        description:
+            "Gateway to northern Saudi Arabia's dramatic desert terrain and UNESCO heritage rock art, Hail combines rich history with visionary growth. AB.Limo provides premium chauffeur service from Hail International Airport, city travel, and intercity transfers across the Kingdom.",
+    },
+    jubail: {
+        title: "Corporate Chauffeur Service in Jubail",
+        description:
+            "The industrial powerhouse of the Eastern Province, Jubail Industrial City hosts global petrochemical leaders and executive delegations. AB.Limo delivers high-level corporate transportation, airport transfers to King Fahd International (DMM), and executive mobility throughout the industrial corridor.",
+    },
+    najran: {
+        title: "Chauffeur Service in Najran",
+        description:
+            "A city steeped in centuries of Arabian history, Najran blends ancient archaeological treasures at Al-Ukhdood with modern southern development. AB.Limo offers reliable chauffeur service from Najran Airport, hotel transfers, and private travel across the region.",
+    },
+    taif: {
+        title: "Chauffeur Service in Taif",
+        description:
+            "Known as the Bride of the Hijaz, Taif offers mountain retreats, fragrant Damask rose gardens, and a gateway to Makkah. AB.Limo provides luxury chauffeur service from Taif Regional Airport, scenic mountain excursions, and intercity transfers to Jeddah and Makkah.",
+    },
+    yanbu: {
+        title: "Chauffeur Service in Yanbu",
+        description:
+            "A vital Red Sea trade hub divided into the historic port city and modern industrial city, Yanbu attracts corporate executives and coastal travelers alike. AB.Limo ensures smooth chauffeur transfers from Yanbu Airport, port facilities, and intercity connections to Madinah and Jeddah.",
+    },
+    fujairah: {
+        title: "Chauffeur Service in Fujairah",
+        description:
+            "Framed by the rugged Hajar Mountains and the azure Gulf of Oman, Fujairah offers a distinctive coastal landscape and thriving maritime industry. AB.Limo provides premium chauffeur transfers from Fujairah International Airport, beach resorts, and intercity journeys to Dubai and Sharjah.",
+    },
+    "umm-al-quwain": {
+        title: "Chauffeur Service in Umm Al Quwain",
+        description:
+            "Offering a serene retreat along the Arabian Gulf coast with rich heritage and mangrove channels, Umm Al Quwain provides a relaxed pace. AB.Limo delivers dedicated chauffeur service, airport transfers to Sharjah and Dubai, and executive travel across the Northern Emirates.",
+    },
+    salmiya: {
+        title: "Executive Chauffeur Service in Salmiya",
+        description:
+            "From the vibrant Arabian Gulf Street waterfront to the Scientific Center and luxury retail districts, Salmiya is Kuwait's commercial and lifestyle heart. AB.Limo delivers executive chauffeur service, airport transfers to Kuwait International Airport, and seamless travel across the governorate.",
+    },
+    nizwa: {
+        title: "Luxury Chauffeur Service in Nizwa",
+        description:
+            "One of Oman's oldest cities and a historic center of trade and religion, Nizwa is famed for its monumental circular fort, bustling traditional souq, and mountain gateways. AB.Limo offers luxury chauffeur service connecting Nizwa with Muscat International Airport, Jebel Akhdar, and destinations across the Sultanate.",
+    },
 };
 
 function titleCaseSlug(slug: string): string {

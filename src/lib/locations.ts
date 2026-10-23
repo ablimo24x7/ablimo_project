@@ -55,11 +55,20 @@ const airport = (slug: string, name: string, iata: string, nameAr = ""): Airport
   iata,
   nameAr,
 });
-const city = (slug: string, name: string, airports: Airport[] = [], nameAr = ""): City => ({
+const city = (
+  slug: string,
+  name: string,
+  airports: Airport[] = [],
+  nameAr = "",
+  description = "",
+  aliases: string[] = []
+): City => ({
   slug,
   name,
   airports,
   nameAr,
+  description,
+  aliases,
 });
 
 export const COUNTRIES: Country[] = [
@@ -84,8 +93,23 @@ export const COUNTRIES: Country[] = [
         airport("ras-al-khaimah-international-airport", "Ras Al Khaimah International Airport", "RKT", "مطار رأس الخيمة الدولي"),
       ], "رأس الخيمة"),
       city("al-ain", "Al Ain", [], "العين"),
-      city("fujairah", "Fujairah", [], "الفجيرة"),
-      city("umm-al-quwain", "Umm Al Quwain", [], "أم القيوين"),
+      city(
+        "fujairah",
+        "Fujairah",
+        [
+          airport("fujairah-international-airport", "Fujairah International Airport", "FJR", "مطار الفجيرة الدولي"),
+        ],
+        "الفجيرة",
+        "The only emirate situated on the UAE's eastern Gulf of Oman coast, renowned for rugged mountains, historical forts, and deep-water bunkering ports."
+      ),
+      city(
+        "umm-al-quwain",
+        "Umm Al Quwain",
+        [],
+        "أم القيوين",
+        "A tranquil coastal emirate known for its serene mangrove lagoons, rich maritime heritage, and peaceful escape from bustling metropolises.",
+        ["uaq", "umm-al-qaiwain"]
+      ),
     ],
   },
   {
@@ -114,11 +138,52 @@ export const COUNTRIES: Country[] = [
       city("abha", "Abha", [], "أبها"),
       city("jizan", "Jizan", [], "جازان"),
       city("neom", "NEOM", [], "نيوم"),
-      city("hail", "Hail", [], "حائل"),
-      city("jubail", "Jubail", [], "الجبيل"),
-      city("najran", "Najran", [], "نجران"),
-      city("taif", "Taif", [], "الطائف"),
-      city("yanbu", "Yanbu", [], "ينبع"),
+      city(
+        "hail",
+        "Hail",
+        [
+          airport("hail-international-airport", "Hail International Airport", "HAS", "مطار حائل الدولي"),
+        ],
+        "حائل",
+        "Historic capital of northern Saudi Arabia, celebrated for UNESCO World Heritage rock art, desert landscapes, and legendary Arabian hospitality."
+      ),
+      city(
+        "jubail",
+        "Jubail",
+        [
+          airport("jubail-airport", "Jubail Airport", "QJB", "مطار الجبيل"),
+        ],
+        "الجبيل",
+        "Home to the world's largest petrochemical industrial complex and modern coastal business districts along the Arabian Gulf.",
+        ["jubial"]
+      ),
+      city(
+        "najran",
+        "Najran",
+        [
+          airport("najran-airport", "Najran Airport", "EAM", "مطار نجران"),
+        ],
+        "نجران",
+        "An ancient trade oasis and cultural jewel near Saudi Arabia's southern border, renowned for Al-Ukhdood ruins and traditional mudbrick palaces."
+      ),
+      city(
+        "taif",
+        "Taif",
+        [
+          airport("taif-regional-airport", "Taif Regional Airport", "TIF", "مطار الطائف الإقليمي"),
+        ],
+        "الطائف",
+        "The scenic summer retreat of Saudi Arabia perched on the Sarawat Mountains, famous for fragrant rose gardens, Shubra Palace, and cool mountain air."
+      ),
+      city(
+        "yanbu",
+        "Yanbu",
+        [
+          airport("yanbu-airport", "Prince Abdul Mohsin Bin Abdulaziz International Airport", "YNB", "مطار الأمير عبد المحسن بن عبد العزيز"),
+        ],
+        "ينبع",
+        "A major Red Sea industrial port and historic maritime city, celebrated for pristine coral reefs, Yanbu Industrial City, and preserved heritage quarters."
+      ),
     ],
   },
   {
@@ -160,7 +225,14 @@ export const COUNTRIES: Country[] = [
       city("hawalli", "Hawalli", [], "حولي"),
       city("farwaniya", "Farwaniya", [], "الفروانية"),
       city("al-ahmadi", "Al Ahmadi", [], "الأحمدي"),
-      city("salmiya", "Salmiya", [], "السالمية"),
+      city(
+        "salmiya",
+        "Salmiya",
+        [],
+        "السالمية",
+        "A major commercial and residential district in Kuwait, home to the Scientific Center, Marina Mall, and premier waterfront dining along the Gulf Road.",
+        ["salimya"]
+      ),
     ],
   },
   {
@@ -178,7 +250,13 @@ export const COUNTRIES: Country[] = [
       city("sohar", "Sohar", [
         airport("sohar-international-airport", "Sohar International Airport", "SOH", "مطار صحار الدولي"),
       ], "صحار"),
-      city("nizwa", "Nizwa", [], "نزوى"),
+      city(
+        "nizwa",
+        "Nizwa",
+        [],
+        "نزوى",
+        "The ancient cultural capital of Oman in the Ad Dakhiliyah region, world-renowned for its 17th-century circular fort, bustling silver souq, and mountain gateways."
+      ),
     ],
   },
 ];
@@ -194,6 +272,10 @@ const cityAliases: Record<string, string> = {
   "kuwait-city": "kuwait-city",
   "ras-al-khaymah": "ras-al-khaimah",
   "alula": "al-ula",
+  salimya: "salmiya",
+  jubial: "jubail",
+  "umm-al-qaiwain": "umm-al-quwain",
+  uaq: "umm-al-quwain",
 };
 
 export function resolveCountry(input: string): Country | undefined {

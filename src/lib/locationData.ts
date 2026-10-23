@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import { connectDB } from "@/lib/db";
 import { getEnv } from "@/lib/env";
 import { Country, type CountryDoc, type CityDoc, type AirportDoc } from "@/lib/models/Country";
@@ -5,6 +6,8 @@ import { LocationRoute, type RouteDoc } from "@/lib/models/Route";
 import { toSlug } from "@/lib/slug";
 import { COUNTRIES, CITY_ROUTES, resolveAirport, resolveCity, resolveCountry, type Airport, type City, type CityRoute, type Country as CountryShape } from "@/lib/locations";
 import type { TextImageSectionType } from "@/lib/validations/location";
+import { locales, getDictionary } from "@/app/[lang]/dictionaries";
+import { buildCityTemplate } from "@/components/section-library/presets/city-presets";
 
 export const LOCATION_API_TAG = "locations";
 
@@ -143,7 +146,12 @@ function backfillNameAr<T extends { slug: string; nameAr?: string }>(
 }
 
 function backfillCountryNameAr(country: CountryShape): CountryShape {
-  const staticCountry = COUNTRIES.find((c) => c.slug === country.slug);
+  const staticCountry = COUNTRIES.find(
+    (c) =>
+      c.slug === country.slug ||
+      countryAliases[country.slug] === c.slug ||
+      countryAliases[c.slug] === country.slug
+  );
   if (!staticCountry) return country;
   const cities = backfillNameAr(country.cities ?? [], staticCountry.cities).map((city) => {
     const staticCity = staticCountry.cities.find((c) => c.slug === city.slug);
@@ -159,11 +167,134 @@ function backfillCountryNameAr(country: CountryShape): CountryShape {
   };
 }
 
+let syncPromise: Promise<void> | null = null;
+
+/**
+ * Ensures all cities defined in the static COUNTRIES dataset exist under
+ * their parent Country documents in MongoDB, and seeds their city location
+ * page templates in locationpagetemplates if not already created.
+ */
+export async function syncMissingCitiesToDatabase(): Promise<void> {
+  const enabled = isDatabaseEnabled();
+  if (!enabled) return;
+  if (syncPromise) return syncPromise;
+
+  syncPromise = (async () => {
+    try {
+      await connectDB();
+      const countryDocs = await Country.find({ status: { $ne: "archived" } });
+      if (!countryDocs.length) return;
+
+      const templateOps: any[] = [];
+      const now = new Date();
+
+      for (const countryDoc of countryDocs) {
+        const staticCountry = COUNTRIES.find(
+          (c) =>
+            c.slug.toLowerCase() === countryDoc.slug.toLowerCase() ||
+            c.code.toLowerCase() === countryDoc.code.toLowerCase() ||
+            countryAliases[countryDoc.slug.toLowerCase()] === c.slug.toLowerCase() ||
+            countryAliases[c.slug.toLowerCase()] === countryDoc.slug.toLowerCase()
+        );
+        if (!staticCountry) continue;
+
+        const existingSlugs = new Set(
+          (countryDoc.cities ?? []).map((c: any) => c.slug.toLowerCase())
+        );
+
+        const citiesToAdd = staticCountry.cities.filter(
+          (sc) => !existingSlugs.has(sc.slug.toLowerCase())
+        );
+
+        if (citiesToAdd.length > 0) {
+          const newCities = citiesToAdd.map((c) => ({
+            slug: c.slug,
+            name: c.name,
+            nameAr: c.nameAr ?? "",
+            countrySlug: countryDoc.slug,
+            description: c.description ?? "",
+            descriptionAr: c.descriptionAr ?? "",
+            aliases: c.aliases ?? [],
+            status: "published",
+            airports: (c.airports ?? []).map((a) => ({
+              slug: a.slug,
+              name: a.name,
+              nameAr: a.nameAr ?? "",
+              iata: a.iata,
+              citySlug: c.slug,
+              status: "published",
+            })),
+            faqs: c.faqs ?? [],
+            faqsAr: c.faqsAr ?? [],
+            sections: [],
+          }));
+
+          await Country.updateOne(
+            { _id: countryDoc._id },
+            { $push: { cities: { $each: newCities } } }
+          );
+
+          countryDoc.cities = [...(countryDoc.cities ?? []), ...newCities];
+        }
+
+        // Prepare templates in locationpagetemplates collection for any missing city template
+        for (const city of countryDoc.cities ?? []) {
+          if (!city?.slug) continue;
+          for (const lang of locales) {
+            const dict = await getDictionary(lang);
+            const template = buildCityTemplate(countryDoc.slug, city.slug, dict);
+            const refKeys = [
+              `${countryDoc.slug}/${city.slug}`,
+              `${staticCountry.slug}/${city.slug}`,
+            ];
+            const dedupedRefKeys = [...new Set(refKeys)];
+            for (const refKey of dedupedRefKeys) {
+              templateOps.push({
+                updateOne: {
+                  filter: { pageType: "city", refKey, lang },
+                  update: {
+                    $setOnInsert: {
+                      pageType: "city",
+                      refKey,
+                      lang,
+                      template,
+                      status: "published",
+                      createdAt: now,
+                      updatedAt: now,
+                    },
+                  },
+                  upsert: true,
+                },
+              });
+            }
+          }
+        }
+      }
+
+      if (templateOps.length > 0 && mongoose.connection.db) {
+        await mongoose.connection.db
+          .collection("locationpagetemplates")
+          .bulkWrite(templateOps, { ordered: false })
+          .catch(() => undefined);
+      }
+    } catch (err) {
+      console.error("syncMissingCitiesToDatabase failed:", err);
+    } finally {
+      setTimeout(() => {
+        syncPromise = null;
+      }, 30000);
+    }
+  })();
+
+  return syncPromise;
+}
+
 /** Fetch all countries. Falls back to static data when DB is off/empty. */
 export async function getAllCountries(): Promise<CountryShape[]> {
   if (!isDatabaseEnabled()) return COUNTRIES;
   await connectDB();
   await seedLocationsIfEmpty();
+  await syncMissingCitiesToDatabase();
   const docs = await Country.find({ status: { $ne: "archived" } }).sort({ name: 1 }).lean();
   if (!docs.length) return COUNTRIES;
   const active = docs.filter((d) => d.status === "published");
@@ -198,6 +329,7 @@ export async function getCountryBySlug(input: string): Promise<CountryShape | un
     return COUNTRIES.find((c) => c.slug === key || c.code === key);
   }
   await connectDB();
+  await syncMissingCitiesToDatabase();
   const keys = countryLookupKeys(input);
   const doc = await Country.findOne({
     $or: [{ slug: { $in: keys } }, { code: { $in: keys } }, { aliases: { $in: keys } }],

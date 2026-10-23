@@ -6,6 +6,11 @@ import FleetSection from "@/app/[lang]/_components/FleetSection";
 import CountriesSection from "@/app/[lang]/_components/CountriesSection";
 import CitiesSection from "@/app/[lang]/_components/CitiesSection";
 import IndustrySolutionsSection from "@/app/[lang]/_components/IndustrySolutionsSection";
+import HowItWorksSection from "@/app/[lang]/_components/HowItWorksSection";
+import CaseStudiesSection from "@/app/[lang]/_components/CaseStudiesSection";
+import AwardsSection from "@/app/[lang]/_components/AwardsSection";
+import TellUsCtaSection from "@/app/[lang]/_components/TellUsCtaSection";
+import FAQSection from "@/app/[lang]/_components/FAQSection";
 import { getDictionary, hasLocale, defaultLocale, type Locale } from "./dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 import { OrganizationJsonLd, LocalBusinessJsonLd, WebsiteJsonLd, HowToBookJsonLd } from "@/components/seo/StructuredData";
@@ -19,21 +24,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
-  const dict = await getDictionary(locale);
   const isAr = locale === "ar";
 
   return generateSeoMetadata({
     title: isAr
-      ? "AB.Limo - خدمة سائقين فاخرة تنفيذية ومؤسسية"
-      : "AB.Limo | Premium Executive & Corporate Mobility Services",
+      ? "نقل الشركات والفعاليات في السعودية والإمارات وقطر | AB"
+      : "Corporate & Event Transport in KSA, UAE & Qatar | AB",
     description: isAr
-      ? "توفر AB.Limo خدمات نقل فاخرة بسائقين محترفين في دول الخليج والعالم. نقل تنفيذي، تنقل مؤسسي، لوجستيات فعاليات، وخدمات مطار في دبي والرياض والدوحة وأبوظبي وأكثر من 25 مدينة."
-      : "AB.Limo provides premium chauffeur-driven transportation across the GCC and worldwide. Executive transfers, corporate mobility, event logistics, and airport services in Dubai, Riyadh, Doha, Abu Dhabi and 25+ cities.",
+      ? "خدمات نقل وإدارة تنقل وسائقين ومطارات وفعاليات وحافلات ونقل فرق العمل في السعودية والإمارات وقطر. إرسال 24/7 من الرياض. اطلب عرض أسعار."
+      : "Managed chauffeur, airport, event, bus and workforce transportation across Saudi Arabia, the UAE and Qatar. 24/7 dispatch from Riyadh. Request a proposal.",
     path: "",
     lang,
     keywords: isAr
-      ? "خدمة سائق فاخرة, نقل تنفيذي, تنقل مؤسسي, AB.Limo, نقل مطار, ليموزين فاخرة, نقل الخليج, سائق دبي, سفر تنفيذي الرياض, ليموزين الدوحة, سفر أعمال, نقل كبار الشخصيات, لوجستيات فعاليات, نقل زفاف"
-      : "luxury chauffeur service, executive transportation, corporate mobility, AB.Limo, airport transfer, premium limousine, GCC transportation, Dubai chauffeur, Riyadh executive travel, Doha limousine, business travel, VIP transportation, event logistics, wedding transportation",
+      ? "نقل الشركات والفعاليات, خدمة سائق خاص, تنقل مؤسسي, نقل مطار, تأجير حافلات, نقل السعودية, نقل الإمارات, نقل قطر, نقل كبار الشخصيات, AB.Limo"
+      : "corporate transportation, event transport, chauffeur service, Saudi Arabia, UAE, Qatar, airport transfer, bus coach hire, AB.Limo, workforce transport, VIP chauffeur",
   });
 }
 
@@ -52,12 +56,17 @@ export default async function Home({
       <WebsiteJsonLd />
       <HowToBookJsonLd />
       <HeroSection dict={dict} />
-      <EventLogisticsSection dict={dict} />
+      <EventLogisticsSection dict={dict} lang={lang} />
       <DutyOfCareSection dict={dict} />
       <FleetSection dict={dict} lang={lang} />
       <CountriesSection dict={dict} lang={lang} />
       <CitiesSection dict={dict} lang={lang} />
-      <IndustrySolutionsSection dict={dict} />
+      <IndustrySolutionsSection dict={dict} lang={lang} />
+      <HowItWorksSection dict={dict} lang={lang} />
+      <CaseStudiesSection dict={dict} lang={lang} />
+      <AwardsSection dict={dict} lang={lang} />
+      <TellUsCtaSection dict={dict} lang={lang} />
+      <FAQSection dict={dict} lang={lang} />
     </>
   );
 }

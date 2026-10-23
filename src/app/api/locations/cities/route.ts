@@ -2,7 +2,7 @@ import { authorizeApi } from "@/lib/api/guard";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { Country, type CityDoc } from "@/lib/models/Country";
-import { isDatabaseEnabled } from "@/lib/locationData";
+import { isDatabaseEnabled, syncMissingCitiesToDatabase } from "@/lib/locationData";
 import { CityCreateSchema, slugFromName } from "@/lib/validations/location";
 import { toSlug } from "@/lib/slug";
 
@@ -12,6 +12,8 @@ export async function GET() {
   }
 
   await connectDB();
+  await syncMissingCitiesToDatabase();
+
   const docs = await Country.find({ status: { $ne: "archived" } })
     .sort({ name: 1 })
     .lean();

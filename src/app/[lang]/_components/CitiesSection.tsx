@@ -1,25 +1,102 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Dictionary, localeBase } from "@/app/[lang]/dictionaries";
-import { getAllCountries } from "@/lib/locationData";
 import { getCityServiceCounts } from "@/lib/blog";
-import { COUNTRIES, resolveCountry, resolveCity, type Country } from "@/lib/locations";
+import { resolveCountry, resolveCity } from "@/lib/locations";
 
-const pillHoverColors = [
-  "hover:border-abBlue hover:text-abBlue",
-  "hover:border-abOrange hover:text-abOrange",
-  "hover:border-abGreen hover:text-abGreen",
-  "hover:border-abRed hover:text-abRed",
-  "hover:border-abYellow hover:text-abYellow",
-  "hover:border-abBlue hover:text-abBlue",
-];
-
-type CityPill = {
-  key: string;
-  href: string;
+interface MainCityConfig {
+  slug: string;
+  countrySlug: string;
   name: string;
-  nameAr?: string;
-  count: number;
-};
+  nameAr: string;
+  countryName: string;
+  countryNameAr: string;
+  image: string;
+}
+
+const MAIN_CITIES: MainCityConfig[] = [
+  {
+    slug: "riyadh",
+    countrySlug: "saudi-arabia",
+    name: "Riyadh",
+    nameAr: "الرياض",
+    countryName: "Saudi Arabia",
+    countryNameAr: "المملكة العربية السعودية",
+    image: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    slug: "jeddah",
+    countrySlug: "saudi-arabia",
+    name: "Jeddah",
+    nameAr: "جدة",
+    countryName: "Saudi Arabia",
+    countryNameAr: "المملكة العربية السعودية",
+    image: "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    slug: "dammam",
+    countrySlug: "saudi-arabia",
+    name: "Dammam",
+    nameAr: "الدمام",
+    countryName: "Saudi Arabia",
+    countryNameAr: "المملكة العربية السعودية",
+    image: "https://images.unsplash.com/photo-1578895101408-1a36b834405b?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    slug: "medina",
+    countrySlug: "saudi-arabia",
+    name: "Madinah",
+    nameAr: "المدينة المنورة",
+    countryName: "Saudi Arabia",
+    countryNameAr: "المملكة العربية السعودية",
+    image: "https://images.unsplash.com/photo-1588513646744-e94675143d6f?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    slug: "doha",
+    countrySlug: "qatar",
+    name: "Doha",
+    nameAr: "الدوحة",
+    countryName: "Qatar",
+    countryNameAr: "قطر",
+    image: "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    slug: "dubai",
+    countrySlug: "uae",
+    name: "Dubai",
+    nameAr: "دبي",
+    countryName: "UAE",
+    countryNameAr: "الإمارات",
+    image: "https://images.unsplash.com/photo-1721170628208-dffed6eb3514?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    slug: "abu-dhabi",
+    countrySlug: "uae",
+    name: "Abu Dhabi",
+    nameAr: "أبوظبي",
+    countryName: "UAE",
+    countryNameAr: "الإمارات",
+    image: "https://plus.unsplash.com/premium_photo-1733317416241-d92ba6af4e51?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    slug: "al-ula",
+    countrySlug: "saudi-arabia",
+    name: "Al Ula",
+    nameAr: "العلا",
+    countryName: "Saudi Arabia",
+    countryNameAr: "المملكة العربية السعودية",
+    image: "https://images.unsplash.com/photo-1681419670203-6b081b3c9fe1?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    slug: "ras-al-khaimah",
+    countrySlug: "uae",
+    name: "Ras Al Khaymah",
+    nameAr: "رأس الخيمة",
+    countryName: "UAE",
+    countryNameAr: "الإمارات",
+    image: "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=800&auto=format&fit=crop",
+  },
+];
 
 export default async function CitiesSection({
   dict,
@@ -29,13 +106,8 @@ export default async function CitiesSection({
   lang: string;
 }) {
   const labels = dict.home.citiesSection;
-  const [dbCountries, counts] = await Promise.all([
-    getAllCountries(),
-    getCityServiceCounts(),
-  ]);
+  const counts = await getCityServiceCounts();
 
-  // Normalize count keys to canonical country/city slugs (e.g. article
-  // "united-arab-emirates"/"alula" -> "uae"/"al-ula").
   const countMap = new Map<string, number>();
   for (const row of counts) {
     const country = resolveCountry(row.countrySlug);
@@ -45,64 +117,85 @@ export default async function CitiesSection({
     countMap.set(`${countrySlug}/${citySlug}`, row.count);
   }
 
-  // Union of static + DB cities so DB-only and static-only cities both show.
-  const cityMap = new Map<string, CityPill>();
-  const addCountry = (country: Country) => {
-    const countrySlug = resolveCountry(country.slug)?.slug ?? country.slug;
-    for (const city of country.cities ?? []) {
-      if (city.status === "archived") continue;
-      const key = `${countrySlug}/${city.slug}`;
-      if (!cityMap.has(key)) {
-        cityMap.set(key, {
-          key,
-          href: `${localeBase(lang)}/locations/${countrySlug}/${city.slug}`,
-          name: city.name,
-          nameAr: city.nameAr,
-          count: countMap.get(key) ?? 0,
-        });
-      }
-    }
-  };
-  for (const country of COUNTRIES) addCountry(country);
-  for (const country of dbCountries) addCountry(country);
-
-  let items = Array.from(cityMap.values());
-  const withCounts = items.filter((item) => item.count > 0);
-  if (withCounts.length) items = withCounts;
-  items.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
-  items = items.slice(0, 8);
-
-  if (!items.length) return null;
-
   const countLabel = (count: number) =>
     count === 1
       ? labels.serviceCountOne
       : labels.servicesCount.replace("{count}", String(count));
 
+  const isAr = lang === "ar";
+
   return (
-    <section id="cities" className="py-20 bg-abBlack border-b border-gray-900 relative z-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-sm font-bold tracking-widest text-gray-500 uppercase mb-4">
-          {labels.badge}
-        </h2>
-        <p className="text-white text-2xl font-semibold mb-10">{labels.title}</p>
-        <div className="flex flex-wrap justify-center gap-3">
-          {items.map((item, i) => (
+    <section id="cities" className="py-24 bg-abBlack border-b border-gray-900 relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div className="max-w-2xl text-start">
+            <h2 className="text-sm font-bold tracking-widest text-abBlue uppercase mb-2">
+              {labels.badge}
+            </h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-white">{labels.title}</h3>
+          </div>
+          <div className="mt-6 md:mt-0">
             <Link
-              key={item.key}
-              href={item.href}
-              className={`group w-[calc(50%-0.375rem)] sm:w-[calc(25%-0.5625rem)] px-6 py-3 rounded bg-abDarkGray border border-gray-800 text-gray-300 ${pillHoverColors[i % pillHoverColors.length]} transition-all text-center`}
+              href={`${localeBase(lang)}/locations`}
+              className="text-gray-300 font-semibold hover:text-abBlue border-b border-gray-600 hover:border-abBlue pb-1 transition-colors inline-flex items-center text-sm"
             >
-              <span className="block font-medium text-sm">
-                {lang === "ar" && item.nameAr ? item.nameAr : item.name}
-              </span>
-              {item.count > 0 && (
-                <span className="block text-xs text-gray-500 mt-0.5 group-hover:text-inherit">
-                  {countLabel(item.count)}
-                </span>
-              )}
+              {labels.viewAllCities} <i className="fa-solid fa-arrow-right ml-2 text-xs rtl:rotate-180"></i>
             </Link>
-          ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {MAIN_CITIES.map((city) => {
+            const count = countMap.get(`${city.countrySlug}/${city.slug}`) ?? 0;
+            const cityName = isAr ? city.nameAr : city.name;
+            const countryName = isAr ? city.countryNameAr : city.countryName;
+            const href = `${localeBase(lang)}/locations/${city.countrySlug}/${city.slug}`;
+
+            return (
+              <Link
+                key={city.slug}
+                href={href}
+                className="group relative rounded-xl overflow-hidden border border-gray-800 bg-abDarkGray hover:border-abBlue transition-all duration-300 shadow-lg hover:shadow-abBlue/10 flex flex-col"
+              >
+                <div className="relative h-60 w-full overflow-hidden bg-[#050505]">
+                  <Image
+                    src={city.image}
+                    alt={cityName}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/20" />
+
+                  <div className="absolute top-3 left-3 z-10">
+                    <span className="bg-[#111]/85 backdrop-blur-md border border-gray-700/80 text-gray-200 text-[10px] font-semibold tracking-wider px-2.5 py-1 rounded uppercase">
+                      {countryName}
+                    </span>
+                  </div>
+
+                  {count > 0 && (
+                    <div className="absolute top-3 right-3 z-10">
+                      <span className="bg-abBlue text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
+                        {countLabel(count)}
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between z-10">
+                    <div>
+                      <h4 className="text-xl sm:text-2xl font-bold text-white group-hover:text-abBlue transition-colors drop-shadow">
+                        {cityName}
+                      </h4>
+                      <p className="text-xs text-gray-400 mt-0.5">{countryName}</p>
+                    </div>
+                    <span className="w-9 h-9 rounded-full bg-[#111]/90 border border-gray-700 flex items-center justify-center text-gray-300 group-hover:border-abBlue group-hover:bg-abBlue group-hover:text-white transition-all duration-300 shadow flex-shrink-0 ml-3">
+                      <i className="fa-solid fa-arrow-right text-xs rtl:rotate-180"></i>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
