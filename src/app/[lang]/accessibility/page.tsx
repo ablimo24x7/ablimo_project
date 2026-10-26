@@ -21,11 +21,11 @@ export async function generateMetadata({
   return generateSeoMetadata({
     title: isAr ? dict.accessibilityPage.title : "Accessibility",
     description: isAr
-      ? "ملتزم AB.Limo بضمان إمكانية الوصول الرقمي لجميع المستخدمين. اقرأ بيان إمكانية الوصول وتعرّف على جهودنا المستمرة."
-      : "AB.Limo is committed to ensuring digital accessibility for all users. Read our accessibility statement and learn about our ongoing efforts.",
+      ? "ملتزم AB بضمان إمكانية الوصول الرقمي لجميع المستخدمين. اقرأ بيان إمكانية الوصول وتعرّف على جهودنا المستمرة."
+      : "AB is committed to ensuring digital accessibility for all users. Read our accessibility statement and learn about our ongoing efforts.",
     path: "/accessibility",
     lang,
-    keywords: "AB.Limo accessibility, digital accessibility, accessible transportation, wheelchair accessible vehicle",
+    keywords: "AB accessibility, digital accessibility, accessible transportation, wheelchair accessible vehicle",
   });
 }
 
@@ -67,14 +67,14 @@ export default async function AccessibilityPage({
             </h2>
             <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
-                AB.Limo is committed to ensuring digital accessibility for
+                AB is committed to ensuring digital accessibility for
                 people with disabilities. We are continually improving the user
                 experience for everyone and applying the relevant accessibility
                 standards to ensure we provide equal access to all users.
               </p>
               <p>
-                This Accessibility Statement applies to the AB.Limo website
-                (www.ab.limo) and the AB.Limo mobile application. We strive
+                This Accessibility Statement applies to the AB website
+                (www.ab.limo) and the AB mobile application. We strive
                 to conform to the Web Content Accessibility Guidelines (WCAG)
                 2.1 at the AA level as published by the World Wide Web
                 Consortium (W3C).
@@ -131,7 +131,7 @@ export default async function AccessibilityPage({
             </h2>
             <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
-                The AB.Limo platform includes the following accessibility
+                The AB platform includes the following accessibility
                 features:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
@@ -205,7 +205,7 @@ export default async function AccessibilityPage({
             </h2>
             <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
-                Accessibility of the AB.Limo platform relies on the following
+                Accessibility of the AB platform relies on the following
                 technologies to work with the web browser and assistive
                 technologies you use:
               </p>
@@ -237,7 +237,7 @@ export default async function AccessibilityPage({
             </h2>
             <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
-                We welcome your feedback on the accessibility of the AB.Limo
+                We welcome your feedback on the accessibility of the AB
                 platform. If you encounter accessibility barriers or have
                 suggestions for improvement, please let us know:
               </p>
@@ -245,7 +245,7 @@ export default async function AccessibilityPage({
                 <p>
                   <strong className="text-white">Accessibility Team</strong>
                 </p>
-                <p>AB.Limo</p>
+                <p>AB</p>
                 <p>Malaz Area, Umar Ibn Abdulaziz Road, Building Number 59</p>
                 <p>Second Floor, Riyadh 12626, Kingdom of Saudi Arabia</p>
                 <p className="pt-2">
@@ -290,7 +290,7 @@ export default async function AccessibilityPage({
                 <p>
                   <strong className="text-white">Accessibility Escalations</strong>
                 </p>
-                <p>AB.Limo</p>
+                <p>AB</p>
                 <p className="pt-2">
                   Email:{" "}
                   <a

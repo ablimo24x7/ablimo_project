@@ -165,7 +165,7 @@ export function BlogArticleTemplate({
               <User className="w-4 h-4 text-abBlue" />
             </div>
             <div>
-              <p className="text-white text-sm font-bold">{article.authorName || "AB.Limo"}</p>
+              <p className="text-white text-sm font-bold">{article.authorName || "AB"}</p>
               <p className="text-gray-500 text-xs font-mono">
                 {b.published} {formattedDate}
               </p>

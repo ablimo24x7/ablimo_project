@@ -6,8 +6,8 @@ const mongoose = require("mongoose");
 const COUNTRY_FAQS = {
   "united-arab-emirates": [
     {
-      q: "What cities does AB.Limo serve in the United Arab Emirates?",
-      a: "AB.Limo operates across the UAE including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, and Al Ain, covering every major airport, hotel, business district, and attraction.",
+      q: "What cities does AB serve in the United Arab Emirates?",
+      a: "AB operates across the UAE including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, and Al Ain, covering every major airport, hotel, business district, and attraction.",
     },
     {
       q: "Do you offer airport transfers in the UAE?",
@@ -22,14 +22,14 @@ const COUNTRY_FAQS = {
       a: "Absolutely. We serve Dubai's DIFC and Business Bay, Abu Dhabi's Al Maryah Island and Corniche, and other business hubs with executive vehicles, monthly corporate accounts, and professional chauffeurs.",
     },
     {
-      q: "Is AB.Limo available for events and exhibitions in the UAE?",
+      q: "Is AB available for events and exhibitions in the UAE?",
       a: "Yes, we handle event transportation for exhibitions at Dubai World Trade Centre, Abu Dhabi National Exhibition Centre, concerts, weddings, and government delegations with coordinated logistics.",
     },
   ],
   germany: [
     {
-      q: "What chauffeur services does AB.Limo offer in Germany?",
-      a: "AB.Limo provides premium chauffeur-driven transportation across Germany including airport transfers, corporate travel, intercity journeys, and event logistics with a professional fleet and English-speaking chauffeurs.",
+      q: "What chauffeur services does AB offer in Germany?",
+      a: "AB provides premium chauffeur-driven transportation across Germany including airport transfers, corporate travel, intercity journeys, and event logistics with a professional fleet and English-speaking chauffeurs.",
     },
     {
       q: "Which German airports do you serve?",
@@ -44,7 +44,7 @@ const COUNTRY_FAQS = {
       a: "Absolutely. We serve Germany's business hubs including Frankfurt's banking district, Munich's corporate centers, and Düsseldorf's trade fair grounds with executive vehicles and monthly corporate accounts.",
     },
     {
-      q: "Is AB.Limo available for trade fairs and events in Germany?",
+      q: "Is AB available for trade fairs and events in Germany?",
       a: "Yes, we handle transportation for major trade fairs including Frankfurt Book Fair, Hannover Messe, Automechanika, Oktoberfest in Munich, and corporate events nationwide.",
     },
   ],
@@ -56,7 +56,7 @@ const CITY_FAQS = {
     dubai: [
       {
         q: "What chauffeur services are available in Dubai?",
-        a: "AB.Limo offers premium chauffeur services in Dubai including airport transfers from Dubai International Airport (DXB) and Al Maktoum International (DWC), city transportation, corporate mobility, and intercity transfers to Abu Dhabi, Sharjah, and other Emirates.",
+        a: "AB offers premium chauffeur services in Dubai including airport transfers from Dubai International Airport (DXB) and Al Maktoum International (DWC), city transportation, corporate mobility, and intercity transfers to Abu Dhabi, Sharjah, and other Emirates.",
       },
       {
         q: "Can I hire a limousine for a day tour in Dubai?",
@@ -74,7 +74,7 @@ const CITY_FAQS = {
     "abu-dhabi": [
       {
         q: "What chauffeur services are available in Abu Dhabi?",
-        a: "AB.Limo offers premium chauffeur services in Abu Dhabi including airport transfers from Zayed International Airport (AUH), city transportation, corporate mobility, and intercity transfers to Dubai, Al Ain, and other Emirates.",
+        a: "AB offers premium chauffeur services in Abu Dhabi including airport transfers from Zayed International Airport (AUH), city transportation, corporate mobility, and intercity transfers to Dubai, Al Ain, and other Emirates.",
       },
       {
         q: "Can I book a limousine for business meetings in Abu Dhabi?",
@@ -92,7 +92,7 @@ const CITY_FAQS = {
     sharjah: [
       {
         q: "What chauffeur services are available in Sharjah?",
-        a: "AB.Limo offers premium chauffeur services in Sharjah including airport transfers from Sharjah International Airport (SHJ), city transportation, and intercity transfers to Dubai, Abu Dhabi, and the Northern Emirates.",
+        a: "AB offers premium chauffeur services in Sharjah including airport transfers from Sharjah International Airport (SHJ), city transportation, and intercity transfers to Dubai, Abu Dhabi, and the Northern Emirates.",
       },
       {
         q: "Can I book a limousine for corporate travel in Sharjah?",
@@ -106,7 +106,7 @@ const CITY_FAQS = {
     ajman: [
       {
         q: "What chauffeur services are available in Ajman?",
-        a: "AB.Limo offers premium chauffeur services in Ajman including hotel transfers, city transportation, and intercity transfers to Dubai, Sharjah, and other Emirates.",
+        a: "AB offers premium chauffeur services in Ajman including hotel transfers, city transportation, and intercity transfers to Dubai, Sharjah, and other Emirates.",
       },
       {
         q: "Can I hire a limousine for hotel transfers in Ajman?",
@@ -120,7 +120,7 @@ const CITY_FAQS = {
     "ras-al-khaimah": [
       {
         q: "What chauffeur services are available in Ras Al Khaimah?",
-        a: "AB.Limo offers premium chauffeur services in Ras Al Khaimah including airport transfers, hotel transportation, city travel, and intercity transfers to Dubai and the Northern Emirates.",
+        a: "AB offers premium chauffeur services in Ras Al Khaimah including airport transfers, hotel transportation, city travel, and intercity transfers to Dubai and the Northern Emirates.",
       },
       {
         q: "Can I book a limousine for luxury resorts in Ras Al Khaimah?",
@@ -134,7 +134,7 @@ const CITY_FAQS = {
     "al-ain": [
       {
         q: "What chauffeur services are available in Al Ain?",
-        a: "AB.Limo offers premium chauffeur services in Al Ain including city transportation, hotel transfers, and intercity transfers to Abu Dhabi and Dubai.",
+        a: "AB offers premium chauffeur services in Al Ain including city transportation, hotel transfers, and intercity transfers to Abu Dhabi and Dubai.",
       },
       {
         q: "Can I hire a limousine for sightseeing in Al Ain?",
@@ -150,7 +150,7 @@ const CITY_FAQS = {
     tabuk: [
       {
         q: "What chauffeur services are available in Tabuk?",
-        a: "AB.Limo offers premium chauffeur services in Tabuk including airport transfers from Tabuk Regional Airport (TUU), city transportation, and intercity transfers across the Northwest region.",
+        a: "AB offers premium chauffeur services in Tabuk including airport transfers from Tabuk Regional Airport (TUU), city transportation, and intercity transfers across the Northwest region.",
       },
       {
         q: "Do you provide Tabuk to NEOM transfers?",
@@ -164,7 +164,7 @@ const CITY_FAQS = {
     "al-ula": [
       {
         q: "What chauffeur services are available in Al Ula?",
-        a: "AB.Limo offers premium chauffeur services in Al Ula including airport transfers from AlUla International Airport (ULH), hotel transportation, and guided city travel.",
+        a: "AB offers premium chauffeur services in Al Ula including airport transfers from AlUla International Airport (ULH), hotel transportation, and guided city travel.",
       },
       {
         q: "Can I hire a limousine for sightseeing in Al Ula?",
@@ -178,7 +178,7 @@ const CITY_FAQS = {
     "al-khobar": [
       {
         q: "What chauffeur services are available in Al Khobar?",
-        a: "AB.Limo offers premium chauffeur services in Al Khobar including airport transfers from King Fahd International Airport (DMM), city transportation, and corporate mobility across the Eastern Province.",
+        a: "AB offers premium chauffeur services in Al Khobar including airport transfers from King Fahd International Airport (DMM), city transportation, and corporate mobility across the Eastern Province.",
       },
       {
         q: "Can I book a limousine for corporate travel in Al Khobar?",
@@ -192,7 +192,7 @@ const CITY_FAQS = {
     "al-qasim": [
       {
         q: "What chauffeur services are available in Al Qasim?",
-        a: "AB.Limo offers premium chauffeur services in the Al Qasim region including airport transfers from Prince Nayef bin Abdulaziz International Airport (ELQ), city transportation in Buraidah and Unayzah, and intercity transfers.",
+        a: "AB offers premium chauffeur services in the Al Qasim region including airport transfers from Prince Nayef bin Abdulaziz International Airport (ELQ), city transportation in Buraidah and Unayzah, and intercity transfers.",
       },
       {
         q: "Can I hire a limousine for business travel in Buraidah?",
@@ -206,7 +206,7 @@ const CITY_FAQS = {
     abha: [
       {
         q: "What chauffeur services are available in Abha?",
-        a: "AB.Limo offers premium chauffeur services in Abha including airport transfers from Abha International Airport (AHB), city transportation, and intercity transfers across the Asir region.",
+        a: "AB offers premium chauffeur services in Abha including airport transfers from Abha International Airport (AHB), city transportation, and intercity transfers across the Asir region.",
       },
       {
         q: "Can I hire a limousine for sightseeing in Abha?",
@@ -220,7 +220,7 @@ const CITY_FAQS = {
     jizan: [
       {
         q: "What chauffeur services are available in Jizan?",
-        a: "AB.Limo offers premium chauffeur services in Jizan including airport transfers from Jazan Airport (GIZ), city transportation, and intercity transfers across the Southwest region.",
+        a: "AB offers premium chauffeur services in Jizan including airport transfers from Jazan Airport (GIZ), city transportation, and intercity transfers across the Southwest region.",
       },
       {
         q: "Do you provide transfers to the Farasan Islands?",
@@ -234,7 +234,7 @@ const CITY_FAQS = {
     neom: [
       {
         q: "What chauffeur services are available in NEOM?",
-        a: "AB.Limo offers premium chauffeur services in NEOM including airport transfers, project site transportation, hotel transfers, and intercity connections across the Northwest region.",
+        a: "AB offers premium chauffeur services in NEOM including airport transfers, project site transportation, hotel transfers, and intercity connections across the Northwest region.",
       },
       {
         q: "Can I book a limousine for business travel in NEOM?",
@@ -250,7 +250,7 @@ const CITY_FAQS = {
     sohar: [
       {
         q: "What chauffeur services are available in Sohar?",
-        a: "AB.Limo offers premium chauffeur services in Sohar including hotel transfers, city transportation, Sohar Port transfers, and intercity connections to Muscat and the Northern Governorate.",
+        a: "AB offers premium chauffeur services in Sohar including hotel transfers, city transportation, Sohar Port transfers, and intercity connections to Muscat and the Northern Governorate.",
       },
       {
         q: "Do you provide Muscat to Sohar transfers?",
@@ -266,7 +266,7 @@ const CITY_FAQS = {
     "kuwait-city": [
       {
         q: "What chauffeur services are available in Kuwait City?",
-        a: "AB.Limo offers premium chauffeur services in Kuwait City including airport transfers from Kuwait International Airport (KWI), city transportation, corporate mobility, and intercity transfers across Kuwait.",
+        a: "AB offers premium chauffeur services in Kuwait City including airport transfers from Kuwait International Airport (KWI), city transportation, corporate mobility, and intercity transfers across Kuwait.",
       },
       {
         q: "Can I hire a limousine for business meetings in Kuwait City?",
@@ -280,7 +280,7 @@ const CITY_FAQS = {
     farwaniya: [
       {
         q: "What chauffeur services are available in Farwaniya?",
-        a: "AB.Limo offers premium chauffeur services in Farwaniya including hotel and apartment transfers, city transportation, and easy access to Kuwait International Airport (KWI).",
+        a: "AB offers premium chauffeur services in Farwaniya including hotel and apartment transfers, city transportation, and easy access to Kuwait International Airport (KWI).",
       },
       {
         q: "Can I book a limousine for Farwaniya to airport transfers?",
@@ -294,7 +294,7 @@ const CITY_FAQS = {
     "al-ahmadi": [
       {
         q: "What chauffeur services are available in Al Ahmadi?",
-        a: "AB.Limo offers premium chauffeur services in Al Ahmadi including city transportation, hotel transfers, and intercity connections to Kuwait City and the airport.",
+        a: "AB offers premium chauffeur services in Al Ahmadi including city transportation, hotel transfers, and intercity connections to Kuwait City and the airport.",
       },
       {
         q: "Do you provide corporate transportation in Al Ahmadi?",
@@ -310,7 +310,7 @@ const CITY_FAQS = {
     muharraq: [
       {
         q: "What chauffeur services are available in Muharraq?",
-        a: "AB.Limo offers premium chauffeur services in Muharraq including airport transfers from Bahrain International Airport (BAH), city transportation, and intercity connections across Bahrain.",
+        a: "AB offers premium chauffeur services in Muharraq including airport transfers from Bahrain International Airport (BAH), city transportation, and intercity connections across Bahrain.",
       },
       {
         q: "Do you provide transfers to Bahrain International Airport?",

@@ -2,8 +2,8 @@ import { Dictionary } from "@/app/[lang]/dictionaries";
 
 const cardIcons = [
   { icon: "fa-satellite-dish", color: "text-abBlue", hoverBorder: "hover:border-abBlue" },
-  { icon: "fa-file-invoice-dollar", color: "text-abOrange", hoverBorder: "hover:border-abOrange" },
-  { icon: "fa-id-card-clip", color: "text-abGreen", hoverBorder: "hover:border-abGreen" },
+  { icon: "fa-file-invoice-dollar", color: "text-abBlue", hoverBorder: "hover:border-abOrange" },
+  { icon: "fa-id-card-clip", color: "text-abBlue", hoverBorder: "hover:border-abGreen" },
 ];
 
 export default function DutyOfCareSection({ dict }: { dict: Dictionary }) {

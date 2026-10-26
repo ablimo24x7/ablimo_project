@@ -19,11 +19,11 @@ export async function generateMetadata({
   const countryName = lang === "ar" && res.country.nameAr ? res.country.nameAr : res.country.name;
 
   return generateSeoMetadata({
-    title: `${airportName} Airport Transfer | AB.Limo ${cityName}`,
-    description: `Premium airport transfer service from ${airportName}, ${cityName}. Meet and greet, fixed pricing, and luxury vehicles with AB.Limo.`,
+    title: `${airportName} Airport Transfer | AB ${cityName}`,
+    description: `Premium airport transfer service from ${airportName}, ${cityName}. Meet and greet, fixed pricing, and luxury vehicles with AB.`,
     path: `/locations/${countryParam}/${cityParam}/airport/${airportParam}`,
     lang,
-    keywords: `${airportName} airport transfer, ${airportName} limousine, ${cityName} airport service, AB.Limo ${airportName}, luxury airport pickup ${cityName}`,
+    keywords: `${airportName} airport transfer, ${airportName} limousine, ${cityName} airport service, AB ${airportName}, luxury airport pickup ${cityName}`,
   });
 }
 

@@ -26,7 +26,7 @@ export async function generateMetadata({
     description: dict.servicePages.airportTransferDropOff.metadata.description,
     path: "/services/airport-transfers/drop-off",
     lang,
-    keywords: "airport drop-off service, luxury airport transfer, chauffeur airport drop-off, AB.Limo airport",
+    keywords: "airport drop-off service, luxury airport transfer, chauffeur airport drop-off, AB airport",
   });
 }
 

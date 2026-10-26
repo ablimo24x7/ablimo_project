@@ -442,6 +442,10 @@ export function locationsUrl(lang: string): string {
   return `${localeBase(lang)}/locations`;
 }
 
+export function countriesUrl(lang: string): string {
+  return `${localeBase(lang)}/locations/countries`;
+}
+
 export function citiesUrl(lang: string): string {
   return `${localeBase(lang)}/locations/cities`;
 }

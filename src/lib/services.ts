@@ -21,7 +21,7 @@ import type {
   ServiceFaq,
 } from "@/app/[lang]/services/_components/ServicePage";
 import type { PageSection } from "@/components/services/sections/section-types";
-import { migrateFlatServiceToSections } from "@/components/services/sections/section-defaults";
+import { migrateFlatServiceToSections, buildCorporateServiceSections } from "@/components/services/Templates/Services";
 import { renderServiceIcon } from "@/components/services/service-icons";
 import { translateText, needsTranslation } from "@/lib/translate";
 import enUS from "@/app/[lang]/dictionaries/en-US.json";
@@ -311,22 +311,44 @@ export function buildDefaultServiceDocs(): ServiceContentSource[] {
     });
   });
 
+  const HEADER_MENU_SLUGS = new Set([
+    "chauffeur-vip",
+    "airport-transfers",
+    "corporate-transportation",
+    "event-transportation",
+    "bus-coach-hire",
+    "workforce-mobility",
+    "tourism-transportation",
+    "religious-tourism",
+    "intercity-transfers",
+  ]);
+
   NAV_ONLY_SERVICES.forEach((service, i) => {
+    const heroImage = getFallbackImage(service.slug) || DEFAULT_HERO;
+    const sections = buildCorporateServiceSections({
+      slug: service.slug,
+      title: service.title,
+      subtitle: `${service.title} across Saudi Arabia, UAE, and GCC.`,
+      desc: service.title,
+      heroImage,
+    });
+
     docs.push({
       slug: service.slug,
       title: service.title,
-      subtitle: service.title,
-      desc: service.title,
-      heroImage: DEFAULT_HERO,
+      subtitle: `${service.title} across Saudi Arabia, UAE, and GCC.`,
+      desc: `${service.title} across Saudi Arabia, UAE, and the wider GCC region.`,
+      heroImage,
       breadcrumb: service.title,
+      pageSections: sections,
       status: "published",
-      showInMenu: true,
+      showInMenu: HEADER_MENU_SLUGS.has(service.slug),
       order: categories.length + i,
       locale: "en",
       seo: {
-        metaTitle: service.title,
-        metaDescription: service.title,
-        ogImage: "",
+        metaTitle: `${service.title} | AB`,
+        metaDescription: `Professional ${service.title} with executive chauffeur services across Saudi Arabia, UAE, and the GCC.`,
+        ogImage: heroImage,
       },
     });
   });
@@ -352,12 +374,28 @@ export async function seedServicesIfEmpty(): Promise<void> {
           await Service.insertMany(docs);
         }
       }
-      // One-time migration: ensure all nav-only services have showInMenu: true
-      const navOnlySlugs = NAV_ONLY_SERVICES.map((s) => s.slug);
+      // Ensure only header menu services have showInMenu: true
+      const headerSlugs = [
+        "chauffeur-vip",
+        "airport-transfers",
+        "corporate-transportation",
+        "event-transportation",
+        "bus-coach-hire",
+        "workforce-mobility",
+        "tourism-transportation",
+        "religious-tourism",
+        "intercity-transfers",
+      ];
       await Service.updateMany(
-        { slug: { $in: navOnlySlugs } },
-        { $set: { showInMenu: true } }
+        { slug: { $nin: headerSlugs } },
+        { $set: { showInMenu: false } }
       );
+      for (let i = 0; i < headerSlugs.length; i++) {
+        await Service.updateOne(
+          { slug: headerSlugs[i] },
+          { $set: { showInMenu: true, order: i } }
+        );
+      }
     } finally {
       seedPromise = null;
     }
@@ -366,7 +404,7 @@ export async function seedServicesIfEmpty(): Promise<void> {
   return seedPromise;
 }
 
-/** One-time migration: ensure all published services have showInMenu: true. */
+/** One-time migration: ensure only the 9 primary header services have showInMenu: true. */
 let migratePromise: Promise<void> | null = null;
 export async function migrateShowInMenu(): Promise<void> {
   if (!isDatabaseEnabled()) return;
@@ -375,11 +413,27 @@ export async function migrateShowInMenu(): Promise<void> {
   migratePromise = (async () => {
     try {
       await connectDB();
-      const navOnlySlugs = NAV_ONLY_SERVICES.map((s) => s.slug);
+      const headerSlugs = [
+        "chauffeur-vip",
+        "airport-transfers",
+        "corporate-transportation",
+        "event-transportation",
+        "bus-coach-hire",
+        "workforce-mobility",
+        "tourism-transportation",
+        "religious-tourism",
+        "intercity-transfers",
+      ];
       await Service.updateMany(
-        { slug: { $in: navOnlySlugs } },
-        { $set: { showInMenu: true } }
+        { slug: { $nin: headerSlugs } },
+        { $set: { showInMenu: false } }
       );
+      for (let i = 0; i < headerSlugs.length; i++) {
+        await Service.updateOne(
+          { slug: headerSlugs[i] },
+          { $set: { showInMenu: true, order: i } }
+        );
+      }
     } finally {
       migratePromise = null;
     }
@@ -626,7 +680,7 @@ export async function resolveServicePage(
       }
     }
 
-    const metaTitle = rawSeo?.metaTitle || `${serviceTitle} | AB.Limo`;
+    const metaTitle = rawSeo?.metaTitle || `${serviceTitle} | AB`;
     const metaDescription = rawSeo?.metaDescription || serviceSubtitle.trim().slice(0, 160) || serviceDesc.trim().slice(0, 160) || sectionDescription.slice(0, 160) || serviceTitle;
     const ogImage = rawSeo?.ogImage || rawHeroImage;
 
@@ -729,10 +783,30 @@ export async function getServiceCards(
 /** Navigation menu items surfaced from the DB (merged by the Header). */
 export async function getNavServices(lang: string): Promise<NavServiceItem[]> {
   const items = await getAllPublishedServices();
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+  const sm = dict.header?.dropdowns?.servicesMenu as Record<string, string> | undefined;
+
+  const dictKeyMap: Record<string, string> = {
+    "chauffeur-vip": "chauffeurVip",
+    "airport-transfers": "airportTransfers",
+    "corporate-transportation": "corporateTransportation",
+    "event-transportation": "eventTransportation",
+    "bus-coach-hire": "busCoachHire",
+    "workforce-mobility": "workforceTransportation",
+    "tourism-transportation": "tourismTransportation",
+    "religious-tourism": "religiousTourism",
+    "intercity-transfers": "intercityTransfers",
+  };
+
   return items
     .filter((s) => s.showInMenu && s.status === "published")
-    .map((s) => ({
-      label: s.title,
-      href: `${localeBase(lang)}/services/${s.slug}`,
-    }));
+    .map((s) => {
+      const key = dictKeyMap[s.slug];
+      const localizedLabel = key && sm?.[key] ? sm[key] : s.title;
+      return {
+        label: localizedLabel,
+        href: `${localeBase(lang)}/services/${s.slug}`,
+      };
+    });
 }

@@ -1,4 +1,4 @@
-/* Comprehensive live URL discovery for AB.Limo locations + services. */
+/* Comprehensive live URL discovery for AB locations + services. */
 import https from "node:https";
 import fs from "node:fs";
 import path from "node:path";
@@ -429,7 +429,7 @@ async function main() {
   }
 
   const lines = [];
-  lines.push("# AB.Limo Live URL Inventory (en-US)");
+  lines.push("# AB Live URL Inventory (en-US)");
   lines.push("");
   lines.push(
     `Source: live crawl of \`${BASE}\` + sitemap seeds + local static location seeds.`

@@ -146,7 +146,7 @@ export function buildTextMediaGridDescription(meta: CityMeta): string {
   const p1 =
     `${meta.name} — ${meta.description}. As ${countryPlain(meta)} advances its ` +
     `${meta.vision} agenda, the demands on ${meta.name}'s corporate travel infrastructure have evolved ` +
-    `exponentially. AB.Limo operates at the nexus of this transformation, providing highly secure, ` +
+    `exponentially. AB operates at the nexus of this transformation, providing highly secure, ` +
     `scalable, and meticulously managed executive mobility solutions for multinational corporations ` +
     `entering the ${meta.adjective} market.`;
 

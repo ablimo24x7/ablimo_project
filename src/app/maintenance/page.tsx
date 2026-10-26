@@ -9,7 +9,7 @@ import { generateSeoMetadata } from "@/lib/seo";
 export const metadata: Metadata = generateSeoMetadata({
   title: "Scheduled Maintenance",
   description:
-    "AB.Limo is performing scheduled maintenance. Premium chauffeur-driven mobility across the GCC will be back online shortly.",
+    "AB is performing scheduled maintenance. Premium chauffeur-driven mobility across the GCC will be back online shortly.",
   path: "/maintenance",
   lang: "en",
   noindex: true,
@@ -31,7 +31,7 @@ export default function MaintenancePage() {
         <div className="mb-10 animate-fade-in-up">
           <Image
             src="/AB_LOGO-NEW.png"
-            alt="AB.Limo Logo"
+            alt="AB Logo"
             width={150}
             height={60}
             className="brightness-0 invert"
@@ -93,13 +93,13 @@ export default function MaintenancePage() {
       <footer className="relative z-10 border-t border-white/5 py-6">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-600">
-            &copy; {year} AB.Limo. All rights reserved.
+            &copy; {year} AB. All rights reserved.
           </p>
           <a
             href="https://www.linkedin.com/company/ablimo24x7"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="AB.Limo on LinkedIn"
+            aria-label="AB on LinkedIn"
             className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-500 hover:bg-abBlue hover:text-white transition-colors"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

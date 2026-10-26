@@ -21,14 +21,14 @@ const SAMPLE_BLOG_POSTS = [
     serviceSlug: "event-transportation",
     countrySlug: "saudi-arabia",
     citySlug: "riyadh",
-    authorName: "AB.Limo Logistics Desk",
+    authorName: "AB Logistics Desk",
     date: "2026-10-20",
     readTime: 8,
     featured: true,
     archiveTag: "Control Room Archive: Riyadh",
     tags: ["Riyadh", "EventLogistics", "ControlRoom", "FII"],
     bodyContent: `
-      <p>In October 2026, AB.Limo was tasked with a critical mandate: engineer, deploy, and manage a flawless ground transportation network for over 2,500 VIP delegates operating on highly fluid, unpredictable schedules over a 72-hour period.</p>
+      <p>In October 2026, AB was tasked with a critical mandate: engineer, deploy, and manage a flawless ground transportation network for over 2,500 VIP delegates operating on highly fluid, unpredictable schedules over a 72-hour period.</p>
 
       <h2 id="challenge">The Challenge: Volume Meets Strict Protocol</h2>
       <p>Executing event logistics in the Kingdom requires a profound understanding of local security protocols, especially when navigating the King Abdulaziz International Conference Center (KAICC) and the Diplomatic Quarter. The challenges were threefold:</p>
@@ -39,19 +39,19 @@ const SAMPLE_BLOG_POSTS = [
       </ul>
 
       <blockquote>
-        "You cannot manage a Tier-1 global summit with spreadsheets and walkie-talkies. It requires a dedicated Transport Control Room viewing the entire city as a dynamic chess board." <br><span style="font-size:0.875rem;font-weight:700;color:#ffffff;">— Director of Event Operations, AB.Limo</span>
+        "You cannot manage a Tier-1 global summit with spreadsheets and walkie-talkies. It requires a dedicated Transport Control Room viewing the entire city as a dynamic chess board." <br><span style="font-size:0.875rem;font-weight:700;color:#ffffff;">— Director of Event Operations, AB</span>
       </blockquote>
 
-      <h2 id="solution">The Solution: The AB.Limo Transport Control Room</h2>
-      <p>To conquer the complexity of the FII, AB.Limo bypassed traditional dispatch methods and activated a centralized <strong>Transport Control Room</strong>. This operational nerve center utilized proprietary Intelligent Transport Systems (ITS) to ingest live GPS telemetry from every deployed vehicle in the fleet.</p>
-      <p>Rather than waiting for bottlenecks to occur at the KAICC loading zones, our dispatchers actively monitored traffic density and rerouted VIP convoys in real-time. By communicating directly with Saudi event security and on-site parking management, AB.Limo ground coordinators maintained a continuous, fluid motion of vehicles.</p>
+      <h2 id="solution">The Solution: The AB Transport Control Room</h2>
+      <p>To conquer the complexity of the FII, AB bypassed traditional dispatch methods and activated a centralized <strong>Transport Control Room</strong>. This operational nerve center utilized proprietary Intelligent Transport Systems (ITS) to ingest live GPS telemetry from every deployed vehicle in the fleet.</p>
+      <p>Rather than waiting for bottlenecks to occur at the KAICC loading zones, our dispatchers actively monitored traffic density and rerouted VIP convoys in real-time. By communicating directly with Saudi event security and on-site parking management, AB ground coordinators maintained a continuous, fluid motion of vehicles.</p>
 
       <h2 id="agility">Executing As-Directed Agility</h2>
       <p>A defining characteristic of the FII is the "meeting after the meeting." Delegates frequently require immediate transportation from the main venue to private dinners at KAFD or impromptu hotel summits.</p>
-      <p>To support this, AB.Limo deployed an extensive <em>As-Directed</em> fleet. Hundreds of vetted chauffeurs remained on active standby within dedicated staging zones, allowing for sub-5-minute extraction times for high-profile targets, ensuring the momentum of corporate deal-making was never hindered by transport delays.</p>
+      <p>To support this, AB deployed an extensive <em>As-Directed</em> fleet. Hundreds of vetted chauffeurs remained on active standby within dedicated staging zones, allowing for sub-5-minute extraction times for high-profile targets, ensuring the momentum of corporate deal-making was never hindered by transport delays.</p>
 
       <h3 id="conclusion">Conclusion</h3>
-      <p>The successful orchestration of the Future Investment Initiative logistics underscores a fundamental truth in B2B mobility: moving thousands of VIPs is not a driving task; it is a complex data and communications operation. By combining a strictly governed black fleet with rigorous Duty of Care and centralized technological dispatch, AB.Limo delivered absolute precision at scale.</p>
+      <p>The successful orchestration of the Future Investment Initiative logistics underscores a fundamental truth in B2B mobility: moving thousands of VIPs is not a driving task; it is a complex data and communications operation. By combining a strictly governed black fleet with rigorous Duty of Care and centralized technological dispatch, AB delivered absolute precision at scale.</p>
     `,
     keyTakeawaysContent: `
       <ul>
@@ -67,14 +67,14 @@ const SAMPLE_BLOG_POSTS = [
     faqs: [
       {
         q: "What is a Transport Control Room?",
-        a: "A Transport Control Room is a centralized dispatch and telemetry hub that monitors every vehicle in a deployed fleet in real time. At the FII, AB.Limo's control room ingested live GPS data, traffic intelligence, and security-cordon updates to reroute VIP convoys proactively rather than reactively.",
+        a: "A Transport Control Room is a centralized dispatch and telemetry hub that monitors every vehicle in a deployed fleet in real time. At the FII, AB's control room ingested live GPS data, traffic intelligence, and security-cordon updates to reroute VIP convoys proactively rather than reactively.",
       },
       {
-        q: "How does AB.Limo handle last-minute schedule changes for VIP delegates?",
+        q: "How does AB handle last-minute schedule changes for VIP delegates?",
         a: "Through As-Directed staging. Hundreds of vetted chauffeurs remain on standby in dedicated zones near the venue, allowing sub-5-minute extraction times when a delegate's meeting ends early or a new meeting is added.",
       },
       {
-        q: "Can AB.Limo coordinate with event security and venue management?",
+        q: "Can AB coordinate with event security and venue management?",
         a: "Yes. Ground coordinators maintain direct communication channels with event security, on-site parking management, and airport FBO teams, ensuring convoys move through security cordons and loading zones without delay.",
       },
     ],
@@ -84,9 +84,9 @@ const SAMPLE_BLOG_POSTS = [
       },
     },
     seo_metadata: {
-      metaTitle: "Case Study: Orchestrating Ground Logistics for FII | AB.Limo Insights",
+      metaTitle: "Case Study: Orchestrating Ground Logistics for FII | AB Insights",
       metaDescription:
-        "An in-depth look at how AB.Limo deployed its centralized Transport Control Room to manage over 2,500 VIP delegate movements for the Future Investment Initiative.",
+        "An in-depth look at how AB deployed its centralized Transport Control Room to manage over 2,500 VIP delegate movements for the Future Investment Initiative.",
       ogImage: "",
     },
     locale: "en",
@@ -103,7 +103,7 @@ const SAMPLE_BLOG_POSTS = [
     serviceSlug: "corporate-transportation",
     countrySlug: "saudi-arabia",
     citySlug: "",
-    authorName: "AB.Limo Corporate Desk",
+    authorName: "AB Corporate Desk",
     date: "2026-10-06",
     readTime: 6,
     featured: false,
@@ -115,7 +115,7 @@ const SAMPLE_BLOG_POSTS = [
       <p>An owned executive fleet carries costs that rarely appear on a single line item. Depreciation erodes 15–25% of vehicle value annually. Driver salaries, insurance, registrations, detailing, and workshop downtime compound quietly. And perhaps most expensive of all: idle capacity. A fleet sized for peak demand sits unused for most of the year.</p>
 
       <h2>What Outsourcing Changes</h2>
-      <p>Managed fleet providers like AB.Limo convert fixed capital expenditure into variable operating expenditure. Enterprises pay only for kilometres driven and hours engaged, while the provider absorbs depreciation, maintenance, and capacity planning.</p>
+      <p>Managed fleet providers like AB convert fixed capital expenditure into variable operating expenditure. Enterprises pay only for kilometres driven and hours engaged, while the provider absorbs depreciation, maintenance, and capacity planning.</p>
       <ul>
         <li><strong>Zero depreciation exposure:</strong> The provider owns the asset risk.</li>
         <li><strong>Elastic capacity:</strong> Scale from 5 to 500 vehicles for events without procurement cycles.</li>
@@ -142,7 +142,7 @@ const SAMPLE_BLOG_POSTS = [
     `,
     faqs: [
       {
-        q: "How quickly can AB.Limo scale a corporate fleet?",
+        q: "How quickly can AB scale a corporate fleet?",
         a: "Dedicated fleet allocations can typically be deployed within 5–10 business days for standard executive sedans and SUVs. Event-driven surges are handled from existing standby capacity with shorter lead times.",
       },
       {
@@ -160,7 +160,7 @@ const SAMPLE_BLOG_POSTS = [
       },
     },
     seo_metadata: {
-      metaTitle: "The ROI of Outsourcing Executive Fleets in Saudi Arabia | AB.Limo",
+      metaTitle: "The ROI of Outsourcing Executive Fleets in Saudi Arabia | AB",
       metaDescription:
         "Why enterprises are abandoning owned executive fleets. Depreciation, idle capacity, and the 30–40% cost delta of managed mobility in the Kingdom.",
       ogImage: "",
@@ -169,7 +169,7 @@ const SAMPLE_BLOG_POSTS = [
   },
   {
     slug: "live-telemetry-inside-its",
-    title: "Live Telemetry: Inside the AB.Limo Transport System (ITS).",
+    title: "Live Telemetry: Inside the AB Transport System (ITS).",
     excerpt:
       "How providing direct API access to corporate security teams allows for real-time monitoring of executives.",
     category: "duty-of-care",
@@ -179,7 +179,7 @@ const SAMPLE_BLOG_POSTS = [
     serviceSlug: "corporate-transportation",
     countrySlug: "saudi-arabia",
     citySlug: "",
-    authorName: "AB.Limo Technology Desk",
+    authorName: "AB Technology Desk",
     date: "2026-09-22",
     readTime: 7,
     featured: false,
@@ -188,7 +188,7 @@ const SAMPLE_BLOG_POSTS = [
       <p>Duty of Care is no longer a binder in a compliance office. For organisations moving executives through dense urban environments, it is a live data problem — and it demands live data infrastructure.</p>
 
       <h2>What Our ITS Ingests</h2>
-      <p>The AB.Limo Intelligent Transport System aggregates signals from every vehicle in the deployed fleet: GPS position, route deviation alerts, speed telemetry, journey state, and chauffeur status. This data flows through a single pipeline that powers both our internal control room and — where contracted — the client's own security dashboard.</p>
+      <p>The AB Intelligent Transport System aggregates signals from every vehicle in the deployed fleet: GPS position, route deviation alerts, speed telemetry, journey state, and chauffeur status. This data flows through a single pipeline that powers both our internal control room and — where contracted — the client's own security dashboard.</p>
 
       <h2>Direct API Access for Security Teams</h2>
       <p>Enterprise clients can consume journey telemetry directly through our API. A corporate security operations centre can subscribe to journey lifecycle events — assigned, en route, on site, completed — and render them alongside their existing duty-of-care tooling.</p>
@@ -218,7 +218,7 @@ const SAMPLE_BLOG_POSTS = [
     `,
     faqs: [
       {
-        q: "What data does the AB.Limo ITS expose to clients?",
+        q: "What data does the AB ITS expose to clients?",
         a: "Journey lifecycle events, vehicle position within contract scope, and geo-fence alerts. Historical data retention windows are configurable per client governance policy.",
       },
       {
@@ -236,9 +236,9 @@ const SAMPLE_BLOG_POSTS = [
       },
     },
     seo_metadata: {
-      metaTitle: "Live Telemetry Inside the AB.Limo Transport System (ITS) | AB.Limo",
+      metaTitle: "Live Telemetry Inside the AB Transport System (ITS) | AB",
       metaDescription:
-        "How AB.Limo's Intelligent Transport System gives corporate security teams real-time telemetry and API access for executive duty of care.",
+        "How AB's Intelligent Transport System gives corporate security teams real-time telemetry and API access for executive duty of care.",
       ogImage: "",
     },
     locale: "en",

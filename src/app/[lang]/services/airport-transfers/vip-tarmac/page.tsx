@@ -26,7 +26,7 @@ export async function generateMetadata({
     description: dict.servicePages.airportTransferVipTarmac.metadata.description,
     path: "/services/airport-transfers/vip-tarmac",
     lang,
-    keywords: "VIP tarmac service, private aviation transfer, FBO meet and greet, luxury airport VIP, AB.Limo VIP",
+    keywords: "VIP tarmac service, private aviation transfer, FBO meet and greet, luxury airport VIP, AB VIP",
   });
 }
 

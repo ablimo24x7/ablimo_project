@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { getDictionary, hasLocale, defaultLocale, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
+import { getDictionary, hasLocale, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 import {
@@ -22,15 +22,15 @@ export async function generateMetadata({
   const isAr = hasLocale(lang) && lang === "ar";
   return generateSeoMetadata({
     title: isAr
-      ? "أسطولنا | سيدان فاخرة ودفع رباعي وفان وحافلات | AB.Limo"
-      : "Our Fleet | Luxury Sedans, SUVs, Vans & Coaches | AB.Limo",
+      ? "أسطولنا | سيدان فاخرة ودفع رباعي وفان وحافلات | AB"
+      : "Our Fleet | Luxury Sedans, SUVs, Vans & Coaches | AB",
     description: isAr
-      ? "استكشف أسطول AB.Limo: سيدان فاخرة مرسيدس فئة S، سيارات دفع رباعي كاديلاك اسكاليد، فان أعمال فئة V، MPV هيونداي ستاريا، وحافلات VIP. موديلات حديثة باللون الأسود بسائق."
-      : "Explore the AB.Limo fleet: Mercedes S-Class luxury sedans, Cadillac Escalade SUVs, V-Class business vans, Hyundai Staria MPVs and 16–45 seat VIP coaches. Late-model, strictly black, chauffeur-driven.",
+      ? "استكشف أسطول AB: سيدان فاخرة مرسيدس فئة S، سيارات دفع رباعي كاديلاك اسكاليد، فان أعمال فئة V، MPV هيونداي ستاريا، وحافلات VIP. موديلات حديثة باللون الأسود بسائق."
+      : "Explore the AB fleet: Mercedes S-Class luxury sedans, Cadillac Escalade SUVs, V-Class business vans, Hyundai Staria MPVs and 16–45 seat VIP coaches. Late-model, strictly black, chauffeur-driven.",
     path: "/fleet",
     lang,
     keywords:
-      "AB.Limo fleet, luxury sedan, Mercedes S-Class, Cadillac Escalade, Mercedes V-Class, Hyundai Staria, VIP coach, minibus rental, corporate fleet, black car service",
+      "AB fleet, luxury sedan, Mercedes S-Class, Cadillac Escalade, Mercedes V-Class, Hyundai Staria, VIP coach, minibus rental, corporate fleet, black car service",
   });
 }
 
@@ -105,16 +105,26 @@ export default async function FleetPage({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {FLEET_VEHICLES.map((vehicle) => {
               const copy = vehicle.copy[l];
+              const anchors = vehicle.anchors ?? [];
+
               return (
-                <Link
-                  key={vehicle.slug}
-                  href={fleetVehicleUrl(lang, vehicle.slug)}
-                  className="group bg-abDarkGray rounded-xl border border-gray-800 hover:border-abBlue transition-colors overflow-hidden flex flex-col"
-                >
+                <div key={vehicle.slug} className="relative">
+                  {anchors.map((a) => (
+                    <span
+                      key={a}
+                      id={a}
+                      className="absolute -top-28 invisible pointer-events-none"
+                    />
+                  ))}
+                  <Link
+                    id={vehicle.slug}
+                    href={fleetVehicleUrl(lang, vehicle.slug)}
+                    className="group bg-abDarkGray rounded-xl border border-gray-800 hover:border-abBlue transition-colors overflow-hidden flex flex-col h-full scroll-mt-28"
+                  >
                   <div className="bg-[#050505] h-52 flex items-center justify-center p-6 relative border-b border-gray-900">
                     <Image
                       src={vehicle.image}
-                      alt={copy.title}
+                      alt={`${copy.model} — ${copy.title}`}
                       width={420}
                       height={220}
                       className="w-full object-contain group-hover:scale-105 transition-transform"
@@ -141,6 +151,7 @@ export default async function FleetPage({
                     </span>
                   </div>
                 </Link>
+                </div>
               );
             })}
           </div>

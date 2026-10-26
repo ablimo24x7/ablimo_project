@@ -18,10 +18,10 @@ export async function generateMetadata({
     title: isAr ? dict.limousineService.title : "Limo Service Around the Globe",
     description: isAr
       ? dict.limousineService.subtitle
-      : "Premium limousine service in cities worldwide. Book your luxury ride with AB.Limo for airport transfers, business travel, and special events.",
+      : "Premium limousine service in cities worldwide. Book your luxury ride with AB for airport transfers, business travel, and special events.",
     path: "/limousine-service",
     lang,
-    keywords: "limousine service, limo service, luxury limo, AB.Limo, executive limousine, wedding limo, prom limo, airport limo",
+    keywords: "limousine service, limo service, luxury limo, AB, executive limousine, wedding limo, prom limo, airport limo",
   });
 }
 
@@ -191,7 +191,7 @@ export default async function LimousineServicePage({
         </div>
       </section>
 
-      {/* Get Around with AB.Limo */}
+      {/* Get Around with AB */}
       <section className="bg-[#1c1d21] py-20 px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
@@ -231,7 +231,7 @@ export default async function LimousineServicePage({
           <div className="relative h-[400px] rounded-2xl overflow-hidden order-1 lg:order-2">
             <Image
               src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&h=600&fit=crop"
-              alt="AB.Limo Service"
+              alt="AB Service"
               fill
               className="object-cover"
             />

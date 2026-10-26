@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Government and protocol transportation | AB.Limo</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF}
+a{color:var(--fg)}a:hover{color:var(--muted)}
+.svc-nav a:hover{color:var(--fg)}
+.explore-btn:hover{background:var(--fg);color:var(--bg)}
+.svc-nav a:focus-visible,.explore-btn:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.abroot{--bg:#FFFFFF;--fg:#151515;--fg2:#3D3D3D;--muted:#5F5F5F;--line:#E6E4E0;--surface:#F6F5F2;--surface2:#F2F1EE;--sel1:#E7E5E1;--sel2:#F7F6F4;--band:#111111;color-scheme:light;transition:background-color .3s,color .3s}
+.abroot[data-theme="dark"]{--bg:#0E1013;--fg:#F1F0EC;--fg2:#C9C7C1;--muted:#9D9B95;--line:#2A2D31;--surface:#15181C;--surface2:#1B1E22;--sel1:#24282D;--sel2:#181B1F;--band:#050607;color-scheme:dark}
+.abroot[data-theme="dark"] path[fill="#151515"]{fill:#3B4148}
+.abroot[data-theme="dark"] path[fill="#4A5058"]{fill:#7B848D}
+.abroot[data-theme="dark"] circle[fill="#F4F3F0"]{fill:#15181C;stroke:#2A2D31}
+.abroot[data-theme="dark"] path[stroke="#CFCBC3"]{stroke:#30353B}
+.abroot[data-theme="dark"] path[stroke="#86827A"]{stroke:#7E868F}
+.abroot[data-theme="dark"] path[stroke="#4A4A4A"]{stroke:#5A6067}
+.theme-btn:hover{background:var(--surface2)}
+.abroot .force-dark{--bg:#0E1013;--fg:#F1F0EC;--fg2:#D9D7D1;--muted:#B3B1AB;--line:rgba(255,255,255,0.24);--surface:#15181C;--surface2:rgba(255,255,255,0.08);color-scheme:dark}
+.abroot .force-dark circle[fill="#F4F3F0"]{fill:#15181C;stroke:#2A2D31}
+.abroot .force-dark path[stroke="#CFCBC3"]{stroke:#30353B}
+.abroot .force-dark path[stroke="#86827A"]{stroke:#7E868F}
+.nav-link:hover{opacity:.72}
+.hero-primary:hover{opacity:.88}
+.hero-ghost:hover{background:rgba(255,255,255,0.1)}
+.ind-card:hover,.case-card:hover{background:var(--surface)}
+.chip-link:hover{border-color:var(--fg)}
+.faq-q:hover{opacity:.75}
+.other-link:hover{background:var(--surface)}
+</style>
+</helmet>
+<div class="abroot" data-theme="{{theme}}" style="width: 100%; min-height: 100vh; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; color: var(--fg); background: var(--bg)">
+
+  <!-- Header -->
+  <header class="force-dark" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; background: linear-gradient(180deg, rgba(5,7,9,0.85) 0%, rgba(5,7,9,0) 100%); color: var(--fg)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="Home.dc.html" style="text-decoration: none; color: var(--fg); font-size: 22px; font-weight: 500; letter-spacing: 0.28em">AB.LIMO</a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase">
+        <a class="nav-link" href="Services.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Services</a>
+        <a class="nav-link" href="Fleet.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Fleet</a>
+        <a class="nav-link" href="Locations.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Locations</a>
+        <a class="nav-link" href="Industries.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg); box-shadow: inset 0 -1px 0 var(--fg)">Industries</a>
+        <a class="nav-link" href="https://www.ab.limo/about" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Company</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 16px">
+        <a class="nav-link" href="https://www.ab.limo/contact" style="font-size: 14px; letter-spacing: 0.04em; text-decoration: none; color: var(--fg)">hello@ab.limo</a>
+        <button type="button" class="theme-btn" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" aria-pressed="{{isDarkStr}}" style="width: 44px; height: 44px; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; background: transparent; color: var(--fg); cursor: pointer; display: flex; align-items: center; justify-content: center"><sc-if value="{{isDark}}" hint-placeholder-val="{{false}}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"></path></svg></sc-if><sc-if value="{{isLight}}" hint-placeholder-val="{{true}}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg></sc-if></button>
+        <a class="hero-ghost" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border: 1px solid rgba(255,255,255,0.6); color: var(--fg); text-decoration: none; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase">Book now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="force-dark" style="position: relative; overflow: hidden; background: #050709; color: var(--fg); min-height: clamp(600px, 82vh, 820px)">
+    <img src="./assets/5a67811adeda188da52eb0a43d0380fb.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 35%">
+    <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,7,9,0.92) 0%, rgba(5,7,9,0.72) 45%, rgba(5,7,9,0.3) 100%)"></div>
+    <div style="position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(0deg, rgba(5,7,9,0.92) 0%, rgba(5,7,9,0) 100%)"></div>
+    <div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 150px 32px 48px; box-sizing: border-box; min-height: inherit; display: flex; flex-direction: column">
+    <nav aria-label="Breadcrumb" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px"><a href="Industries.dc.html" style="color: var(--muted); text-decoration: none">Industries</a><span aria-hidden="true">/</span><span style="color: var(--fg)">Government and protocol</span></nav>
+    <div style="display: flex"><span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border: 1px solid rgba(255,255,255,0.28); background: rgba(5,7,9,0.5); border-radius: 999px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A96E"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C9A96E"></span>Government and protocol</span></div>
+    <h1 style="margin: 20px 0 0; font-size: 60px; line-height: 1.06; font-weight: 300; max-width: 900px">Discreet ground transport for delegations, ministries and official visits</h1>
+    <p style="margin: 22px 0 0; max-width: 640px; font-size: 18px; line-height: 1.65; color: var(--fg2)">Official visits leave no room for improvisation. AB plans motorcades and delegation movements with protocol teams, using vetted chauffeurs bound by strict confidentiality.</p>
+    <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px"><a class="hero-primary" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: var(--fg); color: #0B0D10; text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Request a proposal</a><a class="hero-ghost" href="Industries.dc.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 1px solid rgba(255,255,255,0.45); color: var(--fg); text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">All industries</a></div>
+    <div style="margin-top: auto; padding-top: 48px; display: grid; grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 24px; overflow-x: auto"><sc-for list="{{d.strip}}" as="s" hint-placeholder-count="3"><div style="display: flex; flex-direction: column; gap: 6px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.3)"><span style="font-size: 40px; font-weight: 300; line-height: 1">{{s.v}}</span><span style="font-size: 13px; letter-spacing: 0.06em; color: #C9A96E">{{s.l}}</span></div></sc-for></div>
+    </div>
+  </section>
+
+  <!-- Statement -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 88px 32px 40px">
+    <div style="display: flex; flex-wrap: wrap; gap: 32px 64px">
+      <p style="flex: 1 1 240px; margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">How we work</p>
+      <p style="flex: 3 1 560px; margin: 0; font-size: 28px; line-height: 1.45; font-weight: 300">Protocol movements are planned with your team down to the minute: arrival sequences, vehicle order, standby cars and secure communication with security details.</p>
+    </div>
+  </section>
+
+  <!-- Needs -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 48px 32px 88px">
+    <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">What you need from us</p>
+    <h2 style="margin: 14px 0 0; font-size: 44px; line-height: 1.1; font-weight: 300">Built for government and protocol</h2>
+    <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+      <sc-for list="{{d.needs}}" as="n" hint-placeholder-count="4">
+        <div class="ind-card" style="padding: 28px; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 12px; min-height: 220px; box-sizing: border-box">
+          <span style="font-size: 13px; letter-spacing: 0.16em; color: {{accent}}">{{n.num}}</span>
+          <h3 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 300">{{n.t}}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: var(--fg2)">{{n.x}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section style="background: var(--surface)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 32px">
+      <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">How it runs</p>
+      <h2 style="margin: 14px 0 0; font-size: 44px; line-height: 1.1; font-weight: 300">Three stages, one accountable partner</h2>
+      <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px">
+        <sc-for list="{{d.steps}}" as="s" hint-placeholder-count="3">
+          <div style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid var(--fg)">
+            <span style="font-size: 56px; line-height: 1; font-weight: 300; color: {{accent}}">{{s.num}}</span>
+            <h3 style="margin: 0; font-size: 24px; font-weight: 300">{{s.t}}</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--fg2)">{{s.x}}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <sc-if value="{{hasCases}}" hint-placeholder-val="{{true}}">
+    <section style="max-width: 1240px; margin: 0 auto; padding: 88px 32px 40px">
+      <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Proven in the region</p>
+      <h2 style="margin: 14px 0 0; font-size: 44px; line-height: 1.1; font-weight: 300">Recent work</h2>
+      <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px">
+        <sc-for list="{{d.cases}}" as="c" hint-placeholder-count="2">
+          <a class="case-card" href="Home.dc.html#case-studies" style="display: flex; flex-direction: column; padding: 32px; border: 1px solid var(--line); text-decoration: none; color: var(--fg); min-height: 260px; box-sizing: border-box">
+            <span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)"><span style="color: {{accent}}">{{c.sector}}</span><span>{{c.years}}</span></span>
+            <span style="margin-top: 18px; font-size: 13px; color: var(--muted)">{{c.place}}</span>
+            <span style="margin-top: 6px; font-size: 26px; line-height: 1.25; font-weight: 300">{{c.title}}</span>
+            <span style="margin-top: auto; padding-top: 24px; display: flex; gap: 32px; flex-wrap: wrap">
+              <sc-for list="{{c.stats}}" as="x" hint-placeholder-count="2"><span style="display: flex; flex-direction: column; gap: 4px; padding-top: 14px; border-top: 1px solid var(--line)"><span style="font-size: 30px; font-weight: 300">{{x.v}}</span><span style="font-size: 13px; color: var(--muted)">{{x.l}}</span></span></sc-for>
+            </span>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+
+  <!-- Services and vehicles -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 88px 32px">
+    <div style="display: flex; flex-wrap: wrap; gap: 48px 64px">
+      <div style="flex: 1 1 380px; min-width: 0">
+        <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Services used</p>
+        <div style="margin-top: 20px; border-top: 1px solid var(--line)">
+          <sc-for list="{{d.services}}" as="s" hint-placeholder-count="3">
+            <a class="other-link" href="{{s.href}}" style="display: flex; justify-content: space-between; align-items: center; min-height: 64px; padding: 0 8px; border-bottom: 1px solid var(--line); text-decoration: none; font-size: 20px; font-weight: 300; color: var(--fg)">{{s.name}}<span aria-hidden="true">→</span></a>
+          </sc-for>
+        </div>
+      </div>
+      <div style="flex: 1 1 380px; min-width: 0">
+        <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Vehicles typically deployed</p>
+        <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px">
+          <sc-for list="{{d.vehicles}}" as="v" hint-placeholder-count="4">
+            <a class="chip-link" href="Fleet.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid var(--line); text-decoration: none; font-size: 15px; color: var(--fg)">{{v}}</a>
+          </sc-for>
+        </div>
+        <a href="Fleet.dc.html" style="margin-top: 24px; display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none">View the full fleet →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: var(--surface)">
+    <div style="max-width: 960px; margin: 0 auto; padding: 88px 32px">
+      <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Questions</p>
+      <h2 style="margin: 14px 0 0; font-size: 44px; line-height: 1.1; font-weight: 300">Frequently asked questions</h2>
+      <div style="margin-top: 36px; border-top: 1px solid var(--line)">
+        <sc-for list="{{faqs}}" as="q" hint-placeholder-count="2">
+          <div style="border-bottom: 1px solid var(--line)">
+            <button type="button" class="faq-q" aria-expanded="{{q.expanded}}" onClick="{{q.toggle}}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 16px 0; background: transparent; border: 0; cursor: pointer; font: inherit; font-size: 20px; font-weight: 300; color: var(--fg); text-align: left">{{q.q}}<span aria-hidden="true" style="font-size: 24px; font-weight: 300; color: {{accent}}">{{q.sign}}</span></button>
+            <sc-if value="{{q.open}}" hint-placeholder-val="{{false}}"><p style="margin: 0 0 22px; font-size: 16px; line-height: 1.75; color: var(--fg2); max-width: 780px">{{q.a}}</p></sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other industries -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 88px 32px">
+    <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Other industries</p>
+    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); column-gap: 40px">
+      <sc-for list="{{d.others}}" as="o" hint-placeholder-count="6">
+        <a class="other-link" href="{{o.href}}" style="display: flex; justify-content: space-between; align-items: center; min-height: 64px; padding: 0 8px; border-bottom: 1px solid var(--line); text-decoration: none; font-size: 18px; font-weight: 300; color: var(--fg)">{{o.name}}<span aria-hidden="true">→</span></a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Closing call to action -->
+  <section class="force-dark" style="background: var(--band); color: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 32px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+      <div style="flex: 1 1 520px; min-width: 0">
+        <h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 300">Planning transport for government and protocol?</h2>
+        <p style="margin: 18px 0 0; font-size: 17px; line-height: 1.65; color: #BDBDBD; max-width: 620px">Share your dates, passenger numbers and locations and an operations planner will design the movement plan around them.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px">
+        <a class="hero-primary" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #F1F0EC; color: #0B0D10; text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Request a proposal</a>
+        <a class="hero-ghost" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 1px solid rgba(255,255,255,0.5); color: #FFFFFF; text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Talk to a planner</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--line)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--muted)">
+      <span>© 2026 AB.Limo</span>
+      <span>Riyadh · Jeddah · Dammam · Dubai · Abu Dhabi · Doha · Manama</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#7A5F36","options":["#7A5F36","#151515","#2F4A3A","#24405E"]},"$preview":{"width":1440,"height":5000}}'>
+class Component extends DCLogic {
+  abTheme() {
+    const s = this.state || {};
+    if (!this._abL) {
+      this._abL = (e) => { if (e.key === 'ab-theme' && e.newValue) this.setState({ theme: e.newValue }); };
+      try { window.addEventListener('storage', this._abL); } catch (err) {}
+    }
+    if (s.theme) return s.theme;
+    try { return localStorage.getItem('ab-theme') || 'light'; } catch (err) { return 'light'; }
+  }
+
+  abToggle() {
+    const t = this.abTheme() === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('ab-theme', t); } catch (err) {}
+    this.setState({ theme: t });
+  }
+
+  renderVals() {
+    const st = this.state || {};
+    const D = {"strip": [{"v": "NDA", "l": "Signed by every chauffeur"}, {"v": "GPS", "l": "Tracking on every vehicle"}, {"v": "2025", "l": "Best Supplier Award, presidential delegation"}], "needs": [{"num": "01", "t": "Motorcade planning", "x": "Vehicle order, routes, timings and standby vehicles agreed with protocol and security teams in advance."}, {"num": "02", "t": "Protocol trained chauffeurs", "x": "Chauffeurs trained in protocol, defensive driving and first aid, with background checks and NDAs."}, {"num": "03", "t": "Delegation logistics", "x": "Airport arrivals, hotel movements and venue transfers for full delegations, coordinated from one control room."}, {"num": "04", "t": "Discretion by default", "x": "Uniformly black fleet, confidential manifests and live GPS visibility for authorised security teams."}], "steps": [{"num": "01", "t": "Brief", "x": "Protocol shares the programme, delegation size and security requirements."}, {"num": "02", "t": "Plan", "x": "We agree vehicle order, routes, standby cars and communication lines in writing."}, {"num": "03", "t": "Operate", "x": "Chauffeurs and coordinators run the movement with live tracking from the control room."}], "cases": [{"sector": "Recognition", "years": "2025", "place": "Middle East", "title": "Best Supplier Award in the Middle East, presidential delegation", "stats": [{"v": "2025", "l": "Award year"}]}], "services": [{"name": "Executive and Corporate Mobility", "href": "Services.dc.html#executive"}, {"name": "Airport Transfers", "href": "Services.dc.html#airport"}, {"name": "Event Transportation", "href": "Services.dc.html#events"}], "vehicles": ["First Class Sedan", "Executive SUV", "Premium MPV"], "others": [{"name": "Events and exhibitions", "href": "IndEvents.dc.html"}, {"name": "Aviation and crew", "href": "IndAviation.dc.html"}, {"name": "Energy and giga projects", "href": "IndEnergy.dc.html"}, {"name": "Hospitality and DMCs", "href": "IndHospitality.dc.html"}, {"name": "Sports and entertainment", "href": "IndSports.dc.html"}, {"name": "Corporate and enterprise", "href": "IndCorporate.dc.html"}], "faqs": [["Are AB chauffeurs vetted for government work?", "Every chauffeur goes through comprehensive background checks, defensive driving certification and signs a Non Disclosure Agreement."], ["Can security teams track vehicles during a visit?", "Yes. Live GPS tracking lets authorised security teams monitor every vehicle in real time."]]};
+    const openQ = st.faq === undefined ? 0 : st.faq;
+    const faqs = D.faqs.map((f, i) => ({ q: f[0], a: f[1], open: i === openQ, expanded: i === openQ ? 'true' : 'false', sign: i === openQ ? '−' : '+', toggle: () => this.setState({ faq: i === openQ ? -1 : i }) }));
+    return { theme: this.abTheme(), isDark: this.abTheme() === 'dark', isLight: this.abTheme() !== 'dark', isDarkStr: this.abTheme() === 'dark' ? 'true' : 'false', themeLabel: this.abTheme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode', toggleTheme: () => this.abToggle(), accent: this.abTheme() === 'dark' ? '#C9A96E' : (this.props.accent ?? '#7A5F36'), d: D, faqs: faqs, hasCases: D.cases.length > 0 };
+  }
+}
+</script>
+</body>
+</html>

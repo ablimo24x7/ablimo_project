@@ -21,7 +21,7 @@ export async function generateMetadata({
       : "Hire a professional chauffeur for luxury transportation. Experienced drivers, premium vehicles, and exceptional service worldwide.",
     path: "/chauffeur-service",
     lang,
-    keywords: "chauffeur service, professional chauffeur, executive driver, AB.Limo, private driver, luxury chauffeur, hire chauffeur",
+    keywords: "chauffeur service, professional chauffeur, executive driver, AB, private driver, luxury chauffeur, hire chauffeur",
   });
 }
 

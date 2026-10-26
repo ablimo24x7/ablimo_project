@@ -15,13 +15,13 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: isAr ? dict.carService.title : "Professional Car Service with AB.Limo",
+    title: isAr ? dict.carService.title : "Professional Car Service with AB",
     description: isAr
       ? dict.carService.subtitle
-      : "Premium private car service worldwide. Book your professional ride with AB.Limo for airport transfers, business travel, and daily commutes.",
+      : "Premium private car service worldwide. Book your professional ride with AB for airport transfers, business travel, and daily commutes.",
     path: "/car-service",
     lang,
-    keywords: "car service, private car service, professional driver, AB.Limo, luxury car service, airport transfer, business travel",
+    keywords: "car service, private car service, professional driver, AB, luxury car service, airport transfer, business travel",
   });
 }
 

@@ -36,8 +36,8 @@ export async function generateMetadata({
     path: "",
     lang,
     keywords: isAr
-      ? "نقل الشركات والفعاليات, خدمة سائق خاص, تنقل مؤسسي, نقل مطار, تأجير حافلات, نقل السعودية, نقل الإمارات, نقل قطر, نقل كبار الشخصيات, AB.Limo"
-      : "corporate transportation, event transport, chauffeur service, Saudi Arabia, UAE, Qatar, airport transfer, bus coach hire, AB.Limo, workforce transport, VIP chauffeur",
+      ? "نقل الشركات والفعاليات, خدمة سائق خاص, تنقل مؤسسي, نقل مطار, تأجير حافلات, نقل السعودية, نقل الإمارات, نقل قطر, نقل كبار الشخصيات, AB"
+      : "corporate transportation, event transport, chauffeur service, Saudi Arabia, UAE, Qatar, airport transfer, bus coach hire, AB, workforce transport, VIP chauffeur",
   });
 }
 
@@ -57,12 +57,12 @@ export default async function Home({
       <HowToBookJsonLd />
       <HeroSection dict={dict} />
       <EventLogisticsSection dict={dict} lang={lang} />
+      <IndustrySolutionsSection dict={dict} lang={lang} />
+      <HowItWorksSection dict={dict} lang={lang} />
       <DutyOfCareSection dict={dict} />
       <FleetSection dict={dict} lang={lang} />
       <CountriesSection dict={dict} lang={lang} />
       <CitiesSection dict={dict} lang={lang} />
-      <IndustrySolutionsSection dict={dict} lang={lang} />
-      <HowItWorksSection dict={dict} lang={lang} />
       <CaseStudiesSection dict={dict} lang={lang} />
       <AwardsSection dict={dict} lang={lang} />
       <TellUsCtaSection dict={dict} lang={lang} />

@@ -35,7 +35,7 @@ export const corporateCityTemplate: CityTemplatePreset = {
         eyebrow: "Capital Operations",
         title: "Mastering Mobility",
         titleHighlight: "in Riyadh.",
-        description: "The nerve center of AB.Limo operations. We provide military-precision executive transport, Diplomatic Quarter access, RUH Aviation transfers, and massive event logistics for Riyadh Season and the FII.",
+        description: "The nerve center of AB operations. We provide military-precision executive transport, Diplomatic Quarter access, RUH Aviation transfers, and massive event logistics for Riyadh Season and the FII.",
       },
       items: [
         { label: "Request RUH Procurement", href: "#corporate-account", style: "primary", icon: "ArrowRight", iconPosition: "right" },
@@ -124,7 +124,7 @@ export const corporateCityTemplate: CityTemplatePreset = {
         headingHighlight: "Vision 2030",
         headingAfter: "Corporate Ecosystem.",
         description:
-          '<p class="mb-6 leading-relaxed">As the Kingdom undergoes unprecedented economic diversification under the <strong>Vision 2030</strong> mandate, the demands on Riyadh\'s corporate travel infrastructure have evolved exponentially. AB.Limo operates at the nexus of this transformation, providing highly secure, scalable, and meticulously managed executive mobility solutions for multinational corporations entering the Saudi market.</p>' +
+          '<p class="mb-6 leading-relaxed">As the Kingdom undergoes unprecedented economic diversification under the <strong>Vision 2030</strong> mandate, the demands on Riyadh\'s corporate travel infrastructure have evolved exponentially. AB operates at the nexus of this transformation, providing highly secure, scalable, and meticulously managed executive mobility solutions for multinational corporations entering the Saudi market.</p>' +
           '<p class="mb-6 leading-relaxed">Our strategic dispatch capabilities are engineered specifically for the capital\'s premier economic hubs. We maintain a continuous, vetted presence within the <strong>King Abdullah Financial District (KAFD)</strong>, offering seamless, secure transitions between architectural marvels and corporate headquarters. For international delegations and foreign missions, our chauffeurs possess the necessary clearances to navigate the rigorous security protocols of the <strong>Diplomatic Quarter (DQ)</strong> with absolute discretion and efficiency.</p>' +
           '<p class="leading-relaxed">Beyond standard point-to-point transfers, our <em>As-Directed</em> hourly services provide global executives with the fluid mobility required to execute complex business roadshows across Riyadh\'s expanding urban footprint—from the historic Diriyah Gate developments to the high-tech corridors of northern Riyadh.</p>',
         items: [
@@ -152,7 +152,7 @@ export const corporateCityTemplate: CityTemplatePreset = {
       enabled: true,
       content: {
         heading: "Orchestrating Mega-Events: FII & Riyadh Season.",
-        description: "Riyadh is the undisputed epicenter of global summits and mega-events in the Middle East. When global investors converge for the Future Investment Initiative (FII) or millions of visitors attend Riyadh Season and LEAP, the logistical demands on ground transportation are monumental.\n\nAB.Limo does not merely supply vehicles; we deploy comprehensive Event Transportation Management architecture. Our centralized Transport Control Room utilizes live telemetry to orchestrate massive VIP coach charters, executive van convoys, and individual VIP transfers.",
+        description: "Riyadh is the undisputed epicenter of global summits and mega-events in the Middle East. When global investors converge for the Future Investment Initiative (FII) or millions of visitors attend Riyadh Season and LEAP, the logistical demands on ground transportation are monumental.\n\nAB does not merely supply vehicles; we deploy comprehensive Event Transportation Management architecture. Our centralized Transport Control Room utilizes live telemetry to orchestrate massive VIP coach charters, executive van convoys, and individual VIP transfers.",
         items: [],
         actions: [
           { label: "Download Event Logistics RFP Guide", href: "#corporate-account", style: "outline", icon: "Download" },
@@ -214,7 +214,7 @@ export const corporateCityTemplate: CityTemplatePreset = {
       content: {
         eyebrow: "PIF Infrastructure",
         heading: "Logistics for Diriyah Gate & Mega-Projects.",
-        description: "The rapid expansion of the Public Investment Fund (PIF) giga-projects has reshaped the outskirts of Riyadh. From the historic, cultural epicenter of Diriyah Gate to the expansive entertainment blueprint of Qiddiya, moving executive engineering teams and stakeholders requires highly specialized ground transport.\n\nAB.Limo deploys a dedicated fleet of executive SUVs and robust premium vans specifically suited for developing infrastructure zones. We offer Long-Term Transportation Contracts and daily executive shuttles that bridge the gap between central Riyadh hotels and remote project sites.",
+        description: "The rapid expansion of the Public Investment Fund (PIF) giga-projects has reshaped the outskirts of Riyadh. From the historic, cultural epicenter of Diriyah Gate to the expansive entertainment blueprint of Qiddiya, moving executive engineering teams and stakeholders requires highly specialized ground transport.\n\nAB deploys a dedicated fleet of executive SUVs and robust premium vans specifically suited for developing infrastructure zones. We offer Long-Term Transportation Contracts and daily executive shuttles that bridge the gap between central Riyadh hotels and remote project sites.",
         items: [],
         actions: [
           { label: "Request Long-Term Fleet Lease", href: "#corporate-account", style: "outline", icon: "ArrowRight" },
@@ -235,7 +235,7 @@ export const corporateCityTemplate: CityTemplatePreset = {
       content: {
         eyebrow: "Government Mobility",
         heading: "Royal Protocol & Diplomatic Missions.",
-        description: "The Diplomatic Quarter (DQ) in Riyadh is subject to some of the most rigorous security and access regulations in the Middle East. AB.Limo acts as the trusted mobility partner for foreign embassies, international NGO delegations, and visiting state dignitaries.\n\nOur chauffeurs are extensively vetted, holding the necessary national security clearances and IDs required for seamless, unhindered access through DQ security checkpoints. We provide Government & Embassy Transportation that strictly adheres to international protocol standards.",
+        description: "The Diplomatic Quarter (DQ) in Riyadh is subject to some of the most rigorous security and access regulations in the Middle East. AB acts as the trusted mobility partner for foreign embassies, international NGO delegations, and visiting state dignitaries.\n\nOur chauffeurs are extensively vetted, holding the necessary national security clearances and IDs required for seamless, unhindered access through DQ security checkpoints. We provide Government & Embassy Transportation that strictly adheres to international protocol standards.",
         items: [],
         actions: [
           { label: "Discuss Embassy Transport Contracts", href: "#corporate-account", style: "outline", icon: "ArrowRight" },
@@ -256,7 +256,7 @@ export const corporateCityTemplate: CityTemplatePreset = {
       content: {
         eyebrow: "Executive Protection",
         heading: "Elite Vetting & TGA Compliance.",
-        description: "In the realm of enterprise mobility, the chauffeur is the ultimate failsafe. AB.Limo does not employ standard drivers; we deploy highly trained executive chauffeurs. We operate in absolute compliance with the Saudi Transport General Authority (TGA), enforcing a zero-tolerance policy for regulatory infractions.\n\nOur proprietary vetting matrix includes exhaustive criminal background checks, motor vehicle record auditing, and mandatory defensive driving certifications. Furthermore, every chauffeur signs legally binding Non-Disclosure Agreements (NDAs).",
+        description: "In the realm of enterprise mobility, the chauffeur is the ultimate failsafe. AB does not employ standard drivers; we deploy highly trained executive chauffeurs. We operate in absolute compliance with the Saudi Transport General Authority (TGA), enforcing a zero-tolerance policy for regulatory infractions.\n\nOur proprietary vetting matrix includes exhaustive criminal background checks, motor vehicle record auditing, and mandatory defensive driving certifications. Furthermore, every chauffeur signs legally binding Non-Disclosure Agreements (NDAs).",
         items: [],
         actions: [
           { label: "Review Security Documentation", href: "#corporate-account", style: "outline", icon: "ArrowRight" },
@@ -424,7 +424,7 @@ export const corporateCityTemplate: CityTemplatePreset = {
           {
             id: genItemId(),
             question: "Are your drivers cleared for entry into the Diplomatic Quarter (DQ) and KAFD?",
-            answer: "Absolutely. All AB.Limo chauffeurs operating in Riyadh hold valid Saudi IDs and have undergone rigorous background checks. They are experienced in navigating the security checkpoints of both the DQ and the King Abdullah Financial District efficiently.",
+            answer: "Absolutely. All AB chauffeurs operating in Riyadh hold valid Saudi IDs and have undergone rigorous background checks. They are experienced in navigating the security checkpoints of both the DQ and the King Abdullah Financial District efficiently.",
           },
           {
             id: genItemId(),

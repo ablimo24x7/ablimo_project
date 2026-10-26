@@ -14,13 +14,13 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: isAr ? dict.strategicPartnerships.meta.title : "Partnership Opportunities with AB.Limo",
+    title: isAr ? dict.strategicPartnerships.meta.title : "Partnership Opportunities with AB",
     description: isAr
       ? dict.strategicPartnerships.meta.description
-      : "Explore strategic partnership opportunities with AB.Limo. Join forces with a leading luxury chauffeur service across aviation, cruise, financial, and hotel sectors.",
+      : "Explore strategic partnership opportunities with AB. Join forces with a leading luxury chauffeur service across aviation, cruise, financial, and hotel sectors.",
     path: "/strategic-partnerships",
     lang,
-    keywords: "AB.Limo partnerships, strategic alliances, aviation partnership, hotel partnership, luxury transport collaboration",
+    keywords: "AB partnerships, strategic alliances, aviation partnership, hotel partnership, luxury transport collaboration",
   });
 }
 

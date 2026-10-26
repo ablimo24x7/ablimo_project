@@ -26,11 +26,11 @@ export async function generateMetadata({
   const description = lang === "ar" && res.city.descriptionAr ? res.city.descriptionAr : res.city.description;
 
   return generateSeoMetadata({
-    title: `Premium Chauffeur Service in ${cityName}, ${countryName} | AB.Limo`,
-    description: description || `AB.Limo provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`,
+    title: `Premium Chauffeur Service in ${cityName}, ${countryName} | AB`,
+    description: description || `AB provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`,
     path: `/locations/${countryParam}/${cityParam}`,
     lang,
-    keywords: `AB.Limo ${cityName}, chauffeur service ${cityName}, luxury transportation ${cityName}, airport transfer ${cityName}, ${cityName} limousine, ${countryName} executive travel`,
+    keywords: `AB ${cityName}, chauffeur service ${cityName}, luxury transportation ${cityName}, airport transfer ${cityName}, ${cityName} limousine, ${countryName} executive travel`,
   });
 }
 
@@ -71,7 +71,7 @@ export default async function CityPage({
 
     const cityName = isArabic && res.city.nameAr ? res.city.nameAr : res.city.name;
     const countryName = isArabic && res.country.nameAr ? res.country.nameAr : res.country.name;
-    const cityDescription = res.city.description || `AB.Limo provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`;
+    const cityDescription = res.city.description || `AB provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`;
 
     const template = await getCityTemplate(res.country.slug, res.city.slug, lang);
     const context: SectionRenderContext = {

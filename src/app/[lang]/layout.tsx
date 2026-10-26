@@ -36,7 +36,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${siteTitle} | AB`,
       description: siteDescription,
-      siteName: "AB.Limo",
+      siteName: "AB",
       locale: locale === "ar" ? "ar_SA" : "en_US",
       type: "website",
       images: [
@@ -44,7 +44,7 @@ export async function generateMetadata({
           url: "https://www.ab.limo/opengraph-image.png",
           width: 1200,
           height: 630,
-          alt: "AB.Limo - Premium Executive & Corporate Mobility",
+          alt: "AB - Premium Executive & Corporate Mobility",
         },
       ],
     },

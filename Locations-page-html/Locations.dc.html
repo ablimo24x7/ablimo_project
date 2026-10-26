@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Where AB operates in Saudi Arabia, the UAE and Qatar | AB</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:var(--fg)}a:hover{color:var(--muted)}
+.city-card:hover{background:var(--surface);border-color:var(--fg)}
+.tab-btn:hover{color:var(--fg)}
+.map-btn:hover{background:var(--surface2)}
+.pin-link:hover .pin-badge,.pin-btn:hover .pin-badge{background:#3A3A3A}
+.pop-link:hover{background:var(--surface2)}
+.tab-btn:focus-visible,.map-btn:focus-visible,.pin-btn:focus-visible,.pin-link:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.abroot{--bg:#FFFFFF;--fg:#151515;--fg2:#3D3D3D;--muted:#5F5F5F;--line:#E6E4E0;--surface:#F6F5F2;--surface2:#F2F1EE;--sel1:#E7E5E1;--sel2:#F7F6F4;--band:#111111;color-scheme:light;transition:background-color .3s,color .3s}
+.abroot[data-theme="dark"]{--bg:#0E1013;--fg:#F1F0EC;--fg2:#C9C7C1;--muted:#9D9B95;--line:#2A2D31;--surface:#15181C;--surface2:#1B1E22;--sel1:#24282D;--sel2:#181B1F;--band:#050607;color-scheme:dark}
+.abroot[data-theme="dark"] path[fill="#151515"]{fill:#3B4148}
+.abroot[data-theme="dark"] path[fill="#4A5058"]{fill:#7B848D}
+.abroot[data-theme="dark"] circle[fill="#F4F3F0"]{fill:#15181C;stroke:#2A2D31}
+.abroot[data-theme="dark"] path[stroke="#CFCBC3"]{stroke:#30353B}
+.abroot[data-theme="dark"] path[stroke="#86827A"]{stroke:#7E868F}
+.abroot[data-theme="dark"] path[stroke="#4A4A4A"]{stroke:#5A6067}
+.theme-btn:hover{background:var(--surface2)}
+.abroot .force-dark{--bg:#0E1013;--fg:#F1F0EC;--fg2:#D9D7D1;--muted:#B3B1AB;--line:rgba(255,255,255,0.24);--surface:#15181C;--surface2:rgba(255,255,255,0.08);color-scheme:dark}
+.abroot .force-dark circle[fill="#F4F3F0"]{fill:#15181C;stroke:#2A2D31}
+.abroot .force-dark path[stroke="#CFCBC3"]{stroke:#30353B}
+.abroot .force-dark path[stroke="#86827A"]{stroke:#7E868F}
+.nav-link:hover{opacity:.72}
+.hero-primary:hover{opacity:.88}
+.hero-ghost:hover{background:rgba(255,255,255,0.1)}
+.office-card:hover,.route-row:hover td{background:var(--surface)}
+.faq-q:hover{opacity:.75}
+</style>
+</helmet>
+<div class="abroot" data-theme="{{theme}}" style="width: 100%; min-height: 100vh; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; color: var(--fg); background: var(--bg)">
+
+  <!-- Header -->
+  <header class="force-dark" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; background: linear-gradient(180deg, rgba(5,7,9,0.85) 0%, rgba(5,7,9,0) 100%); color: var(--fg)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="Home.dc.html" style="text-decoration: none; color: var(--fg); font-size: 22px; font-weight: 500; letter-spacing: 0.28em">AB</a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase">
+        <a class="nav-link" href="Services.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Services</a>
+        <a class="nav-link" href="Fleet.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Fleet</a>
+        <a class="nav-link" href="Locations.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg); box-shadow: inset 0 -1px 0 var(--fg)">Locations</a>
+        <a class="nav-link" href="https://www.ab.limo/industries" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Industries</a>
+        <a class="nav-link" href="https://www.ab.limo/about" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Company</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 16px">
+        <a class="nav-link" href="https://www.ab.limo/contact" style="font-size: 14px; letter-spacing: 0.04em; text-decoration: none; color: var(--fg)">hello@ab.limo</a>
+        <button type="button" class="theme-btn" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" aria-pressed="{{isDarkStr}}" style="width: 44px; height: 44px; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; background: transparent; color: var(--fg); cursor: pointer; display: flex; align-items: center; justify-content: center"><sc-if value="{{isDark}}" hint-placeholder-val="{{false}}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"></path></svg></sc-if><sc-if value="{{isLight}}" hint-placeholder-val="{{true}}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg></sc-if></button>
+        <a class="hero-ghost" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border: 1px solid rgba(255,255,255,0.6); color: var(--fg); text-decoration: none; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase">Book now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero with globe -->
+  <section class="force-dark" style="position: relative; overflow: hidden; background: #050709; color: var(--fg)">
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 72% 45%, #1A2027 0%, #0B0D10 60%, #050709 100%)"></div>
+    <div style="position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 140px 32px 56px; box-sizing: border-box">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+        <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column">
+          <span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border: 1px solid rgba(255,255,255,0.28); background: rgba(5,7,9,0.5); border-radius: 999px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A96E"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C9A96E"></span>Locations</span>
+          <h1 style="margin: 22px 0 0; font-size: 52px; line-height: 1.08; font-weight: 300">Where AB operates in Saudi Arabia, the UAE and Qatar</h1>
+          <p style="margin: 22px 0 0; max-width: 520px; font-size: 17px; line-height: 1.7; color: var(--fg2)">AB plans and runs chauffeur and ground transportation across the Gulf for business delegations, executive travellers, diplomatic missions and corporate events. One operations centre in Riyadh dispatches 24/7, supported by local teams in Dubai, Abu Dhabi and Doha, so airport transfers, daily chauffeur hire and cross border trips run to the same standard in every city.</p>
+          <div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px">
+            <a class="hero-primary" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: var(--fg); color: #0B0D10; text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Request a proposal</a>
+            <a class="hero-ghost" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 1px solid rgba(255,255,255,0.45); color: var(--fg); text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Book a transfer</a>
+          </div>
+          <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 460px; border-top: 1px solid var(--line); padding-top: 24px">
+            <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 40px; font-weight: 300; line-height: 1">3</span><span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)">Countries served directly</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 40px; font-weight: 300; line-height: 1">4</span><span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)">Regional offices</span></div>
+            <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 40px; font-weight: 300; line-height: 1">8</span><span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)">Airports served</span></div>
+          </div>
+        </div>
+
+        <div style="flex: 999 1 560px; min-width: 0; display: flex; justify-content: center">
+          <div style="position: relative; width: 100%; max-width: 680px">
+            <div style="position: relative; width: 100%; aspect-ratio: 1 / 1; user-select: none; touch-action: none">
+              <svg viewBox="0 0 640 640" onPointerDown="{{down}}" onPointerMove="{{move}}" onPointerUp="{{up}}" onPointerCancel="{{up}}" onPointerLeave="{{up}}" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; touch-action: none; cursor: {{cursor}}" role="img" aria-label="Interactive globe marking AB cities">
+                <circle cx="320" cy="320" r="{{R}}" fill="#15181C" stroke="#2A2D31" stroke-width="1"></circle>
+                <path d="{{limbDots}}" fill="none" stroke="#30353B" stroke-width="{{dotW}}" stroke-linecap="round"></path>
+                <path d="{{frontDots}}" fill="none" stroke="#7E868F" stroke-width="{{dotW}}" stroke-linecap="round"></path>
+                <path d="{{partnerOutline}}" fill="none" stroke="#C9A96E" stroke-width="1.1" stroke-dasharray="4 3" stroke-linejoin="round"></path>
+                <path d="{{partnerDots}}" fill="none" stroke="#8C7A57" stroke-width="{{dotW}}" stroke-linecap="round"></path>
+                <path d="{{outlinePath}}" fill="#C9A96E" fill-opacity="0.16" stroke="#C9A96E" stroke-width="1.2" stroke-linejoin="round"></path>
+                <path d="{{activeDots}}" fill="none" stroke="#C9A96E" stroke-width="{{dotW}}" stroke-linecap="round"></path>
+              </svg>
+
+              <sc-for list="{{pins}}" as="p" hint-placeholder-count="0">
+                <div style="position: absolute; left: {{p.left}}; top: {{p.top}}; transform: translate(-50%, -100%); z-index: {{p.z}}">
+                  <sc-if value="{{p.single}}" hint-placeholder-val="{{true}}">
+                    <a class="pin-link" href="{{p.href}}" aria-label="Open {{p.name}}" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--fg)">
+                      <span style="padding: 4px 10px; background: rgba(5,7,9,0.8); border: 1px solid var(--line); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; margin-bottom: 6px">{{p.name}}</span>
+                      <span class="pin-badge" style="width: 36px; height: 36px; border-radius: 50%; background: {{p.badgeBg}}; color: {{p.badgeColor}}; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; border: 2px {{p.borderStyle}} #F1F0EC; box-shadow: 0 4px 12px rgba(0,0,0,0.4)">AB</span>
+                      <span style="width: 2px; height: 10px; background: #F1F0EC"></span>
+                      <span style="width: 6px; height: 6px; border-radius: 50%; background: #F1F0EC"></span>
+                    </a>
+                  </sc-if>
+                  <sc-if value="{{p.cluster}}" hint-placeholder-val="{{false}}">
+                    <div style="display: flex; flex-direction: column; align-items: center">
+                      <sc-if value="{{p.isOpen}}" hint-placeholder-val="{{false}}">
+                        <div style="background: #0E1013; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.5); min-width: 240px; padding: 8px; margin-bottom: 10px; display: flex; flex-direction: column">
+                          <span style="padding: 8px 12px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted)">{{p.count}} cities here</span>
+                          <sc-for list="{{p.cities}}" as="c" hint-placeholder-count="2">
+                            <a class="pop-link" href="{{c.href}}" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; padding: 0 12px; text-decoration: none; color: var(--fg); font-size: 17px; font-weight: 300">
+                              <span>{{c.name}}</span>
+                              <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: {{c.tagColor}}">{{c.tag}}</span>
+                            </a>
+                          </sc-for>
+                        </div>
+                      </sc-if>
+                      <button type="button" class="pin-btn" onClick="{{p.toggle}}" aria-expanded="{{p.expanded}}" aria-label="{{p.label}}" style="display: flex; flex-direction: column; align-items: center; background: transparent; border: 0; padding: 0; cursor: pointer; font: inherit; color: var(--fg)">
+                        <span style="padding: 4px 10px; background: rgba(5,7,9,0.8); border: 1px solid var(--line); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; margin-bottom: 6px">{{p.short}}</span>
+                        <span class="pin-badge" style="position: relative; width: 42px; height: 42px; border-radius: 50%; background: #F1F0EC; color: #0B0D10; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; border: 2px solid #F1F0EC; box-shadow: 0 4px 12px rgba(0,0,0,0.4)">AB<span style="position: absolute; top: -6px; right: -8px; min-width: 22px; height: 22px; border-radius: 11px; background: #C9A96E; color: #0B0D10; font-size: 12px; display: flex; align-items: center; justify-content: center; border: 2px solid #0B0D10; letter-spacing: 0">{{p.count}}</span></span>
+                        <span style="width: 2px; height: 10px; background: #F1F0EC"></span>
+                        <span style="width: 6px; height: 6px; border-radius: 50%; background: #F1F0EC"></span>
+                      </button>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px">
+              <div style="display: flex; flex-wrap: wrap; gap: 18px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted)">
+                <span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #C9A96E"></span>Direct operations</span>
+                <span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 10px; height: 10px; border-radius: 50%; border: 1px solid #C9A96E"></span>Regional coverage</span>
+                <span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 10px; height: 10px; border-radius: 50%; border: 1px dashed #C9A96E"></span>On request via partners</span>
+                <span>{{hint}}</span>
+              </div>
+              <div style="display: flex; gap: 8px">
+                <button type="button" class="map-btn" onClick="{{zoomOut}}" aria-label="Zoom out" style="width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+                <button type="button" class="map-btn" onClick="{{zoomIn}}" aria-label="Zoom in" style="width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M12 5v14"></path></svg></button>
+                <button type="button" class="map-btn" onClick="{{reset}}" aria-label="Reset view to the Gulf" style="width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- One regional partner -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 88px 32px 40px">
+    <div style="display: flex; flex-wrap: wrap; gap: 32px 64px">
+      <p style="flex: 1 1 240px; margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">One regional partner</p>
+      <p style="flex: 3 1 560px; margin: 0; font-size: 28px; line-height: 1.45; font-weight: 300">Transport planners booking across several Gulf cities deal with one provider, one set of standards and one invoice. AB coordinates vehicles and chauffeurs for corporate movements, regional conferences and government protocol from Riyadh to Doha, with the same planning and reporting in every country.</p>
+    </div>
+  </section>
+
+  <!-- Offices -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 56px 32px 88px">
+    <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Regional offices</p>
+    <h2 style="margin: 14px 0 0; font-size: 44px; line-height: 1.1; font-weight: 300">Managed regional offices and dispatch</h2>
+    <p style="margin: 18px 0 0; max-width: 760px; font-size: 17px; line-height: 1.7; color: var(--fg2)">AB runs four offices in the Gulf’s main business capitals. Every booking is coordinated through the Riyadh operations centre, which dispatches around the clock, while local teams in each office handle city knowledge, airports and on site support.</p>
+    <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+      <sc-for list="{{offices}}" as="o" hint-placeholder-count="3">
+        <div class="office-card" style="padding: 32px; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px">
+          <span style="align-self: flex-start; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: {{accent}}">{{o.tag}}</span>
+          <h3 style="margin: 0; font-size: 28px; font-weight: 300">{{o.name}}</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.65; color: var(--fg2)">{{o.text}}</p>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px">
+            <sc-for list="{{o.lines}}" as="ln" hint-placeholder-count="1">
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <sc-if value="{{ln.hasLabel}}" hint-placeholder-val="{{false}}"><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted)">{{ln.label}}</span></sc-if>
+                <span style="display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--fg2)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg><span style="padding: 2px 8px; border: 1px dashed var(--muted); font-size: 13px; color: var(--muted)">{{ln.address}}</span></span>
+                <span style="display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--fg2)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg><span style="padding: 2px 8px; border: 1px dashed var(--muted); font-size: 13px; color: var(--muted)">{{ln.phone}}</span></span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Coverage -->
+  <section id="countries" style="background: var(--surface)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 32px">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+        <div style="flex: 1 1 360px; min-width: 0">
+          <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Coverage</p>
+          <h2 style="margin: 14px 0 0; font-size: 44px; line-height: 1.1; font-weight: 300">Find your city</h2>
+        </div>
+        <div style="flex: 0 1 380px; min-width: 240px; display: flex; flex-direction: column; gap: 8px">
+          <label for="loc-search" style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted)">Search a country, city or airport</label>
+          <div style="display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--fg)">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="M20 20l-4.5-4.5"></path></svg>
+            <input id="loc-search" type="search" placeholder="Try Fujairah or MED" onChange="{{onSearch}}" style="flex: 1; min-width: 0; font: inherit; font-size: 16px; border: 0; padding: 12px 0; min-height: 44px; box-sizing: border-box; background: transparent; color: var(--fg); outline: none">
+          </div>
+        </div>
+      </div>
+
+      <sc-if value="{{hasResults}}" hint-placeholder-val="{{true}}">
+        <div role="tablist" aria-label="Countries" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 8px 40px; border-bottom: 1px solid var(--line)">
+          <sc-for list="{{tabs}}" as="t" hint-placeholder-count="4">
+            <button type="button" role="tab" class="tab-btn" aria-selected="{{t.selected}}" onClick="{{t.pick}}" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px 0 16px; min-height: 44px; background: transparent; border: 0; border-bottom: 2px solid {{t.border}}; margin-bottom: -1px; cursor: pointer; font: inherit; color: {{t.color}}; text-align: left">
+              <span style="font-size: 20px; font-weight: 300">{{t.name}}</span>
+              <span style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase">{{t.countLabel}}</span>
+            </button>
+          </sc-for>
+        </div>
+
+        <div role="tabpanel" aria-label="{{panel.title}}" style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 40px 56px">
+          <div style="flex: 1 1 380px; min-width: 0">
+            <h3 style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 300">{{panel.title}}</h3>
+            <sc-for list="{{panel.intro}}" as="para" hint-placeholder-count="1">
+              <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.75; color: var(--fg2)"><sc-for list="{{para}}" as="sg" hint-placeholder-count="1"><sc-if value="{{sg.ph}}" hint-placeholder-val="{{false}}"><mark style="background: transparent; padding: 1px 6px; border: 1px dashed {{accent}}; color: {{accent}}">{{sg.t}}</mark></sc-if><sc-if value="{{sg.txt}}" hint-placeholder-val="{{true}}">{{sg.t}}</sc-if></sc-for></p>
+            </sc-for>
+            <sc-if value="{{panel.hasBullets}}" hint-placeholder-val="{{false}}">
+              <ul style="margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid var(--line)">
+                <sc-for list="{{panel.bullets}}" as="b" hint-placeholder-count="3">
+                  <li style="padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 16px; line-height: 1.5">{{b}}</li>
+                </sc-for>
+              </ul>
+            </sc-if>
+            <sc-for list="{{panel.outro}}" as="para" hint-placeholder-count="1">
+              <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.75; color: var(--fg2)"><sc-for list="{{para}}" as="sg" hint-placeholder-count="1"><sc-if value="{{sg.ph}}" hint-placeholder-val="{{false}}"><mark style="background: transparent; padding: 1px 6px; border: 1px dashed {{accent}}; color: {{accent}}">{{sg.t}}</mark></sc-if><sc-if value="{{sg.txt}}" hint-placeholder-val="{{true}}">{{sg.t}}</sc-if></sc-for></p>
+            </sc-for>
+            <a href="{{panel.dirHref}}" style="margin-top: 24px; display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none">{{panel.dirLabel}} →</a>
+          </div>
+          <div style="flex: 1.2 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; align-content: start">
+            <sc-for list="{{panel.cities}}" as="c" hint-placeholder-count="5">
+              <a class="city-card" href="{{c.href}}" style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border: 1px solid var(--line); background: var(--bg); text-decoration: none; color: var(--fg); min-height: 132px; box-sizing: border-box">
+                <span style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px">
+                  <span style="font-size: 22px; font-weight: 300; line-height: 1.2">{{c.name}}</span>
+                  <span style="font-size: 12px; letter-spacing: 0.14em; color: var(--muted)">{{c.code}}</span>
+                </span>
+                <span style="margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 50%; background: {{c.dotBg}}; border: 1px {{c.dotBorder}} {{accent}}"></span>{{c.status}}</span>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{noResults}}" hint-placeholder-val="{{false}}">
+        <p style="margin: 40px 0 0; font-size: 17px; color: var(--fg2)">No locations match your search. Call +966 58 111 8720 or email hello@ab.limo for coverage elsewhere.</p>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- Airports -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 88px 32px 40px">
+    <div style="display: flex; flex-wrap: wrap; gap: 24px 64px; align-items: flex-end">
+      <div style="flex: 1 1 360px; min-width: 0">
+        <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Aviation gateways</p>
+        <h2 style="margin: 14px 0 0; font-size: 44px; line-height: 1.1; font-weight: 300">Airports we serve</h2>
+      </div>
+      <p style="flex: 1.4 1 420px; margin: 0; font-size: 16px; line-height: 1.75; color: var(--fg2)">Airport transfers are a core part of AB’s work across the Gulf, from scheduled arrivals to private jet terminals and diplomatic flights. We track every flight, meet passengers inside the terminal and adjust pickups to the real landing time.</p>
+    </div>
+    <div style="margin-top: 36px; overflow-x: auto; border: 1px solid var(--line)">
+      <table style="width: 100%; min-width: 760px; border-collapse: collapse; font-size: 15px">
+        <thead>
+          <tr>
+            <th scope="col" style="text-align: left; padding: 16px 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); width: 110px">Airport code</th>
+            <th scope="col" style="text-align: left; padding: 16px 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line)">Aviation gateway</th>
+            <th scope="col" style="text-align: left; padding: 16px 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line)">What we cover</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{airports}}" as="ap" hint-placeholder-count="8">
+            <tr class="route-row">
+              <th scope="row" style="text-align: left; padding: 18px 20px; font-size: 22px; font-weight: 300; letter-spacing: 0.06em; border-bottom: 1px solid var(--line)">{{ap.code}}</th>
+              <td style="padding: 18px 20px; border-bottom: 1px solid var(--line)">{{ap.name}}</td>
+              <td style="padding: 18px 20px; color: var(--fg2); border-bottom: 1px solid var(--line)">{{ap.scope}}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Intercity -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 56px 32px 88px">
+    <div style="display: flex; flex-wrap: wrap; gap: 24px 64px; align-items: flex-end">
+      <div style="flex: 1 1 360px; min-width: 0">
+        <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Highway corridors</p>
+        <h2 style="margin: 14px 0 0; font-size: 44px; line-height: 1.1; font-weight: 300">Popular intercity routes</h2>
+      </div>
+      <p style="flex: 1.4 1 420px; margin: 0; font-size: 16px; line-height: 1.75; color: var(--fg2)">Many itineraries are quicker by road than by a short regional flight. AB runs private point to point transfers on the main Gulf corridors with the same vehicles, chauffeurs and live tracking as our city work.</p>
+    </div>
+    <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px">
+      <sc-for list="{{routes}}" as="rt" hint-placeholder-count="5">
+        <div class="office-card" style="padding: 24px; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px">
+          <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted)">Departure point</span>
+          <span style="font-size: 24px; font-weight: 300">{{rt.from}}</span>
+          <svg viewBox="0 0 120 12" width="100%" height="12" aria-hidden="true" style="color: {{accent}}"><path d="M2 6h112M108 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.2"></path><circle cx="3" cy="6" r="2.5" fill="currentColor"></circle></svg>
+          <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted)">Arrival destination</span>
+          <span style="font-size: 24px; font-weight: 300">{{rt.to}}</span>
+          <span style="margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; color: var(--fg2)">Indicative travel time: <mark style="background: transparent; padding: 1px 6px; border: 1px dashed {{accent}}; color: {{accent}}">[Confirm]</mark></span>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin: 24px 0 0; font-size: 15px; color: var(--fg2)">Luggage allowances, multi city trips and the full route list are on our <a href="https://www.ab.limo/services/intercity-transfers">Intercity Transfers</a> page.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: var(--surface)">
+    <div style="max-width: 960px; margin: 0 auto; padding: 88px 32px">
+      <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">Questions</p>
+      <h2 style="margin: 14px 0 0; font-size: 44px; line-height: 1.1; font-weight: 300">Frequently asked questions</h2>
+      <div style="margin-top: 36px; border-top: 1px solid var(--line)">
+        <sc-for list="{{faqs}}" as="q" hint-placeholder-count="5">
+          <div style="border-bottom: 1px solid var(--line)">
+            <button type="button" class="faq-q" aria-expanded="{{q.expanded}}" onClick="{{q.toggle}}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 16px 0; background: transparent; border: 0; cursor: pointer; font: inherit; font-size: 20px; font-weight: 300; color: var(--fg); text-align: left">
+              {{q.q}}
+              <span aria-hidden="true" style="font-size: 24px; font-weight: 300; color: {{accent}}">{{q.sign}}</span>
+            </button>
+            <sc-if value="{{q.open}}" hint-placeholder-val="{{false}}">
+              <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.75; color: var(--fg2); max-width: 780px">{{q.a}}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coordination -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 88px 32px">
+    <div style="display: flex; flex-wrap: wrap; gap: 32px 64px">
+      <h2 style="flex: 1 1 320px; margin: 0; font-size: 40px; line-height: 1.15; font-weight: 300">Gulf ground transport coordination</h2>
+      <p style="flex: 1.4 1 440px; margin: 0; font-size: 18px; line-height: 1.75; color: var(--fg2)">Putting all your Gulf bookings with one managed provider simplifies scheduling, protocol and invoice reconciliation. Open a corporate account for recurring transfers across several cities, or book single routes whenever you need them.</p>
+    </div>
+  </section>
+
+  <!-- Closing call to action -->
+  <section class="force-dark" style="background: var(--band); color: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 32px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+      <div style="flex: 1 1 520px; min-width: 0">
+        <h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 300">Plan your transport across the Gulf</h2>
+        <p style="margin: 18px 0 0; font-size: 17px; line-height: 1.65; color: #BDBDBD; max-width: 620px">Set up a corporate route agreement or book scheduled transfers across Saudi Arabia, the UAE and Qatar, with 24/7 dispatch from Riyadh.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px">
+        <a class="hero-primary" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: #F1F0EC; color: #0B0D10; text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Request a proposal</a>
+        <a class="hero-ghost" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 1px solid rgba(255,255,255,0.5); color: #FFFFFF; text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Book a transfer</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--line)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--muted)">
+      <span>© 2026 AB</span>
+      <span>Riyadh · Dubai · Abu Dhabi · Doha</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#7A5F36","options":["#7A5F36","#151515","#2F4A3A","#24405E"]},"autoRotate":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  abTheme() {
+    const s = this.state || {};
+    if (!this._abL) {
+      this._abL = (e) => { if (e.key === 'ab-theme' && e.newValue) this.setState({ theme: e.newValue }); };
+      try { window.addEventListener('storage', this._abL); } catch (err) {}
+    }
+    if (s.theme) return s.theme;
+    try { return localStorage.getItem('ab-theme') || 'light'; } catch (err) { return 'light'; }
+  }
+
+  abToggle() {
+    const t = this.abTheme() === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('ab-theme', t); } catch (err) {}
+    this.setState({ theme: t });
+  }
+
+  cities() {
+    if (this._cities) return this._cities;
+    const L = 'https://www.ab.limo/locations/';
+    const D = 'Direct operations', R = 'Regional coverage', P = 'On request via partners';
+    this._cities = [
+      { id: 'riyadh', name: 'Riyadh', country: 'sa', code: 'RUH', lat: 24.7136, lon: 46.6753, href: 'Riyadh.dc.html', status: D },
+      { id: 'jeddah', name: 'Jeddah', country: 'sa', code: 'JED', lat: 21.5433, lon: 39.1728, href: 'Jeddah.dc.html', status: D },
+      { id: 'makkah', name: 'Makkah', country: 'sa', code: 'via JED', lat: 21.3891, lon: 39.8579, href: L + 'saudi-arabia/mecca', status: D },
+      { id: 'madinah', name: 'Madinah', country: 'sa', code: 'MED', lat: 24.5247, lon: 39.5692, href: L + 'saudi-arabia/medina', status: D },
+      { id: 'dammam', name: 'Dammam', country: 'sa', code: 'DMM', lat: 26.4207, lon: 50.0888, href: 'Dammam.dc.html', status: D },
+      { id: 'khobar', name: 'Al Khobar', country: 'sa', code: 'via DMM', lat: 26.2172, lon: 50.1971, href: L + 'saudi-arabia/al-khobar', status: D },
+      { id: 'alula', name: 'AlUla', country: 'sa', code: 'ULH', lat: 26.6084, lon: 37.9232, href: L + 'saudi-arabia/al-ula', status: D },
+      { id: 'tabuk', name: 'Tabuk', country: 'sa', code: 'TUU', lat: 28.3835, lon: 36.5662, href: L + 'saudi-arabia/tabuk', status: D },
+      { id: 'neom', name: 'NEOM', country: 'sa', code: 'NUM', lat: 27.95, lon: 35.30, href: L + 'saudi-arabia/neom', status: D },
+      { id: 'abha', name: 'Abha', country: 'sa', code: 'AHB', lat: 18.2164, lon: 42.5053, href: L + 'saudi-arabia/abha', status: R },
+      { id: 'qassim', name: 'Al Qassim', country: 'sa', code: 'ELQ', lat: 26.3260, lon: 43.9750, href: L + 'saudi-arabia/al-qasim', status: R },
+      { id: 'jizan', name: 'Jizan', country: 'sa', code: 'GIZ', lat: 16.8892, lon: 42.5511, href: L + 'saudi-arabia/jizan', status: R },
+      { id: 'dubai', name: 'Dubai', country: 'ae', code: 'DXB · DWC', lat: 25.2048, lon: 55.2708, href: 'Main.dc.html', status: D },
+      { id: 'abudhabi', name: 'Abu Dhabi', country: 'ae', code: 'AUH', lat: 24.4539, lon: 54.3773, href: 'AbuDhabi.dc.html', status: D },
+      { id: 'sharjah', name: 'Sharjah', country: 'ae', code: 'SHJ', lat: 25.3463, lon: 55.4209, href: L + 'uae/sharjah', status: D },
+      { id: 'ajman', name: 'Ajman', country: 'ae', code: 'via SHJ', lat: 25.4052, lon: 55.5136, href: L + 'uae/ajman', status: D },
+      { id: 'alain', name: 'Al Ain', country: 'ae', code: 'AAN', lat: 24.2075, lon: 55.7447, href: L + 'uae/al-ain', status: D },
+      { id: 'rak', name: 'Ras Al Khaimah', country: 'ae', code: 'RKT', lat: 25.8007, lon: 55.9762, href: L + 'uae/ras-al-khaimah', status: D },
+      { id: 'fujairah', name: 'Fujairah', country: 'ae', code: 'FJR', lat: 25.1288, lon: 56.3265, href: L + 'uae', status: D },
+      { id: 'uaq', name: 'Umm Al Quwain', country: 'ae', code: 'via SHJ', lat: 25.5647, lon: 55.5552, href: L + 'uae', status: D },
+      { id: 'doha', name: 'Doha', country: 'qa', code: 'DOH', lat: 25.2854, lon: 51.5310, href: 'Doha.dc.html', status: D },
+      { id: 'lusail', name: 'Lusail', country: 'qa', code: 'via DOH', lat: 25.4180, lon: 51.4900, href: L + 'qatar/lusail', status: D },
+      { id: 'wakrah', name: 'Al Wakrah', country: 'qa', code: 'via DOH', lat: 25.1659, lon: 51.5976, href: L + 'qatar/al-wakrah', status: D },
+      { id: 'khor', name: 'Al Khor', country: 'qa', code: 'via DOH', lat: 25.6839, lon: 51.5058, href: L + 'qatar/al-khor', status: D },
+      { id: 'manama', name: 'Manama', country: 'gcc', code: 'Bahrain', lat: 26.2285, lon: 50.5860, href: L + 'bahrain', status: P },
+      { id: 'kuwait', name: 'Kuwait City', country: 'gcc', code: 'Kuwait', lat: 29.3759, lon: 47.9774, href: L + 'kuwait', status: P },
+      { id: 'muscat', name: 'Muscat', country: 'gcc', code: 'Oman', lat: 23.5880, lon: 58.3829, href: L + 'oman', status: P }
+    ];
+    return this._cities;
+  }
+
+  seg(text) {
+    const out = [];
+    text.split(/(\[[^\]]+\])/).forEach((t) => { if (t) out.push({ t: t, ph: /^\[.*\]$/.test(t), txt: !/^\[.*\]$/.test(t) }); });
+    return out;
+  }
+
+  countries() {
+    return [
+      { id: 'sa', name: 'Saudi Arabia', view: [44.5, 23.5, 2.2], title: 'Chauffeur service across Saudi Arabia', dirLabel: 'Saudi Arabia locations', dirHref: 'https://www.ab.limo/locations/saudi-arabia',
+        intro: ['AB runs chauffeur and ground transportation across the Kingdom from our Riyadh headquarters, covering business capitals, the holy cities and the giga project regions. Local fleet controllers handle airport arrivals, protocol movements and long distance road trips between cities.',
+                'Book single transfers, daily chauffeur hire or multi vehicle convoys for delegations and conferences in any city below.'], bullets: [], outro: [] },
+      { id: 'ae', name: 'United Arab Emirates', view: [55.4, 25.0, 4.5], title: 'Coverage across all seven emirates', dirLabel: 'UAE locations', dirHref: 'https://www.ab.limo/locations/uae',
+        intro: ['AB serves all seven emirates directly from our offices in Dubai and Abu Dhabi. Our UAE teams cover:'],
+        bullets: ['Dubai and Abu Dhabi business districts, government offices and event venues', 'Sharjah and Ajman for corporate, education and industrial travel', 'Al Ain for government and family travel from Abu Dhabi', 'Ras Al Khaimah, Fujairah and Umm Al Quwain for resorts, ports and coastal trips'],
+        outro: ['Local coordinators manage corporate transfers, summits and hotel movements across the country.'] },
+      { id: 'qa', name: 'Qatar', view: [51.3, 25.3, 5.5], title: 'Chauffeur service across Qatar', dirLabel: 'Qatar locations', dirHref: 'https://www.ab.limo/locations/qatar',
+        intro: ['Our Doha office serves corporate travellers, conference delegates and visiting officials across Qatar. Teams cover the business districts of West Bay and Msheireb, the new city of Lusail, and Al Wakrah and Al Khor, all served from Doha.',
+                'On site dispatchers manage vehicles for high profile events, ministerial meetings and private executive transfers.'], bullets: [], outro: [] },
+      { id: 'gcc', name: 'Other Gulf destinations', view: [52, 26, 1.7], title: 'Bahrain, Kuwait and Oman on request', dirLabel: 'Request partner coverage', dirHref: 'https://www.ab.limo/quote/tender',
+        intro: ['Beyond our own offices, AB arranges ground transportation in neighbouring Gulf countries through vetted partners, planned and supervised from Riyadh. Partner trips need advance notice and a confirmed scope.'],
+        bullets: ['Bahrain: Manama, its business districts and the King Fahd Causeway to Saudi Arabia', 'Kuwait: Kuwait City and government complexes', 'Oman: Muscat and the main business centres'],
+        outro: ['Every partner vehicle and chauffeur is checked against AB standards for safety, vehicle age and vetting before the trip.'] }
+    ];
+  }
+
+  view() {
+    const s = this.state || {};
+    return { lon: s.lon ?? -40, lat: s.lat ?? 18, zoom: s.zoom ?? 1 };
+  }
+
+  flyTo(lon, lat, zoom, dur) {
+    const from = this.view();
+    const d = ((lon - from.lon) % 360 + 540) % 360 - 180;
+    this.anim = { from: from, to: { lon: from.lon + d, lat: lat, zoom: zoom }, dur: dur, t0: null };
+  }
+
+  componentDidMount() {
+    this._alive = true;
+    fetch('./assets/3bd81f7c20ca1c312045870c26cc62d4.json')
+      .then((r) => r.json())
+      .then((d) => {
+        const D = Math.PI / 180;
+        const n = d.dots.length / 3;
+        const lonR = new Float32Array(n), sl = new Float32Array(n), cl = new Float32Array(n), a = new Uint8Array(n);
+        for (let i = 0; i < n; i++) {
+          const la = d.dots[3 * i] * D;
+          lonR[i] = d.dots[3 * i + 1] * D;
+          sl[i] = Math.sin(la); cl[i] = Math.cos(la);
+          a[i] = d.dots[3 * i + 2];
+        }
+        this.geo = { n: n, lonR: lonR, sl: sl, cl: cl, a: a, outlines: d.outlines, partnerOutlines: d.partnerOutlines || [] };
+        if (this._alive) this.forceUpdate();
+      })
+      .catch(() => {});
+    this.flyTo(50, 24, 1, 2800);
+    const tick = (t) => {
+      if (!this._alive) return;
+      this.step(t);
+      this._raf = requestAnimationFrame(tick);
+    };
+    this._raf = requestAnimationFrame(tick);
+  }
+
+  componentWillUnmount() {
+    this._alive = false;
+    if (this._raf) cancelAnimationFrame(this._raf);
+  }
+
+  step(t) {
+    const a = this.anim;
+    if (a) {
+      if (a.t0 === null) { a.t0 = t; return; }
+      const k = Math.min(1, (t - a.t0) / a.dur);
+      const e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+      this.setState({ lon: a.from.lon + (a.to.lon - a.from.lon) * e, lat: a.from.lat + (a.to.lat - a.from.lat) * e, zoom: a.from.zoom + (a.to.zoom - a.from.zoom) * e });
+      if (k >= 1) this.anim = null;
+      return;
+    }
+    const s = this.state || {};
+    if (this.props.autoRotate && !this.drag && !s.openCluster && !s.touched) this.setState({ lon: this.view().lon + 0.06 });
+  }
+
+  ringPath(ring, R, l0, sp0, cp0) {
+    const D = Math.PI / 180, C = 320;
+    let d = '', any = false;
+    for (let j = 0; j < ring.length; j += 2) {
+      const la = ring[j + 1] * D, dl = ring[j] * D - l0;
+      const cl = Math.cos(la), sl = Math.sin(la), cdl = Math.cos(dl);
+      const cosc = sp0 * sl + cp0 * cl * cdl;
+      let dx = R * cl * Math.sin(dl), dy = -R * (cp0 * sl - sp0 * cl * cdl);
+      if (cosc < 0) { const len = Math.hypot(dx, dy) || 1; dx = dx / len * R; dy = dy / len * R; } else any = true;
+      d += (j === 0 ? 'M' : 'L') + (C + dx).toFixed(1) + ' ' + (C + dy).toFixed(1);
+    }
+    return any ? d + 'Z' : '';
+  }
+
+  renderVals() {
+    const s = this.state || {};
+    const v = this.view();
+    const D = Math.PI / 180, C = 320;
+    const R = 290 * v.zoom;
+    const l0 = v.lon * D, p0 = v.lat * D, sp0 = Math.sin(p0), cp0 = Math.cos(p0);
+    let front = '', limb = '', act = '', part = '', outline = '', pOutline = '';
+    const g = this.geo;
+    if (g) {
+      for (let i = 0; i < g.n; i++) {
+        const dl = g.lonR[i] - l0, cdl = Math.cos(dl);
+        const cosc = sp0 * g.sl[i] + cp0 * g.cl[i] * cdl;
+        if (cosc <= 0) continue;
+        const x = C + R * g.cl[i] * Math.sin(dl), y = C - R * (cp0 * g.sl[i] - sp0 * g.cl[i] * cdl);
+        if (x < -8 || x > 648 || y < -8 || y > 648) continue;
+        const sg = 'M' + x.toFixed(1) + ' ' + y.toFixed(1) + 'h0';
+        if (g.a[i] === 1) act += sg; else if (g.a[i] === 2) part += sg; else if (cosc < 0.3) limb += sg; else front += sg;
+      }
+      for (const ring of g.outlines) outline += this.ringPath(ring, R, l0, sp0, cp0);
+      for (const ring of g.partnerOutlines) pOutline += this.ringPath(ring, R, l0, sp0, cp0);
+    }
+
+    const cities = this.cities();
+    const accent = this.abTheme() === 'dark' ? '#C9A96E' : (this.props.accent ?? '#7A5F36');
+    const visible = [];
+    for (const c of cities) {
+      const la = c.lat * D, dl = c.lon * D - l0;
+      const cl = Math.cos(la), sl = Math.sin(la), cdl = Math.cos(dl);
+      const cosc = sp0 * sl + cp0 * cl * cdl;
+      if (cosc < 0.08) continue;
+      const x = C + R * cl * Math.sin(dl), y = C - R * (cp0 * sl - sp0 * cl * cdl);
+      if (x < 0 || x > 640 || y < 0 || y > 640) continue;
+      visible.push({ c: c, x: x, y: y });
+    }
+    const groups = [];
+    for (const p of visible) {
+      let hit = null;
+      for (const gp of groups) if (Math.hypot(gp.x - p.x, gp.y - p.y) < 36) { hit = gp; break; }
+      if (hit) {
+        hit.items.push(p);
+        hit.x = hit.items.reduce((m, q) => m + q.x, 0) / hit.items.length;
+        hit.y = hit.items.reduce((m, q) => m + q.y, 0) / hit.items.length;
+      } else groups.push({ x: p.x, y: p.y, items: [p] });
+    }
+    const P = 'On request via partners';
+    const pins = groups.map((gp) => {
+      const key = gp.items.map((q) => q.c.id).sort().join('-');
+      const isOpen = s.openCluster === key;
+      const names = gp.items.map((q) => q.c.name);
+      const one = gp.items.length === 1;
+      const partner = one && gp.items[0].c.status === P;
+      return {
+        single: one, cluster: !one, name: names[0], href: gp.items[0].c.href, count: gp.items.length,
+        badgeBg: partner ? 'rgba(5,7,9,0.85)' : '#F1F0EC', badgeColor: partner ? '#F1F0EC' : '#0B0D10', borderStyle: partner ? 'dashed' : 'solid',
+        short: gp.items.length === 2 ? names.join(' · ') : gp.items.length + ' cities',
+        label: 'Show ' + names.join(', '),
+        cities: gp.items.map((q) => ({ name: q.c.name, href: q.c.href, tag: q.c.status === P ? 'Partner' : (q.c.code || 'Direct'), tagColor: q.c.status === P ? '#C9A96E' : 'var(--muted)' })),
+        isOpen: isOpen, expanded: isOpen ? 'true' : 'false',
+        toggle: () => this.setState({ openCluster: isOpen ? null : key, touched: true }),
+        left: (gp.x / 640 * 100).toFixed(2) + '%', top: (gp.y / 640 * 100).toFixed(2) + '%', z: isOpen ? 5 : 2
+      };
+    });
+
+    const q = (s.q || '').trim().toLowerCase();
+    const countries = this.countries();
+    const matches = countries.map((ct) => {
+      const list = cities.filter((c) => c.country === ct.id);
+      const nameHit = !q || ct.name.toLowerCase().includes(q);
+      const hits = list.filter((c) => c.name.toLowerCase().includes(q) || c.code.toLowerCase().includes(q));
+      return { ct: ct, list: list, shown: nameHit ? list : hits, ok: nameHit || hits.length > 0 };
+    }).filter((m) => m.ok);
+    const selId = matches.find((m) => m.ct.id === s.tab) ? s.tab : (matches[0] ? matches[0].ct.id : null);
+    const tabs = matches.map((m) => ({
+      name: m.ct.name,
+      countLabel: m.list.length + (m.list.length === 1 ? ' city' : ' cities') + (m.ct.id === 'gcc' ? ' via partners' : ''),
+      selected: m.ct.id === selId ? 'true' : 'false',
+      border: m.ct.id === selId ? 'var(--fg)' : 'transparent',
+      color: m.ct.id === selId ? 'var(--fg)' : 'var(--muted)',
+      pick: () => { this.setState({ tab: m.ct.id, openCluster: null, touched: true }); this.flyTo(m.ct.view[0], m.ct.view[1], m.ct.view[2], 1100); }
+    }));
+    const sel = matches.find((m) => m.ct.id === selId);
+    const panel = sel ? {
+      title: sel.ct.title, dirLabel: sel.ct.dirLabel, dirHref: sel.ct.dirHref,
+      intro: sel.ct.intro.map((t) => this.seg(t)), outro: sel.ct.outro.map((t) => this.seg(t)),
+      bullets: sel.ct.bullets, hasBullets: sel.ct.bullets.length > 0,
+      cities: sel.shown.map((c) => ({ name: c.name, code: c.code, href: c.href, status: c.status,
+        dotBg: (c.status === P || c.status === 'Regional coverage') ? 'transparent' : accent, dotBorder: c.status === P ? 'dashed' : 'solid' }))
+    } : { title: '', intro: [], outro: [], bullets: [], hasBullets: false, cities: [] };
+
+    const offices = [
+      { tag: 'Headquarters · 24/7 dispatch', name: 'Riyadh', text: 'Our headquarters and operations centre, dispatching and tracking every vehicle across Saudi Arabia, the UAE and Qatar.', lines: [{ hasLabel: false, label: '', address: 'Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia', phone: '+966 58 111 8720' }] },
+      { tag: 'United Arab Emirates', name: 'Dubai and Abu Dhabi', text: 'Our UAE offices cover all seven emirates, from Dubai’s business districts to the federal ministries in Abu Dhabi.', lines: [{ hasLabel: true, label: 'Dubai', address: 'Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE', phone: '+971 50 781 3880' }, { hasLabel: true, label: 'Abu Dhabi', address: 'Office 03, Mezzanine Floor, Building C57, Abu Dhabi, UAE [Confirm: area or street]', phone: '+971 50 918 0556' }] },
+      { tag: 'Qatar', name: 'Doha', text: 'Our Qatar office serves Doha’s business districts, Lusail and visiting delegations across the country.', lines: [{ hasLabel: false, label: '', address: 'Office 110, Building 100, Zone 26, Street 310, Old Airport Road, Doha, Qatar', phone: '+974 7734 3300' }] }
+    ];
+
+    const airports = [
+      ['RUH', 'King Khalid International Airport (RUH)', 'Terminal meet and greet and protocol arrivals in Riyadh'],
+      ['JED', 'King Abdulaziz International Airport (JED)', 'Jeddah transfers and onward trips to Makkah and Madinah'],
+      ['MED', 'Prince Mohammad bin Abdulaziz International Airport (MED)', 'Arrivals for Madinah visitors, Umrah groups and onward trips to AlUla'],
+      ['DMM', 'King Fahd International Airport (DMM)', 'Transfers to Dammam, Al Khobar, Dhahran and Jubail'],
+      ['DXB', 'Dubai International Airport (DXB)', 'Round the clock arrivals to central Dubai and the northern emirates'],
+      ['DWC', 'Al Maktoum International Airport (DWC)', 'Dubai South, air show and event transfers'],
+      ['AUH', 'Zayed International Airport (AUH)', 'Transfers to downtown Abu Dhabi, Yas Island and Al Ain'],
+      ['DOH', 'Hamad International Airport (DOH)', 'Meet and greet to West Bay, Lusail and across Qatar']
+    ].map((a) => ({ code: a[0], name: a[1], scope: a[2] }));
+
+    const routes = [['Dubai', 'Abu Dhabi'], ['Riyadh', 'Dammam'], ['Jeddah', 'Makkah'], ['Makkah', 'Madinah'], ['Doha', 'Lusail'], ['Dammam', 'Al Khobar'], ['Abu Dhabi', 'Al Ain']].map((r) => ({ from: r[0], to: r[1] }));
+
+    const faqData = [
+      ['Which countries does AB serve directly?', 'AB runs chauffeur and ground transportation directly across Saudi Arabia, all seven emirates of the UAE and Qatar, with offices in Riyadh, Dubai, Abu Dhabi and Doha.'],
+      ['Do you cover Bahrain, Kuwait and Oman?', 'Yes, on request. We arrange trips in Bahrain, Kuwait and Oman through vetted partners who meet AB standards, planned and supervised from Riyadh. Please give advance notice.'],
+      ['Where is AB’s dispatch centre?', 'Our 24/7 operations centre is at our Riyadh headquarters in Al Malaz. It dispatches and tracks every vehicle, working with local teams in Dubai, Abu Dhabi and Doha.'],
+      ['Which airports do you serve?', 'We run airport transfers at King Khalid International Airport (RUH), King Abdulaziz International Airport (JED), Prince Mohammad bin Abdulaziz International Airport (MED), King Fahd International Airport (DMM), Dubai International Airport (DXB), Al Maktoum International Airport (DWC), Zayed International Airport (AUH) and Hamad International Airport (DOH).'],
+      ['Can you plan transport across several countries in one programme?', 'Yes. One planner can handle a roadshow or delegation across Saudi Arabia, the UAE and Qatar under a single proposal and invoice.'],
+      ['How do I request a proposal?', 'Use Request a proposal and share your dates, cities, passenger numbers and service level. An operations planner will reply within [Confirm: response time].']
+    ];
+    const openQ = s.faq === undefined ? 0 : s.faq;
+    const faqs = faqData.map((f, i) => ({ q: f[0], a: f[1], open: i === openQ, expanded: i === openQ ? 'true' : 'false', sign: i === openQ ? '−' : '+', toggle: () => this.setState({ faq: i === openQ ? -1 : i }) }));
+
+    const clampZoom = (z) => Math.max(1, Math.min(6, z));
+    return {
+      theme: this.abTheme(), isDark: this.abTheme() === 'dark', isLight: this.abTheme() !== 'dark', isDarkStr: this.abTheme() === 'dark' ? 'true' : 'false',
+      themeLabel: this.abTheme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode', toggleTheme: () => this.abToggle(),
+      accent: accent,
+      R: R.toFixed(1),
+      frontDots: front || 'M0 0', limbDots: limb || 'M0 0', activeDots: act || 'M0 0', partnerDots: part || 'M0 0',
+      outlinePath: outline || 'M0 0', partnerOutline: pOutline || 'M0 0',
+      dotW: Math.min(2.6 * Math.pow(v.zoom, 0.55), 6).toFixed(2),
+      pins: pins,
+      cursor: this.drag ? 'grabbing' : 'grab',
+      hint: g ? 'Drag to rotate' : 'Loading the globe',
+      down: (e) => {
+        this.anim = null;
+        const cur = this.view();
+        this.drag = { x: e.clientX, y: e.clientY, lon: cur.lon, lat: cur.lat, w: e.currentTarget.getBoundingClientRect().width || 640 };
+        try { e.currentTarget.setPointerCapture(e.pointerId); } catch (err) {}
+        this.setState({ openCluster: null, touched: true });
+      },
+      move: (e) => {
+        const d = this.drag;
+        if (!d) return;
+        const k = (640 / d.w) * (180 / Math.PI) / (290 * this.view().zoom);
+        this.setState({ lon: d.lon - (e.clientX - d.x) * k, lat: Math.max(-70, Math.min(75, d.lat + (e.clientY - d.y) * k)) });
+      },
+      up: () => { if (!this.drag) return; this.drag = null; this.forceUpdate(); },
+      zoomIn: () => { const c = this.view(); this.flyTo(c.lon, c.lat, clampZoom(c.zoom * 1.6), 400); this.setState({ touched: true }); },
+      zoomOut: () => { const c = this.view(); this.flyTo(c.lon, c.lat, clampZoom(c.zoom / 1.6), 400); this.setState({ touched: true }); },
+      reset: () => { this.flyTo(50, 24, 1, 900); this.setState({ openCluster: null }); },
+      onSearch: (e) => this.setState({ q: e.target.value }),
+      hasResults: matches.length > 0, noResults: matches.length === 0,
+      tabs: tabs, panel: panel,
+      offices: offices, airports: airports, routes: routes, faqs: faqs
+    };
+  }
+}
+</script>
+</body>
+</html>

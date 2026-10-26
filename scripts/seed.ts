@@ -45,8 +45,8 @@ async function seed() {
 
   // Create default settings
   const defaultSettings = [
-    { key: "siteTitle", value: "AB.Limo" },
-    { key: "defaultSeo", value: { metaTitle: "AB.Limo - Premium Chauffeur Services", metaDescription: "Book luxury chauffeur services worldwide." } },
+    { key: "siteTitle", value: "AB" },
+    { key: "defaultSeo", value: { metaTitle: "AB - Premium Chauffeur Services", metaDescription: "Book luxury chauffeur services worldwide." } },
   ];
   for (const s of defaultSettings) {
     const exists = await Setting.findOne({ key: s.key });

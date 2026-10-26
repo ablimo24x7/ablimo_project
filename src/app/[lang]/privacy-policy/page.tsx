@@ -21,11 +21,11 @@ export async function generateMetadata({
   return generateSeoMetadata({
     title: isAr ? dict.privacy.title : "Privacy Policy",
     description: isAr
-      ? "تعرّف على كيفية جمع AB.Limo لبياناتك الشخصية واستخدامها وحمايتها عند استخدامك لخدماتنا الفاخرة."
-      : "Learn how AB.Limo collects, uses, and protects your personal data when you use our premium chauffeur services.",
+      ? "تعرّف على كيفية جمع AB لبياناتك الشخصية واستخدامها وحمايتها عند استخدامك لخدماتنا الفاخرة."
+      : "Learn how AB collects, uses, and protects your personal data when you use our premium chauffeur services.",
     path: "/privacy-policy",
     lang,
-    keywords: "AB.Limo privacy, data protection, privacy policy, personal data, cookie policy",
+    keywords: "AB privacy, data protection, privacy policy, personal data, cookie policy",
   });
 }
 
@@ -68,7 +68,7 @@ export default async function PrivacyPolicyPage({
           {/* Introduction */}
           <div className="bg-abBlack text-white leading-relaxed space-y-6 mb-16 rounded-xl p-6 md:p-8">
             <p>
-              At AB.Limo, we value your privacy and are committed to protecting
+              At AB, we value your privacy and are committed to protecting
               your personal data. This Privacy Policy explains how we collect,
               use, disclose, and safeguard your information when you use our
               premium chauffeur services, website, and mobile application
@@ -191,7 +191,7 @@ export default async function PrivacyPolicyPage({
                     <strong>Legal Authorities:</strong> We may disclose your
                     information if required by law, court order, or governmental
                     request, or to protect the rights, property, or safety of
-                    AB.Limo, our users, or the public.
+                    AB, our users, or the public.
                   </li>
                   <li>
                     <strong>Business Transfers:</strong> In the event of a
@@ -331,7 +331,7 @@ export default async function PrivacyPolicyPage({
                 </p>
                 <div className="bg-[#1c1d21] rounded-lg p-8 border border-gray-700/50 mt-6 space-y-3">
                   <p>
-                    <strong className="text-white">AB.Limo</strong>
+                    <strong className="text-white">AB</strong>
                   </p>
                   <p>Data Protection Officer</p>
                   <p>Malaz Area, Umar Ibn Abdulaziz Road, Building Number 59</p>

@@ -66,7 +66,7 @@ export default async function CountriesSection({
           </div>
         </div>
 
-        <CountriesCarousel items={visible} prevLabel={labels.prev} nextLabel={labels.next} />
+        <CountriesCarousel items={visible} />
       </div>
     </section>
   );

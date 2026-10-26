@@ -28,7 +28,7 @@ export async function generateMetadata({
       : "Travel between cities in luxury and comfort. Book a long distance car service with professional chauffeurs and premium vehicles.",
     path: "/city-to-city",
     lang,
-    keywords: "city to city transfer, long distance car service, intercity travel, AB.Limo, luxury transfer, intercity chauffeur",
+    keywords: "city to city transfer, long distance car service, intercity travel, AB, luxury transfer, intercity chauffeur",
   });
 }
 

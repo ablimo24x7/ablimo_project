@@ -64,7 +64,7 @@ export async function getContactChannelLinks(
         email: cfg.email ?? "",
         username: cfg.username ?? "",
         url: cfg.url ?? "",
-        presetMessage: cfg.presetMessage || fallbackMessage || "Hello AB.Limo",
+        presetMessage: cfg.presetMessage || fallbackMessage || "Hello AB",
       };
       if (def.fields.some((field) => !config[field])) continue;
 

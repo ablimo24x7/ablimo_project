@@ -303,7 +303,7 @@ const articleSchema = new Schema(
     // ── Sections Content ────────────────────────────────────
     sections: { type: Schema.Types.Mixed, default: [] },
 
-    // ── ABLimo Template Fields ─────────────────────────────
+    // ── Template Fields ────────────────────────────────────
     // "blog" = standalone post under /blogs/... (no service/location)
     templateType: {
       type: String,

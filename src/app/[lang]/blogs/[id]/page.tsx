@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = article.seo_metadata?.metaTitle || article.title;
   const description = article.seo_metadata?.metaDescription || article.excerpt;
-  const keywords = `${title}, AB.Limo blog, luxury transportation, chauffeur service`;
+  const keywords = `${title}, AB blog, luxury transportation, chauffeur service`;
 
   return generateSeoMetadata({
     title,

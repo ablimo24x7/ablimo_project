@@ -13,14 +13,14 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: isAr ? dict.partners.meta.title : "Strategic Partners & Alliances | AB.Limo Global Network",
+    title: isAr ? dict.partners.meta.title : "Strategic Partners & Alliances | AB Global Network",
     description: isAr
       ? dict.partners.meta.description
-      : "AB.Limo partners with leading airlines, hotels, and travel companies worldwide. Explore our strategic partnerships delivering seamless premium mobility experiences.",
+      : "AB partners with leading airlines, hotels, and travel companies worldwide. Explore our strategic partnerships delivering seamless premium mobility experiences.",
     path: "/partners",
     lang,
     keywords:
-      "AB.Limo partners, strategic alliances, airline partnerships, hotel partnerships, travel company partnerships, mobility network, luxury transportation partners",
+      "AB partners, strategic alliances, airline partnerships, hotel partnerships, travel company partnerships, mobility network, luxury transportation partners",
   });
 }
 

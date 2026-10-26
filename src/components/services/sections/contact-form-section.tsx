@@ -189,7 +189,7 @@ export default function ContactFormSection({ section }: ContactFormSectionProps)
                 )}
               </button>
               <p className="text-center text-xs text-gray-500 mt-4">
-                {getIcon("Lock", "w-3 h-3 inline mr-1")} Data secured by AB.Limo Enterprise infrastructure.
+                {getIcon("Lock", "w-3 h-3 inline mr-1")} Data secured by AB Enterprise infrastructure.
               </p>
             </div>
 

@@ -61,7 +61,7 @@ export default function ServiceCardsSection({ section, context }: ServiceCardsSe
         title: svc.name,
         description:
           svc.description ||
-          `Premium chauffeur-driven transportation with AB.Limo in ${context?.kind === "location" ? context.country.name : ""}.`,
+          `Premium chauffeur-driven transportation with AB in ${context?.kind === "location" ? context.country.name : ""}.`,
         actions: [{ label: "View Details", href: svc.href, style: "text" }],
       }))
     : ((section.items || []) as Array<{

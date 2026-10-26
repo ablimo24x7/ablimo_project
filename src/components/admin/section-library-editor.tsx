@@ -796,7 +796,7 @@ function ContentTab({ section, scope = "service", structureLocked = false, onUpd
             <Input
               value={(c.mediaTitle as string) || ""}
               onChange={(e) => updateContent("mediaTitle", e.target.value)}
-              placeholder="AB.Limo Command Center"
+              placeholder="AB Command Center"
             />
           </div>
           <div className="border-t pt-4 mt-4">

@@ -25,11 +25,11 @@ export async function generateMetadata({
   const description = lang === "ar" && country.descriptionAr ? country.descriptionAr : country.description;
 
   return generateSeoMetadata({
-    title: `Premium Chauffeur Service in ${name} | AB.Limo`,
-    description: description || `AB.Limo provides luxury chauffeur-driven transportation in ${name}. Airport transfers, corporate travel, and event logistics with premium vehicles and professional drivers.`,
+    title: `Premium Chauffeur Service in ${name} | AB`,
+    description: description || `AB provides luxury chauffeur-driven transportation in ${name}. Airport transfers, corporate travel, and event logistics with premium vehicles and professional drivers.`,
     path: `/locations/${countryParam}`,
     lang,
-    keywords: `AB.Limo ${name}, chauffeur service ${name}, luxury transportation ${name}, airport transfer ${name}, ${name} limousine, executive travel ${name}`,
+    keywords: `AB ${name}, chauffeur service ${name}, luxury transportation ${name}, airport transfer ${name}, ${name} limousine, executive travel ${name}`,
   });
 }
 

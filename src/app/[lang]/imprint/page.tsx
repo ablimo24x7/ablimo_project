@@ -21,11 +21,11 @@ export async function generateMetadata({
   return generateSeoMetadata({
     title: isAr ? dict.imprint.title : "Legal Notice",
     description: isAr
-      ? "إشعار قانوني ومعلومات الشركة لـ AB.Limo، بما في ذلك مواقع المكاتب في دول الخليج وتفاصيل الاتصال."
-      : "Legal notice and company information for AB.Limo, including our GCC office locations and contact details.",
+      ? "إشعار قانوني ومعلومات الشركة لـ AB، بما في ذلك مواقع المكاتب في دول الخليج وتفاصيل الاتصال."
+      : "Legal notice and company information for AB, including our GCC office locations and contact details.",
     path: "/imprint",
     lang,
-    keywords: "AB.Limo legal notice, company information, AB.Limo, legal disclosure, impressum",
+    keywords: "AB legal notice, company information, AB, legal disclosure, impressum",
   });
 }
 
@@ -65,7 +65,7 @@ export default async function ImprintPage({
             <h2 className="text-2xl font-bold mb-8">Company Information</h2>
             <div className="bg-abBlack rounded-xl p-6 md:p-8 text-white leading-relaxed space-y-4">
               <p>
-                <strong className="text-white">AB.Limo</strong>
+                <strong className="text-white">AB</strong>
               </p>
               <p>Headquarters: Malaz Area, Umar Ibn Abdulaziz Road</p>
               <p>Building Number 59, Second Floor</p>
@@ -146,7 +146,7 @@ export default async function ImprintPage({
             <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
                 The content on our website and application has been created with
-                the utmost care. However, AB.Limo cannot guarantee the
+                the utmost care. However, AB cannot guarantee the
                 accuracy, completeness, or timeliness of the content provided.
                 As a service provider, we are responsible for our own content on
                 these pages in accordance with applicable laws in the
@@ -202,7 +202,7 @@ export default async function ImprintPage({
                 immediately.
               </p>
               <p>
-                &copy; {new Date().getFullYear()} AB.Limo. All rights
+                &copy; {new Date().getFullYear()} AB. All rights
                 reserved.
               </p>
             </div>
@@ -235,7 +235,7 @@ export default async function ImprintPage({
             </h2>
             <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
               <p>
-                AB.Limo operates in compliance with all applicable laws and
+                AB operates in compliance with all applicable laws and
                 transportation regulations in each jurisdiction where we
                 operate, including the Kingdom of Saudi Arabia, the United
                 Arab Emirates, Qatar, Oman, Bahrain, and Kuwait.

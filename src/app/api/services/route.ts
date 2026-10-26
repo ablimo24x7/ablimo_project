@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
   // Auto-generate SEO metadata if not provided
   if (!data.seo) data.seo = { metaTitle: "", metaDescription: "", ogImage: "" };
   if (!data.seo.metaTitle) {
-    data.seo.metaTitle = `${data.title} | AB.Limo`;
+    data.seo.metaTitle = `${data.title} | AB`;
   }
   if (!data.seo.metaDescription) {
     data.seo.metaDescription = (data.subtitle || data.desc || data.title || "").slice(0, 160);

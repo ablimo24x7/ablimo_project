@@ -171,7 +171,7 @@ const SERVICE_META: Record<string, {
     faq: [
       { q: "How do I book a chauffeur for VIP transportation?", a: "You can book through our online platform, by phone, or via your corporate travel manager. Simply specify your pickup location, destination, and preferred vehicle. For recurring needs, we offer corporate accounts with priority dispatch." },
       { q: "What vehicles are available for executive chauffeur service?", a: "Our fleet includes the Mercedes S-Class, BMW 7 Series, Cadillac Escalade, Mercedes V-Class, and Mercedes Sprinter. All vehicles are late-model, immaculately maintained, and equipped with executive amenities." },
-      { q: "Are your chauffeurs licensed and background-checked?", a: "Yes. All AB.Limo chauffeurs hold valid transport licenses, undergo exhaustive background checks, complete defensive driving certifications, and sign legally binding non-disclosure agreements." },
+      { q: "Are your chauffeurs licensed and background-checked?", a: "Yes. All AB chauffeurs hold valid transport licenses, undergo exhaustive background checks, complete defensive driving certifications, and sign legally binding non-disclosure agreements." },
       { q: "Can I book an as-directed hourly chauffeur?", a: "Absolutely. Our As-Directed service provides a dedicated chauffeur on standby for dynamic, multi-stop itineraries. This is ideal for executives with unpredictable meeting schedules across the city." },
     ],
   },
@@ -228,7 +228,7 @@ const SERVICE_META: Record<string, {
       { icon: "Calendar", title: "Contract Solutions", description: "Long-term fleet leasing and dedicated vehicle programs for sustained corporate operations.", actions: [{ label: "Request Contract Quote", href: "#corporate-account", style: "accent", icon: "ChevronRight" }] },
     ],
     mediaSections: [
-      { eyebrow: "Enterprise Solutions", heading: "Scalable Corporate Mobility.", description: "As your business grows, so do your transportation needs. AB.Limo provides enterprise-grade mobility solutions that scale seamlessly with your organization — from startups with 5 employees to multinational corporations with thousands.", features: [{ icon: "TrendingUp", heading: "Scalable Fleet", description: "Expand or reduce fleet allocation as your business needs evolve." }, { icon: "BarChart", heading: "Usage Analytics", description: "Detailed reports on fleet utilization and cost optimization." }] },
+      { eyebrow: "Enterprise Solutions", heading: "Scalable Corporate Mobility.", description: "As your business grows, so do your transportation needs. AB provides enterprise-grade mobility solutions that scale seamlessly with your organization — from startups with 5 employees to multinational corporations with thousands.", features: [{ icon: "TrendingUp", heading: "Scalable Fleet", description: "Expand or reduce fleet allocation as your business needs evolve." }, { icon: "BarChart", heading: "Usage Analytics", description: "Detailed reports on fleet utilization and cost optimization." }] },
       { eyebrow: "Daily Operations", heading: "Employee Transport That Works.", description: "Our corporate shuttle and employee transport services ensure your team arrives on time, every day. Fixed routes, reliable schedules, and comfortable vehicles — the foundation of productive workforce mobility.", features: [{ icon: "Clock", heading: "Punctual Schedules", description: "Fixed-route shuttles that run on time, every time." }, { icon: "MapPin", heading: "Multi-Stop Routes", description: "Optimized routes covering residential areas to office locations." }] },
       { eyebrow: "Cost Efficiency", heading: "Optimized Corporate Travel Spend.", description: "Reduce your corporate transportation costs without compromising quality. Our fleet management solutions provide transparent pricing, consolidated billing, and volume-based discounts.", features: [{ icon: "DollarSign", heading: "Transparent Pricing", description: "Clear, upfront pricing with no hidden fees or surcharges." }, { icon: "PieChart", heading: "Cost Reports", description: "Monthly cost breakdowns and optimization recommendations." }] },
       { eyebrow: "SAP Integration", heading: "Automated Corporate Billing.", description: "Our SAP Concur and corporate expense system integration automates the billing process. VAT-compliant e-receipts are generated automatically and mapped to your cost centers.", features: [{ icon: "FileInvoiceDollar", heading: "SAP Concur", description: "Automated receipt generation mapped to corporate cost centers." }, { icon: "Receipt", heading: "VAT Compliance", description: "Full VAT-compliant invoicing for regulatory compliance." }] },
@@ -264,7 +264,7 @@ const SERVICE_META: Record<string, {
       { icon: "Star", title: "VIP Delegation", description: "Discreet, coordinated transport for VIP delegations, dignitaries, and high-profile guests.", actions: [{ label: "Arrange VIP Delegation", href: "#corporate-account", style: "accent", icon: "ChevronRight" }] },
     ],
     mediaSections: [
-      { eyebrow: "Event Logistics", heading: "Orchestrating Complex Event Transport.", description: "Major events demand flawless logistics. AB.Limo provides comprehensive event transportation management — from initial planning through execution and post-event dispersal. Our Transport Control Room coordinates every vehicle in real-time.", features: [{ icon: "Network", heading: "Control Room", description: "Centralized command center for real-time fleet coordination." }, { icon: "Radio", heading: "Live Dispatch", description: "Instant vehicle repositioning based on real-time demand." }] },
+      { eyebrow: "Event Logistics", heading: "Orchestrating Complex Event Transport.", description: "Major events demand flawless logistics. AB provides comprehensive event transportation management — from initial planning through execution and post-event dispersal. Our Transport Control Room coordinates every vehicle in real-time.", features: [{ icon: "Network", heading: "Control Room", description: "Centralized command center for real-time fleet coordination." }, { icon: "Radio", heading: "Live Dispatch", description: "Instant vehicle repositioning based on real-time demand." }] },
       { eyebrow: "MICE Transport", heading: "Meetings, Incentives, Conferences, Exhibitions.", description: "We specialize in MICE transportation — the complex logistics of moving hundreds or thousands of delegates between hotels, venues, and social events on tight schedules.", features: [{ icon: "Users", heading: "Delegate Management", description: "Digital manifests and real-time passenger tracking." }, { icon: "Hotel", heading: "Hotel Coordination", description: "Seamless transfers between multiple hotel properties." }] },
       { eyebrow: "VIP Protocols", heading: "Dignitary & VVIP Transport.", description: "For heads of state, royal delegations, and international VIPs, we provide transport that meets the highest protocol standards. Security-cleared chauffeurs, armored vehicles available.", features: [{ icon: "Crown", heading: "Protocol Standards", description: "Transport that meets international diplomatic protocol." }, { icon: "Shield", heading: "Security Detail", description: "Security-cleared chauffeurs and vehicles for VVIP transport." }] },
       { eyebrow: "Fleet Deployment", heading: "Multi-Vehicle Coordination.", description: "From executive sedans to luxury coaches, we deploy the right mix of vehicles for your event. Our fleet management ensures synchronized arrivals and departures across all venues.", features: [{ icon: "Bus", heading: "VIP Coaches", description: "Luxury coaches for group transfers between venues." }, { icon: "Car", heading: "Executive Sedans", description: "Individual VIP transfers with dedicated chauffeurs." }] },
@@ -344,7 +344,7 @@ const SERVICE_META: Record<string, {
       { eyebrow: "Airport to Attraction", heading: "Direct Tourist Transfers.", description: "From airport arrival to hotel and attractions, we provide end-to-end tourism transportation. Begin your vacation the moment you land.", features: [{ icon: "Plane", heading: "Airport Pickup", description: "Direct transfers from airport to hotel or attractions." }, { icon: "Hotel", heading: "Hotel Coordination", description: "Seamless transfers between hotels and tour sites." }] },
       { eyebrow: "Night Tours", heading: "City by Night.", description: "Experience the city's nightlife, illuminated landmarks, and evening entertainment with our safe, comfortable night tour service.", features: [{ icon: "Moon", heading: "Night Illumination", description: "Tours timed to capture illuminated city landmarks." }, { icon: "Wine", heading: "Restaurant Transfers", description: "Transport to the city's finest dining establishments." }] },
       { eyebrow: "Custom Itineraries", heading: "Your Tour, Your Way.", description: "We customize every tour to match your interests, pace, and schedule. Whether you prefer art, history, food, or adventure, we create the perfect itinerary.", features: [{ icon: "Sliders", heading: "Personalized Routes", description: "Custom itineraries based on your interests." }, { icon: "Clock", heading: "Flexible Pacing", description: "Adjust stops and timing to match your preferences." }] },
-      { eyebrow: "Travel Agencies", heading: "Partner with Us.", description: "Travel agencies and tour operators can partner with AB.Limo for reliable, high-quality ground transportation for their clients.", features: [{ icon: "Handshake", heading: "Agency Partnerships", description: "Preferred rates and priority booking for partners." }, { icon: "FileText", heading: "Commission Programs", description: "Competitive commission structures for tour operators." }] },
+      { eyebrow: "Travel Agencies", heading: "Partner with Us.", description: "Travel agencies and tour operators can partner with AB for reliable, high-quality ground transportation for their clients.", features: [{ icon: "Handshake", heading: "Agency Partnerships", description: "Preferred rates and priority booking for partners." }, { icon: "FileText", heading: "Commission Programs", description: "Competitive commission structures for tour operators." }] },
       { eyebrow: "Eco Tours", heading: "Sustainable Tourism Travel.", description: "Explore responsibly with our eco-friendly tourism options. Hybrid and electric vehicles available for environmentally conscious travelers.", features: [{ icon: "Leaf", heading: "Green Fleet", description: "Hybrid and electric vehicle options for eco-tourism." }, { icon: "Heart", heading: "Responsible Travel", description: "Supporting sustainable tourism practices." }] },
     ],
     fleetBadge: "Tour Fleet",
@@ -352,7 +352,7 @@ const SERVICE_META: Record<string, {
       { q: "Do your chauffeurs provide guided commentary during tours?", a: "Yes. Our tourism chauffeurs are knowledgeable about local landmarks, history, and culture. They provide informative commentary during tours and can recommend restaurants, attractions, and activities." },
       { q: "Can you customize tour itineraries?", a: "Absolutely. We design custom itineraries based on your interests, whether that's history, architecture, cuisine, adventure, or a mix. Every tour can be tailored to your preferences." },
       { q: "What types of tourism transportation do you offer?", a: "We provide city sightseeing tours, heritage site visits, day excursions, multi-day tour packages, airport-to-attraction transfers, and photography tours. All services use our premium fleet." },
-      { q: "Can travel agencies partner with AB.Limo for ground transport?", a: "Yes. We offer partnership programs for travel agencies and tour operators with preferred rates, priority booking, and commission structures." },
+      { q: "Can travel agencies partner with AB for ground transport?", a: "Yes. We offer partnership programs for travel agencies and tour operators with preferred rates, priority booking, and commission structures." },
     ],
   },
 };
@@ -364,18 +364,18 @@ function generateTitle(serviceSlug: string, cityName: string): string {
 
 function generateExcerpt(serviceSlug: string, cityName: string, countryName: string): string {
   const svc = SERVICE_META[serviceSlug];
-  return `AB.Limo provides ${svc?.description?.toLowerCase() || 'premium transportation services'} in ${cityName}, ${countryName}. ${svc?.label || serviceSlug} with professional chauffeurs and executive-grade vehicles.`;
+  return `AB provides ${svc?.description?.toLowerCase() || 'premium transportation services'} in ${cityName}, ${countryName}. ${svc?.label || serviceSlug} with professional chauffeurs and executive-grade vehicles.`;
 }
 
 function generateSeoTitle(serviceSlug: string, cityName: string): string {
   const svc = SERVICE_META[serviceSlug];
-  return `${svc?.label || serviceSlug} ${cityName} | AB.Limo`;
+  return `${svc?.label || serviceSlug} ${cityName} | AB`;
 }
 
 function generateSeoDescription(serviceSlug: string, cityName: string, keywords: string[]): string {
   const svc = SERVICE_META[serviceSlug];
   const primaryKeywords = keywords.slice(0, 3).join(", ");
-  return `Professional ${svc?.label || serviceSlug} in ${cityName}. ${primaryKeywords}. AB.Limo provides premium executive transportation with a luxury fleet and certified chauffeurs.`;
+  return `Professional ${svc?.label || serviceSlug} in ${cityName}. ${primaryKeywords}. AB provides premium executive transportation with a luxury fleet and certified chauffeurs.`;
 }
 
 // ── Template generator ───────────────────────────────────────────
@@ -394,7 +394,7 @@ function generateSections(data: CityServiceData, meta: { name: string; country: 
         eyebrow: `${city} Operations`,
         title: svcLabel.includes("&") ? `Premium ${svcLabel.split("&")[0].trim()} Services` : `${svcLabel} Services`,
         titleHighlight: `in ${city}.`,
-        description: `AB.Limo provides ${svcMeta.description.toLowerCase()} in ${city}, ${country}. Our operations are strategically positioned to serve ${landmarks.join(", ")} and the greater ${city} metropolitan area with executive-grade vehicles and certified professional chauffeurs. Whether you need ${kws[0] || 'premium transportation'}, ${kws[1] || 'executive car service'}, or ${kws[2] || 'VIP transport'}, our ${city} team delivers military-precision logistics.`,
+        description: `AB provides ${svcMeta.description.toLowerCase()} in ${city}, ${country}. Our operations are strategically positioned to serve ${landmarks.join(", ")} and the greater ${city} metropolitan area with executive-grade vehicles and certified professional chauffeurs. Whether you need ${kws[0] || 'premium transportation'}, ${kws[1] || 'executive car service'}, or ${kws[2] || 'VIP transport'}, our ${city} team delivers military-precision logistics.`,
       },
       items: [
         { label: `Request ${city} ${svcLabel}`, href: "#corporate-account", style: "primary", icon: "ArrowRight", iconPosition: "right" },
@@ -536,7 +536,7 @@ function generateSections(data: CityServiceData, meta: { name: string; country: 
 // ── Main ─────────────────────────────────────────────────────────
 async function main() {
   console.log("═══════════════════════════════════════════════════════════");
-  console.log("  AB.Limo — Tier 1 City Service Page Generator");
+  console.log("  AB — Tier 1 City Service Page Generator");
   console.log("═══════════════════════════════════════════════════════════\n");
 
   // 1. Parse data
@@ -667,7 +667,7 @@ async function main() {
         category: "services",
         categoryLabel: svcMeta.label,
         author: "ab-limo",
-        authorName: "AB.Limo Editorial",
+        authorName: "AB Editorial",
         date: new Date().toISOString().split("T")[0],
         readTime: 8,
         featured: false,

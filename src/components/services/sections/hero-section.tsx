@@ -143,7 +143,7 @@ export default function HeroSection({ section, serviceName, context }: HeroSecti
           src={bgImage}
           alt={bgAlt || c.title || serviceName || ""}
           fill
-          className="object-cover"
+          className="object-cover scale-x-130 scale-y-120"
           priority
         />
       )}

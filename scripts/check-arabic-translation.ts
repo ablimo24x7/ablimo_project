@@ -13,7 +13,7 @@ const article = {
   bodyContent: "<p>Book a <strong>chauffeur</strong> at King Khalid International Airport.</p>",
   keyTakeawaysContent: "",
   finalThoughtsContent: "",
-  seo_metadata: { metaTitle: "Airport Transfers | AB.Limo", metaDescription: "Premium transfers." },
+  seo_metadata: { metaTitle: "Airport Transfers | AB", metaDescription: "Premium transfers." },
   faqs: [{ q: "How fast is the transfer?", a: "Around 45 minutes." }],
   sections: [
     {
@@ -25,7 +25,7 @@ const article = {
       content: {
         eyebrow: "Capital Operations",
         title: "Mastering Mobility in Riyadh.",
-        description: "<p>The nerve center of AB.Limo operations.</p>",
+        description: "<p>The nerve center of AB operations.</p>",
         sectionCta: { label: "Book Now", href: "#contact", style: "primary", icon: "Calendar" },
       },
       items: [{ id: "i1", label: "Explore Riyadh", href: "#fleet", style: "secondary" }],

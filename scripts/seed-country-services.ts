@@ -61,7 +61,7 @@ const COUNTRIES: CountryMeta[] = [
       "Prince Mohammad Bin Abdulaziz Airport (MED)",
     ],
     intro:
-      "Saudi Arabia's Vision 2030 transformation has reshaped business travel across the Kingdom — from Riyadh's King Abdullah Financial District to the mega-projects taking shape in NEOM and AlUla. AB.Limo operates across the Kingdom with protocol-trained chauffeurs, a late-model black fleet, and a 24/7 control room coordinating every journey.",
+      "Saudi Arabia's Vision 2030 transformation has reshaped business travel across the Kingdom — from Riyadh's King Abdullah Financial District to the mega-projects taking shape in NEOM and AlUla. AB operates across the Kingdom with protocol-trained chauffeurs, a late-model black fleet, and a 24/7 control room coordinating every journey.",
     tags: ["saudi arabia", "riyadh", "jeddah", "dammam", "king khalid airport", "RUH"],
   },
   {
@@ -82,7 +82,7 @@ const COUNTRIES: CountryMeta[] = [
       "Ras Al Khaimah International Airport (RKT)",
     ],
     intro:
-      "The UAE is the Gulf's busiest aviation and business gateway, with DXB and AUH handling tens of millions of passengers every year. AB.Limo's UAE operation is built for that scale — flight-tracked airport pickups, as-directed executive hire, and multi-vehicle coordination for conferences and delegations across all seven emirates.",
+      "The UAE is the Gulf's busiest aviation and business gateway, with DXB and AUH handling tens of millions of passengers every year. AB's UAE operation is built for that scale — flight-tracked airport pickups, as-directed executive hire, and multi-vehicle coordination for conferences and delegations across all seven emirates.",
     tags: ["uae", "dubai", "abu dhabi", "DXB", "AUH", "sharjah"],
   },
   {
@@ -96,7 +96,7 @@ const COUNTRIES: CountryMeta[] = [
     ],
     airports: ["Hamad International Airport (DOH)"],
     intro:
-      "Qatar's position as a global LNG hub and its post-World Cup infrastructure have made Doha one of the region's busiest business destinations. AB.Limo provides end-to-end ground transport across Qatar — from Hamad International Airport pickups to managed corporate fleets serving West Bay, Lusail, and the Pearl.",
+      "Qatar's position as a global LNG hub and its post-World Cup infrastructure have made Doha one of the region's busiest business destinations. AB provides end-to-end ground transport across Qatar — from Hamad International Airport pickups to managed corporate fleets serving West Bay, Lusail, and the Pearl.",
     tags: ["qatar", "doha", "lusail", "hamad airport", "DOH"],
   },
   {
@@ -110,7 +110,7 @@ const COUNTRIES: CountryMeta[] = [
     ],
     airports: ["Bahrain International Airport (BAH)"],
     intro:
-      "Bahrain is the Gulf's financial services centre, and its compact geography means every major destination is within 30 minutes of the airport. AB.Limo serves corporate clients, government delegations, and Formula 1 arrivals with a professional chauffeur fleet based in Manama.",
+      "Bahrain is the Gulf's financial services centre, and its compact geography means every major destination is within 30 minutes of the airport. AB serves corporate clients, government delegations, and Formula 1 arrivals with a professional chauffeur fleet based in Manama.",
     tags: ["bahrain", "manama", "bahrain airport", "BAH", "riffa"],
   },
   {
@@ -124,7 +124,7 @@ const COUNTRIES: CountryMeta[] = [
     ],
     airports: ["Kuwait International Airport (KWI)"],
     intro:
-      "Kuwait's oil economy and government institutions generate steady demand for reliable executive transport. AB.Limo operates a dedicated Kuwait fleet covering Kuwait City, the Farwaniya government district, and the Al Ahmadi oil communities, with Kuwait International Airport as the primary entry point.",
+      "Kuwait's oil economy and government institutions generate steady demand for reliable executive transport. AB operates a dedicated Kuwait fleet covering Kuwait City, the Farwaniya government district, and the Al Ahmadi oil communities, with Kuwait International Airport as the primary entry point.",
     tags: ["kuwait", "kuwait city", "kuwait airport", "KWI", "hawalli"],
   },
   {
@@ -138,7 +138,7 @@ const COUNTRIES: CountryMeta[] = [
     ],
     airports: ["Muscat International Airport (MCT)", "Salalah Airport (SLL)"],
     intro:
-      "Oman pairs a growing business sector with some of the Gulf's most rewarding tourism routes — from Muscat's corniche to Jebel Shams and the Wahiba Sands. AB.Limo's Omani operation covers corporate travel, airport transfers, and multi-day tourism itineraries with mountain-experienced chauffeurs.",
+      "Oman pairs a growing business sector with some of the Gulf's most rewarding tourism routes — from Muscat's corniche to Jebel Shams and the Wahiba Sands. AB's Omani operation covers corporate travel, airport transfers, and multi-day tourism itineraries with mountain-experienced chauffeurs.",
     tags: ["oman", "muscat", "muscat airport", "MCT", "salalah"],
   },
 ];
@@ -149,12 +149,12 @@ const SERVICES: ServiceMeta[] = [
     categoryLabel: "Airport Transfers",
     title: (c) => `Airport Transfers in ${c.name}: Meet, Greet & On-Time Arrivals`,
     excerpt: (c) =>
-      `AB.Limo's airport transfer service in ${c.name} covers ${c.airports.length} major airports with real-time flight tracking, meet & greet, and complimentary waiting time. Book a fixed-route executive transfer in minutes.`,
+      `AB's airport transfer service in ${c.name} covers ${c.airports.length} major airports with real-time flight tracking, meet & greet, and complimentary waiting time. Book a fixed-route executive transfer in minutes.`,
     sections: (c) => `
       <h2>Airport Transfers Built Around Your Flight</h2>
       <p>${c.intro}</p>
 
-      <h2>How the AB.Limo Airport Transfer Works</h2>
+      <h2>How the AB Airport Transfer Works</h2>
       <p><strong>1. Flight Monitoring:</strong> Our system tracks your flight in real time. If you land early or your departure is delayed, your chauffeur adjusts automatically — you never wait, and you are never charged for reasonable delay-related waiting.</p>
       <p><strong>2. Meet & Greet:</strong> A professional representative greets you at the arrivals gate with a personalised name sign, assists with luggage, and escorts you to your vehicle.</p>
       <p><strong>3. Executive Vehicle:</strong> Choose from executive sedans, luxury SUVs, or spacious vans. Every vehicle is inspected, detailed, and positioned before your arrival.</p>
@@ -184,14 +184,14 @@ const SERVICES: ServiceMeta[] = [
       </ul>
     `,
     finalThoughts: (c) => `
-      <p>An airport transfer sets the tone for the entire trip. In ${c.name}, AB.Limo ensures that first impression — and the last one — is punctual, professional, and comfortable. Book your next arrival or departure with our team.</p>
+      <p>An airport transfer sets the tone for the entire trip. In ${c.name}, AB ensures that first impression — and the last one — is punctual, professional, and comfortable. Book your next arrival or departure with our team.</p>
     `,
-    seoTitle: (c) => `Airport Transfers in ${c.name} | Meet & Greet | AB.Limo`,
+    seoTitle: (c) => `Airport Transfers in ${c.name} | Meet & Greet | AB`,
     seoDescription: (c) =>
       `Airport transfers across ${c.name}. Flight tracking, meet & greet, complimentary waiting time, and executive vehicles at ${c.airports.length} airports.`,
     faqs: (c) => [
       {
-        q: `Which airports in ${c.name} does AB.Limo serve?`,
+        q: `Which airports in ${c.name} does AB serve?`,
         a: `We cover ${c.airports.join(", ")}, with terminal-level pickup coordination for domestic and international flights.`,
       },
       {
@@ -215,13 +215,13 @@ const SERVICES: ServiceMeta[] = [
     categoryLabel: "Chauffeur & VIP",
     title: (c) => `VIP Chauffeur Service in ${c.name}: Executive Ground Transport`,
     excerpt: (c) =>
-      `AB.Limo's chauffeur service in ${c.name} delivers protocol-trained drivers, a uniform black fleet, and 24/7 availability for corporate travel, government visits, and private itineraries.`,
+      `AB's chauffeur service in ${c.name} delivers protocol-trained drivers, a uniform black fleet, and 24/7 availability for corporate travel, government visits, and private itineraries.`,
     sections: (c) => `
       <h2>Executive Chauffeur Service Across ${c.name}</h2>
       <p>${c.intro}</p>
 
       <h2>Why a Professional Chauffeur</h2>
-      <p>Navigating ${c.name}'s roads, peak-hour congestion, and security checkpoints takes more than a driver — it takes a trained professional who understands protocol, punctuality, and discretion. AB.Limo chauffeurs undergo background screening, defensive driving certification, and corporate etiquette training.</p>
+      <p>Navigating ${c.name}'s roads, peak-hour congestion, and security checkpoints takes more than a driver — it takes a trained professional who understands protocol, punctuality, and discretion. AB chauffeurs undergo background screening, defensive driving certification, and corporate etiquette training.</p>
       <ul>
         <li><strong>Vetted Professionals:</strong> Multi-stage background checks and continuous performance review.</li>
         <li><strong>Real-Time Routing:</strong> GPS-monitored fleets with live traffic intelligence for on-time arrivals.</li>
@@ -243,7 +243,7 @@ const SERVICES: ServiceMeta[] = [
       <p>Our fleet is deliberately uniform: Mercedes S-Class and BMW 7 Series for executive sedans, Range Rover and Cadillac Escalade for luxury SUVs, and Mercedes V-Class for group travel. Every vehicle is late-model, black, and detailed before each journey — with bottled water, charging ports, and Wi-Fi on selected models.</p>
 
       <h2>Availability & Booking</h2>
-      <p>AB.Limo operates 24/7 across ${c.name}. Book through our concierge line, corporate portal, or WhatsApp. Advance reservation is recommended for multi-day itineraries and event periods.</p>
+      <p>AB operates 24/7 across ${c.name}. Book through our concierge line, corporate portal, or WhatsApp. Advance reservation is recommended for multi-day itineraries and event periods.</p>
     `,
     takeaways: () => `
       <ul>
@@ -254,9 +254,9 @@ const SERVICES: ServiceMeta[] = [
       </ul>
     `,
     finalThoughts: (c) => `
-      <p>In ${c.name}, ground transport should be an asset, not an admin burden. AB.Limo's chauffeur service gives you a vetted professional, a pristine vehicle, and a control room that keeps every journey on schedule. Contact our concierge team to arrange your next assignment.</p>
+      <p>In ${c.name}, ground transport should be an asset, not an admin burden. AB's chauffeur service gives you a vetted professional, a pristine vehicle, and a control room that keeps every journey on schedule. Contact our concierge team to arrange your next assignment.</p>
     `,
-    seoTitle: (c) => `VIP Chauffeur Service in ${c.name} | AB.Limo`,
+    seoTitle: (c) => `VIP Chauffeur Service in ${c.name} | AB`,
     seoDescription: (c) =>
       `Executive chauffeur service across ${c.name}. Protocol-trained drivers, uniform black fleet, 24/7 availability for corporate and private travel.`,
     faqs: (c) => [
@@ -270,7 +270,7 @@ const SERVICES: ServiceMeta[] = [
       },
       {
         q: "Are your chauffeurs vetted and insured?",
-        a: "Every AB.Limo chauffeur passes multi-stage background screening, holds a professional licence, and drives a fully insured, GPS-monitored vehicle.",
+        a: "Every AB chauffeur passes multi-stage background screening, holds a professional licence, and drives a fully insured, GPS-monitored vehicle.",
       },
       {
         q: "Can you handle VIP and diplomatic protocol?",
@@ -285,7 +285,7 @@ const SERVICES: ServiceMeta[] = [
     categoryLabel: "Corporate Transportation",
     title: (c) => `Corporate Transportation in ${c.name}: Managed Business Travel`,
     excerpt: (c) =>
-      `AB.Limo's corporate transportation service in ${c.name} provides enterprise-grade ground transport — dedicated account management, consolidated billing, and priority dispatch for employee transfers, client visits, and executive roadshows.`,
+      `AB's corporate transportation service in ${c.name} provides enterprise-grade ground transport — dedicated account management, consolidated billing, and priority dispatch for employee transfers, client visits, and executive roadshows.`,
     sections: (c) => `
       <h2>Corporate Ground Transport Across ${c.name}</h2>
       <p>${c.intro}</p>
@@ -324,9 +324,9 @@ const SERVICES: ServiceMeta[] = [
       </ul>
     `,
     finalThoughts: (c) => `
-      <p>Corporate ground transport in ${c.name} works best when it is managed, not improvised. AB.Limo's corporate accounts give your travel team visibility, control, and a single invoice — while your executives get consistent, professional service on every journey. Contact us to set up an account.</p>
+      <p>Corporate ground transport in ${c.name} works best when it is managed, not improvised. AB's corporate accounts give your travel team visibility, control, and a single invoice — while your executives get consistent, professional service on every journey. Contact us to set up an account.</p>
     `,
-    seoTitle: (c) => `Corporate Transportation in ${c.name} | Business Travel | AB.Limo`,
+    seoTitle: (c) => `Corporate Transportation in ${c.name} | Business Travel | AB`,
     seoDescription: (c) =>
       `Managed corporate ground transport across ${c.name}. Dedicated accounts, priority dispatch, consolidated billing, and executive transfers for business travel.`,
     faqs: (c) => [
@@ -336,7 +336,7 @@ const SERVICES: ServiceMeta[] = [
       },
       {
         q: "Can the account cover multiple cities?",
-        a: "Yes. A single account covers all cities and countries where AB.Limo operates, with consolidated reporting across every market.",
+        a: "Yes. A single account covers all cities and countries where AB operates, with consolidated reporting across every market.",
       },
       {
         q: "What billing options are available?",
@@ -355,7 +355,7 @@ const SERVICES: ServiceMeta[] = [
     categoryLabel: "Event Transportation",
     title: (c) => `Event Transportation in ${c.name}: Delegations, Conferences & Galas`,
     excerpt: (c) =>
-      `AB.Limo's event transportation service in ${c.name} coordinates multi-vehicle fleets for conferences, exhibitions, weddings, and state occasions — with a dedicated dispatch desk, marshalled pickups, and on-site coordinators.`,
+      `AB's event transportation service in ${c.name} coordinates multi-vehicle fleets for conferences, exhibitions, weddings, and state occasions — with a dedicated dispatch desk, marshalled pickups, and on-site coordinators.`,
     sections: (c) => `
       <h2>Event Logistics, Solved</h2>
       <p>${c.intro}</p>
@@ -370,7 +370,7 @@ const SERVICES: ServiceMeta[] = [
 
       <h2>How We Coordinate</h2>
       <p><strong>1. Pre-Event Planning:</strong> We build a movement plan from your guest list and run sheet — vehicle mix, staging positions, timing windows, and contingency vehicles.</p>
-      <p><strong>2. On-Site Coordinator:</strong> A uniformed AB.Limo coordinator manages the pickup zone, passenger manifest, and vehicle turnaround at each venue.</p>
+      <p><strong>2. On-Site Coordinator:</strong> A uniformed AB coordinator manages the pickup zone, passenger manifest, and vehicle turnaround at each venue.</p>
       <p><strong>3. Live Dispatch Desk:</strong> During the event, a dedicated dispatcher tracks every vehicle in real time and adjusts routing for delays, weather, or schedule changes.</p>
       <p><strong>4. Post-Event Report:</strong> Trip logs, passenger counts, and vehicle utilisation delivered within 48 hours of wrap.</p>
 
@@ -394,9 +394,9 @@ const SERVICES: ServiceMeta[] = [
       </ul>
     `,
     finalThoughts: (c) => `
-      <p>Events in ${c.name} live and die by logistics. AB.Limo's event transport team plans the movements before the first guest arrives, coordinates them on the ground, and reports on them after wrap — so your attention stays on the event itself.</p>
+      <p>Events in ${c.name} live and die by logistics. AB's event transport team plans the movements before the first guest arrives, coordinates them on the ground, and reports on them after wrap — so your attention stays on the event itself.</p>
     `,
-    seoTitle: (c) => `Event Transportation in ${c.name} | Conferences & Delegations | AB.Limo`,
+    seoTitle: (c) => `Event Transportation in ${c.name} | Conferences & Delegations | AB`,
     seoDescription: (c) =>
       `Multi-vehicle event transport across ${c.name}. Delegation shuttles, VIP fleets, on-site coordinators, and live dispatch for conferences, weddings, and state events.`,
     faqs: (c) => [
@@ -425,7 +425,7 @@ const SERVICES: ServiceMeta[] = [
     categoryLabel: "Bus & Coach Hire",
     title: (c) => `Bus & Coach Hire in ${c.name}: Group Travel Made Simple`,
     excerpt: (c) =>
-      `AB.Limo's bus and coach hire in ${c.name} moves groups of 15–50 passengers in air-conditioned coaches — staff shuttles, event charters, hotel transfers, and intercity group travel with professional drivers.`,
+      `AB's bus and coach hire in ${c.name} moves groups of 15–50 passengers in air-conditioned coaches — staff shuttles, event charters, hotel transfers, and intercity group travel with professional drivers.`,
     sections: (c) => `
       <h2>Group Transport Across ${c.name}</h2>
       <p>${c.intro}</p>
@@ -461,9 +461,9 @@ const SERVICES: ServiceMeta[] = [
       </ul>
     `,
     finalThoughts: (c) => `
-      <p>Moving a group across ${c.name} should not mean coordinating ten cars and a WhatsApp thread. AB.Limo's coach hire gives your group one vehicle, one driver, and one arrival time. Tell us your headcount and route — we will match the right coach.</p>
+      <p>Moving a group across ${c.name} should not mean coordinating ten cars and a WhatsApp thread. AB's coach hire gives your group one vehicle, one driver, and one arrival time. Tell us your headcount and route — we will match the right coach.</p>
     `,
-    seoTitle: (c) => `Bus & Coach Hire in ${c.name} | Group Transport | AB.Limo`,
+    seoTitle: (c) => `Bus & Coach Hire in ${c.name} | Group Transport | AB`,
     seoDescription: (c) =>
       `Bus and coach hire across ${c.name}. 15–50 seat air-conditioned coaches for staff shuttles, event charters, hotel transfers, and intercity group travel.`,
     faqs: (c) => [
@@ -492,7 +492,7 @@ const SERVICES: ServiceMeta[] = [
     categoryLabel: "Tourism Transportation",
     title: (c) => `Tourism Transportation in ${c.name}: Guided Transfers & Tours`,
     excerpt: (c) =>
-      `AB.Limo's tourism transportation in ${c.name} provides guided transfers, sightseeing tours, and multi-day itineraries — with English-speaking chauffeurs, flexible routing, and vehicles matched to luggage and group size.`,
+      `AB's tourism transportation in ${c.name} provides guided transfers, sightseeing tours, and multi-day itineraries — with English-speaking chauffeurs, flexible routing, and vehicles matched to luggage and group size.`,
     sections: (c) => `
       <h2>Explore ${c.name} in Comfort</h2>
       <p>${c.intro}</p>
@@ -517,7 +517,7 @@ const SERVICES: ServiceMeta[] = [
       <p>Share your arrival dates, hotel, and a list of sights — our team returns a suggested itinerary with timings, drive durations, and a fixed quote. Custom itineraries, dietary-aware restaurant stops, and child-seat requests are all accommodated.</p>
 
       <h2>For Tour Operators</h2>
-      <p>Travel agencies and DMCs can partner with AB.Limo on contracted ground-handling rates, white-labelled vehicles, and multi-lingual driver allocation for inbound groups.</p>
+      <p>Travel agencies and DMCs can partner with AB on contracted ground-handling rates, white-labelled vehicles, and multi-lingual driver allocation for inbound groups.</p>
     `,
     takeaways: () => `
       <ul>
@@ -528,9 +528,9 @@ const SERVICES: ServiceMeta[] = [
       </ul>
     `,
     finalThoughts: (c) => `
-      <p>${c.name} rewards travellers who see more than the hotel lobby. AB.Limo's tourism transport gets you there comfortably, returns you on time, and handles the logistics in between — so every day of your trip starts and ends smoothly.</p>
+      <p>${c.name} rewards travellers who see more than the hotel lobby. AB's tourism transport gets you there comfortably, returns you on time, and handles the logistics in between — so every day of your trip starts and ends smoothly.</p>
     `,
-    seoTitle: (c) => `Tourism Transportation in ${c.name} | Guided Tours & Transfers | AB.Limo`,
+    seoTitle: (c) => `Tourism Transportation in ${c.name} | Guided Tours & Transfers | AB`,
     seoDescription: (c) =>
       `Tourism ground transport across ${c.name}. Guided city tours, airport-to-hotel transfers, multi-day itineraries, and cruise coordination with English-speaking chauffeurs.`,
     faqs: (c) => [
@@ -575,7 +575,7 @@ function buildArticles() {
         citySlug: "",
         country: country.name === "the UAE" ? "UAE" : country.name,
         author: "unknown",
-        authorName: "AB.Limo Editorial",
+        authorName: "AB Editorial",
         date: DATE,
         readTime: service.readTime,
         featured: false,

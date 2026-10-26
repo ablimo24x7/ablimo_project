@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     path: `/services/${slug.join("/")}`,
     lang,
-    keywords: `${title}, AB.Limo, luxury chauffeur service`,
+    keywords: `${title}, AB, luxury chauffeur service`,
     ogImage: article.seo_metadata?.ogImage,
     type: "article",
   });

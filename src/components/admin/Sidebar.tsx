@@ -82,7 +82,7 @@ export function AdminSidebar() {
                 <span className="font-bold text-sm">AB</span>
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">AB.Limo</span>
+                <span className="truncate font-semibold">AB</span>
                 <span className="truncate text-xs">Dashboard</span>
               </div>
             </SidebarMenuButton>

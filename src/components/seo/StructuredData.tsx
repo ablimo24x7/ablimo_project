@@ -18,12 +18,11 @@ export function OrganizationJsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "AB.Limo",
-    alternateName: "AB Limo",
+    name: "AB",
     url: SITE_URL,
     logo: `${SITE_URL}/AB_LOGO-NEW.png`,
     description:
-      "AB.Limo is a premier provider of VIP and executive chauffeur services, corporate ground transportation, airport protocol meet & assist, and event logistics across the GCC — Saudi Arabia, UAE, Qatar, Oman, Bahrain, and Kuwait. Founded in 1999 and trusted by global corporations, event organizers, and government delegations, AB.Limo delivers 24/7 dispatch, GPS-tracked vehicles, and fully licensed operations.",
+      "AB is a premier provider of VIP and executive chauffeur services, corporate ground transportation, airport protocol meet & assist, and event logistics across the GCC — Saudi Arabia, UAE, Qatar, Oman, Bahrain, and Kuwait. Founded in 1999 and trusted by global corporations, event organizers, and government delegations, AB delivers 24/7 dispatch, GPS-tracked vehicles, and fully licensed operations.",
     foundingDate: "1999",
     contactPoint: {
       "@type": "ContactPoint",
@@ -57,7 +56,7 @@ export function LocalBusinessJsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "AB.Limo",
+    name: "AB",
     image: `${SITE_URL}/AB_LOGO-NEW.png`,
     url: SITE_URL,
     telephone: "+923135237377",
@@ -91,7 +90,7 @@ export function WebsiteJsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "AB.Limo",
+    name: "AB",
     url: SITE_URL,
     potentialAction: {
       "@type": "SearchAction",
@@ -142,7 +141,7 @@ export function ServiceJsonLd({
     url: `${SITE_URL}${url}`,
     provider: {
       "@type": "Organization",
-      name: "AB.Limo",
+      name: "AB",
       url: SITE_URL,
     },
     areaServed: {
@@ -195,7 +194,7 @@ export function CityJsonLd({
     url: `${SITE_URL}${url}`,
     provider: {
       "@type": "Organization",
-      name: "AB.Limo",
+      name: "AB",
       url: SITE_URL,
     },
     areaServed: {
@@ -235,7 +234,7 @@ export function RouteJsonLd({
     url: `${SITE_URL}${url}`,
     provider: {
       "@type": "Organization",
-      name: "AB.Limo",
+      name: "AB",
       url: SITE_URL,
     },
     areaServed: [
@@ -267,7 +266,7 @@ export function IndustryJsonLd({
     url: `${SITE_URL}${url}`,
     provider: {
       "@type": "Organization",
-      name: "AB.Limo",
+      name: "AB",
       url: SITE_URL,
     },
     serviceType: `${industry} Transportation`,
@@ -280,14 +279,13 @@ export function AboutPageJsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About AB.Limo",
+    name: "About AB",
     description:
-      "Learn about AB.Limo, a premier executive mobility provider founded in 1999 in Saudi Arabia and operating across 6 GCC countries and 25+ cities with a 24/7 GPS-tracked fleet.",
+      "Learn about AB, a premier executive mobility provider founded in 1999 in Saudi Arabia and operating across 6 GCC countries and 25+ cities with a 24/7 GPS-tracked fleet.",
     url: `${SITE_URL}/about`,
     mainEntity: {
       "@type": "Organization",
-      name: "AB.Limo",
-      alternateName: "AB Limo",
+      name: "AB",
       url: SITE_URL,
       logo: `${SITE_URL}/AB_LOGO-NEW.png`,
       foundingDate: "1999",
@@ -310,7 +308,7 @@ export function FleetJsonLd({
   const data = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "AB.Limo Fleet",
+    name: "AB Fleet",
     description: "Premium luxury vehicle fleet for executive transportation",
     itemListElement: vehicles.map((vehicle, index) => ({
       "@type": "ListItem",
@@ -334,8 +332,8 @@ export function HowToBookJsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "How to Book a Luxury Chauffeur with AB.Limo",
-    description: "Simple steps to book premium chauffeur-driven transportation with AB.Limo",
+    name: "How to Book a Luxury Chauffeur with AB",
+    description: "Simple steps to book premium chauffeur-driven transportation with AB",
     step: [
       {
         "@type": "HowToStep",
@@ -358,7 +356,7 @@ export function HowToBookJsonLd() {
       {
         "@type": "HowToStep",
         name: "Enjoy Your Ride",
-        text: "Your professional chauffeur arrives on time. Track your ride in real-time via the AB.Limo app.",
+        text: "Your professional chauffeur arrives on time. Track your ride in real-time via the AB app.",
         url: "https://www.ab.limo",
       },
     ],
@@ -375,7 +373,7 @@ export function ServiceListJsonLd({
   const data = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "AB.Limo Services",
+    name: "AB Services",
     description: "Premium chauffeur-driven transportation services",
     itemListElement: services.map((service, index) => ({
       "@type": "ListItem",
@@ -387,7 +385,7 @@ export function ServiceListJsonLd({
         url: `${SITE_URL}${service.url}`,
         provider: {
           "@type": "Organization",
-          name: "AB.Limo",
+          name: "AB",
           url: SITE_URL,
         },
       },

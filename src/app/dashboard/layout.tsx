@@ -7,8 +7,8 @@ import { Toaster } from "@/components/ui/sonner";
 import "@/app/[lang]/globals.css";
 
 export const metadata = {
-  title: "AB.Limo Admin Dashboard",
-  description: "Admin panel for AB.Limo",
+  title: "AB Admin Dashboard",
+  description: "Admin panel for AB",
 };
 
 export default function DashboardLayout({

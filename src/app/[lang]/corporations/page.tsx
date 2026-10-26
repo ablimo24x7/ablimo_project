@@ -14,14 +14,14 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: isAr ? dict.corporations.meta.title : "Corporate Mobility Solutions | AB.Limo Executive Transportation",
+    title: isAr ? dict.corporations.meta.title : "Corporate Mobility Solutions | AB Executive Transportation",
     description: isAr
       ? dict.corporations.meta.description
-      : "AB.Limo delivers tailored corporate mobility programs for enterprises. Dedicated account management, real-time reporting, and premium fleet access across the GCC and worldwide.",
+      : "AB delivers tailored corporate mobility programs for enterprises. Dedicated account management, real-time reporting, and premium fleet access across the GCC and worldwide.",
     path: "/corporations",
     lang,
     keywords:
-      "corporate mobility, executive transportation, business travel solutions, corporate fleet management, AB.Limo corporate, enterprise travel, dedicated chauffeur service, corporate account",
+      "corporate mobility, executive transportation, business travel solutions, corporate fleet management, AB corporate, enterprise travel, dedicated chauffeur service, corporate account",
   });
 }
 

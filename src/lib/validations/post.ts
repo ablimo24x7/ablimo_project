@@ -50,7 +50,7 @@ export const PostCreateSchema = z.object({
   // Sections content (structured blocks)
   sections: z.array(SectionSchema).optional().default([]),
 
-  // ABLimo template fields
+  // Template fields
   templateType: z.enum(["service-country", "service-city"]).optional().default("service-country"),
   serviceSlug: z.enum([
     "chauffeur-vip", "airport-transfers", "corporate-transportation",

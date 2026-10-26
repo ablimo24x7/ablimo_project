@@ -269,7 +269,7 @@ export function buildCountryTextMediaGridDescription(meta: CountryMeta): string 
   const p1 =
     `${meta.nameRef} — ${meta.description}. As the nation advances its ` +
     `${meta.vision} agenda, the demands on corporate travel infrastructure have ` +
-    `evolved exponentially. AB.Limo operates at the nexus of this transformation, ` +
+    `evolved exponentially. AB operates at the nexus of this transformation, ` +
     `providing highly secure, scalable, and meticulously managed executive mobility ` +
     `solutions for multinational corporations entering the ${meta.adjective} market.`;
 

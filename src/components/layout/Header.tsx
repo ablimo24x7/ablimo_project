@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { getDictionary, type Locale, localeBase, localeHome } from "@/app/[lang]/dictionaries";
+import { getHeaderNav } from "@/lib/headerNav";
 import { getNavServices, type NavServiceItem } from "@/lib/services";
 import DesktopNav from "./DesktopNav";
 import HeaderSocialLinks from "./HeaderSocialLinks";
 import MobileMenu from "./MobileMenu";
 import Image from "next/image";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface HeaderProps {
   lang: Locale;
@@ -13,6 +15,9 @@ interface HeaderProps {
 export default async function Header({ lang }: HeaderProps) {
   const dict = await getDictionary(lang);
   const dbServiceLinks: NavServiceItem[] = await getNavServices(lang);
+  const navGroups = getHeaderNav(lang, dict).map((group) =>
+    group.id === "services" ? { ...group, items: dbServiceLinks } : group
+  );
 
   return (
     <header className="fixed w-full bg-abBlack/95 border-b border-gray-800 z-[90] transition-all">
@@ -27,7 +32,7 @@ export default async function Header({ lang }: HeaderProps) {
               {/* {dict.header.logo} */}
               <Image
                 src="/AB_LOGO-NEW.png"
-                alt="AB.Limo Logo"
+                alt="AB Logo"
                 width={100}
                 height={40}
               />
@@ -36,12 +41,14 @@ export default async function Header({ lang }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <DesktopNav dict={dict} lang={lang} dbServiceLinks={dbServiceLinks} />
+            <DesktopNav lang={lang} groups={navGroups} />
           </div>
 
+          <LanguageSwitcher currentLang={lang} />
+
           {/* Action Buttons */}
-          <div className="hidden lg:flex items-center space-x-5">
-            <HeaderSocialLinks />
+          <div className="hidden lg:flex items-center space-x-3 xl:space-x-5">
+            {/* <HeaderSocialLinks /> */}
             <Link
               href={`${localeBase(lang)}/contact`}
               className="bg-transparent border border-abBlue text-abBlue hover:bg-abBlue hover:border-abBlue hover:text-white px-5 py-2 rounded text-sm font-semibold transition-colors"
@@ -58,7 +65,7 @@ export default async function Header({ lang }: HeaderProps) {
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center">
-            <MobileMenu dict={dict} lang={lang} dbServiceLinks={dbServiceLinks} />
+            <MobileMenu dict={dict} lang={lang} groups={navGroups} />
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ export async function generateMetadata({
       : "Complete ground transportation solutions for individuals and businesses. Airport transfers, corporate travel, and event transportation worldwide.",
     path: "/ground-transportation",
     lang,
-    keywords: "ground transportation, corporate transportation, business travel, AB.Limo, executive transport, event logistics, airport shuttle",
+    keywords: "ground transportation, corporate transportation, business travel, AB, executive transport, event logistics, airport shuttle",
   });
 }
 

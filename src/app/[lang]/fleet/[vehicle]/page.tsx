@@ -26,11 +26,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const copy = target.copy[fleetLang(lang)];
   return generateSeoMetadata({
-    title: `${copy.title} | AB.Limo Fleet`,
+    title: `${copy.model} | ${copy.title} | AB Fleet`,
     description: `${copy.tagline} ${copy.description[0]}`.slice(0, 158),
     path: `/fleet/${target.slug}`,
     lang,
-    keywords: `${copy.title}, ${copy.model}, AB.Limo fleet, chauffeur-driven ${copy.model}, luxury vehicle rental GCC`,
+    keywords: `${copy.model}, ${copy.title}, AB fleet, chauffeur-driven ${copy.model}, luxury vehicle rental GCC`,
   });
 }
 
@@ -43,7 +43,11 @@ export default async function FleetVehiclePage({ params }: PageProps) {
   const l = fleetLang(lang);
   const labels = FLEET_LABELS[l];
   const copy = target.copy[l];
-  const related = FLEET_VEHICLES.filter((v) => v.slug !== target.slug);
+  // Same category first, then the rest — capped so the section stays browsable.
+  const related = [
+    ...FLEET_VEHICLES.filter((v) => v.category === target.category && v.slug !== target.slug),
+    ...FLEET_VEHICLES.filter((v) => v.category !== target.category && v.slug !== target.slug),
+  ].slice(0, 10);
 
   return (
     <>
@@ -51,7 +55,7 @@ export default async function FleetVehiclePage({ params }: PageProps) {
         items={[
           { name: labels.home, url: `${localeHome(lang)}` },
           { name: labels.breadcrumbFleet, url: fleetUrl(lang) },
-          { name: copy.title, url: fleetVehicleUrl(lang, target.slug) },
+          { name: copy.model, url: fleetVehicleUrl(lang, target.slug) },
         ]}
       />
 
@@ -70,7 +74,7 @@ export default async function FleetVehiclePage({ params }: PageProps) {
               {labels.breadcrumbFleet}
             </Link>
             <span>/</span>
-            <span className="text-white">{copy.title}</span>
+            <span className="text-white">{copy.model}</span>
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -115,7 +119,7 @@ export default async function FleetVehiclePage({ params }: PageProps) {
             <div className="bg-[#050505] border border-gray-800 rounded-2xl p-8 flex items-center justify-center min-h-[280px]">
               <Image
                 src={target.image}
-                alt={copy.title}
+                alt={`${copy.model} — ${copy.title}`}
                 width={560}
                 height={300}
                 priority
@@ -130,7 +134,7 @@ export default async function FleetVehiclePage({ params }: PageProps) {
       <section data-section-type="vehicle_about" className="py-20 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
-            {copy.title}
+            {copy.model}
           </h2>
           <div className="space-y-6 text-gray-400 leading-relaxed">
             {copy.description.map((paragraph) => (
@@ -204,7 +208,7 @@ export default async function FleetVehiclePage({ params }: PageProps) {
                 >
                   <Image
                     src={image}
-                    alt={`${copy.title} ${index + 1}`}
+                    alt={`${copy.model} ${index + 1}`}
                     width={240}
                     height={140}
                     className="w-full object-contain"
@@ -216,7 +220,7 @@ export default async function FleetVehiclePage({ params }: PageProps) {
 
           <div className="flex justify-center lg:justify-end">
             <ServiceInquiryForm
-              serviceName={copy.title}
+              serviceName={`${copy.title} (${copy.model})`}
               serviceUrl={fleetVehicleUrl(lang, target.slug)}
               dict={dict}
             />
@@ -248,7 +252,7 @@ export default async function FleetVehiclePage({ params }: PageProps) {
                   <div className="bg-[#050505] h-28 flex items-center justify-center p-3 border-b border-gray-900">
                     <Image
                       src={vehicle.image}
-                      alt={vehicleCopy.title}
+                      alt={`${vehicleCopy.model} — ${vehicleCopy.title}`}
                       width={180}
                       height={100}
                       className="w-full object-contain group-hover:scale-105 transition-transform"
@@ -256,9 +260,9 @@ export default async function FleetVehiclePage({ params }: PageProps) {
                   </div>
                   <div className="p-4">
                     <p className="text-white text-sm font-semibold mb-1">
-                      {vehicleCopy.title}
+                      {vehicleCopy.model}
                     </p>
-                    <p className="text-gray-500 text-xs">{vehicleCopy.model}</p>
+                    <p className="text-gray-500 text-xs">{vehicleCopy.title}</p>
                   </div>
                 </Link>
               );

@@ -181,7 +181,7 @@ export default async function ServicePage({
             <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abBlue/10 border border-abBlue/30 mb-5">
               <span className="w-2 h-2 rounded-full bg-abBlue animate-pulse"></span>
               <span className="text-abBlue text-xs font-bold tracking-widest uppercase">
-                {dict.services?.luxuryMobility ?? "AB.Limo Luxury Mobility"}
+                {dict.services?.luxuryMobility ?? "AB Luxury Mobility"}
               </span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white">

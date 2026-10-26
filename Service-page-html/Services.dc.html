@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AB.Limo services</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF}
+a{color:var(--fg)}a:hover{color:var(--muted)}
+.svc-nav a:hover{color:var(--fg)}
+.explore-btn:hover{background:var(--fg);color:var(--bg)}
+.svc-nav a:focus-visible,.explore-btn:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.abroot{--bg:#FFFFFF;--fg:#151515;--fg2:#3D3D3D;--muted:#5F5F5F;--line:#E6E4E0;--surface:#F6F5F2;--surface2:#F2F1EE;--sel1:#E7E5E1;--sel2:#F7F6F4;--band:#111111;color-scheme:light;transition:background-color .3s,color .3s}
+.abroot[data-theme="dark"]{--bg:#0E1013;--fg:#F1F0EC;--fg2:#C9C7C1;--muted:#9D9B95;--line:#2A2D31;--surface:#15181C;--surface2:#1B1E22;--sel1:#24282D;--sel2:#181B1F;--band:#050607;color-scheme:dark}
+.abroot[data-theme="dark"] path[fill="#151515"]{fill:#3B4148}
+.abroot[data-theme="dark"] path[fill="#4A5058"]{fill:#7B848D}
+.abroot[data-theme="dark"] circle[fill="#F4F3F0"]{fill:#15181C;stroke:#2A2D31}
+.abroot[data-theme="dark"] path[stroke="#CFCBC3"]{stroke:#30353B}
+.abroot[data-theme="dark"] path[stroke="#86827A"]{stroke:#7E868F}
+.abroot[data-theme="dark"] path[stroke="#4A4A4A"]{stroke:#5A6067}
+.theme-btn:hover{background:var(--surface2)}
+.abroot .force-dark{--bg:#0E1013;--fg:#F1F0EC;--fg2:#D9D7D1;--muted:#B3B1AB;--line:rgba(255,255,255,0.24);--surface:#15181C;--surface2:rgba(255,255,255,0.08);color-scheme:dark}
+.abroot .force-dark circle[fill="#F4F3F0"]{fill:#15181C;stroke:#2A2D31}
+.abroot .force-dark path[stroke="#CFCBC3"]{stroke:#30353B}
+.abroot .force-dark path[stroke="#86827A"]{stroke:#7E868F}
+.nav-link:hover{opacity:.72}
+.hero-primary:hover{opacity:.88}
+.hero-ghost:hover{background:rgba(255,255,255,0.1)}
+</style>
+</helmet>
+<div class="abroot" data-theme="{{theme}}" style="width: 100%; min-height: 100vh; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; color: var(--fg); background: var(--bg)">
+
+  <!-- Header -->
+  <header class="force-dark" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; background: linear-gradient(180deg, rgba(5,7,9,0.85) 0%, rgba(5,7,9,0) 100%); color: var(--fg)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="Home.dc.html" style="text-decoration: none; color: var(--fg); font-size: 22px; font-weight: 500; letter-spacing: 0.28em">AB.LIMO</a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase">
+        <a class="nav-link" href="Services.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg); box-shadow: inset 0 -1px 0 var(--fg)">Services</a>
+        <a class="nav-link" href="Fleet.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Fleet</a>
+        <a class="nav-link" href="Locations.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Locations</a>
+        <a class="nav-link" href="Industries.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Industries</a>
+        <a class="nav-link" href="https://www.ab.limo/about" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--fg)">Company</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 16px">
+        <a class="nav-link" href="https://www.ab.limo/contact" style="font-size: 14px; letter-spacing: 0.04em; text-decoration: none; color: var(--fg)">hello@ab.limo</a>
+        <button type="button" class="theme-btn" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" aria-pressed="{{isDarkStr}}" style="width: 44px; height: 44px; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; background: transparent; color: var(--fg); cursor: pointer; display: flex; align-items: center; justify-content: center"><sc-if value="{{isDark}}" hint-placeholder-val="{{false}}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"></path></svg></sc-if><sc-if value="{{isLight}}" hint-placeholder-val="{{true}}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg></sc-if></button>
+        <a class="hero-ghost" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border: 1px solid rgba(255,255,255,0.6); color: var(--fg); text-decoration: none; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase">Book now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="force-dark" style="position: relative; overflow: hidden; background: #050709; color: var(--fg); min-height: clamp(600px, 82vh, 820px)">
+    <img src="./assets/5a67811adeda188da52eb0a43d0380fb.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 35%">
+    <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,7,9,0.92) 0%, rgba(5,7,9,0.72) 45%, rgba(5,7,9,0.3) 100%)"></div>
+    <div style="position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(0deg, rgba(5,7,9,0.92) 0%, rgba(5,7,9,0) 100%)"></div>
+    <div style="position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 150px 32px 48px; box-sizing: border-box; min-height: inherit; display: flex; flex-direction: column">
+    <div style="display: flex"><span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border: 1px solid rgba(255,255,255,0.28); background: rgba(5,7,9,0.5); border-radius: 999px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A96E"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C9A96E"></span>Our services</span></div>
+    <h1 style="margin: 14px 0 0; font-size: 76px; line-height: 1.02; font-weight: 300; max-width: 900px">Six ways we move people across the Gulf</h1>
+    <p style="margin: 28px 0 0; max-width: 680px; font-size: 18px; line-height: 1.65; color: var(--fg2)">From a single VIP arrival to hundreds of vehicles over a multi week event, every journey is planned, dispatched and supervised by one team. Choose a service to see how it works.</p>
+    <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px"><a class="hero-primary" href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: var(--fg); color: #0B0D10; text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Request a proposal</a><a class="hero-ghost" href="Fleet.dc.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 1px solid rgba(255,255,255,0.45); color: var(--fg); text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">View the fleet</a></div>
+    <div style="margin-top: auto; padding-top: 48px; display: grid; grid-template-columns: repeat(6, minmax(140px, 1fr)); gap: 16px; overflow-x: auto"><a class="hero-tab" href="#executive" style="display: flex; flex-direction: column; gap: 4px; padding-top: 14px; min-height: 44px; border-top: 1px solid rgba(255,255,255,0.3); text-decoration: none; color: var(--fg)"><span style="font-size: 12px; letter-spacing: 0.14em; color: #C9A96E">01</span><span style="font-size: 15px; line-height: 1.3">Executive and Corporate Mobility</span></a><a class="hero-tab" href="#airport" style="display: flex; flex-direction: column; gap: 4px; padding-top: 14px; min-height: 44px; border-top: 1px solid rgba(255,255,255,0.3); text-decoration: none; color: var(--fg)"><span style="font-size: 12px; letter-spacing: 0.14em; color: #C9A96E">02</span><span style="font-size: 15px; line-height: 1.3">Airport Transfers</span></a><a class="hero-tab" href="#fleet" style="display: flex; flex-direction: column; gap: 4px; padding-top: 14px; min-height: 44px; border-top: 1px solid rgba(255,255,255,0.3); text-decoration: none; color: var(--fg)"><span style="font-size: 12px; letter-spacing: 0.14em; color: #C9A96E">03</span><span style="font-size: 15px; line-height: 1.3">Corporate Fleet and Workforce</span></a><a class="hero-tab" href="#events" style="display: flex; flex-direction: column; gap: 4px; padding-top: 14px; min-height: 44px; border-top: 1px solid rgba(255,255,255,0.3); text-decoration: none; color: var(--fg)"><span style="font-size: 12px; letter-spacing: 0.14em; color: #C9A96E">04</span><span style="font-size: 15px; line-height: 1.3">Event Transportation</span></a><a class="hero-tab" href="#groups" style="display: flex; flex-direction: column; gap: 4px; padding-top: 14px; min-height: 44px; border-top: 1px solid rgba(255,255,255,0.3); text-decoration: none; color: var(--fg)"><span style="font-size: 12px; letter-spacing: 0.14em; color: #C9A96E">05</span><span style="font-size: 15px; line-height: 1.3">Group and Coach Charter</span></a><a class="hero-tab" href="#tourism" style="display: flex; flex-direction: column; gap: 4px; padding-top: 14px; min-height: 44px; border-top: 1px solid rgba(255,255,255,0.3); text-decoration: none; color: var(--fg)"><span style="font-size: 12px; letter-spacing: 0.14em; color: #C9A96E">06</span><span style="font-size: 15px; line-height: 1.3">Tourism and Leisure</span></a></div>
+    </div>
+  </section>
+
+  <div style="height: 72px"></div>
+
+  <!-- Services with sticky list -->
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 32px 96px">
+    <div style="display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+
+      <nav class="svc-nav" aria-label="Services on this page" style="flex: 1 1 240px; min-width: 0; position: sticky; top: 24px; display: flex; flex-direction: column; border-left: 1px solid var(--line)">
+        <sc-for list="{{services}}" as="s" hint-placeholder-count="6">
+          <a href="#{{s.id}}" onClick="{{s.pick}}" aria-current="{{s.current}}" style="display: flex; align-items: center; gap: 14px; min-height: 52px; padding: 0 0 0 20px; margin-left: -1px; border-left: 2px solid {{s.border}}; text-decoration: none; font-size: 17px; font-weight: {{s.weight}}; color: {{s.color}}">
+            <span style="font-size: 12px; letter-spacing: 0.12em; color: var(--muted); min-width: 20px">{{s.num}}</span>{{s.name}}</a>
+        </sc-for>
+        <a href="https://www.ab.limo/contact" style="margin: 28px 0 0 20px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; color: var(--fg)">Request a proposal →</a>
+      </nav>
+
+      <div style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 112px">
+        <sc-for list="{{services}}" as="s" hint-placeholder-count="6">
+          <article id="{{s.id}}" data-svc="{{s.id}}" style="scroll-margin-top: 24px">
+            <!-- Collage: texture panel behind, photo panel in front -->
+            <div style="position: relative; height: 440px">
+              <div style="position: absolute; left: 0; top: 0; width: 42%; height: 78%; overflow: hidden; background: #1C1C1E">
+                <svg width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
+                  <defs><pattern id="tx-{{s.id}}" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="30" height="30" fill="#1C1C1E"></rect><path d="M0 0H30M0 0V30" stroke="#3C3C40" stroke-width="1" stroke-dasharray="3 2"></path></pattern></defs>
+                  <rect width="100%" height="100%" fill="url(#tx-{{s.id}})"></rect>
+                </svg>
+              </div>
+              <div style="position: absolute; right: 0; bottom: 0; width: 76%; height: 82%; background: var(--surface2); overflow: hidden; display: flex; align-items: flex-end; justify-content: center">
+                <span style="position: absolute; top: 16px; left: 16px; padding: 6px 10px; background: var(--bg); border: 1px solid var(--line); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg2)">Photo: {{s.photo}}</span>
+                <svg viewBox="0 0 400 130" style="width: 78%; height: auto; margin-bottom: 28px" role="img" aria-label="{{s.vehicleLabel}}">
+                  <ellipse cx="200" cy="124" rx="190" ry="5" fill="#000000" opacity="0.14"></ellipse>
+                  <path d="{{s.v.body}}" fill="#151515"></path>
+                  <path d="{{s.v.glass}}" fill="#4A5058"></path>
+                  <path d="{{s.v.line}}" fill="none" stroke="#4A4A4A" stroke-width="1"></path>
+                  <path d="{{s.v.lamp}}" fill="#D9DCE0"></path>
+                  <circle cx="{{s.v.w1}}" cy="106" r="19" fill="#0A0A0A"></circle>
+                  <circle cx="{{s.v.w1}}" cy="106" r="11" fill="#9097A0"></circle>
+                  <circle cx="{{s.v.w1}}" cy="106" r="4" fill="#2A2A2A"></circle>
+                  <circle cx="{{s.v.w2}}" cy="106" r="19" fill="#0A0A0A"></circle>
+                  <circle cx="{{s.v.w2}}" cy="106" r="11" fill="#9097A0"></circle>
+                  <circle cx="{{s.v.w2}}" cy="106" r="4" fill="#2A2A2A"></circle>
+                </svg>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 32px 56px; margin-top: 40px">
+              <div style="flex: 1 1 260px; min-width: 0">
+                <p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: {{accent}}">{{s.num}}</p>
+                <h2 style="margin: 10px 0 0; font-size: 40px; line-height: 1.1; font-weight: 300">{{s.name}}</h2>
+              </div>
+              <div style="flex: 1.4 1 320px; min-width: 0">
+                <p style="margin: 0; font-size: 17px; line-height: 1.7; color: var(--fg2)">{{s.desc}}</p>
+                <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px">
+                  <sc-for list="{{s.points}}" as="pt" hint-placeholder-count="3">
+                    <span style="padding: 6px 12px; border: 1px solid var(--line); font-size: 13px; color: var(--fg2)">{{pt}}</span>
+                  </sc-for>
+                </div>
+                <a class="explore-btn" href="{{s.href}}" style="margin-top: 28px; display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border: 1px solid var(--fg); text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--fg)">Explore</a>
+              </div>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing call to action -->
+  <section style="background: var(--band); color: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 32px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+      <div style="flex: 1 1 420px; min-width: 0">
+        <h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 300">Not sure which service fits?</h2>
+        <p style="margin: 16px 0 0; font-size: 16px; color: #BDBDBD">Tell us about the journey and we will design the movement plan. hello@ab.limo</p>
+      </div>
+      <a href="https://www.ab.limo/contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 32px; border: 1px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase">Request a proposal</a>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--line)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--muted)">
+      <span>© 2026 AB.Limo</span>
+      <span>Riyadh · Jeddah · Dammam · Dubai · Abu Dhabi · Doha · Manama</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#7A5F36","options":["#7A5F36","#151515","#2F4A3A","#24405E"]},"$preview":{"width":1440,"height":4800}}'>
+class Component extends DCLogic {
+  abTheme() {
+    const s = this.state || {};
+    if (!this._abL) {
+      this._abL = (e) => { if (e.key === 'ab-theme' && e.newValue) this.setState({ theme: e.newValue }); };
+      try { window.addEventListener('storage', this._abL); } catch (err) {}
+    }
+    if (s.theme) return s.theme;
+    try { return localStorage.getItem('ab-theme') || 'light'; } catch (err) { return 'light'; }
+  }
+
+  abToggle() {
+    const t = this.abTheme() === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('ab-theme', t); } catch (err) {}
+    this.setState({ theme: t });
+  }
+
+  componentDidMount() {
+    try {
+      const els = document.querySelectorAll('[data-svc]');
+      this._io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) this.setState({ active: en.target.getAttribute('data-svc') });
+        });
+      }, { rootMargin: '-35% 0px -60% 0px' });
+      els.forEach((el) => this._io.observe(el));
+    } catch (e) {}
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+  }
+
+  renderVals() {
+    const st = this.state || {};
+    const V = {
+      first: { w1: 92, w2: 324,
+        body: 'M14,106 L14,90 C14,82 22,78 38,77 L118,73 C140,57 166,45 204,44 L270,44 C298,44 318,57 338,71 L370,76 C386,78 390,86 390,95 L390,106 Z',
+        glass: 'M130,72 C152,58 174,50 204,49 L232,49 L232,72 Z M238,49 L268,49 C292,49 310,59 324,71 L238,72 Z',
+        line: 'M26,86 L378,86', lamp: 'M16,84 L30,83 L30,88 L16,88 Z' },
+      business: { w1: 96, w2: 316,
+        body: 'M20,106 L20,91 C20,83 28,79 44,78 L120,74 C142,58 166,47 200,46 L258,46 C286,46 306,58 326,72 L362,77 C378,79 384,87 384,96 L384,106 Z',
+        glass: 'M132,73 C152,60 172,52 200,51 L224,51 L224,73 Z M230,51 L256,51 C278,51 296,60 312,72 L230,73 Z',
+        line: 'M32,87 L372,87', lamp: 'M22,85 L36,84 L36,89 L22,89 Z' },
+      suv: { w1: 96, w2: 312,
+        body: 'M20,106 L20,82 C20,74 26,68 40,66 L96,62 L128,36 C132,32 138,30 146,30 L334,30 C346,30 352,36 356,44 L368,64 C378,67 382,74 382,84 L382,106 Z',
+        glass: 'M134,60 L154,36 L224,36 L224,60 Z M230,36 L290,36 L290,60 L230,60 Z M296,36 L334,36 C340,36 344,40 346,46 L352,60 L296,60 Z',
+        line: 'M32,80 L372,80', lamp: 'M22,74 L38,72 L38,78 L22,78 Z' },
+      mpv: { w1: 92, w2: 318,
+        body: 'M18,106 L18,80 C18,72 24,66 36,64 L70,60 L118,30 C122,27 128,26 134,26 L360,26 C372,26 380,32 380,44 L382,106 Z',
+        glass: 'M124,56 L140,32 L206,32 L206,56 Z M212,32 L284,32 L284,56 L212,56 Z M290,32 L360,32 C366,32 370,36 370,42 L370,56 L290,56 Z',
+        line: 'M30,78 L372,78', lamp: 'M20,72 L36,70 L36,76 L20,76 Z' },
+      van: { w1: 90, w2: 322,
+        body: 'M16,106 L16,74 C16,66 22,60 32,58 L58,55 L92,20 C95,16 100,14 108,14 L372,14 C380,14 386,20 386,28 L388,106 Z',
+        glass: 'M98,50 L114,22 L150,22 L150,50 Z M158,22 L212,22 L212,48 L158,48 Z M220,22 L274,22 L274,48 L220,48 Z M282,22 L336,22 L336,48 L282,48 Z',
+        line: 'M28,74 L376,74', lamp: 'M18,68 L34,66 L34,72 L18,72 Z' },
+      coach: { w1: 84, w2: 322,
+        body: 'M12,106 L12,26 C12,18 18,12 28,12 L374,12 C384,12 390,18 390,28 L390,106 Z',
+        glass: 'M24,24 L64,24 L64,62 L24,62 Z M74,24 L130,24 L130,56 L74,56 Z M138,24 L194,24 L194,56 L138,56 Z M202,24 L258,24 L258,56 L202,56 Z M266,24 L322,24 L322,56 L266,56 Z M330,24 L378,24 L378,56 L330,56 Z',
+        line: 'M12,74 L390,74', lamp: 'M14,90 L30,90 L30,96 L14,96 Z' }
+    };
+    const base = [
+      { id: 'executive', name: 'Executive and Corporate Mobility', v: V.first, vehicleLabel: 'First Class sedan', photo: 'chauffeur opening the rear door',
+        href: 'https://www.ab.limo/services/chauffeur-vip',
+        desc: 'Dedicated chauffeurs for leadership teams, board members and visiting principals. Discreet, punctual and briefed on every detail before the door opens.',
+        points: ['Hourly and full day hire', 'Protocol trained chauffeurs', 'First Class and Business sedans'] },
+      { id: 'airport', name: 'Airport Transfers', v: V.business, vehicleLabel: 'Business sedan', photo: 'chauffeur with name board at arrivals',
+        href: 'https://www.ab.limo/services/airport-transfers',
+        desc: 'Meet and greet in the arrivals hall, live flight tracking and a car waiting at the kerb, whatever time you land.',
+        points: ['Flight tracking included', 'Arrivals hall meet and greet', 'Luggage assistance'] },
+      { id: 'fleet', name: 'Corporate Fleet and Workforce Mobility', v: V.mpv, vehicleLabel: 'Premium MPV', photo: 'fleet lined up at a corporate campus',
+        href: 'https://www.ab.limo/services/corporate-transportation',
+        desc: 'Managed fleets and staff transport for companies that move people every day, with one account, one dispatch team and clear monthly reporting.',
+        points: ['Long term contracts', 'Staff shuttles and pool cars', 'Monthly usage reporting'] },
+      { id: 'events', name: 'Event Transportation', v: V.van, vehicleLabel: 'Executive van', photo: 'vehicles staged at a venue drop off',
+        href: 'https://www.ab.limo/services/event-transportation',
+        desc: 'Complete transport for conferences, sporting events and festivals, from a single VIP arrival to hundreds of vehicles over a multi week programme.',
+        points: ['Transport planning', 'On site dispatch teams', 'Accreditation and venue access'] },
+      { id: 'groups', name: 'Group and Coach Charter', v: V.coach, vehicleLabel: 'Coach', photo: 'coach boarding outside a hotel',
+        href: 'https://www.ab.limo/services/bus-coach-hire',
+        desc: 'Coaches and executive vans for delegations, crews and guests travelling together, with a coordinator who keeps every group on schedule.',
+        points: ['Executive vans and coaches', 'Delegation and crew moves', 'Group coordinators'] },
+      { id: 'tourism', name: 'Tourism and Leisure', v: V.suv, vehicleLabel: 'Executive SUV', photo: 'SUV on a desert road at sunset',
+        href: 'https://www.ab.limo/services/tourism-transportation',
+        desc: 'Private touring across the Gulf with chauffeurs who know the routes, the history and the best time to arrive, from AlUla to the dunes outside Abu Dhabi.',
+        points: ['Day trips and multi day tours', 'Hotel and cruise pickups', 'Tour company partnerships'] }
+    ];
+    const active = st.active || base[0].id;
+    const services = base.map((s, i) => {
+      const on = s.id === active;
+      return {
+        ...s,
+        num: String(i + 1).padStart(2, '0'),
+        border: on ? 'var(--fg)' : 'transparent',
+        color: on ? 'var(--fg)' : 'var(--muted)',
+        weight: on ? 400 : 300,
+        current: on ? 'true' : 'false',
+        pick: () => this.setState({ active: s.id })
+      };
+    });
+    return { theme: this.abTheme(), isDark: this.abTheme() === 'dark', isLight: this.abTheme() !== 'dark', isDarkStr: this.abTheme() === 'dark' ? 'true' : 'false', themeLabel: this.abTheme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode', toggleTheme: () => this.abToggle(),  services, accent: this.abTheme() === 'dark' ? '#C9A96E' : (this.props.accent ?? '#7A5F36') };
+  }
+}
+</script>
+</body>
+</html>

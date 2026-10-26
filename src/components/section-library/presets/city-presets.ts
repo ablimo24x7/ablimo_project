@@ -91,7 +91,7 @@ export function buildCityTemplate(
     cityData?.gettingAround?.title || "Getting Around in {city}";
   const gettingAroundDesc =
     cityData?.gettingAround?.description ||
-    "{city} is a dynamic and culturally rich destination with plenty to experience. AB.Limo offers an ideal chauffeur service that gets you around in absolute comfort and style, connecting you effortlessly across key districts and landmarks.";
+    "{city} is a dynamic and culturally rich destination with plenty to experience. AB offers an ideal chauffeur service that gets you around in absolute comfort and style, connecting you effortlessly across key districts and landmarks.";
   const limoTitle = cityData?.limousineService?.title || "Chauffeur Service in {city}";
   const limoDesc =
     cityData?.limousineService?.description ||

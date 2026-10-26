@@ -17,10 +17,10 @@ export async function generateMetadata({
     title: isAr ? dict.sustainability.meta.title : "Sustainability - Driving a Greener Future",
     description: isAr
       ? dict.sustainability.meta.description
-      : "AB.Limo is committed to sustainability through electric vehicles, carbon offsetting, and net-zero initiatives. Learn about our journey towards a greener future.",
+      : "AB is committed to sustainability through electric vehicles, carbon offsetting, and net-zero initiatives. Learn about our journey towards a greener future.",
     path: "/sustainability",
     lang,
-    keywords: "AB.Limo sustainability, green transportation, electric vehicles, carbon offset, net zero, eco-friendly limousine",
+    keywords: "AB sustainability, green transportation, electric vehicles, carbon offset, net zero, eco-friendly limousine",
   });
 }
 
@@ -285,7 +285,7 @@ export default async function SustainabilityPage({
           <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
-              alt="AB.Limo mobile app"
+              alt="AB mobile app"
               fill
               className="object-cover"
             />

@@ -26,7 +26,7 @@ export async function generateMetadata({
     description: dict.servicePages.airportTransferPickup.metadata.description,
     path: "/services/airport-transfers/pickup",
     lang,
-    keywords: "airport pickup service, luxury airport transfer, chauffeur airport pickup, AB.Limo airport",
+    keywords: "airport pickup service, luxury airport transfer, chauffeur airport pickup, AB airport",
   });
 }
 

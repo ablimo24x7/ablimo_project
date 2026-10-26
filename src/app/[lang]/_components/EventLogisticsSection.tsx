@@ -3,13 +3,13 @@ import Link from "next/link";
 import { Dictionary, localeBase } from "@/app/[lang]/dictionaries";
 
 const whatWeRunIcons = [
-  { icon: "fa-user-tie", color: "text-amber-400" },
-  { icon: "fa-plane-arrival", color: "text-sky-400" },
-  { icon: "fa-briefcase", color: "text-blue-400" },
-  { icon: "fa-calendar-check", color: "text-purple-400" },
-  { icon: "fa-bus", color: "text-emerald-400" },
-  { icon: "fa-helmet-safety", color: "text-amber-500" },
-  { icon: "fa-kaaba", color: "text-teal-400" },
+  { icon: "fa-user-tie", color: "text-abBlue" },
+  { icon: "fa-plane-arrival", color: "text-abBlue" },
+  { icon: "fa-briefcase", color: "text-abBlue" },
+  { icon: "fa-calendar-check", color: "text-abBlue" },
+  { icon: "fa-bus", color: "text-abBlue" },
+  { icon: "fa-helmet-safety", color: "text-abBlue" },
+  { icon: "fa-kaaba", color: "text-abBlue" },
 ];
 
 export default function EventLogisticsSection({
@@ -98,7 +98,7 @@ export default function EventLogisticsSection({
                 <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{el.dispatch}</span>
               </div>
               <p className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">{el.coaches}</p>
-              <p className="text-xs text-gray-400 mt-1">{el.deployed}</p>
+              {/* <p className="text-xs text-gray-400 mt-1">{el.deployed}</p> */}
             </div>
           </div>
         </div>

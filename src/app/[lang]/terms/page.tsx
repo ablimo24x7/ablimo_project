@@ -21,11 +21,11 @@ export async function generateMetadata({
   return generateSeoMetadata({
     title: isAr ? dict.terms.title : "Terms of Use",
     description: isAr
-      ? "اقرأ شروط الاستخدام التي تحكم استخدامك لخدمة AB.Limo الفاخرة ومنصة الحجز."
-      : "Read the Terms of Use governing your use of AB.Limo's premium luxury chauffeur service and booking platform.",
+      ? "اقرأ شروط الاستخدام التي تحكم استخدامك لخدمة AB الفاخرة ومنصة الحجز."
+      : "Read the Terms of Use governing your use of AB's premium luxury chauffeur service and booking platform.",
     path: "/terms",
     lang,
-    keywords: "AB.Limo terms, terms of use, booking terms, service agreement, terms and conditions",
+    keywords: "AB terms, terms of use, booking terms, service agreement, terms and conditions",
   });
 }
 
@@ -104,10 +104,10 @@ export default async function TermsPage({
           {/* Introduction */}
           <div className="prose prose-invert max-w-none bg-abBlack text-white leading-relaxed space-y-6 mb-16 rounded-xl p-6 md:p-8">
             <p>
-              Welcome to AB.Limo. These Terms of Use (&quot;Terms&quot;) govern
-              your access to and use of the AB.Limo website, mobile application,
+              Welcome to AB. These Terms of Use (&quot;Terms&quot;) govern
+              your access to and use of the AB website, mobile application,
               and related services (collectively, the &quot;Services&quot;)
-              operated by AB.Limo (&quot;AB.Limo&quot;, &quot;we&quot;,
+              operated by AB (&quot;AB&quot;, &quot;we&quot;,
               &quot;us&quot;, or &quot;our&quot;). By accessing or using the
               Services, you agree to be bound by these Terms. If you do not
               agree, please do not use the Services.
@@ -120,7 +120,7 @@ export default async function TermsPage({
               <h2 className="text-2xl font-bold mb-6">1. General Provisions</h2>
               <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
-                  1.1 AB.Limo provides a premium luxury chauffeur service
+                  1.1 AB provides a premium luxury chauffeur service
                   connecting passengers with professional chauffeurs through our
                   digital platform. These Terms establish the legal framework for
                   your use of our Services.
@@ -155,7 +155,7 @@ export default async function TermsPage({
                   information as necessary to maintain its accuracy.
                 </p>
                 <p>
-                  2.3 AB.Limo reserves the right to refuse service, suspend
+                  2.3 AB reserves the right to refuse service, suspend
                   accounts, or terminate access at its sole discretion, including
                   in cases of suspected fraud, abuse, or violation of these
                   Terms.
@@ -169,7 +169,7 @@ export default async function TermsPage({
               </h2>
               <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
-                  3.1 AB.Limo may update these Terms from time to time to
+                  3.1 AB may update these Terms from time to time to
                   reflect changes in our practices, technology, legal
                   requirements, or other factors. We will provide notice of
                   material changes through the Services or via email.
@@ -212,7 +212,7 @@ export default async function TermsPage({
                   class action lawsuit or class-wide arbitration.
                 </p>
                 <p>
-                  4.4 Notwithstanding the above, AB.Limo may seek injunctive or
+                  4.4 Notwithstanding the above, AB may seek injunctive or
                   other equitable relief in any court of competent jurisdiction
                   to prevent the actual or threatened infringement or
                   misappropriation of intellectual property rights.
@@ -231,7 +231,7 @@ export default async function TermsPage({
                 </p>
                 <p>
                   5.2 Payment is processed through the payment method linked to
-                  your AB.Limo account. You authorize us to charge your selected
+                  your AB account. You authorize us to charge your selected
                   payment method for all applicable fees upon completion of each
                   ride.
                 </p>
@@ -259,7 +259,7 @@ export default async function TermsPage({
                   including but not limited to text, graphics, logos, icons,
                   images, audio clips, data compilations, software, and the
                   design and arrangement thereof, are the exclusive property of
-                  AB.Limo or its licensors and are protected by international
+                  AB or its licensors and are protected by international
                   copyright, trademark, patent, trade secret, and other
                   intellectual property laws.
                 </p>
@@ -269,11 +269,11 @@ export default async function TermsPage({
                   non-commercial purposes. This license does not include any
                   right to reproduce, distribute, modify, create derivative
                   works, publicly display, or exploit any content from the
-                  Services without prior written consent from AB.Limo.
+                  Services without prior written consent from AB.
                 </p>
                 <p>
-                  6.3 The AB.Limo name, logo, and all related marks are
-                  trademarks of AB.Limo. You may not use these trademarks
+                  6.3 The AB name, logo, and all related marks are
+                  trademarks of AB. You may not use these trademarks
                   without our prior written permission.
                 </p>
               </div>
@@ -290,14 +290,14 @@ export default async function TermsPage({
                   PURPOSE, TITLE, AND NON-INFRINGEMENT.
                 </p>
                 <p>
-                  7.2 AB.Limo does not warrant that the Services will be
+                  7.2 AB does not warrant that the Services will be
                   uninterrupted, timely, secure, error-free, or free of viruses
                   or other harmful components. We do not guarantee the accuracy,
                   completeness, or reliability of any information obtained
                   through the Services.
                 </p>
                 <p>
-                  7.3 AB.Limo is not responsible for the conduct of chauffeurs
+                  7.3 AB is not responsible for the conduct of chauffeurs
                   or other users of the Services. While we maintain strict
                   quality standards, we do not guarantee the performance or
                   behavior of individual chauffeurs.
@@ -312,7 +312,7 @@ export default async function TermsPage({
               <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   8.1 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO
-                  EVENT SHALL AB.LIMO, ITS DIRECTORS, EMPLOYEES, PARTNERS,
+                  EVENT SHALL AB, ITS DIRECTORS, EMPLOYEES, PARTNERS,
                   AGENTS, SUPPLIERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT,
                   INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES,
                   INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE,
@@ -320,7 +320,7 @@ export default async function TermsPage({
                 </p>
                 <p>
                   8.2 IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU FOR ALL
-                  CLAIMS EXCEED THE AMOUNT YOU HAVE PAED TO AB.LIMO IN THE
+                  CLAIMS EXCEED THE AMOUNT YOU HAVE PAED TO AB IN THE
                   TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING
                   RISE TO THE CLAIM.
                 </p>
@@ -339,7 +339,7 @@ export default async function TermsPage({
               <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   9.1 You agree to defend, indemnify, and hold harmless
-                  AB.Limo and its officers, directors, employees, contractors,
+                  AB and its officers, directors, employees, contractors,
                   agents, licensors, suppliers, and affiliates from and against
                   any claims, actions, demands, liabilities, damages, losses,
                   costs, and expenses arising out of or relating to your use of
@@ -347,10 +347,10 @@ export default async function TermsPage({
                   violation of any third-party rights.
                 </p>
                 <p>
-                  9.2 AB.Limo reserves the right, at its own expense, to assume
+                  9.2 AB reserves the right, at its own expense, to assume
                   the exclusive defense and control of any matter subject to
                   indemnification by you, in which event you shall cooperate
-                  fully with AB.Limo in asserting any available defenses.
+                  fully with AB in asserting any available defenses.
                 </p>
               </div>
             </section>
@@ -359,7 +359,7 @@ export default async function TermsPage({
               <h2 className="text-2xl font-bold mb-6">10. Force Majeure</h2>
               <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
-                  10.1 AB.Limo shall not be liable for any failure or delay in
+                  10.1 AB shall not be liable for any failure or delay in
                   performing its obligations under these Terms where such failure
                   or delay results from circumstances beyond our reasonable
                   control, including but not limited to natural disasters, acts
@@ -368,7 +368,7 @@ export default async function TermsPage({
                   infrastructure failures.
                 </p>
                 <p>
-                  10.2 In the event of a force majeure occurrence, AB.Limo will
+                  10.2 In the event of a force majeure occurrence, AB will
                   use commercially reasonable efforts to resume performance as
                   soon as practicable and will provide timely updates to
                   affected users.
@@ -383,16 +383,16 @@ export default async function TermsPage({
               <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
                   11.1 These Terms remain in effect for as long as you use the
-                  Services or maintain an account with AB.Limo. You may
+                  Services or maintain an account with AB. You may
                   terminate your account at any time by contacting our support
                   team or through the account settings in the application.
                 </p>
                 <p>
-                  11.2 AB.Limo may suspend or terminate your access to the
+                  11.2 AB may suspend or terminate your access to the
                   Services immediately, without prior notice, for conduct that
                   we determine, in our sole discretion, violates these Terms or
                   is harmful to other users, third parties, or the business
-                  interests of AB.Limo.
+                  interests of AB.
                 </p>
                 <p>
                   11.3 Upon termination, your right to use the Services ceases
@@ -431,7 +431,7 @@ export default async function TermsPage({
                   personal jurisdiction of such courts.
                 </p>
                 <p>
-                  13.2 Notwithstanding the foregoing, AB.Limo may seek interim
+                  13.2 Notwithstanding the foregoing, AB may seek interim
                   or injunctive relief in any court of competent jurisdiction
                   worldwide to protect its intellectual property rights or
                   confidential information.
@@ -447,8 +447,8 @@ export default async function TermsPage({
                 <p>
                   14.1 <strong>Entire Agreement:</strong> These Terms, together
                   with the Privacy Policy and any other legal notices or
-                  agreements published by AB.Limo on the Services, constitute
-                  the entire agreement between you and AB.Limo regarding the use
+                  agreements published by AB on the Services, constitute
+                  the entire agreement between you and AB regarding the use
                   of the Services.
                 </p>
                 <p>
@@ -457,14 +457,14 @@ export default async function TermsPage({
                   remaining provisions shall continue in full force and effect.
                 </p>
                 <p>
-                  14.3 <strong>Waiver:</strong> The failure of AB.Limo to
+                  14.3 <strong>Waiver:</strong> The failure of AB to
                   exercise or enforce any right or provision of these Terms
                   shall not constitute a waiver of such right or provision.
                 </p>
                 <p>
                   14.4 <strong>Assignment:</strong> You may not assign or
                   transfer these Terms or your rights under them without the
-                  prior written consent of AB.Limo. AB.Limo may assign these
+                  prior written consent of AB. AB may assign these
                   Terms without restriction.
                 </p>
                 <p>
@@ -493,7 +493,7 @@ export default async function TermsPage({
               </h2>
               <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
-                  15.1 AB.Limo is committed to conducting business ethically
+                  15.1 AB is committed to conducting business ethically
                   and responsibly. We do not tolerate modern slavery,
                   forced labour, human trafficking, or child labour in any part
                   of our operations or supply chain, and we expect the same
@@ -520,7 +520,7 @@ export default async function TermsPage({
               <h2 className="text-2xl font-bold mb-6">16. Code of Conduct</h2>
               <div className="bg-abBlack text-white leading-relaxed space-y-4 rounded-xl p-6 md:p-8">
                 <p>
-                  16.1 AB.Limo and its personnel are expected to act with
+                  16.1 AB and its personnel are expected to act with
                   integrity, professionalism, and respect in every interaction.
                   Our Code of Conduct requires compliance with applicable laws,
                   honest and fair dealing, protection of passenger privacy and

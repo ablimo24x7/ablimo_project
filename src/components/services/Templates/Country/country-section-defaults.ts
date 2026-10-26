@@ -41,7 +41,7 @@ export const corporateCountryTemplate: CountryTemplatePreset = {
         title: "Mastering Mobility",
         titleHighlight: "in the United Arab Emirates.",
         description:
-          "The national command center of AB.Limo operations. We provide gateway-to-gateway airport transfers at every international terminal, intercity executive travel between major cities, government protocol mobility, and nationwide event logistics for expos, summits, and grand prix weekends.",
+          "The national command center of AB operations. We provide gateway-to-gateway airport transfers at every international terminal, intercity executive travel between major cities, government protocol mobility, and nationwide event logistics for expos, summits, and grand prix weekends.",
       },
       items: [
         {
@@ -164,7 +164,7 @@ export const corporateCountryTemplate: CountryTemplatePreset = {
         headingHighlight: "Centennial 2071",
         headingAfter: "Corporate Ecosystem.",
         description:
-          '<p class="mb-6 leading-relaxed">The United Arab Emirates — the region\'s premier business and tourism economy advancing its <strong>Centennial 2071</strong> agenda. As the nation diversifies, the demands on corporate travel infrastructure have evolved exponentially. AB.Limo operates at the nexus of this transformation, providing highly secure, scalable, and meticulously managed executive mobility solutions for multinational corporations entering the UAE market.</p>' +
+          '<p class="mb-6 leading-relaxed">The United Arab Emirates — the region\'s premier business and tourism economy advancing its <strong>Centennial 2071</strong> agenda. As the nation diversifies, the demands on corporate travel infrastructure have evolved exponentially. AB operates at the nexus of this transformation, providing highly secure, scalable, and meticulously managed executive mobility solutions for multinational corporations entering the UAE market.</p>' +
           '<p class="mb-6 leading-relaxed">Our strategic dispatch capabilities span the entire country. We maintain a continuous, vetted presence around <strong>Dubai International Financial Centre (DIFC)</strong> and <strong>Expo City Dubai</strong>, linking commercial hubs, government centers, and corporate headquarters from Dubai to Sharjah. For international delegations and foreign missions, our chauffeurs hold the Emirates IDs and protocol knowledge required to operate across the nation\'s secure zones with absolute discretion.</p>' +
           '<p class="leading-relaxed">Beyond point-to-point transfers, our <em>As-Directed</em> hourly services give global executives the fluid mobility required to execute complex business roadshows nationwide — across Dubai International Financial Centre (DIFC) corridors, government quarters, and event venues — with seamless connections through Dubai International Airport (DXB).</p>',
         items: [
@@ -237,7 +237,7 @@ export const corporateCountryTemplate: CountryTemplatePreset = {
       content: {
         heading: "Orchestrating Mega-Events Nationwide.",
         description:
-          "From international exhibitions at Expo City Dubai to grand prix weekends, national day celebrations, and world expos, the logistical demands on ground transportation are monumental.\n\nAB.Limo does not merely supply vehicles; we deploy comprehensive Event Transportation Management architecture. Our centralized Transport Control Room utilizes live telemetry to orchestrate VIP coach charters, executive van convoys, and individual VIP transfers across the country.",
+          "From international exhibitions at Expo City Dubai to grand prix weekends, national day celebrations, and world expos, the logistical demands on ground transportation are monumental.\n\nAB does not merely supply vehicles; we deploy comprehensive Event Transportation Management architecture. Our centralized Transport Control Room utilizes live telemetry to orchestrate VIP coach charters, executive van convoys, and individual VIP transfers across the country.",
         items: [],
         actions: [
           { label: "Download Event Logistics RFP Guide", href: "#corporate-account", style: "outline", icon: "Download" },
@@ -323,7 +323,7 @@ export const corporateCountryTemplate: CountryTemplatePreset = {
         eyebrow: "National Development",
         heading: "Logistics for Giga-Projects & Vision Programs.",
         description:
-          "The rapid expansion of national development programs has reshaped the country's outskirts — from Expo City Dubai districts to infrastructure zones rising beyond the capital. Moving executive engineering teams and stakeholders requires highly specialized ground transport.\n\nAB.Limo deploys executive SUVs and robust premium vans suited for developing infrastructure zones, offering Long-Term Transportation Contracts and daily shuttles between headquarters hotels and remote project sites.",
+          "The rapid expansion of national development programs has reshaped the country's outskirts — from Expo City Dubai districts to infrastructure zones rising beyond the capital. Moving executive engineering teams and stakeholders requires highly specialized ground transport.\n\nAB deploys executive SUVs and robust premium vans suited for developing infrastructure zones, offering Long-Term Transportation Contracts and daily shuttles between headquarters hotels and remote project sites.",
         items: [],
         actions: [
           { label: "Request Long-Term Fleet Lease", href: "#corporate-account", style: "outline", icon: "ArrowRight" },
@@ -352,7 +352,7 @@ export const corporateCountryTemplate: CountryTemplatePreset = {
         eyebrow: "Government Mobility",
         heading: "Royal Protocol & Diplomatic Missions.",
         description:
-          "The government quarter of Abu Dhabi and diplomatic districts across the country are subject to rigorous security and access regulations. AB.Limo acts as the trusted mobility partner for foreign embassies, international NGO delegations, and visiting state dignitaries.\n\nOur chauffeurs are extensively vetted, holding the national IDs and clearances required for seamless access through secure checkpoints. We provide Government & Embassy Transportation that strictly adheres to international protocol standards.",
+          "The government quarter of Abu Dhabi and diplomatic districts across the country are subject to rigorous security and access regulations. AB acts as the trusted mobility partner for foreign embassies, international NGO delegations, and visiting state dignitaries.\n\nOur chauffeurs are extensively vetted, holding the national IDs and clearances required for seamless access through secure checkpoints. We provide Government & Embassy Transportation that strictly adheres to international protocol standards.",
         items: [],
         actions: [
           { label: "Discuss Embassy Transport Contracts", href: "#corporate-account", style: "outline", icon: "ArrowRight" },
@@ -381,7 +381,7 @@ export const corporateCountryTemplate: CountryTemplatePreset = {
         eyebrow: "Executive Protection",
         heading: "Elite Vetting & Regulatory Compliance.",
         description:
-          "In enterprise mobility, the chauffeur is the ultimate failsafe. AB.Limo deploys highly trained executive chauffeurs in full compliance with national transport authority regulations, enforcing a zero-tolerance policy for infractions.\n\nOur proprietary vetting matrix includes exhaustive criminal background checks, motor vehicle record auditing, and mandatory defensive driving certifications. Every chauffeur signs legally binding Non-Disclosure Agreements (NDAs) and carries the required Emirates IDs.",
+          "In enterprise mobility, the chauffeur is the ultimate failsafe. AB deploys highly trained executive chauffeurs in full compliance with national transport authority regulations, enforcing a zero-tolerance policy for infractions.\n\nOur proprietary vetting matrix includes exhaustive criminal background checks, motor vehicle record auditing, and mandatory defensive driving certifications. Every chauffeur signs legally binding Non-Disclosure Agreements (NDAs) and carries the required Emirates IDs.",
         items: [],
         actions: [
           { label: "Review Security Documentation", href: "#corporate-account", style: "outline", icon: "ArrowRight" },

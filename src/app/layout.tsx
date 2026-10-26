@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | AB",
   },
   description:
-    "AB.Limo provides premium chauffeur-driven transportation across the GCC and worldwide. Executive transfers, corporate mobility, event logistics, and airport services.",
+    "AB provides premium chauffeur-driven transportation across the GCC and worldwide. Executive transfers, corporate mobility, event logistics, and airport services.",
   metadataBase: new URL("https://www.ab.limo"),
   icons: {
     icon: [

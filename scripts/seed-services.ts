@@ -45,13 +45,9 @@ async function seedServices() {
     if (!doc.slug) continue;
     try {
       const found = await Service.findOne({ slug: doc.slug }).lean();
-      if (found && force) {
-        await Service.updateOne({ slug: doc.slug }, doc);
-        updated += 1;
-        console.log(`Updated  service: ${doc.slug}`);
-      } else if (found) {
+      if (found) {
         existing += 1;
-        console.log(`Skipped  service: ${doc.slug} (already exists)`);
+        console.log(`Skipped  service: ${doc.slug} (already available, skipped)`);
       } else {
         await Service.create(doc);
         created += 1;

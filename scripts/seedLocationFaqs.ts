@@ -23,15 +23,15 @@ import { Article } from "../src/lib/models/Article";
 const countryFaqs: Record<string, Array<{ q: string; a: string }>> = {
   uae: [
     {
-      q: "What chauffeur services does AB.Limo offer in the UAE?",
-      a: "AB.Limo provides premium airport transfers, city-to-city rides, hourly chauffeur hire, corporate transportation, and event logistics across all seven emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Al Ain, and Fujairah.",
+      q: "What chauffeur services does AB offer in the UAE?",
+      a: "AB provides premium airport transfers, city-to-city rides, hourly chauffeur hire, corporate transportation, and event logistics across all seven emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Al Ain, and Fujairah.",
     },
     {
       q: "How do I book a luxury limousine in the UAE?",
-      a: "You can book online through our website, call our 24/7 hotline, or use the AB.Limo mobile app. Simply select your pickup and drop-off locations, choose your vehicle, and confirm your booking instantly.",
+      a: "You can book online through our website, call our 24/7 hotline, or use the AB mobile app. Simply select your pickup and drop-off locations, choose your vehicle, and confirm your booking instantly.",
     },
     {
-      q: "Does AB.Limo provide airport transfer services in the UAE?",
+      q: "Does AB provide airport transfer services in the UAE?",
       a: "Yes, we offer seamless airport transfers to and from Dubai International Airport (DXB), Al Maktoum International Airport (DWC), Zayed International Airport (AUH), Sharjah International Airport (SHJ), and Ras Al Khaimah International Airport (RKT).",
     },
     {
@@ -39,14 +39,14 @@ const countryFaqs: Record<string, Array<{ q: string; a: string }>> = {
       a: "Our fleet includes Mercedes S-Class, BMW 7 Series, Audi A8, Rolls Royce, Bentley, Chrysler 300 limousines, luxury SUVs, and executive vans — all maintained to the highest standards of comfort and safety.",
     },
     {
-      q: "Is AB.Limo available for corporate accounts in the UAE?",
+      q: "Is AB available for corporate accounts in the UAE?",
       a: "Absolutely. We offer tailored corporate mobility solutions including dedicated fleet management, monthly billing, VIP executive transport, and staff transportation for businesses of all sizes across the UAE.",
     },
   ],
   "saudi-arabia": [
     {
-      q: "What cities does AB.Limo serve in Saudi Arabia?",
-      a: "AB.Limo operates across Saudi Arabia including Riyadh, Jeddah, Mecca, Medina, Dammam, Al Khobar, Tabuk, Al Ula, NEOM, Abha, and many more cities with comprehensive ground transportation coverage.",
+      q: "What cities does AB serve in Saudi Arabia?",
+      a: "AB operates across Saudi Arabia including Riyadh, Jeddah, Mecca, Medina, Dammam, Al Khobar, Tabuk, Al Ula, NEOM, Abha, and many more cities with comprehensive ground transportation coverage.",
     },
     {
       q: "Do you offer transportation for Umrah and Hajj pilgrimages?",
@@ -61,14 +61,14 @@ const countryFaqs: Record<string, Array<{ q: string; a: string }>> = {
       a: "We provide airport transfers at King Khalid International Airport (RUH) in Riyadh, King Abdulaziz International Airport (JED) in Jeddah, King Fahd International Airport (DMM) in Dammam, and Prince Mohammad bin Abdulaziz Airport (MED) in Medina.",
     },
     {
-      q: "Does AB.Limo support Vision 2030 tourism initiatives?",
-      a: "Yes, AB.Limo is aligned with Saudi Vision 2030, supporting tourism growth with premium mobility solutions for NEOM, The Red Sea, Al Ula heritage sites, and emerging entertainment and cultural destinations.",
+      q: "Does AB support Vision 2030 tourism initiatives?",
+      a: "Yes, AB is aligned with Saudi Vision 2030, supporting tourism growth with premium mobility solutions for NEOM, The Red Sea, Al Ula heritage sites, and emerging entertainment and cultural destinations.",
     },
   ],
   qatar: [
     {
-      q: "What chauffeur services does AB.Limo offer in Qatar?",
-      a: "AB.Limo provides luxury airport transfers, city tours, hourly chauffeur hire, corporate transportation, and event mobility services across Doha, Lusail, Al Khor, and Al Wakrah.",
+      q: "What chauffeur services does AB offer in Qatar?",
+      a: "AB provides luxury airport transfers, city tours, hourly chauffeur hire, corporate transportation, and event mobility services across Doha, Lusail, Al Khor, and Al Wakrah.",
     },
     {
       q: "Do you provide transfers from Hamad International Airport?",
@@ -85,8 +85,8 @@ const countryFaqs: Record<string, Array<{ q: string; a: string }>> = {
   ],
   bahrain: [
     {
-      q: "What services does AB.Limo offer in Bahrain?",
-      a: "AB.Limo provides luxury chauffeur services in Bahrain including airport transfers from Bahrain International Airport (BAH), city transfers across Manama, Riffa, and Muharraq, corporate transportation, and cross-border rides to Saudi Arabia.",
+      q: "What services does AB offer in Bahrain?",
+      a: "AB provides luxury chauffeur services in Bahrain including airport transfers from Bahrain International Airport (BAH), city transfers across Manama, Riffa, and Muharraq, corporate transportation, and cross-border rides to Saudi Arabia.",
     },
     {
       q: "Can I book a cross-border transfer from Bahrain to Saudi Arabia?",
@@ -94,13 +94,13 @@ const countryFaqs: Record<string, Array<{ q: string; a: string }>> = {
     },
     {
       q: "Are your chauffeurs licensed and professional?",
-      a: "All AB.Limo chauffeurs in Bahrain are professionally trained, licensed, multilingual, and undergo rigorous background checks. They are experts in local routes and committed to providing a premium experience.",
+      a: "All AB chauffeurs in Bahrain are professionally trained, licensed, multilingual, and undergo rigorous background checks. They are experts in local routes and committed to providing a premium experience.",
     },
   ],
   kuwait: [
     {
       q: "What chauffeur services are available in Kuwait?",
-      a: "AB.Limo offers luxury airport transfers, city transportation, corporate mobility, and intercity rides across Kuwait City, Hawalli, Farwaniya, Al Ahmadi, and Salmiya.",
+      a: "AB offers luxury airport transfers, city transportation, corporate mobility, and intercity rides across Kuwait City, Hawalli, Farwaniya, Al Ahmadi, and Salmiya.",
     },
     {
       q: "Do you provide airport transfers from Kuwait International Airport?",
@@ -108,13 +108,13 @@ const countryFaqs: Record<string, Array<{ q: string; a: string }>> = {
     },
     {
       q: "Can I arrange a city-to-city ride from Kuwait to other GCC countries?",
-      a: "Yes, AB.Limo offers cross-border transfers from Kuwait to other GCC destinations including Saudi Arabia and Bahrain, with comfortable luxury vehicles for long-distance travel.",
+      a: "Yes, AB offers cross-border transfers from Kuwait to other GCC destinations including Saudi Arabia and Bahrain, with comfortable luxury vehicles for long-distance travel.",
     },
   ],
   oman: [
     {
-      q: "What cities does AB.Limo serve in Oman?",
-      a: "AB.Limo operates across Oman including Muscat, Salalah, Sohar, and Nizwa with comprehensive chauffeur services for airport transfers, city tours, and intercity travel.",
+      q: "What cities does AB serve in Oman?",
+      a: "AB operates across Oman including Muscat, Salalah, Sohar, and Nizwa with comprehensive chauffeur services for airport transfers, city tours, and intercity travel.",
     },
     {
       q: "Do you offer airport transfers at Muscat International Airport?",
@@ -143,7 +143,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
       },
       {
         q: "Can I hire a chauffeur by the hour in Dubai?",
-        a: "Yes, AB.Limo offers hourly chauffeur hire in Dubai with flexible packages starting from 2-hour minimum bookings. Explore Dubai's attractions, attend meetings, or enjoy a night out with a dedicated driver.",
+        a: "Yes, AB offers hourly chauffeur hire in Dubai with flexible packages starting from 2-hour minimum bookings. Explore Dubai's attractions, attend meetings, or enjoy a night out with a dedicated driver.",
       },
       {
         q: "Do you provide Dubai-to-Abu Dhabi transfers?",
@@ -154,7 +154,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
         a: "We cover all areas of Dubai including Downtown Dubai, Dubai Marina, JBR, Palm Jumeirah, DIFC, Business Bay, Dubai Creek, Deira, Jumeirah, Al Barsha, and all other districts.",
       },
       {
-        q: "Is AB.Limo available for Dubai corporate events?",
+        q: "Is AB available for Dubai corporate events?",
         a: "Yes, we provide comprehensive corporate event transportation in Dubai including conference shuttles, VIP executive transport, and fleet management for corporate functions at venues like Atlantis, Madinat Jumeirah, and DWTC.",
       },
     ],
@@ -174,8 +174,8 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
     ],
     sharjah: [
       {
-        q: "What services does AB.Limo offer in Sharjah?",
-        a: "AB.Limo provides airport transfers from Sharjah International Airport (SHJ), city transportation, corporate mobility, and inter-emirate transfers to Dubai and other locations.",
+        q: "What services does AB offer in Sharjah?",
+        a: "AB provides airport transfers from Sharjah International Airport (SHJ), city transportation, corporate mobility, and inter-emirate transfers to Dubai and other locations.",
       },
       {
         q: "Is there a direct transfer from Sharjah Airport to Dubai?",
@@ -187,7 +187,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
     riyadh: [
       {
         q: "What chauffeur services are available in Riyadh?",
-        a: "AB.Limo offers premium chauffeur services in Riyadh including airport transfers from King Khalid International Airport (RUH), city transportation, corporate mobility, and intercity transfers to Jeddah, Dammam, and other cities.",
+        a: "AB offers premium chauffeur services in Riyadh including airport transfers from King Khalid International Airport (RUH), city transportation, corporate mobility, and intercity transfers to Jeddah, Dammam, and other cities.",
       },
       {
         q: "Can I book a limousine for business meetings in Riyadh?",
@@ -219,7 +219,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
     mecca: [
       {
         q: "What transportation services do you offer in Mecca?",
-        a: "AB.Limo provides dedicated transportation in Mecca including hotel-to-Haram shuttles, intercity transfers to Medina and Jeddah, and VIP religious tourism logistics.",
+        a: "AB provides dedicated transportation in Mecca including hotel-to-Haram shuttles, intercity transfers to Medina and Jeddah, and VIP religious tourism logistics.",
       },
       {
         q: "Can I book a Mecca-to-Medina transfer?",
@@ -246,8 +246,8 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
   qatar: {
     doha: [
       {
-        q: "What chauffeur services does AB.Limo offer in Doha?",
-        a: "AB.Limo provides premium airport transfers from Hamad International Airport (DOH), city tours, hourly chauffeur hire, corporate transportation, and event mobility across Doha.",
+        q: "What chauffeur services does AB offer in Doha?",
+        a: "AB provides premium airport transfers from Hamad International Airport (DOH), city tours, hourly chauffeur hire, corporate transportation, and event mobility across Doha.",
       },
       {
         q: "Can I hire a limousine for a day tour in Doha?",
@@ -258,14 +258,14 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
         a: "Yes, we offer seamless Doha-to-Lusail transfers covering approximately 25 km in about 20 minutes. Lusail is a popular destination for events and entertainment.",
       },
       {
-        q: "Is AB.Limo available for World Cup-style event transportation?",
+        q: "Is AB available for World Cup-style event transportation?",
         a: "Yes, we have extensive experience providing large-scale event transportation including stadium transfers, VIP logistics, and crowd management solutions for major sporting events in Qatar.",
       },
     ],
     lusail: [
       {
         q: "What services are available in Lusail?",
-        a: "AB.Limo provides transportation in Lusail including event transfers to Lusail Stadium, Lusail Boulevard, and Qetaifan Islands, as well as intercity transfers to Doha and beyond.",
+        a: "AB provides transportation in Lusail including event transfers to Lusail Stadium, Lusail Boulevard, and Qetaifan Islands, as well as intercity transfers to Doha and beyond.",
       },
     ],
     "al-khor": [
@@ -279,7 +279,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
     manama: [
       {
         q: "What chauffeur services are available in Manama?",
-        a: "AB.Limo provides luxury chauffeur services in Manama including airport transfers from Bahrain International Airport (BAH), city tours, corporate transportation, and cross-border transfers.",
+        a: "AB provides luxury chauffeur services in Manama including airport transfers from Bahrain International Airport (BAH), city tours, corporate transportation, and cross-border transfers.",
       },
       {
         q: "Can I book a cross-border transfer from Manama to Al Khobar?",
@@ -293,7 +293,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
     riffa: [
       {
         q: "What services are available in Riffa?",
-        a: "AB.Limo provides chauffeur services in Riffa including airport transfers, city transportation, and intercity transfers to Manama and other Bahrain locations.",
+        a: "AB provides chauffeur services in Riffa including airport transfers, city transportation, and intercity transfers to Manama and other Bahrain locations.",
       },
     ],
   },
@@ -301,7 +301,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
     "kuwait-city": [
       {
         q: "What chauffeur services are available in Kuwait City?",
-        a: "AB.Limo provides luxury airport transfers from Kuwait International Airport (KWI), city transportation across Kuwait City, Hawalli, and Farwaniya, corporate mobility, and cross-border transfers.",
+        a: "AB provides luxury airport transfers from Kuwait International Airport (KWI), city transportation across Kuwait City, Hawalli, and Farwaniya, corporate mobility, and cross-border transfers.",
       },
       {
         q: "Can I book an airport transfer from Kuwait International Airport?",
@@ -315,7 +315,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
     hawalli: [
       {
         q: "What services are available in Hawalli?",
-        a: "AB.Limo provides chauffeur services in Hawalli including city transfers, airport pickups, and transportation to shopping districts and business areas.",
+        a: "AB provides chauffeur services in Hawalli including city transfers, airport pickups, and transportation to shopping districts and business areas.",
       },
     ],
   },
@@ -323,7 +323,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
     muscat: [
       {
         q: "What chauffeur services are available in Muscat?",
-        a: "AB.Limo provides luxury airport transfers from Muscat International Airport (MCT), city tours, hourly chauffeur hire, and intercity transfers to Salalah, Sohar, and beyond.",
+        a: "AB provides luxury airport transfers from Muscat International Airport (MCT), city tours, hourly chauffeur hire, and intercity transfers to Salalah, Sohar, and beyond.",
       },
       {
         q: "Can I book a Muscat city tour with a chauffeur?",
@@ -337,7 +337,7 @@ const cityFaqs: Record<string, Record<string, Array<{ q: string; a: string }>>> 
     salalah: [
       {
         q: "What services are available in Salalah?",
-        a: "AB.Limo provides airport transfers from Salalah Airport (SLL), khareef season tours, and exploration trips to wadis, beaches, and archaeological sites.",
+        a: "AB provides airport transfers from Salalah Airport (SLL), khareef season tours, and exploration trips to wadis, beaches, and archaeological sites.",
       },
       {
         q: "Can I book a Salalah khareef tour?",
@@ -355,23 +355,23 @@ type FaqPair = { q: string; a: string };
 const articleFaqData: Record<string, FaqPair[]> = {
   // ── Chauffeur VIP ──────────────────────────────────────
   "chauffeur-vip|uae": [
-    { q: "What is AB.Limo's chauffeur VIP service in the UAE?", a: "Our chauffeur VIP service in the UAE provides dedicated, professionally trained drivers with luxury vehicles like Mercedes S-Class, BMW 7 Series, and Rolls Royce for executive and personal travel across all seven emirates." },
-    { q: "How do I book a VIP chauffeur in Dubai or Abu Dhabi?", a: "Book online at ablimo.com, call our 24/7 hotline, or use the AB.Limo app. Select your vehicle, route, and schedule — confirmation is instant." },
+    { q: "What is AB's chauffeur VIP service in the UAE?", a: "Our chauffeur VIP service in the UAE provides dedicated, professionally trained drivers with luxury vehicles like Mercedes S-Class, BMW 7 Series, and Rolls Royce for executive and personal travel across all seven emirates." },
+    { q: "How do I book a VIP chauffeur in Dubai or Abu Dhabi?", a: "Book online at ablimo.com, call our 24/7 hotline, or use the AB app. Select your vehicle, route, and schedule — confirmation is instant." },
     { q: "Are VIP chauffeurs available for multi-day hire?", a: "Yes, we offer multi-day and weekly VIP chauffeur packages with dedicated vehicles and drivers for business trips, tourism, or special occasions." },
   ],
   "chauffeur-vip|uae|dubai": [
-    { q: "What makes AB.Limo's Dubai VIP chauffeur service unique?", a: "Our Dubai VIP service features hand-picked chauffeurs, real-time flight tracking for airport pickups, complimentary refreshments, Wi-Fi-equipped vehicles, and 24/7 concierge support." },
+    { q: "What makes AB's Dubai VIP chauffeur service unique?", a: "Our Dubai VIP service features hand-picked chauffeurs, real-time flight tracking for airport pickups, complimentary refreshments, Wi-Fi-equipped vehicles, and 24/7 concierge support." },
     { q: "Can I request a specific vehicle for my Dubai VIP ride?", a: "Yes, choose from our premium fleet including Mercedes S-Class, Bentley, Rolls Royce, and luxury SUVs when booking your Dubai VIP transfer." },
   ],
   "chauffeur-vip|saudi-arabia": [
-    { q: "What VIP chauffeur services are available in Saudi Arabia?", a: "AB.Limo provides VIP chauffeur services across Riyadh, Jeddah, Dammam, Mecca, and Medina with luxury vehicles for business, tourism, and religious travel." },
+    { q: "What VIP chauffeur services are available in Saudi Arabia?", a: "AB provides VIP chauffeur services across Riyadh, Jeddah, Dammam, Mecca, and Medina with luxury vehicles for business, tourism, and religious travel." },
     { q: "Do you offer VIP transportation for Hajj and Umrah?", a: "Yes, we offer premium VIP transportation for Hajj and Umrah pilgrimages with experienced drivers, luxury vehicles, and comprehensive logistics support." },
   ],
   "chauffeur-vip|saudi-arabia|riyadh": [
-    { q: "What VIP chauffeur options are available in Riyadh?", a: "In Riyadh, AB.Limo offers executive sedans, luxury SUVs, and limousines with professional chauffeurs for airport transfers, business meetings, and city tours." },
+    { q: "What VIP chauffeur options are available in Riyadh?", a: "In Riyadh, AB offers executive sedans, luxury SUVs, and limousines with professional chauffeurs for airport transfers, business meetings, and city tours." },
   ],
   "chauffeur-vip|qatar": [
-    { q: "What VIP chauffeur services does AB.Limo offer in Qatar?", a: "In Qatar, we provide luxury chauffeur services including airport transfers from DOH, city tours of Doha, hourly hire, and event transportation with premium vehicles." },
+    { q: "What VIP chauffeur services does AB offer in Qatar?", a: "In Qatar, we provide luxury chauffeur services including airport transfers from DOH, city tours of Doha, hourly hire, and event transportation with premium vehicles." },
   ],
   "chauffeur-vip|qatar|doha": [
     { q: "Can I book a VIP chauffeur for a Doha business trip?", a: "Absolutely. Our Doha VIP chauffeur service is ideal for business travelers with executive vehicles, punctual service, and professional multilingual drivers." },
@@ -379,7 +379,7 @@ const articleFaqData: Record<string, FaqPair[]> = {
 
   // ── Airport Transfers ──────────────────────────────────
   "airport-transfers|uae": [
-    { q: "Which airports in the UAE does AB.Limo serve?", a: "We serve Dubai International Airport (DXB), Al Maktoum International Airport (DWC), Zayed International Airport (AUH), Sharjah International Airport (SHJ), and Ras Al Khaimah International Airport (RKT)." },
+    { q: "Which airports in the UAE does AB serve?", a: "We serve Dubai International Airport (DXB), Al Maktoum International Airport (DWC), Zayed International Airport (AUH), Sharjah International Airport (SHJ), and Ras Al Khaimah International Airport (RKT)." },
     { q: "How far in advance should I book an airport transfer?", a: "We recommend booking at least 24 hours in advance for guaranteed availability, though last-minute bookings are often available depending on demand." },
     { q: "Do you track flight arrivals for airport pickups?", a: "Yes, all our airport transfers include real-time flight tracking. If your flight is delayed, your chauffeur will adjust the pickup time automatically." },
   ],
@@ -388,7 +388,7 @@ const articleFaqData: Record<string, FaqPair[]> = {
     { q: "How long is the transfer from DXB to Dubai Marina?", a: "The transfer from DXB to Dubai Marina typically takes 25-40 minutes depending on traffic. Our chauffeurs use real-time routing to ensure the fastest journey." },
   ],
   "airport-transfers|saudi-arabia": [
-    { q: "Which airports in Saudi Arabia does AB.Limo cover?", a: "We cover King Khalid International Airport (RUH) in Riyadh, King Abdulaziz International Airport (JED) in Jeddah, King Fahd International Airport (DMM) in Dammam, and Prince Mohammad bin Abdulaziz Airport (MED) in Medina." },
+    { q: "Which airports in Saudi Arabia does AB cover?", a: "We cover King Khalid International Airport (RUH) in Riyadh, King Abdulaziz International Airport (JED) in Jeddah, King Fahd International Airport (DMM) in Dammam, and Prince Mohammad bin Abdulaziz Airport (MED) in Medina." },
   ],
   "airport-transfers|saudi-arabia|jeddah": [
     { q: "What is the transfer time from JED airport to Mecca?", a: "The transfer from King Abdulaziz International Airport to Mecca covers approximately 80 km and takes about 1 hour. We provide direct, comfortable transfers for pilgrims." },
@@ -410,7 +410,7 @@ const articleFaqData: Record<string, FaqPair[]> = {
     { q: "What airport transfer services are available in Kuwait?", a: "We provide premium airport transfers from Kuwait International Airport (KWI) to Kuwait City, Hawalli, Farwaniya, and all other areas." },
   ],
   "airport-transfers|oman": [
-    { q: "Which airports in Oman does AB.Limo serve?", a: "We serve Muscat International Airport (MCT), Salalah Airport (SLL), and Sohar International Airport (SOH) with luxury transfer services." },
+    { q: "Which airports in Oman does AB serve?", a: "We serve Muscat International Airport (MCT), Salalah Airport (SLL), and Sohar International Airport (SOH) with luxury transfer services." },
   ],
   "airport-transfers|oman|muscat": [
     { q: "What is the transfer time from Muscat Airport to the city center?", a: "The transfer from Muscat International Airport to the city center takes approximately 20-30 minutes depending on your destination within Muscat." },
@@ -418,23 +418,23 @@ const articleFaqData: Record<string, FaqPair[]> = {
 
   // ── Corporate Transportation ───────────────────────────
   "corporate-transportation|uae": [
-    { q: "What corporate transportation solutions does AB.Limo offer in the UAE?", a: "We provide dedicated corporate accounts, executive fleet management, airport transfers for business travelers, staff transportation, and event logistics for companies across the UAE." },
-    { q: "Can AB.Limo manage a corporate fleet for my company?", a: "Yes, our corporate fleet management includes dedicated vehicles, scheduled routing, monthly billing, real-time tracking, and a dedicated account manager." },
+    { q: "What corporate transportation solutions does AB offer in the UAE?", a: "We provide dedicated corporate accounts, executive fleet management, airport transfers for business travelers, staff transportation, and event logistics for companies across the UAE." },
+    { q: "Can AB manage a corporate fleet for my company?", a: "Yes, our corporate fleet management includes dedicated vehicles, scheduled routing, monthly billing, real-time tracking, and a dedicated account manager." },
   ],
   "corporate-transportation|uae|dubai": [
     { q: "Do you provide executive transportation for DIFC and Business Bay?", a: "Yes, we specialize in executive transportation for Dubai's financial districts including DIFC, Business Bay, and Dubai Marina with premium vehicles and professional chauffeurs." },
   ],
   "corporate-transportation|saudi-arabia": [
-    { q: "What corporate mobility services are available in Saudi Arabia?", a: "AB.Limo offers corporate transportation across Riyadh, Jeddah, and Dammam including executive transfers, staff shuttles, and event logistics for businesses." },
+    { q: "What corporate mobility services are available in Saudi Arabia?", a: "AB offers corporate transportation across Riyadh, Jeddah, and Dammam including executive transfers, staff shuttles, and event logistics for businesses." },
   ],
   "corporate-transportation|qatar": [
-    { q: "What corporate transportation does AB.Limo offer in Qatar?", a: "In Qatar, we provide corporate accounts, executive airport transfers, staff transportation, and event logistics for businesses operating in Doha and Lusail." },
+    { q: "What corporate transportation does AB offer in Qatar?", a: "In Qatar, we provide corporate accounts, executive airport transfers, staff transportation, and event logistics for businesses operating in Doha and Lusail." },
   ],
 
   // ── Event Transportation ───────────────────────────────
   "event-transportation|uae": [
-    { q: "What event transportation services does AB.Limo provide in the UAE?", a: "We offer wedding transportation, concert and sports event shuttles, conference logistics, gala dinner transfers, and VIP event coordination across the UAE." },
-    { q: "Can AB.Limo handle large-scale event transportation?", a: "Yes, we manage large-scale event transportation with fleet coordination, multiple vehicle types, dedicated event managers, and real-time logistics tracking." },
+    { q: "What event transportation services does AB provide in the UAE?", a: "We offer wedding transportation, concert and sports event shuttles, conference logistics, gala dinner transfers, and VIP event coordination across the UAE." },
+    { q: "Can AB handle large-scale event transportation?", a: "Yes, we manage large-scale event transportation with fleet coordination, multiple vehicle types, dedicated event managers, and real-time logistics tracking." },
   ],
   "event-transportation|uae|dubai": [
     { q: "Do you provide transportation for Dubai events?", a: "Yes, we provide comprehensive event transportation for Dubai events including concerts at Coca-Cola Arena, Dubai World Cup, Art Dubai, and exhibitions at DWTC." },
@@ -443,7 +443,7 @@ const articleFaqData: Record<string, FaqPair[]> = {
     { q: "What event transportation is available in Abu Dhabi?", a: "We provide event transportation for Abu Dhabi events including functions at Emirates Palace, Yas Marina Circuit, ADNEC conferences, and cultural events at Louvre Abu Dhabi." },
   ],
   "event-transportation|saudi-arabia": [
-    { q: "What event transportation is available in Saudi Arabia?", a: "AB.Limo provides event transportation for Riyadh Season, Jeddah Season, concerts, sporting events, conferences, and corporate functions across Saudi Arabia." },
+    { q: "What event transportation is available in Saudi Arabia?", a: "AB provides event transportation for Riyadh Season, Jeddah Season, concerts, sporting events, conferences, and corporate functions across Saudi Arabia." },
   ],
   "event-transportation|qatar": [
     { q: "Do you offer event transportation in Qatar?", a: "Yes, we provide event transportation for sporting events, conferences at QNCC, cultural events at Katara, and functions at hotels across Qatar." },
@@ -451,24 +451,24 @@ const articleFaqData: Record<string, FaqPair[]> = {
 
   // ── Bus & Coach Hire ───────────────────────────────────
   "bus-coach-hire|uae": [
-    { q: "What bus and coach hire options are available in the UAE?", a: "AB.Limo offers mini buses (12-16 seats), mid-size coaches (20-30 seats), and full-size luxury coaches (40-50 seats) for group transportation across the UAE." },
+    { q: "What bus and coach hire options are available in the UAE?", a: "AB offers mini buses (12-16 seats), mid-size coaches (20-30 seats), and full-size luxury coaches (40-50 seats) for group transportation across the UAE." },
     { q: "Can I hire a coach for a corporate team outing in Dubai?", a: "Yes, we provide luxury coach hire for corporate team outings, team-building events, and group excursions throughout Dubai and other emirates." },
   ],
   "bus-coach-hire|saudi-arabia": [
     { q: "What group transportation options are available in Saudi Arabia?", a: "We offer bus and coach hire for Hajj/Umrah groups, corporate events, school trips, and tourism across Riyadh, Jeddah, Mecca, and other cities." },
   ],
   "bus-coach-hire|qatar": [
-    { q: "Can I hire a bus for a group event in Doha?", a: "Yes, AB.Limo offers luxury bus and coach hire for group events, conferences, and tours in Doha and throughout Qatar." },
+    { q: "Can I hire a bus for a group event in Doha?", a: "Yes, AB offers luxury bus and coach hire for group events, conferences, and tours in Doha and throughout Qatar." },
   ],
   "bus-coach-hire|qatar|doha": [
-    { q: "What coach hire options are available in Doha?", a: "AB.Limo offers mini buses, mid-size coaches, and full-size luxury coaches for group transportation in Doha. Ideal for corporate events, school trips, and tourism groups." },
+    { q: "What coach hire options are available in Doha?", a: "AB offers mini buses, mid-size coaches, and full-size luxury coaches for group transportation in Doha. Ideal for corporate events, school trips, and tourism groups." },
     { q: "Can I hire a bus for a World Cup viewing event in Doha?", a: "Yes, we provide group bus hire for sporting events, conference shuttles, and large-scale event logistics across Doha with professional drivers." },
   ],
   "bus-coach-hire|bahrain": [
-    { q: "What group transportation does AB.Limo offer in Bahrain?", a: "We provide bus and coach hire for corporate groups, tourism, and event transportation across Bahrain including Manama, Riffa, and Muharraq." },
+    { q: "What group transportation does AB offer in Bahrain?", a: "We provide bus and coach hire for corporate groups, tourism, and event transportation across Bahrain including Manama, Riffa, and Muharraq." },
   ],
   "bus-coach-hire|kuwait": [
-    { q: "What group transportation options are available in Kuwait?", a: "AB.Limo offers bus and coach hire for corporate groups, school transportation, and event logistics across Kuwait City and other areas." },
+    { q: "What group transportation options are available in Kuwait?", a: "AB offers bus and coach hire for corporate groups, school transportation, and event logistics across Kuwait City and other areas." },
   ],
   "bus-coach-hire|oman": [
     { q: "Can I hire a coach for a group tour in Oman?", a: "Yes, we provide luxury bus and coach hire for group tours, corporate events, and tourism across Muscat, Salalah, and other Omani cities." },
@@ -476,28 +476,28 @@ const articleFaqData: Record<string, FaqPair[]> = {
 
   // ── Tourism Transportation ─────────────────────────────
   "tourism-transportation|uae": [
-    { q: "What tourism transportation does AB.Limo offer in the UAE?", a: "We provide guided city tours, desert safari transfers, Abu Dhabi day trips, inter-emirate tours, and custom tourism itineraries with luxury vehicles and professional drivers." },
+    { q: "What tourism transportation does AB offer in the UAE?", a: "We provide guided city tours, desert safari transfers, Abu Dhabi day trips, inter-emirate tours, and custom tourism itineraries with luxury vehicles and professional drivers." },
   ],
   "tourism-transportation|uae|dubai": [
-    { q: "Can I book a Dubai city tour with AB.Limo?", a: "Yes, our Dubai city tours cover Burj Khalifa, Palm Jumeirah, Dubai Creek, Gold Souk, Dubai Mall, and more with expert local chauffeurs." },
+    { q: "Can I book a Dubai city tour with AB?", a: "Yes, our Dubai city tours cover Burj Khalifa, Palm Jumeirah, Dubai Creek, Gold Souk, Dubai Mall, and more with expert local chauffeurs." },
   ],
   "tourism-transportation|saudi-arabia": [
     { q: "What tourism transportation options are available in Saudi Arabia?", a: "We offer tourism transfers for heritage sites in Al Ula, NEOM excursions, Red Sea coast tours, and religious tourism logistics across Saudi Arabia." },
   ],
   "tourism-transportation|qatar": [
-    { q: "What tourism transportation does AB.Limo provide in Qatar?", a: "In Qatar, we provide city tours of Doha, desert excursions, cultural site visits, and customized tourism transportation with luxury vehicles." },
+    { q: "What tourism transportation does AB provide in Qatar?", a: "In Qatar, we provide city tours of Doha, desert excursions, cultural site visits, and customized tourism transportation with luxury vehicles." },
   ],
   "tourism-transportation|bahrain": [
-    { q: "What tourism transfers are available in Bahrain?", a: "AB.Limo offers tourism transportation in Bahrain including Bahrain Fort visits, Pearl Trail tours, Formula 1 circuit transfers, and cultural site excursions." },
+    { q: "What tourism transfers are available in Bahrain?", a: "AB offers tourism transportation in Bahrain including Bahrain Fort visits, Pearl Trail tours, Formula 1 circuit transfers, and cultural site excursions." },
   ],
   "tourism-transportation|kuwait": [
-    { q: "What tourism transportation does AB.Limo offer in Kuwait?", a: "We provide tourism transfers in Kuwait including Kuwait Towers visits, Souq Mubarakiya tours, Failaka Island transfers, and desert excursion transportation." },
+    { q: "What tourism transportation does AB offer in Kuwait?", a: "We provide tourism transfers in Kuwait including Kuwait Towers visits, Souq Mubarakiya tours, Failaka Island transfers, and desert excursion transportation." },
   ],
   "tourism-transportation|oman": [
-    { q: "What tourism transportation options are available in Oman?", a: "AB.Limo offers tourism transfers in Oman including Muscat city tours, wadi excursions, Jebel Akhdar trips, Salalah khareef tours, and custom itineraries." },
+    { q: "What tourism transportation options are available in Oman?", a: "AB offers tourism transfers in Oman including Muscat city tours, wadi excursions, Jebel Akhdar trips, Salalah khareef tours, and custom itineraries." },
   ],
   "tourism-transportation|oman|muscat": [
-    { q: "What can I see on a Muscat city tour with AB.Limo?", a: "Our Muscat city tours cover the Sultan Qaboos Grand Mosque, Royal Opera House, Muttrah Souq, Bait Al Zubair Museum, and the scenic coastal road with professional local drivers." },
+    { q: "What can I see on a Muscat city tour with AB?", a: "Our Muscat city tours cover the Sultan Qaboos Grand Mosque, Royal Opera House, Muttrah Souq, Bait Al Zubair Museum, and the scenic coastal road with professional local drivers." },
     { q: "Can I book a day trip from Muscat to Jebel Akhdar?", a: "Yes, we offer day trips from Muscat to Jebel Akhdar in the Al Hajar Mountains. The drive takes about 2 hours each way and our experienced mountain drivers ensure a safe, scenic journey." },
   ],
 };

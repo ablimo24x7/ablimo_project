@@ -210,7 +210,7 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
       }
       // Auto-generate SEO metaTitle when title changes and SEO fields are empty
       if (key === "title" && !prev.seo.metaTitle) {
-        next.seo = { ...next.seo, metaTitle: `${String(value)} | AB.Limo` };
+        next.seo = { ...next.seo, metaTitle: `${String(value)} | AB` };
       }
       // Auto-generate SEO metaDescription when subtitle/desc changes and SEO field is empty
       if ((key === "subtitle" || key === "desc") && !prev.seo.metaDescription) {
@@ -233,14 +233,14 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
 
   const regenerateSeo = () => {
     setForm((prev) => {
-      const metaTitle = prev.seo.metaTitle || `${prev.title} | AB.Limo`;
+      const metaTitle = prev.seo.metaTitle || `${prev.title} | AB`;
       let metaDescription = prev.seo.metaDescription;
       if (!metaDescription) {
         metaDescription = prev.subtitle?.trim().slice(0, 160) || prev.desc?.trim().slice(0, 160) || prev.title;
       }
       const keywords = [
         prev.title,
-        "AB.Limo",
+        "AB",
         "luxury chauffeur",
         "premium transportation",
         "executive travel",
@@ -750,7 +750,7 @@ export function ServiceEditor({ initialData, mode = "create" }: ServiceEditorPro
               </div>
               <div className="space-y-2">
                 <Label>Meta Title</Label>
-                <Input value={form.seo.metaTitle} onChange={(e) => updateSeo({ metaTitle: e.target.value })} placeholder={`${form.title || "Service Title"} | AB.Limo`} />
+                <Input value={form.seo.metaTitle} onChange={(e) => updateSeo({ metaTitle: e.target.value })} placeholder={`${form.title || "Service Title"} | AB`} />
                 <p className="text-xs text-muted-foreground">{form.seo.metaTitle.length}/200 characters</p>
               </div>
               <div className="space-y-2">

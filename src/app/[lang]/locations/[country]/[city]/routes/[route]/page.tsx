@@ -43,11 +43,11 @@ export async function generateMetadata({
   if (!to) to = { slug: toRaw, name: titleFromSlug(toRaw), airports: [] };
 
   return generateSeoMetadata({
-    title: `${from.name} to ${to.name} Transfer | AB.Limo Long Distance`,
-    description: `Book a luxury ${from.name} to ${to.name} transfer with AB.Limo. Professional chauffeurs, fixed pricing, and premium vehicles for your long-distance journey.`,
+    title: `${from.name} to ${to.name} Transfer | AB Long Distance`,
+    description: `Book a luxury ${from.name} to ${to.name} transfer with AB. Professional chauffeurs, fixed pricing, and premium vehicles for your long-distance journey.`,
     path: `/locations/${countryParam}/${cityParam}/routes/${routeSlug}`,
     lang,
-    keywords: `${from.name} to ${to.name}, ${from.name} transfer, long distance ${from.name}, AB.Limo route, intercity transfer ${to.name}`,
+    keywords: `${from.name} to ${to.name}, ${from.name} transfer, long distance ${from.name}, AB route, intercity transfer ${to.name}`,
   });
 }
 
@@ -82,7 +82,7 @@ export default async function RoutePage({
   const distance = route.distance;
   const duration = route.duration;
 
-  const routeDescription = `Book a luxury ${from.name} to ${to.name} transfer with AB.Limo. Professional chauffeurs, fixed pricing, and premium vehicles for your long-distance journey.`;
+  const routeDescription = `Book a luxury ${from.name} to ${to.name} transfer with AB. Professional chauffeurs, fixed pricing, and premium vehicles for your long-distance journey.`;
 
   const template = await getRouteTemplate(originCountry.slug, lang);
   const context: SectionRenderContext = {

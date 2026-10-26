@@ -34,7 +34,7 @@ function SignInForm() {
     <div className="flex min-h-screen items-center justify-center bg-background p-4">
       <Card className="w-full max-w-sm">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold">AB.Limo Admin</CardTitle>
+          <CardTitle className="text-2xl font-bold">AB Admin</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">

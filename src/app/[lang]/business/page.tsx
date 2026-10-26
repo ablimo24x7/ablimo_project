@@ -14,14 +14,14 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: isAr ? dict.business.meta.title : "Business Travel Solutions | AB.Limo Professional Transportation",
+    title: isAr ? dict.business.meta.title : "Business Travel Solutions | AB Professional Transportation",
     description: isAr
       ? dict.business.meta.description
-      : "Reliable business transportation for professionals worldwide. AB.Limo offers airport transfers, intercity travel, and daily commute solutions with premium vehicles and professional chauffeurs.",
+      : "Reliable business transportation for professionals worldwide. AB offers airport transfers, intercity travel, and daily commute solutions with premium vehicles and professional chauffeurs.",
     path: "/business",
     lang,
     keywords:
-      "business travel, corporate transportation, professional chauffeur, airport transfer, executive car service, AB.Limo business, business commute, intercity travel",
+      "business travel, corporate transportation, professional chauffeur, airport transfer, executive car service, AB business, business commute, intercity travel",
   });
 }
 
@@ -116,7 +116,7 @@ export default async function BusinessPage({
           <div className="relative rounded-2xl overflow-hidden border border-gray-700">
             <Image
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=700&fit=crop"
-              alt="AB.Limo platform dashboard"
+              alt="AB platform dashboard"
               width={1200}
               height={700}
               className="w-full object-cover"

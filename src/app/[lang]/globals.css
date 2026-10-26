@@ -1789,3 +1789,77 @@ select:focus {
     @apply font-sans;
   }
 }
+
+/* ─── Header mega menu ─────────────────────────────────────────────
+   Reproduces the riyadh_corporate_mobility reference *as rendered*:
+   the panel is anchored at the trigger's center (left: 50%) and, while
+   closed, sits shifted by -50% of its width (Tailwind's -translate-x-1/2).
+   On open the shift is removed, so it fades in while sliding left → right
+   just below the header's bottom edge (0.3s, cubic-bezier(0.4,0,0.2,1)).
+   - Hover only on devices with a real hover pointer (no sticky hover on touch).
+   - [data-open="true"] is driven by React for click / tap / keyboard.
+   - .mega-menu-content--rtl mirrors the slide (right → left) for Arabic. */
+.mega-menu-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%);
+  pointer-events: none;
+  transition:
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mega-menu-content--rtl {
+  transform: translateX(50%);
+}
+
+.mega-menu-chevron {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mega-menu[data-open="true"] > .mega-menu-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.mega-menu[data-open="true"] .mega-menu-chevron {
+  transform: rotate(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mega-menu:hover > .mega-menu-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .mega-menu:hover .mega-menu-chevron {
+    transform: rotate(180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mega-menu-content,
+  .mega-menu[data-open="true"] > .mega-menu-content {
+    transform: none;
+    transition: opacity 0.15s linear, visibility 0.15s linear;
+  }
+
+  .mega-menu-chevron {
+    transition: none;
+  }
+}
+
+/* Hero City Slider Progress Bar Animation */
+@keyframes abfill {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

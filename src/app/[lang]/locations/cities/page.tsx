@@ -16,14 +16,14 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: isAr ? dict.cities.meta.title : "All Cities | AB.Limo Premium Transportation in 25+ Cities",
+    title: isAr ? dict.cities.meta.title : "All Cities | AB Premium Transportation in 25+ Cities",
     description: isAr
       ? dict.cities.meta.description
-      : "AB.Limo serves 25+ cities across the GCC and worldwide. Find premium chauffeur services in Dubai, Riyadh, Doha, Abu Dhabi, Jeddah, Manama, Kuwait City, Muscat, and more.",
+      : "AB serves 25+ cities across the GCC and worldwide. Find premium chauffeur services in Dubai, Riyadh, Doha, Abu Dhabi, Jeddah, Manama, Kuwait City, Muscat, and more.",
     path: "/locations/cities",
     lang,
     keywords:
-      "AB.Limo cities, chauffeur service cities, luxury transportation Dubai, Riyadh limousine, Doha car service, Abu Dhabi chauffeur, GCC cities transportation",
+      "AB cities, chauffeur service cities, luxury transportation Dubai, Riyadh limousine, Doha car service, Abu Dhabi chauffeur, GCC cities transportation",
   });
 }
 

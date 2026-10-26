@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "siteTitle": "AB.Limo - Luxury Chauffeur Service",
+    "siteTitle": "AB - Luxury Chauffeur Service",
     "siteDescription": "Executive chauffeur, corporate mobility and event logistics across the GCC since 1999. Trusted by global corporations in KSA, UAE, Qatar, Oman, Bahrain & Kuwait."
   },
   "header": {
-    "logo": "AB.Limo",
+    "logo": "AB",
     "nav": {
       "home": "Home",
       "help": "Help",
@@ -15,7 +15,13 @@
       "corporateMobility": "Corporate Mobility Solutions",
       "eventsMobility": "Events Mobility Solutions",
       "mobilityByIndustry": "Mobility by Industry",
-      "technology": "Technology"
+      "technology": "Technology",
+      "services": "Services",
+      "fleet": "Fleet",
+      "industries": "Industries",
+      "locations": "Locations",
+      "company": "Company",
+      "resources": "Resources"
     },
     "dropdowns": {
       "technology": {
@@ -92,6 +98,61 @@
         "oilGas": "Oil & Gas Staff Mobility Solutions",
         "miningStaff": "Mining Staff Transportation",
         "constructionStaff": "Construction Staff Transportation"
+      },
+      "servicesMenu": {
+        "chauffeurVip": "Chauffeur & VIP",
+        "airportTransfers": "Airport transfers",
+        "corporateTransportation": "Corporate transportation",
+        "eventTransportation": "Event transportation",
+        "busCoachHire": "Bus & coach hire",
+        "workforceTransportation": "Workforce transportation",
+        "tourismTransportation": "Tourism transportation",
+        "religiousTourism": "Religious tourism",
+        "intercityTransfers": "Intercity transfers"
+      },
+      "industriesMenu": {
+        "eventsExhibitions": "Events & exhibitions",
+        "governmentDiplomatic": "Government & diplomatic",
+        "aviationFbo": "Aviation & FBO",
+        "energyGigaProjects": "Energy & giga-projects",
+        "hospitality": "Hospitality",
+        "sportsEntertainment": "Sports & entertainment",
+        "corporateEnterprise": "Corporate & enterprise"
+      },
+      "locationsMenu": {
+        "saudiArabia": "Saudi Arabia",
+        "uae": "UAE",
+        "qatar": "Qatar",
+        "bahrainKuwaitOman": "Bahrain, Kuwait, Oman",
+        "airports": "Airports",
+        "allLocations": "All locations"
+      },
+      "fleetMenu": {
+        "sedans": "Sedans",
+        "suvs": "SUVs",
+        "luxury": "Luxury cars",
+        "sprinters": "Sprinters",
+        "coaches": "Coaches",
+        "buses": "Buses"
+      },
+      "companyMenu": {
+        "aboutAb": "About AB",
+        "leadership": "Leadership",
+        "licencesCredentials": "Licences & credentials",
+        "chauffeurStandard": "The AB Chauffeur Standard",
+        "technology": "Technology",
+        "careers": "Careers",
+        "partners": "Partners",
+        "suppliers": "Suppliers",
+        "press": "Press"
+      },
+      "resourcesMenu": {
+        "corporateAccounts": "Corporate accounts",
+        "caseStudies": "Case studies",
+        "fleet": "Fleet",
+        "insights": "Insights",
+        "faqs": "FAQs",
+        "contact": "Contact"
       }
     },
     "chauffeurPortal": "Chauffeur Partner Portal"
@@ -225,7 +286,7 @@
       "strategicPartnerships": "Strategic Partnerships",
       "industries": "Industries"
     },
-    "copyright": "©2026 AB.Limo",
+    "copyright": "©2026 AB",
     "imprint": "Imprint",
     "accessibility": "Accessibility",
     "appStoreAlt": "Download on the App Store",
@@ -236,8 +297,8 @@
   "home": {
     "slides": [
       {
-        "title": "AB.Limo Model S",
-        "desc": "The AB.Limo Model S is a full-sized electric five-door, liftback, produced by AB.Limo. Since its introduction June 2012 it has achieved rapidly growing sale from Norway and California."
+        "title": "AB Model S",
+        "desc": "The AB Model S is a full-sized electric five-door, liftback, produced by AB. Since its introduction June 2012 it has achieved rapidly growing sale from Norway and California."
       },
       {
         "title": "Lexus LS 500",
@@ -331,10 +392,10 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "heading1": "Answers to the questions",
-      "heading2": "you ask most often",
+      "heading1": "Answers To The Questions",
+      "heading2": "You Ask Most Often",
       "askMore": "ASK MORE QUESTIONS",
-      "tellUsTitle": "Tell us what you need to move",
+      "tellUsTitle": "Tell Us What You Need To Move",
       "tellUsDesc": "Share a delegation, an event or a long-term requirement. An operations planner will reply within 12 hours.",
       "ctaProposal": "Request a Proposal",
       "ctaTransfer": "Book a Transfer",
@@ -390,7 +451,7 @@
       }
     },
     "dutyOfCare": {
-      "title": "Built around duty of care",
+      "title": "Built Around Duty Of Care",
       "desc": "Every vehicle is GPS-tracked. Every chauffeur is licensed, background checked and Our chauffeurs receive professional training in chauffeur services, defensive driving, first aid, and protocol through our dedicated internal training and development teams, tailored to specific client and operational requirements. For each major programme, standby vehicles are positioned before the first pickup. When something changes at 3 a.m., a 24/7 local dispatch answer in each country we operate.",
       "cards": [
         {
@@ -421,7 +482,7 @@
       },
       "whatWeRun": {
         "badge": "Operational Reach",
-        "title": "What we run",
+        "title": "What We Run",
         "desc": "Comprehensive ground transportation solutions operated with precision, vetted chauffeurs, and 24/7 control room oversight across Saudi Arabia, UAE, and Qatar.",
         "items": [
           {
@@ -455,13 +516,13 @@
         ]
       },
       "alt": "Executive Coach Fleet",
-      "dispatch": "Live Dispatch Status",
-      "coaches": "725 Vehicles",
+      "dispatch": "Driver briefing at",
+      "coaches": "Sound Storm 2025",
       "deployed": "Peak deployment (Riyadh Season)"
     },
     "fleetSection": {
       "badge": "Our Vehicle Governance",
-      "title": "Strictly maintained. Strictly professional.",
+      "title": "Strictly Maintained. Strictly Professional.",
       "desc": "Every AB vehicle—from executive sedans to 50-seat coaches—is a late-model vehicle, meticulously maintained and operated by a vetted professional. We also procure and lease dedicated fleets for long- term government and corporate contracts. Our chauffeur fleet is uniformly black.",
       "link": "View Full Fleet Specifications",
       "vehicles": [
@@ -497,7 +558,7 @@
     },
     "caseStudies": {
       "badge": "Case Studies",
-      "title": "Proven on the region's biggest stages.",
+      "title": "Proven On The Region's Biggest Stages.",
       "desc": "From mega-festivals to giga-projects. Filter by sector and open any project for the full story.",
       "filters": {
         "all": "All projects",
@@ -518,11 +579,11 @@
     },
     "awards": {
       "badge": "AB Achievements & Awards",
-      "title": "A decade of recognised excellence.",
+      "title": "A Decade Of Recognised Excellence.",
       "desc": "A proven record in event transportation across Saudi Arabia and the region, recognised by the industry.",
       "counters": [
-        { "value": "10", "suffix": "+", "label": "Years in Saudi event transportation" },
-        { "value": "50", "suffix": "+", "label": "International events delivered" },
+        { "value": "17", "suffix": "+", "label": "Years in Saudi event transportation" },
+        { "value": "250", "suffix": "+", "label": "International events delivered" },
         { "value": "725", "suffix": "", "label": "Vehicles operated at a single event peak" },
         { "value": "4", "suffix": "", "label": "Industry recognitions in 2025" }
       ],
@@ -543,7 +604,7 @@
     },
     "countriesSection": {
       "badge": "Global Coverage",
-      "title": "Wherever business takes you.",
+      "title": "Wherever Business Takes You.",
       "desc": "Explore our premium chauffeur network across the GCC and beyond — pick a country to view its cities and services. We operate directly in Saudi Arabia, United Arab Emirates and Qatar with our own fleet and other GCC cities and globally on request through vetted partners.",
       "link": "See locations",
       "servicesInCities": "{services} services in {cities} cities",
@@ -552,7 +613,7 @@
     },
     "citiesSection": {
       "badge": "Cities We Serve",
-      "title": "Chauffeur services across key GCC cities.",
+      "title": "Chauffeur Services Across Key GCC Cities.",
       "servicesCount": "{count} services",
       "serviceCountOne": "1 service",
       "viewAllCities": "Explore All Cities"
@@ -600,7 +661,7 @@
     },
     "managedTransportation": {
       "badge": "Managed Transportation",
-      "title": "How a managed Transportation works with AB",
+      "title": "How A managed Transportation Works With AB",
       "note": "Four stages, one accountable partner. Select a stage to see what happens.",
       "cta": "Start your brief",
       "tablistAria": "Managed transportation stages",
@@ -666,7 +727,7 @@
       "cityToCity": "City-to-City"
     },
     "bookYourJourney": "Book Your Journey",
-    "downloadApp": "Download the AB.Limo App",
+    "downloadApp": "Download the AB App",
     "downloadAppDesc": "Book your city-to-city transfer on the go. Track your chauffeur, manage bookings, and enjoy exclusive app-only offers.",
     "scanQR": "Scan QR Code",
     "betterWay": {
@@ -739,12 +800,12 @@
         {
           "name": "Sarah Johnson",
           "role": "Frequent Traveler",
-          "text": "I use AB.Limo for all my intercity travel in the Gulf region. The consistency and quality of service is unmatched. Highly recommended."
+          "text": "I use AB for all my intercity travel in the Gulf region. The consistency and quality of service is unmatched. Highly recommended."
         },
         {
           "name": "Mohammed Al-Thani",
           "role": "Corporate Client",
-          "text": "Our company uses AB.Limo for all executive city-to-city transfers. The reliability and professionalism of their chauffeurs is exceptional."
+          "text": "Our company uses AB for all executive city-to-city transfers. The reliability and professionalism of their chauffeurs is exceptional."
         }
       ]
     },
@@ -764,7 +825,7 @@
       "pricing": "Pricing",
       "from": "From",
       "to": "To",
-      "whyChoose": "Why choose AB.Limo for {from} to {to}",
+      "whyChoose": "Why choose AB for {from} to {to}",
       "whyChooseDesc": "Travel between {from} and {to} in complete comfort with our premium city-to-city transfer service. Our professional chauffeurs know the best routes and ensure a smooth, relaxing journey.",
       "aboutRoute": "About this route",
       "aboutRouteDesc1": "The {from} to {to} route covers {distance} of premium road travel. Our experienced chauffeurs are familiar with every stretch of this route, ensuring the most efficient and comfortable journey.",
@@ -842,7 +903,7 @@
     },
     "getToFromAirport": {
       "title": "Get to or from the airport",
-      "desc": "Whether you need a ride to catch your flight or a comfortable transfer after landing, AB.Limo has you covered. Our airport transfer service is designed to make your journey as smooth as possible.",
+      "desc": "Whether you need a ride to catch your flight or a comfortable transfer after landing, AB has you covered. Our airport transfer service is designed to make your journey as smooth as possible.",
       "flightTracking": "Flight tracking for accurate pickup times",
       "waitTime": "Complimentary 60-minute wait time",
       "meetGreet": "Meet and greet at arrivals",
@@ -946,12 +1007,12 @@
     },
     "cta": {
       "title": "Ready to hire your professional chauffeur?",
-      "desc": "Experience the difference with AB.Limo's professional chauffeur service.",
+      "desc": "Experience the difference with AB's professional chauffeur service.",
       "bookNow": "Book Now"
     }
   },
   "carService": {
-    "title": "Professional Car Service with AB.Limo",
+    "title": "Professional Car Service with AB",
     "subtitle": "Premium private car service for all your transportation needs.",
     "breadcrumb": {
       "home": "Home",
@@ -1005,7 +1066,7 @@
     },
     "professional": {
       "title": "Your professional car service",
-      "desc": "AB.Limo is your trusted partner for professional car service. We combine cutting-edge technology with premium vehicles and expert chauffeurs to deliver an unmatched travel experience.",
+      "desc": "AB is your trusted partner for professional car service. We combine cutting-edge technology with premium vehicles and expert chauffeurs to deliver an unmatched travel experience.",
       "desc2": "From the moment you book to the moment you arrive, every detail is handled with care and precision. Experience the difference of true professional car service."
     },
     "corporate": {
@@ -1094,8 +1155,8 @@
       "desc2": "Our vehicles are equipped with modern amenities including Wi-Fi, charging ports, and refreshments to make your city ride enjoyable and productive."
     },
     "getAround": {
-      "title": "Get around with a AB.Limo limo",
-      "desc": "AB.Limo is your trusted partner for premium transportation. Our global network of professional chauffeurs and luxury vehicles ensures you get where you need to go in comfort and style.",
+      "title": "Get around with a AB limo",
+      "desc": "AB is your trusted partner for premium transportation. Our global network of professional chauffeurs and luxury vehicles ensures you get where you need to go in comfort and style.",
       "available": "Available across 6 Gulf countries",
       "available247": "24/7 availability for your convenience",
       "easyBooking": "Easy booking through app or website",
@@ -1131,7 +1192,7 @@
     },
     "cta": {
       "title": "Experience premium limousine service",
-      "desc": "Book your luxury ride today and travel in style with AB.Limo.",
+      "desc": "Book your luxury ride today and travel in style with AB.",
       "bookYourLimo": "Book Your Limo"
     }
   },
@@ -1144,7 +1205,7 @@
     },
     "comprehensive": {
       "title": "Your comprehensive ground transportation",
-      "desc": "AB.Limo provides end-to-end ground transportation solutions tailored to your needs. Whether you're an individual traveler, a corporate client, or organizing a large event, our comprehensive service covers every aspect of your journey.",
+      "desc": "AB provides end-to-end ground transportation solutions tailored to your needs. Whether you're an individual traveler, a corporate client, or organizing a large event, our comprehensive service covers every aspect of your journey.",
       "airport": "Airport transfers with flight monitoring",
       "corporate": "Corporate accounts with centralized billing",
       "event": "Event and group transportation",
@@ -1152,7 +1213,7 @@
     },
     "personalChauffeur": {
       "title": "Your personal chauffeur",
-      "desc": "Every journey with AB.Limo includes a dedicated professional chauffeur. Our drivers are more than just transportation providers — they are your personal concierge on the road, ensuring your comfort and safety throughout the journey.",
+      "desc": "Every journey with AB includes a dedicated professional chauffeur. Our drivers are more than just transportation providers — they are your personal concierge on the road, ensuring your comfort and safety throughout the journey.",
       "trained": "Professionally trained and licensed drivers",
       "multilingual": "Multilingual communication skills",
       "localKnowledge": "Local knowledge and route expertise"
@@ -1167,26 +1228,26 @@
     },
     "cta": {
       "title": "Ready for comprehensive ground transportation?",
-      "desc": "Experience seamless transportation solutions with AB.Limo. Book your journey today.",
+      "desc": "Experience seamless transportation solutions with AB. Book your journey today.",
       "bookNow": "Book Now"
     }
   },
   "about": {
-    "title": "About AB.Limo",
+    "title": "About AB",
     "meta": {
-      "title": "About AB.Limo - Premium Luxury Chauffeur Service",
-      "description": "Learn about AB.Limo, a premium luxury chauffeur service operating across 6 Gulf countries and 25+ cities in the Middle East."
+      "title": "About AB - Premium Luxury Chauffeur Service",
+      "description": "Learn about AB, a premium luxury chauffeur service operating across 6 Gulf countries and 25+ cities in the Middle East."
     },
     "breadcrumb": {
       "home": "Home",
-      "about": "About AB.Limo"
+      "about": "About AB"
     },
     "hero": {
       "heading1": "Changing the travel",
       "heading2": "game"
     },
     "mission": {
-      "p1": "AB.Limo was founded with a simple mission: to revolutionize the way people experience ground transportation. We believe that every journey should be seamless, comfortable, and memorable.",
+      "p1": "AB was founded with a simple mission: to revolutionize the way people experience ground transportation. We believe that every journey should be seamless, comfortable, and memorable.",
       "p2": "From airport transfers to business travel, special events to city-to-city rides, we provide a premium chauffeur service that combines cutting-edge technology with unparalleled luxury. Our platform connects passengers with professionally trained chauffeurs behind the wheel of meticulously maintained vehicles.",
       "p3": "We're not just a ride service — we're redefining what it means to travel in style and comfort.",
       "stat": "10+",
@@ -1201,7 +1262,7 @@
       "rides": "Rides Completed"
     },
     "howItWorks": {
-      "heading1": "How AB.Limo",
+      "heading1": "How AB",
       "heading2": "works",
       "steps": [
         {
@@ -1259,13 +1320,13 @@
       ]
     },
     "operates": {
-      "heading1": "Where AB.Limo",
+      "heading1": "Where AB",
       "heading2": "operates",
       "viewAll": "View All Cities"
     },
     "quote": {
-      "text": "Every journey with AB.Limo is crafted to deliver an experience that transcends mere transportation — it's about creating moments of comfort, trust, and unparalleled service.",
-      "name": "The AB.Limo Team",
+      "text": "Every journey with AB is crafted to deliver an experience that transcends mere transportation — it's about creating moments of comfort, trust, and unparalleled service.",
+      "name": "The AB Team",
       "subtitle": "Committed to Excellence"
     },
     "faq": {
@@ -1273,11 +1334,11 @@
       "heading2": "questions",
       "items": [
         {
-          "q": "How do I book a ride with AB.Limo?",
+          "q": "How do I book a ride with AB?",
           "a": "Booking is simple. Use our website or mobile app to enter your pickup and drop-off locations, select your vehicle class, and confirm your reservation. You'll receive instant confirmation and real-time updates."
         },
         {
-          "q": "What areas does AB.Limo operate in?",
+          "q": "What areas does AB operate in?",
           "a": "We operate across all 6 Gulf countries — UAE, Saudi Arabia, Qatar, Bahrain, Kuwait, and Oman — covering 25+ major cities including Dubai, Riyadh, Doha, Abu Dhabi, Jeddah, Manama, Kuwait City, and Muscat."
         },
         {
@@ -1289,7 +1350,7 @@
           "a": "We accept all major credit cards, debit cards, and digital payment methods. Corporate accounts can also be set up for business travel."
         },
         {
-          "q": "Is AB.Limo available for corporate accounts?",
+          "q": "Is AB available for corporate accounts?",
           "a": "Absolutely. We offer tailored corporate solutions with dedicated account management, consolidated billing, and preferential rates for businesses of all sizes."
         }
       ]
@@ -1304,7 +1365,7 @@
         },
         {
           "title": "Press",
-          "desc": "Stay updated with the latest news, announcements, and media coverage about AB.Limo."
+          "desc": "Stay updated with the latest news, announcements, and media coverage about AB."
         },
         {
           "title": "Blog",
@@ -1314,9 +1375,9 @@
     }
   },
   "business": {
-    "title": "AB.Limo for Business",
+    "title": "AB for Business",
     "meta": {
-      "title": "Corporate Transportation Services | AB.Limo",
+      "title": "Corporate Transportation Services | AB",
       "description": "Premium corporate transportation solutions tailored for businesses. Five-star chauffeurs across the Gulf with competitive rates and 24/7 priority support."
     },
     "breadcrumb": {
@@ -1337,7 +1398,7 @@
         },
         {
           "title": "Travel agencies",
-          "desc": "Partner with AB.Limo to offer your clients world-class chauffeur services. Earn commission while delivering exceptional ground transportation experiences."
+          "desc": "Partner with AB to offer your clients world-class chauffeur services. Earn commission while delivering exceptional ground transportation experiences."
         },
         {
           "title": "Strategic partnerships",
@@ -1350,7 +1411,7 @@
       "desc": "Our intuitive platform puts corporate travel management at your fingertips."
     },
     "features": {
-      "heading": "Why choose AB.Limo for business",
+      "heading": "Why choose AB for business",
       "items": [
         {
           "title": "Gulf reliability",
@@ -1379,7 +1440,7 @@
       ]
     },
     "quote": {
-      "text": "AB.Limo has transformed how we handle executive travel. The reliability, consistency, and premium service quality have made them an invaluable partner for our global operations.",
+      "text": "AB has transformed how we handle executive travel. The reliability, consistency, and premium service quality have made them an invaluable partner for our global operations.",
       "name": "Sarah Mitchell",
       "title": "VP of Operations, TechCorp"
     },
@@ -1422,7 +1483,7 @@
   "corporations": {
     "title": "Corporations",
     "meta": {
-      "title": "Corporate Travel Solutions | AB.Limo",
+      "title": "Corporate Travel Solutions | AB",
       "description": "Premium corporate travel solutions for business executives. Reliable chauffeur services with streamlined booking and consolidated invoicing."
     },
     "breadcrumb": {
@@ -1439,7 +1500,7 @@
       "Client travel"
     ],
     "quote": {
-      "text": "AB.Limo consistently delivers exceptional service for our executive team. Their reliability and attention to detail set them apart from any other provider we've worked with.",
+      "text": "AB consistently delivers exceptional service for our executive team. Their reliability and attention to detail set them apart from any other provider we've worked with.",
       "attribution": "— James Chen, Chief Financial Officer, Global Enterprises"
     },
     "reliability": {
@@ -1570,20 +1631,20 @@
   "career": {
     "title": "Career",
     "meta": {
-      "title": "Careers at AB.Limo - Join Our Global Team",
-      "description": "Explore exciting career opportunities at AB.Limo. Join a growing international team and help shape the future of luxury ground transportation."
+      "title": "Careers at AB - Join Our Global Team",
+      "description": "Explore exciting career opportunities at AB. Join a growing international team and help shape the future of luxury ground transportation."
     },
     "breadcrumb": {
       "home": "Home",
       "career": "Career"
     },
     "hero": {
-      "heading": "Start your career journey with AB.Limo"
+      "heading": "Start your career journey with AB"
     },
     "intro": {
       "heading1": "Start your journey.",
       "heading2": "Find your lane.",
-      "p1": "At AB.Limo, we're not just building a ride service — we're revolutionizing how the world moves. Our team of innovators, dreamers, and doers are passionate about creating seamless luxury experiences for millions of passengers worldwide.",
+      "p1": "At AB, we're not just building a ride service — we're revolutionizing how the world moves. Our team of innovators, dreamers, and doers are passionate about creating seamless luxury experiences for millions of passengers worldwide.",
       "p2": "Whether you're a tech enthusiast, a customer service expert, or a business strategist, there's a place for you in our global team. We believe that great companies are built by great people, and we're committed to creating an environment where everyone can thrive."
     },
     "team": {
@@ -1595,9 +1656,9 @@
       "rating": "Glassdoor Rating"
     },
     "quote": {
-      "text": "We believe that when you invest in people, they invest in you. At AB.Limo, every team member has the opportunity to make a real impact on how the world moves.",
+      "text": "We believe that when you invest in people, they invest in you. At AB, every team member has the opportunity to make a real impact on how the world moves.",
       "title": "Chief People Officer",
-      "company": "AB.Limo"
+      "company": "AB"
     },
     "departments": {
       "heading1": "Discover our teams &",
@@ -1641,7 +1702,7 @@
         {
           "code": "EXEC",
           "name": "Executive Management",
-          "desc": "Lead the vision and strategic direction of AB.Limo worldwide."
+          "desc": "Lead the vision and strategic direction of AB worldwide."
         }
       ]
     },
@@ -1676,7 +1737,7 @@
       "heading2": "news",
       "items": [
         {
-          "title": "AB.Limo Expands to 10 New Cities Across Europe",
+          "title": "AB Expands to 10 New Cities Across Europe",
           "date": "July 10, 2026",
           "category": "Company News"
         },
@@ -1686,7 +1747,7 @@
           "category": "Events"
         },
         {
-          "title": "AB.Limo Named Top Employer in Transportation Sector",
+          "title": "AB Named Top Employer in Transportation Sector",
           "date": "June 28, 2026",
           "category": "Awards"
         }
@@ -1701,8 +1762,8 @@
   "sustainability": {
     "title": "Sustainability",
     "meta": {
-      "title": "Sustainability - AB.Limo | Driving a Greener Future",
-      "description": "AB.Limo is committed to sustainability through electric vehicles, carbon offsetting, and net-zero initiatives."
+      "title": "Sustainability - AB | Driving a Greener Future",
+      "description": "AB is committed to sustainability through electric vehicles, carbon offsetting, and net-zero initiatives."
     },
     "breadcrumb": {
       "home": "Home",
@@ -1723,13 +1784,13 @@
     "ev": {
       "heading1": "The new normal:",
       "heading2": "electric vehicles",
-      "p1": "Electric vehicles are no longer the future — they're the present. At AB.Limo, we're accelerating our transition to a fully electric fleet, ensuring every ride contributes to cleaner air and quieter cities.",
+      "p1": "Electric vehicles are no longer the future — they're the present. At AB, we're accelerating our transition to a fully electric fleet, ensuring every ride contributes to cleaner air and quieter cities.",
       "p2": "From Tesla Model S and Mercedes EQS to BMW iX, our growing EV fleet delivers the same luxury experience with zero tailpipe emissions. We're investing heavily in charging infrastructure to ensure seamless coverage across all our operating markets."
     },
     "carbonOffset": {
       "heading1": "100% carbon",
       "heading2": "offset",
-      "p1": "Every ride taken with AB.Limo is fully carbon offset. We invest in verified carbon reduction projects — from reforestation in the Amazon to renewable energy installations in Sub-Saharan Africa.",
+      "p1": "Every ride taken with AB is fully carbon offset. We invest in verified carbon reduction projects — from reforestation in the Amazon to renewable energy installations in Sub-Saharan Africa.",
       "p2": "Our partnership with South Pole ensures that every ton of CO2 emitted is matched with high-quality carbon credits, making your journey with us climate-positive."
     },
     "partners": {
@@ -1775,18 +1836,18 @@
     "climateStrikes": {
       "heading1": "Participating in",
       "heading2": "climate strikes",
-      "p1": "We believe in using our voice and platform to advocate for systemic change. AB.Limo actively participates in global climate strikes and supports policy initiatives that accelerate the transition to a low-carbon economy.",
+      "p1": "We believe in using our voice and platform to advocate for systemic change. AB actively participates in global climate strikes and supports policy initiatives that accelerate the transition to a low-carbon economy.",
       "p2": "Our team members are encouraged to engage in sustainability activism, and we provide paid time off for climate-related volunteer activities and community events."
     },
     "quote": {
       "text": "Sustainability isn't a department or a initiative — it's embedded in everything we do. Every ride we provide is a step towards a cleaner, more sustainable future for ground transportation.",
-      "name": "The AB.Limo Leadership Team",
+      "name": "The AB Leadership Team",
       "subtitle": "Driving sustainability forward"
     },
     "app": {
       "heading1": "Sustainable travel,",
       "heading2": "in your hands",
-      "desc": "Download the AB.Limo app and choose sustainable luxury at your fingertips. See real-time carbon offset data for every ride, track your personal sustainability impact, and join us in driving change.",
+      "desc": "Download the AB app and choose sustainable luxury at your fingertips. See real-time carbon offset data for every ride, track your personal sustainability impact, and join us in driving change.",
       "appStore": "App Store",
       "googlePlay": "Google Play"
     }
@@ -1794,8 +1855,8 @@
   "partners": {
     "title": "Partners",
     "meta": {
-      "title": "Become a Service Provider | AB.Limo Partners",
-      "description": "Join AB.Limo's network of professional chauffeurs. Earn money on your own schedule with training, support, and access to premium clients."
+      "title": "Become a Service Provider | AB Partners",
+      "description": "Join AB's network of professional chauffeurs. Earn money on your own schedule with training, support, and access to premium clients."
     },
     "breadcrumb": {
       "home": "Home",
@@ -1803,7 +1864,7 @@
     },
     "hero": {
       "heading": "Become a service provider",
-      "desc": "Join AB.Limo's global network of professional chauffeurs and grow your business."
+      "desc": "Join AB's global network of professional chauffeurs and grow your business."
     },
     "features": [
       {
@@ -1824,7 +1885,7 @@
       }
     ],
     "quote": {
-      "text": "Joining AB.Limo was the best decision for my business. The platform is easy to use, the clients are respectful, and the earnings are competitive.",
+      "text": "Joining AB was the best decision for my business. The platform is easy to use, the clients are respectful, and the earnings are competitive.",
       "name": "Mohammed K.",
       "role": "Professional Chauffeur"
     },
@@ -1864,7 +1925,7 @@
         "Professional appearance and demeanor",
         "Vehicle meeting our fleet standards (less than 5 years old)",
         "Comprehensive insurance coverage",
-        "Smartphone with data plan for the AB.Limo chauffeur app",
+        "Smartphone with data plan for the AB chauffeur app",
         "Excellent communication skills in English (additional languages are a plus)"
       ]
     },
@@ -1964,11 +2025,11 @@
     "seo": {
       "reliableTitle": "Your reliable {city} airport transfer",
       "reliableDesc1": "{city} requires little introduction. As one of the world's most iconic cities, its fame spans many genres; food, business, finance, culture, architecture and history.",
-      "reliableDesc2": "Whether you are staying in the city center or the surrounding areas, AB.Limo is available for airport transfers city-wide, a far more reliable and relaxing alternative to a standard taxi.",
+      "reliableDesc2": "Whether you are staying in the city center or the surrounding areas, AB is available for airport transfers city-wide, a far more reliable and relaxing alternative to a standard taxi.",
       "arrivalTitle": "Arrival at {city} airports",
       "arrivalDesc1": "{city} is one of the busiest metropolitan areas in the world and landing at its airports can be a trying endeavor. Our chauffeurs are always polite, smartly dressed and discrete.",
       "arrivalDesc2": "Our stylish airport transfer is perfect for those flying into {city} on business.",
-      "exploreTitle": "Explore {city} with AB.Limo",
+      "exploreTitle": "Explore {city} with AB",
       "exploreDesc": "In a city as rich and vibrant as {city}, even business travelers must take a little time off to experience what the city has to offer.",
       "flyingTitle": "Flying into {city}",
       "flyingDesc": "Choosing the best airport for you often depends on where you're staying and how you plan to continue into the city."
@@ -2008,8 +2069,8 @@
   "press": {
     "title": "Press",
     "meta": {
-      "title": "Press Releases & Media Coverage | AB.Limo",
-      "description": "Stay updated with the latest news, press releases, and media coverage from AB.Limo."
+      "title": "Press Releases & Media Coverage | AB",
+      "description": "Stay updated with the latest news, press releases, and media coverage from AB."
     },
     "breadcrumb": {
       "home": "Home",
@@ -2032,32 +2093,32 @@
     "releases": [
       {
         "date": "June 12, 2026",
-        "title": "AB.Limo Expands to 10 New Cities Across Southeast Asia",
-        "excerpt": "AB.Limo announces its entry into 10 new Southeast Asian markets, including Bangkok, Kuala Lumpur, and Jakarta, as part of its global growth strategy.",
+        "title": "AB Expands to 10 New Cities Across Southeast Asia",
+        "excerpt": "AB announces its entry into 10 new Southeast Asian markets, including Bangkok, Kuala Lumpur, and Jakarta, as part of its global growth strategy.",
         "image": "https://images.unsplash.com/photo-1538332576228-eb5b4c4de6f5?auto=format&fit=crop&w=800&q=80"
       },
       {
         "date": "April 28, 2026",
-        "title": "AB.Limo Achieves Carbon Neutral Operations in All European Markets",
+        "title": "AB Achieves Carbon Neutral Operations in All European Markets",
         "excerpt": "Our commitment to sustainability reaches a major milestone as all European operations are now fully carbon neutral through offsetting and EV adoption.",
         "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&h=400&fit=crop"
       },
       {
         "date": "March 15, 2026",
         "title": "Strategic Partnership with Emirates for Premium Ground Transportation",
-        "excerpt": "AB.Limo partners with Emirates airline to provide seamless luxury ground transfers for first and business class passengers across 25 global destinations.",
+        "excerpt": "AB partners with Emirates airline to provide seamless luxury ground transfers for first and business class passengers across 25 global destinations.",
         "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80"
       },
       {
         "date": "February 3, 2026",
-        "title": "AB.Limo Launches New Corporate Mobility Platform",
+        "title": "AB Launches New Corporate Mobility Platform",
         "excerpt": "Introducing a next-generation corporate travel management platform with real-time analytics, cost optimization, and seamless expense integration.",
         "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
       },
       {
         "date": "January 18, 2026",
-        "title": "AB.Limo Surpasses 2 Million Completed Rides Globally",
-        "excerpt": "A landmark achievement as AB.Limo celebrates over 2 million safe, comfortable, and on-time rides delivered to passengers worldwide.",
+        "title": "AB Surpasses 2 Million Completed Rides Globally",
+        "excerpt": "A landmark achievement as AB celebrates over 2 million safe, comfortable, and on-time rides delivered to passengers worldwide.",
         "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80"
       }
     ],
@@ -2075,7 +2136,7 @@
   "cities": {
     "title": "Cities",
     "meta": {
-      "title": "Our Cities Around the World | AB.Limo",
+      "title": "Our Cities Around the World | AB",
       "description": "Premium chauffeur service in cities across the globe. Book your ride in 500+ cities worldwide."
     },
     "breadcrumb": {
@@ -2110,7 +2171,7 @@
   "countries": {
     "title": "Countries",
     "meta": {
-      "title": "AB.Limo Global Availability",
+      "title": "AB Global Availability",
       "description": "Luxury chauffeur service across 50+ countries worldwide."
     },
     "breadcrumb": {
@@ -2118,7 +2179,7 @@
       "countries": "Countries"
     },
     "hero": {
-      "heading": "AB.Limo Global Availability",
+      "heading": "AB Global Availability",
       "desc": "Luxury chauffeur service across 50+ countries worldwide"
     },
     "search": {
@@ -2154,8 +2215,8 @@
     },
     "detail": {
       "heroTitle": "Chauffeur Service In {country}",
-      "intro": "Experience refined elegance with AB.Limo’s premium chauffeur service across {country}. From major business hubs to every destination across the region, our network of professional drivers provides discreet, first-class transportation tailored to your journey. Whether you need seamless airport transfers, city-to-city travel, or flexible hourly bookings, we deliver an uncompromised, executive travel experience.",
-      "subIntro": "Don't settle for just renting a car with a driver — immerse yourself in an experience by booking with AB.Limo.",
+      "intro": "Experience refined elegance with AB’s premium chauffeur service across {country}. From major business hubs to every destination across the region, our network of professional drivers provides discreet, first-class transportation tailored to your journey. Whether you need seamless airport transfers, city-to-city travel, or flexible hourly bookings, we deliver an uncompromised, executive travel experience.",
+      "subIntro": "Don't settle for just renting a car with a driver — immerse yourself in an experience by booking with AB.",
       "rangeHeading": "Check out our wide range of services available across {country} below:",
       "citiesHeading": "Inter City Routes in {country}",
       "cityServiceSuffix": "{city} service",
@@ -2164,7 +2225,7 @@
       "limousineHeading": "Limousine Service",
       "limousineLink": "{country} Limousine Service",
       "faqTitle": "Frequently Asked Questions",
-      "aboutEyebrow": "About AB.Limo In {location}",
+      "aboutEyebrow": "About AB In {location}",
       "interCityRoutesHeading": "Inter City Routes in {country}",
       "cityToCityHeading": "City-to-City Service",
       "cityToCityRides": "City-to-City Rides",
@@ -2174,8 +2235,8 @@
   },
   "locations": {
     "metadata": {
-      "title": "Global Locations | AB.Limo in 50+ Countries Worldwide",
-      "description": "AB.Limo operates in 50+ countries across the GCC, Europe, Asia, and the Americas. Find premium chauffeur services worldwide."
+      "title": "Global Locations | AB in 50+ Countries Worldwide",
+      "description": "AB operates in 50+ countries across the GCC, Europe, Asia, and the Americas. Find premium chauffeur services worldwide."
     },
     "breadcrumb": "Locations",
     "cityToCityService": "City-to-City Service",
@@ -2184,15 +2245,15 @@
   "strategicPartnerships": {
     "title": "Strategic Partnerships",
     "meta": {
-      "title": "Partnership Opportunities with AB.Limo | Strategic Partnerships",
-      "description": "Explore strategic partnership opportunities with AB.Limo across aviation, cruise, financial, and hotel sectors."
+      "title": "Partnership Opportunities with AB | Strategic Partnerships",
+      "description": "Explore strategic partnership opportunities with AB across aviation, cruise, financial, and hotel sectors."
     },
     "breadcrumb": {
       "home": "Home",
       "partnerships": "Strategic Partnerships"
     },
     "hero": {
-      "heading": "Partnership Opportunities with AB.Limo"
+      "heading": "Partnership Opportunities with AB"
     },
     "industries": {
       "heading": "Industries we partner with",
@@ -2217,7 +2278,7 @@
       ]
     },
     "benefits": {
-      "heading": "Why partner with AB.Limo",
+      "heading": "Why partner with AB",
       "items": [
         {
           "title": "Revenue growth",
@@ -2280,13 +2341,13 @@
     },
     "cta": {
       "heading": "Ready to create a partnership?",
-      "desc": "Let's explore how a strategic partnership with AB.Limo can drive growth for your business.",
+      "desc": "Let's explore how a strategic partnership with AB can drive growth for your business.",
       "contact": "Contact partnerships team",
       "download": "Download partnership brochure"
     },
     "contact": {
       "heading": "Get in touch",
-      "desc": "Tell us about your business and how you'd like to partner with AB.Limo.",
+      "desc": "Tell us about your business and how you'd like to partner with AB.",
       "firstName": "First name",
       "lastName": "Last name",
       "email": "Email address",
@@ -2306,8 +2367,8 @@
   "travelAgencies": {
     "title": "Travel Agencies",
     "meta": {
-      "title": "Global Chauffeur Services for Travel Agencies | AB.Limo",
-      "description": "Partner with AB.Limo to offer your clients world-class chauffeur services. Earn commission and boost your brand reputation."
+      "title": "Global Chauffeur Services for Travel Agencies | AB",
+      "description": "Partner with AB to offer your clients world-class chauffeur services. Earn commission and boost your brand reputation."
     },
     "breadcrumb": {
       "home": "Home",
@@ -2323,7 +2384,7 @@
       "Carbon offset"
     ],
     "quote": {
-      "text": "Partnering with AB.Limo has elevated our service offering. Our clients love the consistency and quality, and the commission structure has been a significant revenue driver for our agency.",
+      "text": "Partnering with AB has elevated our service offering. Our clients love the consistency and quality, and the commission structure has been a significant revenue driver for our agency.",
       "attribution": "— Maria Rodriguez, Director, Prestige Travel Group"
     },
     "commission": {
@@ -2498,21 +2559,21 @@
       "dubai": {
         "gettingAround": {
           "title": "Getting Around Dubai",
-          "description": "Dubai is a global destination known for its modern skyline, luxury shopping, business districts, and iconic attractions. Whether you're visiting for business or leisure, AB.Limo provides reliable chauffeur services that make traveling across the city comfortable and stress-free. From Downtown Dubai and Dubai Marina to Palm Jumeirah and Business Bay, our professional chauffeurs ensure every journey is smooth, punctual, and tailored to your schedule."
+          "description": "Dubai is a global destination known for its modern skyline, luxury shopping, business districts, and iconic attractions. Whether you're visiting for business or leisure, AB provides reliable chauffeur services that make traveling across the city comfortable and stress-free. From Downtown Dubai and Dubai Marina to Palm Jumeirah and Business Bay, our professional chauffeurs ensure every journey is smooth, punctual, and tailored to your schedule."
         },
         "limousineService": {
           "title": "Chauffeur Service in Dubai",
-          "description": "Dubai is a vast, dynamic destination with plenty to explore, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Dubai by the hour to visit your chosen sights, whether that is touring iconic attractions or shopping at luxury malls, ensuring a seamless, premium travel experience."
+          "description": "Dubai is a vast, dynamic destination with plenty to explore, and with a service from AB, you have an opportunity to fit it all in. Hire a top-quality limousine service in Dubai by the hour to visit your chosen sights, whether that is touring iconic attractions or shopping at luxury malls, ensuring a seamless, premium travel experience."
         },
         "airportTransfer": {
           "title": "Dubai Airport Transfer",
-          "description": "Enjoy a seamless airport transfer with AB.Limo between Dubai International Airport (DXB), Al Maktoum International Airport (DWC), and your destination. Your chauffeur monitors your flight, greets you upon arrival, assists with your luggage, and ensures a comfortable journey without the usual wait."
+          "description": "Enjoy a seamless airport transfer with AB between Dubai International Airport (DXB), Al Maktoum International Airport (DWC), and your destination. Your chauffeur monitors your flight, greets you upon arrival, assists with your luggage, and ensures a comfortable journey without the usual wait."
         }
       },
       "abu-dhabi": {
         "gettingAround": {
           "title": "Getting Around Abu Dhabi",
-          "description": "Abu Dhabi combines cultural landmarks, government institutions, luxury resorts, and thriving business districts. AB.Limo offers dependable chauffeur services for business travelers, tourists, and residents, providing comfortable transportation throughout the capital. Whether you're visiting the Corniche, Yas Island, or Saadiyat Island, travel with confidence and convenience."
+          "description": "Abu Dhabi combines cultural landmarks, government institutions, luxury resorts, and thriving business districts. AB offers dependable chauffeur services for business travelers, tourists, and residents, providing comfortable transportation throughout the capital. Whether you're visiting the Corniche, Yas Island, or Saadiyat Island, travel with confidence and convenience."
         },
         "limousineService": {
           "title": "Chauffeur Service in Abu Dhabi",
@@ -2520,13 +2581,13 @@
         },
         "airportTransfer": {
           "title": "Abu Dhabi Airport Transfer",
-          "description": "Travel effortlessly between Zayed International Airport (AUH) and your destination with AB.Limo. Our airport transfer service includes flight tracking, meet-and-greet assistance, luggage support, and reliable transportation to hotels, offices, or residences across Abu Dhabi."
+          "description": "Travel effortlessly between Zayed International Airport (AUH) and your destination with AB. Our airport transfer service includes flight tracking, meet-and-greet assistance, luggage support, and reliable transportation to hotels, offices, or residences across Abu Dhabi."
         }
       },
       "sharjah": {
         "gettingAround": {
           "title": "Getting Around Sharjah",
-          "description": "Sharjah is celebrated for its rich heritage, museums, waterfronts, and growing commercial districts. AB.Limo offers professional chauffeur services that help you travel comfortably throughout the city while avoiding the stress of driving and parking."
+          "description": "Sharjah is celebrated for its rich heritage, museums, waterfronts, and growing commercial districts. AB offers professional chauffeur services that help you travel comfortably throughout the city while avoiding the stress of driving and parking."
         },
         "limousineService": {
           "title": "Chauffeur Service in Sharjah",
@@ -2534,27 +2595,27 @@
         },
         "airportTransfer": {
           "title": "Sharjah Airport Transfer",
-          "description": "Book your airport transfer with AB.Limo for convenient transportation between Sharjah International Airport (SHJ) and your destination. Our chauffeurs arrive on time, assist with luggage, and ensure a smooth and comfortable journey."
+          "description": "Book your airport transfer with AB for convenient transportation between Sharjah International Airport (SHJ) and your destination. Our chauffeurs arrive on time, assist with luggage, and ensure a smooth and comfortable journey."
         }
       },
       "ajman": {
         "gettingAround": {
           "title": "Getting Around Ajman",
-          "description": "Ajman offers beautiful beaches, vibrant neighborhoods, and easy access to neighboring emirates. AB.Limo provides reliable chauffeur services that allow you to travel comfortably for business meetings, leisure outings, and daily transportation needs."
+          "description": "Ajman offers beautiful beaches, vibrant neighborhoods, and easy access to neighboring emirates. AB provides reliable chauffeur services that allow you to travel comfortably for business meetings, leisure outings, and daily transportation needs."
         },
         "limousineService": {
           "title": "Chauffeur Service in Ajman",
-          "description": "Ajman is a beautiful coastal destination with plenty to see, and with a service from AB.Limo, you have an opportunity to explore it smoothly. Hire a top-quality limousine service in Ajman by the hour to visit beaches or neighboring emirates, ensuring a premier alternative to standard street transport."
+          "description": "Ajman is a beautiful coastal destination with plenty to see, and with a service from AB, you have an opportunity to explore it smoothly. Hire a top-quality limousine service in Ajman by the hour to visit beaches or neighboring emirates, ensuring a premier alternative to standard street transport."
         },
         "airportTransfer": {
           "title": "Ajman Airport Transfer",
-          "description": "Although Ajman does not have its own international airport, AB.Limo offers convenient transfers between Ajman and nearby airports including Dubai International Airport (DXB) and Sharjah International Airport (SHJ), ensuring a smooth start or end to your journey."
+          "description": "Although Ajman does not have its own international airport, AB offers convenient transfers between Ajman and nearby airports including Dubai International Airport (DXB) and Sharjah International Airport (SHJ), ensuring a smooth start or end to your journey."
         }
       },
       "ras-al-khaimah": {
         "gettingAround": {
           "title": "Getting Around Ras Al Khaimah",
-          "description": "Known for its mountains, beaches, luxury resorts, and outdoor adventures, Ras Al Khaimah is one of the UAE's most scenic destinations. AB.Limo provides premium chauffeur services that make exploring the emirate comfortable, convenient, and stress-free."
+          "description": "Known for its mountains, beaches, luxury resorts, and outdoor adventures, Ras Al Khaimah is one of the UAE's most scenic destinations. AB provides premium chauffeur services that make exploring the emirate comfortable, convenient, and stress-free."
         },
         "limousineService": {
           "title": "Chauffeur Service in Ras Al Khaimah",
@@ -2562,7 +2623,7 @@
         },
         "airportTransfer": {
           "title": "Ras Al Khaimah Airport Transfer",
-          "description": "AB.Limo offers reliable airport transfers between Ras Al Khaimah International Airport (RKT) and hotels, resorts, residences, and business destinations. Our chauffeurs monitor your flight and provide timely, comfortable transportation from arrival to destination."
+          "description": "AB offers reliable airport transfers between Ras Al Khaimah International Airport (RKT) and hotels, resorts, residences, and business destinations. Our chauffeurs monitor your flight and provide timely, comfortable transportation from arrival to destination."
         }
       }
     },
@@ -2570,21 +2631,21 @@
       "riyadh": {
         "gettingAround": {
           "title": "Getting Around Riyadh",
-          "description": "As the vibrant political and financial capital of Saudi Arabia, Riyadh features a dynamic blend of modern high-rises, historical treasures, and massive commercial centers. Whether you are navigating the King Abdullah Financial District or visiting the historic Al Murabba Palace, AB.Limo provides reliable chauffeur services designed to make your travel across the city completely comfortable and stress-free."
+          "description": "As the vibrant political and financial capital of Saudi Arabia, Riyadh features a dynamic blend of modern high-rises, historical treasures, and massive commercial centers. Whether you are navigating the King Abdullah Financial District or visiting the historic Al Murabba Palace, AB provides reliable chauffeur services designed to make your travel across the city completely comfortable and stress-free."
         },
         "limousineService": {
           "title": "Chauffeur Service in Riyadh",
-          "description": "Riyadh is a vast, dynamic destination with plenty to explore, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Riyadh by the hour to visit your chosen sights, whether that is touring commercial centers or historic landmarks, ensuring a seamless, premium travel experience."
+          "description": "Riyadh is a vast, dynamic destination with plenty to explore, and with a service from AB, you have an opportunity to fit it all in. Hire a top-quality limousine service in Riyadh by the hour to visit your chosen sights, whether that is touring commercial centers or historic landmarks, ensuring a seamless, premium travel experience."
         },
         "airportTransfer": {
           "title": "Riyadh Airport Transfer",
-          "description": "Ensure a seamless and punctual journey with AB.Limo between King Khalid International Airport (RUH) and your destination in Riyadh. Your chauffeur tracks your flight status, welcomes you upon arrival, assists with your luggage, and drives you directly to your hotel or office in absolute comfort."
+          "description": "Ensure a seamless and punctual journey with AB between King Khalid International Airport (RUH) and your destination in Riyadh. Your chauffeur tracks your flight status, welcomes you upon arrival, assists with your luggage, and drives you directly to your hotel or office in absolute comfort."
         }
       },
       "jeddah": {
         "gettingAround": {
           "title": "Getting Around Jeddah",
-          "description": "Known as the commercial hub of the Red Sea coast, Jeddah boasts a stunning Corniche, historic Al-Balad districts, and booming business zones. AB.Limo offers dependable private car and chauffeur services to help residents, tourists, and business travelers move through the coastal city with ease and sophistication."
+          "description": "Known as the commercial hub of the Red Sea coast, Jeddah boasts a stunning Corniche, historic Al-Balad districts, and booming business zones. AB offers dependable private car and chauffeur services to help residents, tourists, and business travelers move through the coastal city with ease and sophistication."
         },
         "limousineService": {
           "title": "Chauffeur Service in Jeddah",
@@ -2592,13 +2653,13 @@
         },
         "airportTransfer": {
           "title": "Jeddah Airport Transfer",
-          "description": "Eliminate travel stress with AB.Limo's professional airport transfer service between King Abdulaziz International Airport (JED) and any location in Jeddah. Enjoy flight monitoring, meet-and-greet assistance at arrivals, and seamless transportation straight to your final stop."
+          "description": "Eliminate travel stress with AB's professional airport transfer service between King Abdulaziz International Airport (JED) and any location in Jeddah. Enjoy flight monitoring, meet-and-greet assistance at arrivals, and seamless transportation straight to your final stop."
         }
       },
       "mecca": {
         "gettingAround": {
           "title": "Getting Around Mecca",
-          "description": "Mecca is a city of immense spiritual significance, welcoming millions of visitors annually. AB.Limo provides respectful, highly reliable, and comfortable transportation services to help pilgrims and travelers navigate between hotels, holy sites, and regional destinations with absolute peace of mind."
+          "description": "Mecca is a city of immense spiritual significance, welcoming millions of visitors annually. AB provides respectful, highly reliable, and comfortable transportation services to help pilgrims and travelers navigate between hotels, holy sites, and regional destinations with absolute peace of mind."
         },
         "limousineService": {
           "title": "Chauffeur Service in Mecca",
@@ -2606,27 +2667,27 @@
         },
         "airportTransfer": {
           "title": "Mecca Airport Transfer",
-          "description": "Ensure a smooth and dependable connection between Mecca and nearby King Abdulaziz International Airport (JED) in Jeddah with AB.Limo. Our airport transfer service handles your schedule, luggage, and route efficiently so you can travel without any hassle."
+          "description": "Ensure a smooth and dependable connection between Mecca and nearby King Abdulaziz International Airport (JED) in Jeddah with AB. Our airport transfer service handles your schedule, luggage, and route efficiently so you can travel without any hassle."
         }
       },
       "medina": {
         "gettingAround": {
           "title": "Getting Around Medina",
-          "description": "Medina is celebrated for its serene atmosphere, sacred landmarks, and peaceful community spaces. AB.Limo offers dedicated chauffeur solutions designed to give visitors and residents smooth, reliable, and respectful transit throughout the city and its surrounding areas."
+          "description": "Medina is celebrated for its serene atmosphere, sacred landmarks, and peaceful community spaces. AB offers dedicated chauffeur solutions designed to give visitors and residents smooth, reliable, and respectful transit throughout the city and its surrounding areas."
         },
         "limousineService": {
           "title": "Chauffeur Service in Medina",
-          "description": "Medina is a peaceful, culturally rich city with plenty to see, and with a service from AB.Limo, you have an opportunity to explore it smoothly. Hire a top-quality limousine service in Medina by the hour to visit sacred landmarks or community spaces, ensuring a premier alternative to standard street transport."
+          "description": "Medina is a peaceful, culturally rich city with plenty to see, and with a service from AB, you have an opportunity to explore it smoothly. Hire a top-quality limousine service in Medina by the hour to visit sacred landmarks or community spaces, ensuring a premier alternative to standard street transport."
         },
         "airportTransfer": {
           "title": "Medina Airport Transfer",
-          "description": "Book a dependable airport transfer with AB.Limo between Prince Mohammad bin Abdulaziz International Airport (MED) and your hotel or residence in Medina. Experience on-time arrivals, flight tracking, and professional luggage assistance from start to finish."
+          "description": "Book a dependable airport transfer with AB between Prince Mohammad bin Abdulaziz International Airport (MED) and your hotel or residence in Medina. Experience on-time arrivals, flight tracking, and professional luggage assistance from start to finish."
         }
       },
       "dammam": {
         "gettingAround": {
           "title": "Getting Around Dammam",
-          "description": "As the capital of Saudi Arabia's Eastern Province, Dammam is a major administrative, industrial, and commercial center on the Arabian Gulf. AB.Limo provides expert chauffeur services to help you navigate corporate hubs, industrial zones, and scenic coastal parks efficiently."
+          "description": "As the capital of Saudi Arabia's Eastern Province, Dammam is a major administrative, industrial, and commercial center on the Arabian Gulf. AB provides expert chauffeur services to help you navigate corporate hubs, industrial zones, and scenic coastal parks efficiently."
         },
         "limousineService": {
           "title": "Chauffeur Service in Dammam",
@@ -2634,7 +2695,7 @@
         },
         "airportTransfer": {
           "title": "Dammam Airport Transfer",
-          "description": "Travel effortlessly between King Fahd International Airport (DMM) and any spot in Dammam with AB.Limo. Benefit from live flight tracking, warm meet-and-greet service at arrivals, and direct, comfortable transit to your destination."
+          "description": "Travel effortlessly between King Fahd International Airport (DMM) and any spot in Dammam with AB. Benefit from live flight tracking, warm meet-and-greet service at arrivals, and direct, comfortable transit to your destination."
         }
       }
     },
@@ -2642,21 +2703,21 @@
       "doha": {
         "gettingAround": {
           "title": "Getting Around Doha",
-          "description": "As the thriving capital of Qatar, Doha seamlessly blends futuristic architecture with rich cultural heritage. From the iconic West Bay financial district and Msheireb Downtown to the cultural hub of Katara and The Pearl-Qatar, AB.Limo offers reliable chauffeur services to help you navigate the city smoothly, comfortably, and entirely on your schedule."
+          "description": "As the thriving capital of Qatar, Doha seamlessly blends futuristic architecture with rich cultural heritage. From the iconic West Bay financial district and Msheireb Downtown to the cultural hub of Katara and The Pearl-Qatar, AB offers reliable chauffeur services to help you navigate the city smoothly, comfortably, and entirely on your schedule."
         },
         "limousineService": {
           "title": "Chauffeur Service in Doha",
-          "description": "Doha is a vast, culturally rich city with plenty to do, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Doha by the hour to visit your chosen sights, whether that is exploring the iconic cultural hubs or shopping at modern malls, ensuring a seamless, premium travel experience."
+          "description": "Doha is a vast, culturally rich city with plenty to do, and with a service from AB, you have an opportunity to fit it all in. Hire a top-quality limousine service in Doha by the hour to visit your chosen sights, whether that is exploring the iconic cultural hubs or shopping at modern malls, ensuring a seamless, premium travel experience."
         },
         "airportTransfer": {
           "title": "Doha Airport Transfer",
-          "description": "Enjoy a seamless transition between Hamad International Airport (DOH) and your destination in Doha with AB.Limo. Our professional airport transfer service includes live flight tracking, warm meet-and-greet assistance at arrivals, luggage support, and a comfortable ride straight to your hotel or residence."
+          "description": "Enjoy a seamless transition between Hamad International Airport (DOH) and your destination in Doha with AB. Our professional airport transfer service includes live flight tracking, warm meet-and-greet assistance at arrivals, luggage support, and a comfortable ride straight to your hotel or residence."
         }
       },
       "al-khor": {
         "gettingAround": {
           "title": "Getting Around Al Khor",
-          "description": "Located on Qatar's northeast coast, Al Khor is known for its beautiful mangroves, tranquil beaches, and rich fishing heritage. AB.Limo provides dependable chauffeur services to ensure you travel comfortably between coastal resorts, historical sites, and surrounding areas without any travel stress."
+          "description": "Located on Qatar's northeast coast, Al Khor is known for its beautiful mangroves, tranquil beaches, and rich fishing heritage. AB provides dependable chauffeur services to ensure you travel comfortably between coastal resorts, historical sites, and surrounding areas without any travel stress."
         },
         "limousineService": {
           "title": "Chauffeur Service in Al Khor",
@@ -2664,13 +2725,13 @@
         },
         "airportTransfer": {
           "title": "Al Khor Airport Transfer",
-          "description": "Book a convenient airport transfer with AB.Limo for smooth transportation between Al Khor and Hamad International Airport (DOH) in Doha. Our punctual drivers and well-maintained fleet ensure your journey to or from the airport is effortless and comfortable."
+          "description": "Book a convenient airport transfer with AB for smooth transportation between Al Khor and Hamad International Airport (DOH) in Doha. Our punctual drivers and well-maintained fleet ensure your journey to or from the airport is effortless and comfortable."
         }
       },
       "lusail": {
         "gettingAround": {
           "title": "Getting Around Lusail",
-          "description": "As Qatar's state-of-the-art planned city, Lusail features cutting-edge smart infrastructure, stunning waterfront marinas, and major entertainment venues. AB.Limo offers expert chauffeur services to help residents, business professionals, and visitors navigate Lusail's modern districts with ease."
+          "description": "As Qatar's state-of-the-art planned city, Lusail features cutting-edge smart infrastructure, stunning waterfront marinas, and major entertainment venues. AB offers expert chauffeur services to help residents, business professionals, and visitors navigate Lusail's modern districts with ease."
         },
         "limousineService": {
           "title": "Chauffeur Service in Lusail",
@@ -2678,7 +2739,7 @@
         },
         "airportTransfer": {
           "title": "Lusail Airport Transfer",
-          "description": "Ensure a punctual and comfortable airport transfer between Lusail and Hamad International Airport (DOH) with AB.Limo. Take advantage of our flight tracking, professional meet-and-greet service, and direct transit to start or conclude your trip seamlessly."
+          "description": "Ensure a punctual and comfortable airport transfer between Lusail and Hamad International Airport (DOH) with AB. Take advantage of our flight tracking, professional meet-and-greet service, and direct transit to start or conclude your trip seamlessly."
         }
       }
     },
@@ -2686,21 +2747,21 @@
       "manama": {
         "gettingAround": {
           "title": "Getting Around Manama",
-          "description": "As the vibrant capital of Bahrain, Manama is a bustling hub of modern commerce, historic souks, and cultural landmarks. Whether you are conducting business in the Diplomatic Area or exploring the scenic waterfront of Bahrain Bay, AB.Limo offers reliable chauffeur services designed to make your journey across the city comfortable and stress-free."
+          "description": "As the vibrant capital of Bahrain, Manama is a bustling hub of modern commerce, historic souks, and cultural landmarks. Whether you are conducting business in the Diplomatic Area or exploring the scenic waterfront of Bahrain Bay, AB offers reliable chauffeur services designed to make your journey across the city comfortable and stress-free."
         },
         "limousineService": {
           "title": "Chauffeur Service in Manama",
-          "description": "Manama is a vast, culturally rich city with plenty to do, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Manama by the hour to visit your chosen sights, whether that is exploring the historic souks or shopping at modern malls, ensuring a seamless, premium travel experience."
+          "description": "Manama is a vast, culturally rich city with plenty to do, and with a service from AB, you have an opportunity to fit it all in. Hire a top-quality limousine service in Manama by the hour to visit your chosen sights, whether that is exploring the historic souks or shopping at modern malls, ensuring a seamless, premium travel experience."
         },
         "airportTransfer": {
           "title": "Manama Airport Transfer",
-          "description": "Enjoy a seamless airport transfer with AB.Limo between Bahrain International Airport (BAH) and your destination in Manama. Our chauffeurs monitor your flight status, greet you warmly upon arrival, assist with your luggage, and ensure a smooth ride directly to your hotel or office."
+          "description": "Enjoy a seamless airport transfer with AB between Bahrain International Airport (BAH) and your destination in Manama. Our chauffeurs monitor your flight status, greet you warmly upon arrival, assist with your luggage, and ensure a smooth ride directly to your hotel or office."
         }
       },
       "riffa": {
         "gettingAround": {
           "title": "Getting Around Riffa",
-          "description": "Divided into East and West Riffa, this historic city is known for its iconic Riffa Fort, modern residential communities, and premier golf courses. AB.Limo provides dependable chauffeur services to help you navigate Riffa's residential and commercial districts with absolute ease."
+          "description": "Divided into East and West Riffa, this historic city is known for its iconic Riffa Fort, modern residential communities, and premier golf courses. AB provides dependable chauffeur services to help you navigate Riffa's residential and commercial districts with absolute ease."
         },
         "limousineService": {
           "title": "Chauffeur Service in Riffa",
@@ -2708,13 +2769,13 @@
         },
         "airportTransfer": {
           "title": "Riffa Airport Transfer",
-          "description": "Book a reliable airport transfer with AB.Limo for hassle-free transportation between Riffa and Bahrain International Airport (BAH). Benefit from punctual arrivals, flight tracking, and comfortable transit from your doorstep to the terminal."
+          "description": "Book a reliable airport transfer with AB for hassle-free transportation between Riffa and Bahrain International Airport (BAH). Benefit from punctual arrivals, flight tracking, and comfortable transit from your doorstep to the terminal."
         }
       },
       "muharraq": {
         "gettingAround": {
           "title": "Getting Around Muharraq",
-          "description": "As Bahrain's traditional cultural heart, Muharraq is famous for its pearl-diving heritage trail, historic houses, and lively local markets. AB.Limo offers professional chauffeur services that allow you to explore Muharraq's unique streets and modern developments comfortably."
+          "description": "As Bahrain's traditional cultural heart, Muharraq is famous for its pearl-diving heritage trail, historic houses, and lively local markets. AB offers professional chauffeur services that allow you to explore Muharraq's unique streets and modern developments comfortably."
         },
         "limousineService": {
           "title": "Chauffeur Service in Muharraq",
@@ -2722,7 +2783,7 @@
         },
         "airportTransfer": {
           "title": "Muharraq Airport Transfer",
-          "description": "Since Muharraq is home to Bahrain International Airport (BAH), AB.Limo provides instant, ultra-convenient airport transfer services. Your chauffeur ensures prompt pickup and effortless transportation straight to your accommodation or meeting."
+          "description": "Since Muharraq is home to Bahrain International Airport (BAH), AB provides instant, ultra-convenient airport transfer services. Your chauffeur ensures prompt pickup and effortless transportation straight to your accommodation or meeting."
         }
       }
     },
@@ -2730,21 +2791,21 @@
       "kuwait": {
         "gettingAround": {
           "title": "Getting Around Kuwait City",
-          "description": "As the vibrant political and economic capital of Kuwait, Kuwait City features a striking skyline, bustling traditional souks, and major commercial districts. Whether you are conducting business in Sharq or visiting cultural landmarks along the Arabian Gulf Street, AB.Limo provides reliable chauffeur services designed to make your travels across the city comfortable and stress-free."
+          "description": "As the vibrant political and economic capital of Kuwait, Kuwait City features a striking skyline, bustling traditional souks, and major commercial districts. Whether you are conducting business in Sharq or visiting cultural landmarks along the Arabian Gulf Street, AB provides reliable chauffeur services designed to make your travels across the city comfortable and stress-free."
         },
         "limousineService": {
           "title": "Chauffeur Service in Kuwait City",
-          "description": "Kuwait City is a vast, dynamic destination with plenty to explore, and with a service from AB.Limo, you have an opportunity to fit it all in. Hire a top-quality limousine service in Kuwait City by the hour to visit your chosen sights, whether that is touring local markets or shopping at modern avenues, ensuring a seamless, premium travel experience."
+          "description": "Kuwait City is a vast, dynamic destination with plenty to explore, and with a service from AB, you have an opportunity to fit it all in. Hire a top-quality limousine service in Kuwait City by the hour to visit your chosen sights, whether that is touring local markets or shopping at modern avenues, ensuring a seamless, premium travel experience."
         },
         "airportTransfer": {
           "title": "Kuwait City Airport Transfer",
-          "description": "Enjoy a seamless airport transfer with AB.Limo between Kuwait International Airport (KWI) and your destination in Kuwait City. Our chauffeurs monitor your flight status, greet you warmly upon arrival, assist with your luggage, and ensure a smooth ride directly to your hotel or office."
+          "description": "Enjoy a seamless airport transfer with AB between Kuwait International Airport (KWI) and your destination in Kuwait City. Our chauffeurs monitor your flight status, greet you warmly upon arrival, assist with your luggage, and ensure a smooth ride directly to your hotel or office."
         }
       },
       "hawalli": {
         "gettingAround": {
           "title": "Getting Around Hawalli",
-          "description": "Hawalli is one of Kuwait's most densely populated and commercially vibrant governorates, known for its major shopping avenues and lively residential areas. AB.Limo offers dependable chauffeur services to help you navigate Hawalli's busy districts with absolute ease and convenience."
+          "description": "Hawalli is one of Kuwait's most densely populated and commercially vibrant governorates, known for its major shopping avenues and lively residential areas. AB offers dependable chauffeur services to help you navigate Hawalli's busy districts with absolute ease and convenience."
         },
         "limousineService": {
           "title": "Chauffeur Service in Hawalli",
@@ -2752,13 +2813,13 @@
         },
         "airportTransfer": {
           "title": "Hawalli Airport Transfer",
-          "description": "Book a reliable airport transfer with AB.Limo for hassle-free transportation between Hawalli and Kuwait International Airport (KWI). Benefit from punctual arrivals, live flight tracking, and comfortable transit from your doorstep to the terminal."
+          "description": "Book a reliable airport transfer with AB for hassle-free transportation between Hawalli and Kuwait International Airport (KWI). Benefit from punctual arrivals, live flight tracking, and comfortable transit from your doorstep to the terminal."
         }
       },
       "farwaniya": {
         "gettingAround": {
           "title": "Getting Around Farwaniya",
-          "description": "As a major residential and commercial hub close to the airport, Farwaniya is a bustling area filled with diverse markets and businesses. AB.Limo provides professional chauffeur services that allow you to travel through Farwaniya's busy streets comfortably and efficiently."
+          "description": "As a major residential and commercial hub close to the airport, Farwaniya is a bustling area filled with diverse markets and businesses. AB provides professional chauffeur services that allow you to travel through Farwaniya's busy streets comfortably and efficiently."
         },
         "limousineService": {
           "title": "Chauffeur Service in Farwaniya",
@@ -2766,7 +2827,7 @@
         },
         "airportTransfer": {
           "title": "Farwaniya Airport Transfer",
-          "description": "Due to its proximity to Kuwait International Airport (KWI), Farwaniya benefits from quick and convenient airport transfer solutions with AB.Limo. Your chauffeur ensures prompt pickup and effortless transportation straight to your accommodation or meeting."
+          "description": "Due to its proximity to Kuwait International Airport (KWI), Farwaniya benefits from quick and convenient airport transfer solutions with AB. Your chauffeur ensures prompt pickup and effortless transportation straight to your accommodation or meeting."
         }
       }
     },
@@ -2774,7 +2835,7 @@
       "muscat": {
         "gettingAround": {
           "title": "Getting Around Muscat",
-          "description": "Muscat blends rich maritime history with striking modern architecture, framed by rugged mountains and the Gulf of Oman. AB.Limo provides reliable chauffeur services to help you navigate the capital seamlessly, from the grand mosques of Bawshar to the coastal beauty of Qurum and the historic charm of Muttrah."
+          "description": "Muscat blends rich maritime history with striking modern architecture, framed by rugged mountains and the Gulf of Oman. AB provides reliable chauffeur services to help you navigate the capital seamlessly, from the grand mosques of Bawshar to the coastal beauty of Qurum and the historic charm of Muttrah."
         },
         "limousineService": {
           "title": "Chauffeur Service in Muscat",
@@ -2782,13 +2843,13 @@
         },
         "airportTransfer": {
           "title": "Muscat Airport Transfer",
-          "description": "Ensure a smooth and punctual journey with AB.Limo between Muscat International Airport (MCT) and your destination in the city. Your chauffeur tracks your flight status, welcomes you upon arrival, assists with your luggage, and drives you directly to your hotel or office in absolute comfort."
+          "description": "Ensure a smooth and punctual journey with AB between Muscat International Airport (MCT) and your destination in the city. Your chauffeur tracks your flight status, welcomes you upon arrival, assists with your luggage, and drives you directly to your hotel or office in absolute comfort."
         }
       },
       "salalah": {
         "gettingAround": {
           "title": "Getting Around Salalah",
-          "description": "Known for its lush greenery during the Khareef season, beautiful white-sand beaches, and rich archaeological sites, Salalah is Oman's southern gem. AB.Limo offers professional chauffeur services to help you experience the region's natural beauty and cultural landmarks comfortably."
+          "description": "Known for its lush greenery during the Khareef season, beautiful white-sand beaches, and rich archaeological sites, Salalah is Oman's southern gem. AB offers professional chauffeur services to help you experience the region's natural beauty and cultural landmarks comfortably."
         },
         "limousineService": {
           "title": "Chauffeur Service in Salalah",
@@ -2796,13 +2857,13 @@
         },
         "airportTransfer": {
           "title": "Salalah Airport Transfer",
-          "description": "Book a reliable airport transfer with AB.Limo between Salalah International Airport (SLL) and your hotel or resort. Enjoy live flight tracking, warm meet-and-greet assistance, and smooth, direct transit."
+          "description": "Book a reliable airport transfer with AB between Salalah International Airport (SLL) and your hotel or resort. Enjoy live flight tracking, warm meet-and-greet assistance, and smooth, direct transit."
         }
       },
       "sohar": {
         "gettingAround": {
           "title": "Getting Around Sohar",
-          "description": "As a historic coastal city and a rapidly expanding industrial and commercial hub, Sohar offers a unique blend of heritage and modern development. AB.Limo provides dependable chauffeur services to help business travelers and tourists navigate the city effortlessly."
+          "description": "As a historic coastal city and a rapidly expanding industrial and commercial hub, Sohar offers a unique blend of heritage and modern development. AB provides dependable chauffeur services to help business travelers and tourists navigate the city effortlessly."
         },
         "limousineService": {
           "title": "Chauffeur Service in Sohar",
@@ -2810,7 +2871,7 @@
         },
         "airportTransfer": {
           "title": "Sohar Airport Transfer",
-          "description": "Enjoy a seamless transfer with AB.Limo between Sohar Airport (OHS) and your hotel, corporate office, or residence. Experience professional drivers, punctual pickups, and complete peace of mind."
+          "description": "Enjoy a seamless transfer with AB between Sohar Airport (OHS) and your hotel, corporate office, or residence. Experience professional drivers, punctual pickups, and complete peace of mind."
         }
       }
     }
@@ -2885,14 +2946,14 @@
   },
   "services": {
     "metadata": {
-      "title": "Luxury Chauffeur Services | AB.Limo Master Taxonomy",
-      "description": "Explore the complete AB.Limo services taxonomy: executive mobility, airport transfers, VIP & government transport, corporate fleets, events, group charters, tourism, and premium lifestyle chauffeur services."
+      "title": "Luxury Chauffeur Services | AB Master Taxonomy",
+      "description": "Explore the complete AB services taxonomy: executive mobility, airport transfers, VIP & government transport, corporate fleets, events, group charters, tourism, and premium lifestyle chauffeur services."
     },
     "hero": {
       "badge": "The Complete Services Taxonomy",
       "titleStart": "A Full Suite of",
       "titleHighlight": "Luxury Mobility",
-      "desc": "Ten specialised service verticals, one uncompromising standard. AB.Limo engineers bespoke chauffeur-driven ground transport for executives, governments, events, and discerning travellers across the GCC and beyond."
+      "desc": "Ten specialised service verticals, one uncompromising standard. AB engineers bespoke chauffeur-driven ground transport for executives, governments, events, and discerning travellers across the GCC and beyond."
     },
     "breadcrumb": {
       "home": "Home",
@@ -2900,7 +2961,7 @@
     },
     "explore": {
       "title": "Explore Our Service Verticals",
-      "desc": "Each vertical is delivered by the same premium fleet, professional chauffeurs, and dedicated transport control room that defines the AB.Limo standard."
+      "desc": "Each vertical is delivered by the same premium fleet, professional chauffeurs, and dedicated transport control room that defines the AB standard."
     },
     "categories": [
       {
@@ -2977,12 +3038,12 @@
       "label": "Start a Consultation"
     },
     "faqTitle": "Frequently Asked Questions",
-    "luxuryMobility": "AB.Limo Luxury Mobility"
+    "luxuryMobility": "AB Luxury Mobility"
   },
   "servicePages": {
     "chauffeurVip": {
       "metadata": {
-        "title": "Executive & Corporate Mobility | AB.Limo",
+        "title": "Executive & Corporate Mobility | AB",
         "description": "Bespoke corporator mobility for board members, roadshows, and executive itineraries. Premium chauffeur-driven transport engineered around your business schedule."
       },
       "title": "Executive & Corporate Mobility",
@@ -3028,7 +3089,7 @@
           "imageAlt": "Executive business travel",
           "title": "Business Travel, Reimagined",
           "paragraphs": [
-            "Travel should never be a distraction from the work that matters. AB.Limo provides executive transport that disappears into your day: a professional chauffeur, a pristine vehicle, and quiet, uninterrupted productivity from door to door.",
+            "Travel should never be a distraction from the work that matters. AB provides executive transport that disappears into your day: a professional chauffeur, a pristine vehicle, and quiet, uninterrupted productivity from door to door.",
             "Whether it is a single board meeting or a week-long itinerary across Riyadh, Dubai, and Doha, your schedule is orchestrated around you-not the other way around."
           ],
           "bullets": [
@@ -3065,7 +3126,7 @@
       ],
       "faqs": [
         {
-          "q": "Can AB.Limo manage a multi-city corporate roadshow?",
+          "q": "Can AB manage a multi-city corporate roadshow?",
           "a": "Yes. Our transport control room coordinates vehicle, chauffeur, and timing requirements across cities and borders, presenting a single itinerary and consolidated invoice."
         },
         {
@@ -3080,7 +3141,7 @@
     },
     "airportTransfers": {
       "metadata": {
-        "title": "Airport Transfers | AB.Limo",
+        "title": "Airport Transfers | AB",
         "description": "Seamless airport pickup, drop-off, and VIP tarmac services with live flight tracking, meet & greet, and premium vehicles."
       },
       "title": "Airport Transfers",
@@ -3126,7 +3187,7 @@
           "imageAlt": "Luxury airport transfer vehicle",
           "title": "Airport Transfers, Perfected",
           "paragraphs": [
-            "The airport is the first and last impression of any journey. AB.Limo ensures that impression is flawless, with a coordinated team, live flight intelligence, and a premium vehicle standing ready the moment you are.",
+            "The airport is the first and last impression of any journey. AB ensures that impression is flawless, with a coordinated team, live flight intelligence, and a premium vehicle standing ready the moment you are.",
             "For business travellers, delegations, and families alike, every arrival and departure is handled with quiet precision."
           ],
           "bullets": [
@@ -3173,7 +3234,7 @@
     },
     "airportTransferPickup": {
       "metadata": {
-        "title": "Airport Pickup Service | AB.Limo",
+        "title": "Airport Pickup Service | AB",
         "description": "Premium airport pickup with meet & greet, live flight tracking, and luxury vehicles. Arrive seamlessly from the moment you land."
       },
       "title": "Airport Pickup",
@@ -3205,7 +3266,7 @@
           "imageAlt": "Airport pickup chauffeur",
           "title": "Land, and Everything is Handled",
           "paragraphs": [
-            "After a long flight, the last thing you want is to coordinate transport. With AB.Limo, your chauffeur is already waiting. Your only job is to walk through the doors and relax.",
+            "After a long flight, the last thing you want is to coordinate transport. With AB, your chauffeur is already waiting. Your only job is to walk through the doors and relax.",
             "Our meet & greet representative takes care of your luggage and escorts you to a waiting vehicle, whisking you to your destination in comfort."
           ],
           "bullets": [
@@ -3238,7 +3299,7 @@
     },
     "airportTransferDropOff": {
       "metadata": {
-        "title": "Airport Drop-Off Service | AB.Limo",
+        "title": "Airport Drop-Off Service | AB",
         "description": "On-time, stress-free airport drop-offs. Punctual chauffeur service to the terminal, giving you ample time to check in and relax."
       },
       "title": "Airport Drop-Off",
@@ -3270,7 +3331,7 @@
           "imageAlt": "Business traveller at airport departure",
           "title": "Departures, Without the Rush",
           "paragraphs": [
-            "A frantic dash to the airport is the worst way to begin a journey. AB.Limo plans your departure meticulously, balancing comfort with the buffer you need.",
+            "A frantic dash to the airport is the worst way to begin a journey. AB plans your departure meticulously, balancing comfort with the buffer you need.",
             "From early-morning flights to last-minute schedule changes, your drop-off is handled with precision and calm."
           ],
           "bullets": [
@@ -3303,7 +3364,7 @@
     },
     "airportTransferVipTarmac": {
       "metadata": {
-        "title": "VIP Tarmac Airport Service | AB.Limo",
+        "title": "VIP Tarmac Airport Service | AB",
         "description": "Privileged VIP tarmac airport access for dignitaries and high-profile travellers. Discreet, efficient, and secure arrivals and departures."
       },
       "title": "VIP Tarmac Arrivals",
@@ -3335,7 +3396,7 @@
           "imageAlt": "VIP airport terminal",
           "title": "The Privilege of Time",
           "paragraphs": [
-            "For distinguished travellers, the airport experience should be as seamless and dignified as the journey itself. AB.Limo coordinates privileged ground access with authorised partners to streamline arrivals and departures.",
+            "For distinguished travellers, the airport experience should be as seamless and dignified as the journey itself. AB coordinates privileged ground access with authorised partners to streamline arrivals and departures.",
             "Our protocol-trained chauffeurs and white-glove handling ensure complete discretion from the moment you touch down."
           ],
           "bullets": [
@@ -3358,7 +3419,7 @@
         },
         {
           "q": "Who handles the security and protocol arrangements?",
-          "a": "AB.Limo coordinates with accredited ground handlers and relevant authorities to manage protocol, security, and entrance permissions."
+          "a": "AB coordinates with accredited ground handlers and relevant authorities to manage protocol, security, and entrance permissions."
         },
         {
           "q": "Can this service be arranged for private jets?",
@@ -3368,7 +3429,7 @@
     },
     "corporateTransportation": {
       "metadata": {
-        "title": "Corporate Fleet & Workforce Mobility | AB.Limo",
+        "title": "Corporate Fleet & Workforce Mobility | AB",
         "description": "Managed corporate fleets and employee shuttle programs engineered for reliability, compliance, and efficiency."
       },
       "title": "Corporate Fleet & Workforce Mobility",
@@ -3414,7 +3475,7 @@
           "imageAlt": "Corporate shuttle fleet",
           "title": "Mobility That Scales With You",
           "paragraphs": [
-            "Whether you move forty colleagues a day or four thousand, AB.Limo builds a workforce mobility programme that scales reliably. Routes, schedules, and capacity are optimised around your operations.",
+            "Whether you move forty colleagues a day or four thousand, AB builds a workforce mobility programme that scales reliably. Routes, schedules, and capacity are optimised around your operations.",
             "With live tracking and a dedicated account team, you always know where your people are-and that they are safe."
           ],
           "bullets": [
@@ -3447,7 +3508,7 @@
     },
     "crossBorderMobility": {
       "metadata": {
-        "title": "Cross-Border Mobility | AB.Limo",
+        "title": "Cross-Border Mobility | AB",
         "description": "Long-distance and international cross-border road transport across the GCC, with full coordination of borders and documentation."
       },
       "title": "Cross-Border Mobility",
@@ -3493,7 +3554,7 @@
           "imageAlt": "Long distance highway journey",
           "title": "The Gulf, Uninterrupted",
           "paragraphs": [
-            "Crossing borders should be an adventure, not an ordeal. AB.Limo removes the friction of long-distance international travel, handling the paperwork and route planning so you enjoy the journey.",
+            "Crossing borders should be an adventure, not an ordeal. AB removes the friction of long-distance international travel, handling the paperwork and route planning so you enjoy the journey.",
             "Whether it is a business delegation or a family road trip, our coordination ensures a smooth passage at every crossing."
           ],
           "bullets": [
@@ -3520,13 +3581,13 @@
         },
         {
           "q": "Can cross-border transport be combined with other services?",
-          "a": "Yes. We integrate cross-border journeys with airport transfers, events, and other AB.Limo services for a complete mobility plan."
+          "a": "Yes. We integrate cross-border journeys with airport transfers, events, and other AB services for a complete mobility plan."
         }
       ]
     },
     "eventTransportation": {
       "metadata": {
-        "title": "Event Transportation Services | AB.Limo",
+        "title": "Event Transportation Services | AB",
         "description": "End-to-end guest transport for conferences, exhibitions, concerts, and large-scale corporate gatherings."
       },
       "title": "Event Transportation",
@@ -3572,7 +3633,7 @@
           "imageAlt": "Large corporate conference event",
           "title": "Seamless Movement, Unforgettable Event",
           "paragraphs": [
-            "The success of an event often hinges on how smoothly guests arrive, move, and depart. AB.Limo turns transport into a seamless part of the experience, invisible in operation but powerful in contribution.",
+            "The success of an event often hinges on how smoothly guests arrive, move, and depart. AB turns transport into a seamless part of the experience, invisible in operation but powerful in contribution.",
             "From the first airport pickup to the final shuttle of the evening, every movement is orchestrated by a dedicated command centre."
           ],
           "bullets": [
@@ -3605,7 +3666,7 @@
     },
     "busCoachHire": {
       "metadata": {
-        "title": "Group & Coach Charter | AB.Limo",
+        "title": "Group & Coach Charter | AB",
         "description": "Minibuses, executive coaches, and motorcoach charters for teams, delegations, and large groups across the Gulf."
       },
       "title": "Group & Coach Charter",
@@ -3651,7 +3712,7 @@
           "imageAlt": "Group travelling together",
           "title": "One Journey, One Group, Zero Friction",
           "paragraphs": [
-            "Moving a group is about more than reserving a vehicle-it is about keeping your people together, on time, and comfortable. AB.Limo handles every detail so you can focus on your group.",
+            "Moving a group is about more than reserving a vehicle-it is about keeping your people together, on time, and comfortable. AB handles every detail so you can focus on your group.",
             "Our coordinators manage the itinerary, the drivers, and the logistics, while your group simply enjoys the journey."
           ],
           "bullets": [
@@ -3684,8 +3745,8 @@
     },
     "premiumLifestyle": {
       "metadata": {
-        "title": "Premium Lifestyle & Specialty Transport | AB.Limo",
-        "description": "Bespoke luxury transport for weddings, celebrations, and high-profile personal occasions, delivered by AB.Limo."
+        "title": "Premium Lifestyle & Specialty Transport | AB",
+        "description": "Bespoke luxury transport for weddings, celebrations, and high-profile personal occasions, delivered by AB."
       },
       "title": "Premium Lifestyle & Specialty",
       "subtitle": "Bespoke luxury transport for life's most memorable moments-weddings, celebrations, and special occasions.",
@@ -3730,7 +3791,7 @@
           "imageAlt": "Elegant wedding celebration",
           "title": "Moments Worth Remembering",
           "paragraphs": [
-            "Some occasions warrant more than transport-they call for an entrance. AB.Limo offers bespoke luxury vehicles and styling that make your special moments unforgettable.",
+            "Some occasions warrant more than transport-they call for an entrance. AB offers bespoke luxury vehicles and styling that make your special moments unforgettable.",
             "From a pristine luxury sedan for your wedding day to a fleet for a family gathering, we tailor every detail to your vision."
           ],
           "bullets": [
@@ -3763,7 +3824,7 @@
     },
     "religiousTourism": {
       "metadata": {
-        "title": "Religious & Pilgrimage Travel | AB.Limo",
+        "title": "Religious & Pilgrimage Travel | AB",
         "description": "Dignified pilgrimage and religious group travel with sensitive, respectful service for Hajj, Umrah, and other journeys of faith."
       },
       "title": "Religious Tourism",
@@ -3809,7 +3870,7 @@
           "imageAlt": "Sacred journey destination",
           "title": "Journeys of the Heart, Handled with Care",
           "paragraphs": [
-            "For journeys of faith, the experience matters as much as the destination. AB.Limo provides transport characterised by patience, dignity, and respect for the holiness of the occasion.",
+            "For journeys of faith, the experience matters as much as the destination. AB provides transport characterised by patience, dignity, and respect for the holiness of the occasion.",
             "Our coordinators attend to the small considerations that make a pilgrimage meaningful, allowing travellers to focus fully on their spiritual journey."
           ],
           "bullets": [
@@ -3842,8 +3903,8 @@
     },
     "tourismTransportation": {
       "metadata": {
-        "title": "Tourism & Leisure Transport | AB.Limo",
-        "description": "Custom private tours, sightseeing, and leisure transit curated by AB.Limo for discerning travellers."
+        "title": "Tourism & Leisure Transport | AB",
+        "description": "Custom private tours, sightseeing, and leisure transit curated by AB for discerning travellers."
       },
       "title": "Tourism & Leisure",
       "subtitle": "Custom private tours, sightseeing, and leisure transit curated for travellers who expect more.",
@@ -3888,7 +3949,7 @@
           "imageAlt": "Scenic leisure travel destination",
           "title": "Explore, Your Way",
           "paragraphs": [
-            "Leisure time should never be rushed or rationed. With a private AB.Limo chauffeur, your itinerary bends to your mood, your schedule, and your curiosity.",
+            "Leisure time should never be rushed or rationed. With a private AB chauffeur, your itinerary bends to your mood, your schedule, and your curiosity.",
             "Stop for a photograph, linger at a viewpoint, or add a spontaneous detour-your chauffeur is there to make it effortless."
           ],
           "bullets": [
@@ -3921,7 +3982,7 @@
     },
     "vipDiplomaticGovernment": {
       "metadata": {
-        "title": "VIP, Diplomatic & Government Transport | AB.Limo",
+        "title": "VIP, Diplomatic & Government Transport | AB",
         "description": "High-security, protocol-driven chauffeur transport for dignitaries, heads of state, and diplomatic missions across the GCC."
       },
       "title": "VIP, Diplomatic & Government",
@@ -3967,7 +4028,7 @@
           "imageAlt": "Protocol and government building",
           "title": "Trusted by Those Who Can't Be Late",
           "paragraphs": [
-            "For principals whose schedules carry protocol weight, there is no margin for error. AB.Limo's protocol transport division is built on advance planning, redundancy, and absolute reliability.",
+            "For principals whose schedules carry protocol weight, there is no margin for error. AB's protocol transport division is built on advance planning, redundancy, and absolute reliability.",
             "Chauffeurs are screened, trained in discreet service, and prepared to adapt instantly to evolving itineraries and security requirements."
           ],
           "bullets": [
@@ -4001,7 +4062,7 @@
   },
   "industries": {
     "metadata": {
-      "title": "Dedicated B2B Industry Solutions | AB.Limo",
+      "title": "Dedicated B2B Industry Solutions | AB",
       "description": "Enterprise-grade ground transport for aviation crews, luxury hospitality, corporate mobility, and government & diplomatic protocol."
     },
     "hero": {
@@ -4016,7 +4077,7 @@
     },
     "explore": {
       "title": "Explore Our Industry Verticals",
-      "desc": "Each vertical pairs dedicated account management with the premium fleet and professional chauffeurs that define the AB.Limo standard."
+      "desc": "Each vertical pairs dedicated account management with the premium fleet and professional chauffeurs that define the AB standard."
     },
     "categories": [
       {
@@ -4071,8 +4132,8 @@
   "industryPages": {
     "aviation": {
       "metadata": {
-        "title": "Aviation Ground Transport for Crews & FBOs | AB.Limo",
-        "description": "Airline crew transfers, pilot logistics, and VIP lounge transit coordinated around flight schedules and layovers by AB.Limo."
+        "title": "Aviation Ground Transport for Crews & FBOs | AB",
+        "description": "Airline crew transfers, pilot logistics, and VIP lounge transit coordinated around flight schedules and layovers by AB."
       },
       "badge": "Aviation & FBO Operations",
       "title": "Aviation Ground Mobility",
@@ -4118,7 +4179,7 @@
           "imageAlt": "Aircraft on the tarmac",
           "title": "Rolling with the Flight Schedule",
           "paragraphs": [
-            "Aviation runs on precision. So does our service. AB.Limo aligns ground transport with crew rosters, aircraft rotations, and the unpredictable shifts that define life at an airport.",
+            "Aviation runs on precision. So does our service. AB aligns ground transport with crew rosters, aircraft rotations, and the unpredictable shifts that define life at an airport.",
             "Our transport control room stays in sync with your operations team, repositioning vehicles instantly as schedules evolve."
           ],
           "bullets": [
@@ -4151,8 +4212,8 @@
     },
     "hospitality": {
       "metadata": {
-        "title": "Hospitality Ground Transport for Hotels & Resorts | AB.Limo",
-        "description": "Bespoke transit partnerships for luxury hotels, resorts, and 5-star concierge teams by AB.Limo."
+        "title": "Hospitality Ground Transport for Hotels & Resorts | AB",
+        "description": "Bespoke transit partnerships for luxury hotels, resorts, and 5-star concierge teams by AB."
       },
       "badge": "Hospitality & Concierge",
       "title": "Hospitality Ground Mobility",
@@ -4198,7 +4259,7 @@
           "imageAlt": "Luxury hotel lobby and concierge",
           "title": "Transport as a Mark of Hospitality",
           "paragraphs": [
-            "For discerning guests, the journey shapes the stay. AB.Limo partners with luxury hotels and resorts to deliver transport that is as refined as the property itself.",
+            "For discerning guests, the journey shapes the stay. AB partners with luxury hotels and resorts to deliver transport that is as refined as the property itself.",
             "Our chauffeurs arrive immaculate and gracious, treating every guest as a principal and every trip as a privilege to be honoured."
           ],
           "bullets": [
@@ -4231,8 +4292,8 @@
     },
     "corporateEnterprise": {
       "metadata": {
-        "title": "Corporate & Enterprise Mobility Solutions | AB.Limo",
-        "description": "Employee mobility, executive commuting, and corporate roadshow transport for forward-thinking enterprises by AB.Limo."
+        "title": "Corporate & Enterprise Mobility Solutions | AB",
+        "description": "Employee mobility, executive commuting, and corporate roadshow transport for forward-thinking enterprises by AB."
       },
       "badge": "Corporate & Enterprise",
       "title": "Corporate & Enterprise Mobility",
@@ -4278,7 +4339,7 @@
           "imageAlt": "Corporate executives in business travel",
           "title": "Mobility That Moves Your Business Forward",
           "paragraphs": [
-            "Ground transport is an extension of your brand and your duty of care. AB.Limo engineering corporate mobility programmes that are reliable, transparent, and tailored to how your business actually moves.",
+            "Ground transport is an extension of your brand and your duty of care. AB engineering corporate mobility programmes that are reliable, transparent, and tailored to how your business actually moves.",
             "From the daily commute to a week-long roadshow, every journey is coordinated, reported, and invoiced with enterprise-grade rigour."
           ],
           "bullets": [
@@ -4311,8 +4372,8 @@
     },
     "governmentDiplomatic": {
       "metadata": {
-        "title": "Government & Diplomatic Ground Transport | AB.Limo",
-        "description": "High-security protocol transport for official delegations, dignitaries, and government transit by AB.Limo."
+        "title": "Government & Diplomatic Ground Transport | AB",
+        "description": "High-security protocol transport for official delegations, dignitaries, and government transit by AB."
       },
       "badge": "Government & Diplomatic Protocol",
       "title": "Government & Diplomatic Mobility",
@@ -4358,7 +4419,7 @@
           "imageAlt": "Government and protocol transport",
           "title": "Trusted Where There Is No Margin for Error",
           "paragraphs": [
-            "For government and diplomatic movements, logistics carry weight that exceeds the calendar. AB.Limo's protocol division is built on advance planning, redundancy, and absolute discretion.",
+            "For government and diplomatic movements, logistics carry weight that exceeds the calendar. AB's protocol division is built on advance planning, redundancy, and absolute discretion.",
             "Chauffeurs are screened and trained for protocol duty, ready to adapt instantly to evolving itineraries and security requirements."
           ],
           "bullets": [

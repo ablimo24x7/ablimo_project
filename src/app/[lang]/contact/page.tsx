@@ -20,15 +20,15 @@ export async function generateMetadata({
   const isAr = hasLocale(lang) && lang === "ar";
   return generateSeoMetadata({
     title: isAr
-      ? "اتصل ب AB.Limo | دعم التنقل التنفيذي على مدار الساعة"
-      : "Contact AB.Limo | 24/7 Executive Mobility Support",
+      ? "اتصل ب AB | دعم التنقل التنفيذي على مدار الساعة"
+      : "Contact AB | 24/7 Executive Mobility Support",
     description: isAr
-      ? "اتصل ب AB.Limo للحجوزات والعروض والدعم في دول الخليج. تواصل مع فريق التنقل عبر الهاتف أو واتساب أو البريد الإلكتروني — نرد خلال 30 دقيقة، على مدار الساعة."
-      : "Contact AB.Limo for bookings, quotes and support across the GCC. Reach our mobility team via phone, WhatsApp or email — we respond within 30 minutes, 24/7.",
+      ? "اتصل ب AB للحجوزات والعروض والدعم في دول الخليج. تواصل مع فريق التنقل عبر الهاتف أو واتساب أو البريد الإلكتروني — نرد خلال 30 دقيقة، على مدار الساعة."
+      : "Contact AB for bookings, quotes and support across the GCC. Reach our mobility team via phone, WhatsApp or email — we respond within 30 minutes, 24/7.",
     path: "/contact",
     lang,
     keywords:
-      "contact AB.Limo, chauffeur booking support, WhatsApp chauffeur service GCC, corporate mobility contact, 24/7 dispatch, executive transfer enquiry",
+      "contact AB, chauffeur booking support, WhatsApp chauffeur service GCC, corporate mobility contact, 24/7 dispatch, executive transfer enquiry",
   });
 }
 

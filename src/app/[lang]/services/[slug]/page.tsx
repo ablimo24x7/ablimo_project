@@ -45,7 +45,7 @@ export async function generateMetadata({
     "Service";
   const description =
     resolved.seo?.metaDescription || resolved.content.subtitle || "";
-  const keywords = `${title}, AB.Limo, luxury chauffeur, ${title} service, premium transportation`;
+  const keywords = `${title}, AB, luxury chauffeur, ${title} service, premium transportation`;
   return generateSeoMetadata({
     title,
     description,

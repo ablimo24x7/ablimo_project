@@ -6,15 +6,14 @@ const DEFAULT_OG_IMAGE = `${BASE_URL}/opengraph-image.png`;
 const TWITTER_HANDLE = "@ablimo";
 
 /**
- * Strips baked-in brand suffixes/prefixes (e.g. " | AB.Limo", "AB.Limo - ")
- * and trailing periods from a title so the root layout template
- * ("%s | AB") is the single source of branding.
+ * Strips baked-in brand suffixes/prefixes and trailing periods from a title
+ * so the root layout template ("%s | AB") is the single source of branding.
  */
 export function stripBrandSuffix(title: string): string {
   let t = title.trim();
-  // Trailing brand segments: "… | AB.Limo", "… - AB", repeated
+  // Trailing brand segments: "… | AB", "… - AB", including the legacy dotted variant
   t = t.replace(/(?:\s*[|–—-]\s*(?:AB\.Limo|AB))+\s*$/i, "");
-  // Leading brand segments: "AB.Limo | …", "AB - …"
+  // Leading brand segments: "AB | …", "AB - …", including the legacy dotted variant
   t = t.replace(/^\s*(?:AB\.Limo|AB)\s*[|–—-]\s*/i, "");
   // Trailing period
   t = t.replace(/\.+$/, "");
@@ -99,7 +98,7 @@ export function generateSeoMetadata({
       title: brandedTitle,
       description,
       url: canonical,
-      siteName: "AB.Limo",
+      siteName: "AB",
       type,
       locale: ogLocale,
       alternateLocale: alternateLocales,
@@ -120,6 +119,6 @@ export function generateSeoMetadata({
   };
 }
 
-export const SITE_NAME = "AB.Limo";
+export const SITE_NAME = "AB";
 export const SITE_URL = BASE_URL;
 export { DEFAULT_OG_IMAGE, TWITTER_HANDLE };

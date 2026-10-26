@@ -7,9 +7,10 @@ import {
   defaultLocale,
   type Locale,
   localeBase,
-  localeHome,
 } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
+import { SKETCH_INDUSTRIES } from "./_components/industries-sketch";
+import IndustriesDirectory from "./_components/IndustriesDirectory";
 
 export async function generateMetadata({
   params,
@@ -24,44 +25,9 @@ export async function generateMetadata({
     description: dict.industries.metadata.description,
     path: "/industries",
     lang,
-    keywords: "AB.Limo industries, corporate mobility, government transport, aviation ground handling, hospitality transportation",
+    keywords: "AB industries, corporate mobility, government transport, aviation ground handling, hospitality transportation",
   });
 }
-
-const categoryImages: Record<string, string> = {
-  aviation:
-    "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop",
-  hospitality:
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=500&fit=crop",
-  "corporate-enterprise":
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=500&fit=crop",
-  "government-diplomatic":
-    "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=500&fit=crop",
-};
-
-const pillars = [
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-  },
-];
 
 export default async function IndustriesPage({
   params,
@@ -69,138 +35,99 @@ export default async function IndustriesPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
-  const dict = await getDictionary(locale);
-
-  const categories = dict.industries.categories.map((category) => ({
-    ...category,
-    image: categoryImages[category.slug],
-  }));
+  const base = localeBase(lang);
 
   return (
     <main className="min-h-screen bg-[#292a30] text-white">
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden pt-24 pb-10">
+      <section className="relative min-h-[85vh] flex flex-col overflow-hidden pt-24 pb-10">
         <Image
-          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&h=800&fit=crop"
-          alt={dict.industries.hero.badge}
+          src="/industries/hub-hero.jpg"
+          alt=""
+          aria-hidden="true"
           fill
-          className="object-cover"
+          className="object-cover object-[60%_50%]"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#292a30]" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-8">
-          <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abBlue/10 border border-abBlue/30 mb-6">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
+        <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/95 via-black/60 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#292a30] to-transparent" />
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 flex-1 flex flex-col">
+          <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abBlue/10 border border-abBlue/30 self-start">
             <span className="w-2 h-2 rounded-full bg-abBlue animate-pulse"></span>
             <span className="text-abBlue text-xs font-bold tracking-widest uppercase">
-              {dict.industries.hero.badge}
+              Mobility by industry
             </span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight max-w-3xl text-white">
-            {dict.industries.hero.titleStart}{" "}
-            <span className="text-abBlue">{dict.industries.hero.titleHighlight}</span>
+
+          <h1 className="mt-5 text-3xl md:text-5xl font-bold tracking-tight max-w-4xl text-white">
+            Seven sectors, one operating standard
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-            {dict.industries.hero.desc}
-          </p>
-        </div>
-      </section>
 
-      {/* Breadcrumb */}
-      <div className="max-w-7xl mx-auto px-8 py-6">
-        <nav className="text-sm text-gray-400">
-          <Link href={`${localeHome(lang)}`} className="hover:text-white transition-colors">
-            {dict.industries.breadcrumb.home}
-          </Link>
-          <span className="mx-2">/</span>
-          <span className="text-white">{dict.industries.breadcrumb.industries}</span>
-        </nav>
-      </div>
-
-      {/* Industry Grid */}
-      <section className="max-w-7xl mx-auto px-8 py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {dict.industries.explore.title}
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            {dict.industries.explore.desc}
+          <p className="mt-6 max-w-2xl text-lg text-gray-300 leading-relaxed">
+            Every sector moves people differently. Choose yours to see how we plan, run
+            and report on it across Saudi Arabia, the UAE and Qatar.
           </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {categories.map((industry) => (
+
+          <div className="mt-8 flex flex-wrap gap-3.5">
             <Link
-              key={industry.slug}
-              href={`${localeBase(lang)}/industries/${industry.slug}`}
-              className="group bg-[#1c1d21] rounded-2xl overflow-hidden hover:bg-[#2a2c35] transition-colors"
+              href={`${base}/contact`}
+              className="inline-flex items-center min-h-[52px] px-7 bg-abBlue hover:bg-abServiceBlue text-white text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abBlue/20"
             >
-              <div className="relative h-56 overflow-hidden">
-                <Image
-                  src={industry.image}
-                  alt={industry.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1c1d21]/90 via-transparent to-transparent" />
-                <span className="absolute top-4 left-4 bg-abBlue text-black text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                  {industry.tag}
-                </span>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold">{industry.title}</h3>
-                  <span className="text-abBlue text-xl group-hover:translate-x-1 transition-transform">
-                    &rarr;
-                  </span>
-                </div>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {industry.desc}
-                </p>
-              </div>
+              Request a proposal
             </Link>
-          ))}
-        </div>
-      </section>
+            <Link
+              href={`${base}/services`}
+              className="inline-flex items-center min-h-[52px] px-7 border border-white/50 hover:bg-white/10 text-white text-sm font-semibold rounded-full transition-colors"
+            >
+              Our services
+            </Link>
+          </div>
 
-      {/* Pillars */}
-      <section className="bg-[#1c1d21] py-20 px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            {dict.industries.pillars.title}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pillars.map((pillar, index) => (
-              <div
-                key={index}
-                className="bg-[#292a30] p-8 rounded-2xl hover:bg-[#2a2c35] transition-colors"
+          <div className="mt-auto pt-12 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
+            {SKETCH_INDUSTRIES.map((s) => (
+              <a
+                key={s.id}
+                href={`#${s.id}`}
+                className="group flex flex-col gap-1 pt-3.5 min-h-[44px] border-t border-white/30 hover:border-white transition-colors"
               >
-                <div className="text-abBlue mb-4">{pillar.icon}</div>
-                <h3 className="text-xl font-bold mb-3">
-                  {dict.industries.pillars.items[index].title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {dict.industries.pillars.items[index].desc}
-                </p>
-              </div>
+                <span className="text-xs tracking-[0.14em] text-abBlue">{s.num}</span>
+                <span className="text-sm leading-snug text-white">{s.name}</span>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="max-w-4xl mx-auto px-8 py-20 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          {dict.industries.cta.title}
-        </h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-          {dict.industries.cta.desc}
-        </p>
-        <Link
-          href={`${localeBase(lang)}/industries/corporate-enterprise`}
-          className="inline-block bg-abBlue hover:bg-abServiceBlue text-white px-8 py-3 text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abBlue/20"
-        >
-          {dict.industries.cta.label}
-        </Link>
+      {/* Industries with sticky list */}
+      <IndustriesDirectory lang={lang} />
+
+      {/* Closing call to action */}
+      <section className="bg-abBlack">
+        <div className="max-w-7xl mx-auto px-8 py-20 flex flex-wrap items-end justify-between gap-8">
+          <div className="flex-1 basis-[520px] min-w-0">
+            <h2 className="text-3xl md:text-4xl font-bold">Not sure where you fit?</h2>
+            <p className="mt-4 text-gray-400 max-w-xl">
+              Tell us how your people move and a planner will map it to the right
+              programme. hello@ab.limo
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3.5">
+            <Link
+              href={`${base}/contact`}
+              className="inline-flex items-center min-h-[52px] px-7 bg-abBlue hover:bg-abServiceBlue text-white text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abBlue/20"
+            >
+              Request a proposal
+            </Link>
+            <Link
+              href={`${base}/contact`}
+              className="inline-flex items-center min-h-[52px] px-7 border border-white/50 hover:bg-white/10 text-white text-sm font-semibold rounded-full transition-colors"
+            >
+              Talk to a planner
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );

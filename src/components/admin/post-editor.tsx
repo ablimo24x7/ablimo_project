@@ -444,7 +444,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
 
       // Auto-generate SEO from title when title changes and SEO fields are empty
       if (key === "title" && !prev.seo_metadata.metaTitle) {
-        next.seo_metadata = { ...next.seo_metadata, metaTitle: `${String(value)} | AB.Limo` };
+        next.seo_metadata = { ...next.seo_metadata, metaTitle: `${String(value)} | AB` };
       }
       // Auto-generate SEO metaDescription from excerpt when excerpt changes and SEO field is empty
       if (key === "excerpt" && !prev.seo_metadata.metaDescription) {
@@ -465,7 +465,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
   const regenerateSeo = () => {
     isDirtyRef.current = true;
     setForm((prev) => {
-      const metaTitle = prev.seo_metadata.metaTitle || `${prev.title} | AB.Limo`;
+      const metaTitle = prev.seo_metadata.metaTitle || `${prev.title} | AB`;
       let metaDescription = prev.seo_metadata.metaDescription;
       if (!metaDescription) {
         metaDescription = prev.excerpt?.trim().slice(0, 160) || prev.title;
@@ -1232,7 +1232,7 @@ export function PostEditor({ initialData, initialBlogType = "country", mode = "c
                     onTranslated={(v) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: v })}
                   />
                 </div>
-                <Input value={form.seo_metadata.metaTitle} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: e.target.value })} placeholder={`${form.title || "Article Title"} | AB.Limo`} />
+                <Input value={form.seo_metadata.metaTitle} onChange={(e) => updateField("seo_metadata", { ...form.seo_metadata, metaTitle: e.target.value })} placeholder={`${form.title || "Article Title"} | AB`} />
                 <p className="text-xs text-muted-foreground">{form.seo_metadata.metaTitle.length}/200 characters</p>
               </div>
               <div className="space-y-2">

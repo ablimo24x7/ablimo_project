@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { locales, hasLocale, localeBase, type Locale } from "@/app/[lang]/dictionaries";
 import { setGoogleTranslateCookie } from "@/components/GoogleTranslate";
@@ -13,15 +13,20 @@ const languageLabels: Record<Locale, { flag: string; label: string }> = {
 
 interface LanguageSwitcherProps {
   currentLang: Locale;
-  isOpen: boolean;
-  onToggle: () => void;
-  onClose: () => void;
+  /** Render on mobile too (mobile header row / open mobile-menu overlay). Desktop-only by default. */
+  showOnMobile?: boolean;
 }
 
-export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClose }: LanguageSwitcherProps) {
+export default function LanguageSwitcher({ currentLang, showOnMobile = false }: LanguageSwitcherProps) {
   const ref = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  // Hover open/close is a desktop pattern — on touch, mouseenter + click would cancel each other.
+  const hoverEnabled = !showOnMobile;
+
+  const onToggle = () => setIsOpen((v) => !v);
+  const onClose = useCallback(() => setIsOpen(false), []);
 
   const clearCloseTimeout = () => {
     if (timeoutRef.current) {
@@ -81,11 +86,14 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
   const isRtl = currentLang.split("-")[0] === "ar";
 
   return (
-    <div className="relative" ref={ref}>
+    <div
+      className={`${showOnMobile ? "relative w-9" : "hidden lg:block relative w-px bg-gray-700"}`}
+      ref={ref}
+    >
       <button
         onClick={onToggle}
-        onMouseEnter={handleButtonMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={hoverEnabled ? handleButtonMouseEnter : undefined}
+        onMouseLeave={hoverEnabled ? handleMouseLeave : undefined}
         className="flex items-center justify-center w-9 h-9 text-gray-300 hover:text-abBlue transition-colors cursor-pointer rounded-full hover:bg-white/10"
         title={languageLabels[currentLang].label}
       >
@@ -96,9 +104,9 @@ export default function LanguageSwitcher({ currentLang, isOpen, onToggle, onClos
 
       {isOpen && (
         <div
-          className={`absolute top-full mt-1 bg-[#2a2c35] border border-gray-600/50 rounded-xl shadow-xl overflow-hidden min-w-[180px] z-50 ${isRtl ? "right-0" : "left-0"}`}
-          onMouseEnter={handlePanelMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          className={`absolute top-full mt-1 bg-[#0C0C0C] border border-gray-800 rounded-xl shadow-xl overflow-hidden min-w-[180px] z-50 ${isRtl || showOnMobile ? "right-0" : "left-0"}`}
+          onMouseEnter={hoverEnabled ? handlePanelMouseEnter : undefined}
+          onMouseLeave={hoverEnabled ? handleMouseLeave : undefined}
         >
           {locales.map((locale) => {
             const switchingLocale = currentLang !== locale;

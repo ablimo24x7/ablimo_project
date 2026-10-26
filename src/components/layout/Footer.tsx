@@ -164,7 +164,7 @@ export default async function Footer({ lang }: FooterProps) {
               {/* {dict.header.logo} */}
               <Image
                 src="/AB_LOGO-NEW.png"
-                alt="AB.Limo Logo"
+                alt="AB Logo"
                 width={100}
                 height={40}
               />

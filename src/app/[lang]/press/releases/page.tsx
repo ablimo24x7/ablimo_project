@@ -13,14 +13,14 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: isAr ? dict.press.meta.title : "Press Releases & Media | AB.Limo News",
+    title: isAr ? dict.press.meta.title : "Press Releases & Media | AB News",
     description: isAr
       ? dict.press.meta.description
-      : "Latest news, press releases, and media coverage from AB.Limo. Stay updated on our corporate mobility services, fleet expansion, and industry partnerships.",
+      : "Latest news, press releases, and media coverage from AB. Stay updated on our corporate mobility services, fleet expansion, and industry partnerships.",
     path: "/press/releases",
     lang,
     keywords:
-      "AB.Limo press, AB.Limo news, corporate mobility news, luxury transportation press release, chauffeur service media, AB.Limo announcements",
+      "AB press, AB news, corporate mobility news, luxury transportation press release, chauffeur service media, AB announcements",
   });
 }
 

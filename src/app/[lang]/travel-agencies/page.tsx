@@ -24,10 +24,10 @@ export async function generateMetadata({
     title: isAr ? dict.travelAgencies.meta.title : "Global Chauffeur Services for Travel Agencies",
     description: isAr
       ? dict.travelAgencies.meta.description
-      : "Partner with AB.Limo to offer your clients world-class chauffeur services. Earn commission and boost your brand reputation.",
+      : "Partner with AB to offer your clients world-class chauffeur services. Earn commission and boost your brand reputation.",
     path: "/travel-agencies",
     lang,
-    keywords: "travel agency chauffeur, AB.Limo travel partner, wholesale chauffeur service, white label transportation, travel agency partnership",
+    keywords: "travel agency chauffeur, AB travel partner, wholesale chauffeur service, white label transportation, travel agency partnership",
   });
 }
 

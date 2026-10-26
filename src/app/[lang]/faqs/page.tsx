@@ -13,15 +13,15 @@ export async function generateMetadata({
   const isAr = lang === "ar";
   return generateSeoMetadata({
     title: isAr
-      ? "الأسئلة الشائعة | AB.Limo للسفر المؤسسي ولوجستيات الفعاليات"
-      : "Enterprise Mobility FAQs | AB.Limo Corporate Travel & Event Logistics",
+      ? "الأسئلة الشائعة | AB للسفر المؤسسي ولوجستيات الفعاليات"
+      : "Enterprise Mobility FAQs | AB Corporate Travel & Event Logistics",
     description: isAr
-      ? "قاعدة معرفية شاملة لخدمات التنقل المؤسسي من AB.Limo. تعرف على إجابات أسعار السائقين ونقل المطار والنقل المؤسسي ولوجستيات الفعاليات وقدرات الأسطول في الخليج."
-      : "Comprehensive knowledge base for AB.Limo's B2B mobility services. Find answers regarding chauffeur pricing, airport transfers, corporate transportation, event logistics, and GCC fleet capabilities.",
+      ? "قاعدة معرفية شاملة لخدمات التنقل المؤسسي من AB. تعرف على إجابات أسعار السائقين ونقل المطار والنقل المؤسسي ولوجستيات الفعاليات وقدرات الأسطول في الخليج."
+      : "Comprehensive knowledge base for AB's B2B mobility services. Find answers regarding chauffeur pricing, airport transfers, corporate transportation, event logistics, and GCC fleet capabilities.",
     path: "/faqs",
     lang,
     keywords:
-      "AB.Limo FAQ, chauffeur cost Riyadh, airport transfer Saudi Arabia, corporate transportation GCC, event logistics, VIP fleet vehicles, meet and greet airport",
+      "AB FAQ, chauffeur cost Riyadh, airport transfer Saudi Arabia, corporate transportation GCC, event logistics, VIP fleet vehicles, meet and greet airport",
   });
 }
 

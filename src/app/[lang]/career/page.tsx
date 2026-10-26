@@ -14,13 +14,13 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   const isAr = locale === "ar";
   return generateSeoMetadata({
-    title: isAr ? dict.career.meta.title : "Careers at AB.Limo - Join Our Global Team",
+    title: isAr ? dict.career.meta.title : "Careers at AB - Join Our Global Team",
     description: isAr
       ? dict.career.meta.description
-      : "Explore exciting career opportunities at AB.Limo. Join a growing international team and help shape the future of luxury ground transportation.",
+      : "Explore exciting career opportunities at AB. Join a growing international team and help shape the future of luxury ground transportation.",
     path: "/career",
     lang,
-    keywords: "AB.Limo careers, chauffeur jobs, luxury transport jobs, AB.Limo hiring, driver careers, corporate mobility careers",
+    keywords: "AB careers, chauffeur jobs, luxury transport jobs, AB hiring, driver careers, corporate mobility careers",
   });
 }
 
@@ -99,7 +99,7 @@ export default async function CareerPage({
         <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
           <Image
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop"
-            alt="AB.Limo office and team"
+            alt="AB office and team"
             fill
             className="object-cover"
             priority
@@ -139,7 +139,7 @@ export default async function CareerPage({
               <div className="relative">
                 <Image
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
-                  alt="AB.Limo team collaboration"
+                  alt="AB team collaboration"
                   width={800}
                   height={600}
                   className="rounded-lg shadow-2xl"

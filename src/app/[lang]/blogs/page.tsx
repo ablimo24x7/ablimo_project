@@ -19,7 +19,7 @@ export async function generateMetadata({
     description: dict.blog.allArticlesDescription,
     path: "/blogs",
     lang,
-    keywords: "AB.Limo blog, luxury transportation articles, chauffeur service news, corporate travel tips, GCC mobility insights, airport transfer guide",
+    keywords: "AB blog, luxury transportation articles, chauffeur service news, corporate travel tips, GCC mobility insights, airport transfer guide",
   });
 }
 
