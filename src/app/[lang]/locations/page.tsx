@@ -1,4 +1,4 @@
-openimport type { Metadata } from "next";
+import type { Metadata } from "next";
 import {
   getDictionary,
   hasLocale,
