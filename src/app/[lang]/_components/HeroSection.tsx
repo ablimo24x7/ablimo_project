@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Dictionary } from "@/app/[lang]/dictionaries";
+import { Dictionary, localeBase } from "@/app/[lang]/dictionaries";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -52,7 +52,7 @@ const CITIES: CitySlide[] = [
 const SLIDE_DURATION = 6500; // 6.5 seconds per city
 const TICK_MS = 50; // progress update interval
 
-export default function HeroSection({ dict }: { dict: Dictionary }) {
+export default function HeroSection({ dict, lang }: { dict: Dictionary; lang: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -171,14 +171,14 @@ export default function HeroSection({ dict }: { dict: Dictionary }) {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/services"
-                className="bg-abBlue hover:bg-[#1a93c4] text-white px-8 py-3.5 rounded text-sm font-semibold transition-colors shadow-lg shadow-abBlue/20"
+                href={`${localeBase(lang)}/services`}
+                className="group relative overflow-hidden px-8 py-3.5 text-white font-semibold text-sm tracking-wide uppercase transition-all duration-300 border border-white/30 hover:border-white rounded-sm"
               >
                 {dict.home.heroSection.ctaExplore}
               </Link>
               <Link
-                href="/contact"
-                className="bg-transparent border border-gray-700 text-white hover:border-abBlue hover:text-abBlue px-8 py-3.5 rounded text-sm font-semibold transition-colors flex items-center"
+                href={`${localeBase(lang)}/contact`}
+                className="group relative overflow-hidden px-8 py-3.5 bg-white text-[#1a1a1a] font-semibold text-sm tracking-wide uppercase transition-all duration-300 hover:bg-gray-100 rounded-sm"
               >
                 <i className="fa-solid fa-envelope mr-2"></i> {dict.home.heroSection.ctaRequestAProposal}
               </Link>

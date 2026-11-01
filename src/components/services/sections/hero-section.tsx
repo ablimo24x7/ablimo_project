@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getIcon } from "./section-icons";
 import type { PageSection } from "./section-types";
 import type { SectionInstance, SectionRenderContext } from "@/components/section-library/types";
-import HeroInquiryForm from "@/app/[lang]/locations/_components/HeroInquiryForm";
+// import HeroInquiryForm from "@/app/[lang]/locations/_components/HeroInquiryForm";
 
 interface HeroSectionProps {
   section: PageSection | SectionInstance;
@@ -36,11 +36,27 @@ export default function HeroSection({ section, serviceName, context }: HeroSecti
       (heroSlug ? contentImages[heroSlug] : "") ||
       (section.appearance.background as string) ||
       "";
-    const title = c.title || "";
+    const rawTitle = c.title || locationName || "";
+    const isLegacyTokenTitle =
+      rawTitle.includes("{country}") || rawTitle.includes("{city}");
+    const title = isLegacyTokenTitle
+      ? rawTitle
+          .replace(/^Chauffeur Service In\s+/i, "")
+          .replace(/^خدمات?\s+السائق\s+الخاص\s+في\s+/i, "")
+      : rawTitle;
     const description = c.description || "";
+    const descriptionParagraphs = description
+      .split(/\n\n+/)
+      .map((p) => p.trim())
+      .filter(Boolean);
+    const heroActions = (section.items || []) as Array<{
+      label: string;
+      href: string;
+      style?: string;
+    }>;
     return (
       <section className="relative w-full pt-20">
-        <div className="relative w-full h-[260px] sm:h-[340px] md:h-[420px] xl:h-[560px]">
+        <div className="relative w-full min-h-[360px] sm:min-h-[420px] md:min-h-[480px] xl:min-h-[600px] flex items-center py-12 xl:py-16">
           {heroImage && (
             <Image
               src={heroImage}
@@ -50,49 +66,77 @@ export default function HeroSection({ section, serviceName, context }: HeroSecti
               priority
             />
           )}
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
-          {/* Hero Heading */}
-          <div className="absolute inset-0 flex items-end pb-6 xl:items-center xl:pb-0">
-            <div className="max-w-7xl mx-auto w-full px-8">
+          {/* Hero Content + Desktop Inquiry Form */}
+          <div className="relative z-10 max-w-7xl mx-auto w-full px-8 grid grid-cols-1 xl:grid-cols-12 gap-8 items-center">
+            <div className="xl:col-span-7">
               {c.eyebrow && (
                 <p className="text-sm font-bold tracking-widest text-abServiceBlue uppercase mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
                   {c.eyebrow}
                 </p>
               )}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] max-w-md">
+              <h1
+                className={`${
+                  title.length > 22
+                    ? "text-3xl sm:text-4xl md:text-5xl font-serif leading-tight"
+                    : "text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-serif"
+                } text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]`}
+              >
                 {title}
                 {c.titleHighlight ? (
                   <span className="text-abServiceBlue">&nbsp;{c.titleHighlight}</span>
                 ) : null}
               </h1>
-              {description && (
-                <p className="hidden sm:block text-gray-200 text-sm md:text-base mt-3 max-w-lg drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-                  {description}
-                </p>
+              {descriptionParagraphs.length > 0 && (
+                <div className="mt-4 space-y-3 max-w-2xl">
+                  {descriptionParagraphs.map((para, idx) => (
+                    <p
+                      key={idx}
+                      className="text-gray-200 text-sm md:text-base leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </div>
+              )}
+              {heroActions.length > 0 && (
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {heroActions.map((act, idx) => (
+                    <Link
+                      key={idx}
+                      href={act.href || "/book"}
+                      className={
+                        act.style === "secondary"
+                          ? "inline-flex items-center px-6 py-3 rounded text-sm font-semibold bg-black/50 border border-gray-400 text-white hover:border-abServiceBlue hover:bg-black/80 transition-all backdrop-blur-sm"
+                          : "inline-flex items-center px-6 py-3 rounded text-sm font-semibold bg-abServiceBlue hover:bg-sky-700 text-white transition-all shadow-lg shadow-abServiceBlue/20"
+                      }
+                    >
+                      {act.label}
+                    </Link>
+                  ))}
+                </div>
               )}
             </div>
-          </div>
 
-          {/* Desktop Inquiry Form */}
-          <div className="absolute inset-0 overflow-visible hidden xl:block">
-            <div className="max-w-7xl mx-auto h-full px-8 relative flex items-center justify-end">
+            <div className="hidden xl:flex xl:col-span-5 justify-end">
               <div className="w-full max-w-md z-10">
-                <HeroInquiryForm dict={context.dict} locationName={locationName} />
+                {/* <HeroInquiryForm dict={context.dict} locationName={locationName} /> */}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Tablet & Mobile Inquiry Form */}
+        {/* Tablet & Mobile Inquiry Form
         <div className="block xl:hidden max-w-7xl mx-auto px-8 pt-6">
           <HeroInquiryForm
             dict={context.dict}
             locationName={locationName}
             className="w-full max-w-none"
           />
-        </div>
+        </div> */}
       </section>
     );
   }

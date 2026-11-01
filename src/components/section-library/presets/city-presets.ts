@@ -8,6 +8,7 @@ import {
   normalizeCityImageMap,
   withOrder,
 } from "./common";
+import { buildKsaCitySections, CLIENT_CITY_DATA } from "./client-city-data";
 
 interface CitySectionContent {
   title?: string;
@@ -28,11 +29,18 @@ const CITY_HERO_IMAGES_RAW: Record<string, string> = {
   sharjah: "https://images.unsplash.com/photo-1566555108172-f8a02274a3d3?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ajman: "https://images.unsplash.com/photo-1706413639793-1ad524e698ae?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "ras-al-khaimah": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  riyadh: "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  jeddah: "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  mecca: "https://plus.unsplash.com/premium_photo-1697730272061-20ac2c9196c3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  medina: "https://images.unsplash.com/photo-1588513646744-e94675143d6f?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  dammam: "https://images.unsplash.com/photo-1578895101408-1a36b834405b?q=80&w=1095&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  riyadh: "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image1.jpg",
+  jeddah: "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+  mecca: "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+  medina: "/locations/www.ab.limo-locations-saudi-arabia-medina-images/image1.jpg",
+  dammam: "/locations/www.ab.limo-locations-saudi-arabia-dammam-images/image1.jpg",
+  tabuk: "/locations/www.ab.limo-locations-saudi-arabia-tabuk-images/image1.jpg",
+  "al-ula": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+  "al-khobar": "/locations/www.ab.limo-locations-saudi-arabia-al-khobar-images/image1.jpg",
+  "al-qasim": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+  abha: "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+  jizan: "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+  neom: "/locations/www.ab.limo-locations-saudi-arabia-neom-images/image1.jpg",
   doha: "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "al-khor": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1170&auto=format&fit=crop",
   lusail: "https://images.unsplash.com/photo-1728488443267-8340c9a74dcf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -64,6 +72,151 @@ const CITY_SECTION_IMAGES = {
   airportTransfer: "/airportTransfer.png",
 } as const;
 
+export function buildDubaiCitySections(dict?: Dictionary): SectionInstance[] {
+  const isArabic = dict?.metadata?.siteTitle?.includes("إيه بي") ?? false;
+  return withOrder([
+    makeSection("dubaiHero", {
+      content: {
+        badge: isArabic ? "خدمة السائق الخاص في دبي" : "CHAUFFEUR SERVICE IN DUBAI",
+        title: isArabic ? "دبي" : "Dubai",
+        description: isArabic
+          ? "من الوصول في مطار دبي إلى غرف اجتماعات مركز دبي المالي العالمي والفعاليات المسائية في نخلة جميرا، تنقل إيه بي ليمو التنفيذيين والوفود والضيوف في جميع أنحاء دبي بأسطول أسود فخم يقوده سائقون محترفون ومعتمدون."
+          : "From DXB arrivals to DIFC boardrooms and evening events on the Palm, AB.Limo moves executives, delegations and guests across Dubai in an immaculate black fleet, driven by vetted professional chauffeurs.",
+        bookNowLabel: isArabic ? "احجز الآن" : "BOOK NOW",
+        viewFleetLabel: isArabic ? "استعرض الأسطول" : "VIEW THE FLEET",
+      },
+      appearance: { background: "/hero/B4.jpg.jpeg" },
+    }),
+    makeSection("dubaiFleet", {
+      content: {
+        eyebrow: isArabic ? "أسطول دبي" : "THE DUBAI FLEET",
+        heading: isArabic ? "اختر فئتك" : "Choose your class",
+        description: isArabic
+          ? "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+          : "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in.",
+      },
+    }),
+    makeSection("dubaiJourneys", {
+      content: {
+        eyebrow: isArabic ? "رحلات شائعة" : "POPULAR JOURNEYS",
+        heading: isArabic ? "في أنحاء دبي وخارجها" : "Across Dubai and beyond",
+      },
+    }),
+    makeSection("dubaiServices", {
+      content: {
+        eyebrow: isArabic ? "الخدمات في دبي" : "SERVICES IN DUBAI",
+        heading: isArabic ? "شريك واحد لجميع تنقلاتك" : "One partner for every movement",
+      },
+    }),
+    makeSection("dubaiCta", {
+      content: {
+        heading: isArabic ? "سائقك الخاص جاهز في دبي." : "Your chauffeur is ready in Dubai.",
+        description: isArabic
+          ? "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo"
+          : "Available around the clock. Reply within minutes at hello@ab.limo",
+        buttonLabel: isArabic ? "احجز الآن" : "BOOK NOW",
+      },
+    }),
+  ]);
+}
+
+export function buildRiyadhCitySections(dict?: Dictionary): SectionInstance[] {
+  const isArabic = dict?.metadata?.siteTitle?.includes("إيه بي") ?? false;
+  return withOrder([
+    makeSection("dubaiHero", {
+      content: {
+        badge: isArabic ? "خدمة السائق الخاص في الرياض" : "CHAUFFEUR SERVICE IN RIYADH",
+        title: isArabic ? "الرياض" : "Riyadh",
+        description: isArabic
+          ? "من الوصول في مطار الملك خالد الدولي إلى غرف اجتماعات مركز الملك عبد الله المالي وزيارات الوزارات وفعاليات موسم الرياض، تنقل إيه بي ليمو التنفيذيين والوفود والضيوف في جميع أنحاء العاصمة بأسطول أسود فخم يقوده سائقون محترفون ومعتمدون."
+          : "From King Khalid International arrivals to KAFD boardrooms, ministry visits and Riyadh Season events, AB.Limo moves executives, delegations and guests across the capital in an immaculate black fleet, driven by vetted professional chauffeurs.",
+        bookNowLabel: isArabic ? "احجز الآن" : "BOOK NOW",
+        viewFleetLabel: isArabic ? "استعرض الأسطول" : "VIEW THE FLEET",
+        pickupDefault: "King Khalid International (RUH)",
+        dropoffDefault: "KAFD, Riyadh",
+        skyline: "riyadh",
+      },
+      appearance: { background: "/hero/city-riyadh.jpg" },
+    }),
+    makeSection("dubaiFleet", {
+      content: {
+        eyebrow: isArabic ? "أسطول الرياض" : "THE RIYADH FLEET",
+        heading: isArabic ? "اختر فئتك" : "Choose your class",
+        description: isArabic
+          ? "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+          : "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in.",
+      },
+    }),
+    makeSection("dubaiJourneys", {
+      content: {
+        eyebrow: isArabic ? "رحلات شائعة" : "POPULAR JOURNEYS",
+        heading: isArabic ? "في أنحاء الرياض وخارجها" : "Across Riyadh and beyond",
+      },
+      items: [
+        {
+          id: "ruh-kafd",
+          tag: "AIRPORT TRANSFER",
+          tagAr: "نقل من المطار",
+          title: "RUH to KAFD",
+          titleAr: "من مطار الملك خالد إلى كافد",
+          price: "From [SAR PRICE]",
+          priceAr: "ابتداءً من [SAR PRICE]",
+          pickup: "King Khalid International Airport (RUH)",
+          dropoff: "KAFD, Riyadh",
+        },
+        {
+          id: "ruh-dq",
+          tag: "AIRPORT TRANSFER",
+          tagAr: "نقل من المطار",
+          title: "RUH to Diplomatic Quarter",
+          titleAr: "من مطار الملك خالد إلى الحي الدبلوماسي",
+          price: "From [SAR PRICE]",
+          priceAr: "ابتداءً من [SAR PRICE]",
+          pickup: "King Khalid International Airport (RUH)",
+          dropoff: "Diplomatic Quarter, Riyadh",
+        },
+        {
+          id: "riyadh-diriyah",
+          tag: "CITY",
+          tagAr: "داخل المدينة",
+          title: "Riyadh to Diriyah",
+          titleAr: "من الرياض إلى الدرعية",
+          price: "From [SAR PRICE]",
+          priceAr: "ابتداءً من [SAR PRICE]",
+          pickup: "Riyadh",
+          dropoff: "Diriyah Gate",
+        },
+        {
+          id: "riyadh-front",
+          tag: "CITY",
+          tagAr: "داخل المدينة",
+          title: "Riyadh to Riyadh Front",
+          titleAr: "من الرياض إلى واجهة الرياض",
+          price: "From [SAR PRICE]",
+          priceAr: "ابتداءً من [SAR PRICE]",
+          pickup: "Riyadh",
+          dropoff: "Riyadh Front",
+        },
+      ],
+    }),
+    makeSection("dubaiServices", {
+      content: {
+        eyebrow: isArabic ? "الخدمات في الرياض" : "SERVICES IN RIYADH",
+        heading: isArabic ? "شريك واحد لجميع تنقلاتك" : "One partner for every movement",
+      },
+    }),
+    makeSection("dubaiCta", {
+      content: {
+        heading: isArabic ? "سائقك الخاص جاهز في الرياض." : "Your chauffeur is ready in Riyadh.",
+        description: isArabic
+          ? "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo"
+          : "Available around the clock. Reply within minutes at hello@ab.limo",
+        buttonLabel: isArabic ? "احجز الآن" : "BOOK NOW",
+      },
+    }),
+  ]);
+}
+
 /**
  * City page template — mirrors CityDetailClient section for section.
  * Dictionary content is looked up via the normalized aliases
@@ -76,6 +229,22 @@ export function buildCityTemplate(
   citySlug: string,
   dict: Dictionary
 ): SectionInstance[] {
+  if (citySlug === "dubai") {
+    return buildDubaiCitySections(dict);
+  }
+  if (citySlug === "riyadh") {
+    return buildRiyadhCitySections(dict);
+  }
+
+  const clientCity = CLIENT_CITY_DATA[citySlug];
+  if (clientCity) {
+    return buildKsaCitySections(
+      clientCity,
+      dict.countries.breadcrumb.home,
+      dict.countries.breadcrumb.countries
+    );
+  }
+
   const detail = dict.countries.detail;
   const contentFile = (
     dict as unknown as { cityContent?: Record<string, Record<string, CityContentFile>> }
@@ -106,7 +275,7 @@ export function buildCityTemplate(
       variant: "with-inquiry-form",
       content: {
         eyebrow: "",
-        title: `${taxiAlt} {city}`,
+        title: "{city}",
         titleHighlight: "",
         description: "",
       },

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { localeBase } from "@/app/[lang]/dictionaries";
 import {
@@ -15,15 +16,33 @@ import {
 export function PartnerStatement() {
   return (
     <section className="max-w-7xl mx-auto px-8 py-20 border-b border-gray-800">
-      <div className="flex flex-wrap gap-8 lg:gap-16 items-start">
-        <p className="flex-1 basis-[240px] text-xs font-bold tracking-[0.22em] uppercase text-abBlue">
-          One regional partner
-        </p>
-        <p className="flex-[3] basis-[560px] text-2xl md:text-3xl font-light leading-relaxed text-gray-200">
-          Travel between the Gulf’s capital cities without switching transport providers.
-          One account team, one dispatch platform, one billing contact across Saudi Arabia,
-          the UAE and Qatar.
-        </p>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="lg:col-span-7 space-y-5">
+          <p className="text-xs font-bold tracking-[0.22em] uppercase text-abBlue">
+            One regional partner
+          </p>
+          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight">
+            One regional partner
+          </h2>
+          <p className="text-lg md:text-xl font-light leading-relaxed text-gray-200">
+            Travel between Gulf capital cities without switching transport providers.
+            AB provides corporate travel managers and executive assistants with one
+            account team, one dispatch platform and unified billing across Saudi Arabia,
+            the UAE and Qatar. This integrated framework maintains service consistency
+            for high profile visitors across every commercial centre.
+          </p>
+        </div>
+        <div className="lg:col-span-5">
+          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-gray-800 bg-[#1c1d21] shadow-2xl">
+            <Image
+              src="/locations/www.ab.limo-locations-images/image1.jpg"
+              alt="Chauffeur service locations GCC network map across Saudi Arabia UAE and Qatar"
+              fill
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -38,8 +57,10 @@ export function OfficesSection() {
           Managed regional offices
         </h2>
         <p className="mt-5 text-lg text-gray-300 leading-relaxed">
-          Our offices are staffed by local operations managers, dispatchers and protocol
-          specialists who know their city’s airports, protocol rules and major event venues.
+          AB offices are staffed by full time operations managers, dispatchers and protocol
+          specialists who understand municipal routes, terminal access regulations and major
+          event venues. Dedicated teams monitor local traffic conditions and flight arrivals
+          continuously to maintain punctual executive car service.
         </p>
       </div>
 
@@ -179,6 +200,9 @@ export function CoverageSection({
             <h2 className="mt-3 text-3xl md:text-5xl font-bold tracking-tight text-white">
               Find your city
             </h2>
+            <p className="mt-3 text-base text-gray-300">
+              Search our comprehensive network to locate direct operations and partner coverage across your destination cities.
+            </p>
           </div>
 
           <div className="flex-1 basis-[380px] max-w-md">
@@ -289,13 +313,28 @@ export function CoverageSection({
                   </div>
                 )}
 
-                <Link
-                  href={`${base}${selectedCountry.ct.dirHref}`}
-                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-abBlue hover:text-abServiceBlue transition-colors"
-                >
-                  <span>{selectedCountry.ct.dirLabel}</span>
-                  <span aria-hidden="true">&rarr;</span>
-                </Link>
+                {selectedCountry.ct.partnerLinks ? (
+                  <div className="mt-8 flex flex-wrap gap-4">
+                    {selectedCountry.ct.partnerLinks.map((pl) => (
+                      <Link
+                        key={pl.href}
+                        href={`${base}${pl.href}`}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-abBlue hover:text-abServiceBlue transition-colors"
+                      >
+                        <span>{pl.label}</span>
+                        <span aria-hidden="true">&rarr;</span>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <Link
+                    href={`${base}${selectedCountry.ct.dirHref}`}
+                    className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-abBlue hover:text-abServiceBlue transition-colors"
+                  >
+                    <span>{selectedCountry.ct.dirLabel}</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                )}
               </div>
 
               {/* Right Column: City cards grid */}
@@ -339,7 +378,7 @@ export function CoverageSection({
           </div>
         ) : (
           <p className="mt-10 text-lg text-gray-400">
-            No locations match your search query.
+            No results found for that search query. Please review our full territory directory below or contact dispatch for regional coordination.
           </p>
         )}
       </div>
@@ -351,13 +390,15 @@ export function AirportsSection() {
   return (
     <section className="max-w-7xl mx-auto px-8 py-20 border-b border-gray-800">
       <div className="max-w-3xl">
-        <p className="text-xs font-bold tracking-[0.22em] uppercase text-abBlue">Aviation</p>
+        <p className="text-xs font-bold tracking-[0.22em] uppercase text-abBlue">Aviation gateways</p>
         <h2 className="mt-3 text-3xl md:text-5xl font-bold tracking-tight text-white">
-          Airports served
+          Airports we serve
         </h2>
         <p className="mt-5 text-lg text-gray-300 leading-relaxed">
-          Permanent dispatch teams and meet and greet desks at the Gulf’s key commercial and
-          executive terminals.
+          AB maintains dedicated dispatch units and meet and greet services across the busiest
+          international aviation terminals in the Gulf. Chauffeurs monitor live flight movements
+          to align arrival kerbside positioning with passenger deplaning times, supporting
+          corporate travellers and international delegations.
         </p>
       </div>
 
@@ -418,9 +459,10 @@ export function RoutesSection({ lang }: { lang: string }) {
           </h2>
         </div>
         <p className="flex-1 basis-[420px] text-base text-gray-300 leading-relaxed">
-          Many itineraries are quicker by road than by a short regional flight. AB runs private
-          point to point transfers on the main Gulf corridors with the same vehicles,
-          chauffeurs and live tracking as our city work.
+          Regional road transfers offer executive travellers substantial time savings over short
+          regional flights by eliminating airport security and waiting queues. AB operates direct
+          highway transfers on high volume business routes across Saudi Arabia, the United Arab
+          Emirates and Qatar with luxury vehicles and professional drivers.
         </p>
       </div>
 
@@ -454,10 +496,16 @@ export function RoutesSection({ lang }: { lang: string }) {
             </span>
             <span className="text-xl font-bold text-white">{rt.to}</span>
 
+            {rt.description && (
+              <p className="mt-1 text-xs text-gray-300 leading-relaxed flex-1">
+                {rt.description}
+              </p>
+            )}
+
             <div className="mt-2 pt-3 border-t border-gray-800 text-xs text-gray-400 flex items-center justify-between">
               <span>Indicative travel time:</span>
               <mark className="bg-transparent px-2 py-0.5 border border-dashed border-abBlue text-abBlue text-xs rounded">
-                [Confirm]
+                {rt.duration || "[Confirm]"}
               </mark>
             </div>
           </div>
@@ -465,14 +513,14 @@ export function RoutesSection({ lang }: { lang: string }) {
       </div>
 
       <p className="mt-6 text-sm text-gray-400">
-        Luggage allowances, multi city trips and the full route list are on our{" "}
+        Review vehicle luggage capacity, multi city itineraries and private driver scheduling on our dedicated{" "}
         <Link
           href={`${base}/services/intercity-transfers`}
           className="text-abBlue hover:underline font-semibold"
         >
-          Intercity Transfers
+          intercity transfers
         </Link>{" "}
-        page.
+        service page.
       </p>
     </section>
   );
@@ -537,17 +585,22 @@ export function FaqSection({
   );
 }
 
-export function CoordinationSection() {
+export function CoordinationSection({ lang }: { lang?: string }) {
+  const base = localeBase(lang || "en-US");
   return (
     <section className="max-w-7xl mx-auto px-8 py-20 border-b border-gray-800">
       <div className="flex flex-wrap gap-8 lg:gap-16 items-start">
         <h2 className="flex-1 basis-[320px] text-3xl md:text-4xl font-bold text-white leading-tight">
-          Gulf ground transport coordination
+          Chauffeur Service Locations GCC for Ground Transport Coordination
         </h2>
         <p className="flex-[1.4] basis-[440px] text-lg text-gray-300 leading-relaxed">
-          Putting all your Gulf bookings with one managed provider simplifies scheduling,
-          protocol and invoice reconciliation. Open a corporate account for recurring transfers
-          across several cities, or book single routes whenever you need them.
+          Consolidating your regional travel with one managed ground transportation provider
+          simplifies delegation scheduling, protocol oversight and accounting reconciliation.
+          Open an enterprise agreement for recurring transfers across multiple cities by setting up{" "}
+          <Link href={`${base}/contact`} className="text-abBlue hover:underline font-semibold">
+            corporate accounts
+          </Link>{" "}
+          with our regional accounts team in Riyadh.
         </p>
       </div>
     </section>
@@ -562,11 +615,21 @@ export function ClosingCtaSection({ lang }: { lang: string }) {
       <div className="max-w-7xl mx-auto px-8 py-20 flex flex-wrap items-end justify-between gap-8">
         <div className="flex-1 basis-[520px] min-w-0">
           <h2 className="text-3xl md:text-5xl font-bold text-white">
-            Plan your transport across the Gulf
+            Plan Travel Across Chauffeur Service Locations GCC
           </h2>
-          <p className="mt-4 text-base text-gray-400 max-w-2xl leading-relaxed">
-            Set up a corporate route agreement or book scheduled transfers across Saudi Arabia,
-            the UAE and Qatar, with 24/7 dispatch from Riyadh.
+          <p className="mt-4 text-base text-gray-300 max-w-2xl leading-relaxed">
+            AB coordinates professional chauffeur service locations GCC for corporate itineraries,
+            diplomatic visits and aviation transfers with central dispatch in Riyadh.
+          </p>
+          <h3 className="mt-6 text-xl font-bold text-white">
+            Reserve Regional Transport
+          </h3>
+          <p className="mt-2 text-sm text-gray-400 max-w-2xl leading-relaxed">
+            Establish corporate account agreements or arrange scheduled transfers across Saudi Arabia,
+            the United Arab Emirates and Qatar with around the clock dispatch coordination.
+          </p>
+          <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-abBlue">
+            Riyadh · Dubai · Abu Dhabi · Doha
           </p>
         </div>
         <div className="flex flex-wrap gap-4">
@@ -577,7 +640,7 @@ export function ClosingCtaSection({ lang }: { lang: string }) {
             Request a proposal
           </Link>
           <Link
-            href={`${base}/contact`}
+            href={`${base}/services/intercity-transfers`}
             className="inline-flex items-center min-h-[52px] px-8 rounded-full border border-white/50 hover:bg-white/10 text-white text-sm font-semibold transition-colors"
           >
             Book a transfer

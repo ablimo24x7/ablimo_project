@@ -269,7 +269,7 @@
       "executiveMobility": "Executive & Corporate Mobility",
       "airportTransfers": "Airport Transfers",
       "vipDiplomatic": "VIP, Diplomatic & Government",
-      "corporateTransportation": "Corporate Fleet & Workforce Mobility",
+      "corporateTransportation": "Corporate & Staff Transportation",
       "eventTransportation": "Event Transportation",
       "groupCharter": "Group & Coach Charter",
       "tourism": "Tourism & Leisure",
@@ -582,10 +582,26 @@
       "title": "A Decade Of Recognised Excellence.",
       "desc": "A proven record in event transportation across Saudi Arabia and the region, recognised by the industry.",
       "counters": [
-        { "value": "17", "suffix": "+", "label": "Years in Saudi event transportation" },
-        { "value": "250", "suffix": "+", "label": "International events delivered" },
-        { "value": "725", "suffix": "", "label": "Vehicles operated at a single event peak" },
-        { "value": "4", "suffix": "", "label": "Industry recognitions in 2025" }
+        {
+          "value": "17",
+          "suffix": "+",
+          "label": "Years in Saudi event transportation"
+        },
+        {
+          "value": "250",
+          "suffix": "+",
+          "label": "International events delivered"
+        },
+        {
+          "value": "725",
+          "suffix": "",
+          "label": "Vehicles operated at a single event peak"
+        },
+        {
+          "value": "4",
+          "suffix": "",
+          "label": "Industry recognitions in 2025"
+        }
       ],
       "recordTitle": "Trusted for every kind of event",
       "recordItems": [
@@ -675,10 +691,22 @@
           "icon": "fa-solid fa-clipboard-list",
           "text": "You share dates, passenger numbers, locations and service levels and other requirements.",
           "chips": [
-            { "icon": "fa-regular fa-calendar", "label": "Dates" },
-            { "icon": "fa-solid fa-users", "label": "Passenger numbers" },
-            { "icon": "fa-solid fa-location-dot", "label": "Locations" },
-            { "icon": "fa-solid fa-star", "label": "Service levels" }
+            {
+              "icon": "fa-regular fa-calendar",
+              "label": "Dates"
+            },
+            {
+              "icon": "fa-solid fa-users",
+              "label": "Passenger numbers"
+            },
+            {
+              "icon": "fa-solid fa-location-dot",
+              "label": "Locations"
+            },
+            {
+              "icon": "fa-solid fa-star",
+              "label": "Service levels"
+            }
           ]
         },
         {
@@ -687,10 +715,22 @@
           "icon": "fa-solid fa-route",
           "text": "Our planners set the vehicle mix, routes, timings and standby fleet, and agree with you in writing and create SLAs.",
           "chips": [
-            { "icon": "fa-solid fa-car-side", "label": "Vehicle mix" },
-            { "icon": "fa-solid fa-map", "label": "Routes & timings" },
-            { "icon": "fa-solid fa-layer-group", "label": "Standby fleet" },
-            { "icon": "fa-solid fa-file-signature", "label": "Written SLAs" }
+            {
+              "icon": "fa-solid fa-car-side",
+              "label": "Vehicle mix"
+            },
+            {
+              "icon": "fa-solid fa-map",
+              "label": "Routes & timings"
+            },
+            {
+              "icon": "fa-solid fa-layer-group",
+              "label": "Standby fleet"
+            },
+            {
+              "icon": "fa-solid fa-file-signature",
+              "label": "Written SLAs"
+            }
           ]
         },
         {
@@ -699,9 +739,18 @@
           "icon": "fa-solid fa-satellite-dish",
           "text": "Chauffeurs, drivers and on-site coordinators run the plan. The event control room tracks every vehicle and handles changes as they happen. Our Teams in each Country Operational control room monitors and assist the deliverables.",
           "chips": [
-            { "icon": "fa-solid fa-user-tie", "label": "Chauffeurs & coordinators" },
-            { "icon": "fa-solid fa-display", "label": "Event control room" },
-            { "icon": "fa-solid fa-earth-asia", "label": "Country control rooms" }
+            {
+              "icon": "fa-solid fa-user-tie",
+              "label": "Chauffeurs & coordinators"
+            },
+            {
+              "icon": "fa-solid fa-display",
+              "label": "Event control room"
+            },
+            {
+              "icon": "fa-solid fa-earth-asia",
+              "label": "Country control rooms"
+            }
           ],
           "live": true
         },
@@ -711,9 +760,18 @@
           "icon": "fa-solid fa-chart-pie",
           "text": "You receive trip records, on-time performance and a single consolidated invoice.",
           "chips": [
-            { "icon": "fa-solid fa-list-check", "label": "Trip records" },
-            { "icon": "fa-solid fa-stopwatch", "label": "On-time performance" },
-            { "icon": "fa-solid fa-file-invoice", "label": "One consolidated invoice" }
+            {
+              "icon": "fa-solid fa-list-check",
+              "label": "Trip records"
+            },
+            {
+              "icon": "fa-solid fa-stopwatch",
+              "label": "On-time performance"
+            },
+            {
+              "icon": "fa-solid fa-file-invoice",
+              "label": "One consolidated invoice"
+            }
           ]
         }
       ]
@@ -2214,7 +2272,7 @@
       "button": "Book Your Ride"
     },
     "detail": {
-      "heroTitle": "Chauffeur Service In {country}",
+      "heroTitle": "{country}",
       "intro": "Experience refined elegance with AB’s premium chauffeur service across {country}. From major business hubs to every destination across the region, our network of professional drivers provides discreet, first-class transportation tailored to your journey. Whether you need seamless airport transfers, city-to-city travel, or flexible hourly bookings, we deliver an uncompromised, executive travel experience.",
       "subIntro": "Don't settle for just renting a car with a driver — immerse yourself in an experience by booking with AB.",
       "rangeHeading": "Check out our wide range of services available across {country} below:",
@@ -2891,7 +2949,7 @@
     }
   },
   "cityTaxiTitle": {
-    "taxiAlternative": "Chauffeur Service In"
+    "taxiAlternative": ""
   },
   "blog": {
     "home": "Home",
@@ -2900,7 +2958,7 @@
     "minRead": "min read",
     "keyTakeaways": "Key Takeaways",
     "finalThoughts": "Final Thoughts",
-    "relatedArticles": "Related Articles",
+    "relatedArticles": "Related Services",
     "viewAllArticles": "View all articles",
     "noArticles": "No articles found.",
     "readMore": "Read more",
@@ -3409,14 +3467,14 @@
     },
     "corporateTransportation": {
       "metadata": {
-        "title": "Corporate Fleet & Workforce Mobility | AB",
-        "description": "Managed corporate fleets and employee shuttle programs engineered for reliability, compliance, and efficiency."
+        "title": "Corporate & Staff Transportation in KSA, UAE & Qatar | AB",
+        "description": "Managed corporate transportation across Saudi Arabia, the UAE and Qatar: dedicated chauffeurs, staff routes, roadshows and visitor programmes. Get a proposal."
       },
-      "title": "Corporate Fleet & Workforce Mobility",
-      "subtitle": "Managed ground transport for organisations-secure employee shuttles, fleet management, and duty-of-care programmes.",
-      "ctaTitle": "Design Your Workforce Mobility Programme",
-      "ctaDesc": "From daily employee shuttles to campus fleet management, our team builds reliable, cost-effective programmes.",
-      "ctaLabel": "Request a Fleet Proposal",
+      "title": "Corporate & Staff Transportation",
+      "subtitle": "Managed corporate transportation across Saudi Arabia, the UAE and Qatar: dedicated chauffeurs, staff routes, roadshows and visitor programmes.",
+      "ctaTitle": "Corporate transportation, managed end to end.",
+      "ctaDesc": "When your executives, visitors and staff depend on getting somewhere on time every day, transportation becomes an operation in its own right.",
+      "ctaLabel": "Request a corporate proposal",
       "features": [
         {
           "title": "Employee Shuttles",
@@ -3567,80 +3625,111 @@
     },
     "eventTransportation": {
       "metadata": {
-        "title": "Event Transportation Services | AB",
-        "description": "End-to-end guest transport for conferences, exhibitions, concerts, and large-scale corporate gatherings."
+        "title": "Event & Conference Transportation in the GCC | AB",
+        "description": "Event transportation for conferences, exhibitions and festivals in Saudi Arabia and the GCC: fleet planning, shuttles, VIP pools and a live control room."
       },
       "title": "Event Transportation",
-      "subtitle": "Complete guest-movement logistics for conferences, exhibitions, concerts, and large-scale corporate gatherings.",
-      "ctaTitle": "Plan Your Event Transport",
-      "ctaDesc": "Our transport control room engineers guest movement for events of every scale, from boardroom summits to stadium crowds.",
-      "ctaLabel": "Request Event Logistics",
+      "subtitle": "Event transportation for conferences, exhibitions and festivals in Saudi Arabia and the GCC: fleet planning, shuttles, VIP pools and a live control room.",
+      "ctaTitle": "Event transportation, planned like an operation.",
+      "ctaDesc": "Guests remember the first hour and the last hour of an event. Coordinate your arrivals, venue shuttles, VIP pools and departure waves with our dedicated event control room.",
+      "ctaLabel": "Plan event transport",
       "features": [
         {
           "title": "Event Command Centre",
           "desc": "A dedicated control room coordinates every vehicle, route, and arrival in real time throughout your event."
         },
         {
-          "title": "Rapid Deployment",
-          "desc": "Automated scheduling and on-demand expansion ensure capacity is ready the moment demand rises."
+          "title": "Rapid Deployment & Multi-Tier Fleets",
+          "desc": "From board-level VIP cars to 50-passenger delegate motorcoaches deployed on schedule with standby cover."
         },
         {
-          "title": "Dedicated Coordination",
-          "desc": "A named event transport manager liaises with your organisers and venues from planning to teardown."
+          "title": "On-Site Coordination",
+          "desc": "Named transport coordinators at hotels, venues and airports liaise with organisers and security from load-in to egress."
         }
       ],
-      "cardsHeading": "Event Transport Templates",
-      "cardsDesc": "Proven frameworks scaled to the size and nature of your gathering.",
+      "cardsHeading": "What we deliver",
+      "cardsDesc": "A comprehensive operational framework ensuring flawless arrivals, frictionless venue movements, and coordinated departures.",
       "cards": [
         {
           "tag": "Conferences",
           "title": "Conferences & Summits",
-          "desc": "Coordinated delegate transfers between hotels, venues, and airports for multi-day programmes."
+          "desc": "Multi-hotel loops, VIP keynote transfers, protocol motorcades, and synchronized delegate arrivals."
         },
         {
           "tag": "Exhibitions",
           "title": "Exhibitions & Trade Shows",
-          "desc": "High-frequency shuttles moving attendees efficiently across large exhibition floors and sites."
+          "desc": "High-frequency shuttles moving attendees, buyers, and exhibitors continuously across sprawling convention halls."
         },
         {
-          "tag": "Concerts",
-          "title": "Concerts & Sports",
-          "desc": "Timed, high-volume guest management for performances, tournaments, and stadium events."
+          "tag": "Festivals",
+          "title": "Festivals & Concerts",
+          "desc": "Timed, high-volume crowd management, artist green-room transfers, and staged egress routing."
+        },
+        {
+          "tag": "Sports",
+          "title": "Sports Tournaments",
+          "desc": "Athlete and team transfers, referee delegations, VIP lounges, media contingents, and stadium access management."
+        },
+        {
+          "tag": "Galas",
+          "title": "Product Launches & Gala Dinners",
+          "desc": "Punctual, elegant arrival coordination with white-glove chauffeur standards for brand showcases."
         }
       ],
       "sections": [
         {
-          "imageAlt": "Large corporate conference event",
-          "title": "Seamless Movement, Unforgettable Event",
+          "imageAlt": "Event Transport Control Room",
+          "title": "How We Plan Your Event",
           "paragraphs": [
-            "The success of an event often hinges on how smoothly guests arrive, move, and depart. AB turns transport into a seamless part of the experience, invisible in operation but powerful in contribution.",
-            "From the first airport pickup to the final shuttle of the evening, every movement is orchestrated by a dedicated command centre."
+            "Guests remember the first hour and the last hour of an event, and both usually happen in a vehicle. AB plans and runs every movement around your event: airport arrivals, hotel shuttles, VIP cars, speaker and artist transfers, staff transport and the departure wave.",
+            "Everything is coordinated from one control room, with our team on site."
           ],
           "bullets": [
             {
-              "text": "End-to-end guest journey planning and wayfinding"
+              "text": "1. Brief call: Dates, venues, guest profile, numbers, and non-negotiables."
             },
             {
-              "text": "Vans, minibuses, executive coaches, and luxury sedans"
+              "text": "2. Draft plan and quote: Vehicle schedule, staffing, and price within agreed working days."
             },
             {
-              "text": "On-site marshalling and guest-flow management"
+              "text": "3. Site visits: Venues, hotels and airport routes walked and timed."
+            },
+            {
+              "text": "4. Rehearsal day: Drivers briefed and routes driven before guests arrive."
+            },
+            {
+              "text": "5. Live operation: Control room and on-site coordinators run the plan."
+            },
+            {
+              "text": "6. Debrief: Detailed post-event report and lessons learned."
             }
           ]
         }
       ],
       "faqs": [
         {
-          "q": "How far in advance should we book event transport?",
-          "a": "For large-scale events we recommend a minimum of several weeks of planning. Our team can also mobilise for tighter timeframes where capacity allows."
+          "q": "How far in advance should we contact you?",
+          "a": "For major conferences and large-scale gatherings over 500 delegates, we recommend initiating planning 8–12 weeks ahead to secure optimal fleet allocations and coordinate venue permits. Smaller VIP pools and board offsites can be mobilised on accelerated timelines where fleet capacity permits."
         },
         {
-          "q": "Can transport be scheduled around our event programme?",
-          "a": "Yes. We build the movement plan around your agenda, adjusting timings automatically as the programme evolves."
+          "q": "Can you work with our venue's security and accreditation process?",
+          "a": "Yes. Our on-site transport coordinators liaise directly with venue management, local authorities, and private security details to handle vehicle access passes, security manifests, secure loading bays, and VIP drop-off protocols."
         },
         {
-          "q": "Do you manage hotel-to-venue shuttles?",
-          "a": "Absolutely, including multi-hotel loops and timed services coordinated with your event schedule."
+          "q": "What happens if a flight is delayed or a session overruns?",
+          "a": "Our centralized event control room tracks incoming flights live and monitors venue agendas in real time. We automatically adjust chauffeur dispatch schedules and maintain dedicated standby vehicles to absorb unexpected delays without guest disruption."
+        },
+        {
+          "q": "Do you provide branded vehicles or signage?",
+          "a": "Yes. Upon request, we provide discrete co-branded vehicle decals, digital airport meet-and-greet signage, branded vehicle headrest covers, and uniformed dispatch staff aligned with your event brand identity."
+        },
+        {
+          "q": "Can you supply buses and VIP cars under one contract?",
+          "a": "Yes. We consolidate luxury sedans, VIP MPVs, crew vans, and 50-passenger executive motorcoaches under a single master movement plan, one dedicated on-site command structure, and a unified commercial invoice."
+        },
+        {
+          "q": "Do you provide transport reports for sponsors or authorities?",
+          "a": "Yes. Following the event, our control room provides comprehensive data reports detailing passenger throughput, peak-hour movements, vehicle utilisation, on-time performance against plan, and safety audits."
         }
       ]
     },
@@ -4036,6 +4125,110 @@
         {
           "q": "Is this service available on short notice?",
           "a": "While advance notice is preferred for comprehensive protocol planning, our dedicated team can mobilise for urgent requirements where possible."
+        }
+      ]
+    },
+    "groundTransportation": {
+      "metadata": {
+        "title": "Comprehensive Ground Transportation | AB",
+        "description": "Complete ground transportation solutions for individuals, corporate teams, and events across the GCC and worldwide. Airport transfers, personal chauffeurs, and intercity mobility."
+      },
+      "title": "Comprehensive Ground Transportation",
+      "subtitle": "Complete transportation solutions for individuals and businesses across the Gulf region and worldwide.",
+      "ctaTitle": "Ready for comprehensive ground transportation?",
+      "ctaDesc": "Experience seamless transportation solutions with AB. Book your journey today.",
+      "ctaLabel": "Book Now",
+      "features": [
+        {
+          "title": "Airport Transfers with Flight Monitoring",
+          "desc": "Real-time radar flight tracking, terminal meet & greet, luggage handling, and generous complimentary waiting time."
+        },
+        {
+          "title": "Corporate Accounts with Centralized Billing",
+          "desc": "Streamlined corporate accounts with consolidated monthly invoicing, cost-center reporting, and dedicated account support."
+        },
+        {
+          "title": "Event & Intercity Mobility Logistics",
+          "desc": "Scalable group transportation, VIP chauffeur motorcades, and direct long-distance city-to-city transfers across the GCC."
+        }
+      ],
+      "cardsHeading": "Comprehensive Ground Mobility",
+      "cardsDesc": "Explore our full suite of ground transportation services tailored for executives, visitors, and groups.",
+      "cards": [
+        {
+          "tag": "Airports",
+          "title": "Airport Ground Transfers",
+          "desc": "Guaranteed on-time arrivals and departures with real-time flight tracking and personalized chauffeur greeting."
+        },
+        {
+          "tag": "Executive",
+          "title": "Executive & Chauffeur Mobility",
+          "desc": "Punctual, discreet chauffeur mobility for corporate leadership teams, roadshows, and board meetings."
+        },
+        {
+          "tag": "Intercity",
+          "title": "City-to-City Intercity Travel",
+          "desc": "Stress-free, comfortable long-distance chauffeured travel connecting primary business hubs across the GCC."
+        }
+      ],
+      "sections": [
+        {
+          "imageAlt": "Comprehensive Ground Transportation",
+          "title": "Your Comprehensive Ground Transportation",
+          "paragraphs": [
+            "AB provides end-to-end ground transportation solutions tailored to your needs. Whether you're an individual traveler, a corporate client, or organizing a large event, our comprehensive service covers every aspect of your journey.",
+            "With an executive black fleet under 36 months old and professional chauffeurs coordinated via our 24/7 central control room, every journey meets the highest standards of safety, privacy, and punctuality."
+          ],
+          "bullets": [
+            {
+              "text": "Airport transfers with flight monitoring"
+            },
+            {
+              "text": "Corporate accounts with centralized billing"
+            },
+            {
+              "text": "Event and group transportation"
+            },
+            {
+              "text": "City-to-city long distance travel"
+            }
+          ]
+        },
+        {
+          "imageAlt": "Personal Chauffeur",
+          "title": "Your Personal Chauffeur",
+          "paragraphs": [
+            "Every journey with AB includes a dedicated professional chauffeur. Our drivers are more than just transportation providers — they are your personal concierge on the road, ensuring your comfort and safety throughout the journey."
+          ],
+          "bullets": [
+            {
+              "text": "Professionally trained and licensed drivers"
+            },
+            {
+              "text": "Multilingual communication skills"
+            },
+            {
+              "text": "Local knowledge and route expertise"
+            }
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What services are included under ground transportation?",
+          "a": "Our ground transportation covers airport transfers, hourly chauffeur hire, city-to-city journeys, corporate employee mobility, event delegate transport, and VIP motorcades."
+        },
+        {
+          "q": "How does flight tracking work for airport ground transfers?",
+          "a": "Our control room tracks incoming flights live. If your flight is delayed or arrives early, your chauffeur's pickup schedule automatically adjusts, with up to 60 minutes complimentary wait time."
+        },
+        {
+          "q": "Can businesses open a corporate account?",
+          "a": "Yes. Corporate accounts receive consolidated monthly invoicing, cost-center allocation, priority dispatch, and dedicated account manager support."
+        },
+        {
+          "q": "Which vehicles are available?",
+          "a": "Our fleet includes luxury executive sedans, premium full-size SUVs, and executive vans such as Mercedes S-Class, BMW 7 Series, Cadillac Escalade, and Mercedes V-Class."
         }
       ]
     }

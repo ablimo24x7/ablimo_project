@@ -92,52 +92,31 @@ export default async function CityToCityPage({
       </div>
 
       {/* App Download Section */}
+      {/* Direct Booking & Dispatch Banner */}
       <section className="max-w-7xl mx-auto px-8 py-16">
-        <div className="bg-[#1c1d21] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+        <div className="bg-[#1c1d21] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-gray-800">
           <div className="flex-1">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              {dict.cityToCity.downloadApp}
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+              Dedicated 24/7 Dispatch & Concierge
             </h2>
-            <p className="text-gray-400 mb-6">
-              {dict.cityToCity.downloadAppDesc}
+            <p className="text-gray-400 mb-6 max-w-2xl">
+              Bookings are made directly through our dedicated team, website forms, phone and WhatsApp. Every journey is planned with a fixed rate, vetted chauffeur, and live telemetry tracking.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                <Image
-                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                  alt="Download on the App Store"
-                  width={120}
-                  height={40}
-                  className="h-10 w-auto"
-                />
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href={`${localeBase(lang)}/contact`}
+                className="px-6 py-3 bg-abBlue hover:bg-sky-500 text-white rounded-lg font-semibold text-sm transition-colors"
+              >
+                Book with Our Team
+              </Link>
+              <a
+                href="https://wa.me/966118343777"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-semibold text-sm transition-colors flex items-center gap-2"
+              >
+                WhatsApp Concierge
               </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                <Image
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                  alt="Get it on Google Play"
-                  width={135}
-                  height={40}
-                  className="h-10 w-auto"
-                />
-              </a>
-            </div>
-          </div>
-          <div className="w-48 h-48 bg-white rounded-2xl flex items-center justify-center">
-            <div className="text-center text-[#292a30]">
-              <svg className="w-24 h-24 mx-auto mb-2" viewBox="0 0 100 100" fill="none">
-                <rect width="100" height="100" rx="8" fill="#292a30" />
-                <rect x="10" y="10" width="80" height="80" rx="4" fill="white" />
-                <rect x="20" y="20" width="10" height="10" fill="#292a30" />
-                <rect x="70" y="20" width="10" height="10" fill="#292a30" />
-                <rect x="20" y="70" width="10" height="10" fill="#292a30" />
-                <rect x="45" y="45" width="10" height="10" fill="#292a30" />
-                <rect x="35" y="35" width="5" height="5" fill="#292a30" />
-                <rect x="60" y="35" width="5" height="5" fill="#292a30" />
-                <rect x="35" y="60" width="5" height="5" fill="#292a30" />
-                <rect x="60" y="60" width="5" height="5" fill="#292a30" />
-                <rect x="70" y="70" width="10" height="10" fill="#292a30" />
-              </svg>
-              <span className="text-xs font-semibold">{dict.cityToCity.scanQR}</span>
             </div>
           </div>
         </div>

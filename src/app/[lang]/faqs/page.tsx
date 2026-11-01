@@ -3,6 +3,7 @@ import { faqData, FAQ_SCHEMA } from "./faqData";
 import { FaqsClient } from "./FaqsClient";
 import { BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 import { generateSeoMetadata } from "@/lib/seo";
+import { localeHome } from "@/app/[lang]/dictionaries";
 
 export async function generateMetadata({
   params,
@@ -25,13 +26,20 @@ export async function generateMetadata({
   });
 }
 
-export default function FaqsPage() {
+export default async function FaqsPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const isAr = lang === "ar";
+  const locale = isAr ? "ar" : "en";
   return (
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "/" },
-          { name: "FAQs", url: "/faqs" },
+          { name: "Home", url: `${localeHome(lang)}` },
+          { name: "FAQs", url: `${localeHome(lang).replace(/\/$/, "")}/faqs` },
         ]}
       />
       <script
@@ -40,7 +48,7 @@ export default function FaqsPage() {
           __html: JSON.stringify(FAQ_SCHEMA),
         }}
       />
-      <FaqsClient faqs={faqData} />
+      <FaqsClient faqs={faqData} lang={lang} />
     </>
   );
 }

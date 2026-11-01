@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { localeHome } from "@/app/[lang]/dictionaries";
+import { localeBase, localeHome, localeContact } from "@/app/[lang]/dictionaries";
 import { countryUrl, type Country } from "@/lib/locations";
 import { countryImages } from "@/lib/country-images";
 
@@ -47,7 +47,7 @@ export default function CountriesClient({ dict, lang, countries }: { dict: Dicti
             {dict.countries.hero.desc}
           </p>
           <Link
-            href={`${localeHome(lang)}`}
+            href={localeContact(lang)}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.countries.bookNow}
@@ -164,7 +164,7 @@ export default function CountriesClient({ dict, lang, countries }: { dict: Dicti
             {dict.countries.cta.desc}
           </p>
           <Link
-            href={`${localeHome(lang)}`}
+            href={localeContact(lang)}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.countries.cta.button}

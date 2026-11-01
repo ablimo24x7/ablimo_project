@@ -22,6 +22,13 @@ import RouteStatsSection from "./components/route-stats-section";
 import CityVisualsSection from "./components/city-visuals-section";
 import BreadcrumbSection from "./components/breadcrumb-section";
 
+// ── Dubai custom bespoke sections ────────────────────────────────
+import DubaiHeroSection from "@/components/locations/DubaiHeroSection";
+import DubaiFleetSection from "@/components/locations/DubaiFleetSection";
+import DubaiJourneysSection from "@/components/locations/DubaiJourneysSection";
+import DubaiServicesSection from "@/components/locations/DubaiServicesSection";
+import DubaiCtaSection from "@/components/locations/DubaiCtaSection";
+
 // Service-only components keep their legacy props shape; they never
 // read the render context, so a cast to the library prop shape is safe.
 type LegacyServiceProps = {
@@ -59,6 +66,17 @@ export const SECTION_LIBRARY_REGISTRY: Record<
   routeStats: RouteStatsSection,
   cityVisuals: CityVisualsSection,
   breadcrumb: BreadcrumbSection,
+  // Dubai and City bespoke layout sections
+  dubaiHero: asSection(DubaiHeroSection),
+  cityHero: asSection(DubaiHeroSection),
+  dubaiFleet: asSection(DubaiFleetSection),
+  cityFleet: asSection(DubaiFleetSection),
+  dubaiJourneys: asSection(DubaiJourneysSection),
+  cityJourneys: asSection(DubaiJourneysSection),
+  dubaiServices: asSection(DubaiServicesSection),
+  cityServices: asSection(DubaiServicesSection),
+  dubaiCta: asSection(DubaiCtaSection),
+  cityCta: asSection(DubaiCtaSection),
 };
 
 export function getSectionComponent(
@@ -80,4 +98,9 @@ export {
   RouteStatsSection,
   CityVisualsSection,
   BreadcrumbSection,
+  DubaiHeroSection,
+  DubaiFleetSection,
+  DubaiJourneysSection,
+  DubaiServicesSection,
+  DubaiCtaSection,
 };

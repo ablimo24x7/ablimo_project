@@ -1,0 +1,618 @@
+// ── Section Type Definitions ─────────────────────────────────────
+// Every section in a service page is represented by one of these types.
+// The `content`, `items`, `settings`, and `appearance` objects are
+// intentionally loose (Record<string, unknown>) so each section type
+// can define its own shape without bloating the union.
+
+export type SectionType =
+  | "hero"
+  | "marquee"
+  | "serviceCards"
+  | "mediaContent"
+  | "textMediaGrid"
+  | "fleetGrid"
+  | "contactForm"
+  | "faq"
+  | "ctaBanner";
+
+export type SectionVariant = string;
+
+export interface PageSection {
+  id: string;
+  type: SectionType;
+  variant: SectionVariant;
+  order: number;
+  enabled: boolean;
+  content: Record<string, unknown>;
+  items: Record<string, unknown>[];
+  settings: Record<string, unknown>;
+  appearance: Record<string, unknown>;
+}
+
+// ── Shared Appearance ────────────────────────────────────────────
+
+export interface SectionAppearanceBase {
+  theme?: "dark" | "darker" | "light";
+  background?: string;
+  pattern?: boolean;
+  padding?: "none" | "sm" | "md" | "lg" | "xl";
+  border?: boolean;
+  textAlign?: "left" | "center";
+}
+
+// ── Marquee ──────────────────────────────────────────────────────
+
+export interface MarqueeItem {
+  id: string;
+  icon: string;
+  label: string;
+}
+
+export interface MarqueeContent {
+  items: MarqueeItem[];
+}
+
+export interface MarqueeSettings {
+  speed?: "slow" | "normal" | "fast";
+  opacity?: number;
+}
+
+export interface MarqueeAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
+}
+
+// ── Hero ─────────────────────────────────────────────────────────
+
+export interface HeroContent {
+  eyebrow?: string;
+  title: string;
+  titleHighlight?: string;
+  description?: string;
+}
+
+export interface HeroAction {
+  label: string;
+  href: string;
+  style: "primary" | "secondary" | "ghost" | "link";
+  icon?: string;
+  iconPosition?: "left" | "right";
+  openInNewTab?: boolean;
+}
+
+export interface HeroMedia {
+  type: "image" | "video";
+  url: string;
+  alt?: string;
+}
+
+export interface HeroSettings {
+  minHeight?: string;
+  overlayOpacity?: number;
+  contentPosition?: "left" | "center" | "right";
+  buttonLayout?: "row" | "column";
+}
+
+export interface HeroAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
+  background?: string;
+  overlayGradient?: "default" | "left-heavy" | "bottom-heavy";
+}
+
+// ── Service Cards ────────────────────────────────────────────────
+
+export interface ServiceCardItem {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+  wide?: boolean;
+  actions: CardAction[];
+}
+
+export interface CardAction {
+  label: string;
+  href: string;
+  style: "accent" | "text" | "outline";
+  icon?: string;
+}
+
+export interface ServiceCardsContent {
+  eyebrow?: string;
+  heading: string;
+  description?: string;
+  sectionCta?: {
+    label?: string;
+    href?: string;
+    style?: "primary" | "secondary" | "outline";
+    icon?: string;
+  };
+  bottomCta?: {
+    label?: string;
+    href?: string;
+    style?: "primary" | "secondary" | "outline";
+    icon?: string;
+  };
+}
+
+export interface ServiceCardsSettings {
+  columns?: "2" | "3" | "4";
+  showHeader?: boolean;
+}
+
+export interface ServiceCardsAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
+}
+
+// ── Media Content ────────────────────────────────────────────────
+
+export interface MediaContentItem {
+  id: string;
+  icon: string;
+  heading: string;
+  description: string;
+}
+
+export interface MediaContentContent {
+  eyebrow?: string;
+  heading: string;
+  description?: string;
+  richContent?: string;
+  items?: MediaContentItem[];
+  actions?: MediaContentActions[];
+}
+
+export interface MediaContentMedia {
+  type: "image" | "video";
+  url: string;
+  alt?: string;
+  caption?: string;
+  mediaTitle?: string;
+}
+
+export interface MediaContentActions {
+  label: string;
+  href: string;
+  style: "primary" | "secondary" | "outline";
+  icon?: string;
+}
+
+export interface MediaContentSettings {
+  mediaPosition?: "left" | "right";
+  containerWidth?: "default" | "narrow" | "wide";
+}
+
+export interface MediaContentAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker" | "light";
+  background?: string;
+  pattern?: boolean;
+}
+
+// ── Text Media Grid ──────────────────────────────────────────────
+
+export interface TextMediaGridFeature {
+  id: string;
+  icon: string;
+  heading: string;
+  description: string;
+}
+
+export interface TextMediaGridMediaItem {
+  id: string;
+  type: "image" | "stat";
+  column: "left" | "right";
+  size: "tall" | "short";
+  image?: string;
+  imageAlt?: string;
+  overlay?: "none" | "blue" | "gradient";
+  contain?: boolean;
+  statValue?: string;
+  statLabel?: string;
+}
+
+export interface TextMediaGridContent {
+  eyebrow?: string;
+  eyebrowIcon?: string;
+  heading: string;
+  headingHighlight?: string;
+  headingAfter?: string;
+  description?: string;
+  items?: TextMediaGridFeature[];
+  media?: TextMediaGridMediaItem[];
+}
+
+export interface TextMediaGridSettings {
+  mediaPosition?: "left" | "right";
+}
+
+export interface TextMediaGridAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
+  pattern?: boolean;
+}
+
+// ── Fleet Grid ───────────────────────────────────────────────────
+
+export interface FleetItem {
+  id: string;
+  badge?: string;
+  badgeStyle?: "default" | "accent";
+  image: string;
+  imageAlt?: string;
+  category: string;
+  name: string;
+  capacity: string;
+  bags: string;
+  capacityIcon?: string;
+  bagsIcon?: string;
+  actions?: { label: string; href: string }[];
+}
+
+export interface FleetGridContent {
+  eyebrow?: string;
+  heading: string;
+  description?: string;
+  headerAction?: {
+    label?: string;
+    href?: string;
+  };
+  bottomCta?: {
+    label?: string;
+    href?: string;
+    style?: "primary" | "secondary" | "outline";
+    icon?: string;
+  };
+}
+
+export interface FleetGridSettings {
+  columns?: "2" | "3" | "4";
+}
+
+export interface FleetGridAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
+}
+
+// ── Contact Form ─────────────────────────────────────────────────
+
+export interface ContactFormContent {
+  eyebrow?: string;
+  heading: string;
+  description?: string;
+  icon?: string;
+  submitLabel?: string;
+  successTitle?: string;
+  successMessage?: string;
+}
+
+export interface ContactFormSettings {
+  layout?: "full" | "centered";
+}
+
+export interface ContactFormAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
+}
+
+// ── FAQ ──────────────────────────────────────────────────────────
+
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+}
+
+export interface FaqContent {
+  eyebrow?: string;
+  heading: string;
+  description?: string;
+  items: FaqItem[];
+}
+
+export interface FaqActions {
+  label: string;
+  href: string;
+  style: "primary" | "secondary";
+  icon?: string;
+}
+
+export interface FaqSettings {
+  variant?: "default" | "compact";
+}
+
+export interface FaqAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
+}
+
+// ── CTA Banner ───────────────────────────────────────────────────
+
+export interface CtaBannerContent {
+  heading: string;
+  description?: string;
+}
+
+export interface CtaBannerAction {
+  label: string;
+  href: string;
+  style: "primary" | "secondary" | "outline";
+  icon?: string;
+}
+
+export interface CtaBannerSettings {
+  layout?: "centered" | "split";
+}
+
+export interface CtaBannerAppearance extends SectionAppearanceBase {
+  theme?: "dark" | "darker";
+}
+
+// ── Section Registry Types ───────────────────────────────────────
+
+export interface SectionTypeConfig {
+  type: SectionType;
+  label: string;
+  description: string;
+  icon: string;
+  variants: { value: string; label: string }[];
+  defaults: () => PageSection;
+}
+
+export const SECTION_TYPES: SectionTypeConfig[] = [
+  {
+    type: "hero",
+    label: "Hero",
+    description: "Full-width hero with background image, heading, and CTAs",
+    icon: "Layout",
+    variants: [
+      { value: "background-content", label: "Background Content" },
+      { value: "centered", label: "Centered" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "hero",
+      variant: "background-content",
+      order: 0,
+      enabled: true,
+      content: {
+        eyebrow: "Premium Mobility",
+        title: "Service Title.",
+        titleHighlight: "",
+        description: "Service description goes here.",
+      },
+      items: [],
+      settings: {
+        minHeight: "85vh",
+        overlayOpacity: 85,
+        contentPosition: "left",
+        buttonLayout: "row",
+      },
+      appearance: {
+        theme: "darker",
+        background: "",
+        padding: "none",
+        border: false,
+        textAlign: "left",
+        overlayGradient: "default",
+      },
+    }),
+  },
+  {
+    type: "marquee",
+    label: "Marquee",
+    description: "Auto-scrolling ticker of client logos or labels",
+    icon: "RefreshCw",
+    variants: [
+      { value: "default", label: "Default" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "marquee",
+      variant: "default",
+      order: 0,
+      enabled: true,
+      content: {
+        items: [],
+      },
+      items: [],
+      settings: { speed: "normal", opacity: 50 },
+      appearance: { theme: "darker", padding: "none", border: false, textAlign: "center" },
+    }),
+  },
+  {
+    type: "serviceCards",
+    label: "Service Cards",
+    description: "Grid of service cards with icons and CTAs",
+    icon: "LayoutGrid",
+    variants: [
+      { value: "3-column", label: "3 Column" },
+      { value: "2-column", label: "2 Column" },
+      { value: "4-column", label: "4 Column" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "serviceCards",
+      variant: "3-column",
+      order: 0,
+      enabled: true,
+      content: {
+        eyebrow: "Core Services",
+        heading: "Scalable Mobility Solutions.",
+        description: "Description of services goes here.",
+        sectionCta: {
+          label: "",
+          href: "",
+          style: "primary",
+          icon: "",
+        },
+      },
+      items: [],
+      settings: { columns: "3", showHeader: true },
+      appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
+    }),
+  },
+  {
+    type: "mediaContent",
+    label: "Media + Content",
+    description: "Two-column layout with media and rich text content",
+    icon: "PanelLeft",
+    variants: [
+      { value: "media-right", label: "Media Right" },
+      { value: "media-left", label: "Media Left" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "mediaContent",
+      variant: "media-right",
+      order: 0,
+      enabled: true,
+      content: {
+        eyebrow: "Feature",
+        heading: "Feature Heading.",
+        description: "Feature description.",
+        items: [],
+        actions: [],
+      },
+      items: [],
+      settings: { mediaPosition: "right", containerWidth: "default" },
+      appearance: { theme: "darker", pattern: false, padding: "lg", border: true, textAlign: "left" },
+    }),
+  },
+  {
+    type: "textMediaGrid",
+    label: "Text + Media Grid",
+    description: "SEO text block with feature highlights and an image/stat mosaic",
+    icon: "Columns2",
+    variants: [
+      { value: "media-right", label: "Media Right" },
+      { value: "media-left", label: "Media Left" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "textMediaGrid",
+      variant: "media-right",
+      order: 0,
+      enabled: true,
+      content: {
+        eyebrow: "Infrastructure Alignment",
+        eyebrowIcon: "City",
+        heading: "Powering Riyadh's",
+        headingHighlight: "Vision 2030",
+        headingAfter: "Corporate Ecosystem.",
+        description: "<p>Rich text description goes here. Use bold and emphasis to highlight key terms for SEO.</p>",
+        items: [],
+        media: [
+          { id: `itm-${Date.now()}-a-${Math.random().toString(36).substr(2, 9)}`, type: "image", column: "left", size: "tall", image: "", imageAlt: "", overlay: "blue" },
+          { id: `itm-${Date.now()}-b-${Math.random().toString(36).substr(2, 9)}`, type: "stat", column: "right", size: "short", statValue: "100%", statLabel: "Compliant" },
+        ],
+      },
+      items: [],
+      settings: { mediaPosition: "right" },
+      appearance: { theme: "darker", pattern: true, padding: "lg", border: true, textAlign: "left" },
+    }),
+  },
+  {
+    type: "fleetGrid",
+    label: "Fleet Grid",
+    description: "Vehicle cards grid with capacity and booking",
+    icon: "Car",
+    variants: [
+      { value: "4-column", label: "4 Column" },
+      { value: "3-column", label: "3 Column" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "fleetGrid",
+      variant: "4-column",
+      order: 0,
+      enabled: true,
+      content: {
+        eyebrow: "Fleet",
+        heading: "Our Fleet.",
+        description: "Fleet description.",
+        headerAction: { label: "", href: "" },
+        bottomCta: { label: "", href: "", style: "secondary", icon: "" },
+      },
+      items: [],
+      settings: { columns: "4" },
+      appearance: { theme: "darker", padding: "lg", border: true, textAlign: "left" },
+    }),
+  },
+  {
+    type: "contactForm",
+    label: "Contact Form",
+    description: "Corporate account application form",
+    icon: "FileText",
+    variants: [
+      { value: "corporate", label: "Corporate" },
+      { value: "simple", label: "Simple" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "contactForm",
+      variant: "corporate",
+      order: 0,
+      enabled: true,
+      content: {
+        eyebrow: "Partner With Us",
+        heading: "Enterprise Procurement.",
+        description: "Connect with our enterprise procurement team.",
+        icon: "briefcase",
+        submitLabel: "Submit Procurement Request",
+        successTitle: "Application Received",
+        successMessage: "An enterprise account manager will contact you within 24 hours.",
+      },
+      items: [],
+      settings: { layout: "centered" },
+      appearance: { theme: "dark", padding: "lg", border: true, textAlign: "left" },
+    }),
+  },
+  {
+    type: "faq",
+    label: "FAQ",
+    description: "Frequently asked questions accordion",
+    icon: "HelpCircle",
+    variants: [
+      { value: "default", label: "Default Accordion" },
+      { value: "compact", label: "Compact" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "faq",
+      variant: "default",
+      order: 0,
+      enabled: true,
+      content: {
+        eyebrow: "Knowledge Base",
+        heading: "Frequently Asked Questions",
+        description: "Detailed insights into our operations.",
+        items: [],
+      },
+      items: [],
+      settings: { variant: "default" },
+      appearance: { theme: "darker", padding: "lg", border: true, textAlign: "center" },
+    }),
+  },
+  {
+    type: "ctaBanner",
+    label: "CTA Banner",
+    description: "Call-to-action banner with heading and buttons",
+    icon: "Megaphone",
+    variants: [
+      { value: "centered", label: "Centered" },
+    ],
+    defaults: () => ({
+      id: `sec-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: "ctaBanner",
+      variant: "centered",
+      order: 0,
+      enabled: true,
+      content: {
+        heading: "Ready to Get Started?",
+        description: "Contact us today.",
+      },
+      items: [],
+      settings: { layout: "centered" },
+      appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
+    }),
+  },
+];
+
+export function getSectionConfig(type: SectionType): SectionTypeConfig | undefined {
+  return SECTION_TYPES.find((s) => s.type === type);
+}

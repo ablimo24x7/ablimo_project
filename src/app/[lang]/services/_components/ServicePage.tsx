@@ -56,6 +56,7 @@ export interface ServiceContent {
   ctaDesc: string;
   ctaLabel: string;
   ctaHref?: string;
+  ctaButtonText?: string;
 }
 
 export interface ServicePageTexts {
@@ -414,12 +415,18 @@ export default async function ServicePage({
           {content.ctaTitle}
         </h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">{content.ctaDesc}</p>
-        <Link
-          href={content.ctaHref ?? `${localeBase(lang)}/services`}
-          className="inline-block bg-abBlue hover:bg-abServiceBlue text-white px-8 py-3 text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abBlue/20"
-        >
-          {content.ctaLabel}
-        </Link>
+            <Link
+              href={(() => {
+                const cta = content.ctaHref?.trim();
+                if (!cta || cta === "#" || cta.startsWith("#")) {
+                  return `${localeBase(lang)}/contact`;
+                }
+                return cta;
+              })()}
+              className="inline-block bg-white text-[#292a30] px-10 py-4 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
+            >
+              {content.ctaButtonText}
+            </Link>
       </section>
     </main>
   );

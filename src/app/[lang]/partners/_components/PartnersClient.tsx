@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { localeHome } from "@/app/[lang]/dictionaries";
+import { localeHome, localeBase, localeContact } from "@/app/[lang]/dictionaries";
 
 export default function PartnersClient({ dict, lang }: { dict: Dictionary; lang: string }) {
   const [activeTab, setActiveTab] = useState(dict.partners.tabs.onboarding);
@@ -83,12 +83,12 @@ export default function PartnersClient({ dict, lang }: { dict: Dictionary; lang:
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
             {dict.partners.hero.desc}
           </p>
-          <Link
-            href="#"
-            className="inline-block bg-white text-[#292a30] font-semibold px-8 py-4 rounded-lg hover:bg-gray-200 transition-colors"
-          >
-            {dict.partners.cta.button}
-          </Link>
+                <Link
+                  href={localeContact(lang)}
+                  className="inline-flex items-center justify-center bg-white text-[#1a1b1f] px-10 py-4 text-base font-semibold rounded-full hover:bg-gray-100 transition-colors"
+                >
+                  Contact us
+                </Link>
         </div>
       </section>
 

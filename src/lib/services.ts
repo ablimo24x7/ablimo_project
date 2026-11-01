@@ -136,6 +136,7 @@ const NAV_ONLY_SERVICES: Array<{
   title: string;
   href: string;
 }> = [
+  { slug: "ground-transportation", title: "Ground Transportation", href: "/services/ground-transportation" },
   { slug: "executive-chauffeur", title: "Executive Chauffeur Services", href: "/services/executive-chauffeur" },
   { slug: "chauffeur-hailing", title: "Chauffeur Hailing Services", href: "/services/chauffeur-hailing" },
   { slug: "hourly-chauffeur", title: "Hourly Chauffeur", href: "/services/hourly-chauffeur" },

@@ -139,8 +139,8 @@ export default async function Page({
       )}
 
       {relatedArticles.length > 0 && (
-        <section className="max-w-7xl mx-auto px-8 pb-20">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+        <section className="bg-[#1c1d21] max-w-7xl mx-auto px-8 pb-20">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 py-5">
             {b.relatedArticles}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

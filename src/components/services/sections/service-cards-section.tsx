@@ -22,7 +22,7 @@ function CtaButton({ cta }: { cta: { label?: string; href?: string; style?: stri
   const isRight = cta.iconPosition === "right";
   return (
     <Link
-      href={cta.href || "#"}
+      href={cta.href && cta.href.trim() && !cta.href.trim().startsWith("#") ? cta.href : "/contact"}
       className={`inline-flex items-center justify-center px-8 py-3.5 rounded text-sm font-semibold transition-all ${
         cta.style === "primary"
           ? "bg-abServiceBlue hover:bg-sky-700 text-white shadow-lg shadow-abServiceBlue/20"
@@ -52,7 +52,7 @@ export default function ServiceCardsSection({ section, context }: ServiceCardsSe
       : null;
 
   const items: Array<{
-    id: string; icon: string; title: string; description: string; wide?: boolean;
+    id: string; icon: string; tag?: string; title: string; description: string; subtext?: string; wide?: boolean;
     actions?: Array<{ label: string; href: string; style: string }>;
   }> = contextServices
     ? contextServices.slice(0, 6).map((svc, index) => ({
@@ -65,7 +65,7 @@ export default function ServiceCardsSection({ section, context }: ServiceCardsSe
         actions: [{ label: "View Details", href: svc.href, style: "text" }],
       }))
     : ((section.items || []) as Array<{
-        id: string; icon: string; title: string; description: string; wide?: boolean;
+        id: string; icon: string; tag?: string; title: string; description: string; subtext?: string; wide?: boolean;
         actions?: Array<{ label: string; href: string; style: string }>;
       }>);
   const appearance = section.appearance as Record<string, unknown>;
@@ -103,7 +103,15 @@ export default function ServiceCardsSection({ section, context }: ServiceCardsSe
               </h3>
             )}
             {(c.description as string) && (
-              <p className="text-gray-400 text-lg mb-8">{c.description as string}</p>
+              <div className="space-y-4 mb-8">
+                {(c.description as string)
+                  .split(/\n\n+/)
+                  .map((para, pIdx) => pIdx >= 0 && para.trim() && (
+                    <p key={pIdx} className="text-gray-400 text-lg leading-relaxed">
+                      {para.trim()}
+                    </p>
+                  ))}
+              </div>
             )}
             {/* Header CTA */}
             {sectionCta?.label && (
@@ -144,7 +152,7 @@ export default function ServiceCardsSection({ section, context }: ServiceCardsSe
                           {item.actions.map((action, ai) => (
                             <Link
                               key={ai}
-                              href={action.href || "#"}
+                              href={action.href && action.href.trim() && !action.href.trim().startsWith("#") ? action.href : "/contact"}
                               className={`inline-flex items-center text-sm font-semibold ${
                                 action.style === "accent"
                                   ? "text-abServiceBlue hover:underline"
@@ -166,17 +174,27 @@ export default function ServiceCardsSection({ section, context }: ServiceCardsSe
                 ) : (
                   <>
                     {/* Standard Card Layout */}
-                    <div className="mb-6">
+                    <div className="mb-4 flex items-center justify-between">
                       {getIcon(item.icon, "w-8 h-8 text-gray-300 group-hover:text-abServiceBlue transition-colors")}
+                      {item.tag && (
+                        <span className="text-xs font-bold uppercase tracking-wider text-abServiceBlue bg-abServiceBlue/10 border border-abServiceBlue/30 px-2.5 py-1 rounded">
+                          {item.tag}
+                        </span>
+                      )}
                     </div>
                     <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6">{item.description}</p>
+                    {item.description && (
+                      <p className="text-gray-400 text-sm leading-relaxed mb-4">{item.description}</p>
+                    )}
+                    {item.subtext && (
+                      <p className="text-xs font-semibold text-gray-300 mb-6">{item.subtext}</p>
+                    )}
                     {item.actions && item.actions.length > 0 && (
                       <div className="flex flex-col space-y-3">
                         {item.actions.map((action, ai) => (
                           <Link
                             key={ai}
-                            href={action.href || "#"}
+                            href={action.href && action.href.trim() && !action.href.trim().startsWith("#") ? action.href : "/contact"}
                             className={`inline-flex items-center text-sm font-semibold ${
                               action.style === "accent"
                                 ? "text-abServiceBlue hover:underline"

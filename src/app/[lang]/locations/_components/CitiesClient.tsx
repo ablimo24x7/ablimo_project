@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { localeBase, localeHome } from "@/app/[lang]/dictionaries";
+import { localeBase, localeHome, localeContact } from "@/app/[lang]/dictionaries";
 import type { Country, City } from "@/lib/locations";
 import { cityUrl } from "@/lib/locations";
 import { getCountryImage } from "@/lib/countryImages";
@@ -49,7 +49,7 @@ export default function CitiesClient({ dict, lang, cities: allCitiesList }: { di
             Luxury chauffeur service across {cities.length} cities worldwide
           </p>
           <Link
-            href={`${localeHome(lang)}`}
+            href={localeContact(lang)}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.countries.bookNow}
@@ -181,7 +181,7 @@ export default function CitiesClient({ dict, lang, cities: allCitiesList }: { di
             {dict.countries.cta.desc}
           </p>
           <Link
-            href={`${localeHome(lang)}`}
+            href={localeContact(lang)}
             className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             {dict.countries.cta.button}

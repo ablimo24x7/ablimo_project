@@ -86,6 +86,13 @@ const rules: Redirect[] = [
     permanent: true,
   },
 
+  // ---- Standalone ground transportation link --------------------------
+  {
+    source: "/:lang/ground-transportation",
+    destination: "/:lang/services/ground-transportation",
+    permanent: true,
+  },
+
   // ---- Safety net: any other legacy /countries/* sub-path ---------------
   // Guards against other un-migrated country/airport/route links so nothing
   // under the old /countries tree 404s.
@@ -137,6 +144,19 @@ const rules: Redirect[] = [
   {
     source: "/:lang/blog/:path*",
     destination: "/:lang/blogs/:path*",
+    permanent: true,
+  },
+
+  // ---- Corporate accounts migration --------------------------------------
+  // /corporations and /business are replaced by /corporate-accounts
+  {
+    source: "/:lang/corporations",
+    destination: "/:lang/corporate-accounts",
+    permanent: true,
+  },
+  {
+    source: "/:lang/business",
+    destination: "/:lang/corporate-accounts",
     permanent: true,
   },
 

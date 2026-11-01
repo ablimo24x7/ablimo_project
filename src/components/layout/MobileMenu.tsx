@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { type Locale, localeHome } from "@/app/[lang]/dictionaries";
+import { type Locale, localeBase, localeHome, localeContact } from "@/app/[lang]/dictionaries";
 import type { HeaderNavGroup } from "@/lib/headerNav";
 import HeaderSocialLinks from "./HeaderSocialLinks";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -158,7 +158,7 @@ export default function MobileMenu({ dict, lang, groups }: MobileMenuProps) {
                 hello@ab.limo
               </Link>
               <Link
-                href={`${localeHome(lang)}`}
+                href={localeContact(lang)}
                 onClick={() => setIsOpen(false)}
                 className="block text-center bg-transparent border border-abBlue text-abBlue hover:bg-abBlue hover:border-abBlue hover:text-white px-5 py-3 rounded text-sm font-semibold transition-colors"
               >

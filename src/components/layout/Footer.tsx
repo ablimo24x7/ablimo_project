@@ -47,6 +47,14 @@ export default async function Footer({ lang }: FooterProps) {
       links: [
         { label: d.aboutUs.homepage, href: `${localeHome(lang)}` },
         { label: d.aboutUs.aboutAB, href: `${localeBase(lang)}/about` },
+        {
+          label: lang.startsWith("ar") ? "التواجد الإقليمي وفريق القيادة" : "Global Presence & Team",
+          href: `${localeBase(lang)}/ab-global-presence-and-team`,
+        },
+        {
+          label: lang.startsWith("ar") ? "معايير السائقين والمركبات" : "The AB Standards",
+          href: `${localeBase(lang)}/chauffeurs-and-vehicles-standards`,
+        },
         { label: d.aboutUs.chauffeurRecruitment, href: `${localeBase(lang)}/partners` },
         { label: d.aboutUs.corporateCareers, href: `${localeBase(lang)}/career` },
         { label: d.aboutUs.press, href: `${localeBase(lang)}/press/releases` },

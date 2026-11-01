@@ -55,7 +55,7 @@ export default async function Home({
       <LocalBusinessJsonLd />
       <WebsiteJsonLd />
       <HowToBookJsonLd />
-      <HeroSection dict={dict} />
+        <HeroSection dict={dict} lang={lang} />
       <EventLogisticsSection dict={dict} lang={lang} />
       <IndustrySolutionsSection dict={dict} lang={lang} />
       <HowItWorksSection dict={dict} lang={lang} />

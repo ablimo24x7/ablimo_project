@@ -69,9 +69,9 @@ export default function MediaContentSection({ section, context }: MediaContentSe
       )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className={`grid ${bgImage ? "lg:grid-cols-2" : "lg:grid-cols-1"} gap-16 items-center`}>
           {/* Content Side */}
-          <div className={`${mediaPosition === "right" ? "order-2 lg:order-1" : ""} ${textAlignClass}`}>
+          <div className={`${bgImage && mediaPosition === "right" ? "order-2 lg:order-1" : ""} ${textAlignClass}`}>
             {(c.eyebrow as string) && (
               <h2 className="text-sm font-bold tracking-widest text-abServiceBlue uppercase mb-3">
                 {c.eyebrow as string}
@@ -81,14 +81,20 @@ export default function MediaContentSection({ section, context }: MediaContentSe
               <h3 className="text-3xl md:text-4xl font-bold mb-6">{c.heading as string}</h3>
             )}
             {(c.description as string) && (
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                {c.description as string}
-              </p>
+              <div className="space-y-4 mb-8">
+                {(c.description as string)
+                  .split(/\n\n+/)
+                  .map((para, pIdx) => pIdx >= 0 && para.trim() && (
+                    <p key={pIdx} className="text-gray-400 text-lg leading-relaxed">
+                      {para.trim()}
+                    </p>
+                  ))}
+              </div>
             )}
 
             {/* Items List */}
             {items.length > 0 && (
-              <ul className="space-y-6 mb-10">
+              <ul className={`${bgImage ? "space-y-6" : "grid md:grid-cols-2 gap-6"} mb-10`}>
                 {items.map((item) => (
                   <li key={item.id} className="flex items-start">
                     <div className="flex-shrink-0 h-8 w-8 rounded bg-gray-900 border border-gray-700 flex items-center justify-center mt-1">
@@ -97,7 +103,7 @@ export default function MediaContentSection({ section, context }: MediaContentSe
                     <div className="ml-4">
                       <h4 className="text-lg font-bold text-gray-100">{item.heading}</h4>
                       {item.description && (
-                        <p className="text-sm text-gray-500 mt-1">{item.description}</p>
+                        <p className="text-sm text-gray-400 mt-1 leading-relaxed">{item.description}</p>
                       )}
                     </div>
                   </li>
@@ -150,32 +156,35 @@ export default function MediaContentSection({ section, context }: MediaContentSe
           </div>
 
           {/* Media Side */}
-          <div className={`relative ${mediaPosition === "left" ? "order-1 lg:order-2" : ""}`}>
-            {bgImage && (
-              <>
-                <div className="absolute inset-0 bg-gradient-to-r from-abServiceBlue to-sky-700 transform translate-x-4 translate-y-4 rounded-xl opacity-20 blur-sm" />
-                <div className="bg-abDarkGray border border-gray-800 rounded-xl shadow-2xl relative z-10 overflow-hidden">
-                  <div className="bg-black/50 px-4 py-3 border-b border-gray-800 flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-full bg-red-500" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                    <div className="w-3 h-3 rounded-full bg-green-500" />
-                    {(c.mediaTitle as string) && (
-                      <span className="ml-4 text-xs font-mono text-gray-500">{c.mediaTitle as string}</span>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <Image
-                      src={bgImage}
-                      alt={bgAlt || (c.heading as string) || ""}
-                      width={600}
-                      height={400}
-                      className="w-full rounded border border-gray-700 opacity-80 filter contrast-125 grayscale hover:grayscale-0 transition-all duration-700"
-                    />
-                  </div>
+          {bgImage && (
+            <div className={`relative ${mediaPosition === "left" ? "order-1 lg:order-2" : ""}`}>
+              <div className="absolute inset-0 bg-gradient-to-r from-abServiceBlue to-sky-700 transform translate-x-4 translate-y-4 rounded-xl opacity-20 blur-sm" />
+              <div className="bg-abDarkGray border border-gray-800 rounded-xl shadow-2xl relative z-10 overflow-hidden">
+                <div className="bg-black/50 px-4 py-3 border-b border-gray-800 flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                  <div className="w-3 h-3 rounded-full bg-green-500" />
+                  {(c.mediaTitle as string) && (
+                    <span className="ml-4 text-xs font-mono text-gray-500">{c.mediaTitle as string}</span>
+                  )}
                 </div>
-              </>
-            )}
-          </div>
+                <div className="p-6">
+                  <Image
+                    src={bgImage}
+                    alt={bgAlt || (c.heading as string) || ""}
+                    width={600}
+                    height={400}
+                    className="w-full rounded border border-gray-700 opacity-90 hover:opacity-100 transition-all duration-700"
+                  />
+                  {(c.mediaCaption as string) && (
+                    <p className="text-xs text-gray-400 mt-3 leading-relaxed">
+                      {c.mediaCaption as string}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

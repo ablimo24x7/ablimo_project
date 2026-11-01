@@ -81,7 +81,7 @@ export function getHeaderNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
       items: [
         {
           label: d.industriesMenu.eventsExhibitions,
-          href: `${base}/industries/events`,
+          href: `${base}/industries/events-exhibitions`,
         },
         {
           label: d.industriesMenu.governmentDiplomatic,
@@ -93,7 +93,7 @@ export function getHeaderNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
         },
         {
           label: d.industriesMenu.energyGigaProjects,
-          href: `${base}/industries/energy`,
+          href: `${base}/industries/energy-giga-projects`,
         },
         {
           label: d.industriesMenu.hospitality,
@@ -101,7 +101,7 @@ export function getHeaderNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
         },
         {
           label: d.industriesMenu.sportsEntertainment,
-          href: `${base}/industries/sports`,
+          href: `${base}/industries/sports-entertainment`,
         },
         {
           label: d.industriesMenu.corporateEnterprise,
@@ -190,11 +190,11 @@ export function getHeaderNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
         },
         {
           label: d.companyMenu.chauffeurStandard,
-          href: `${base}/about`,
+          href: `${base}/chauffeurs-and-vehicles-standards`,
         },
         {
           label: d.companyMenu.technology,
-          href: `${base}/about`,
+          href: `${base}/technology`,
         },
         {
           label: d.companyMenu.careers,
@@ -220,7 +220,7 @@ export function getHeaderNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
       items: [
         {
           label: d.resourcesMenu.corporateAccounts,
-          href: `${base}/business`,
+          href: `${base}/corporate-accounts`,
         },
         {
           label: d.resourcesMenu.caseStudies,

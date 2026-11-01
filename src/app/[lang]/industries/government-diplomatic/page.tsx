@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { generateSeoMetadata } from "@/lib/seo";
+import { localeBase, localeHome } from "@/app/[lang]/dictionaries";
+import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
 import { getIndustryData } from "../_components/industry-detail-data";
 import IndustryDetailClient from "../_components/IndustryDetailClient";
 
@@ -21,7 +23,7 @@ export async function generateMetadata({
     path: `/industries/${SLUG}`,
     lang,
     keywords:
-      "government protocol transportation, diplomatic motorcade, official state visits GCC, presidential delegations, VIP security transport",
+      "diplomatic transportation, government transportation services, delegation transport, protocol transportation, embassy chauffeur service, VIP transport Riyadh Abu Dhabi Qatar",
   });
 }
 
@@ -34,5 +36,25 @@ export default async function GovernmentPage({
   const data = getIndustryData(SLUG);
   if (!data) notFound();
 
-  return <IndustryDetailClient data={data} lang={lang} />;
+  const base = localeBase(lang);
+  const home = localeHome(lang);
+
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: home },
+          { name: "Industries", url: `${base}/industries` },
+          { name: data.badge, url: `${base}/industries/${SLUG}` },
+        ]}
+      />
+      <FAQJsonLd
+        items={data.faqs.map((faq) => ({
+          question: faq.q,
+          answer: faq.a,
+        }))}
+      />
+      <IndustryDetailClient data={data} lang={lang} />
+    </>
+  );
 }

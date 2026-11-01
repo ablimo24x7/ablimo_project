@@ -139,14 +139,35 @@ export const serviceStructures: Record<string, ServiceStructure> = {
       { image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&h=600&fit=crop", dark: true },
     ],
   },
+  "ground-transportation": {
+    heroImage: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&h=800&fit=crop",
+    featureIcons: [
+      <svg key="1" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+      </svg>,
+      <svg key="2" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>,
+      <svg key="3" className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>,
+    ],
+    cardImages: [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop",
+    ],
+    sectionImages: [
+      { image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop", dark: true },
+      { image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=600&fit=crop" },
+    ],
+  },
 };
 
 /**
  * Maps a top-level service URL slug to its key inside `dict.servicePages`.
  *
- * Only the six live service verticals are mapped here. The 59 archived service
- * pages (and their previous template mappings) live in
- * `src/lib/archived-services.ts` so they cannot render on the website.
+ * Only the core live service verticals are mapped here.
  */
 export const serviceDictKeyBySlug: Record<string, string> = {
   "chauffeur-vip": "chauffeurVip",
@@ -155,6 +176,7 @@ export const serviceDictKeyBySlug: Record<string, string> = {
   "event-transportation": "eventTransportation",
   "bus-coach-hire": "busCoachHire",
   "tourism-transportation": "tourismTransportation",
+  "ground-transportation": "groundTransportation",
 };
 
 /**
@@ -185,6 +207,7 @@ export function getStructureForService(
  * service has no hero / card image of its own.
  */
 export const serviceFallbackImages: Record<string, string> = {
+  "ground-transportation": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=500&fit=crop",
   "chauffeur-vip": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=500&fit=crop",
   "airport-transfers": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop",
   "corporate-transportation": "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&h=500&fit=crop",

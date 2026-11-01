@@ -5,14 +5,16 @@ import Link from "next/link";
 import { Database, ArrowDown, ChevronDown, Mail } from "lucide-react";
 import type { FaqItem, FaqCategory } from "./faqData";
 import { CATEGORY_META, CATEGORIES } from "./faqData";
+import { localeBase } from "@/app/[lang]/dictionaries";
 
 const ITEMS_PER_LOAD = 10;
 
 interface FaqsClientProps {
   faqs: FaqItem[];
+  lang: string;
 }
 
-export function FaqsClient({ faqs }: FaqsClientProps) {
+export function FaqsClient({ faqs, lang }: FaqsClientProps) {
   const [activeCategory, setActiveCategory] = React.useState<FaqCategory>("all");
   const [visibleCount, setVisibleCount] = React.useState(ITEMS_PER_LOAD);
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
@@ -115,12 +117,12 @@ export function FaqsClient({ faqs }: FaqsClientProps) {
                 <p className="text-xs text-gray-400 mb-3">
                   Require a customized RFP response?
                 </p>
-                <Link
-                  href="/contact"
-                  className="block w-full bg-[#111] hover:bg-[#1a1a1a] border border-gray-700 hover:border-abBlue text-white text-xs font-bold py-3 rounded transition-colors"
-                >
-                  Contact Enterprise Sales
-                </Link>
+              <Link
+                href={`${localeBase(lang)}/contact`}
+                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#1a1b1f] transition hover:bg-gray-100"
+              >
+                Contact Enterprise Sales
+              </Link>
               </div>
             </div>
 
@@ -208,8 +210,8 @@ export function FaqsClient({ faqs }: FaqsClientProps) {
                 <Mail className="w-4 h-4 mr-2" /> Email hello@ab.limo
               </a>
               <Link
-                href="/contact"
-                className="bg-abBlue hover:bg-[#1a93c4] text-white px-8 py-3 rounded text-sm font-semibold transition-all shadow-lg"
+                href={`${localeBase(lang)}/contact`}
+                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#1a1b1f] transition hover:bg-gray-100"
               >
                 Open a Support Ticket
               </Link>

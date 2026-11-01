@@ -61,7 +61,13 @@ export default function CitiesGridSection({ section, context }: CitiesGridSectio
               <h3 className="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">
                 {cityObj.name}
               </h3>
-              <p className="text-xs text-gray-500 mt-1">{country.name}</p>
+              {cityObj.description ? (
+                <p className="text-xs text-gray-400 mt-1.5 line-clamp-3 leading-relaxed">
+                  {cityObj.description}
+                </p>
+              ) : (
+                <p className="text-xs text-gray-500 mt-1">{country.name}</p>
+              )}
             </div>
           </Link>
         ))}

@@ -26,4 +26,9 @@ export const localeBase = (lang: string): string =>
 /** Home URL for a locale: `/` for English, `/ar` for Arabic. */
 export const localeHome = (lang: string): string => localeBase(lang) || "/";
 
+export const localeContact = (lang: string): string => {
+  const base = localeBase(lang);
+  return base ? `${base}/contact` : "/contact";
+};
+
 export type Dictionary = Awaited<ReturnType<typeof getDictionary>>;

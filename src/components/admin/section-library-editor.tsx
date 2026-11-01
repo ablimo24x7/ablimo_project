@@ -68,6 +68,16 @@ const SECTION_ICONS: Record<string, React.ElementType> = {
   routeStats: Gauge,
   cityVisuals: Camera,
   breadcrumb: ChevronRight,
+  dubaiHero: Layout,
+  cityHero: Layout,
+  dubaiFleet: Car,
+  cityFleet: Car,
+  dubaiJourneys: Route,
+  cityJourneys: Route,
+  dubaiServices: LayoutGrid,
+  cityServices: LayoutGrid,
+  dubaiCta: Megaphone,
+  cityCta: Megaphone,
 };
 
 // Preset shape accepted by the editor — service presets (PageSection) are
@@ -1153,6 +1163,223 @@ function ContentTab({ section, scope = "service", structureLocked = false, onUpd
         </div>
       );
 
+    case "dubaiHero":
+    case "cityHero":
+      return (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Badge Text</Label>
+            <Input
+              value={(c.badge as string) || ""}
+              onChange={(e) => updateContent("badge", e.target.value)}
+              placeholder="CHAUFFEUR SERVICE IN DUBAI"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Title (City Name)</Label>
+            <Input
+              value={(c.title as string) || ""}
+              onChange={(e) => updateContent("title", e.target.value)}
+              placeholder="Dubai"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Description</Label>
+            <WysiwygEditor
+              value={(c.description as string) || ""}
+              onChange={(v) => updateContent("description", v)}
+              placeholder="City hero description..."
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Background Image</Label>
+            <MediaInput
+              value={((section.appearance as Record<string, unknown>)?.background as string) || (c.backgroundImage as string) || ""}
+              onChange={(url) => {
+                updateContent("backgroundImage", url);
+                onUpdate({
+                  appearance: {
+                    ...section.appearance,
+                    background: url,
+                  },
+                });
+              }}
+              accept="image"
+              placeholder="/hero/B4.jpg.jpeg or /hero/city-riyadh.jpg"
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label>Book Now Button Label</Label>
+              <Input
+                value={(c.bookNowLabel as string) || ""}
+                onChange={(e) => updateContent("bookNowLabel", e.target.value)}
+                placeholder="BOOK NOW"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>View Fleet Button Label</Label>
+              <Input
+                value={(c.viewFleetLabel as string) || ""}
+                onChange={(e) => updateContent("viewFleetLabel", e.target.value)}
+                placeholder="VIEW THE FLEET"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label>Default Pick Up (Booking Bar)</Label>
+              <Input
+                value={(c.pickupDefault as string) || ""}
+                onChange={(e) => updateContent("pickupDefault", e.target.value)}
+                placeholder="Dubai International (DXB)"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>Default Drop Off (Booking Bar)</Label>
+              <Input
+                value={(c.dropoffDefault as string) || ""}
+                onChange={(e) => updateContent("dropoffDefault", e.target.value)}
+                placeholder="DIFC, Gate Avenue"
+              />
+            </div>
+          </div>
+          <div className="space-y-2">
+            <Label>Skyline Illustration</Label>
+            <Select
+              value={(c.skyline as string) || "auto"}
+              onValueChange={(v) => updateContent("skyline", v)}
+            >
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="auto">Auto (Detect by City)</SelectItem>
+                <SelectItem value="dubai">Dubai Skyline</SelectItem>
+                <SelectItem value="riyadh">Riyadh Skyline</SelectItem>
+                <SelectItem value="none">None (Hide Skyline)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      );
+
+    case "dubaiFleet":
+    case "cityFleet":
+      return (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Eyebrow</Label>
+            <Input
+              value={(c.eyebrow as string) || ""}
+              onChange={(e) => updateContent("eyebrow", e.target.value)}
+              placeholder="THE DUBAI FLEET"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Heading</Label>
+            <Input
+              value={(c.heading as string) || ""}
+              onChange={(e) => updateContent("heading", e.target.value)}
+              placeholder="Choose your class"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Description</Label>
+            <WysiwygEditor
+              value={(c.description as string) || ""}
+              onChange={(v) => updateContent("description", v)}
+              placeholder="Every vehicle is late model, black and detailed..."
+            />
+          </div>
+        </div>
+      );
+
+    case "dubaiJourneys":
+    case "cityJourneys":
+      return (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Eyebrow</Label>
+            <Input
+              value={(c.eyebrow as string) || ""}
+              onChange={(e) => updateContent("eyebrow", e.target.value)}
+              placeholder="POPULAR JOURNEYS"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Heading</Label>
+            <Input
+              value={(c.heading as string) || ""}
+              onChange={(e) => updateContent("heading", e.target.value)}
+              placeholder="Across Dubai and beyond"
+            />
+          </div>
+        </div>
+      );
+
+    case "dubaiServices":
+    case "cityServices":
+      return (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Eyebrow</Label>
+            <Input
+              value={(c.eyebrow as string) || ""}
+              onChange={(e) => updateContent("eyebrow", e.target.value)}
+              placeholder="SERVICES IN DUBAI"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Heading</Label>
+            <Input
+              value={(c.heading as string) || ""}
+              onChange={(e) => updateContent("heading", e.target.value)}
+              placeholder="One partner for every movement"
+            />
+          </div>
+        </div>
+      );
+
+    case "dubaiCta":
+    case "cityCta":
+      return (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Heading</Label>
+            <Input
+              value={(c.heading as string) || ""}
+              onChange={(e) => updateContent("heading", e.target.value)}
+              placeholder="Your chauffeur is ready in Dubai."
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Description</Label>
+            <Input
+              value={(c.description as string) || ""}
+              onChange={(e) => updateContent("description", e.target.value)}
+              placeholder="Available around the clock. Reply within minutes at hello@ab.limo"
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label>Button Label</Label>
+              <Input
+                value={(c.buttonLabel as string) || ""}
+                onChange={(e) => updateContent("buttonLabel", e.target.value)}
+                placeholder="BOOK NOW"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>Button Target URL</Label>
+              <Input
+                value={(c.buttonHref as string) || ""}
+                onChange={(e) => updateContent("buttonHref", e.target.value)}
+                placeholder="/contact"
+              />
+            </div>
+          </div>
+        </div>
+      );
+
     default:
       return <p className="text-sm text-muted-foreground">No content fields for this section type.</p>;
   }
@@ -1175,23 +1402,30 @@ function ItemsTab({ section, onUpdate, faqContextItems, structureLocked = false 
   const addItem = () => {
     const id = `itm-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     let newItem: Record<string, unknown> = { id };
+    const sType = section.type as string;
 
-    if (section.type === "serviceCards") {
+    if (sType === "serviceCards") {
       newItem = { ...newItem, icon: "", title: "", description: "", actions: [] };
-    } else if (section.type === "fleetGrid") {
+    } else if (sType === "fleetGrid") {
       newItem = { ...newItem, badge: "", image: "", category: "", name: "", capacity: "", bags: "" };
-    } else if (section.type === "faq" || section.type === "mediaContent" || section.type === "textMediaGrid") {
+    } else if (sType === "faq" || sType === "mediaContent" || sType === "textMediaGrid") {
       const existingItems = (c.items || []) as Array<Record<string, unknown>>;
-      if (section.type === "faq") {
+      if (sType === "faq") {
         updateContentItem("items", [...existingItems, { id, question: "", answer: "" }]);
       } else {
         updateContentItem("items", [...existingItems, { id, icon: "", heading: "", description: "" }]);
       }
       return;
-    } else if (section.type === "hero" || section.type === "ctaBanner") {
+    } else if (sType === "hero" || sType === "ctaBanner") {
       newItem = { label: "", href: "", style: "primary", icon: "" };
-    } else if ((section.type as string) === "routeStats") {
+    } else if (sType === "routeStats") {
       newItem = { ...newItem, icon: "Gauge", label: "", value: "" };
+    } else if (sType === "dubaiJourneys" || sType === "cityJourneys") {
+      newItem = { ...newItem, tag: "AIRPORT TRANSFER", title: "", price: "From [PRICE]", pickup: "", dropoff: "" };
+    } else if (sType === "dubaiServices" || sType === "cityServices") {
+      newItem = { ...newItem, title: "", href: "/services" };
+    } else if (sType === "dubaiFleet" || sType === "cityFleet") {
+      newItem = { ...newItem, name: "", model: "", specs: "", image: "", fleetSlug: "" };
     }
 
     onUpdate({ items: [...items, newItem] });
@@ -1227,13 +1461,16 @@ function ItemsTab({ section, onUpdate, faqContextItems, structureLocked = false 
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <Label className="text-sm font-medium">
-          {section.type === "faq" ? "FAQ Questions" :
-           section.type === "serviceCards" ? "Service Cards" :
-           section.type === "fleetGrid" ? "Fleet Vehicles" :
-           section.type === "hero" ? "CTA Buttons" :
-           section.type === "ctaBanner" ? "CTA Buttons" :
+          {(section.type as string) === "faq" ? "FAQ Questions" :
+           (section.type as string) === "serviceCards" ? "Service Cards" :
+           (section.type as string) === "fleetGrid" ? "Fleet Vehicles" :
+           (section.type as string) === "hero" ? "CTA Buttons" :
+           (section.type as string) === "ctaBanner" ? "CTA Buttons" :
+           (section.type as string) === "dubaiJourneys" || (section.type as string) === "cityJourneys" ? "Popular Journeys" :
+           (section.type as string) === "dubaiServices" || (section.type as string) === "cityServices" ? "Service Links" :
+           (section.type as string) === "dubaiFleet" || (section.type as string) === "cityFleet" ? "Vehicle Classes" :
            (section.type as string) === "routeStats" ? "Route Stats" :
-           section.type === "mediaContent" || section.type === "textMediaGrid" ? "Feature Items" :
+           (section.type as string) === "mediaContent" || (section.type as string) === "textMediaGrid" ? "Feature Items" :
            "Items"}
         </Label>
         {canManage && !structureLocked && (
@@ -1534,6 +1771,9 @@ function ItemEditor({ sectionType, item, index, structureLocked = false, onUpdat
     if (sectionType === "fleetGrid") return (item.name as string) || `Vehicle ${index + 1}`;
     if (sectionType === "hero" || sectionType === "ctaBanner") return (item.label as string) || `Button ${index + 1}`;
     if (sectionType === "routeStats") return (item.label as string) || `Stat ${index + 1}`;
+    if (sectionType === "dubaiJourneys" || sectionType === "cityJourneys") return (item.title as string) || `Journey ${index + 1}`;
+    if (sectionType === "dubaiServices" || sectionType === "cityServices") return (item.title as string) || `Service ${index + 1}`;
+    if (sectionType === "dubaiFleet" || sectionType === "cityFleet") return (item.name as string) || `Vehicle Class ${index + 1}`;
     return (item.heading as string) || `Item ${index + 1}`;
   };
 
@@ -1780,7 +2020,7 @@ function ItemEditor({ sectionType, item, index, structureLocked = false, onUpdat
                   variant="ghost"
                   size="sm"
                   onClick={() => {
-                    const actions = [...((item.actions || []) as Array<Record<string, unknown>>), { label: "Request Allocation", href: "#contact" }];
+                    const actions = [...((item.actions || []) as Array<Record<string, unknown>>), { label: "Request Allocation", href: "/contact" }];
                     onUpdate({ actions });
                   }}
                 >
@@ -1889,6 +2129,124 @@ function ItemEditor({ sectionType, item, index, structureLocked = false, onUpdat
                 <Label>Value</Label>
                 <Input value={(item.value as string) || ""} onChange={(e) => onUpdate({ value: e.target.value })} placeholder="{distance}" />
                 <p className="text-xs text-muted-foreground">Tokens like {"{distance}"} and {"{duration}"} fill from route data at render.</p>
+              </div>
+            </>
+          )}
+
+          {(sectionType === "dubaiJourneys" || sectionType === "cityJourneys") && (
+            <>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="space-y-1">
+                  <Label className="text-xs">Tag / Category</Label>
+                  <Input
+                    value={(item.tag as string) || ""}
+                    onChange={(e) => onUpdate({ tag: e.target.value })}
+                    placeholder="AIRPORT TRANSFER or CITY"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <Label className="text-xs">Price Label</Label>
+                  <Input
+                    value={(item.price as string) || ""}
+                    onChange={(e) => onUpdate({ price: e.target.value })}
+                    placeholder="From AED 350 or From [SAR PRICE]"
+                  />
+                </div>
+              </div>
+              <div className="space-y-1">
+                <Label className="text-xs">Journey Route Title</Label>
+                <Input
+                  value={(item.title as string) || ""}
+                  onChange={(e) => onUpdate({ title: e.target.value })}
+                  placeholder="DXB to Downtown Dubai"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="space-y-1">
+                  <Label className="text-xs">Pickup Location</Label>
+                  <Input
+                    value={(item.pickup as string) || ""}
+                    onChange={(e) => onUpdate({ pickup: e.target.value })}
+                    placeholder="Pickup location"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <Label className="text-xs">Dropoff Location</Label>
+                  <Input
+                    value={(item.dropoff as string) || ""}
+                    onChange={(e) => onUpdate({ dropoff: e.target.value })}
+                    placeholder="Dropoff location"
+                  />
+                </div>
+              </div>
+            </>
+          )}
+
+          {(sectionType === "dubaiServices" || sectionType === "cityServices") && (
+            <>
+              <div className="space-y-1">
+                <Label className="text-xs">Service Title</Label>
+                <Input
+                  value={(item.title as string) || ""}
+                  onChange={(e) => onUpdate({ title: e.target.value })}
+                  placeholder="Executive and Corporate Mobility"
+                />
+              </div>
+              <div className="space-y-1">
+                <Label className="text-xs">Target URL</Label>
+                <Input
+                  value={(item.href as string) || ""}
+                  onChange={(e) => onUpdate({ href: e.target.value })}
+                  placeholder="/services/corporate-transportation"
+                />
+              </div>
+            </>
+          )}
+
+          {(sectionType === "dubaiFleet" || sectionType === "cityFleet") && (
+            <>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="space-y-1">
+                  <Label className="text-xs">Class Name</Label>
+                  <Input
+                    value={(item.name as string) || ""}
+                    onChange={(e) => onUpdate({ name: e.target.value })}
+                    placeholder="Standard Sedan"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <Label className="text-xs">Car Model</Label>
+                  <Input
+                    value={(item.model as string) || ""}
+                    onChange={(e) => onUpdate({ model: e.target.value })}
+                    placeholder="Ford Taurus / BYD Seal 7"
+                  />
+                </div>
+              </div>
+              <div className="space-y-1">
+                <Label className="text-xs">Specs & Capacity</Label>
+                <Input
+                  value={(item.specs as string) || ""}
+                  onChange={(e) => onUpdate({ specs: e.target.value })}
+                  placeholder="Sedan · 3 guests · 2 bags"
+                />
+              </div>
+              <div className="space-y-1">
+                <Label className="text-xs">Vehicle Image</Label>
+                <MediaInput
+                  value={(item.image as string) || ""}
+                  onChange={(url) => onUpdate({ image: url })}
+                  accept="image"
+                  placeholder="/cars/sedans/FAURD TAURUS.png"
+                />
+              </div>
+              <div className="space-y-1">
+                <Label className="text-xs">Fleet Slug</Label>
+                <Input
+                  value={(item.fleetSlug as string) || ""}
+                  onChange={(e) => onUpdate({ fleetSlug: e.target.value })}
+                  placeholder="ford-taurus"
+                />
               </div>
             </>
           )}

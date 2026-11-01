@@ -462,7 +462,7 @@ export const blankCityTemplate: CityTemplatePreset = {
         description: "Describe your city service here.",
       },
       items: [
-        { label: "Get Started", href: "#contact", style: "primary", icon: "ArrowRight", iconPosition: "right" },
+        { label: "Get Started", href: "/contact", style: "primary", icon: "ArrowRight", iconPosition: "right" },
       ],
       settings: { minHeight: "85vh", overlayOpacity: 85, contentPosition: "left", buttonLayout: "row" },
       appearance: { theme: "darker", background: "", padding: "none", border: false, textAlign: "left", overlayGradient: "default" },

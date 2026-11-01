@@ -1,0 +1,338 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import BookingWidget from "@/components/layout/BookingWidget";
+import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generateSeoMetadata({
+    title: "Your Professional Chauffeur Service",
+    description:
+      "Hire a professional chauffeur for luxury transportation. Experienced drivers, premium vehicles, and exceptional service worldwide.",
+    path: "/chauffeur-service",
+    lang,
+    keywords: "chauffeur service, professional chauffeur, executive driver, AB.Limo, private driver, luxury chauffeur, hire chauffeur",
+  });
+}
+
+const features = [
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    ),
+    key: "expertlyTrained" as const,
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    key: "worldwideCoverage" as const,
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    key: "alwaysOnTime" as const,
+  },
+];
+
+export default async function ChauffeurServicePage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
+
+  return (
+    <main className="min-h-screen bg-[#292a30] text-white">
+      {/* Hero Section */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden pt-24 pb-10">
+        <Image
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=800&fit=crop"
+          alt="Professional Chauffeur"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#292a30]" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="max-w-xl">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+              {dict.chauffeurService.title}
+            </h1>
+            <p className="text-lg text-gray-300">
+              {dict.chauffeurService.subtitle}
+            </p>
+          </div>
+          <BookingWidget dict={dict} />
+        </div>
+      </section>
+
+      {/* Breadcrumb */}
+      <div className="max-w-7xl mx-auto px-8 py-6">
+        <nav className="text-sm text-gray-400">
+          <Link href={`/${lang}`} className="hover:text-white transition-colors">
+            {dict.chauffeurService.breadcrumb.home}
+          </Link>
+          <span className="mx-2">/</span>
+          <span className="text-white">{dict.chauffeurService.breadcrumb.chauffeurService}</span>
+        </nav>
+      </div>
+
+      {/* Feature Cards */}
+      <section className="max-w-7xl mx-auto px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {features.map((feature) => {
+            const texts = dict.chauffeurService.features[feature.key];
+            return (
+              <div
+                key={feature.key}
+                className="bg-[#1c1d21] p-8 rounded-2xl hover:bg-[#2a2c35] transition-colors"
+              >
+                <div className="text-gray-400 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-bold mb-3">{texts.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {texts.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Service Classes */}
+      <section className="bg-[#1c1d21] py-20 px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            {dict.chauffeurService.chooseClass}
+          </h2>
+          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+            {dict.chauffeurService.chooseClassDesc}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {Object.values(dict.chauffeurService.vehicleClasses).map((vehicle) => (
+              <div
+                key={vehicle.title}
+                className="bg-[#292a30] rounded-2xl overflow-hidden group"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={vehicle.image}
+                    alt={vehicle.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">{vehicle.title}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{vehicle.desc}</p>
+                  <div className="flex gap-4 text-sm text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                      </svg>
+                      {vehicle.passengers} {dict.common.passengers}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z" />
+                      </svg>
+                      {vehicle.luggage} {dict.common.luggage}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* World Class Chauffeurs */}
+      <section className="max-w-7xl mx-auto px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative h-[400px] rounded-2xl overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=600&fit=crop"
+              alt="World Class Chauffeur"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {dict.chauffeurService.worldClass.title}
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              {dict.chauffeurService.worldClass.desc}
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.worldClass.licensed}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.worldClass.background}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.worldClass.multilingual}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.worldClass.localKnowledge}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Chauffeur Hire Worldwide */}
+      <section className="bg-[#1c1d21] py-20 px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="order-2 lg:order-1">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {dict.chauffeurService.worldwide.title}
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              {dict.chauffeurService.worldwide.desc}
+            </p>
+            <p className="text-gray-400 leading-relaxed">
+              {dict.chauffeurService.worldwide.desc2}
+            </p>
+          </div>
+          <div className="relative h-[400px] rounded-2xl overflow-hidden order-1 lg:order-2">
+            <Image
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop"
+              alt="Worldwide Coverage"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Travel from A to B */}
+      <section className="max-w-7xl mx-auto px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative h-[400px] rounded-2xl overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop"
+              alt="Travel in Comfort"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {dict.chauffeurService.travelAB.title}
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              {dict.chauffeurService.travelAB.desc}
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.travelAB.airport}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.travelAB.business}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.travelAB.cityToCity}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Airport Chauffeur */}
+      <section className="bg-[#1c1d21] py-20 px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative h-[400px] rounded-2xl overflow-hidden order-1 lg:order-2">
+            <Image
+              src="/airportTransfer.png"
+              alt="Airport Chauffeur"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="order-2 lg:order-1">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {dict.chauffeurService.airportChauffeur.title}
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              {dict.chauffeurService.airportChauffeur.desc}
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.airportChauffeur.flightTracking}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.airportChauffeur.meetGreet}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                </svg>
+                <span className="text-gray-400">{dict.chauffeurService.airportChauffeur.waitTime}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="max-w-4xl mx-auto px-8 py-20 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          {dict.chauffeurService.cta.title}
+        </h2>
+        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          {dict.chauffeurService.cta.desc}
+        </p>
+        <Link
+          href={`/${lang}`}
+          className="inline-block bg-white text-[#292a30] px-8 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
+        >
+          {dict.chauffeurService.cta.bookNow}
+        </Link>
+      </section>
+    </main>
+  );
+}

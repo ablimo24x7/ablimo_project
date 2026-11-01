@@ -21,7 +21,7 @@ const SERVICE_META: Record<string, ServiceMeta> = {
       { value: "with-inquiry-form", label: "With Inquiry Form" },
     ],
   },
-  marquee: { scopes: ["service"], category: "Content" },
+  marquee: { scopes: ["service", "country", "city"], category: "Content" },
   serviceCards: {
     scopes: ["service", "country", "city"],
     category: "Content",
@@ -32,9 +32,9 @@ const SERVICE_META: Record<string, ServiceMeta> = {
     category: "Content",
     description: "Two-column layout with media and rich text content",
   },
-  textMediaGrid: { scopes: ["service"], category: "Content" },
-  fleetGrid: { scopes: ["service"], category: "Grids" },
-  contactForm: { scopes: ["service"], category: "Forms" },
+  textMediaGrid: { scopes: ["service", "country", "city"], category: "Content" },
+  fleetGrid: { scopes: ["service", "country", "city"], category: "Grids" },
+  contactForm: { scopes: ["service", "country", "city"], category: "Forms" },
   faq: {
     scopes: ["service", "country", "city", "route"],
     category: "Content",

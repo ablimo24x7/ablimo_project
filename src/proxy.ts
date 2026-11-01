@@ -58,6 +58,18 @@ export function proxy(request: NextRequest) {
     }
   }
 
+  // Legacy /corporations and /business -> /corporate-accounts
+  if (pathname === "/corporations" || pathname === "/business") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/corporate-accounts";
+    return NextResponse.redirect(url, 308);
+  }
+  if (pathname === "/ar/corporations" || pathname === "/ar/business") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/ar/corporate-accounts";
+    return NextResponse.redirect(url, 308);
+  }
+
   // Legacy English locale prefixes → prefix-less (permanent for SEO)
   const legacyPrefix = legacyEnglishPrefixes.find(
     (p) => pathname === p || pathname.startsWith(`${p}/`)

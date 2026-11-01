@@ -61,7 +61,8 @@ const city = (
   airports: Airport[] = [],
   nameAr = "",
   description = "",
-  aliases: string[] = []
+  aliases: string[] = [],
+  faqs: LocationFaq[] = []
 ): City => ({
   slug,
   name,
@@ -69,6 +70,7 @@ const city = (
   nameAr,
   description,
   aliases,
+  ...(faqs.length > 0 ? { faqs } : {}),
 });
 
 export const COUNTRIES: Country[] = [
@@ -117,27 +119,116 @@ export const COUNTRIES: Country[] = [
     slug: "saudi-arabia",
     name: "Saudi Arabia",
     nameAr: "المملكة العربية السعودية",
+    description:
+      "Direct chauffeur and fleet operations across 12 Saudi cities, managed from our Riyadh headquarters in Olaya with licensed drivers, vetted vehicles, and unified SLAs from NEOM to Jizan.",
     cities: [
-      city("riyadh", "Riyadh", [
-        airport("king-khalid-international-airport", "King Khalid International Airport", "RUH", "مطار الملك خالد الدولي"),
-      ], "الرياض"),
-      city("jeddah", "Jeddah", [
-        airport("king-abdulaziz-international-airport", "King Abdulaziz International Airport", "JED", "مطار الملك عبدالعزيز الدولي"),
-      ], "جدة"),
-      city("mecca", "Mecca", [], "مكة المكرمة"),
-      city("medina", "Medina", [
-        airport("prince-mohammad-bin-abdulaziz-international-airport", "Prince Mohammad bin Abdulaziz International Airport", "MED", "مطار الأمير محمد بن عبدالعزيز الدولي"),
-      ], "المدينة المنورة"),
-      city("dammam", "Dammam", [
-        airport("king-fahd-international-airport", "King Fahd International Airport", "DMM", "مطار الملك فهد الدولي"),
-      ], "الدمام"),
-      city("tabuk", "Tabuk", [], "تبوك"),
-      city("al-ula", "Al Ula", [], "العلا"),
-      city("al-khobar", "Al Khobar", [], "الخبر"),
-      city("al-qasim", "Al Qasim", [], "القصيم"),
-      city("abha", "Abha", [], "أبها"),
-      city("jizan", "Jizan", [], "جازان"),
-      city("neom", "NEOM", [], "نيوم"),
+      city(
+        "riyadh",
+        "Riyadh",
+        [
+          airport("king-khalid-international-airport", "King Khalid International Airport", "RUH", "مطار الملك خالد الدولي"),
+        ],
+        "الرياض",
+        "Capital city & AB regional headquarters — KAFD, Diplomatic Quarter, Olaya, Diriyah, and King Khalid International Airport (RUH)."
+      ),
+      city(
+        "jeddah",
+        "Jeddah",
+        [
+          airport("king-abdulaziz-international-airport", "King Abdulaziz International Airport", "JED", "مطار الملك عبدالعزيز الدولي"),
+        ],
+        "جدة",
+        "Red Sea commercial hub & Umrah gateway — Corniche, Al-Balad, KAEC, and King Abdulaziz International Airport (JED)."
+      ),
+      city(
+        "mecca",
+        "Mecca",
+        [],
+        "مكة المكرمة",
+        "Holy city mobility — VIP Umrah & Hajj ground transport, Haram hotel transfers, and Jeddah/Medina intercity corridors.",
+        ["makkah"]
+      ),
+      city(
+        "medina",
+        "Medina",
+        [
+          airport("prince-mohammad-bin-abdulaziz-international-airport", "Prince Mohammad bin Abdulaziz International Airport", "MED", "مطار الأمير محمد بن عبدالعزيز الدولي"),
+        ],
+        "المدينة المنورة",
+        "Prince Mohammad bin Abdulaziz International Airport (MED), Central Haram area, Knowledge Economic City, and Mecca/Al Ula corridors.",
+        ["madinah"]
+      ),
+      city(
+        "dammam",
+        "Dammam",
+        [
+          airport("king-fahd-international-airport", "King Fahd International Airport", "DMM", "مطار الملك فهد الدولي"),
+        ],
+        "الدمام",
+        "Eastern Province administrative & industrial capital — King Fahd International Airport (DMM), King Abdulaziz Port, and Dhahran/Jubail corridors."
+      ),
+      city(
+        "tabuk",
+        "Tabuk",
+        [
+          airport("prince-sultan-bin-abdulaziz-airport", "Prince Sultan bin Abdulaziz Airport", "TUU", "مطار الأمير سلطان بن عبدالعزيز"),
+        ],
+        "تبوك",
+        "Northwestern regional capital — Prince Sultan bin Abdulaziz Airport (TUU) and highway gateway to NEOM, Trojena, and Red Sea projects."
+      ),
+      city(
+        "al-ula",
+        "Al Ula",
+        [
+          airport("prince-abdulmajeed-bin-abdulaziz-international-airport", "Prince Abdulmajeed bin Abdulaziz International Airport", "ULH", "مطار الأمير عبدالمجيد بن عبدالعزيز الدولي"),
+        ],
+        "العلا",
+        "UNESCO heritage & luxury cultural destination — Hegra, Maraya, Ashar Valley resorts, and Prince Abdulmajeed bin Abdulaziz Airport (ULH).",
+        ["alula"]
+      ),
+      city(
+        "al-khobar",
+        "Al Khobar",
+        [],
+        "الخبر",
+        "Eastern Province commercial waterfront, Dhahran Techno Valley, King Fahd Causeway to Bahrain, and DMM airport transfers."
+      ),
+      city(
+        "al-qasim",
+        "Al Qasim",
+        [
+          airport("prince-naif-bin-abdulaziz-international-airport", "Prince Naif bin Abdulaziz International Airport", "ELQ", "مطار الأمير نايف بن عبدالعزيز الدولي"),
+        ],
+        "القصيم",
+        "Central region commercial & agricultural hub — Buraidah, Unaizah, and Prince Naif bin Abdulaziz International Airport (ELQ)."
+      ),
+      city(
+        "abha",
+        "Abha",
+        [
+          airport("abha-international-airport", "Abha International Airport", "AHB", "مطار أبها الدولي"),
+        ],
+        "أبها",
+        "Aseer regional capital & highland tourism hub — Abha International Airport (AHB), Soudah Peaks, Rijal Almaa, and Khamis Mushait."
+      ),
+      city(
+        "jizan",
+        "Jizan",
+        [
+          airport("king-abdullah-bin-abdulaziz-airport", "King Abdullah bin Abdulaziz Airport", "GIZ", "مطار الملك عبدالله بن عبدالعزيز"),
+        ],
+        "جازان",
+        "Southwestern Red Sea port & industrial hub — King Abdullah bin Abdulaziz Airport (GIZ), JCPDI (Baish), and Farasan gateway."
+      ),
+      city(
+        "neom",
+        "NEOM",
+        [
+          airport("neom-bay-airport", "NEOM Bay Airport", "NUM", "مطار خليج نيوم"),
+        ],
+        "نيوم",
+        "Northwest giga-project corridor — NEOM Bay Airport (NUM), Sharma, Oxagon, Trojena, Sindalah gateway, and Tabuk links."
+      ),
       city(
         "hail",
         "Hail",
@@ -323,6 +414,18 @@ export interface CityRoute {
 export const CITY_ROUTES: CityRoute[] = [
   { fromSlug: "riyadh", toSlug: "dammam", distance: "400 km", duration: "4h 00m" },
   { fromSlug: "dammam", toSlug: "riyadh", distance: "400 km", duration: "4h 00m" },
+  { fromSlug: "riyadh", toSlug: "al-khobar", distance: "415 km", duration: "4h 00m" },
+  { fromSlug: "al-khobar", toSlug: "riyadh", distance: "415 km", duration: "4h 00m" },
+  { fromSlug: "riyadh", toSlug: "al-qasim", distance: "350 km", duration: "3h 30m" },
+  { fromSlug: "al-qasim", toSlug: "riyadh", distance: "350 km", duration: "3h 30m" },
+  { fromSlug: "dammam", toSlug: "al-khobar", distance: "25 km", duration: "30m" },
+  { fromSlug: "al-khobar", toSlug: "dammam", distance: "25 km", duration: "30m" },
+  { fromSlug: "medina", toSlug: "al-ula", distance: "330 km", duration: "3h 30m" },
+  { fromSlug: "al-ula", toSlug: "medina", distance: "330 km", duration: "3h 30m" },
+  { fromSlug: "tabuk", toSlug: "neom", distance: "180 km", duration: "2h 00m" },
+  { fromSlug: "neom", toSlug: "tabuk", distance: "180 km", duration: "2h 00m" },
+  { fromSlug: "abha", toSlug: "jizan", distance: "200 km", duration: "3h 00m" },
+  { fromSlug: "jizan", toSlug: "abha", distance: "200 km", duration: "3h 00m" },
   { fromSlug: "riyadh", toSlug: "jeddah", distance: "950 km", duration: "9h 00m" },
   { fromSlug: "jeddah", toSlug: "riyadh", distance: "950 km", duration: "9h 00m" },
   { fromSlug: "jeddah", toSlug: "mecca", distance: "80 km", duration: "1h 00m" },

@@ -8,6 +8,8 @@ import { COUNTRIES, CITY_ROUTES, resolveAirport, resolveCity, resolveCountry, ty
 import type { TextImageSectionType } from "@/lib/validations/location";
 import { locales, getDictionary } from "@/app/[lang]/dictionaries";
 import { buildCityTemplate } from "@/components/section-library/presets/city-presets";
+import { CLIENT_COUNTRY_DATA } from "@/components/section-library/presets/client-country-data";
+import { CLIENT_CITY_DATA } from "@/components/section-library/presets/client-city-data";
 
 export const LOCATION_API_TAG = "locations";
 
@@ -152,17 +154,37 @@ function backfillCountryNameAr(country: CountryShape): CountryShape {
       countryAliases[country.slug] === c.slug ||
       countryAliases[c.slug] === country.slug
   );
+  const clientCountry = staticCountry
+    ? CLIENT_COUNTRY_DATA[staticCountry.slug]
+    : CLIENT_COUNTRY_DATA[country.slug];
   if (!staticCountry) return country;
   const cities = backfillNameAr(country.cities ?? [], staticCountry.cities).map((city) => {
     const staticCity = staticCountry.cities.find((c) => c.slug === city.slug);
+    const clientCity = CLIENT_CITY_DATA[city.slug];
+    const airports =
+      city.airports && city.airports.length > 0
+        ? backfillNameAr(city.airports, staticCity?.airports ?? [])
+        : staticCity?.airports ?? [];
     return {
       ...city,
-      airports: backfillNameAr(city.airports ?? [], staticCity?.airports ?? []),
+      description:
+        city.description || clientCity?.description || staticCity?.description || "",
+      faqs:
+        city.faqs && city.faqs.length > 0
+          ? city.faqs
+          : clientCity?.faqs ?? staticCity?.faqs ?? [],
+      airports,
     };
   });
   return {
     ...country,
     nameAr: country.nameAr || staticCountry.nameAr || "",
+    description:
+      country.description || clientCountry?.description || staticCountry.description || "",
+    faqs:
+      country.faqs && country.faqs.length > 0
+        ? country.faqs
+        : clientCountry?.faqs ?? staticCountry.faqs ?? [],
     cities,
   };
 }
@@ -291,12 +313,12 @@ export async function syncMissingCitiesToDatabase(): Promise<void> {
 
 /** Fetch all countries. Falls back to static data when DB is off/empty. */
 export async function getAllCountries(): Promise<CountryShape[]> {
-  if (!isDatabaseEnabled()) return COUNTRIES;
+  if (!isDatabaseEnabled()) return COUNTRIES.map(backfillCountryNameAr);
   await connectDB();
   await seedLocationsIfEmpty();
   await syncMissingCitiesToDatabase();
   const docs = await Country.find({ status: { $ne: "archived" } }).sort({ name: 1 }).lean();
-  if (!docs.length) return COUNTRIES;
+  if (!docs.length) return COUNTRIES.map(backfillCountryNameAr);
   const active = docs.filter((d) => d.status === "published");
   return (active.length ? active : docs)
     .map(toCountryShape)
@@ -326,7 +348,8 @@ export async function getCountryBySlug(input: string): Promise<CountryShape | un
   const enabled = isDatabaseEnabled();
   if (!enabled) {
     const key = input.toLowerCase();
-    return COUNTRIES.find((c) => c.slug === key || c.code === key);
+    const found = COUNTRIES.find((c) => c.slug === key || c.code === key);
+    return found ? backfillCountryNameAr(found) : undefined;
   }
   await connectDB();
   await syncMissingCitiesToDatabase();
@@ -373,7 +396,8 @@ export async function generateUniqueSlug(
 export async function getCountryForRequest(input: string): Promise<CountryShape | undefined> {
   const db = await getCountryBySlug(input.toLowerCase());
   if (db) return db;
-  return resolveCountry(input.toLowerCase());
+  const resolved = resolveCountry(input.toLowerCase());
+  return resolved ? backfillCountryNameAr(resolved) : undefined;
 }
 
 export async function getCityForRequest(
@@ -386,8 +410,9 @@ export async function getCityForRequest(
     const city = db.cities.find((c) => c.slug === key) ?? resolveCity(db, key);
     if (city) return { country: db, city };
   }
-  const staticCountry = resolveCountry(countryInput.toLowerCase());
-  if (staticCountry) {
+  const staticCountryRaw = resolveCountry(countryInput.toLowerCase());
+  if (staticCountryRaw) {
+    const staticCountry = backfillCountryNameAr(staticCountryRaw);
     const city = resolveCity(staticCountry, key);
     if (city) return { country: staticCountry, city };
   }

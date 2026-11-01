@@ -177,15 +177,23 @@ export default function LocationsPage({ lang }: LocationsPageProps) {
               </div>
 
               <h1 className="mt-5 text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-                Where AB operates in Saudi Arabia, the UAE and Qatar
+                Chauffeur Service Locations GCC: Where AB Operates in Saudi Arabia, the UAE and Qatar
               </h1>
 
               <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed max-w-xl">
-                AB plans and runs chauffeur and ground transportation across the Gulf for
-                business delegations, executive travellers, diplomatic missions and corporate
-                events. One operations centre in Riyadh dispatches 24/7, supported by local
-                teams in Dubai, Abu Dhabi and Doha, so airport transfers, daily chauffeur hire
-                and cross border trips run to the same standard in every city.
+                Coordinating executive travel across chauffeur service locations GCC demands
+                rigorous operational timing and consistent service standards. AB manages ground
+                transportation GCC networks for business delegations, executive travellers,
+                diplomatic missions and corporate events across the region. Central dispatch in
+                Riyadh coordinates around the clock with regional teams in Dubai, Abu Dhabi and
+                Doha to deliver seamless travel.
+              </p>
+
+              <p className="mt-4 text-base text-gray-300 leading-relaxed max-w-xl">
+                Every journey connects through established operational hubs that oversee vehicle
+                dispatch, flight tracking and local protocol. This unified regional network
+                allows organisations to manage cross border itineraries under one operating
+                standard.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -196,7 +204,7 @@ export default function LocationsPage({ lang }: LocationsPageProps) {
                   Request a proposal
                 </Link>
                 <Link
-                  href={`${base}/contact`}
+                  href={`${base}/services/intercity-transfers`}
                   className="inline-flex items-center min-h-[52px] px-8 rounded-full border border-white/50 hover:bg-white/10 text-white text-sm font-semibold transition-colors"
                 >
                   Book a transfer
@@ -204,26 +212,39 @@ export default function LocationsPage({ lang }: LocationsPageProps) {
               </div>
 
               {/* Stats */}
-              <div className="mt-12 pt-8 border-t border-gray-800 grid grid-cols-3 gap-6 max-w-md">
+              <div className="mt-12 pt-8 border-t border-gray-800 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-xl">
                 <div className="flex flex-col gap-1.5">
                   <span className="text-4xl font-bold text-white tracking-tight">3</span>
-                  <span className="text-xs uppercase tracking-wider text-gray-400">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-gray-200">
                     Countries served directly
+                  </span>
+                  <span className="text-xs text-gray-400 leading-relaxed">
+                    Direct fleet operations across the Kingdom of Saudi Arabia, the United Arab Emirates and the State of Qatar.
                   </span>
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <span className="text-4xl font-bold text-white tracking-tight">4</span>
-                  <span className="text-xs uppercase tracking-wider text-gray-400">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-gray-200">
                     Regional offices
+                  </span>
+                  <span className="text-xs text-gray-400 leading-relaxed">
+                    Fully staffed physical offices in Riyadh, Dubai, Abu Dhabi and Doha coordinating local transport movements.
                   </span>
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <span className="text-4xl font-bold text-white tracking-tight">8</span>
-                  <span className="text-xs uppercase tracking-wider text-gray-400">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-gray-200">
                     Airports served
+                  </span>
+                  <span className="text-xs text-gray-400 leading-relaxed">
+                    Dedicated meet and greet infrastructure across the major commercial aviation gateways and private flight terminals.
                   </span>
                 </div>
               </div>
+
+              <p className="mt-6 text-xs text-gray-400 max-w-xl">
+                Network coverage status across our Gulf operating zones includes Direct operations, Regional coverage and On request via partners for broader territorial reach.
+              </p>
             </div>
 
             {/* Right globe column */}
@@ -259,7 +280,7 @@ export default function LocationsPage({ lang }: LocationsPageProps) {
       <AirportsSection />
       <RoutesSection lang={lang} />
       <FaqSection openIndex={openFaq} onToggle={setOpenFaq} />
-      <CoordinationSection />
+      <CoordinationSection lang={lang} />
       <ClosingCtaSection lang={lang} />
     </main>
   );

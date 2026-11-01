@@ -21,14 +21,14 @@ export async function generateMetadata({
   return generateSeoMetadata({
     title: isAr
       ? dict.locations.metadata.title
-      : "Where AB operates in Saudi Arabia, the UAE and Qatar | AB",
+      : "Chauffeur Service Locations GCC: Where AB Operates in Saudi Arabia, the UAE and Qatar | AB",
     description: isAr
       ? dict.locations.metadata.description
-      : "AB plans and runs chauffeur and ground transportation across the Gulf for business delegations, executive travellers, diplomatic missions and corporate events. Direct operations in Saudi Arabia, the UAE and Qatar.",
+      : "Coordinating executive travel across chauffeur service locations GCC. AB manages ground transportation networks across Saudi Arabia, the UAE and Qatar with 24/7 central dispatch in Riyadh and regional offices in Dubai, Abu Dhabi and Doha.",
     path: "/locations",
     lang,
     keywords:
-      "AB locations, Gulf chauffeur service, luxury ground transportation Saudi Arabia, UAE executive car, Qatar protocol transport, GCC fleet network, Riyadh Dubai Doha chauffeur",
+      "chauffeur service locations GCC, ground transportation GCC, chauffeur service Saudi Arabia, chauffeur service UAE, chauffeur service Qatar, airport transfers Gulf, AB locations",
   });
 }
 

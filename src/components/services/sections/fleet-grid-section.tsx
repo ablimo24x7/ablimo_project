@@ -19,7 +19,8 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
   const c = section.content as Record<string, unknown>;
   const items = (section.items || []) as Array<{
     id: string; badge?: string; badgeStyle?: string; image: string; imageAlt?: string;
-    category: string; name: string; capacity: string; bags: string;
+    category: string; name: string; idealFor?: string; description?: string;
+    capacity: string; bags: string;
     capacityIcon?: string; bagsIcon?: string;
     actions?: Array<{ label: string; href: string }>;
   }>;
@@ -85,13 +86,13 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
               className="bg-abDarkGray rounded-xl shadow-sm border border-gray-800 overflow-hidden hover:border-gray-600 transition-colors group"
             >
               {/* Vehicle Image */}
-              <div className="bg-black h-48 flex items-center justify-center p-4 relative">
+              <div className={`bg-black h-48 flex items-center justify-center relative ${vehicle.image?.startsWith("/locations/") ? "p-0 overflow-hidden" : "p-4"}`}>
                 {vehicle.badge && (
                   <div
-                    className={`absolute top-4 left-4 text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded shadow ${
+                    className={`absolute top-4 left-4 z-10 text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded shadow ${
                       vehicle.badgeStyle === "accent"
                         ? "bg-abServiceBlue/20 border border-abServiceBlue text-abServiceBlue"
-                        : "bg-gray-900 border border-gray-700 text-white"
+                        : "bg-gray-900/90 border border-gray-700 text-white"
                     }`}
                   >
                     {vehicle.badge}
@@ -101,9 +102,13 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
                   <Image
                     src={vehicle.image}
                     alt={vehicle.imageAlt || vehicle.name}
-                    width={300}
-                    height={180}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform drop-shadow-xl"
+                    width={400}
+                    height={240}
+                    className={`w-full h-full group-hover:scale-105 transition-transform ${
+                      vehicle.image.startsWith("/locations/")
+                        ? "object-cover"
+                        : "object-contain drop-shadow-xl"
+                    }`}
                   />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-black">
@@ -116,9 +121,25 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
               </div>
 
               {/* Vehicle Info */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col">
                 <h4 className="text-lg font-bold text-white mb-1">{vehicle.category}</h4>
-                <p className="text-sm text-abServiceBlue font-medium mb-4">{vehicle.name}</p>
+                <p className="text-sm text-abServiceBlue font-medium mb-2">
+                  {vehicle.name.startsWith("Typical model")
+                    ? vehicle.name
+                    : `Typical model: ${vehicle.name}`}
+                </p>
+                {vehicle.idealFor && (
+                  <p className="text-xs text-gray-300 font-medium mb-2">
+                    {vehicle.idealFor.startsWith("Ideal for")
+                      ? vehicle.idealFor
+                      : `Ideal for: ${vehicle.idealFor}`}
+                  </p>
+                )}
+                {vehicle.description && (
+                  <p className="text-xs text-gray-400 leading-relaxed mb-4">
+                    {vehicle.description}
+                  </p>
+                )}
                 <div className="flex justify-between items-center text-xs text-gray-400 border-t border-gray-800 pt-4 mb-4">
                   <span className="flex items-center">
                     {getIcon(vehicle.capacityIcon || "Users", "w-3.5 h-3.5 mr-1.5 text-gray-500")}
@@ -130,18 +151,30 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
                   </span>
                 </div>
                 {vehicle.actions && vehicle.actions.length > 0 ? (
-                  vehicle.actions.map((action, i) => (
+                  <div className="space-y-2.5">
                     <Link
-                      key={i}
-                      href={action.href || "#"}
-                      className="block w-full text-center bg-gray-800 hover:bg-gray-700 text-white text-xs font-semibold py-2 rounded transition-colors border border-gray-700"
+                      href={vehicle.actions[0].href || "/book"}
+                      className="block w-full text-center bg-abServiceBlue hover:bg-sky-700 text-white text-xs font-semibold py-2.5 rounded transition-colors"
                     >
-                      {action.label}
+                      {vehicle.actions[0].label}
                     </Link>
-                  ))
+                    {vehicle.actions.length > 1 && (
+                      <div className="flex flex-wrap gap-x-3 gap-y-1 pt-1 justify-center">
+                        {vehicle.actions.slice(1).map((action, i) => (
+                          <Link
+                            key={i}
+                            href={action.href || "/contact"}
+                            className="text-[11px] text-gray-400 hover:text-abServiceBlue underline-offset-2 hover:underline transition-colors"
+                          >
+                            {action.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ) : (
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="block w-full text-center bg-gray-800 hover:bg-gray-700 text-white text-xs font-semibold py-2 rounded transition-colors border border-gray-700"
                   >
                     Request Allocation
