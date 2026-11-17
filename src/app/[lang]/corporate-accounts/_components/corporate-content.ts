@@ -193,7 +193,7 @@ export const corporateContentEn: CorporateContent = {
         href: "/services/airport-transfers",
         iconName: "plane",
         image: "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=800&q=80",
-        highlights: ["Flight tracking with zero delay penalties", "Direct tarmac & protocol meet & greet", "Seamless luggage handling"],
+        highlights: ["Flight tracking with zero delay penalties", "Terminal protocol meet & greet with flight tracking", "Seamless luggage handling"],
       },
       {
         id: "dedicated-vehicles",

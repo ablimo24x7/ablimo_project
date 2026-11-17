@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "bahrain/manama",
+  "countrySlug": "bahrain",
+  "citySlug": "manama",
+  "path": "/locations/bahrain/manama",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for manama (bahrain)",
+  "exportedAt": "2026-11-10T12:32:14.437Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309996007-bkubpqq03",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN MANAMA",
+          "title": "Manama",
+          "description": "Bahrain's financial and cosmopolitan capital — from Bahrain Financial Harbour to Seef commercial towers and Formula 1 Grand Prix weekends. AB provides polished chauffeur service connecting Bahrain International Airport, hotels, and boardrooms.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Bahrain International (BAH)",
+          "dropoffDefault": "Bahrain Financial Harbour",
+          "skyline": "manama"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1547548731-e95343697eb4?q=80&w=1332&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996007-v3mbiwgrd",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE MANAMA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996007-na2o2j4jr",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Manama and beyond"
+        },
+        "items": [
+          {
+            "id": "bah-harbour",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "BAH to Bahrain Financial Harbour",
+            "titleAr": "من مطار البحرين الدولي إلى مرفأ البحرين المالي",
+            "price": "From BHD 35",
+            "priceAr": "ابتداءً من 35 د.ب",
+            "pickup": "Bahrain International Airport (BAH)",
+            "dropoff": "Bahrain Financial Harbour"
+          },
+          {
+            "id": "bah-seef",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "BAH to Seef District & City Centre",
+            "titleAr": "من مطار البحرين الدولي إلى ضاحية السيف وسيتي سنتر",
+            "price": "From BHD 35",
+            "priceAr": "ابتداءً من 35 د.ب",
+            "pickup": "Bahrain International Airport (BAH)",
+            "dropoff": "Seef District"
+          },
+          {
+            "id": "manama-bic",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Manama to Bahrain International Circuit (F1)",
+            "titleAr": "من المنامة إلى حلبة البحرين الدولية (الفورمولا 1)",
+            "price": "From BHD 45",
+            "priceAr": "ابتداءً من 45 د.ب",
+            "pickup": "Manama",
+            "dropoff": "Bahrain International Circuit"
+          },
+          {
+            "id": "manama-causeway",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Manama to King Fahd Causeway (KSA Border)",
+            "titleAr": "من المنامة إلى جسر الملك فهد (حدود السعودية)",
+            "price": "From BHD 40",
+            "priceAr": "ابتداءً من 40 د.ب",
+            "pickup": "Manama",
+            "dropoff": "King Fahd Causeway"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996007-6fdyhq9gx",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN MANAMA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996007-lxp4xtzcu",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Manama.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309996007-bkubpqq03",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN MANAMA",
+          "title": "Manama",
+          "description": "Bahrain's financial and cosmopolitan capital — from Bahrain Financial Harbour to Seef commercial towers and Formula 1 Grand Prix weekends. AB provides polished chauffeur service connecting Bahrain International Airport, hotels, and boardrooms.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Bahrain International (BAH)",
+          "dropoffDefault": "Bahrain Financial Harbour",
+          "skyline": "manama"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1547548731-e95343697eb4?q=80&w=1332&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996007-v3mbiwgrd",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE MANAMA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996007-na2o2j4jr",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Manama and beyond"
+        },
+        "items": [
+          {
+            "id": "bah-harbour",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "BAH to Bahrain Financial Harbour",
+            "titleAr": "من مطار البحرين الدولي إلى مرفأ البحرين المالي",
+            "price": "From BHD 35",
+            "priceAr": "ابتداءً من 35 د.ب",
+            "pickup": "Bahrain International Airport (BAH)",
+            "dropoff": "Bahrain Financial Harbour"
+          },
+          {
+            "id": "bah-seef",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "BAH to Seef District & City Centre",
+            "titleAr": "من مطار البحرين الدولي إلى ضاحية السيف وسيتي سنتر",
+            "price": "From BHD 35",
+            "priceAr": "ابتداءً من 35 د.ب",
+            "pickup": "Bahrain International Airport (BAH)",
+            "dropoff": "Seef District"
+          },
+          {
+            "id": "manama-bic",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Manama to Bahrain International Circuit (F1)",
+            "titleAr": "من المنامة إلى حلبة البحرين الدولية (الفورمولا 1)",
+            "price": "From BHD 45",
+            "priceAr": "ابتداءً من 45 د.ب",
+            "pickup": "Manama",
+            "dropoff": "Bahrain International Circuit"
+          },
+          {
+            "id": "manama-causeway",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Manama to King Fahd Causeway (KSA Border)",
+            "titleAr": "من المنامة إلى جسر الملك فهد (حدود السعودية)",
+            "price": "From BHD 40",
+            "priceAr": "ابتداءً من 40 د.ب",
+            "pickup": "Manama",
+            "dropoff": "King Fahd Causeway"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996007-6fdyhq9gx",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN MANAMA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996007-lxp4xtzcu",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Manama.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309996007-8919p0ng3",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في المنامة",
+          "title": "المنامة",
+          "description": "عاصمة البحرين المالية العالمية — من مرفأ البحرين المالي وأبراج السيف التجارية إلى سباقات جائزة البحرين الكبرى للفورمولا 1. تقدم إيه بي ليمو خدمات سائق خاص راقية من مطار البحرين الدولي إلى الفنادق وقاعات الاجتماعات.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Bahrain International (BAH)",
+          "dropoffDefault": "Bahrain Financial Harbour",
+          "skyline": "manama"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1547548731-e95343697eb4?q=80&w=1332&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996007-h0qktqh2l",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول المنامة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996007-80vcjo8aj",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء المنامة وخارجها"
+        },
+        "items": [
+          {
+            "id": "bah-harbour",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "BAH to Bahrain Financial Harbour",
+            "titleAr": "من مطار البحرين الدولي إلى مرفأ البحرين المالي",
+            "price": "From BHD 35",
+            "priceAr": "ابتداءً من 35 د.ب",
+            "pickup": "Bahrain International Airport (BAH)",
+            "dropoff": "Bahrain Financial Harbour"
+          },
+          {
+            "id": "bah-seef",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "BAH to Seef District & City Centre",
+            "titleAr": "من مطار البحرين الدولي إلى ضاحية السيف وسيتي سنتر",
+            "price": "From BHD 35",
+            "priceAr": "ابتداءً من 35 د.ب",
+            "pickup": "Bahrain International Airport (BAH)",
+            "dropoff": "Seef District"
+          },
+          {
+            "id": "manama-bic",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Manama to Bahrain International Circuit (F1)",
+            "titleAr": "من المنامة إلى حلبة البحرين الدولية (الفورمولا 1)",
+            "price": "From BHD 45",
+            "priceAr": "ابتداءً من 45 د.ب",
+            "pickup": "Manama",
+            "dropoff": "Bahrain International Circuit"
+          },
+          {
+            "id": "manama-causeway",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Manama to King Fahd Causeway (KSA Border)",
+            "titleAr": "من المنامة إلى جسر الملك فهد (حدود السعودية)",
+            "price": "From BHD 40",
+            "priceAr": "ابتداءً من 40 د.ب",
+            "pickup": "Manama",
+            "dropoff": "King Fahd Causeway"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996007-c73tve5dv",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في المنامة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996007-42wgf42a7",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في المنامة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

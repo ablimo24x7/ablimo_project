@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "united-arab-emirates/fujairah",
+  "countrySlug": "united-arab-emirates",
+  "citySlug": "fujairah",
+  "path": "/locations/united-arab-emirates/fujairah",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for fujairah (united-arab-emirates)",
+  "exportedAt": "2026-11-10T12:32:14.457Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310004140-jpf6sjj3j",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN FUJAIRAH",
+          "title": "Fujairah",
+          "description": "Framed by the rugged Hajar Mountains and the azure Gulf of Oman, Fujairah offers a distinctive coastal landscape and thriving bunkering industry. AB provides premium chauffeur transfers from Fujairah Airport to luxury beach resorts and intercity runs to Dubai.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Fujairah International (FJR)",
+          "dropoffDefault": "Al Aqah Beach",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310004140-dtowpsp16",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE FUJAIRAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004140-caszt0ded",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Fujairah and beyond"
+        },
+        "items": [
+          {
+            "id": "fjr-aqa",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "FJR to Al Aqah Beach Resorts",
+            "titleAr": "من مطار الفجيرة إلى منتجعات شاطئ العقة",
+            "price": "From AED 250",
+            "priceAr": "ابتداءً من 250 درهم",
+            "pickup": "Fujairah International Airport (FJR)",
+            "dropoff": "Al Aqah Beach"
+          },
+          {
+            "id": "dxb-fujairah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Fujairah Port & City",
+            "titleAr": "من مطار دبي إلى ميناء ومدينة الفجيرة",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Fujairah Port"
+          },
+          {
+            "id": "fujairah-khorfakkan",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Fujairah to Khorfakkan Amphitheatre",
+            "titleAr": "من الفجيرة إلى مدرج خورفكان",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Fujairah",
+            "dropoff": "Khorfakkan Amphitheatre"
+          },
+          {
+            "id": "fujairah-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Fujairah to Dubai Marina",
+            "titleAr": "من الفجيرة إلى دبي مارينا",
+            "price": "From AED 580",
+            "priceAr": "ابتداءً من 580 درهم",
+            "pickup": "Fujairah",
+            "dropoff": "Dubai Marina"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004140-stp2mioc4",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN FUJAIRAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004140-l34ruuoll",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Fujairah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310004140-jpf6sjj3j",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN FUJAIRAH",
+          "title": "Fujairah",
+          "description": "Framed by the rugged Hajar Mountains and the azure Gulf of Oman, Fujairah offers a distinctive coastal landscape and thriving bunkering industry. AB provides premium chauffeur transfers from Fujairah Airport to luxury beach resorts and intercity runs to Dubai.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Fujairah International (FJR)",
+          "dropoffDefault": "Al Aqah Beach",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310004140-dtowpsp16",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE FUJAIRAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004140-caszt0ded",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Fujairah and beyond"
+        },
+        "items": [
+          {
+            "id": "fjr-aqa",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "FJR to Al Aqah Beach Resorts",
+            "titleAr": "من مطار الفجيرة إلى منتجعات شاطئ العقة",
+            "price": "From AED 250",
+            "priceAr": "ابتداءً من 250 درهم",
+            "pickup": "Fujairah International Airport (FJR)",
+            "dropoff": "Al Aqah Beach"
+          },
+          {
+            "id": "dxb-fujairah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Fujairah Port & City",
+            "titleAr": "من مطار دبي إلى ميناء ومدينة الفجيرة",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Fujairah Port"
+          },
+          {
+            "id": "fujairah-khorfakkan",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Fujairah to Khorfakkan Amphitheatre",
+            "titleAr": "من الفجيرة إلى مدرج خورفكان",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Fujairah",
+            "dropoff": "Khorfakkan Amphitheatre"
+          },
+          {
+            "id": "fujairah-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Fujairah to Dubai Marina",
+            "titleAr": "من الفجيرة إلى دبي مارينا",
+            "price": "From AED 580",
+            "priceAr": "ابتداءً من 580 درهم",
+            "pickup": "Fujairah",
+            "dropoff": "Dubai Marina"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004140-stp2mioc4",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN FUJAIRAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004140-l34ruuoll",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Fujairah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310004140-c2z9mrbdd",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الفجيرة",
+          "title": "الفجيرة",
+          "description": "بين أحضان جبال الحجر ومياه خليج عمان الفيروزية، تتميز الفجيرة بشواطئها الساحرة ومينائها الملاحي الحيوي. تقدم إيه بي ليمو خدمات نقل تنفيذية إلى منتجعات العقة والفنادق الساحلية ورحلات بين المدن إلى دبي والشارقة.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Fujairah International (FJR)",
+          "dropoffDefault": "Al Aqah Beach",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310004140-0t4ucadru",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الفجيرة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004140-47lknoibb",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الفجيرة وخارجها"
+        },
+        "items": [
+          {
+            "id": "fjr-aqa",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "FJR to Al Aqah Beach Resorts",
+            "titleAr": "من مطار الفجيرة إلى منتجعات شاطئ العقة",
+            "price": "From AED 250",
+            "priceAr": "ابتداءً من 250 درهم",
+            "pickup": "Fujairah International Airport (FJR)",
+            "dropoff": "Al Aqah Beach"
+          },
+          {
+            "id": "dxb-fujairah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Fujairah Port & City",
+            "titleAr": "من مطار دبي إلى ميناء ومدينة الفجيرة",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Fujairah Port"
+          },
+          {
+            "id": "fujairah-khorfakkan",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Fujairah to Khorfakkan Amphitheatre",
+            "titleAr": "من الفجيرة إلى مدرج خورفكان",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Fujairah",
+            "dropoff": "Khorfakkan Amphitheatre"
+          },
+          {
+            "id": "fujairah-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Fujairah to Dubai Marina",
+            "titleAr": "من الفجيرة إلى دبي مارينا",
+            "price": "From AED 580",
+            "priceAr": "ابتداءً من 580 درهم",
+            "pickup": "Fujairah",
+            "dropoff": "Dubai Marina"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004140-wopwmrbl4",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الفجيرة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004140-2rzeq8fcj",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الفجيرة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

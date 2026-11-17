@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "uae/dubai",
+  "countrySlug": "uae",
+  "citySlug": "dubai",
+  "path": "/locations/uae/dubai",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for dubai (uae)",
+  "exportedAt": "2026-11-10T12:32:14.454Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310001422-ooa8wyl5v",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN DUBAI",
+          "title": "Dubai",
+          "description": "From DXB arrivals to DIFC boardrooms and evening events on the Palm, AB.Limo moves executives, delegations and guests across Dubai in an immaculate black fleet, driven by vetted professional chauffeurs.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Dubai International (DXB)",
+          "dropoffDefault": "DIFC, Gate Avenue",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/hero/B4.jpg.jpeg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310001422-ecomeskan",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE DUBAI FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001422-l3f3qmo9f",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Dubai and beyond"
+        },
+        "items": [
+          {
+            "id": "dxb-downtown",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DXB to Downtown Dubai",
+            "titleAr": "من مطار دبي إلى وسط مدينة دبي",
+            "price": "From AED 350",
+            "priceAr": "ابتداءً من 350 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Downtown Dubai"
+          },
+          {
+            "id": "dxb-marina",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DXB to Dubai Marina & JBR",
+            "titleAr": "من مطار دبي إلى دبي مارينا وجميرا بيتش",
+            "price": "From AED 420",
+            "priceAr": "ابتداءً من 420 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Dubai Marina"
+          },
+          {
+            "id": "dwc-palm",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DWC to Palm Jumeirah",
+            "titleAr": "من مطار آل مكتوم إلى نخلة جميرا",
+            "price": "From AED 450",
+            "priceAr": "ابتداءً من 450 درهم",
+            "pickup": "Al Maktoum International Airport (DWC)",
+            "dropoff": "Palm Jumeirah"
+          },
+          {
+            "id": "dubai-abudhabi",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Dubai to Abu Dhabi",
+            "titleAr": "من دبي إلى أبوظبي",
+            "price": "From AED 650",
+            "priceAr": "ابتداءً من 650 درهم",
+            "pickup": "Dubai",
+            "dropoff": "Abu Dhabi"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001422-916enqrxq",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN DUBAI",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001422-hwdq1jbbp",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Dubai.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310001422-ooa8wyl5v",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN DUBAI",
+          "title": "Dubai",
+          "description": "From DXB arrivals to DIFC boardrooms and evening events on the Palm, AB.Limo moves executives, delegations and guests across Dubai in an immaculate black fleet, driven by vetted professional chauffeurs.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Dubai International (DXB)",
+          "dropoffDefault": "DIFC, Gate Avenue",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/hero/B4.jpg.jpeg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310001422-ecomeskan",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE DUBAI FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001422-l3f3qmo9f",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Dubai and beyond"
+        },
+        "items": [
+          {
+            "id": "dxb-downtown",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DXB to Downtown Dubai",
+            "titleAr": "من مطار دبي إلى وسط مدينة دبي",
+            "price": "From AED 350",
+            "priceAr": "ابتداءً من 350 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Downtown Dubai"
+          },
+          {
+            "id": "dxb-marina",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DXB to Dubai Marina & JBR",
+            "titleAr": "من مطار دبي إلى دبي مارينا وجميرا بيتش",
+            "price": "From AED 420",
+            "priceAr": "ابتداءً من 420 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Dubai Marina"
+          },
+          {
+            "id": "dwc-palm",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DWC to Palm Jumeirah",
+            "titleAr": "من مطار آل مكتوم إلى نخلة جميرا",
+            "price": "From AED 450",
+            "priceAr": "ابتداءً من 450 درهم",
+            "pickup": "Al Maktoum International Airport (DWC)",
+            "dropoff": "Palm Jumeirah"
+          },
+          {
+            "id": "dubai-abudhabi",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Dubai to Abu Dhabi",
+            "titleAr": "من دبي إلى أبوظبي",
+            "price": "From AED 650",
+            "priceAr": "ابتداءً من 650 درهم",
+            "pickup": "Dubai",
+            "dropoff": "Abu Dhabi"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001422-916enqrxq",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN DUBAI",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001422-hwdq1jbbp",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Dubai.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310001422-l3yvlm36o",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في دبي",
+          "title": "دبي",
+          "description": "من الوصول في مطار دبي إلى غرف اجتماعات مركز دبي المالي العالمي والفعاليات المسائية في نخلة جميرا، تنقل إيه بي ليمو التنفيذيين والوفود والضيوف في جميع أنحاء دبي بأسطول أسود فخم يقوده سائقون محترفون ومعتمدون.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Dubai International (DXB)",
+          "dropoffDefault": "DIFC, Gate Avenue",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/hero/B4.jpg.jpeg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310001422-pyj0ouuyk",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول دبي",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001422-mj4c5dkwp",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء دبي وخارجها"
+        },
+        "items": [
+          {
+            "id": "dxb-downtown",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DXB to Downtown Dubai",
+            "titleAr": "من مطار دبي إلى وسط مدينة دبي",
+            "price": "From AED 350",
+            "priceAr": "ابتداءً من 350 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Downtown Dubai"
+          },
+          {
+            "id": "dxb-marina",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DXB to Dubai Marina & JBR",
+            "titleAr": "من مطار دبي إلى دبي مارينا وجميرا بيتش",
+            "price": "From AED 420",
+            "priceAr": "ابتداءً من 420 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Dubai Marina"
+          },
+          {
+            "id": "dwc-palm",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DWC to Palm Jumeirah",
+            "titleAr": "من مطار آل مكتوم إلى نخلة جميرا",
+            "price": "From AED 450",
+            "priceAr": "ابتداءً من 450 درهم",
+            "pickup": "Al Maktoum International Airport (DWC)",
+            "dropoff": "Palm Jumeirah"
+          },
+          {
+            "id": "dubai-abudhabi",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Dubai to Abu Dhabi",
+            "titleAr": "من دبي إلى أبوظبي",
+            "price": "From AED 650",
+            "priceAr": "ابتداءً من 650 درهم",
+            "pickup": "Dubai",
+            "dropoff": "Abu Dhabi"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001422-h3u0999vu",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في دبي",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001422-ev09z1s6h",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في دبي.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

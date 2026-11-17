@@ -18,10 +18,22 @@ interface MobileMenuProps {
 export default function MobileMenu({ dict, lang, groups }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
   const nav = dict.header.nav;
 
   const toggleDropdown = (id: string) => {
     setOpenDropdown(openDropdown === id ? null : id);
+    setOpenSubDropdown(null);
+  };
+
+  const toggleSubDropdown = (key: string) => {
+    setOpenSubDropdown(openSubDropdown === key ? null : key);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    setOpenDropdown(null);
+    setOpenSubDropdown(null);
   };
 
   return (
@@ -50,14 +62,14 @@ export default function MobileMenu({ dict, lang, groups }: MobileMenuProps) {
             <Link
               href={`${localeHome(lang)}`}
               className="flex items-center"
-              onClick={() => setIsOpen(false)}
+              onClick={closeMenu}
             >
               <Image src="/AB_LOGO-NEW.png" alt="AB Logo" width={100} height={40} />
             </Link>
             <div className="flex items-center gap-3">
               <LanguageSwitcher currentLang={lang} showOnMobile />
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
                 className="text-gray-300 hover:text-abBlue cursor-pointer p-1"
               >
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +84,7 @@ export default function MobileMenu({ dict, lang, groups }: MobileMenuProps) {
             {/* Home link */}
             <Link
               href={`${localeHome(lang)}`}
-              onClick={() => setIsOpen(false)}
+              onClick={closeMenu}
               className="text-gray-300 hover:text-abBlue text-lg font-medium py-3 border-b border-gray-800 transition-colors"
             >
               {nav.home}
@@ -84,7 +96,7 @@ export default function MobileMenu({ dict, lang, groups }: MobileMenuProps) {
                   <div className="flex items-center justify-between">
                     <Link
                       href={group.href}
-                      onClick={() => setIsOpen(false)}
+                      onClick={closeMenu}
                       className="flex-1 text-gray-300 hover:text-abBlue text-lg font-medium py-3 transition-colors"
                     >
                       {group.label}
@@ -131,16 +143,83 @@ export default function MobileMenu({ dict, lang, groups }: MobileMenuProps) {
                 >
                   <div className="overflow-hidden">
                     <div className="pl-4 pb-2">
-                      {group.items.map((item) => (
-                        <Link
-                          key={item.href + item.label}
-                          href={item.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block py-2.5 text-gray-400 hover:text-abBlue transition-colors"
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
+                      {group.items.map((item) => {
+                        const hasSub = item.items && item.items.length > 0;
+                        if (!hasSub) {
+                          return (
+                            <Link
+                              key={item.href + item.label}
+                              href={item.href}
+                              onClick={closeMenu}
+                              className="block py-2.5 text-gray-400 hover:text-abBlue transition-colors"
+                            >
+                              {item.label}
+                            </Link>
+                          );
+                        }
+
+                        const isSubOpen = openSubDropdown === item.label;
+
+                        return (
+                          <div key={item.href + item.label} className="py-1">
+                            <div className="flex items-center justify-between">
+                              <Link
+                                href={item.href}
+                                onClick={closeMenu}
+                                className="flex-1 py-2 text-gray-300 hover:text-abBlue font-medium transition-colors"
+                              >
+                                {item.label}
+                              </Link>
+                              <button
+                                type="button"
+                                onClick={() => toggleSubDropdown(item.label)}
+                                aria-expanded={isSubOpen}
+                                aria-label={`Toggle ${item.label} cities`}
+                                className="p-2 text-gray-400 hover:text-abBlue cursor-pointer transition-colors"
+                              >
+                                <svg
+                                  className={`w-4 h-4 transition-transform duration-200 ${
+                                    isSubOpen ? "rotate-180" : ""
+                                  }`}
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M19 9l-7 7-7-7"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+
+                            <div
+                              className={`grid transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                                isSubOpen
+                                  ? "grid-rows-[1fr] opacity-100"
+                                  : "grid-rows-[0fr] opacity-0"
+                              }`}
+                            >
+                              <div className="overflow-hidden">
+                                <div className="pl-4 pb-2 border-l border-gray-800 ml-2 space-y-1">
+                                  {item.items!.map((subItem) => (
+                                    <Link
+                                      key={subItem.href + subItem.label}
+                                      href={subItem.href}
+                                      onClick={closeMenu}
+                                      className="block py-1.5 text-sm text-gray-400 hover:text-abBlue transition-colors"
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -152,14 +231,14 @@ export default function MobileMenu({ dict, lang, groups }: MobileMenuProps) {
               <HeaderSocialLinks className="justify-center" />
               <Link
                 href="mailto:hello@ab.limo"
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
                 className="block text-center text-gray-300 hover:text-abBlue text-sm font-medium py-3 border border-gray-700 rounded transition-colors"
               >
                 hello@ab.limo
               </Link>
               <Link
                 href={localeContact(lang)}
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
                 className="block text-center bg-transparent border border-abBlue text-abBlue hover:bg-abBlue hover:border-abBlue hover:text-white px-5 py-3 rounded text-sm font-semibold transition-colors"
               >
                 {nav.bookNow}

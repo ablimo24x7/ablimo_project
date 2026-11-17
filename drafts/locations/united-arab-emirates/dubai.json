@@ -1,0 +1,2334 @@
+{
+  "pageType": "city",
+  "refKey": "united-arab-emirates/dubai",
+  "countrySlug": "united-arab-emirates",
+  "citySlug": "dubai",
+  "path": "/locations/united-arab-emirates/dubai",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for dubai (united-arab-emirates)",
+  "exportedAt": "2026-11-10T11:52:18.053Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538053-iuov12sw8",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Dubai",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service Dubai delivers punctual executive mobility across the city for business executives and delegations. Arriving travellers at Dubai International Airport (DXB) receive direct terminal reception, personal luggage assistance, and private transit to central corporate addresses across Dubai with complete schedule reliability.\n\nFrom DXB arrivals to DIFC boardrooms and evening events on the Palm, AB moves executives, delegations and guests across Dubai in an immaculate black fleet, driven by vetted professional chauffeurs."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-uae-dubai-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Dubai skyline along Sheikh Zayed Road at sunset"
+        }
+      },
+      {
+        "id": "sec-1794311538053-hdok43v6j",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-csd3gh3oi",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Dubai fleet",
+          "heading": "Chauffeur Service Dubai Fleet Classes",
+          "description": "Every vehicle in our Dubai fleet is GPS tracked and detailed before each journey. AB maintains immaculate standards across all vehicle categories to support punctual, comfortable executive mobility throughout Dubai.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "dubai-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image2.jpg",
+            "imageAlt": "Standard sedan executive car in Dubai",
+            "category": "Standard Sedan",
+            "name": "Toyota Camry or similar",
+            "idealFor": "Ideal for: Individual transfers and daily commutes",
+            "description": "Comfortable saloon travel provides efficient city transport for individual business travellers moving between offices. Professional chauffeurs handle busy routes across Dubai with reliable scheduling, quiet cabin workspace, and complete climate control.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image3.jpg",
+            "imageAlt": "Business sedan vehicle in Dubai financial centre",
+            "category": "Business Sedan",
+            "name": "Mercedes E Class or similar",
+            "idealFor": "Ideal for: Executive roadshows and client meetings",
+            "description": "Premium business sedans offer refined comfort and discreet transport for corporate executives. High grade leather seating and dedicated charging ports keep passengers productive between meetings in Dubai financial centres.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image4.jpg",
+            "imageAlt": "First class luxury sedan in Dubai",
+            "category": "First Class Sedan",
+            "name": "Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP transport and diplomatic delegations",
+            "description": "Flagship luxury sedans provide ultimate passenger comfort with extended legroom and acoustic insulation. Experienced private drivers deliver prestige ground mobility for distinguished guests attending major summits across Dubai.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image5.jpg",
+            "imageAlt": "Executive SUV transport in Dubai",
+            "category": "Executive SUV",
+            "name": "Cadillac Escalade, GMC Yukon or similar",
+            "idealFor": "Ideal for: Senior management and family travel",
+            "description": "Spacious luxury utility vehicles deliver commanding road presence, generous luggage capacity, and elevated passenger comfort. The quiet cabin provides abundant room for executive teams or families travelling with substantial luggage.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image6.jpg",
+            "imageAlt": "Premium MPV passenger vehicle in Dubai",
+            "category": "Premium MPV",
+            "name": "Mercedes V Class or similar",
+            "idealFor": "Ideal for: Small delegations and corporate teams",
+            "description": "Conference seating layouts and flexible passenger space allow small groups to collaborate comfortably while on the move. Generous storage compartments easily accommodate multiple large travel bags without crowding passenger legroom.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image7.jpg",
+            "imageAlt": "Executive van group transport in Dubai",
+            "category": "Executive Van",
+            "name": "Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Conference groups and event logistics",
+            "description": "High capacity executive vans provide comfortable group transport for event teams, flight crews, and conference delegations. Reclining individual seats, dedicated climate zones, and ample luggage bays support smooth shared transit.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-o9ezt40r2",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Dubai and beyond",
+          "description": "We provide point to point transfers connecting airport terminals, financial districts and neighbouring emirates with transparent pricing.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "dubai-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DXB to DIFC",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DXB to Dubai Marina",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Dubai to Dubai World Trade Centre",
+            "description": "",
+            "subtext": "Corporate City Rate",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-4",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Dubai to Expo City Dubai",
+            "description": "",
+            "subtext": "Corporate City Rate",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Dubai to Abu Dhabi",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 1.5h",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/dubai/routes/dubai-to-abu-dhabi",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Dubai to Sharjah",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 30m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/dubai/routes/dubai-to-sharjah",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-2k4nn9v74",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Dubai",
+          "heading": "One partner for every movement in Dubai",
+          "description": "AB coordinates complete private ground transport solutions across Dubai for executive travellers, commercial organisations, and international delegations."
+        },
+        "items": [
+          {
+            "id": "dubai-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Dubai",
+            "description": "Dedicated hourly hire and daily executive mobility for corporate leadership.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Dubai",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers DXB & DWC",
+            "description": "Flight-tracked terminal arrivals and departures with meet and greet reception.",
+            "actions": [
+              {
+                "label": "Airport Transfers DXB & DWC",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-3",
+            "icon": "Building2",
+            "title": "Corporate Transportation",
+            "description": "Centralised account management, business roadshows, and recurring executive transport.",
+            "actions": [
+              {
+                "label": "Corporate Transportation",
+                "href": "/corporate-accounts",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-4",
+            "icon": "Calendar",
+            "title": "Event Transportation",
+            "description": "Coordinated fleet staging for international summits, DWTC trade conventions, and VIP motorcades.",
+            "actions": [
+              {
+                "label": "Event Transportation",
+                "href": "/services/event-transportation",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-5",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Dubai",
+            "description": "High-capacity luxury coach and Mercedes V Class van options for groups.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Dubai",
+                "href": "/services/bus-coach-hire",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-s56w3pxib",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Dubai International Airport (DXB)",
+          "description": "Arriving at Dubai International Airport (DXB) requires reliable ground arrangements to navigate busy passenger terminals without unnecessary delays. Dedicated chauffeurs monitor live flight arrival times continuously, adjusting immediately for early arrivals or flight schedule adjustments. Upon landing, guests receive a professional meet and greet service inside the terminal arrivals hall, where the assigned driver displays a clear personalised name board. The driver assists with all luggage before escorting passengers to their vehicle at the designated terminal meeting point. Bookings include complimentary waiting time, allowing ample opportunity to complete customs clearance and luggage collection.",
+          "items": [
+            {
+              "id": "dubai-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Automated real-time monitoring for every commercial arrival."
+            },
+            {
+              "id": "dubai-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Professional reception inside the terminal arrivals hall with custom digital name board."
+            },
+            {
+              "id": "dubai-apt-b-3",
+              "icon": "Clock",
+              "heading": "DXB to DIFC",
+              "description": "Swift 15-20 minute direct city transfer."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-dubai-images/image8.jpg",
+          "backgroundAlt": "Chauffeur meeting an executive passenger at Dubai International Airport DXB"
+        }
+      },
+      {
+        "id": "sec-1794311538053-ql61llkdq",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-u18ee7ur1",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Dubai",
+          "description": "AB provides comprehensive operational coverage throughout all central districts, commercial centres, and major venues across the emirate. Our chauffeurs navigate high density business clusters and leisure destinations with professional local route knowledge.",
+          "items": [
+            {
+              "id": "dubai-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "DIFC, Downtown Dubai, Business Bay executive offices and commercial headquarters"
+            },
+            {
+              "id": "dubai-cov-2",
+              "icon": "Calendar",
+              "heading": "Events",
+              "description": "DWTC, Expo City Dubai, Madinat Jumeirah conference halls and international venues"
+            },
+            {
+              "id": "dubai-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Palm Jumeirah, Dubai Marina, Al Fahidi historical district and waterfront promenades"
+            },
+            {
+              "id": "dubai-cov-4",
+              "icon": "Shield",
+              "heading": "Industry and tech",
+              "description": "JAFZA, Silicon Oasis, Dubai Internet City technology parks and logistics centres"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-dubai-images/image9.jpg",
+          "backgroundAlt": "Business district highway traffic in Dubai near financial towers"
+        }
+      },
+      {
+        "id": "sec-1794311538053-93mcq2lkv",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Dubai",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-np27lbk4c",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB Chauffeur Service Dubai Regional Office",
+          "description": "AB maintains an active local operational office in Dubai to supervise vehicle quality, driver schedules, and corporate account coordination. Supported by central 24/7 dispatch from headquarters in Riyadh, our Dubai office manages regional transport logistics across the northern emirates.",
+          "items": [
+            {
+              "id": "dubai-hq-1",
+              "icon": "Map",
+              "heading": "AB Dubai (Regional Hub)",
+              "description": "Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE"
+            },
+            {
+              "id": "dubai-hq-2",
+              "icon": "Phone",
+              "heading": "+971 50 781 3880",
+              "description": "24/7 central dispatch and reservations"
+            },
+            {
+              "id": "dubai-hq-3",
+              "icon": "Map",
+              "heading": "AB Abu Dhabi (Capital Branch)",
+              "description": "Office 03, Mezzanine Floor, Building C57, Abu Dhabi, UAE"
+            },
+            {
+              "id": "dubai-hq-4",
+              "icon": "Phone",
+              "heading": "+971 50 918 0556",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Suite+206,+DBC+Building,+Al+Khabaisi,+Deira,+Dubai,+UAE",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538053-xepmn4rkg",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur Service Dubai: Your Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538053-ei76qo1nq",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Dubai.",
+          "description": "Contact our 24/7 operations dispatch team directly on +971 50 781 3880 or +971 50 918 0556 to reserve your chauffeur service Dubai or coordinate complex corporate passenger transport schedules throughout Dubai.",
+          "subheading": "Reserve your executive journey",
+          "subdescription": "Select your vehicle category online or contact our regional operations desk to arrange managed corporate transport across the emirates."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538053-iuov12sw8",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Dubai",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service Dubai delivers punctual executive mobility across the city for business executives and delegations. Arriving travellers at Dubai International Airport (DXB) receive direct terminal reception, personal luggage assistance, and private transit to central corporate addresses across Dubai with complete schedule reliability.\n\nFrom DXB arrivals to DIFC boardrooms and evening events on the Palm, AB moves executives, delegations and guests across Dubai in an immaculate black fleet, driven by vetted professional chauffeurs."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-uae-dubai-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Dubai skyline along Sheikh Zayed Road at sunset"
+        }
+      },
+      {
+        "id": "sec-1794311538053-hdok43v6j",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-csd3gh3oi",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Dubai fleet",
+          "heading": "Chauffeur Service Dubai Fleet Classes",
+          "description": "Every vehicle in our Dubai fleet is GPS tracked and detailed before each journey. AB maintains immaculate standards across all vehicle categories to support punctual, comfortable executive mobility throughout Dubai.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "dubai-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image2.jpg",
+            "imageAlt": "Standard sedan executive car in Dubai",
+            "category": "Standard Sedan",
+            "name": "Toyota Camry or similar",
+            "idealFor": "Ideal for: Individual transfers and daily commutes",
+            "description": "Comfortable saloon travel provides efficient city transport for individual business travellers moving between offices. Professional chauffeurs handle busy routes across Dubai with reliable scheduling, quiet cabin workspace, and complete climate control.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image3.jpg",
+            "imageAlt": "Business sedan vehicle in Dubai financial centre",
+            "category": "Business Sedan",
+            "name": "Mercedes E Class or similar",
+            "idealFor": "Ideal for: Executive roadshows and client meetings",
+            "description": "Premium business sedans offer refined comfort and discreet transport for corporate executives. High grade leather seating and dedicated charging ports keep passengers productive between meetings in Dubai financial centres.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image4.jpg",
+            "imageAlt": "First class luxury sedan in Dubai",
+            "category": "First Class Sedan",
+            "name": "Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP transport and diplomatic delegations",
+            "description": "Flagship luxury sedans provide ultimate passenger comfort with extended legroom and acoustic insulation. Experienced private drivers deliver prestige ground mobility for distinguished guests attending major summits across Dubai.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image5.jpg",
+            "imageAlt": "Executive SUV transport in Dubai",
+            "category": "Executive SUV",
+            "name": "Cadillac Escalade, GMC Yukon or similar",
+            "idealFor": "Ideal for: Senior management and family travel",
+            "description": "Spacious luxury utility vehicles deliver commanding road presence, generous luggage capacity, and elevated passenger comfort. The quiet cabin provides abundant room for executive teams or families travelling with substantial luggage.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image6.jpg",
+            "imageAlt": "Premium MPV passenger vehicle in Dubai",
+            "category": "Premium MPV",
+            "name": "Mercedes V Class or similar",
+            "idealFor": "Ideal for: Small delegations and corporate teams",
+            "description": "Conference seating layouts and flexible passenger space allow small groups to collaborate comfortably while on the move. Generous storage compartments easily accommodate multiple large travel bags without crowding passenger legroom.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image7.jpg",
+            "imageAlt": "Executive van group transport in Dubai",
+            "category": "Executive Van",
+            "name": "Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Conference groups and event logistics",
+            "description": "High capacity executive vans provide comfortable group transport for event teams, flight crews, and conference delegations. Reclining individual seats, dedicated climate zones, and ample luggage bays support smooth shared transit.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-o9ezt40r2",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Dubai and beyond",
+          "description": "We provide point to point transfers connecting airport terminals, financial districts and neighbouring emirates with transparent pricing.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "dubai-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DXB to DIFC",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DXB to Dubai Marina",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Dubai to Dubai World Trade Centre",
+            "description": "",
+            "subtext": "Corporate City Rate",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-4",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Dubai to Expo City Dubai",
+            "description": "",
+            "subtext": "Corporate City Rate",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Dubai to Abu Dhabi",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 1.5h",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/dubai/routes/dubai-to-abu-dhabi",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Dubai to Sharjah",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 30m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/dubai/routes/dubai-to-sharjah",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-2k4nn9v74",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Dubai",
+          "heading": "One partner for every movement in Dubai",
+          "description": "AB coordinates complete private ground transport solutions across Dubai for executive travellers, commercial organisations, and international delegations."
+        },
+        "items": [
+          {
+            "id": "dubai-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Dubai",
+            "description": "Dedicated hourly hire and daily executive mobility for corporate leadership.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Dubai",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers DXB & DWC",
+            "description": "Flight-tracked terminal arrivals and departures with meet and greet reception.",
+            "actions": [
+              {
+                "label": "Airport Transfers DXB & DWC",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-3",
+            "icon": "Building2",
+            "title": "Corporate Transportation",
+            "description": "Centralised account management, business roadshows, and recurring executive transport.",
+            "actions": [
+              {
+                "label": "Corporate Transportation",
+                "href": "/corporate-accounts",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-4",
+            "icon": "Calendar",
+            "title": "Event Transportation",
+            "description": "Coordinated fleet staging for international summits, DWTC trade conventions, and VIP motorcades.",
+            "actions": [
+              {
+                "label": "Event Transportation",
+                "href": "/services/event-transportation",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-5",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Dubai",
+            "description": "High-capacity luxury coach and Mercedes V Class van options for groups.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Dubai",
+                "href": "/services/bus-coach-hire",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-s56w3pxib",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Dubai International Airport (DXB)",
+          "description": "Arriving at Dubai International Airport (DXB) requires reliable ground arrangements to navigate busy passenger terminals without unnecessary delays. Dedicated chauffeurs monitor live flight arrival times continuously, adjusting immediately for early arrivals or flight schedule adjustments. Upon landing, guests receive a professional meet and greet service inside the terminal arrivals hall, where the assigned driver displays a clear personalised name board. The driver assists with all luggage before escorting passengers to their vehicle at the designated terminal meeting point. Bookings include complimentary waiting time, allowing ample opportunity to complete customs clearance and luggage collection.",
+          "items": [
+            {
+              "id": "dubai-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Automated real-time monitoring for every commercial arrival."
+            },
+            {
+              "id": "dubai-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Professional reception inside the terminal arrivals hall with custom digital name board."
+            },
+            {
+              "id": "dubai-apt-b-3",
+              "icon": "Clock",
+              "heading": "DXB to DIFC",
+              "description": "Swift 15-20 minute direct city transfer."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-dubai-images/image8.jpg",
+          "backgroundAlt": "Chauffeur meeting an executive passenger at Dubai International Airport DXB"
+        }
+      },
+      {
+        "id": "sec-1794311538053-ql61llkdq",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-u18ee7ur1",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Dubai",
+          "description": "AB provides comprehensive operational coverage throughout all central districts, commercial centres, and major venues across the emirate. Our chauffeurs navigate high density business clusters and leisure destinations with professional local route knowledge.",
+          "items": [
+            {
+              "id": "dubai-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "DIFC, Downtown Dubai, Business Bay executive offices and commercial headquarters"
+            },
+            {
+              "id": "dubai-cov-2",
+              "icon": "Calendar",
+              "heading": "Events",
+              "description": "DWTC, Expo City Dubai, Madinat Jumeirah conference halls and international venues"
+            },
+            {
+              "id": "dubai-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Palm Jumeirah, Dubai Marina, Al Fahidi historical district and waterfront promenades"
+            },
+            {
+              "id": "dubai-cov-4",
+              "icon": "Shield",
+              "heading": "Industry and tech",
+              "description": "JAFZA, Silicon Oasis, Dubai Internet City technology parks and logistics centres"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-dubai-images/image9.jpg",
+          "backgroundAlt": "Business district highway traffic in Dubai near financial towers"
+        }
+      },
+      {
+        "id": "sec-1794311538053-93mcq2lkv",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Dubai",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-np27lbk4c",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB Chauffeur Service Dubai Regional Office",
+          "description": "AB maintains an active local operational office in Dubai to supervise vehicle quality, driver schedules, and corporate account coordination. Supported by central 24/7 dispatch from headquarters in Riyadh, our Dubai office manages regional transport logistics across the northern emirates.",
+          "items": [
+            {
+              "id": "dubai-hq-1",
+              "icon": "Map",
+              "heading": "AB Dubai (Regional Hub)",
+              "description": "Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE"
+            },
+            {
+              "id": "dubai-hq-2",
+              "icon": "Phone",
+              "heading": "+971 50 781 3880",
+              "description": "24/7 central dispatch and reservations"
+            },
+            {
+              "id": "dubai-hq-3",
+              "icon": "Map",
+              "heading": "AB Abu Dhabi (Capital Branch)",
+              "description": "Office 03, Mezzanine Floor, Building C57, Abu Dhabi, UAE"
+            },
+            {
+              "id": "dubai-hq-4",
+              "icon": "Phone",
+              "heading": "+971 50 918 0556",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Suite+206,+DBC+Building,+Al+Khabaisi,+Deira,+Dubai,+UAE",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538053-xepmn4rkg",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur Service Dubai: Your Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538053-ei76qo1nq",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Dubai.",
+          "description": "Contact our 24/7 operations dispatch team directly on +971 50 781 3880 or +971 50 918 0556 to reserve your chauffeur service Dubai or coordinate complex corporate passenger transport schedules throughout Dubai.",
+          "subheading": "Reserve your executive journey",
+          "subdescription": "Select your vehicle category online or contact our regional operations desk to arrange managed corporate transport across the emirates."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538053-hb0igsggn",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Dubai",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service Dubai delivers punctual executive mobility across the city for business executives and delegations. Arriving travellers at Dubai International Airport (DXB) receive direct terminal reception, personal luggage assistance, and private transit to central corporate addresses across Dubai with complete schedule reliability.\n\nFrom DXB arrivals to DIFC boardrooms and evening events on the Palm, AB moves executives, delegations and guests across Dubai in an immaculate black fleet, driven by vetted professional chauffeurs."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-uae-dubai-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Dubai skyline along Sheikh Zayed Road at sunset"
+        }
+      },
+      {
+        "id": "sec-1794311538053-zbv0hvjzd",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-tv6kovbjx",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Dubai fleet",
+          "heading": "Chauffeur Service Dubai Fleet Classes",
+          "description": "Every vehicle in our Dubai fleet is GPS tracked and detailed before each journey. AB maintains immaculate standards across all vehicle categories to support punctual, comfortable executive mobility throughout Dubai.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "dubai-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image2.jpg",
+            "imageAlt": "Standard sedan executive car in Dubai",
+            "category": "Standard Sedan",
+            "name": "Toyota Camry or similar",
+            "idealFor": "Ideal for: Individual transfers and daily commutes",
+            "description": "Comfortable saloon travel provides efficient city transport for individual business travellers moving between offices. Professional chauffeurs handle busy routes across Dubai with reliable scheduling, quiet cabin workspace, and complete climate control.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image3.jpg",
+            "imageAlt": "Business sedan vehicle in Dubai financial centre",
+            "category": "Business Sedan",
+            "name": "Mercedes E Class or similar",
+            "idealFor": "Ideal for: Executive roadshows and client meetings",
+            "description": "Premium business sedans offer refined comfort and discreet transport for corporate executives. High grade leather seating and dedicated charging ports keep passengers productive between meetings in Dubai financial centres.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image4.jpg",
+            "imageAlt": "First class luxury sedan in Dubai",
+            "category": "First Class Sedan",
+            "name": "Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP transport and diplomatic delegations",
+            "description": "Flagship luxury sedans provide ultimate passenger comfort with extended legroom and acoustic insulation. Experienced private drivers deliver prestige ground mobility for distinguished guests attending major summits across Dubai.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image5.jpg",
+            "imageAlt": "Executive SUV transport in Dubai",
+            "category": "Executive SUV",
+            "name": "Cadillac Escalade, GMC Yukon or similar",
+            "idealFor": "Ideal for: Senior management and family travel",
+            "description": "Spacious luxury utility vehicles deliver commanding road presence, generous luggage capacity, and elevated passenger comfort. The quiet cabin provides abundant room for executive teams or families travelling with substantial luggage.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image6.jpg",
+            "imageAlt": "Premium MPV passenger vehicle in Dubai",
+            "category": "Premium MPV",
+            "name": "Mercedes V Class or similar",
+            "idealFor": "Ideal for: Small delegations and corporate teams",
+            "description": "Conference seating layouts and flexible passenger space allow small groups to collaborate comfortably while on the move. Generous storage compartments easily accommodate multiple large travel bags without crowding passenger legroom.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "dubai-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-dubai-images/image7.jpg",
+            "imageAlt": "Executive van group transport in Dubai",
+            "category": "Executive Van",
+            "name": "Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Conference groups and event logistics",
+            "description": "High capacity executive vans provide comfortable group transport for event teams, flight crews, and conference delegations. Reclining individual seats, dedicated climate zones, and ample luggage bays support smooth shared transit.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-9wdyf9rq8",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Dubai and beyond",
+          "description": "We provide point to point transfers connecting airport terminals, financial districts and neighbouring emirates with transparent pricing.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "dubai-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DXB to DIFC",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DXB to Dubai Marina",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Dubai to Dubai World Trade Centre",
+            "description": "",
+            "subtext": "Corporate City Rate",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-4",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Dubai to Expo City Dubai",
+            "description": "",
+            "subtext": "Corporate City Rate",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Dubai to Abu Dhabi",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 1.5h",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/dubai/routes/dubai-to-abu-dhabi",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Dubai to Sharjah",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 30m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/dubai/routes/dubai-to-sharjah",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-5jyvubhhc",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Dubai",
+          "heading": "One partner for every movement in Dubai",
+          "description": "AB coordinates complete private ground transport solutions across Dubai for executive travellers, commercial organisations, and international delegations."
+        },
+        "items": [
+          {
+            "id": "dubai-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Dubai",
+            "description": "Dedicated hourly hire and daily executive mobility for corporate leadership.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Dubai",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers DXB & DWC",
+            "description": "Flight-tracked terminal arrivals and departures with meet and greet reception.",
+            "actions": [
+              {
+                "label": "Airport Transfers DXB & DWC",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-3",
+            "icon": "Building2",
+            "title": "Corporate Transportation",
+            "description": "Centralised account management, business roadshows, and recurring executive transport.",
+            "actions": [
+              {
+                "label": "Corporate Transportation",
+                "href": "/corporate-accounts",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-4",
+            "icon": "Calendar",
+            "title": "Event Transportation",
+            "description": "Coordinated fleet staging for international summits, DWTC trade conventions, and VIP motorcades.",
+            "actions": [
+              {
+                "label": "Event Transportation",
+                "href": "/services/event-transportation",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "dubai-svc-5",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Dubai",
+            "description": "High-capacity luxury coach and Mercedes V Class van options for groups.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Dubai",
+                "href": "/services/bus-coach-hire",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-o9l9igjyy",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Dubai International Airport (DXB)",
+          "description": "Arriving at Dubai International Airport (DXB) requires reliable ground arrangements to navigate busy passenger terminals without unnecessary delays. Dedicated chauffeurs monitor live flight arrival times continuously, adjusting immediately for early arrivals or flight schedule adjustments. Upon landing, guests receive a professional meet and greet service inside the terminal arrivals hall, where the assigned driver displays a clear personalised name board. The driver assists with all luggage before escorting passengers to their vehicle at the designated terminal meeting point. Bookings include complimentary waiting time, allowing ample opportunity to complete customs clearance and luggage collection.",
+          "items": [
+            {
+              "id": "dubai-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Automated real-time monitoring for every commercial arrival."
+            },
+            {
+              "id": "dubai-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Professional reception inside the terminal arrivals hall with custom digital name board."
+            },
+            {
+              "id": "dubai-apt-b-3",
+              "icon": "Clock",
+              "heading": "DXB to DIFC",
+              "description": "Swift 15-20 minute direct city transfer."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-dubai-images/image8.jpg",
+          "backgroundAlt": "Chauffeur meeting an executive passenger at Dubai International Airport DXB"
+        }
+      },
+      {
+        "id": "sec-1794311538053-ou0huo14n",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-4jvds6vjt",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Dubai",
+          "description": "AB provides comprehensive operational coverage throughout all central districts, commercial centres, and major venues across the emirate. Our chauffeurs navigate high density business clusters and leisure destinations with professional local route knowledge.",
+          "items": [
+            {
+              "id": "dubai-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "DIFC, Downtown Dubai, Business Bay executive offices and commercial headquarters"
+            },
+            {
+              "id": "dubai-cov-2",
+              "icon": "Calendar",
+              "heading": "Events",
+              "description": "DWTC, Expo City Dubai, Madinat Jumeirah conference halls and international venues"
+            },
+            {
+              "id": "dubai-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Palm Jumeirah, Dubai Marina, Al Fahidi historical district and waterfront promenades"
+            },
+            {
+              "id": "dubai-cov-4",
+              "icon": "Shield",
+              "heading": "Industry and tech",
+              "description": "JAFZA, Silicon Oasis, Dubai Internet City technology parks and logistics centres"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-dubai-images/image9.jpg",
+          "backgroundAlt": "Business district highway traffic in Dubai near financial towers"
+        }
+      },
+      {
+        "id": "sec-1794311538053-2wtfx2m8g",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Dubai",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538053-fcd8hcdik",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB Chauffeur Service Dubai Regional Office",
+          "description": "AB maintains an active local operational office in Dubai to supervise vehicle quality, driver schedules, and corporate account coordination. Supported by central 24/7 dispatch from headquarters in Riyadh, our Dubai office manages regional transport logistics across the northern emirates.",
+          "items": [
+            {
+              "id": "dubai-hq-1",
+              "icon": "Map",
+              "heading": "AB Dubai (Regional Hub)",
+              "description": "Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE"
+            },
+            {
+              "id": "dubai-hq-2",
+              "icon": "Phone",
+              "heading": "+971 50 781 3880",
+              "description": "24/7 central dispatch and reservations"
+            },
+            {
+              "id": "dubai-hq-3",
+              "icon": "Map",
+              "heading": "AB Abu Dhabi (Capital Branch)",
+              "description": "Office 03, Mezzanine Floor, Building C57, Abu Dhabi, UAE"
+            },
+            {
+              "id": "dubai-hq-4",
+              "icon": "Phone",
+              "heading": "+971 50 918 0556",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Suite+206,+DBC+Building,+Al+Khabaisi,+Deira,+Dubai,+UAE",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538053-1jhmefbvb",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur Service Dubai: Your Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538053-15fsgjb14",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Dubai.",
+          "description": "Contact our 24/7 operations dispatch team directly on +971 50 781 3880 or +971 50 918 0556 to reserve your chauffeur service Dubai or coordinate complex corporate passenger transport schedules throughout Dubai.",
+          "subheading": "Reserve your executive journey",
+          "subdescription": "Select your vehicle category online or contact our regional operations desk to arrange managed corporate transport across the emirates."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

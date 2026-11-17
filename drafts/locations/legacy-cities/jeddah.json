@@ -1,0 +1,2382 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/jeddah",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "jeddah",
+  "path": "/locations/saudi-arabia/jeddah",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for jeddah (saudi-arabia)",
+  "exportedAt": "2026-11-10T11:52:18.041Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538041-cg9pkd36r",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Jeddah",
+          "titleHighlight": "",
+          "description": "AB provides executive chauffeur service Jeddah solutions connecting King Abdulaziz International Airport (JED) to commercial districts, luxury coastal resorts and major regional hubs. Every itinerary across Jeddah receives central flight tracking, licensed chauffeurs and continuous operational oversight from our central dispatch team.\n\nCorporate travellers, executive delegations and private clients rely on our immaculately prepared fleet for timely city transfers, full day hires and regional journeys along the Red Sea coast."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Chauffeur service Jeddah luxury transport against the Jeddah coastal skyline"
+        }
+      },
+      {
+        "id": "sec-1794311538041-bxe6h9shz",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-boeds8lc5",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Jeddah fleet",
+          "heading": "Choose your Jeddah chauffeur class",
+          "description": "Every vehicle in our Jeddah fleet is GPS tracked and detailed before each journey. AB manages rigorous maintenance schedules, comprehensive commercial passenger insurance and vetted chauffeurs to support flawless itineraries across the Kingdom.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "jeddah-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image2.jpg",
+            "imageAlt": "Standard sedan chauffeur service Jeddah vehicle",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Avalon or similar [Confirm]",
+            "idealFor": "Ideal for everyday executive city travel",
+            "description": "Comfortable standard saloon travel designed for individual business travellers and daily point to point transfers through central Jeddah corporate corridors.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image3.jpg",
+            "imageAlt": "Business sedan private driver Jeddah vehicle",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class, BMW 5 Series or similar [Confirm]",
+            "idealFor": "Ideal for corporate roadshows and executives",
+            "description": "Premium business comfort offering quiet interiors, leather seating and device charging for visiting management teams moving across commercial Jeddah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image4.jpg",
+            "imageAlt": "First class luxury car limousine service Jeddah",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class, BMW 7 Series or similar [Confirm]",
+            "idealFor": "Ideal for diplomatic and VIP hospitality",
+            "description": "The premier tier of ground transport, delivering whisper quiet ride comfort and prestige for dignitaries attending high level summits in Jeddah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service in Jeddah",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for executive delegations and families",
+            "description": "Commanding presence and generous cabin volume, providing ample luggage capacity for long journeys and delegations arriving through the international terminal.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image6.jpg",
+            "imageAlt": "Premium MPV private driver Jeddah group travel",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for mobile meetings and conferences",
+            "description": "Versatile face to face conference seating configurations that allow corporate teams to conduct productive working discussions between venues across the city.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image7.jpg",
+            "imageAlt": "Executive van passenger transport in Jeddah",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for large delegate group movements",
+            "description": "Spacious group passenger charter for summit support, international sporting entourages and event personnel coordinating complex logistics across Jeddah.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-7gyi6mk0f",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Jeddah and beyond",
+          "description": "AB coordinates seamless terminal pickups, city business transfers and scheduled long distance regional routes departing from the coastal city.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "jeddah-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "JED to Jeddah Corniche",
+            "description": "Direct transfer from King Abdulaziz International Airport (JED) to luxury hotels, resorts and commercial residences along the scenic waterfront boulevard.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "JED to Al Balad",
+            "description": "Executive transit from arrivals directly to the historic coral stone heritage quarter and vibrant southern commercial districts.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Jeddah to Jeddah Superdome",
+            "description": "Punctual venue access for large scale trade exhibitions, consumer expos and major international sporting entertainment events.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to Makkah",
+            "description": "Specialised pilgrimage and VIP transfer service operating along the direct expressway corridor to central religious hospitality properties.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/jeddah/routes/jeddah-to-mecca",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to Madinah",
+            "description": "Comfortable long distance highway transit connecting coastal corporate bases with religious sites and regional commercial centres.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/jeddah/routes/jeddah-to-medina",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to Taif",
+            "description": "Scenic regional transit climbing the Sarawat mountain range toward government facilities, agriculture centres and highland resorts.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-7",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to King Abdullah Economic City",
+            "description": "Direct executive transport serving industrial port zones, corporate headquarters and coastal hospitality projects in KAEC.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-12xol83n8",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Jeddah",
+          "heading": "One partner for every movement in Jeddah",
+          "description": "AB delivers comprehensive ground transport programmes tailored for corporate organisations, government delegations, event planners and discerning private guests across Saudi Arabia."
+        },
+        "items": [
+          {
+            "id": "jeddah-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in Jeddah",
+            "description": "Chauffeur & VIP in Jeddah",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Jeddah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers in Jeddah",
+            "description": "Airport Transfers in Jeddah",
+            "actions": [
+              {
+                "label": "Airport Transfers in Jeddah",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-3",
+            "icon": "Briefcase",
+            "title": "Corporate Transportation in Jeddah",
+            "description": "Corporate Transportation in Jeddah",
+            "actions": [
+              {
+                "label": "Corporate Transportation in Jeddah",
+                "href": "/services/corporate-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-4",
+            "icon": "Users",
+            "title": "Event Transportation in Jeddah",
+            "description": "Event Transportation in Jeddah",
+            "actions": [
+              {
+                "label": "Event Transportation in Jeddah",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-5",
+            "icon": "Shield",
+            "title": "Bus & Coach Hire in Jeddah",
+            "description": "Bus & Coach Hire in Jeddah",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Jeddah",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-6",
+            "icon": "Map",
+            "title": "Tourism Transportation in Jeddah",
+            "description": "Tourism Transportation in Jeddah",
+            "actions": [
+              {
+                "label": "Tourism Transportation in Jeddah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-e3s3wlhbd",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Abdulaziz International Airport (JED)",
+          "description": "Navigating arrival at King Abdulaziz International Airport (JED) is straightforward with our managed meet and greet protocol. Chauffeurs monitor incoming flights through active commercial tracking systems, adjusting for schedule revisions or gate holds automatically. After clearing customs, guests find their uniformed chauffeur holding an AB branded name board at the designated terminal meeting point [Confirm]. Complimenting the service is free waiting time [Confirm], allowing unhurried baggage reclaim and smooth transition directly to your waiting vehicle outside the terminal doors.",
+          "items": [
+            {
+              "id": "jeddah-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "jeddah-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "jeddah-apt-b-3",
+              "icon": "Clock",
+              "heading": "JED to Jeddah Corniche",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Abdulaziz International Airport (JED)"
+        }
+      },
+      {
+        "id": "sec-1794311538041-553d0fmki",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-nphexy1y1",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Jeddah",
+          "description": "AB provides licensed, GPS tracked vehicle coverage throughout all key commercial, industrial and cultural zones in metropolitan Jeddah. Our drivers navigate dense city streets, coastal avenues and major transport links with seasoned operational expertise.",
+          "items": [
+            {
+              "id": "jeddah-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Al Andalus District · Al Zahra District · Prince Sultan Street Corridor"
+            },
+            {
+              "id": "jeddah-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Jeddah Superdome · Jeddah Centre for Forums and Events · Jeddah Corniche Circuit"
+            },
+            {
+              "id": "jeddah-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Al Balad Historic District · Jeddah Waterfront Corniche · Red Sea Mall"
+            },
+            {
+              "id": "jeddah-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Jeddah Islamic Port · Industrial City One · Al Ruwais Government District"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Jeddah"
+        }
+      },
+      {
+        "id": "sec-1794311538041-gyoln75ln",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Jeddah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-arxoku7ju",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB Ground Transportation Support for Jeddah",
+          "description": "AB delivers reliable chauffeur service Jeddah coverage coordinated directly through our central Riyadh operations centre and twenty four hour dispatch facility. Continuous real time monitoring and local fleet dispatch support executive movements throughout the Western Province without delay.",
+          "items": [
+            {
+              "id": "jeddah-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters and 24/7 dispatch [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "jeddah-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538041-m5i4v6rrd",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Jeddah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538041-qw5f9c2jx",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jeddah.",
+          "description": "Experience reliable executive chauffeur service Jeddah support with twenty four hour dispatch, vetted professional drivers and premium vehicles across the Western Province. Contact our central operations desk at +966 58 111 8720 to confirm your transfer schedule.",
+          "subheading": "Reserve your Jeddah executive vehicle",
+          "subdescription": "Submit your travel schedule or request a bespoke corporate transport contract for upcoming corporate delegations and VIP events in Jeddah."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538041-cg9pkd36r",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Jeddah",
+          "titleHighlight": "",
+          "description": "AB provides executive chauffeur service Jeddah solutions connecting King Abdulaziz International Airport (JED) to commercial districts, luxury coastal resorts and major regional hubs. Every itinerary across Jeddah receives central flight tracking, licensed chauffeurs and continuous operational oversight from our central dispatch team.\n\nCorporate travellers, executive delegations and private clients rely on our immaculately prepared fleet for timely city transfers, full day hires and regional journeys along the Red Sea coast."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Chauffeur service Jeddah luxury transport against the Jeddah coastal skyline"
+        }
+      },
+      {
+        "id": "sec-1794311538041-bxe6h9shz",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-boeds8lc5",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Jeddah fleet",
+          "heading": "Choose your Jeddah chauffeur class",
+          "description": "Every vehicle in our Jeddah fleet is GPS tracked and detailed before each journey. AB manages rigorous maintenance schedules, comprehensive commercial passenger insurance and vetted chauffeurs to support flawless itineraries across the Kingdom.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "jeddah-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image2.jpg",
+            "imageAlt": "Standard sedan chauffeur service Jeddah vehicle",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Avalon or similar [Confirm]",
+            "idealFor": "Ideal for everyday executive city travel",
+            "description": "Comfortable standard saloon travel designed for individual business travellers and daily point to point transfers through central Jeddah corporate corridors.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image3.jpg",
+            "imageAlt": "Business sedan private driver Jeddah vehicle",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class, BMW 5 Series or similar [Confirm]",
+            "idealFor": "Ideal for corporate roadshows and executives",
+            "description": "Premium business comfort offering quiet interiors, leather seating and device charging for visiting management teams moving across commercial Jeddah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image4.jpg",
+            "imageAlt": "First class luxury car limousine service Jeddah",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class, BMW 7 Series or similar [Confirm]",
+            "idealFor": "Ideal for diplomatic and VIP hospitality",
+            "description": "The premier tier of ground transport, delivering whisper quiet ride comfort and prestige for dignitaries attending high level summits in Jeddah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service in Jeddah",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for executive delegations and families",
+            "description": "Commanding presence and generous cabin volume, providing ample luggage capacity for long journeys and delegations arriving through the international terminal.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image6.jpg",
+            "imageAlt": "Premium MPV private driver Jeddah group travel",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for mobile meetings and conferences",
+            "description": "Versatile face to face conference seating configurations that allow corporate teams to conduct productive working discussions between venues across the city.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image7.jpg",
+            "imageAlt": "Executive van passenger transport in Jeddah",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for large delegate group movements",
+            "description": "Spacious group passenger charter for summit support, international sporting entourages and event personnel coordinating complex logistics across Jeddah.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-7gyi6mk0f",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Jeddah and beyond",
+          "description": "AB coordinates seamless terminal pickups, city business transfers and scheduled long distance regional routes departing from the coastal city.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "jeddah-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "JED to Jeddah Corniche",
+            "description": "Direct transfer from King Abdulaziz International Airport (JED) to luxury hotels, resorts and commercial residences along the scenic waterfront boulevard.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "JED to Al Balad",
+            "description": "Executive transit from arrivals directly to the historic coral stone heritage quarter and vibrant southern commercial districts.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Jeddah to Jeddah Superdome",
+            "description": "Punctual venue access for large scale trade exhibitions, consumer expos and major international sporting entertainment events.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to Makkah",
+            "description": "Specialised pilgrimage and VIP transfer service operating along the direct expressway corridor to central religious hospitality properties.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/jeddah/routes/jeddah-to-mecca",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to Madinah",
+            "description": "Comfortable long distance highway transit connecting coastal corporate bases with religious sites and regional commercial centres.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/jeddah/routes/jeddah-to-medina",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to Taif",
+            "description": "Scenic regional transit climbing the Sarawat mountain range toward government facilities, agriculture centres and highland resorts.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-7",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to King Abdullah Economic City",
+            "description": "Direct executive transport serving industrial port zones, corporate headquarters and coastal hospitality projects in KAEC.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-12xol83n8",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Jeddah",
+          "heading": "One partner for every movement in Jeddah",
+          "description": "AB delivers comprehensive ground transport programmes tailored for corporate organisations, government delegations, event planners and discerning private guests across Saudi Arabia."
+        },
+        "items": [
+          {
+            "id": "jeddah-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in Jeddah",
+            "description": "Chauffeur & VIP in Jeddah",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Jeddah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers in Jeddah",
+            "description": "Airport Transfers in Jeddah",
+            "actions": [
+              {
+                "label": "Airport Transfers in Jeddah",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-3",
+            "icon": "Briefcase",
+            "title": "Corporate Transportation in Jeddah",
+            "description": "Corporate Transportation in Jeddah",
+            "actions": [
+              {
+                "label": "Corporate Transportation in Jeddah",
+                "href": "/services/corporate-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-4",
+            "icon": "Users",
+            "title": "Event Transportation in Jeddah",
+            "description": "Event Transportation in Jeddah",
+            "actions": [
+              {
+                "label": "Event Transportation in Jeddah",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-5",
+            "icon": "Shield",
+            "title": "Bus & Coach Hire in Jeddah",
+            "description": "Bus & Coach Hire in Jeddah",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Jeddah",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-6",
+            "icon": "Map",
+            "title": "Tourism Transportation in Jeddah",
+            "description": "Tourism Transportation in Jeddah",
+            "actions": [
+              {
+                "label": "Tourism Transportation in Jeddah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-e3s3wlhbd",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Abdulaziz International Airport (JED)",
+          "description": "Navigating arrival at King Abdulaziz International Airport (JED) is straightforward with our managed meet and greet protocol. Chauffeurs monitor incoming flights through active commercial tracking systems, adjusting for schedule revisions or gate holds automatically. After clearing customs, guests find their uniformed chauffeur holding an AB branded name board at the designated terminal meeting point [Confirm]. Complimenting the service is free waiting time [Confirm], allowing unhurried baggage reclaim and smooth transition directly to your waiting vehicle outside the terminal doors.",
+          "items": [
+            {
+              "id": "jeddah-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "jeddah-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "jeddah-apt-b-3",
+              "icon": "Clock",
+              "heading": "JED to Jeddah Corniche",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Abdulaziz International Airport (JED)"
+        }
+      },
+      {
+        "id": "sec-1794311538041-553d0fmki",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-nphexy1y1",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Jeddah",
+          "description": "AB provides licensed, GPS tracked vehicle coverage throughout all key commercial, industrial and cultural zones in metropolitan Jeddah. Our drivers navigate dense city streets, coastal avenues and major transport links with seasoned operational expertise.",
+          "items": [
+            {
+              "id": "jeddah-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Al Andalus District · Al Zahra District · Prince Sultan Street Corridor"
+            },
+            {
+              "id": "jeddah-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Jeddah Superdome · Jeddah Centre for Forums and Events · Jeddah Corniche Circuit"
+            },
+            {
+              "id": "jeddah-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Al Balad Historic District · Jeddah Waterfront Corniche · Red Sea Mall"
+            },
+            {
+              "id": "jeddah-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Jeddah Islamic Port · Industrial City One · Al Ruwais Government District"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Jeddah"
+        }
+      },
+      {
+        "id": "sec-1794311538041-gyoln75ln",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Jeddah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-arxoku7ju",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB Ground Transportation Support for Jeddah",
+          "description": "AB delivers reliable chauffeur service Jeddah coverage coordinated directly through our central Riyadh operations centre and twenty four hour dispatch facility. Continuous real time monitoring and local fleet dispatch support executive movements throughout the Western Province without delay.",
+          "items": [
+            {
+              "id": "jeddah-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters and 24/7 dispatch [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "jeddah-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538041-m5i4v6rrd",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Jeddah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538041-qw5f9c2jx",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jeddah.",
+          "description": "Experience reliable executive chauffeur service Jeddah support with twenty four hour dispatch, vetted professional drivers and premium vehicles across the Western Province. Contact our central operations desk at +966 58 111 8720 to confirm your transfer schedule.",
+          "subheading": "Reserve your Jeddah executive vehicle",
+          "subdescription": "Submit your travel schedule or request a bespoke corporate transport contract for upcoming corporate delegations and VIP events in Jeddah."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538041-bqssi8wcz",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Jeddah",
+          "titleHighlight": "",
+          "description": "AB provides executive chauffeur service Jeddah solutions connecting King Abdulaziz International Airport (JED) to commercial districts, luxury coastal resorts and major regional hubs. Every itinerary across Jeddah receives central flight tracking, licensed chauffeurs and continuous operational oversight from our central dispatch team.\n\nCorporate travellers, executive delegations and private clients rely on our immaculately prepared fleet for timely city transfers, full day hires and regional journeys along the Red Sea coast."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Chauffeur service Jeddah luxury transport against the Jeddah coastal skyline"
+        }
+      },
+      {
+        "id": "sec-1794311538041-kfyuvtpzq",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-776xghi37",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Jeddah fleet",
+          "heading": "Choose your Jeddah chauffeur class",
+          "description": "Every vehicle in our Jeddah fleet is GPS tracked and detailed before each journey. AB manages rigorous maintenance schedules, comprehensive commercial passenger insurance and vetted chauffeurs to support flawless itineraries across the Kingdom.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "jeddah-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image2.jpg",
+            "imageAlt": "Standard sedan chauffeur service Jeddah vehicle",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Avalon or similar [Confirm]",
+            "idealFor": "Ideal for everyday executive city travel",
+            "description": "Comfortable standard saloon travel designed for individual business travellers and daily point to point transfers through central Jeddah corporate corridors.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image3.jpg",
+            "imageAlt": "Business sedan private driver Jeddah vehicle",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class, BMW 5 Series or similar [Confirm]",
+            "idealFor": "Ideal for corporate roadshows and executives",
+            "description": "Premium business comfort offering quiet interiors, leather seating and device charging for visiting management teams moving across commercial Jeddah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image4.jpg",
+            "imageAlt": "First class luxury car limousine service Jeddah",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class, BMW 7 Series or similar [Confirm]",
+            "idealFor": "Ideal for diplomatic and VIP hospitality",
+            "description": "The premier tier of ground transport, delivering whisper quiet ride comfort and prestige for dignitaries attending high level summits in Jeddah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service in Jeddah",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for executive delegations and families",
+            "description": "Commanding presence and generous cabin volume, providing ample luggage capacity for long journeys and delegations arriving through the international terminal.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image6.jpg",
+            "imageAlt": "Premium MPV private driver Jeddah group travel",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for mobile meetings and conferences",
+            "description": "Versatile face to face conference seating configurations that allow corporate teams to conduct productive working discussions between venues across the city.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image7.jpg",
+            "imageAlt": "Executive van passenger transport in Jeddah",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for large delegate group movements",
+            "description": "Spacious group passenger charter for summit support, international sporting entourages and event personnel coordinating complex logistics across Jeddah.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-0uchouakk",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Jeddah and beyond",
+          "description": "AB coordinates seamless terminal pickups, city business transfers and scheduled long distance regional routes departing from the coastal city.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "jeddah-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "JED to Jeddah Corniche",
+            "description": "Direct transfer from King Abdulaziz International Airport (JED) to luxury hotels, resorts and commercial residences along the scenic waterfront boulevard.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "JED to Al Balad",
+            "description": "Executive transit from arrivals directly to the historic coral stone heritage quarter and vibrant southern commercial districts.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Jeddah to Jeddah Superdome",
+            "description": "Punctual venue access for large scale trade exhibitions, consumer expos and major international sporting entertainment events.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to Makkah",
+            "description": "Specialised pilgrimage and VIP transfer service operating along the direct expressway corridor to central religious hospitality properties.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/jeddah/routes/jeddah-to-mecca",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to Madinah",
+            "description": "Comfortable long distance highway transit connecting coastal corporate bases with religious sites and regional commercial centres.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/jeddah/routes/jeddah-to-medina",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to Taif",
+            "description": "Scenic regional transit climbing the Sarawat mountain range toward government facilities, agriculture centres and highland resorts.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-jrny-7",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jeddah to King Abdullah Economic City",
+            "description": "Direct executive transport serving industrial port zones, corporate headquarters and coastal hospitality projects in KAEC.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-3yhci4avo",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Jeddah",
+          "heading": "One partner for every movement in Jeddah",
+          "description": "AB delivers comprehensive ground transport programmes tailored for corporate organisations, government delegations, event planners and discerning private guests across Saudi Arabia."
+        },
+        "items": [
+          {
+            "id": "jeddah-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in Jeddah",
+            "description": "Chauffeur & VIP in Jeddah",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Jeddah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers in Jeddah",
+            "description": "Airport Transfers in Jeddah",
+            "actions": [
+              {
+                "label": "Airport Transfers in Jeddah",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-3",
+            "icon": "Briefcase",
+            "title": "Corporate Transportation in Jeddah",
+            "description": "Corporate Transportation in Jeddah",
+            "actions": [
+              {
+                "label": "Corporate Transportation in Jeddah",
+                "href": "/services/corporate-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-4",
+            "icon": "Users",
+            "title": "Event Transportation in Jeddah",
+            "description": "Event Transportation in Jeddah",
+            "actions": [
+              {
+                "label": "Event Transportation in Jeddah",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-5",
+            "icon": "Shield",
+            "title": "Bus & Coach Hire in Jeddah",
+            "description": "Bus & Coach Hire in Jeddah",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Jeddah",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jeddah-svc-6",
+            "icon": "Map",
+            "title": "Tourism Transportation in Jeddah",
+            "description": "Tourism Transportation in Jeddah",
+            "actions": [
+              {
+                "label": "Tourism Transportation in Jeddah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-qbug0q75t",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Abdulaziz International Airport (JED)",
+          "description": "Navigating arrival at King Abdulaziz International Airport (JED) is straightforward with our managed meet and greet protocol. Chauffeurs monitor incoming flights through active commercial tracking systems, adjusting for schedule revisions or gate holds automatically. After clearing customs, guests find their uniformed chauffeur holding an AB branded name board at the designated terminal meeting point [Confirm]. Complimenting the service is free waiting time [Confirm], allowing unhurried baggage reclaim and smooth transition directly to your waiting vehicle outside the terminal doors.",
+          "items": [
+            {
+              "id": "jeddah-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "jeddah-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "jeddah-apt-b-3",
+              "icon": "Clock",
+              "heading": "JED to Jeddah Corniche",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Abdulaziz International Airport (JED)"
+        }
+      },
+      {
+        "id": "sec-1794311538041-cn7nzvz52",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-pcmtw2n4p",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Jeddah",
+          "description": "AB provides licensed, GPS tracked vehicle coverage throughout all key commercial, industrial and cultural zones in metropolitan Jeddah. Our drivers navigate dense city streets, coastal avenues and major transport links with seasoned operational expertise.",
+          "items": [
+            {
+              "id": "jeddah-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Al Andalus District · Al Zahra District · Prince Sultan Street Corridor"
+            },
+            {
+              "id": "jeddah-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Jeddah Superdome · Jeddah Centre for Forums and Events · Jeddah Corniche Circuit"
+            },
+            {
+              "id": "jeddah-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Al Balad Historic District · Jeddah Waterfront Corniche · Red Sea Mall"
+            },
+            {
+              "id": "jeddah-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Jeddah Islamic Port · Industrial City One · Al Ruwais Government District"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Jeddah"
+        }
+      },
+      {
+        "id": "sec-1794311538041-kh59058ef",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Jeddah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538041-43b4yxzx9",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB Ground Transportation Support for Jeddah",
+          "description": "AB delivers reliable chauffeur service Jeddah coverage coordinated directly through our central Riyadh operations centre and twenty four hour dispatch facility. Continuous real time monitoring and local fleet dispatch support executive movements throughout the Western Province without delay.",
+          "items": [
+            {
+              "id": "jeddah-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters and 24/7 dispatch [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "jeddah-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538041-t0lrkw93z",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Jeddah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538041-aq89vy1cf",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jeddah.",
+          "description": "Experience reliable executive chauffeur service Jeddah support with twenty four hour dispatch, vetted professional drivers and premium vehicles across the Western Province. Contact our central operations desk at +966 58 111 8720 to confirm your transfer schedule.",
+          "subheading": "Reserve your Jeddah executive vehicle",
+          "subdescription": "Submit your travel schedule or request a bespoke corporate transport contract for upcoming corporate delegations and VIP events in Jeddah."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

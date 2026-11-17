@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/al-qasim",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "al-qasim",
+  "path": "/locations/saudi-arabia/al-qasim",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for al-qasim (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.444Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309998485-i2jlbpa5z",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL QASIM",
+          "title": "Al Qasim",
+          "description": "The agricultural and commerce heartland of Central Saudi Arabia — encompassing Buraidah and Unaizah. AB delivers professional chauffeur service from Prince Naif bin Abdulaziz Regional Airport across the entire province.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Prince Naif bin Abdulaziz (ELQ)",
+          "dropoffDefault": "Buraidah City Center",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998485-qpx1hh9b2",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL QASIM FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998485-c5qdbt4q9",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Qasim and beyond"
+        },
+        "items": [
+          {
+            "id": "elq-buraidah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ELQ to Buraidah Center",
+            "titleAr": "من مطار الأمير نايف إلى وسط بريدة",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Prince Naif bin Abdulaziz Airport (ELQ)",
+            "dropoff": "Buraidah Center"
+          },
+          {
+            "id": "elq-unaizah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ELQ to Unaizah",
+            "titleAr": "من مطار الأمير نايف إلى عنيزة",
+            "price": "From SAR 250",
+            "priceAr": "ابتداءً من 250 ر.س",
+            "pickup": "Prince Naif bin Abdulaziz Airport (ELQ)",
+            "dropoff": "Unaizah"
+          },
+          {
+            "id": "buraidah-rass",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Buraidah to Ar Rass",
+            "titleAr": "من بريدة إلى الرس",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "Buraidah",
+            "dropoff": "Ar Rass"
+          },
+          {
+            "id": "buraidah-riyadh",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Buraidah to Riyadh",
+            "titleAr": "من بريدة إلى الرياض",
+            "price": "From SAR 750",
+            "priceAr": "ابتداءً من 750 ر.س",
+            "pickup": "Buraidah",
+            "dropoff": "Riyadh"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998485-mbovo5f53",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL QASIM",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998485-o2olxm5tr",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Qasim.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309998485-i2jlbpa5z",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL QASIM",
+          "title": "Al Qasim",
+          "description": "The agricultural and commerce heartland of Central Saudi Arabia — encompassing Buraidah and Unaizah. AB delivers professional chauffeur service from Prince Naif bin Abdulaziz Regional Airport across the entire province.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Prince Naif bin Abdulaziz (ELQ)",
+          "dropoffDefault": "Buraidah City Center",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998485-qpx1hh9b2",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL QASIM FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998485-c5qdbt4q9",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Qasim and beyond"
+        },
+        "items": [
+          {
+            "id": "elq-buraidah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ELQ to Buraidah Center",
+            "titleAr": "من مطار الأمير نايف إلى وسط بريدة",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Prince Naif bin Abdulaziz Airport (ELQ)",
+            "dropoff": "Buraidah Center"
+          },
+          {
+            "id": "elq-unaizah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ELQ to Unaizah",
+            "titleAr": "من مطار الأمير نايف إلى عنيزة",
+            "price": "From SAR 250",
+            "priceAr": "ابتداءً من 250 ر.س",
+            "pickup": "Prince Naif bin Abdulaziz Airport (ELQ)",
+            "dropoff": "Unaizah"
+          },
+          {
+            "id": "buraidah-rass",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Buraidah to Ar Rass",
+            "titleAr": "من بريدة إلى الرس",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "Buraidah",
+            "dropoff": "Ar Rass"
+          },
+          {
+            "id": "buraidah-riyadh",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Buraidah to Riyadh",
+            "titleAr": "من بريدة إلى الرياض",
+            "price": "From SAR 750",
+            "priceAr": "ابتداءً من 750 ر.س",
+            "pickup": "Buraidah",
+            "dropoff": "Riyadh"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998485-mbovo5f53",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL QASIM",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998485-o2olxm5tr",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Qasim.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309998485-sr8tubo18",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في القصيم",
+          "title": "القصيم",
+          "description": "قلب نجد الزراعي والتجاري النابض — يضم بريدة وعنيزة. توفر إيه بي ليمو خدمات نقل تنفيذية راقية من مطار الأمير نايف بن عبد العزيز الإقليمي في كافة أرجاء منطقة القصيم.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Prince Naif bin Abdulaziz (ELQ)",
+          "dropoffDefault": "Buraidah City Center",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998485-1npnd977x",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول القصيم",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998485-shxm8vvz1",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء القصيم وخارجها"
+        },
+        "items": [
+          {
+            "id": "elq-buraidah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ELQ to Buraidah Center",
+            "titleAr": "من مطار الأمير نايف إلى وسط بريدة",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Prince Naif bin Abdulaziz Airport (ELQ)",
+            "dropoff": "Buraidah Center"
+          },
+          {
+            "id": "elq-unaizah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ELQ to Unaizah",
+            "titleAr": "من مطار الأمير نايف إلى عنيزة",
+            "price": "From SAR 250",
+            "priceAr": "ابتداءً من 250 ر.س",
+            "pickup": "Prince Naif bin Abdulaziz Airport (ELQ)",
+            "dropoff": "Unaizah"
+          },
+          {
+            "id": "buraidah-rass",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Buraidah to Ar Rass",
+            "titleAr": "من بريدة إلى الرس",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "Buraidah",
+            "dropoff": "Ar Rass"
+          },
+          {
+            "id": "buraidah-riyadh",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Buraidah to Riyadh",
+            "titleAr": "من بريدة إلى الرياض",
+            "price": "From SAR 750",
+            "priceAr": "ابتداءً من 750 ر.س",
+            "pickup": "Buraidah",
+            "dropoff": "Riyadh"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998485-fvlf973r0",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في القصيم",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998485-zixlpihl0",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في القصيم.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

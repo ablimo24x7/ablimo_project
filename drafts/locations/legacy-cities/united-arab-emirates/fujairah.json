@@ -1,0 +1,777 @@
+{
+  "pageType": "city",
+  "refKey": "united-arab-emirates/fujairah",
+  "countrySlug": "united-arab-emirates",
+  "citySlug": "fujairah",
+  "path": "/locations/united-arab-emirates/fujairah",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 10-section layout for fujairah (united-arab-emirates)",
+  "exportedAt": "2026-11-10T11:52:18.058Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538058-elnc5720s",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "{city}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1794311538058-zezrk213f",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-ma9owghei",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-skpi88k3u",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Chauffeur Service in Fujairah",
+          "description": "Framed by the rugged Hajar Mountains and the azure Gulf of Oman, Fujairah offers a distinctive coastal landscape and thriving maritime industry. AB provides premium chauffeur transfers from Fujairah International Airport, beach resorts, and intercity journeys to Dubai and Sharjah.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop"
+        }
+      },
+      {
+        "id": "sec-1794311538058-c0dy8e9ja",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Getting Around in {city}",
+          "description": "{city} is a dynamic and culturally rich destination with plenty to experience. AB offers an ideal chauffeur service that gets you around in absolute comfort and style.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/gettingAround.png"
+        }
+      },
+      {
+        "id": "sec-1794311538058-lsw2wgqiw",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Chauffeur Service in {city}",
+          "description": "Experience a premier chauffeur service in {city}. Hire by the hour to explore local attractions, attend meetings, or enjoy your itinerary seamlessly.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/taxi Alternative.png"
+        }
+      },
+      {
+        "id": "sec-1794311538058-ywfezz18t",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "{city} Airport Transfer",
+          "description": "Enjoy an efficient and punctual airport transfer service in {city}. Our professional chauffeurs track your flight status and provide a direct ride to your destination.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/airportTransfer.png"
+        }
+      },
+      {
+        "id": "sec-1794311538058-96cy4fdbh",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-yn02fu73e",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Inter City Routes in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-crut64gax",
+        "type": "faq",
+        "variant": "default",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538058-elnc5720s",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "{city}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1794311538058-zezrk213f",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-ma9owghei",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-skpi88k3u",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Chauffeur Service in Fujairah",
+          "description": "Framed by the rugged Hajar Mountains and the azure Gulf of Oman, Fujairah offers a distinctive coastal landscape and thriving maritime industry. AB provides premium chauffeur transfers from Fujairah International Airport, beach resorts, and intercity journeys to Dubai and Sharjah.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop"
+        }
+      },
+      {
+        "id": "sec-1794311538058-c0dy8e9ja",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Getting Around in {city}",
+          "description": "{city} is a dynamic and culturally rich destination with plenty to experience. AB offers an ideal chauffeur service that gets you around in absolute comfort and style.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/gettingAround.png"
+        }
+      },
+      {
+        "id": "sec-1794311538058-lsw2wgqiw",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Chauffeur Service in {city}",
+          "description": "Experience a premier chauffeur service in {city}. Hire by the hour to explore local attractions, attend meetings, or enjoy your itinerary seamlessly.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/taxi Alternative.png"
+        }
+      },
+      {
+        "id": "sec-1794311538058-ywfezz18t",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "{city} Airport Transfer",
+          "description": "Enjoy an efficient and punctual airport transfer service in {city}. Our professional chauffeurs track your flight status and provide a direct ride to your destination.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/airportTransfer.png"
+        }
+      },
+      {
+        "id": "sec-1794311538058-96cy4fdbh",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-yn02fu73e",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Inter City Routes in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-crut64gax",
+        "type": "faq",
+        "variant": "default",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538058-hnaolfkrz",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "{city}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1794311538058-e3cz9xu7h",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-hpqnhchwv",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-aa09pouna",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "عن AB في {location}",
+          "heading": "Chauffeur Service in Fujairah",
+          "description": "Framed by the rugged Hajar Mountains and the azure Gulf of Oman, Fujairah offers a distinctive coastal landscape and thriving maritime industry. AB provides premium chauffeur transfers from Fujairah International Airport, beach resorts, and intercity journeys to Dubai and Sharjah.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop"
+        }
+      },
+      {
+        "id": "sec-1794311538058-79vzeyh8a",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Getting Around in {city}",
+          "description": "{city} is a dynamic and culturally rich destination with plenty to experience. AB offers an ideal chauffeur service that gets you around in absolute comfort and style.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/gettingAround.png"
+        }
+      },
+      {
+        "id": "sec-1794311538058-awerfuak9",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Chauffeur Service in {city}",
+          "description": "Experience a premier chauffeur service in {city}. Hire by the hour to explore local attractions, attend meetings, or enjoy your itinerary seamlessly.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/taxi Alternative.png"
+        }
+      },
+      {
+        "id": "sec-1794311538058-c34rvodwc",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "{city} Airport Transfer",
+          "description": "Enjoy an efficient and punctual airport transfer service in {city}. Our professional chauffeurs track your flight status and provide a direct ride to your destination.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/airportTransfer.png"
+        }
+      },
+      {
+        "id": "sec-1794311538058-8sue6561y",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-jcnziifn5",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "المسارات بين المدن في {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538058-dw9blyau8",
+        "type": "faq",
+        "variant": "default",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "الأسئلة الشائعة",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

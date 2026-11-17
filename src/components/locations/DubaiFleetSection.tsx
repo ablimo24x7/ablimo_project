@@ -20,6 +20,7 @@ interface FleetClassItem {
   modelAr?: string;
   specs: string;
   specsAr?: string;
+  description?: string;
   image: string;
   fleetSlug: string;
 }
@@ -67,7 +68,7 @@ const DEFAULT_CLASSES: FleetClassItem[] = [
     specs: "SUV · 6 guests · 5 bags",
     specsAr: "دفع رباعي · 6 ركاب · 5 حقائب",
     image: "/cars/suvs/CADILAC.png",
-    fleetSlug: "cadillac-escalade",
+    fleetSlug: "luxury-suv",
   },
   {
     id: "premium-mpv",
@@ -78,7 +79,7 @@ const DEFAULT_CLASSES: FleetClassItem[] = [
     specs: "MPV · 6 guests · 5 bags",
     specsAr: "فان فاخر · 6 ركاب · 5 حقائب",
     image: "/cars/vans/V_Class.png",
-    fleetSlug: "mercedes-v-class",
+    fleetSlug: "business-van",
   },
   {
     id: "executive-van",
@@ -89,7 +90,7 @@ const DEFAULT_CLASSES: FleetClassItem[] = [
     specs: "Van · 14 guests · 10 bags",
     specsAr: "حافلة صغيرة · 14 راكب · 10 حقائب",
     image: "/cars/vans/Sprinter.png",
-    fleetSlug: "mercedes-sprinter",
+    fleetSlug: "sprinter",
   },
 ];
 
@@ -146,11 +147,14 @@ export default function DubaiFleetSection({ section, context }: DubaiFleetProps)
           <div className="lg:col-span-8 divide-y divide-gray-800/80 border-t border-b border-gray-800/80">
             {items.map((item, idx) => {
               const rawItem = item as unknown as Record<string, unknown>;
-              const imageSrc = item.image || (rawItem.image as string) || DEFAULT_CLASSES[idx % DEFAULT_CLASSES.length].image;
-              const fleetSlug = item.fleetSlug || (rawItem.fleetSlug as string) || DEFAULT_CLASSES[idx % DEFAULT_CLASSES.length].fleetSlug;
+              const fallback = DEFAULT_CLASSES[idx % DEFAULT_CLASSES.length];
+              const imageSrc = item.image || (rawItem.image as string) || fallback.image;
+              const fleetSlug = item.fleetSlug || (rawItem.fleetSlug as string) || fallback.fleetSlug;
               const titleText = isArabic && item.nameAr ? item.nameAr : (item.name || (rawItem.title as string) || "");
-              const modelText = isArabic && item.modelAr ? item.modelAr : (item.model || (rawItem.description as string) || "");
+              const modelText = isArabic && item.modelAr ? item.modelAr : (item.model || "");
               const specsText = isArabic && item.specsAr ? item.specsAr : (item.specs || (rawItem.specs as string) || "");
+              const vehicleDescription =
+                !isArabic && typeof rawItem.description === "string" ? rawItem.description : "";
 
               return (
                 <Link
@@ -159,13 +163,19 @@ export default function DubaiFleetSection({ section, context }: DubaiFleetProps)
                   className="group flex flex-col sm:flex-row items-start sm:items-center justify-between py-5 px-3 hover:bg-[#1c1d21]/70 rounded-lg transition-all duration-200"
                 >
                   {/* Left part: Real vehicle image */}
-                  <div className="flex-shrink-0 w-36 sm:w-44 h-20 relative mb-3 sm:mb-0 sm:mr-6 flex items-center justify-center">
+                  <div
+                    className={`flex-shrink-0 ${
+                      isArabic ? "w-36 sm:w-44 h-20" : "w-44 sm:w-56 h-28 sm:h-32"
+                    } relative mb-3 sm:mb-0 sm:mr-6 flex items-center justify-center`}
+                  >
                     <Image
                       src={imageSrc}
                       alt={titleText || "Fleet vehicle"}
-                      width={180}
-                      height={85}
-                      className="object-contain max-h-16 w-auto drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                      width={isArabic ? 180 : 220}
+                      height={isArabic ? 85 : 105}
+                      className={`object-contain ${
+                        isArabic ? "max-h-16" : "max-h-24 sm:max-h-28"
+                      } w-auto drop-shadow-md group-hover:scale-105 transition-transform duration-300`}
                     />
                   </div>
 
@@ -184,6 +194,11 @@ export default function DubaiFleetSection({ section, context }: DubaiFleetProps)
                     {specsText && (
                       <p className="text-xs sm:text-sm text-gray-400 mt-1">
                         {specsText}
+                      </p>
+                    )}
+                    {vehicleDescription && (
+                      <p className="text-sm text-gray-300 leading-relaxed mt-2">
+                        {vehicleDescription}
                       </p>
                     )}
                   </div>

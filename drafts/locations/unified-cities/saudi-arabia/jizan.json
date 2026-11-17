@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/jizan",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "jizan",
+  "path": "/locations/saudi-arabia/jizan",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for jizan (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.448Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309998932-dy8xel071",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN JIZAN",
+          "title": "Jizan",
+          "description": "Saudi Arabia's southwestern port jewel. AB provides dependable chauffeur transfers from King Abdullah bin Abdulaziz Airport to Jazan Economic City, the Corniche, and the Farasan Islands ferry terminal.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Abdullah bin Abdulaziz (GIZ)",
+          "dropoffDefault": "Jizan Corniche",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998932-8dggb008v",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE JIZAN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998932-mzlcwvn1a",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Jizan and beyond"
+        },
+        "items": [
+          {
+            "id": "giz-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "GIZ to Jizan Corniche",
+            "titleAr": "من مطار الملك عبدالله إلى كورنيش جازان",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "King Abdullah bin Abdulaziz Airport (GIZ)",
+            "dropoff": "Jizan Corniche"
+          },
+          {
+            "id": "giz-jec",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "GIZ to Jazan Economic City",
+            "titleAr": "من مطار الملك عبدالله إلى مدينة جازان الاقتصادية",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "King Abdullah bin Abdulaziz Airport (GIZ)",
+            "dropoff": "Jazan Economic City"
+          },
+          {
+            "id": "jizan-farasan",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Jizan to Farasan Ferry Terminal",
+            "titleAr": "من جازان إلى ميناء فرسان البحري",
+            "price": "From SAR 200",
+            "priceAr": "ابتداءً من 200 ر.س",
+            "pickup": "Jizan",
+            "dropoff": "Farasan Ferry Terminal"
+          },
+          {
+            "id": "jizan-sabya",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jizan to Sabya",
+            "titleAr": "من جازان إلى صبيا",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "Jizan",
+            "dropoff": "Sabya"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998932-73b04ck7s",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN JIZAN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998932-iqnsdx6nv",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jizan.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309998932-dy8xel071",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN JIZAN",
+          "title": "Jizan",
+          "description": "Saudi Arabia's southwestern port jewel. AB provides dependable chauffeur transfers from King Abdullah bin Abdulaziz Airport to Jazan Economic City, the Corniche, and the Farasan Islands ferry terminal.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Abdullah bin Abdulaziz (GIZ)",
+          "dropoffDefault": "Jizan Corniche",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998932-8dggb008v",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE JIZAN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998932-mzlcwvn1a",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Jizan and beyond"
+        },
+        "items": [
+          {
+            "id": "giz-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "GIZ to Jizan Corniche",
+            "titleAr": "من مطار الملك عبدالله إلى كورنيش جازان",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "King Abdullah bin Abdulaziz Airport (GIZ)",
+            "dropoff": "Jizan Corniche"
+          },
+          {
+            "id": "giz-jec",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "GIZ to Jazan Economic City",
+            "titleAr": "من مطار الملك عبدالله إلى مدينة جازان الاقتصادية",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "King Abdullah bin Abdulaziz Airport (GIZ)",
+            "dropoff": "Jazan Economic City"
+          },
+          {
+            "id": "jizan-farasan",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Jizan to Farasan Ferry Terminal",
+            "titleAr": "من جازان إلى ميناء فرسان البحري",
+            "price": "From SAR 200",
+            "priceAr": "ابتداءً من 200 ر.س",
+            "pickup": "Jizan",
+            "dropoff": "Farasan Ferry Terminal"
+          },
+          {
+            "id": "jizan-sabya",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jizan to Sabya",
+            "titleAr": "من جازان إلى صبيا",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "Jizan",
+            "dropoff": "Sabya"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998932-73b04ck7s",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN JIZAN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998932-iqnsdx6nv",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jizan.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309998932-8oqh8qub4",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في جازان",
+          "title": "جازان",
+          "description": "لؤلؤة الجنوب الغربي وبوابة جزر فرسان. تقدم إيه بي ليمو خدمات سائق خاص معتمدة من مطار الملك عبد الله بن عبد العزيز إلى مدينة جازان الاقتصادية والكورنيش وميناء فرسان.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "King Abdullah bin Abdulaziz (GIZ)",
+          "dropoffDefault": "Jizan Corniche",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998932-ldjuat0re",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول جازان",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998932-fqkjbvt61",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء جازان وخارجها"
+        },
+        "items": [
+          {
+            "id": "giz-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "GIZ to Jizan Corniche",
+            "titleAr": "من مطار الملك عبدالله إلى كورنيش جازان",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "King Abdullah bin Abdulaziz Airport (GIZ)",
+            "dropoff": "Jizan Corniche"
+          },
+          {
+            "id": "giz-jec",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "GIZ to Jazan Economic City",
+            "titleAr": "من مطار الملك عبدالله إلى مدينة جازان الاقتصادية",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "King Abdullah bin Abdulaziz Airport (GIZ)",
+            "dropoff": "Jazan Economic City"
+          },
+          {
+            "id": "jizan-farasan",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Jizan to Farasan Ferry Terminal",
+            "titleAr": "من جازان إلى ميناء فرسان البحري",
+            "price": "From SAR 200",
+            "priceAr": "ابتداءً من 200 ر.س",
+            "pickup": "Jizan",
+            "dropoff": "Farasan Ferry Terminal"
+          },
+          {
+            "id": "jizan-sabya",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jizan to Sabya",
+            "titleAr": "من جازان إلى صبيا",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "Jizan",
+            "dropoff": "Sabya"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998932-c7kzodg1v",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في جازان",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998932-iw4l3zxsh",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في جازان.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

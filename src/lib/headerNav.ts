@@ -4,11 +4,12 @@ import {
   type Dictionary,
   type Locale,
 } from "@/app/[lang]/dictionaries";
-import { COUNTRIES, countryUrl, locationsUrl } from "@/lib/locations";
+import { COUNTRIES, countryUrl, cityUrl, locationsUrl } from "@/lib/locations";
 
 export interface HeaderNavItem {
   label: string;
   href: string;
+  items?: HeaderNavItem[];
 }
 
 export interface HeaderNavGroup {
@@ -22,10 +23,32 @@ export function getHeaderNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
   const base = localeBase(lang);
   const nav = dict.header.nav;
   const d = dict.header.dropdowns;
+  const isAr = lang === "ar";
 
   const country = (code: string) => {
     const match = COUNTRIES.find((c) => c.code === code);
     return match ? countryUrl(lang, match) : locationsUrl(lang);
+  };
+
+  const countryItem = (code: string, fallbackLabel?: string): HeaderNavItem => {
+    const match = COUNTRIES.find((c) => c.code === code);
+    if (!match) {
+      return {
+        label: fallbackLabel || code,
+        href: locationsUrl(lang),
+      };
+    }
+    const countryName = isAr && match.nameAr ? match.nameAr : match.name;
+    const cities: HeaderNavItem[] = (match.cities || []).map((ct) => ({
+      label: isAr && ct.nameAr ? ct.nameAr : ct.name,
+      href: cityUrl(lang, match, ct),
+    }));
+
+    return {
+      label: fallbackLabel || countryName,
+      href: countryUrl(lang, match),
+      items: cities.length > 0 ? cities : undefined,
+    };
   };
 
   const allLocations = locationsUrl(lang);
@@ -114,25 +137,15 @@ export function getHeaderNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
       label: nav.locations,
       href: allLocations,
       items: [
-        {
-          label: d.locationsMenu.saudiArabia,
-          href: country("sa"),
-        },
-        {
-          label: d.locationsMenu.uae,
-          href: country("ae"),
-        },
-        {
-          label: d.locationsMenu.qatar,
-          href: country("qa"),
-        },
-        {
-          label: d.locationsMenu.bahrainKuwaitOman,
-          href: allLocations,
-        },
+        countryItem("sa", d.locationsMenu.saudiArabia),
+        countryItem("ae", d.locationsMenu.uae),
+        countryItem("qa", d.locationsMenu.qatar),
+        countryItem("bh", (d.locationsMenu as any).bahrain || (isAr ? "البحرين" : "Bahrain")),
+        countryItem("kw", (d.locationsMenu as any).kuwait || (isAr ? "الكويت" : "Kuwait")),
+        countryItem("om", (d.locationsMenu as any).oman || (isAr ? "عمان" : "Oman")),
         {
           label: d.locationsMenu.airports,
-          href: allLocations,
+          href: `${base}/airports`,
         },
         {
           label: d.locationsMenu.allLocations,
@@ -171,47 +184,32 @@ export function getHeaderNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
         },
       ],
     },
+  ];
+}
+
+export function getFooterNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
+  const base = localeBase(lang);
+  const nav = dict.header.nav;
+  const d = dict.header.dropdowns;
+
+  return [
     {
       id: "company",
       label: nav.company,
       href: `${base}/about`,
       items: [
-        {
-          label: d.companyMenu.aboutAb,
-          href: `${base}/about`,
-        },
-        {
-          label: d.companyMenu.leadership,
-          href: `${base}/about`,
-        },
-        {
-          label: d.companyMenu.licencesCredentials,
-          href: `${base}/about`,
-        },
+        { label: d.companyMenu.aboutAb, href: `${base}/about` },
+        { label: d.companyMenu.leadership, href: `${base}/about` },
+        { label: d.companyMenu.licencesCredentials, href: `${base}/about` },
         {
           label: d.companyMenu.chauffeurStandard,
           href: `${base}/chauffeurs-and-vehicles-standards`,
         },
-        {
-          label: d.companyMenu.technology,
-          href: `${base}/technology`,
-        },
-        {
-          label: d.companyMenu.careers,
-          href: `${base}/career`,
-        },
-        {
-          label: d.companyMenu.partners,
-          href: `${base}/partners`,
-        },
-        {
-          label: d.companyMenu.suppliers,
-          href: `${base}/strategic-partnerships`,
-        },
-        {
-          label: d.companyMenu.press,
-          href: `${base}/press/releases`,
-        },
+        { label: d.companyMenu.technology, href: `${base}/about` },
+        { label: d.companyMenu.careers, href: `${base}/career` },
+        { label: d.companyMenu.partners, href: `${base}/partners` },
+        { label: d.companyMenu.suppliers, href: `${base}/strategic-partnerships` },
+        { label: d.companyMenu.press, href: `${base}/press/releases` },
       ],
     },
     {
@@ -226,22 +224,10 @@ export function getHeaderNav(lang: Locale, dict: Dictionary): HeaderNavGroup[] {
           label: d.resourcesMenu.caseStudies,
           href: `${localeHome(lang)}#case-studies`,
         },
-        {
-          label: d.resourcesMenu.fleet,
-          href: `${base}/fleet`,
-        },
-        {
-          label: d.resourcesMenu.insights,
-          href: `${base}/blogs`,
-        },
-        {
-          label: d.resourcesMenu.faqs,
-          href: `${base}/faqs`,
-        },
-        {
-          label: d.resourcesMenu.contact,
-          href: `${base}/contact`,
-        },
+        { label: d.resourcesMenu.fleet, href: `${base}/fleet` },
+        { label: d.resourcesMenu.insights, href: `${base}/blogs` },
+        { label: d.resourcesMenu.faqs, href: `${base}/faqs` },
+        { label: d.resourcesMenu.contact, href: `${base}/contact` },
       ],
     },
   ];

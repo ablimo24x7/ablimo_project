@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/dammam",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "dammam",
+  "path": "/locations/saudi-arabia/dammam",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for dammam (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.444Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309997593-ihqmgel9p",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN DAMMAM",
+          "title": "Dammam",
+          "description": "On the shores of the Arabian Gulf, Dammam is the Eastern Province's primary commercial hub. AB provides executive chauffeur service from King Fahd International Airport, corporate transfers, and intercity rides to Dhahran, Al Khobar and Jubail.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Fahd International (DMM)",
+          "dropoffDefault": "Dammam Corniche",
+          "skyline": "khobar"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-dammam-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997593-jc64z96hh",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE DAMMAM FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997594-x6kxxi0x2",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Dammam and beyond"
+        },
+        "items": [
+          {
+            "id": "dmm-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Dammam Corniche",
+            "titleAr": "من مطار الملك فهد إلى كورنيش الدمام",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Dammam Corniche"
+          },
+          {
+            "id": "dmm-dhahran",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Dhahran (Aramco HQ)",
+            "titleAr": "من مطار الملك فهد إلى الظهران (أرامكو)",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Dhahran"
+          },
+          {
+            "id": "dammam-khobar",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Dammam to Al Khobar",
+            "titleAr": "من الدمام إلى الخبر",
+            "price": "From SAR 180",
+            "priceAr": "ابتداءً من 180 ر.س",
+            "pickup": "Dammam",
+            "dropoff": "Al Khobar"
+          },
+          {
+            "id": "dammam-jubail",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Dammam to Jubail",
+            "titleAr": "من الدمام إلى الجبيل الصناعية",
+            "price": "From SAR 420",
+            "priceAr": "ابتداءً من 420 ر.س",
+            "pickup": "Dammam",
+            "dropoff": "Jubail Industrial City"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997594-939nejv68",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN DAMMAM",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997594-wtbrfht60",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Dammam.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309997593-ihqmgel9p",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN DAMMAM",
+          "title": "Dammam",
+          "description": "On the shores of the Arabian Gulf, Dammam is the Eastern Province's primary commercial hub. AB provides executive chauffeur service from King Fahd International Airport, corporate transfers, and intercity rides to Dhahran, Al Khobar and Jubail.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Fahd International (DMM)",
+          "dropoffDefault": "Dammam Corniche",
+          "skyline": "khobar"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-dammam-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997593-jc64z96hh",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE DAMMAM FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997594-x6kxxi0x2",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Dammam and beyond"
+        },
+        "items": [
+          {
+            "id": "dmm-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Dammam Corniche",
+            "titleAr": "من مطار الملك فهد إلى كورنيش الدمام",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Dammam Corniche"
+          },
+          {
+            "id": "dmm-dhahran",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Dhahran (Aramco HQ)",
+            "titleAr": "من مطار الملك فهد إلى الظهران (أرامكو)",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Dhahran"
+          },
+          {
+            "id": "dammam-khobar",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Dammam to Al Khobar",
+            "titleAr": "من الدمام إلى الخبر",
+            "price": "From SAR 180",
+            "priceAr": "ابتداءً من 180 ر.س",
+            "pickup": "Dammam",
+            "dropoff": "Al Khobar"
+          },
+          {
+            "id": "dammam-jubail",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Dammam to Jubail",
+            "titleAr": "من الدمام إلى الجبيل الصناعية",
+            "price": "From SAR 420",
+            "priceAr": "ابتداءً من 420 ر.س",
+            "pickup": "Dammam",
+            "dropoff": "Jubail Industrial City"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997594-939nejv68",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN DAMMAM",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997594-wtbrfht60",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Dammam.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309997594-plrvt4eg9",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الدمام",
+          "title": "الدمام",
+          "description": "على ضفاف الخليج العربي، تمثل الدمام المركز التجاري الرئيسي للمنطقة الشرقية. توفر إيه بي ليمو خدمات تنقل تنفيذية من مطار الملك فهد الدولي ونقل الشركات ورحلات بين المدن إلى الظهران والخبر والجبيل.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "King Fahd International (DMM)",
+          "dropoffDefault": "Dammam Corniche",
+          "skyline": "khobar"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-dammam-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997594-vbvsk5s8h",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الدمام",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997594-nt0joade9",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الدمام وخارجها"
+        },
+        "items": [
+          {
+            "id": "dmm-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Dammam Corniche",
+            "titleAr": "من مطار الملك فهد إلى كورنيش الدمام",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Dammam Corniche"
+          },
+          {
+            "id": "dmm-dhahran",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Dhahran (Aramco HQ)",
+            "titleAr": "من مطار الملك فهد إلى الظهران (أرامكو)",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Dhahran"
+          },
+          {
+            "id": "dammam-khobar",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Dammam to Al Khobar",
+            "titleAr": "من الدمام إلى الخبر",
+            "price": "From SAR 180",
+            "priceAr": "ابتداءً من 180 ر.س",
+            "pickup": "Dammam",
+            "dropoff": "Al Khobar"
+          },
+          {
+            "id": "dammam-jubail",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Dammam to Jubail",
+            "titleAr": "من الدمام إلى الجبيل الصناعية",
+            "price": "From SAR 420",
+            "priceAr": "ابتداءً من 420 ر.س",
+            "pickup": "Dammam",
+            "dropoff": "Jubail Industrial City"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997594-i1u2h598e",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الدمام",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997594-fnb6v1o4n",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الدمام.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

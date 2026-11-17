@@ -9,6 +9,7 @@ import {
   resolveCity,
 } from "@/lib/locations";
 import { getNavServices } from "@/lib/services";
+import { getFooterNav } from "@/lib/headerNav";
 import ExpandableFooterLinks from "./ExpandableFooterLinks";
 import Image from "next/image";
 
@@ -31,6 +32,9 @@ export default async function Footer({ lang }: FooterProps) {
   const dict = await getDictionary(lang);
   const d = dict.footer;
   const serviceLinks = await getNavServices(lang);
+  const navGroups = getFooterNav(lang, dict);
+  const companyGroup = navGroups.find((g) => g.id === "company");
+  const resourcesGroup = navGroups.find((g) => g.id === "resources");
 
   const country = (code: string) => {
     const found = COUNTRIES.find((c) => c.code === code)!;
@@ -55,12 +59,13 @@ export default async function Footer({ lang }: FooterProps) {
           label: lang.startsWith("ar") ? "معايير السائقين والمركبات" : "The AB Standards",
           href: `${localeBase(lang)}/chauffeurs-and-vehicles-standards`,
         },
-        { label: d.aboutUs.chauffeurRecruitment, href: `${localeBase(lang)}/partners` },
+        { label: d.aboutUs.supplierPortal, href: `${localeBase(lang)}/suppliers` },
         { label: d.aboutUs.corporateCareers, href: `${localeBase(lang)}/career` },
-        { label: d.aboutUs.press, href: `${localeBase(lang)}/press/releases` },
-        { label: d.aboutUs.blog, href: `${localeBase(lang)}/blogs` },
         { label: d.aboutUs.sustainability, href: `${localeBase(lang)}/sustainability` },
+        { label: d.aboutUs.blog, href: `${localeBase(lang)}/blogs` },
+        { label: d.aboutUs.caseStudies, href: `${localeBase(lang)}/case-studies` },
         { label: d.aboutUs.contactUs, href: `${localeBase(lang)}/contact` },
+        { label: d.aboutUs.faq, href: `${localeBase(lang)}/faq` },
       ],
     },
     {
@@ -87,6 +92,24 @@ export default async function Footer({ lang }: FooterProps) {
         { label: d.globalHubs.muscat, href: hubCity("om", "muscat") },
       ],
       viewMore: { label: d.globalHubs.viewMore, href: citiesUrl(lang) },
+    },
+    // {
+    //   title: companyGroup?.label || (lang.startsWith("ar") ? "الشركة" : "Company"),
+    //   links:
+    //     companyGroup?.items.map((item) => ({
+    //       label: item.label,
+    //       href: item.href,
+    //     })) || [],
+    // },
+    {
+      title: lang.startsWith("ar") ? "الموارد" : "AB for Business",
+      links: [
+        { label: "Corporate accounts", href: "/corporate-accounts" },
+        { label: "Travel agencies & DMCs", href: "/travel-agencies-dmcs" },
+        { label: "Strategic partnerships", href: "/strategic-partnerships" },
+        { label: "Government & delegations", href: "/government-delegations" },
+        { label: "Request a proposal / tender", href: "/contact" },
+      ],
     },
     {
       title: d.explore.title,
@@ -160,7 +183,7 @@ export default async function Footer({ lang }: FooterProps) {
 
   return (
     <footer className="bg-abBlack text-white pt-20 pb-8 border-t-[4px] border-abBlue">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
         {/* Top Row: Logo and Apps */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
           {/* Logo */}
@@ -203,7 +226,7 @@ export default async function Footer({ lang }: FooterProps) {
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16">
           {footerColumns.map((section) => (
             <div key={section.title}>
               <h4 className="text-sm font-bold text-gray-200 uppercase tracking-wider mb-6">

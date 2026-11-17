@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/abha",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "abha",
+  "path": "/locations/saudi-arabia/abha",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for abha (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.443Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309998707-loy1y4pv1",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN ABHA",
+          "title": "Abha",
+          "description": "Perched high in the Asir Mountains, Abha captivates with cool mist, juniper peaks, and vibrant heritage. AB's chauffeur service brings luxury to every altitude — from airport transfers to Al Soudah excursions and Khamis Mushait commutes.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Abha International (AHB)",
+          "dropoffDefault": "Abha City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998707-4eqgit683",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE ABHA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998707-4cpil5e9q",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Abha and beyond"
+        },
+        "items": [
+          {
+            "id": "ahb-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AHB to Abha City Center",
+            "titleAr": "من مطار أبها الدولي إلى وسط مدينة أبها",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Abha International Airport (AHB)",
+            "dropoff": "Abha City Center"
+          },
+          {
+            "id": "ahb-khamis",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AHB to Khamis Mushait",
+            "titleAr": "من مطار أبها الدولي إلى خميس مشيط",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "Abha International Airport (AHB)",
+            "dropoff": "Khamis Mushait"
+          },
+          {
+            "id": "abha-soudah",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Abha to Al Soudah Peak",
+            "titleAr": "من أبها إلى قمة السودة",
+            "price": "From SAR 290",
+            "priceAr": "ابتداءً من 290 ر.س",
+            "pickup": "Abha",
+            "dropoff": "Al Soudah"
+          },
+          {
+            "id": "abha-rijal",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Abha to Rijal Almaa Heritage Village",
+            "titleAr": "من أبها إلى قرية رجال ألمع التراثية",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "Abha",
+            "dropoff": "Rijal Almaa"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998707-r9q6yw8mj",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN ABHA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998707-rj96kgds5",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Abha.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309998707-loy1y4pv1",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN ABHA",
+          "title": "Abha",
+          "description": "Perched high in the Asir Mountains, Abha captivates with cool mist, juniper peaks, and vibrant heritage. AB's chauffeur service brings luxury to every altitude — from airport transfers to Al Soudah excursions and Khamis Mushait commutes.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Abha International (AHB)",
+          "dropoffDefault": "Abha City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998707-4eqgit683",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE ABHA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998707-4cpil5e9q",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Abha and beyond"
+        },
+        "items": [
+          {
+            "id": "ahb-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AHB to Abha City Center",
+            "titleAr": "من مطار أبها الدولي إلى وسط مدينة أبها",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Abha International Airport (AHB)",
+            "dropoff": "Abha City Center"
+          },
+          {
+            "id": "ahb-khamis",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AHB to Khamis Mushait",
+            "titleAr": "من مطار أبها الدولي إلى خميس مشيط",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "Abha International Airport (AHB)",
+            "dropoff": "Khamis Mushait"
+          },
+          {
+            "id": "abha-soudah",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Abha to Al Soudah Peak",
+            "titleAr": "من أبها إلى قمة السودة",
+            "price": "From SAR 290",
+            "priceAr": "ابتداءً من 290 ر.س",
+            "pickup": "Abha",
+            "dropoff": "Al Soudah"
+          },
+          {
+            "id": "abha-rijal",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Abha to Rijal Almaa Heritage Village",
+            "titleAr": "من أبها إلى قرية رجال ألمع التراثية",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "Abha",
+            "dropoff": "Rijal Almaa"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998707-r9q6yw8mj",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN ABHA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998707-rj96kgds5",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Abha.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309998707-r4fa7wvvg",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في أبها",
+          "title": "أبها",
+          "description": "على قمم جبال عسير الشامخة، تأسر أبها زوارها بطبيعتها الخلابة وهوائها العليل. توفر إيه بي ليمو خدمات نقل فاخرة تشمل الاستقبال في المطار وجولات السودة والتنقل التنفيذي إلى خميس مشيط.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Abha International (AHB)",
+          "dropoffDefault": "Abha City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998707-xj49isgyx",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول أبها",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998707-vxs5dzzn5",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء أبها وخارجها"
+        },
+        "items": [
+          {
+            "id": "ahb-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AHB to Abha City Center",
+            "titleAr": "من مطار أبها الدولي إلى وسط مدينة أبها",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Abha International Airport (AHB)",
+            "dropoff": "Abha City Center"
+          },
+          {
+            "id": "ahb-khamis",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AHB to Khamis Mushait",
+            "titleAr": "من مطار أبها الدولي إلى خميس مشيط",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "Abha International Airport (AHB)",
+            "dropoff": "Khamis Mushait"
+          },
+          {
+            "id": "abha-soudah",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Abha to Al Soudah Peak",
+            "titleAr": "من أبها إلى قمة السودة",
+            "price": "From SAR 290",
+            "priceAr": "ابتداءً من 290 ر.س",
+            "pickup": "Abha",
+            "dropoff": "Al Soudah"
+          },
+          {
+            "id": "abha-rijal",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Abha to Rijal Almaa Heritage Village",
+            "titleAr": "من أبها إلى قرية رجال ألمع التراثية",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "Abha",
+            "dropoff": "Rijal Almaa"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998707-7e4a1ea4y",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في أبها",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998707-2iwynd471",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في أبها.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

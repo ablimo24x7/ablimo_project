@@ -327,6 +327,8 @@ export async function getAllCountries(): Promise<CountryShape[]> {
 
 const countryAliases: Record<string, string> = {
   "united-arab-emirates": "uae",
+  saudi: "saudi-arabia",
+  ksa: "saudi-arabia",
 };
 
 /** Expand a country input to all lookup candidates (itself + alias variants). */

@@ -20,10 +20,11 @@ export const revalidate = 3600;
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: string }>;
+  params?: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
-  const { lang } = await params;
-  const locale: Locale = hasLocale(lang) ? lang : defaultLocale;
+  const resolvedParams = params ? await params : undefined;
+  const lang = resolvedParams?.lang;
+  const locale: Locale = lang && hasLocale(lang) ? lang : defaultLocale;
   const isAr = locale === "ar";
 
   return generateSeoMetadata({
@@ -34,7 +35,7 @@ export async function generateMetadata({
       ? "خدمات نقل وإدارة تنقل وسائقين ومطارات وفعاليات وحافلات ونقل فرق العمل في السعودية والإمارات وقطر. إرسال 24/7 من الرياض. اطلب عرض أسعار."
       : "Managed chauffeur, airport, event, bus and workforce transportation across Saudi Arabia, the UAE and Qatar. 24/7 dispatch from Riyadh. Request a proposal.",
     path: "",
-    lang,
+    lang: locale,
     keywords: isAr
       ? "نقل الشركات والفعاليات, خدمة سائق خاص, تنقل مؤسسي, نقل مطار, تأجير حافلات, نقل السعودية, نقل الإمارات, نقل قطر, نقل كبار الشخصيات, AB"
       : "corporate transportation, event transport, chauffeur service, Saudi Arabia, UAE, Qatar, airport transfer, bus coach hire, AB, workforce transport, VIP chauffeur",
@@ -44,10 +45,12 @@ export async function generateMetadata({
 export default async function Home({
   params,
 }: {
-  params: Promise<{ lang: string }>;
+  params?: Promise<{ lang?: string }>;
 }) {
-  const { lang } = await params;
-  const dict = await getDictionary(lang as Locale);
+  const resolvedParams = params ? await params : undefined;
+  const lang = resolvedParams?.lang;
+  const locale: Locale = lang && hasLocale(lang) ? lang : defaultLocale;
+  const dict = await getDictionary(locale);
 
   return (
     <>
@@ -55,18 +58,18 @@ export default async function Home({
       <LocalBusinessJsonLd />
       <WebsiteJsonLd />
       <HowToBookJsonLd />
-        <HeroSection dict={dict} lang={lang} />
-      <EventLogisticsSection dict={dict} lang={lang} />
-      <IndustrySolutionsSection dict={dict} lang={lang} />
-      <HowItWorksSection dict={dict} lang={lang} />
+      <HeroSection dict={dict} lang={locale} />
+      <EventLogisticsSection dict={dict} lang={locale} />
+      <IndustrySolutionsSection dict={dict} lang={locale} />
+      <HowItWorksSection dict={dict} lang={locale} />
       <DutyOfCareSection dict={dict} />
-      <FleetSection dict={dict} lang={lang} />
-      <CountriesSection dict={dict} lang={lang} />
-      <CitiesSection dict={dict} lang={lang} />
-      <CaseStudiesSection dict={dict} lang={lang} />
-      <AwardsSection dict={dict} lang={lang} />
-      <TellUsCtaSection dict={dict} lang={lang} />
-      <FAQSection dict={dict} lang={lang} />
+      <FleetSection dict={dict} lang={locale} />
+      <CountriesSection dict={dict} lang={locale} />
+      <CitiesSection dict={dict} lang={locale} />
+      <CaseStudiesSection dict={dict} lang={locale} />
+      <AwardsSection dict={dict} lang={locale} />
+      <TellUsCtaSection dict={dict} lang={locale} />
+      <FAQSection dict={dict} lang={locale} />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import Analytics from "@/components/analytics/google-analytics";
 import AnalyticsListener from "@/components/analytics/analytics-listener";
 import "./[lang]/globals.css";
@@ -48,11 +49,9 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr" className={`${inter.variable} antialiased`} suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var rtl=/^\\/(ar)(\\/|$)/.test(location.pathname);document.documentElement.lang=rtl?'ar':'en';document.documentElement.dir=rtl?'rtl':'ltr';}catch(e){}})();`,
-          }}
-        />
+        <Script id="set-document-language" strategy="beforeInteractive">
+          {`(function(){try{var rtl=/^\\/(ar)(\\/|$)/.test(location.pathname);document.documentElement.lang=rtl?'ar':'en';document.documentElement.dir=rtl?'rtl':'ltr';}catch(e){}})();`}
+        </Script>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"

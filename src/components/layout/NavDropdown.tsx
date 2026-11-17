@@ -3,12 +3,13 @@
 import { useRef, useEffect, useState, useId, type KeyboardEvent, type FocusEvent, type PointerEvent } from "react";
 import Link from "next/link";
 
-interface DropdownItem {
+export interface DropdownItem {
   label: string;
   href: string;
+  items?: DropdownItem[];
 }
 
-interface DropdownGroup {
+export interface DropdownGroup {
   title: string;
   items: DropdownItem[];
 }
@@ -43,7 +44,9 @@ export default function NavDropdown({ id, label, href, items, groups, isOpen, on
   const panelRef = useRef<HTMLDivElement>(null);
   const focusFirstOnOpen = useRef(false);
   const [hoveredGroup, setHoveredGroup] = useState<DropdownGroup | null>(null);
+  const [hoveredItemIdx, setHoveredItemIdx] = useState<number | null>(null);
   const groupTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const subTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const isRtl = lang.split("-")[0] === "ar";
   const reactId = useId();
   const panelId = `mega-menu-${id}-${reactId.replace(/:/g, "")}`;
@@ -52,6 +55,13 @@ export default function NavDropdown({ id, label, href, items, groups, isOpen, on
     if (groupTimeoutRef.current) {
       clearTimeout(groupTimeoutRef.current);
       groupTimeoutRef.current = null;
+    }
+  };
+
+  const clearSubTimeout = () => {
+    if (subTimeoutRef.current) {
+      clearTimeout(subTimeoutRef.current);
+      subTimeoutRef.current = null;
     }
   };
 
@@ -66,19 +76,33 @@ export default function NavDropdown({ id, label, href, items, groups, isOpen, on
     }, 100);
   };
 
+  const handleSubMouseEnter = (idx: number) => {
+    clearSubTimeout();
+    setHoveredItemIdx(idx);
+  };
+
+  const handleSubMouseLeave = () => {
+    subTimeoutRef.current = setTimeout(() => {
+      setHoveredItemIdx(null);
+    }, 150);
+  };
+
   const handleSubPanelMouseEnter = () => {
-    clearGroupTimeout();
+    clearSubTimeout();
   };
 
   const handleSubPanelMouseLeave = () => {
-    groupTimeoutRef.current = setTimeout(() => {
-      setHoveredGroup(null);
-    }, 100);
+    subTimeoutRef.current = setTimeout(() => {
+      setHoveredItemIdx(null);
+    }, 150);
   };
 
   const close = () => {
     onClose();
     setHoveredGroup(null);
+    setHoveredItemIdx(null);
+    clearGroupTimeout();
+    clearSubTimeout();
   };
 
   const getPanelLinks = () =>
@@ -90,6 +114,9 @@ export default function NavDropdown({ id, label, href, items, groups, isOpen, on
       if (ref.current && !ref.current.contains(event.target as Node)) {
         onClose();
         setHoveredGroup(null);
+        setHoveredItemIdx(null);
+        clearGroupTimeout();
+        clearSubTimeout();
       }
     }
     if (isOpen) {
@@ -107,6 +134,9 @@ export default function NavDropdown({ id, label, href, items, groups, isOpen, on
       if (isOpen) {
         onClose();
         setHoveredGroup(null);
+        setHoveredItemIdx(null);
+        clearGroupTimeout();
+        clearSubTimeout();
       }
     }
     window.addEventListener("blur", handleWindowBlur);
@@ -271,16 +301,87 @@ export default function NavDropdown({ id, label, href, items, groups, isOpen, on
             </div>
           </>
         ) : (
-          items?.map((item) => (
-            <Link
-              key={item.href + item.label}
-              href={item.href}
-              onClick={close}
-              className="block px-5 py-3 text-sm font-semibold text-[#ffffff] hover:text-abBlue hover:bg-white/5 focus-visible:text-abBlue focus-visible:bg-white/5 focus-visible:outline-none transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))
+          items?.map((item, idx) => {
+            const hasSub = item.items && item.items.length > 0;
+            if (!hasSub) {
+              return (
+                <Link
+                  key={item.href + item.label}
+                  href={item.href}
+                  onClick={close}
+                  className="block px-5 py-3 text-sm font-semibold text-[#ffffff] hover:text-abBlue hover:bg-white/5 focus-visible:text-abBlue focus-visible:bg-white/5 focus-visible:outline-none transition-colors"
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+
+            const isHovered = hoveredItemIdx === idx;
+
+            return (
+              <div
+                key={item.href + item.label}
+                className="relative group/sub"
+                onMouseEnter={() => handleSubMouseEnter(idx)}
+                onMouseLeave={handleSubMouseLeave}
+              >
+                <div
+                  className={`flex items-center justify-between px-5 py-3 text-sm font-semibold transition-colors cursor-pointer ${
+                    isHovered
+                      ? "bg-white/10 text-abBlue"
+                      : "text-[#ffffff] hover:bg-white/5 hover:text-abBlue"
+                  }`}
+                >
+                  <Link
+                    href={item.href}
+                    onClick={close}
+                    className="flex-1 hover:text-abBlue focus-visible:text-abBlue focus-visible:outline-none"
+                  >
+                    {item.label}
+                  </Link>
+                  <span
+                    className={`flex items-center text-gray-400 ${
+                      isHovered ? "text-abBlue" : "group-hover/sub:text-abBlue"
+                    } transition-colors ${isRtl ? "mr-2 -ml-1" : "ml-2 -mr-1"}`}
+                  >
+                    <i
+                      className={`fa-solid fa-chevron-${isRtl ? "left" : "right"} text-[10px]`}
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+
+                <div
+                  className={`absolute top-0 ${
+                    isRtl ? "right-full pr-1.5" : "left-full pl-1.5"
+                  } hidden group-hover/sub:block ${
+                    isHovered ? "!block" : ""
+                  } z-50`}
+                  onMouseEnter={handleSubPanelMouseEnter}
+                  onMouseLeave={handleSubPanelMouseLeave}
+                >
+                  <div
+                    className={`bg-[#0C0C0C] border border-gray-800 shadow-2xl rounded-xl py-2 max-h-[75vh] overflow-y-auto ${
+                      item.items!.length > 10
+                        ? "grid grid-cols-2 min-w-[380px] gap-x-1"
+                        : "flex flex-col min-w-[220px]"
+                    }`}
+                  >
+                    {item.items!.map((subItem) => (
+                      <Link
+                        key={subItem.href + subItem.label}
+                        href={subItem.href}
+                        onClick={close}
+                        className="block px-4 py-2 text-sm font-medium text-gray-300 hover:text-abBlue hover:bg-white/5 focus-visible:text-abBlue focus-visible:bg-white/5 focus-visible:outline-none transition-colors whitespace-nowrap"
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })
         )}
       </div>
     </div>

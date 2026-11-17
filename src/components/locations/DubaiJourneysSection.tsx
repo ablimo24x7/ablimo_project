@@ -157,7 +157,9 @@ export default function DubaiJourneysSection({ section, context }: DubaiJourneys
           {journeys.map((j, idx) => {
             const tag = isArabic && j.tagAr ? j.tagAr : (j.tag || "JOURNEY");
             const title = isArabic && j.titleAr ? j.titleAr : (j.title || `Route ${idx + 1}`);
-            const price = isArabic && j.priceAr ? j.priceAr : (j.price || "On Request");
+            // Prices are intentionally hidden on city pages — only render a
+            // price when the data actually carries one.
+            const price = (isArabic && j.priceAr ? j.priceAr : j.price) || "";
             const pickup = j.pickup || cityName;
             const dropoff = j.dropoff || title;
 
@@ -177,9 +179,13 @@ export default function DubaiJourneysSection({ section, context }: DubaiJourneys
                 </div>
 
                 <div className="pt-4 border-t border-gray-800/80 flex items-center justify-between mt-4">
-                  <span className="text-xs font-medium text-gray-400 group-hover:text-gray-200 transition-colors">
-                    {price}
-                  </span>
+                  {price ? (
+                    <span className="text-xs font-medium text-gray-400 group-hover:text-gray-200 transition-colors">
+                      {price}
+                    </span>
+                  ) : (
+                    <span aria-hidden="true" />
+                  )}
                   <span className="text-xs text-abBlue group-hover:translate-x-1 transition-transform inline-block">
                     →
                   </span>

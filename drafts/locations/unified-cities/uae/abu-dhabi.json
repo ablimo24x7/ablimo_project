@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "uae/abu-dhabi",
+  "countrySlug": "uae",
+  "citySlug": "abu-dhabi",
+  "path": "/locations/uae/abu-dhabi",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for abu-dhabi (uae)",
+  "exportedAt": "2026-11-10T12:32:14.453Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310001909-pzhhcvmci",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN ABU DHABI",
+          "title": "Abu Dhabi",
+          "description": "Home to the Presidential Palace, Yas Island, and the Corniche, Abu Dhabi demands an executive travel experience. AB delivers first-class chauffeur service across the capital — from Zayed International arrivals to Al Maryah Island boardrooms.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Zayed International Airport (AUH)",
+          "dropoffDefault": "Al Maryah Island, Abu Dhabi",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-abu-dhabi-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310001909-yg51ks91l",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE ABU DHABI FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001909-ap8g3woc2",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Abu Dhabi and beyond"
+        },
+        "items": [
+          {
+            "id": "auh-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AUH to Abu Dhabi Corniche",
+            "titleAr": "من مطار زايد الدولي إلى كورنيش أبوظبي",
+            "price": "From AED 350",
+            "priceAr": "ابتداءً من 350 درهم",
+            "pickup": "Zayed International Airport (AUH)",
+            "dropoff": "Abu Dhabi Corniche"
+          },
+          {
+            "id": "auh-yas",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AUH to Yas Island & Ferrari World",
+            "titleAr": "من مطار زايد الدولي إلى جزيرة ياس وعالم فيراري",
+            "price": "From AED 280",
+            "priceAr": "ابتداءً من 280 درهم",
+            "pickup": "Zayed International Airport (AUH)",
+            "dropoff": "Yas Island"
+          },
+          {
+            "id": "auh-saadiyat",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Abu Dhabi Center to Saadiyat Island (Louvre)",
+            "titleAr": "من وسط أبوظبي إلى جزيرة السعديات (متحف اللوفر)",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Abu Dhabi Center",
+            "dropoff": "Saadiyat Cultural District"
+          },
+          {
+            "id": "abudhabi-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Abu Dhabi to Dubai",
+            "titleAr": "من أبوظبي إلى دبي",
+            "price": "From AED 650",
+            "priceAr": "ابتداءً من 650 درهم",
+            "pickup": "Abu Dhabi",
+            "dropoff": "Dubai"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001909-ky9fyljzt",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN ABU DHABI",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001909-l19yxe6ti",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Abu Dhabi.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310001909-pzhhcvmci",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN ABU DHABI",
+          "title": "Abu Dhabi",
+          "description": "Home to the Presidential Palace, Yas Island, and the Corniche, Abu Dhabi demands an executive travel experience. AB delivers first-class chauffeur service across the capital — from Zayed International arrivals to Al Maryah Island boardrooms.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Zayed International Airport (AUH)",
+          "dropoffDefault": "Al Maryah Island, Abu Dhabi",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-abu-dhabi-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310001909-yg51ks91l",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE ABU DHABI FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001909-ap8g3woc2",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Abu Dhabi and beyond"
+        },
+        "items": [
+          {
+            "id": "auh-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AUH to Abu Dhabi Corniche",
+            "titleAr": "من مطار زايد الدولي إلى كورنيش أبوظبي",
+            "price": "From AED 350",
+            "priceAr": "ابتداءً من 350 درهم",
+            "pickup": "Zayed International Airport (AUH)",
+            "dropoff": "Abu Dhabi Corniche"
+          },
+          {
+            "id": "auh-yas",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AUH to Yas Island & Ferrari World",
+            "titleAr": "من مطار زايد الدولي إلى جزيرة ياس وعالم فيراري",
+            "price": "From AED 280",
+            "priceAr": "ابتداءً من 280 درهم",
+            "pickup": "Zayed International Airport (AUH)",
+            "dropoff": "Yas Island"
+          },
+          {
+            "id": "auh-saadiyat",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Abu Dhabi Center to Saadiyat Island (Louvre)",
+            "titleAr": "من وسط أبوظبي إلى جزيرة السعديات (متحف اللوفر)",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Abu Dhabi Center",
+            "dropoff": "Saadiyat Cultural District"
+          },
+          {
+            "id": "abudhabi-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Abu Dhabi to Dubai",
+            "titleAr": "من أبوظبي إلى دبي",
+            "price": "From AED 650",
+            "priceAr": "ابتداءً من 650 درهم",
+            "pickup": "Abu Dhabi",
+            "dropoff": "Dubai"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001909-ky9fyljzt",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN ABU DHABI",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001909-l19yxe6ti",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Abu Dhabi.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310001909-f1v7hwzkw",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في أبوظبي",
+          "title": "أبوظبي",
+          "description": "عاصمة دولة الإمارات وموطن قصر الوطن وجزيرة ياس والكورنيش الساحر. تقدم إيه بي ليمو خدمات سائق خاص من الدرجة الأولى من مطار زايد الدولي إلى مقرات الأعمال في جزيرة المارية وسعديات.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Zayed International Airport (AUH)",
+          "dropoffDefault": "Al Maryah Island, Abu Dhabi",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-abu-dhabi-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310001909-cq4vljmfe",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول أبوظبي",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001909-d9ah5n2v2",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء أبوظبي وخارجها"
+        },
+        "items": [
+          {
+            "id": "auh-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AUH to Abu Dhabi Corniche",
+            "titleAr": "من مطار زايد الدولي إلى كورنيش أبوظبي",
+            "price": "From AED 350",
+            "priceAr": "ابتداءً من 350 درهم",
+            "pickup": "Zayed International Airport (AUH)",
+            "dropoff": "Abu Dhabi Corniche"
+          },
+          {
+            "id": "auh-yas",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "AUH to Yas Island & Ferrari World",
+            "titleAr": "من مطار زايد الدولي إلى جزيرة ياس وعالم فيراري",
+            "price": "From AED 280",
+            "priceAr": "ابتداءً من 280 درهم",
+            "pickup": "Zayed International Airport (AUH)",
+            "dropoff": "Yas Island"
+          },
+          {
+            "id": "auh-saadiyat",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Abu Dhabi Center to Saadiyat Island (Louvre)",
+            "titleAr": "من وسط أبوظبي إلى جزيرة السعديات (متحف اللوفر)",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Abu Dhabi Center",
+            "dropoff": "Saadiyat Cultural District"
+          },
+          {
+            "id": "abudhabi-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Abu Dhabi to Dubai",
+            "titleAr": "من أبوظبي إلى دبي",
+            "price": "From AED 650",
+            "priceAr": "ابتداءً من 650 درهم",
+            "pickup": "Abu Dhabi",
+            "dropoff": "Dubai"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001909-m0ju7p022",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في أبوظبي",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001909-i6875mmlq",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في أبوظبي.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

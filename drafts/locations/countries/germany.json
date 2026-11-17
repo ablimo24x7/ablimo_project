@@ -1,0 +1,538 @@
+{
+  "pageType": "country",
+  "refKey": "germany",
+  "countrySlug": "germany",
+  "path": "/locations/germany",
+  "description": "Country template for germany",
+  "exportedAt": "2026-11-10T12:32:14.122Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1792139036418-gfw8g1l4x",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service In {country}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036418-yp3u7p4hx",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036418-hr19w5v3c",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036418-qxf49t289",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Executive Chauffeur Service in Germany",
+          "description": "Germany combines precision engineering with rich culture — from Berlin's history to Munich's traditions and Frankfurt's skyline. AB delivers executive chauffeur service across the country: airport transfers at every major hub, corporate travel, and intercity journeys in premium comfort.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      },
+      {
+        "id": "sec-1792139036418-gcygu53ht",
+        "type": "introText",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "Experience refined elegance with AB’s premium chauffeur service across {country}. From major business hubs to every destination across the region, our network of professional drivers provides discreet, first-class transportation tailored to your journey. Whether you need seamless airport transfers, city-to-city travel, or flexible hourly bookings, we deliver an uncompromised, executive travel experience.",
+            "Don't settle for just renting a car with a driver — immerse yourself in an experience by booking with AB.",
+            "Check out our wide range of services available across {country} below:"
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036418-b10m8h1ri",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "heading": "Cities We Serve in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036418-i8mw647pr",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1792139036438-n27u018h4",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service In {country}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036438-36q6jmwgc",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-s6v8rbkye",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-plbi038is",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Executive Chauffeur Service in Germany",
+          "description": "Germany combines precision engineering with rich culture — from Berlin's history to Munich's traditions and Frankfurt's skyline. AB delivers executive chauffeur service across the country: airport transfers at every major hub, corporate travel, and intercity journeys in premium comfort.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      },
+      {
+        "id": "sec-1792139036438-8496un1yo",
+        "type": "introText",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "Experience refined elegance with AB’s premium chauffeur service across {country}. From major business hubs to every destination across the region, our network of professional drivers provides discreet, first-class transportation tailored to your journey. Whether you need seamless airport transfers, city-to-city travel, or flexible hourly bookings, we deliver an uncompromised, executive travel experience.",
+            "Don't settle for just renting a car with a driver — immerse yourself in an experience by booking with AB.",
+            "Check out our wide range of services available across {country} below:"
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-o6r412kou",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "heading": "Inter City Routes in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-vov0ir6qa",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1792139036464-atrbndznu",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "خدمات السائق الخاص في {country}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036464-l7x1crwen",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036464-k37nt1s1u",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036464-sm3jhlvf8",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "عن AB في {location}",
+          "heading": "Executive Chauffeur Service in Germany",
+          "description": "Germany combines precision engineering with rich culture — from Berlin's history to Munich's traditions and Frankfurt's skyline. AB delivers executive chauffeur service across the country: airport transfers at every major hub, corporate travel, and intercity journeys in premium comfort.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      },
+      {
+        "id": "sec-1792139036464-90awuidwg",
+        "type": "introText",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "اكتشف تجربة سفر فاخرة مع AB. تقدم شبكتنا من خدمات السائق الخاص في {country} رحلات تنفيذية أنيقة، سواء كنت بحاجة إلى توصيل من المطار، أو رحلة بين المدن، أو خدمة بالساعة.",
+            "لا ترضَ بمجرد استئجار سيارة مع سائق — انغمس في تجربة استثنائية بالحجز مع AB.",
+            "تحقق من مجموعتنا الواسعة من الخدمات المتاحة في {country} أدناه:"
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036464-w7udnv8oc",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "heading": "الطرق بين المدن في {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036464-dobslovbs",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "الأسئلة الشائعة",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

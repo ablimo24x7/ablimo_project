@@ -1,0 +1,542 @@
+{
+  "pageType": "service",
+  "slug": "media-production-mobility",
+  "title": "Media & Production Mobility Solutions",
+  "subtitle": "Media & Production Mobility Solutions across Saudi Arabia, UAE, and GCC.",
+  "desc": "Media & Production Mobility Solutions across Saudi Arabia, UAE, and the wider GCC region.",
+  "heroImage": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&h=500&fit=crop",
+  "breadcrumb": "Media & Production Mobility Solutions",
+  "features": [],
+  "cardsHeading": "",
+  "cardsDesc": "",
+  "cards": [],
+  "sections": [],
+  "faqs": [],
+  "ctaTitle": "",
+  "ctaDesc": "",
+  "ctaLabel": "",
+  "ctaHref": "",
+  "pageSections": [
+    {
+      "id": "sec-1792846212748-4lu8dfvq2",
+      "type": "hero",
+      "variant": "background-content",
+      "order": 0,
+      "enabled": true,
+      "content": {
+        "eyebrow": "B2B Mobility Framework",
+        "title": "Executive & Corporate",
+        "titleHighlight": "Media & Production Mobility Solutions.",
+        "description": "Media & Production Mobility Solutions across Saudi Arabia, UAE, and GCC."
+      },
+      "items": [
+        {
+          "label": "Request Enterprise Procurement",
+          "href": "#corporate-account",
+          "style": "primary",
+          "icon": "ArrowRight",
+          "iconPosition": "right"
+        },
+        {
+          "label": "Explore Service Specs",
+          "href": "#services",
+          "style": "secondary"
+        },
+        {
+          "label": "24/7 Command Center",
+          "href": "#faq",
+          "style": "link",
+          "icon": "Headset",
+          "iconPosition": "left"
+        }
+      ],
+      "settings": {
+        "minHeight": "85vh",
+        "overlayOpacity": 85,
+        "contentPosition": "left",
+        "buttonLayout": "row"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&h=500&fit=crop",
+        "padding": "none",
+        "border": false,
+        "textAlign": "left",
+        "overlayGradient": "default"
+      }
+    },
+    {
+      "id": "sec-1792846212748-2va17zsol",
+      "type": "serviceCards",
+      "variant": "3-column",
+      "order": 1,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Enterprise Core Capabilities",
+        "heading": "Scalable Media & Production Mobility Solutions for the Boardroom and Beyond.",
+        "description": "From dedicated executive transport to large-scale fleet deployments, our architecture adapts to the complex requirements of global organizations operating in Saudi Arabia, UAE, and Qatar.",
+        "sectionCta": {
+          "label": "Download Services Brochure (PDF)",
+          "href": "#corporate-account",
+          "style": "outline",
+          "icon": "Download"
+        },
+        "bottomCta": {
+          "label": "Consult an Enterprise Mobility Expert",
+          "href": "#corporate-account",
+          "style": "primary",
+          "icon": "ArrowRight"
+        }
+      },
+      "items": [
+        {
+          "id": "itm-1792846212748-uzl9vfdw1",
+          "icon": "UserTie",
+          "title": "VIP & Executive Transport",
+          "description": "Standardized, premium point-to-point transfers for executives and stakeholders, ensuring absolute punctuality and discretion.",
+          "actions": [
+            {
+              "label": "View Governance",
+              "href": "#",
+              "style": "accent",
+              "icon": "ChevronRight"
+            },
+            {
+              "label": "Book Transfer",
+              "href": "#corporate-account",
+              "style": "text",
+              "icon": "CalendarCheck"
+            }
+          ]
+        },
+        {
+          "id": "itm-1792846212748-yu7jyp1uh",
+          "icon": "Clock",
+          "title": "As-Directed (Hourly Standby)",
+          "description": "Flexible, dedicated chauffeur-on-standby service. Ideal for executives with fluid schedules, multiple meetings, or diplomatic protocol.",
+          "actions": [
+            {
+              "label": "View Fleet Specs",
+              "href": "#",
+              "style": "accent",
+              "icon": "ChevronRight"
+            },
+            {
+              "label": "Request Standby",
+              "href": "#corporate-account",
+              "style": "text",
+              "icon": "Timer"
+            }
+          ]
+        },
+        {
+          "id": "itm-1792846212748-oo9n3yf9i",
+          "icon": "Route",
+          "title": "Strategic Route Logistics",
+          "description": "Complex multi-stop coordination orchestrated by our central control room. Engineered for roadshows, summit itineraries, and corporate transfers.",
+          "actions": [
+            {
+              "label": "Consult Dispatch",
+              "href": "#",
+              "style": "accent",
+              "icon": "ChevronRight"
+            },
+            {
+              "label": "Plan Route",
+              "href": "#corporate-account",
+              "style": "text",
+              "icon": "MapLocationDot"
+            }
+          ]
+        },
+        {
+          "id": "itm-1792846212748-izi8h4kh6",
+          "icon": "Bus",
+          "title": "Dedicated Fleet Allocation",
+          "description": "Long-term vehicle procurement and dedicated shuttle operations backed by vetted chauffeurs and rigorous safety SLAs.",
+          "actions": [
+            {
+              "label": "Route Planning",
+              "href": "#",
+              "style": "accent",
+              "icon": "ChevronRight"
+            },
+            {
+              "label": "Request Fleet Audit",
+              "href": "#corporate-account",
+              "style": "text",
+              "icon": "Users"
+            }
+          ]
+        },
+        {
+          "id": "itm-1792846212748-ud4l96ree",
+          "icon": "FileText",
+          "title": "Enterprise Contracts & SLAs",
+          "description": "Dedicated fleet leasing and customized service contracts for government ministries, foreign missions, and mega-projects.",
+          "wide": true,
+          "actions": [
+            {
+              "label": "Submit RFP",
+              "href": "#corporate-account",
+              "style": "accent",
+              "icon": "ChevronRight"
+            },
+            {
+              "label": "Speak to B2B Sales",
+              "href": "#corporate-account",
+              "style": "text",
+              "icon": "Briefcase"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "columns": "3",
+        "showHeader": true
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1792846212748-emi7gaxpd",
+      "type": "textMediaGrid",
+      "variant": "media-right",
+      "order": 2,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Infrastructure Alignment",
+        "eyebrowIcon": "City",
+        "heading": "Powering Regional",
+        "headingHighlight": "Vision 2030",
+        "headingAfter": "Corporate Ecosystem.",
+        "description": "<p class=\"mb-6 leading-relaxed\">As the Kingdom and GCC region undergo unprecedented economic diversification under the <strong>Vision 2030</strong> mandate, executive mobility infrastructure has evolved exponentially. AB operates at the nexus of this transformation, providing highly secure, scalable, and meticulously managed mobility solutions for multinational corporations entering the market.</p><p class=\"mb-6 leading-relaxed\">Our strategic dispatch capabilities are engineered specifically for premier economic corridors. We maintain a continuous, vetted presence within the <strong>King Abdullah Financial District (KAFD)</strong> and the <strong>Diplomatic Quarter (DQ)</strong>, navigating rigorous security protocols with absolute discretion and efficiency.</p><p class=\"leading-relaxed\">Beyond standard transfers, our <em>Media & Production Mobility Solutions</em> services provide global executives with the fluid, reliable mobility required to execute complex operations across the GCC's expanding urban and industrial footprint.</p>",
+        "items": [
+          {
+            "id": "itm-1792846212748-yrg3bz07b",
+            "icon": "BuildingShield",
+            "heading": "KAFD & Business Hubs",
+            "description": "Dedicated fleet positioning for immediate financial district deployments."
+          },
+          {
+            "id": "itm-1792846212748-6w9wg3150",
+            "icon": "Passport",
+            "heading": "Diplomatic Protocol",
+            "description": "Vetted personnel trained in embassy and diplomatic security standards."
+          }
+        ],
+        "media": [
+          {
+            "id": "itm-1792846212748-ilg808i6w",
+            "type": "image",
+            "column": "left",
+            "size": "tall",
+            "image": "https://images.unsplash.com/photo-1588726588629-19e48f7d9834?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            "imageAlt": "KAFD Architecture",
+            "overlay": "blue"
+          },
+          {
+            "id": "itm-1792846212748-105y7b06o",
+            "type": "image",
+            "column": "left",
+            "size": "short",
+            "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop&q=80",
+            "imageAlt": "Executive Sedan",
+            "overlay": "none",
+            "contain": true
+          },
+          {
+            "id": "itm-1792846212748-y7u73njog",
+            "type": "stat",
+            "column": "right",
+            "size": "short",
+            "statValue": "100%",
+            "statLabel": "TGA Compliant"
+          },
+          {
+            "id": "itm-1792846212748-08cslskl4",
+            "type": "image",
+            "column": "right",
+            "size": "tall",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            "imageAlt": "Corporate Logistics Data",
+            "overlay": "gradient"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "right"
+      },
+      "appearance": {
+        "theme": "darker",
+        "pattern": true,
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1792846212748-q6pmug81b",
+      "type": "mediaContent",
+      "variant": "media-right",
+      "order": 3,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Uncompromising Duty of Care",
+        "heading": "Corporate Technology & Security Integration.",
+        "description": "We don't just provide vehicles; we integrate directly into your corporate risk management and expense software. Our platform satisfies the stringent requirements of Fortune 500 procurement teams.",
+        "mediaTitle": "AB Command Center",
+        "items": [
+          {
+            "id": "itm-1792846212748-oozoa1k2x",
+            "icon": "FileInvoiceDollar",
+            "heading": "SAP Concur & Expense Integration",
+            "description": "Automated e-receipts, centralized corporate billing, and custom cost-center coding to eliminate friction for travel arrangers."
+          },
+          {
+            "id": "itm-1792846212748-3f3oybpgk",
+            "icon": "SatelliteDish",
+            "heading": "Intelligent Transport Systems (ITS)",
+            "description": "Live GPS tracking and central control room dispatch allowing your security teams to monitor movements in real-time."
+          },
+          {
+            "id": "itm-1792846212748-iztlees4l",
+            "icon": "IdCardClip",
+            "heading": "Vetted Professionalism & NDAs",
+            "description": "Mandatory comprehensive background checks, defensive driving certifications, and strict Non-Disclosure Agreements for all chauffeurs."
+          }
+        ],
+        "actions": [
+          {
+            "label": "Request Clearances & Compliance Docs",
+            "href": "#corporate-account",
+            "style": "outline",
+            "icon": "FileShield"
+          },
+          {
+            "label": "View Compliance FAQs",
+            "href": "#faq",
+            "style": "secondary"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "right",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "pattern": true,
+        "background": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1792846212748-vptwqua6e",
+      "type": "fleetGrid",
+      "variant": "4-column",
+      "order": 4,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Corporate Fleet Governance",
+        "heading": "Strictly Black. Strictly Professional.",
+        "description": "Our corporate fleet consists exclusively of late-model, immaculate black vehicles maintained to international standards.",
+        "headerAction": {
+          "label": "View Full Fleet Specifications",
+          "href": "#"
+        },
+        "bottomCta": {
+          "label": "Book a Fleet Demonstration",
+          "href": "#corporate-account",
+          "style": "secondary",
+          "icon": "CarSide"
+        }
+      },
+      "items": [
+        {
+          "id": "itm-1792846212748-0t92u3ylv",
+          "badge": "Executive Mobility",
+          "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop&q=80",
+          "imageAlt": "Mercedes S-Class Black",
+          "category": "Executive Sedan",
+          "name": "Mercedes S-Class (Black)",
+          "capacity": "3 Pax",
+          "bags": "2 Bags",
+          "capacityIcon": "UserTie",
+          "bagsIcon": "Briefcase",
+          "actions": [
+            {
+              "label": "Request Allocation",
+              "href": "#corporate-account"
+            }
+          ]
+        },
+        {
+          "id": "itm-1792846212748-y2bgk86au",
+          "badge": "Roadshow / Protocol",
+          "image": "https://images.unsplash.com/photo-1574729418529-d1a8cc214ef6?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "imageAlt": "Cadillac Escalade Black",
+          "category": "Executive SUV",
+          "name": "Cadillac Escalade (Black)",
+          "capacity": "6 Pax",
+          "bags": "5 Bags",
+          "capacityIcon": "UserTie",
+          "bagsIcon": "Briefcase",
+          "actions": [
+            {
+              "label": "Request Allocation",
+              "href": "#corporate-account"
+            }
+          ]
+        },
+        {
+          "id": "itm-1792846212748-0l8wujtso",
+          "badge": "Corporate Group",
+          "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?w=600&h=400&fit=crop&q=80",
+          "imageAlt": "Mercedes V-Class Black",
+          "category": "Premium MPV",
+          "name": "Mercedes V Class (Black)",
+          "capacity": "6 Pax",
+          "bags": "5 Bags",
+          "capacityIcon": "UsersViewfinder",
+          "bagsIcon": "Briefcase",
+          "actions": [
+            {
+              "label": "Request Allocation",
+              "href": "#corporate-account"
+            }
+          ]
+        },
+        {
+          "id": "itm-1792846212748-co2teagnj",
+          "badge": "Staff Shuttle / Events",
+          "badgeStyle": "accent",
+          "image": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=600&h=400&fit=crop&q=80",
+          "imageAlt": "Mercedes Sprinter Black",
+          "category": "Executive Van",
+          "name": "Mercedes Sprinter (Black)",
+          "capacity": "14 Pax",
+          "bags": "10 Bags",
+          "capacityIcon": "Users",
+          "bagsIcon": "Briefcase",
+          "actions": [
+            {
+              "label": "Request Allocation",
+              "href": "#corporate-account"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "columns": "4"
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1792846212748-yi0000se9",
+      "type": "contactForm",
+      "variant": "corporate",
+      "order": 5,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Partner With Us",
+        "heading": "Enterprise Procurement for Media & Production Mobility Solutions.",
+        "description": "Connect with our enterprise procurement team for dedicated account management, centralized billing, and priority fleet access.",
+        "icon": "Briefcase",
+        "submitLabel": "Submit Procurement Request",
+        "successTitle": "Application Received",
+        "successMessage": "An enterprise account manager will contact you within 24 hours."
+      },
+      "items": [],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1792846212748-r5c7ov6x7",
+      "type": "faq",
+      "variant": "default",
+      "order": 6,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Knowledge Base",
+        "heading": "Frequently Asked Questions",
+        "description": "Key answers regarding our Media & Production Mobility Solutions operations, billing frameworks, and procurement standards.",
+        "items": [
+          {
+            "id": "itm-1792846212748-26sceuhw4",
+            "question": "How do I book and set up a corporate account for Media & Production Mobility Solutions?",
+            "answer": "You can initiate booking immediately through our digital portal or contact our enterprise desk. For recurring requirements, corporate accounts provide SLA guarantees, consolidated monthly billing, and priority fleet dispatch."
+          },
+          {
+            "id": "itm-1792846212748-emqqhgccd",
+            "question": "What are your Duty of Care and vetting standards?",
+            "answer": "All AB chauffeurs undergo comprehensive background checks, hold valid defensive driving certifications, and sign legally binding NDAs. Our vehicles are subject to rigorous preventative maintenance and 24/7 ITS telemetry monitoring."
+          },
+          {
+            "id": "itm-1792846212748-70lfajrxm",
+            "question": "Can you support multi-city operations across Saudi Arabia and the GCC?",
+            "answer": "Yes. Our Transport Control Room manages cross-border and inter-city itineraries across Riyadh, Jeddah, Dammam, Dubai, Abu Dhabi, Doha, and Muscat with seamless continuity."
+          },
+          {
+            "id": "itm-1792846212748-snlg86e0j",
+            "question": "How does corporate billing and SAP Concur integration work?",
+            "answer": "Upon account activation, corporate rides can be automatically routed into SAP Concur or your corporate expense system with itemized VAT receipts and designated cost-center allocations."
+          }
+        ]
+      },
+      "items": [
+        {
+          "label": "Call Support",
+          "href": "tel:+966500000000",
+          "style": "secondary",
+          "icon": "Phone"
+        },
+        {
+          "label": "Open Support Ticket",
+          "href": "#corporate-account",
+          "style": "primary",
+          "icon": "ArrowRight"
+        }
+      ],
+      "settings": {
+        "variant": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    }
+  ],
+  "seo": {
+    "metaTitle": "Media & Production Mobility Solutions | AB",
+    "metaDescription": "Professional Media & Production Mobility Solutions with executive chauffeur services across Saudi Arabia, UAE, and the GCC.",
+    "ogImage": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&h=500&fit=crop"
+  },
+  "status": "published",
+  "showInMenu": false,
+  "order": 53,
+  "locale": "en",
+  "exportedAt": "2026-11-10T12:32:13.897Z"
+}

@@ -9,6 +9,13 @@ import type { SectionInstance, SectionRenderContext } from "@/components/section
 import { localeBase, localeHome } from "@/app/[lang]/dictionaries";
 import DubaiSkylineSvg from "./DubaiSkylineSvg";
 import RiyadhSkylineSvg from "./RiyadhSkylineSvg";
+import DohaSkylineSvg from "./DohaSkylineSvg";
+import KuwaitSkylineSvg from "./KuwaitSkylineSvg";
+import ManamaSkylineSvg from "./ManamaSkylineSvg";
+import MuscatSkylineSvg from "./MuscatSkylineSvg";
+import JeddahSkylineSvg from "./JeddahSkylineSvg";
+import KhobarSkylineSvg from "./KhobarSkylineSvg";
+import AbuDhabiSkylineSvg from "./AbuDhabiSkylineSvg";
 
 interface DubaiHeroProps {
   section?: SectionInstance;
@@ -94,10 +101,121 @@ export default function DubaiHeroSection({ section, context }: DubaiHeroProps) {
   };
 
   const renderSkyline = () => {
-    if (content.skyline === "none") return null;
-    if (isRiyadh || content.skyline === "riyadh") {
+    const key = (
+      content.skyline && content.skyline !== "none" ? content.skyline : citySlug
+    ).toLowerCase();
+
+    // Riyadh & Central/North KSA
+    if (
+      key.includes("riyadh") ||
+      key === "al-qasim" ||
+      key === "hail" ||
+      key === "najran" ||
+      key === "tabuk" ||
+      key === "neom" ||
+      key === "abha" ||
+      key === "jizan"
+    ) {
       return <RiyadhSkylineSvg className="w-full h-auto" />;
     }
+
+    // Jeddah, Makkah, Madinah & Western KSA
+    if (
+      key.includes("jeddah") ||
+      key.includes("mecca") ||
+      key.includes("makkah") ||
+      key.includes("medina") ||
+      key.includes("madinah") ||
+      key.includes("taif") ||
+      key.includes("yanbu")
+    ) {
+      return <JeddahSkylineSvg className="w-full h-auto" />;
+    }
+
+    // Eastern Province KSA (Khobar, Dammam, Jubail)
+    if (
+      key.includes("khobar") ||
+      key.includes("dammam") ||
+      key.includes("jubail") ||
+      key.includes("dhahran")
+    ) {
+      return <KhobarSkylineSvg className="w-full h-auto" />;
+    }
+
+    // Abu Dhabi & Al Ain
+    if (
+      key.includes("abu-dhabi") ||
+      key.includes("abudhabi") ||
+      key.includes("al-ain") ||
+      key.includes("alain")
+    ) {
+      return <AbuDhabiSkylineSvg className="w-full h-auto" />;
+    }
+
+    // Dubai & Northern Emirates
+    if (
+      key.includes("dubai") ||
+      key.includes("sharjah") ||
+      key.includes("ajman") ||
+      key.includes("ras-al-khaimah") ||
+      key.includes("rak") ||
+      key.includes("fujairah") ||
+      key.includes("umm-al-quwain")
+    ) {
+      return <DubaiSkylineSvg className="w-full h-auto" />;
+    }
+
+    // Doha & Qatar cities
+    if (
+      key.includes("doha") ||
+      key.includes("lusail") ||
+      key.includes("wakrah") ||
+      key.includes("khor") ||
+      key.includes("qatar")
+    ) {
+      return <DohaSkylineSvg className="w-full h-auto" />;
+    }
+
+    // Kuwait cities
+    if (
+      key.includes("kuwait") ||
+      key.includes("hawalli") ||
+      key.includes("farwaniya") ||
+      key.includes("ahmadi") ||
+      key.includes("salmiya")
+    ) {
+      return <KuwaitSkylineSvg className="w-full h-auto" />;
+    }
+
+    // Bahrain cities
+    if (
+      key.includes("manama") ||
+      key.includes("riffa") ||
+      key.includes("muharraq") ||
+      key.includes("bahrain")
+    ) {
+      return <ManamaSkylineSvg className="w-full h-auto" />;
+    }
+
+    // Oman cities
+    if (
+      key.includes("muscat") ||
+      key.includes("salalah") ||
+      key.includes("sohar") ||
+      key.includes("nizwa") ||
+      key.includes("oman")
+    ) {
+      return <MuscatSkylineSvg className="w-full h-auto" />;
+    }
+
+    // Fallbacks by countrySlug
+    const cSlug = countrySlug.toLowerCase();
+    if (cSlug.includes("saudi")) return <RiyadhSkylineSvg className="w-full h-auto" />;
+    if (cSlug.includes("qatar")) return <DohaSkylineSvg className="w-full h-auto" />;
+    if (cSlug.includes("kuwait")) return <KuwaitSkylineSvg className="w-full h-auto" />;
+    if (cSlug.includes("bahrain")) return <ManamaSkylineSvg className="w-full h-auto" />;
+    if (cSlug.includes("oman")) return <MuscatSkylineSvg className="w-full h-auto" />;
+
     return <DubaiSkylineSvg className="w-full h-auto" />;
   };
 

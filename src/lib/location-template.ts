@@ -10,6 +10,10 @@ import {
 import type { SectionInstance } from "@/components/section-library/types";
 import { buildCountryTemplate } from "@/components/section-library/presets/country-presets";
 import { buildCityTemplate } from "@/components/section-library/presets/city-presets";
+import {
+  CLIENT_CITY_DATA,
+  preserveCityTemplateContent,
+} from "@/components/section-library/presets/client-city-data";
 import { buildRouteTemplate } from "@/components/section-library/presets/route-presets";
 
 type LocationPageType = "country" | "city" | "route";
@@ -27,7 +31,8 @@ function coerceTemplate(raw: unknown): SectionInstance[] | null {
 
 async function findPublished(
   pageType: LocationPageType,
-  refKey: string
+  refKey: string,
+  lang?: string
 ): Promise<SectionInstance[] | null> {
   if (!isDatabaseEnabled()) return null;
   try {
@@ -39,6 +44,7 @@ async function findPublished(
     }).lean();
     if (docs.length === 0) return null;
     const doc =
+      (lang ? docs.find((d) => d.lang === lang) : undefined) ??
       docs.find((d) => d.lang === defaultLocale) ??
       docs.find((d) => d.lang !== "ar") ??
       docs[0];
@@ -53,13 +59,10 @@ async function dictFor(lang: string): Promise<Dictionary> {
 }
 
 /**
- * Template resolution chain (one template per page, shared by all locales):
- *   1. stored published doc for (pageType, refKey) — the default-language
- *      doc wins when legacy per-language docs exist
- *   2. in-memory builder with the requested locale's dictionary (pages
- *      before any template is saved get native default copy)
- * Every string inside template content still carries tokens
- * ({country}/{city}/...), resolved by SectionRenderer at render time.
+ * Template resolution chain:
+ *   1. stored published doc for (pageType, refKey, lang)
+ *   2. stored published doc for (pageType, refKey, defaultLocale)
+ *   3. in-memory builder with the requested locale's dictionary
  */
 async function resolveTemplate(
   pageType: LocationPageType,
@@ -67,7 +70,7 @@ async function resolveTemplate(
   lang: string,
   build: (dict: Dictionary) => SectionInstance[]
 ): Promise<SectionInstance[]> {
-  const stored = await findPublished(pageType, refKey);
+  const stored = await findPublished(pageType, refKey, lang);
   if (stored) return stored;
 
   return build(await dictFor(lang));
@@ -88,6 +91,19 @@ export async function getCityTemplate(
   lang: string
 ): Promise<SectionInstance[]> {
   const refKey = `${countrySlug}/${citySlug}`;
+  const isEnglish = lang === "en-US" || lang === "en-GB";
+  const isClientCity = Boolean(CLIENT_CITY_DATA[citySlug]);
+
+  if (isEnglish && isClientCity) {
+    const [stored, dict] = await Promise.all([
+      findPublished("city", refKey, lang),
+      dictFor(lang),
+    ]);
+    const canonical = buildCityTemplate(countrySlug, citySlug, dict);
+    if (!stored) return canonical;
+    return preserveCityTemplateContent(canonical, stored);
+  }
+
   return resolveTemplate("city", refKey, lang, (dict) =>
     buildCityTemplate(countrySlug, citySlug, dict)
   );

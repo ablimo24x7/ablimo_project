@@ -30,10 +30,10 @@ export const corporateTemplate: TemplatePreset = {
       enabled: true,
       content: {
         eyebrow: "Corporate & Staff Transportation",
-        title: "Corporate transportation, managed end to end.",
+        title: "Reliable corporate transportation across the Middle East",
         titleHighlight: "",
         description:
-          "When your executives, visitors and staff depend on getting somewhere on time every day, transportation becomes an operation in its own right. AB runs it for you: we plan the routes and vehicle mix, supply vetted chauffeurs and drivers, monitor every trip from our Riyadh control room, and report on what happened.",
+          "AB delivers corporate transportation built for organisations that require punctuality, discretion and regional reach. Headquartered in Riyadh with central operations, we manage executive travel, employee commuter routes and business delegations across the Gulf Cooperation Council.",
       },
       items: [
         { label: "Request a corporate proposal", href: "#corporate-account", style: "primary", icon: "ArrowRight", iconPosition: "right" },
@@ -41,7 +41,7 @@ export const corporateTemplate: TemplatePreset = {
         { label: "See how corporate accounts work →", href: "/corporate-accounts", style: "link", icon: "Briefcase", iconPosition: "left" },
       ],
       settings: { minHeight: "85vh", overlayOpacity: 85, contentPosition: "left", buttonLayout: "row" },
-      appearance: { theme: "darker", background: "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1920&h=800&fit=crop", padding: "none", border: false, textAlign: "left", overlayGradient: "default" },
+      appearance: { theme: "darker", background: "/services/www.ab.limo-services-corporate-transportation-images/image1.jpg", padding: "none", border: false, textAlign: "left", overlayGradient: "default" },
     },
     {
       id: genId(),
@@ -109,7 +109,7 @@ export const corporateTemplate: TemplatePreset = {
           icon: "Bus",
           title: "Staff shuttles and daily routes",
           description:
-            "Scheduled vans, minibuses or coaches between residential areas, offices and sites, with routes planned around shift times and reviewed as headcount changes. For large or remote workforces, see Workforce Transportation.",
+            "Scheduled vans, minibuses or coaches between residential areas, offices and sites, with routes planned around shift times and reviewed as headcount changes. For large or remote workforces, see Workforce & Project-Site Transportation.",
           actions: [{ label: "Workforce Mobility Scope", href: "/services/workforce-transportation", style: "accent", icon: "ChevronRight" }],
         },
         {
@@ -117,7 +117,7 @@ export const corporateTemplate: TemplatePreset = {
           icon: "Plane",
           title: "Visitor and new-joiner programmes",
           description:
-            "Airport arrival meet-and-assist, hotel, office and return for visiting executives, auditors, consultants and relocating staff, seamlessly booked against your corporate account.",
+            "Airport arrival, hotel, office and return for visiting executives, auditors, consultants and relocating staff, booked against your account.",
           actions: [{ label: "Airport Protocol Scope", href: "/services/airport-transfers", style: "accent", icon: "ChevronRight" }],
         },
         {
@@ -393,17 +393,17 @@ export const eventTemplate: TemplatePreset = {
       enabled: true,
       content: {
         eyebrow: "Events, Conferences & Exhibitions",
-        title: "Event transportation,",
-        titleHighlight: "planned like an operation.",
+        title: "Reliable Event Transportation for Flawless Regional Summits",
+        titleHighlight: "",
         description:
-          "Guests remember the first hour and the last hour of an event, and both usually happen in a vehicle. AB plans and runs every movement around your event: airport arrivals, hotel shuttles, VIP cars, speaker and artist transfers, staff transport and the departure wave. Everything is coordinated from one control room, with our team on site.",
+          "Coordinated event transportation requires punctual fleet positioning, vetted professional chauffeurs and continuous central supervision across host cities. AB manages large delegate movements and private VIP motorcades for premier conferences, state gatherings and exhibitions across Saudi Arabia, the UAE and Qatar.",
       },
       items: [
-        { label: "Plan Event Transport", href: "#event-brief", style: "primary", icon: "ArrowRight", iconPosition: "right" },
-        { label: "Request a Call with an Event Planner", href: "/contact", style: "secondary", icon: "Phone", iconPosition: "left" },
+        { label: "Plan event transport", href: "#event-brief", style: "primary", icon: "ArrowRight", iconPosition: "right" },
+        { label: "Request a call with an event planner", href: "/contact", style: "secondary", icon: "Phone", iconPosition: "left" },
       ],
       settings: { minHeight: "85vh", overlayOpacity: 85, contentPosition: "left", buttonLayout: "row" },
-      appearance: { theme: "darker", background: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=800&fit=crop&q=80", padding: "none", border: false, textAlign: "left", overlayGradient: "default" },
+      appearance: { theme: "darker", background: "/services/www.ab.limo-services-event-transportation-images/image1.jpg", padding: "none", border: false, textAlign: "left", overlayGradient: "default" },
     },
     {
       id: genId(),
@@ -443,6 +443,7 @@ export const eventTemplate: TemplatePreset = {
         { id: genItemId(), icon: "Crown", title: "VIP & Speaker Cars", description: "A dedicated pool of executive sedans and SUVs with chauffeurs briefed on the VIP schedule, protocol and venue access points.", actions: [{ label: "VIP Protocols", href: "#event-brief" }] },
         { id: genItemId(), icon: "Users", title: "Artist, Crew & Production", description: "Vans and minibuses for crews and equipment-light production teams, scheduled around rehearsals, call times, and load-ins.", actions: [{ label: "Production Logistics", href: "#event-brief" }] },
         { id: genItemId(), icon: "Compass", title: "On-Site Coordination", description: "Transport coordinators at hotels, venues and the airport, working with your venue and security teams on accreditation, loading zones and traffic flow.", actions: [{ label: "Ground Marshalling", href: "#event-brief" }] },
+        { id: genItemId(), icon: "BarChart3", title: "Post-Event Report", description: "Passenger volumes, trips by vehicle type, on-time performance against plan, incidents and recommendations for next year.", actions: [{ label: "Report Sample", href: "#event-brief" }] },
       ],
       settings: { columns: "3", showHeader: true },
       appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
@@ -508,8 +509,8 @@ export const eventTemplate: TemplatePreset = {
         { id: genItemId(), icon: "Layers", title: "Exhibitions & Trade Shows", description: "High-frequency shuttle corridors moving attendees, buyers, and exhibitors continuously between airports, parking, and exhibition halls.", actions: [{ label: "Exhibition Transport", href: "#event-brief" }] },
         { id: genItemId(), icon: "Music", title: "Festivals & Concerts", description: "Staged guest ingress and egress routing, artist green-room transfers, and dedicated production crew shuttles.", actions: [{ label: "Entertainment Logistics", href: "#event-brief" }] },
         { id: genItemId(), icon: "Trophy", title: "Sports Tournaments", description: "Athlete and team transfers, referee delegations, VIP lounges, media contingents, and stadium access management.", actions: [{ label: "Tournament Protocols", href: "#event-brief" }] },
-        { id: genItemId(), icon: "Sparkles", title: "Launches & Gala Dinners", description: "Punctual, elegant arrival coordination with white-glove chauffeur standards for corporate celebrations and brand showcases.", actions: [{ label: "Gala Mobility", href: "#event-brief" }] },
-        { id: genItemId(), icon: "Shield", title: "State & Diplomatic Summits", description: "Strict security clearance, motorcade support, protocol liaison officers, and airside airport arrivals for ministerial delegations.", actions: [{ label: "Diplomatic Logistics", href: "#event-brief" }] },
+        { id: genItemId(), icon: "Sparkles", title: "Product Launches & Gala Dinners", description: "Punctual, elegant arrival coordination with white-glove chauffeur standards for corporate celebrations and brand showcases.", actions: [{ label: "Gala Mobility", href: "#event-brief" }] },
+        { id: genItemId(), icon: "Heart", title: "Weddings & Private Celebrations", description: "Bespoke guest shuttles, bridal party luxury sedans, and coordinated venue arrivals for high-end weddings and private celebrations.", actions: [{ label: "Celebration Mobility", href: "#event-brief" }] },
       ],
       settings: { columns: "3", showHeader: true },
       appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
@@ -527,9 +528,13 @@ export const eventTemplate: TemplatePreset = {
         mediaTitle: "GCC Event Operations",
         badge: "GCC Certified",
         items: [
+          { id: genItemId(), icon: "Building", heading: "Saudi Arabia (KSA)", description: "Dedicated staging yards in Riyadh, Jeddah & Eastern Province for high-capacity event mobility." },
+          { id: genItemId(), icon: "Globe", heading: "UAE & Qatar Hubs", description: "Direct operations across Dubai (DWTC/Expo City), Abu Dhabi (ADNEC), and Doha (DECC)." },
+        ],
+        media: [
           { id: genItemId(), type: "stat", column: "left", size: "short", statValue: "100%", statLabel: "Guaranteed Fleet Dispatch" },
-          { id: genItemId(), type: "image", column: "left", size: "tall", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop&q=80", imageAlt: "Dubai & Riyadh Event Transport", overlay: "blue" },
-          { id: genItemId(), type: "image", column: "right", size: "tall", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop&q=80", imageAlt: "Convention Center Event Logistics", overlay: "gradient" },
+          { id: genItemId(), type: "image", column: "left", size: "tall", image: "/services/www.ab.limo-services-event-transportation-images/image2.jpg", imageAlt: "MDL Beast Soundstorm Festival Staging", overlay: "blue" },
+          { id: genItemId(), type: "image", column: "right", size: "tall", image: "/services/www.ab.limo-services-event-transportation-images/image3.jpg", imageAlt: "ADIPEC Exhibition Venue Abu Dhabi", overlay: "gradient" },
           { id: genItemId(), type: "stat", column: "right", size: "short", statValue: "24/7", statLabel: "Live Operations Command" },
         ],
       },
@@ -594,8 +599,8 @@ export const eventTemplate: TemplatePreset = {
         description: "Guests remember the first hour and the last hour of an event. Coordinate your arrivals, venue shuttles, VIP pools and departure waves with our dedicated event control room.",
       },
       items: [
-        { label: "Plan Event Transport", href: "#event-brief", style: "primary", icon: "ArrowRight" },
-        { label: "Request a Call with an Event Planner", href: "/contact", style: "secondary", icon: "Phone" },
+        { label: "Plan event transport", href: "#event-brief", style: "primary", icon: "ArrowRight" },
+        { label: "Request a call with an event planner", href: "/contact", style: "secondary", icon: "Phone" },
       ],
       settings: { layout: "centered" },
       appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
@@ -813,12 +818,192 @@ export const groundTransportationTemplate: TemplatePreset = {
   ],
 };
 
+// ── Intercity Transfers Template ─────────────────────────────────
+
+export const intercityTemplate: TemplatePreset = {
+  name: "Intercity Transfers",
+  description: "Point-to-point road travel across GCC corridors with flight tracking, popular routes, and 24/7 dispatch",
+  icon: "Route",
+  sections: [
+    {
+      id: genId(),
+      type: "hero",
+      variant: "background-content",
+      order: 0,
+      enabled: true,
+      content: {
+        eyebrow: "Intercity Ground Transportation",
+        title: "Intercity chauffeur service UAE for seamless business travel",
+        titleHighlight: "",
+        description:
+          "An intercity chauffeur service UAE provides managed point to point road travel across the emirates with professional chauffeurs and continuous flight tracking. Executive travellers secure punctual departures between major commercial centres, international airports and regional project offices through direct central dispatch.",
+      },
+      items: [
+        { label: "Request a proposal", href: "/contact", style: "primary", icon: "ArrowRight", iconPosition: "right" },
+        { label: "Book a transfer", href: "/booking", style: "secondary", icon: "Car", iconPosition: "left" },
+        { label: "All services →", href: "/services", style: "link", icon: "Route", iconPosition: "left" },
+      ],
+      settings: { minHeight: "85vh", overlayOpacity: 85, contentPosition: "left", buttonLayout: "row" },
+      appearance: { theme: "darker", background: "/services/www.ab.limo-services-intercity-transfers-dubai-abu-dhabi-images/image1.jpg", padding: "none", border: false, textAlign: "left", overlayGradient: "default" },
+    },
+    {
+      id: genId(),
+      type: "marquee",
+      variant: "default",
+      order: 1,
+      enabled: true,
+      content: {
+        items: [
+          { id: genItemId(), icon: "Radio", label: "24/7 Central Dispatch" },
+          { id: genItemId(), icon: "Globe", label: "3 Countries with Direct Fleet" },
+          { id: genItemId(), icon: "Plane", label: "8 Regional Airports Served" },
+          { id: genItemId(), icon: "Shield", label: "Point-to-Point Borderless Transit" },
+          { id: genItemId(), icon: "Navigation", label: "Real-Time Telemetry & Traffic Rerouting" },
+          { id: genItemId(), icon: "FileText", label: "Consolidated Corporate Accounts" },
+        ],
+      },
+      items: [],
+      settings: { speed: "normal", opacity: 90 },
+      appearance: { theme: "darker", padding: "sm", border: true },
+    },
+    {
+      id: genId(),
+      type: "mediaContent",
+      variant: "media-left",
+      order: 2,
+      enabled: true,
+      content: {
+        eyebrow: "Operational Protocol",
+        heading: "How we work",
+        description:
+          "Organisations requiring a reliable intercity chauffeur service UAE rely on structured ground transport protocols managed from a central operations hub. Every route pairs experienced chauffeurs with real time GPS tracking, unified regional account management and immediate dispatch capability across the Arabian Gulf.",
+        items: [
+          { id: genItemId(), icon: "Compass", heading: "Direct Corridor Navigation", description: "Direct non-stop road transit eliminating connection delays and multi-leg itineraries." },
+          { id: genItemId(), icon: "Radio", heading: "24/7 Operations Supervision", description: "Continuous control room tracking from initial pickup to final destination arrival." },
+          { id: genItemId(), icon: "Shield", heading: "Verified Duty of Care", description: "Strict mechanical inspections, commercial licensing, and protocol-trained chauffeurs." },
+        ],
+        actions: [{ label: "Request a Proposal", href: "/contact", style: "primary", icon: "ArrowRight" }],
+      },
+      items: [],
+      settings: { mediaPosition: "left", containerWidth: "default" },
+      appearance: { theme: "darker", background: "/services/www.ab.limo-services-intercity-transfers-dubai-abu-dhabi-images/image1.jpg", padding: "lg", border: true, textAlign: "left" },
+    },
+    {
+      id: genId(),
+      type: "serviceCards",
+      variant: "3-column",
+      order: 3,
+      enabled: true,
+      content: {
+        eyebrow: "Service Capabilities",
+        heading: "Built for intercity transfers",
+        description: "Corporate travel demands consistency, complete route visibility and vehicle suitability across all regional jurisdictions.",
+      },
+      items: [
+        {
+          id: genItemId(),
+          icon: "Route",
+          title: "Point to point transfers",
+          description: "Direct non stop transit connects headquarters, industrial zones and regional offices across emirate borders without vehicle transfers or interim delays.",
+          actions: [{ label: "Explore Point-to-Point", href: "/contact", style: "accent", icon: "ChevronRight" }],
+        },
+        {
+          id: genItemId(),
+          icon: "Compass",
+          title: "Popular routes",
+          description: "A city to city transfer delivers executives directly between primary urban business districts with transparent logistics and verified routing.",
+          actions: [{ label: "View Routes", href: "/services/intercity-transfers/dubai-abu-dhabi", style: "accent", icon: "ChevronRight" }],
+        },
+        {
+          id: genItemId(),
+          icon: "Plane",
+          title: "Airport to city",
+          description: "Inbound travellers receive flight tracking, terminal meet and greet arrivals and direct onward private intercity car transit to their destination.",
+          actions: [{ label: "Airport Protocol", href: "/services/airport-transfers", style: "accent", icon: "ChevronRight" }],
+        },
+        {
+          id: genItemId(),
+          icon: "Clock",
+          title: "One way, return or hourly",
+          description: "Choose single legs, same day returns or continuous standby with a dedicated long distance chauffeur for fluid executive agendas.",
+          actions: [{ label: "Flexible Hire", href: "/contact", style: "accent", icon: "ChevronRight" }],
+        },
+      ],
+      settings: { columns: "4", showHeader: true },
+      appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
+    },
+    {
+      id: genId(),
+      type: "mediaContent",
+      variant: "media-right",
+      order: 4,
+      enabled: true,
+      content: {
+        eyebrow: "Operational Workflow",
+        heading: "Three stages, one accountable partner",
+        description: "Coordinating corporate travel across regional borders follows a transparent operational sequence designed to maintain duty of care:",
+        items: [
+          { id: genItemId(), icon: "FileText", heading: "1. Brief", description: "Submit passenger manifests, pickup windows, luggage requirements and special protocol details directly to our central booking coordinators." },
+          { id: genItemId(), icon: "MapPin", heading: "2. Plan", description: "Operations teams assign optimal vehicle categories, verify highway route clearances and schedule chauffeurs to meet pickup timing." },
+          { id: genItemId(), icon: "Car", heading: "3. Operate", description: "Central dispatch monitors vehicle telemetry continuously, providing real time pickup updates and quiet travel to the final arrival point." },
+        ],
+        actions: [{ label: "Request a proposal", href: "/contact", style: "primary", icon: "ArrowRight" }],
+      },
+      items: [],
+      settings: { mediaPosition: "right", containerWidth: "default" },
+      appearance: { theme: "darker", background: "/services/www.ab.limo-services-intercity-transfers-dubai-abu-dhabi-images/image1.jpg", padding: "lg", border: true, textAlign: "left" },
+    },
+    {
+      id: genId(),
+      type: "faq",
+      variant: "default",
+      order: 5,
+      enabled: true,
+      content: {
+        eyebrow: "Questions",
+        heading: "Frequently asked questions",
+        description: "Operational details for intercity travel across the UAE and GCC.",
+        items: [
+          { id: genItemId(), question: "How does AB coordinate an intercity transfer between emirates?", answer: "Every journey is logged through our central operations centre, where route managers verify live traffic conditions and assign qualified chauffeurs. Central dispatch monitors progress via live GPS tracking from origin departure to final destination arrival." },
+          { id: genItemId(), question: "What vehicle categories are available for long distance transfers?", answer: "Our fleet comprises premium executive sedans, spacious sports utility vehicles, executive MPVs and high capacity passenger vans equipped for highway comfort." },
+          { id: genItemId(), question: "How are airport arrivals managed for onward intercity journeys?", answer: "Chauffeurs track inbound commercial and private flights in real time to adapt to schedule revisions automatically, meeting guests inside the terminal." },
+          { id: genItemId(), question: "Can corporate clients establish centralised monthly billing?", answer: "Yes. Organisations managing frequent business travel can establish a corporate account consolidating multiple bookings across regional offices into a clear monthly invoice." },
+        ],
+      },
+      items: [
+        { label: "Request a proposal", href: "/contact", style: "primary", icon: "ArrowRight" },
+        { label: "Talk to a planner", href: "/contact", style: "secondary", icon: "Phone" },
+      ],
+      settings: { variant: "default" },
+      appearance: { theme: "darker", padding: "lg", border: true, textAlign: "center" },
+    },
+    {
+      id: genId(),
+      type: "ctaBanner",
+      variant: "centered",
+      order: 6,
+      enabled: true,
+      content: {
+        heading: "Planning intercity transfers?",
+        description: "Deploy a professional intercity chauffeur service UAE with central dispatch, verified duty of care protocols and premium executive vehicles across every emirate.",
+      },
+      items: [
+        { label: "Request a proposal", href: "/contact", style: "primary", icon: "ArrowRight" },
+        { label: "Talk to a planner", href: "/contact", style: "secondary", icon: "Phone" },
+      ],
+      settings: { layout: "centered" },
+      appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
+    },
+  ],
+};
+
 // ── Available Presets ────────────────────────────────────────────
 
 export const TEMPLATE_PRESETS: TemplatePreset[] = [
   groundTransportationTemplate,
   corporateTemplate,
   eventTemplate,
+  intercityTemplate,
   {
     name: "Airport Service",
     description: "Airport transfers with hero, features, and FAQ",

@@ -321,7 +321,8 @@ export async function getCityServiceCounts(): Promise<
         $match: {
           status: "published",
           templateType: "service-city",
-          citySlug: { $ne: "" },
+          countrySlug: { $type: "string", $ne: "" },
+          citySlug: { $type: "string", $ne: "" },
         },
       },
       {

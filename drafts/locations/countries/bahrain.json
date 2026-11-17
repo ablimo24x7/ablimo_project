@@ -1,0 +1,710 @@
+{
+  "pageType": "country",
+  "refKey": "bahrain",
+  "countrySlug": "bahrain",
+  "path": "/locations/bahrain",
+  "description": "Country template for bahrain",
+  "exportedAt": "2026-11-10T12:32:14.121Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1793272074068-xjyapp2po",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Bahrain",
+          "titleHighlight": "",
+          "description": "For executive chauffeur service Bahrain journeys are coordinated through AB by booking vetted regional partners on request. Central operations managed from Riyadh oversee every transfer to maintain strict service consistency across the Kingdom of Bahrain.\n\nEach itinerary receives dedicated scheduling support to align vehicle capacity and chauffeur protocol with corporate travel schedules."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/locations",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-bahrain-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1793272074068-nuagdxwyf",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074068-dylmw7bgw",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Regional Fleet and Destinations",
+          "heading": "Chauffeur Service Bahrain Coverage and BAH Airport Transfers",
+          "description": "AB structures executive limousine service and private driver itineraries across major business districts through an established network of licensed operators. Clients reserve car with driver options ranging from executive car service on an hourly chauffeur basis for business travel to full day hire for VIP transport delegations. All assignments are dispatched through our central control desk to align vehicle types with passenger requirements. Review Gulf coverage on Locations to coordinate regional transfers.",
+          "items": [
+            {
+              "id": "bh-cov-1",
+              "icon": "Map",
+              "heading": "Manama",
+              "description": "Financial Harbour, diplomatic quarter, and corporate office transfers in executive sedan or luxury car options."
+            },
+            {
+              "id": "bh-cov-2",
+              "icon": "Map",
+              "heading": "Muharraq",
+              "description": "Heritage sites, coastal logistics districts, and direct connections managed with professional chauffeur standards."
+            },
+            {
+              "id": "bh-cov-3",
+              "icon": "Map",
+              "heading": "Riffa",
+              "description": "Diplomatic residences, golf club appointments, and executive meetings served by spacious SUV models."
+            },
+            {
+              "id": "bh-cov-4",
+              "icon": "Plane",
+              "heading": "Bahrain International Airport (BAH)",
+              "description": "Punctual airport transfer services with terminal meet and greet plus real time flight tracking."
+            }
+          ],
+          "actions": [
+            {
+              "label": "View Locations",
+              "href": "/locations",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-bahrain-images/image1.jpg",
+          "backgroundAlt": "Executive chauffeur service Bahrain vehicle arrival"
+        }
+      },
+      {
+        "id": "sec-1793272074068-rqz48qzaj",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "heading": "Destinations in Bahrain",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074068-18v7px658",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Operational Workflow",
+          "heading": "How Partner Trips Work in Bahrain",
+          "description": ""
+        },
+        "items": [
+          {
+            "id": "bh-wf-1",
+            "icon": "Briefcase",
+            "title": "Request",
+            "description": "Submit your itinerary through our booking desk with vehicle preferences and passenger details. Our Riyadh dispatch team reviews route specifics, flight numbers, and timing to prepare an accurate proposal."
+          },
+          {
+            "id": "bh-wf-2",
+            "icon": "Shield",
+            "title": "Plan and Vet",
+            "description": "Operations specialists allocate an audited local partner with an insured luxury fleet. Chauffeur credentials, vehicle condition, and licensing receive verification before trip confirmation to maintain duty of care standards."
+          },
+          {
+            "id": "bh-wf-3",
+            "icon": "Clock",
+            "title": "Operate and Report",
+            "description": "The driver arrives before the scheduled time while dispatch monitors progress through 24/7 flight tracking and route management. Your booking coordinator delivers immediate completion reports upon drop off."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074068-p0pk399lg",
+        "type": "introText",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Quality Protocol",
+          "heading": "Chauffeur Service Bahrain Partner Fleet Standards",
+          "paragraphs": [
+            "Every partner vehicle deployed across Bahrain meets strict executive benchmarks for presentation, mechanical safety, and passenger comfort. Local fleets supply premium sedan choices like the Mercedes S Class, executive SUV options including the Cadillac Escalade or GMC Yukon, and group transport in the Mercedes V Class or executive van. Chauffeurs are licensed, background checked, commercially insured, and trained in discreet protocol for corporate transport Bahrain requirements."
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074068-w3wd2zzw4",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1793272074068-mkffjihei",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "Book Chauffeur Service Bahrain for Corporate Travel",
+          "description": "Coordinate executive ground transport across Bahrain with vetted partner fleets and 24/7 Riyadh operations management by submitting your travel itinerary today."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/locations",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1792139036437-q3ng24l2x",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service In {country}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1547548731-e95343697eb4?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036437-edeqyzhpu",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036437-4641z2oh1",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036437-lsc3v27vi",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Chauffeur Service in the Pearl of the Gulf",
+          "description": "Bahrain — the pearl of the Gulf — blends island charm with financial and cultural dynamism. From Grand Prix weekends to business in Manama, AB provides polished chauffeur service connecting Bahrain International Airport, hotels, and destinations across the kingdom.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1547548731-e95343697eb4?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      },
+      {
+        "id": "sec-1792139036437-a3dw4e0bf",
+        "type": "introText",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "Experience refined elegance with AB’s premium chauffeur service across {country}. From major business hubs to every destination across the region, our network of professional drivers provides discreet, first-class transportation tailored to your journey. Whether you need seamless airport transfers, city-to-city travel, or flexible hourly bookings, we deliver an uncompromised, executive travel experience.",
+            "Don't settle for just renting a car with a driver — immerse yourself in an experience by booking with AB.",
+            "Check out our wide range of services available across {country} below:"
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036437-bigtcjkzh",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "heading": "Inter City Routes in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036437-nu82n220a",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1793272074085-zy7wybpff",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Bahrain",
+          "titleHighlight": "",
+          "description": "For executive chauffeur service Bahrain journeys are coordinated through AB by booking vetted regional partners on request. Central operations managed from Riyadh oversee every transfer to maintain strict service consistency across the Kingdom of Bahrain.\n\nEach itinerary receives dedicated scheduling support to align vehicle capacity and chauffeur protocol with corporate travel schedules."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/locations",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-bahrain-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1793272074085-esrdej2bf",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-t86r2yjqi",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Regional Fleet and Destinations",
+          "heading": "Chauffeur Service Bahrain Coverage and BAH Airport Transfers",
+          "description": "AB structures executive limousine service and private driver itineraries across major business districts through an established network of licensed operators. Clients reserve car with driver options ranging from executive car service on an hourly chauffeur basis for business travel to full day hire for VIP transport delegations. All assignments are dispatched through our central control desk to align vehicle types with passenger requirements. Review Gulf coverage on Locations to coordinate regional transfers.",
+          "items": [
+            {
+              "id": "bh-cov-1",
+              "icon": "Map",
+              "heading": "Manama",
+              "description": "Financial Harbour, diplomatic quarter, and corporate office transfers in executive sedan or luxury car options."
+            },
+            {
+              "id": "bh-cov-2",
+              "icon": "Map",
+              "heading": "Muharraq",
+              "description": "Heritage sites, coastal logistics districts, and direct connections managed with professional chauffeur standards."
+            },
+            {
+              "id": "bh-cov-3",
+              "icon": "Map",
+              "heading": "Riffa",
+              "description": "Diplomatic residences, golf club appointments, and executive meetings served by spacious SUV models."
+            },
+            {
+              "id": "bh-cov-4",
+              "icon": "Plane",
+              "heading": "Bahrain International Airport (BAH)",
+              "description": "Punctual airport transfer services with terminal meet and greet plus real time flight tracking."
+            }
+          ],
+          "actions": [
+            {
+              "label": "View Locations",
+              "href": "/locations",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-bahrain-images/image1.jpg",
+          "backgroundAlt": "Executive chauffeur service Bahrain vehicle arrival"
+        }
+      },
+      {
+        "id": "sec-1793272074085-bx1uqur7j",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "heading": "Destinations in Bahrain",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-ezhidd6ai",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Operational Workflow",
+          "heading": "How Partner Trips Work in Bahrain",
+          "description": ""
+        },
+        "items": [
+          {
+            "id": "bh-wf-1",
+            "icon": "Briefcase",
+            "title": "Request",
+            "description": "Submit your itinerary through our booking desk with vehicle preferences and passenger details. Our Riyadh dispatch team reviews route specifics, flight numbers, and timing to prepare an accurate proposal."
+          },
+          {
+            "id": "bh-wf-2",
+            "icon": "Shield",
+            "title": "Plan and Vet",
+            "description": "Operations specialists allocate an audited local partner with an insured luxury fleet. Chauffeur credentials, vehicle condition, and licensing receive verification before trip confirmation to maintain duty of care standards."
+          },
+          {
+            "id": "bh-wf-3",
+            "icon": "Clock",
+            "title": "Operate and Report",
+            "description": "The driver arrives before the scheduled time while dispatch monitors progress through 24/7 flight tracking and route management. Your booking coordinator delivers immediate completion reports upon drop off."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-tn1s4d9w6",
+        "type": "introText",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Quality Protocol",
+          "heading": "Chauffeur Service Bahrain Partner Fleet Standards",
+          "paragraphs": [
+            "Every partner vehicle deployed across Bahrain meets strict executive benchmarks for presentation, mechanical safety, and passenger comfort. Local fleets supply premium sedan choices like the Mercedes S Class, executive SUV options including the Cadillac Escalade or GMC Yukon, and group transport in the Mercedes V Class or executive van. Chauffeurs are licensed, background checked, commercially insured, and trained in discreet protocol for corporate transport Bahrain requirements."
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-t5piok7lf",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1793272074085-nhrif8me9",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "Book Chauffeur Service Bahrain for Corporate Travel",
+          "description": "Coordinate executive ground transport across Bahrain with vetted partner fleets and 24/7 Riyadh operations management by submitting your travel itinerary today."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/locations",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

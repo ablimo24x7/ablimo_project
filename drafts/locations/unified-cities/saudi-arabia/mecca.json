@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/mecca",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "mecca",
+  "path": "/locations/saudi-arabia/mecca",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for mecca (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.448Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309997142-19pymdtdu",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN MECCA",
+          "title": "Mecca",
+          "description": "In the holiest city in Islam, every journey carries profound meaning. AB provides discreet, reliable chauffeur service for pilgrims, executives, and state delegations with 24/7 airport meet-and-greets and Haram shuttles.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Abdulaziz International (JED)",
+          "dropoffDefault": "Makkah Clock Royal Tower",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997142-vqpirsgdq",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE MECCA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997142-vzpyb88k4",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Mecca and beyond"
+        },
+        "items": [
+          {
+            "id": "jed-makkah-clock",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "JED to Makkah Clock Tower",
+            "titleAr": "من مطار الملك عبدالعزيز إلى أبراج الساعة بمكة",
+            "price": "From SAR 550",
+            "priceAr": "ابتداءً من 550 ر.س",
+            "pickup": "King Abdulaziz International Airport (JED)",
+            "dropoff": "Makkah Clock Royal Tower"
+          },
+          {
+            "id": "makkah-haram",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Makkah Hotels to Grand Mosque",
+            "titleAr": "من فنادق مكة إلى المسجد الحرام",
+            "price": "From SAR 250",
+            "priceAr": "ابتداءً من 250 ر.س",
+            "pickup": "Makkah Hotels",
+            "dropoff": "The Holy Mosque (Haram)"
+          },
+          {
+            "id": "makkah-medina",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Makkah to Madinah",
+            "titleAr": "من مكة المكرمة إلى المدينة المنورة",
+            "price": "From SAR 1,200",
+            "priceAr": "ابتداءً من 1,200 ر.س",
+            "pickup": "Makkah",
+            "dropoff": "Madinah"
+          },
+          {
+            "id": "makkah-jeddah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Makkah to Jeddah",
+            "titleAr": "من مكة المكرمة إلى جدة",
+            "price": "From SAR 550",
+            "priceAr": "ابتداءً من 550 ر.س",
+            "pickup": "Makkah",
+            "dropoff": "Jeddah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997142-u9voviyhp",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN MECCA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997142-q36t5e7f3",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Mecca.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309997142-19pymdtdu",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN MECCA",
+          "title": "Mecca",
+          "description": "In the holiest city in Islam, every journey carries profound meaning. AB provides discreet, reliable chauffeur service for pilgrims, executives, and state delegations with 24/7 airport meet-and-greets and Haram shuttles.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Abdulaziz International (JED)",
+          "dropoffDefault": "Makkah Clock Royal Tower",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997142-vqpirsgdq",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE MECCA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997142-vzpyb88k4",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Mecca and beyond"
+        },
+        "items": [
+          {
+            "id": "jed-makkah-clock",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "JED to Makkah Clock Tower",
+            "titleAr": "من مطار الملك عبدالعزيز إلى أبراج الساعة بمكة",
+            "price": "From SAR 550",
+            "priceAr": "ابتداءً من 550 ر.س",
+            "pickup": "King Abdulaziz International Airport (JED)",
+            "dropoff": "Makkah Clock Royal Tower"
+          },
+          {
+            "id": "makkah-haram",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Makkah Hotels to Grand Mosque",
+            "titleAr": "من فنادق مكة إلى المسجد الحرام",
+            "price": "From SAR 250",
+            "priceAr": "ابتداءً من 250 ر.س",
+            "pickup": "Makkah Hotels",
+            "dropoff": "The Holy Mosque (Haram)"
+          },
+          {
+            "id": "makkah-medina",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Makkah to Madinah",
+            "titleAr": "من مكة المكرمة إلى المدينة المنورة",
+            "price": "From SAR 1,200",
+            "priceAr": "ابتداءً من 1,200 ر.س",
+            "pickup": "Makkah",
+            "dropoff": "Madinah"
+          },
+          {
+            "id": "makkah-jeddah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Makkah to Jeddah",
+            "titleAr": "من مكة المكرمة إلى جدة",
+            "price": "From SAR 550",
+            "priceAr": "ابتداءً من 550 ر.س",
+            "pickup": "Makkah",
+            "dropoff": "Jeddah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997142-u9voviyhp",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN MECCA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997142-q36t5e7f3",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Mecca.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309997142-mxt2gt8ya",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في مكة المكرمة",
+          "title": "مكة المكرمة",
+          "description": "في أقدس بقاع الأرض، تحظى كل رحلة بأقصى درجات الاهتمام. توفر إيه بي ليمو خدمات سائق خاص راقية للمعتمرين ورجال الأعمال والوفود الرسمية مع استقبال مخصص في المطار وتوصيل مباشر للحرم المكي الشريف.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "King Abdulaziz International (JED)",
+          "dropoffDefault": "Makkah Clock Royal Tower",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997142-qhnox3t3o",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول مكة المكرمة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997142-u5fwz8cfj",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء مكة المكرمة وخارجها"
+        },
+        "items": [
+          {
+            "id": "jed-makkah-clock",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "JED to Makkah Clock Tower",
+            "titleAr": "من مطار الملك عبدالعزيز إلى أبراج الساعة بمكة",
+            "price": "From SAR 550",
+            "priceAr": "ابتداءً من 550 ر.س",
+            "pickup": "King Abdulaziz International Airport (JED)",
+            "dropoff": "Makkah Clock Royal Tower"
+          },
+          {
+            "id": "makkah-haram",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Makkah Hotels to Grand Mosque",
+            "titleAr": "من فنادق مكة إلى المسجد الحرام",
+            "price": "From SAR 250",
+            "priceAr": "ابتداءً من 250 ر.س",
+            "pickup": "Makkah Hotels",
+            "dropoff": "The Holy Mosque (Haram)"
+          },
+          {
+            "id": "makkah-medina",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Makkah to Madinah",
+            "titleAr": "من مكة المكرمة إلى المدينة المنورة",
+            "price": "From SAR 1,200",
+            "priceAr": "ابتداءً من 1,200 ر.س",
+            "pickup": "Makkah",
+            "dropoff": "Madinah"
+          },
+          {
+            "id": "makkah-jeddah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Makkah to Jeddah",
+            "titleAr": "من مكة المكرمة إلى جدة",
+            "price": "From SAR 550",
+            "priceAr": "ابتداءً من 550 ر.س",
+            "pickup": "Makkah",
+            "dropoff": "Jeddah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997142-481oxwxkr",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في مكة المكرمة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997142-3n8t7hfun",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في مكة المكرمة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

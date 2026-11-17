@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "uae/al-ain",
+  "countrySlug": "uae",
+  "citySlug": "al-ain",
+  "path": "/locations/uae/al-ain",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for al-ain (uae)",
+  "exportedAt": "2026-11-10T12:32:14.453Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310003694-2ryv45w2i",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL AIN",
+          "title": "Al Ain",
+          "description": "The Garden City of the Gulf — Al Ain offers date oases, historical forts, and the dramatic winding roads of Jebel Hafeet. AB's professional chauffeurs make airport commutes and scenic mountain tours effortless and elegant.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Zayed International Airport (AUH)",
+          "dropoffDefault": "Al Ain Oasis",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310003695-7y2i9ys5b",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL AIN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003695-rxph21uff",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Ain and beyond"
+        },
+        "items": [
+          {
+            "id": "auh-alain",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "AUH to Al Ain City Center",
+            "titleAr": "من مطار زايد الدولي إلى وسط مدينة العين",
+            "price": "From AED 520",
+            "priceAr": "ابتداءً من 520 درهم",
+            "pickup": "Zayed International Airport (AUH)",
+            "dropoff": "Al Ain Center"
+          },
+          {
+            "id": "dxb-alain",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Al Ain Oasis & Resorts",
+            "titleAr": "من مطار دبي إلى واحة ومنتجعات العين",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Al Ain Oasis"
+          },
+          {
+            "id": "alain-hafeet",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Al Ain to Jebel Hafeet Summit",
+            "titleAr": "من العين إلى قمة جبل حفيت",
+            "price": "From AED 320",
+            "priceAr": "ابتداءً من 320 درهم",
+            "pickup": "Al Ain",
+            "dropoff": "Jebel Hafeet"
+          },
+          {
+            "id": "alain-abudhabi",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Ain to Abu Dhabi Downtown",
+            "titleAr": "من العين إلى وسط مدينة أبوظبي",
+            "price": "From AED 520",
+            "priceAr": "ابتداءً من 520 درهم",
+            "pickup": "Al Ain",
+            "dropoff": "Abu Dhabi"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003695-ghimgwva2",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL AIN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003695-iqe4md6n7",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Ain.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310003694-2ryv45w2i",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL AIN",
+          "title": "Al Ain",
+          "description": "The Garden City of the Gulf — Al Ain offers date oases, historical forts, and the dramatic winding roads of Jebel Hafeet. AB's professional chauffeurs make airport commutes and scenic mountain tours effortless and elegant.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Zayed International Airport (AUH)",
+          "dropoffDefault": "Al Ain Oasis",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310003695-7y2i9ys5b",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL AIN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003695-rxph21uff",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Ain and beyond"
+        },
+        "items": [
+          {
+            "id": "auh-alain",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "AUH to Al Ain City Center",
+            "titleAr": "من مطار زايد الدولي إلى وسط مدينة العين",
+            "price": "From AED 520",
+            "priceAr": "ابتداءً من 520 درهم",
+            "pickup": "Zayed International Airport (AUH)",
+            "dropoff": "Al Ain Center"
+          },
+          {
+            "id": "dxb-alain",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Al Ain Oasis & Resorts",
+            "titleAr": "من مطار دبي إلى واحة ومنتجعات العين",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Al Ain Oasis"
+          },
+          {
+            "id": "alain-hafeet",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Al Ain to Jebel Hafeet Summit",
+            "titleAr": "من العين إلى قمة جبل حفيت",
+            "price": "From AED 320",
+            "priceAr": "ابتداءً من 320 درهم",
+            "pickup": "Al Ain",
+            "dropoff": "Jebel Hafeet"
+          },
+          {
+            "id": "alain-abudhabi",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Ain to Abu Dhabi Downtown",
+            "titleAr": "من العين إلى وسط مدينة أبوظبي",
+            "price": "From AED 520",
+            "priceAr": "ابتداءً من 520 درهم",
+            "pickup": "Al Ain",
+            "dropoff": "Abu Dhabi"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003695-ghimgwva2",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL AIN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003695-iqe4md6n7",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Ain.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310003695-nocekclot",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في العين",
+          "title": "العين",
+          "description": "مدينة الواحات والحدائق الغنّاء — تحتضن العين واحات النخيل التراثية وقلعة الجاهلي وقمة جبل حفيت المهيبة. تجعل خدمة السائق الخاص من إيه بي ليمو كل تنقل بين العين وأبوظبي ودبي في غاية الراحة والرفاهية.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Zayed International Airport (AUH)",
+          "dropoffDefault": "Al Ain Oasis",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310003695-eot00v9l0",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول العين",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003695-o5wdfvap7",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء العين وخارجها"
+        },
+        "items": [
+          {
+            "id": "auh-alain",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "AUH to Al Ain City Center",
+            "titleAr": "من مطار زايد الدولي إلى وسط مدينة العين",
+            "price": "From AED 520",
+            "priceAr": "ابتداءً من 520 درهم",
+            "pickup": "Zayed International Airport (AUH)",
+            "dropoff": "Al Ain Center"
+          },
+          {
+            "id": "dxb-alain",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Al Ain Oasis & Resorts",
+            "titleAr": "من مطار دبي إلى واحة ومنتجعات العين",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Al Ain Oasis"
+          },
+          {
+            "id": "alain-hafeet",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Al Ain to Jebel Hafeet Summit",
+            "titleAr": "من العين إلى قمة جبل حفيت",
+            "price": "From AED 320",
+            "priceAr": "ابتداءً من 320 درهم",
+            "pickup": "Al Ain",
+            "dropoff": "Jebel Hafeet"
+          },
+          {
+            "id": "alain-abudhabi",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Ain to Abu Dhabi Downtown",
+            "titleAr": "من العين إلى وسط مدينة أبوظبي",
+            "price": "From AED 520",
+            "priceAr": "ابتداءً من 520 درهم",
+            "pickup": "Al Ain",
+            "dropoff": "Abu Dhabi"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003695-b191s8miz",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في العين",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003695-t8llujt6w",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في العين.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

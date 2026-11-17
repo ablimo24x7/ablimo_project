@@ -123,6 +123,9 @@
         "saudiArabia": "Saudi Arabia",
         "uae": "UAE",
         "qatar": "Qatar",
+        "bahrain": "Bahrain",
+        "kuwait": "Kuwait",
+        "oman": "Oman",
         "bahrainKuwaitOman": "Bahrain, Kuwait, Oman",
         "airports": "Airports",
         "allLocations": "All locations"
@@ -195,15 +198,17 @@
     "aboutUs": {
       "title": "About Us",
       "homepage": "Homepage",
-      "aboutAB": "About AB Transportation",
+      "aboutAB": "About AB",
       "leadership": "Leadership Team",
       "awards": "Awards & Recognition",
-      "chauffeurRecruitment": "Chauffeur Recruitment",
-      "corporateCareers": "Corporate Careers",
+      "corporateCareers": "Careers",
+      "supplierPortal": "Supplier Portal",
       "press": "Press / Newsroom",
-      "blog": "Blog",
       "sustainability": "Sustainability",
-      "contactUs": "Contact Us"
+      "blog": "Blog",
+      "caseStudies": "Case Studies",
+      "contactUs": "Contact Us",
+      "faq": "FAQs"
     },
     "supportLegal": {
       "title": "Support & Legal",
@@ -3004,8 +3009,8 @@
   },
   "services": {
     "metadata": {
-      "title": "Luxury Chauffeur Services | AB Master Taxonomy",
-      "description": "Explore the complete AB services taxonomy: executive mobility, airport transfers, VIP & government transport, corporate fleets, events, group charters, tourism, and premium lifestyle chauffeur services."
+      "title": "Ground Transportation Services across the Gulf | AB",
+      "description": "AB coordinates managed ground transportation services across Saudi Arabia, the UAE and Qatar for corporate teams, delegations and major events, dispatched from Riyadh."
     },
     "hero": {
       "badge": "The Complete Services Taxonomy",

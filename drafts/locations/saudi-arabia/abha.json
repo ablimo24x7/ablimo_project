@@ -1,0 +1,2169 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/abha",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "abha",
+  "path": "/locations/saudi-arabia/abha",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for abha (saudi-arabia)",
+  "exportedAt": "2026-11-10T11:52:18.049Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538049-8gxbzc6ca",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Abha",
+          "titleHighlight": "",
+          "description": "AB provides executive chauffeur service for Abha solutions connecting corporate travellers directly with Abha International Airport (AHB). Our professional drivers manage ground travel across Abha with disciplined operations, punctuality, and immaculate vehicles prepared for demanding mountain terrain.\n\nHigh elevation geography and winding road networks make dependable ground coordination essential for business visitors. Central dispatch from our regional operations desk maintains continuous vehicle monitoring and punctual transfers across the southern province."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Abha skyline landscape with mountain elevations and city roads"
+        }
+      },
+      {
+        "id": "sec-1794311538049-s446gdfw6",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-ohr35e28r",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Abha fleet",
+          "heading": "Choose your Abha chauffeur class",
+          "description": "Vehicles for Abha are dispatched from the nearest office, AB Riyadh (headquarters) [Confirm nearest office]. Every chauffeur vehicle delivers immaculate executive standards, climate control, and disciplined mechanical maintenance suited for regional elevations.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "abha-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image2.jpg",
+            "imageAlt": "Standard sedan chauffeur service in Abha",
+            "category": "Standard Sedan",
+            "name": "Typical model: Executive sedan or similar [Confirm]",
+            "idealFor": "Ideal for: Efficient point to point transfers",
+            "description": "Our standard sedan provides quiet efficiency for individual travellers visiting corporate facilities or government offices in Abha. Passengers enjoy climate control and attentive driving along busy urban corridors.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image3.jpg",
+            "imageAlt": "Business sedan private driver Abha",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate executives and daily itineraries",
+            "description": "The business sedan combines refined styling with productive workspace for executives attending commercial appointments across the region. Generous legroom and acoustic insulation allow undisturbed telephone briefings between destinations.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image4.jpg",
+            "imageAlt": "First class sedan luxury transport in Abha",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP delegations and diplomatic transport",
+            "description": "Flagship luxury provides peerless comfort for distinguished delegates travelling through Abha. Handcrafted upholstery, reclining seating, and superior suspension smooth out winding mountain roads between ceremonial and executive commitments.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service in Abha",
+            "category": "Executive SUV",
+            "name": "Typical model: GMC Yukon or Cadillac Escalade or similar [Confirm]",
+            "idealFor": "Ideal for: Mountain terrain and executive groups",
+            "description": "Commanding performance and elevated ground clearance make this SUV suited for steep mountain ascents around Abha. Spacious leather seating and expansive luggage capacity accommodate delegations with substantial equipment.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image6.jpg",
+            "imageAlt": "Premium MPV private chauffeur in Abha",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Small teams and mobile conferences",
+            "description": "Configured with face to face seating, this premium cabin allows project teams to collaborate while travelling between sites. Smooth access and ample luggage volume support multi passenger airport runs.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image7.jpg",
+            "imageAlt": "Executive van group travel Abha",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: Large delegations and event groups",
+            "description": "Designed for larger entourages, this executive carrier offers standing headroom, individual overhead ventilation, and generous luggage compartments. Coordinated group travel proceeds with comfort and disciplined timing.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-ggqkuf1hz",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Abha and beyond",
+          "description": "AB coordinates individual and group transfers connecting commercial hubs, mountain tourist attractions, and neighbouring industrial cities. Our drivers maintain scheduled timing along primary mountain motorways and regional arterial roads.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "abha-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "AHB to Abha city centre",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "AHB to Khamis Mushait",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Abha to Al Soudah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-4",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Abha to Khamis Mushait",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Abha to Jizan [Confirm]",
+            "description": "",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/abha/routes/abha-to-jizan",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-fet34d68b",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Abha",
+          "heading": "One partner for every movement in Abha",
+          "description": "AB delivers managed ground mobility solutions supporting corporate delegations, flight connections, and chartered group travel across the Asir province."
+        },
+        "items": [
+          {
+            "id": "abha-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Executive private driver and VIP ground transport across Abha.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Flight-tracked arrivals and meet and greet at Abha International Airport (AHB).",
+            "actions": [
+              {
+                "label": "Airport Transfers",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire arranged in Abha",
+            "description": "Chartered group and delegation transport across the Asir province.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire arranged in Abha",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-tpn6os121",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Abha International Airport (AHB)",
+          "description": "Chauffeurs monitor incoming passenger flights landing at Abha International Airport (AHB) through real time flight tracking. Dispatchers adjust chauffeur positioning whenever incoming regional or international flights encounter unexpected air traffic delays. Your assigned private driver conducts an executive meet and greet with a personalised name board inside the arrivals terminal at meeting point [Confirm]. Travellers receive complimentary free waiting time [Confirm] following touchdown, allowing calm transit through customs, baggage recovery, and terminal security. Chauffeurs assist with all heavy baggage before escorting passengers directly to their premium sedan or executive SUV. Ground coordination proceeds smoothly without queueing, ride hailing confusion, or uncoordinated kerbside pickups in volatile mountain weather.\n\nReserving an AHB airport transfer provides complete itinerary predictability for arriving executives and visiting delegations. Flight tracking technology synchronises your driver with actual runway touchdown rather than published schedule estimates. This operational discipline prevents missed connections and avoids unnecessary kerbside waiting times outside the terminal.\n\nProfessional drivers possess thorough knowledge of southern regional roads and navigate direct routes to downtown accommodations or commercial offices. Vehicles parked in pre arranged staging areas remain at optimal interior temperatures, providing immediate thermal comfort after stepping out of the terminal. Luggage handling protocols keep travel possessions secure while passengers relax in climate controlled comfort.",
+          "items": [
+            {
+              "id": "abha-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "abha-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "abha-apt-b-3",
+              "icon": "Clock",
+              "heading": "AHB to Abha city centre",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+          "backgroundAlt": "Arriving at Abha International Airport (AHB)"
+        }
+      },
+      {
+        "id": "sec-1794311538049-b7ygnwt98",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-ddectrw3h",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Abha",
+          "description": "AB coordinates private ground mobility across all principal sectors of the regional capital. Chauffeurs navigate elevated mountain passes, central commercial districts, administrative complexes, and premier gathering destinations with disciplined local knowledge. Dispatchers monitor regional highway corridors, provincial headquarters, and mountain ridges to maintain punctual movements across every planned itinerary in the metropolitan zone.\n\nUrban transit in the Asir region presents unique operational conditions, including steep road gradients, morning fog, and sudden weather variations. Our drivers plan journey paths with local insight, selecting optimal bypasses during peak traffic periods around central squares. Corporate guests move between government appointments and commercial meetings without experiencing unexpected mountain transit delays.\n\nOperational coordination extends beyond city boundaries into surrounding industrial zones and high elevation development corridors. Scheduled transfers maintain seamless connections between metropolitan boardrooms and remote facility sites across the highlands. This comprehensive operational presence supports extensive regional projects and multi day executive itineraries.",
+          "items": [
+            {
+              "id": "abha-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Key commercial locations include Al Khalidiyyah district, King Fahd Road commercial corridor, and Al Andalus business district."
+            },
+            {
+              "id": "abha-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Premier conference destinations include Abha Palace Event Centre, Asir Chamber of Commerce, and King Khalid University Conference Hall."
+            },
+            {
+              "id": "abha-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Notable cultural landmarks include Al Muftaha Cultural Village, High City and Jabal Al Akhdar, and Al Soudah mountain ridges."
+            },
+            {
+              "id": "abha-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Key administrative zones include Asir Governorate Headquarters, Abha Regional Municipality, and Aseer Industrial City."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Abha"
+        }
+      },
+      {
+        "id": "sec-1794311538049-b03u9vsft",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Abha",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-h4a64anmw",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Operations and dispatch for Abha",
+          "description": "Executive travel across Abha is supported directly through central logistics and around the clock fleet dispatch. While operating across the southern highlands, our operations centre in Riyadh coordinates vehicle preparations, driver scheduling, and protocol logistics to maintain seamless ground transport standards throughout Saudi Arabia.\n\nCentralised control protocols verify driver credentials, route planning, and vehicle preparation prior to every scheduled journey. Corporate travel organisers benefit from unified billing, immediate schedule updates, and consistent service delivery across regional travel destinations. Continuous dispatch oversight provides complete operational responsiveness for dynamic business agendas.",
+          "items": [
+            {
+              "id": "abha-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh (headquarters) [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia."
+            },
+            {
+              "id": "abha-hq-2",
+              "icon": "Phone",
+              "heading": "Telephone: +966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia.",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538049-oy4zc8ckr",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Abha: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538049-4kwnmpmw2",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Abha.",
+          "description": "Reserve your private vehicle today or contact our 24/7 Riyadh operations centre at +966 58 111 8720 to arrange tailored chauffeur service Abha itineraries."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538049-8gxbzc6ca",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Abha",
+          "titleHighlight": "",
+          "description": "AB provides executive chauffeur service for Abha solutions connecting corporate travellers directly with Abha International Airport (AHB). Our professional drivers manage ground travel across Abha with disciplined operations, punctuality, and immaculate vehicles prepared for demanding mountain terrain.\n\nHigh elevation geography and winding road networks make dependable ground coordination essential for business visitors. Central dispatch from our regional operations desk maintains continuous vehicle monitoring and punctual transfers across the southern province."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Abha skyline landscape with mountain elevations and city roads"
+        }
+      },
+      {
+        "id": "sec-1794311538049-s446gdfw6",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-ohr35e28r",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Abha fleet",
+          "heading": "Choose your Abha chauffeur class",
+          "description": "Vehicles for Abha are dispatched from the nearest office, AB Riyadh (headquarters) [Confirm nearest office]. Every chauffeur vehicle delivers immaculate executive standards, climate control, and disciplined mechanical maintenance suited for regional elevations.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "abha-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image2.jpg",
+            "imageAlt": "Standard sedan chauffeur service in Abha",
+            "category": "Standard Sedan",
+            "name": "Typical model: Executive sedan or similar [Confirm]",
+            "idealFor": "Ideal for: Efficient point to point transfers",
+            "description": "Our standard sedan provides quiet efficiency for individual travellers visiting corporate facilities or government offices in Abha. Passengers enjoy climate control and attentive driving along busy urban corridors.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image3.jpg",
+            "imageAlt": "Business sedan private driver Abha",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate executives and daily itineraries",
+            "description": "The business sedan combines refined styling with productive workspace for executives attending commercial appointments across the region. Generous legroom and acoustic insulation allow undisturbed telephone briefings between destinations.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image4.jpg",
+            "imageAlt": "First class sedan luxury transport in Abha",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP delegations and diplomatic transport",
+            "description": "Flagship luxury provides peerless comfort for distinguished delegates travelling through Abha. Handcrafted upholstery, reclining seating, and superior suspension smooth out winding mountain roads between ceremonial and executive commitments.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service in Abha",
+            "category": "Executive SUV",
+            "name": "Typical model: GMC Yukon or Cadillac Escalade or similar [Confirm]",
+            "idealFor": "Ideal for: Mountain terrain and executive groups",
+            "description": "Commanding performance and elevated ground clearance make this SUV suited for steep mountain ascents around Abha. Spacious leather seating and expansive luggage capacity accommodate delegations with substantial equipment.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image6.jpg",
+            "imageAlt": "Premium MPV private chauffeur in Abha",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Small teams and mobile conferences",
+            "description": "Configured with face to face seating, this premium cabin allows project teams to collaborate while travelling between sites. Smooth access and ample luggage volume support multi passenger airport runs.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image7.jpg",
+            "imageAlt": "Executive van group travel Abha",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: Large delegations and event groups",
+            "description": "Designed for larger entourages, this executive carrier offers standing headroom, individual overhead ventilation, and generous luggage compartments. Coordinated group travel proceeds with comfort and disciplined timing.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-ggqkuf1hz",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Abha and beyond",
+          "description": "AB coordinates individual and group transfers connecting commercial hubs, mountain tourist attractions, and neighbouring industrial cities. Our drivers maintain scheduled timing along primary mountain motorways and regional arterial roads.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "abha-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "AHB to Abha city centre",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "AHB to Khamis Mushait",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Abha to Al Soudah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-4",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Abha to Khamis Mushait",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Abha to Jizan [Confirm]",
+            "description": "",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/abha/routes/abha-to-jizan",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-fet34d68b",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Abha",
+          "heading": "One partner for every movement in Abha",
+          "description": "AB delivers managed ground mobility solutions supporting corporate delegations, flight connections, and chartered group travel across the Asir province."
+        },
+        "items": [
+          {
+            "id": "abha-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Executive private driver and VIP ground transport across Abha.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Flight-tracked arrivals and meet and greet at Abha International Airport (AHB).",
+            "actions": [
+              {
+                "label": "Airport Transfers",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire arranged in Abha",
+            "description": "Chartered group and delegation transport across the Asir province.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire arranged in Abha",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-tpn6os121",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Abha International Airport (AHB)",
+          "description": "Chauffeurs monitor incoming passenger flights landing at Abha International Airport (AHB) through real time flight tracking. Dispatchers adjust chauffeur positioning whenever incoming regional or international flights encounter unexpected air traffic delays. Your assigned private driver conducts an executive meet and greet with a personalised name board inside the arrivals terminal at meeting point [Confirm]. Travellers receive complimentary free waiting time [Confirm] following touchdown, allowing calm transit through customs, baggage recovery, and terminal security. Chauffeurs assist with all heavy baggage before escorting passengers directly to their premium sedan or executive SUV. Ground coordination proceeds smoothly without queueing, ride hailing confusion, or uncoordinated kerbside pickups in volatile mountain weather.\n\nReserving an AHB airport transfer provides complete itinerary predictability for arriving executives and visiting delegations. Flight tracking technology synchronises your driver with actual runway touchdown rather than published schedule estimates. This operational discipline prevents missed connections and avoids unnecessary kerbside waiting times outside the terminal.\n\nProfessional drivers possess thorough knowledge of southern regional roads and navigate direct routes to downtown accommodations or commercial offices. Vehicles parked in pre arranged staging areas remain at optimal interior temperatures, providing immediate thermal comfort after stepping out of the terminal. Luggage handling protocols keep travel possessions secure while passengers relax in climate controlled comfort.",
+          "items": [
+            {
+              "id": "abha-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "abha-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "abha-apt-b-3",
+              "icon": "Clock",
+              "heading": "AHB to Abha city centre",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+          "backgroundAlt": "Arriving at Abha International Airport (AHB)"
+        }
+      },
+      {
+        "id": "sec-1794311538049-b7ygnwt98",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-ddectrw3h",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Abha",
+          "description": "AB coordinates private ground mobility across all principal sectors of the regional capital. Chauffeurs navigate elevated mountain passes, central commercial districts, administrative complexes, and premier gathering destinations with disciplined local knowledge. Dispatchers monitor regional highway corridors, provincial headquarters, and mountain ridges to maintain punctual movements across every planned itinerary in the metropolitan zone.\n\nUrban transit in the Asir region presents unique operational conditions, including steep road gradients, morning fog, and sudden weather variations. Our drivers plan journey paths with local insight, selecting optimal bypasses during peak traffic periods around central squares. Corporate guests move between government appointments and commercial meetings without experiencing unexpected mountain transit delays.\n\nOperational coordination extends beyond city boundaries into surrounding industrial zones and high elevation development corridors. Scheduled transfers maintain seamless connections between metropolitan boardrooms and remote facility sites across the highlands. This comprehensive operational presence supports extensive regional projects and multi day executive itineraries.",
+          "items": [
+            {
+              "id": "abha-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Key commercial locations include Al Khalidiyyah district, King Fahd Road commercial corridor, and Al Andalus business district."
+            },
+            {
+              "id": "abha-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Premier conference destinations include Abha Palace Event Centre, Asir Chamber of Commerce, and King Khalid University Conference Hall."
+            },
+            {
+              "id": "abha-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Notable cultural landmarks include Al Muftaha Cultural Village, High City and Jabal Al Akhdar, and Al Soudah mountain ridges."
+            },
+            {
+              "id": "abha-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Key administrative zones include Asir Governorate Headquarters, Abha Regional Municipality, and Aseer Industrial City."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Abha"
+        }
+      },
+      {
+        "id": "sec-1794311538049-b03u9vsft",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Abha",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-h4a64anmw",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Operations and dispatch for Abha",
+          "description": "Executive travel across Abha is supported directly through central logistics and around the clock fleet dispatch. While operating across the southern highlands, our operations centre in Riyadh coordinates vehicle preparations, driver scheduling, and protocol logistics to maintain seamless ground transport standards throughout Saudi Arabia.\n\nCentralised control protocols verify driver credentials, route planning, and vehicle preparation prior to every scheduled journey. Corporate travel organisers benefit from unified billing, immediate schedule updates, and consistent service delivery across regional travel destinations. Continuous dispatch oversight provides complete operational responsiveness for dynamic business agendas.",
+          "items": [
+            {
+              "id": "abha-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh (headquarters) [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia."
+            },
+            {
+              "id": "abha-hq-2",
+              "icon": "Phone",
+              "heading": "Telephone: +966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia.",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538049-oy4zc8ckr",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Abha: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538049-4kwnmpmw2",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Abha.",
+          "description": "Reserve your private vehicle today or contact our 24/7 Riyadh operations centre at +966 58 111 8720 to arrange tailored chauffeur service Abha itineraries."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538049-yntq29qiu",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Abha",
+          "titleHighlight": "",
+          "description": "AB provides executive chauffeur service for Abha solutions connecting corporate travellers directly with Abha International Airport (AHB). Our professional drivers manage ground travel across Abha with disciplined operations, punctuality, and immaculate vehicles prepared for demanding mountain terrain.\n\nHigh elevation geography and winding road networks make dependable ground coordination essential for business visitors. Central dispatch from our regional operations desk maintains continuous vehicle monitoring and punctual transfers across the southern province."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Abha skyline landscape with mountain elevations and city roads"
+        }
+      },
+      {
+        "id": "sec-1794311538049-oevk6bdbm",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-w9e66vh1x",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Abha fleet",
+          "heading": "Choose your Abha chauffeur class",
+          "description": "Vehicles for Abha are dispatched from the nearest office, AB Riyadh (headquarters) [Confirm nearest office]. Every chauffeur vehicle delivers immaculate executive standards, climate control, and disciplined mechanical maintenance suited for regional elevations.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "abha-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image2.jpg",
+            "imageAlt": "Standard sedan chauffeur service in Abha",
+            "category": "Standard Sedan",
+            "name": "Typical model: Executive sedan or similar [Confirm]",
+            "idealFor": "Ideal for: Efficient point to point transfers",
+            "description": "Our standard sedan provides quiet efficiency for individual travellers visiting corporate facilities or government offices in Abha. Passengers enjoy climate control and attentive driving along busy urban corridors.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image3.jpg",
+            "imageAlt": "Business sedan private driver Abha",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate executives and daily itineraries",
+            "description": "The business sedan combines refined styling with productive workspace for executives attending commercial appointments across the region. Generous legroom and acoustic insulation allow undisturbed telephone briefings between destinations.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image4.jpg",
+            "imageAlt": "First class sedan luxury transport in Abha",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP delegations and diplomatic transport",
+            "description": "Flagship luxury provides peerless comfort for distinguished delegates travelling through Abha. Handcrafted upholstery, reclining seating, and superior suspension smooth out winding mountain roads between ceremonial and executive commitments.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service in Abha",
+            "category": "Executive SUV",
+            "name": "Typical model: GMC Yukon or Cadillac Escalade or similar [Confirm]",
+            "idealFor": "Ideal for: Mountain terrain and executive groups",
+            "description": "Commanding performance and elevated ground clearance make this SUV suited for steep mountain ascents around Abha. Spacious leather seating and expansive luggage capacity accommodate delegations with substantial equipment.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image6.jpg",
+            "imageAlt": "Premium MPV private chauffeur in Abha",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Small teams and mobile conferences",
+            "description": "Configured with face to face seating, this premium cabin allows project teams to collaborate while travelling between sites. Smooth access and ample luggage volume support multi passenger airport runs.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "abha-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image7.jpg",
+            "imageAlt": "Executive van group travel Abha",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: Large delegations and event groups",
+            "description": "Designed for larger entourages, this executive carrier offers standing headroom, individual overhead ventilation, and generous luggage compartments. Coordinated group travel proceeds with comfort and disciplined timing.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-200zc84nx",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Abha and beyond",
+          "description": "AB coordinates individual and group transfers connecting commercial hubs, mountain tourist attractions, and neighbouring industrial cities. Our drivers maintain scheduled timing along primary mountain motorways and regional arterial roads.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "abha-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "AHB to Abha city centre",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "AHB to Khamis Mushait",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Abha to Al Soudah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-4",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Abha to Khamis Mushait",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Abha to Jizan [Confirm]",
+            "description": "",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/abha/routes/abha-to-jizan",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-77swxhv9j",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Abha",
+          "heading": "One partner for every movement in Abha",
+          "description": "AB delivers managed ground mobility solutions supporting corporate delegations, flight connections, and chartered group travel across the Asir province."
+        },
+        "items": [
+          {
+            "id": "abha-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Executive private driver and VIP ground transport across Abha.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Flight-tracked arrivals and meet and greet at Abha International Airport (AHB).",
+            "actions": [
+              {
+                "label": "Airport Transfers",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "abha-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire arranged in Abha",
+            "description": "Chartered group and delegation transport across the Asir province.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire arranged in Abha",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-0o3f2co5q",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Abha International Airport (AHB)",
+          "description": "Chauffeurs monitor incoming passenger flights landing at Abha International Airport (AHB) through real time flight tracking. Dispatchers adjust chauffeur positioning whenever incoming regional or international flights encounter unexpected air traffic delays. Your assigned private driver conducts an executive meet and greet with a personalised name board inside the arrivals terminal at meeting point [Confirm]. Travellers receive complimentary free waiting time [Confirm] following touchdown, allowing calm transit through customs, baggage recovery, and terminal security. Chauffeurs assist with all heavy baggage before escorting passengers directly to their premium sedan or executive SUV. Ground coordination proceeds smoothly without queueing, ride hailing confusion, or uncoordinated kerbside pickups in volatile mountain weather.\n\nReserving an AHB airport transfer provides complete itinerary predictability for arriving executives and visiting delegations. Flight tracking technology synchronises your driver with actual runway touchdown rather than published schedule estimates. This operational discipline prevents missed connections and avoids unnecessary kerbside waiting times outside the terminal.\n\nProfessional drivers possess thorough knowledge of southern regional roads and navigate direct routes to downtown accommodations or commercial offices. Vehicles parked in pre arranged staging areas remain at optimal interior temperatures, providing immediate thermal comfort after stepping out of the terminal. Luggage handling protocols keep travel possessions secure while passengers relax in climate controlled comfort.",
+          "items": [
+            {
+              "id": "abha-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "abha-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "abha-apt-b-3",
+              "icon": "Clock",
+              "heading": "AHB to Abha city centre",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-abha-images/image1.jpg",
+          "backgroundAlt": "Arriving at Abha International Airport (AHB)"
+        }
+      },
+      {
+        "id": "sec-1794311538049-o3ty99hb0",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-fmyb8glkr",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Abha",
+          "description": "AB coordinates private ground mobility across all principal sectors of the regional capital. Chauffeurs navigate elevated mountain passes, central commercial districts, administrative complexes, and premier gathering destinations with disciplined local knowledge. Dispatchers monitor regional highway corridors, provincial headquarters, and mountain ridges to maintain punctual movements across every planned itinerary in the metropolitan zone.\n\nUrban transit in the Asir region presents unique operational conditions, including steep road gradients, morning fog, and sudden weather variations. Our drivers plan journey paths with local insight, selecting optimal bypasses during peak traffic periods around central squares. Corporate guests move between government appointments and commercial meetings without experiencing unexpected mountain transit delays.\n\nOperational coordination extends beyond city boundaries into surrounding industrial zones and high elevation development corridors. Scheduled transfers maintain seamless connections between metropolitan boardrooms and remote facility sites across the highlands. This comprehensive operational presence supports extensive regional projects and multi day executive itineraries.",
+          "items": [
+            {
+              "id": "abha-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Key commercial locations include Al Khalidiyyah district, King Fahd Road commercial corridor, and Al Andalus business district."
+            },
+            {
+              "id": "abha-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Premier conference destinations include Abha Palace Event Centre, Asir Chamber of Commerce, and King Khalid University Conference Hall."
+            },
+            {
+              "id": "abha-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Notable cultural landmarks include Al Muftaha Cultural Village, High City and Jabal Al Akhdar, and Al Soudah mountain ridges."
+            },
+            {
+              "id": "abha-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Key administrative zones include Asir Governorate Headquarters, Abha Regional Municipality, and Aseer Industrial City."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Abha"
+        }
+      },
+      {
+        "id": "sec-1794311538049-of5hkc2tf",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Abha",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-o22l8sr1e",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Operations and dispatch for Abha",
+          "description": "Executive travel across Abha is supported directly through central logistics and around the clock fleet dispatch. While operating across the southern highlands, our operations centre in Riyadh coordinates vehicle preparations, driver scheduling, and protocol logistics to maintain seamless ground transport standards throughout Saudi Arabia.\n\nCentralised control protocols verify driver credentials, route planning, and vehicle preparation prior to every scheduled journey. Corporate travel organisers benefit from unified billing, immediate schedule updates, and consistent service delivery across regional travel destinations. Continuous dispatch oversight provides complete operational responsiveness for dynamic business agendas.",
+          "items": [
+            {
+              "id": "abha-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh (headquarters) [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia."
+            },
+            {
+              "id": "abha-hq-2",
+              "icon": "Phone",
+              "heading": "Telephone: +966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia.",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538049-2l0ldq07r",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Abha: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538049-5x2o66kkh",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Abha.",
+          "description": "Reserve your private vehicle today or contact our 24/7 Riyadh operations centre at +966 58 111 8720 to arrange tailored chauffeur service Abha itineraries."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

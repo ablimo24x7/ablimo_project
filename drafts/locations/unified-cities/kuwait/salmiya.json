@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "kuwait/salmiya",
+  "countrySlug": "kuwait",
+  "citySlug": "salmiya",
+  "path": "/locations/kuwait/salmiya",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for salmiya (kuwait)",
+  "exportedAt": "2026-11-10T12:32:14.440Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310007119-j0ff33n2l",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN SALMIYA",
+          "title": "Salmiya",
+          "description": "Kuwait's premier lifestyle and commercial waterfront district along the Arabian Gulf Street. AB delivers luxury chauffeur service for shopping, dining, corporate suites, and seamless connections to Kuwait International Airport.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Kuwait International (KWI)",
+          "dropoffDefault": "Marina Crescent, Salmiya",
+          "skyline": "kuwait"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310007119-5ggbuc745",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE SALMIYA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310007119-0kryarpmk",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Salmiya and beyond"
+        },
+        "items": [
+          {
+            "id": "kwi-salmiya",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "KWI to Salmiya Gulf Road & Marina",
+            "titleAr": "من مطار الكويت الدولي إلى شارع الخليج ومارينا السالمية",
+            "price": "From KWD 35",
+            "priceAr": "ابتداءً من 35 د.ك",
+            "pickup": "Kuwait International Airport (KWI)",
+            "dropoff": "Salmiya Gulf Road"
+          },
+          {
+            "id": "salmiya-scientific",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Salmiya to The Scientific Center",
+            "titleAr": "من السالمية إلى المركز العلمي",
+            "price": "From KWD 20",
+            "priceAr": "ابتداءً من 20 د.ك",
+            "pickup": "Salmiya",
+            "dropoff": "The Scientific Center"
+          },
+          {
+            "id": "salmiya-city",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Salmiya to Kuwait City Center",
+            "titleAr": "من السالمية إلى وسط مدينة الكويت",
+            "price": "From KWD 28",
+            "priceAr": "ابتداءً من 28 د.ك",
+            "pickup": "Salmiya",
+            "dropoff": "Kuwait City"
+          },
+          {
+            "id": "salmiya-avenues",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Salmiya to The Avenues Mall",
+            "titleAr": "من السالمية إلى مجمع الأفنيوز",
+            "price": "From KWD 25",
+            "priceAr": "ابتداءً من 25 د.ك",
+            "pickup": "Salmiya",
+            "dropoff": "The Avenues Mall"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310007119-t0ezmyrd8",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN SALMIYA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310007119-d32bhihga",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Salmiya.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310007119-j0ff33n2l",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN SALMIYA",
+          "title": "Salmiya",
+          "description": "Kuwait's premier lifestyle and commercial waterfront district along the Arabian Gulf Street. AB delivers luxury chauffeur service for shopping, dining, corporate suites, and seamless connections to Kuwait International Airport.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Kuwait International (KWI)",
+          "dropoffDefault": "Marina Crescent, Salmiya",
+          "skyline": "kuwait"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310007119-5ggbuc745",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE SALMIYA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310007119-0kryarpmk",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Salmiya and beyond"
+        },
+        "items": [
+          {
+            "id": "kwi-salmiya",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "KWI to Salmiya Gulf Road & Marina",
+            "titleAr": "من مطار الكويت الدولي إلى شارع الخليج ومارينا السالمية",
+            "price": "From KWD 35",
+            "priceAr": "ابتداءً من 35 د.ك",
+            "pickup": "Kuwait International Airport (KWI)",
+            "dropoff": "Salmiya Gulf Road"
+          },
+          {
+            "id": "salmiya-scientific",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Salmiya to The Scientific Center",
+            "titleAr": "من السالمية إلى المركز العلمي",
+            "price": "From KWD 20",
+            "priceAr": "ابتداءً من 20 د.ك",
+            "pickup": "Salmiya",
+            "dropoff": "The Scientific Center"
+          },
+          {
+            "id": "salmiya-city",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Salmiya to Kuwait City Center",
+            "titleAr": "من السالمية إلى وسط مدينة الكويت",
+            "price": "From KWD 28",
+            "priceAr": "ابتداءً من 28 د.ك",
+            "pickup": "Salmiya",
+            "dropoff": "Kuwait City"
+          },
+          {
+            "id": "salmiya-avenues",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Salmiya to The Avenues Mall",
+            "titleAr": "من السالمية إلى مجمع الأفنيوز",
+            "price": "From KWD 25",
+            "priceAr": "ابتداءً من 25 د.ك",
+            "pickup": "Salmiya",
+            "dropoff": "The Avenues Mall"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310007119-t0ezmyrd8",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN SALMIYA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310007119-d32bhihga",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Salmiya.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310007119-4jribgwrc",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في السالمية",
+          "title": "السالمية",
+          "description": "وجهة الحياة العصرية والتسوق الفاخر على امتداد شارع الخليج العربي. تقدم إيه بي ليمو خدمات سائق خاص راقية للفنادق والمجمعات التجارية والشركات ورحلات مباشرة إلى مطار الكويت الدولي.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Kuwait International (KWI)",
+          "dropoffDefault": "Marina Crescent, Salmiya",
+          "skyline": "kuwait"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310007119-c4nd3g9zv",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول السالمية",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310007119-sxfkmz4m4",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء السالمية وخارجها"
+        },
+        "items": [
+          {
+            "id": "kwi-salmiya",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "KWI to Salmiya Gulf Road & Marina",
+            "titleAr": "من مطار الكويت الدولي إلى شارع الخليج ومارينا السالمية",
+            "price": "From KWD 35",
+            "priceAr": "ابتداءً من 35 د.ك",
+            "pickup": "Kuwait International Airport (KWI)",
+            "dropoff": "Salmiya Gulf Road"
+          },
+          {
+            "id": "salmiya-scientific",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Salmiya to The Scientific Center",
+            "titleAr": "من السالمية إلى المركز العلمي",
+            "price": "From KWD 20",
+            "priceAr": "ابتداءً من 20 د.ك",
+            "pickup": "Salmiya",
+            "dropoff": "The Scientific Center"
+          },
+          {
+            "id": "salmiya-city",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Salmiya to Kuwait City Center",
+            "titleAr": "من السالمية إلى وسط مدينة الكويت",
+            "price": "From KWD 28",
+            "priceAr": "ابتداءً من 28 د.ك",
+            "pickup": "Salmiya",
+            "dropoff": "Kuwait City"
+          },
+          {
+            "id": "salmiya-avenues",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Salmiya to The Avenues Mall",
+            "titleAr": "من السالمية إلى مجمع الأفنيوز",
+            "price": "From KWD 25",
+            "priceAr": "ابتداءً من 25 د.ك",
+            "pickup": "Salmiya",
+            "dropoff": "The Avenues Mall"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310007119-uihxyii14",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في السالمية",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310007119-9wkjh2oyq",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في السالمية.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

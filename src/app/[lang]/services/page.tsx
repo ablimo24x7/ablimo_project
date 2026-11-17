@@ -9,8 +9,10 @@ import {
   localeBase,
 } from "@/app/[lang]/dictionaries";
 import { generateSeoMetadata } from "@/lib/seo";
-import { SKETCH_SERVICES } from "./_components/services-sketch";
+import { SKETCH_SERVICES, HUB_FAQS } from "./_components/services-sketch";
 import ServicesDirectory from "./_components/ServicesDirectory";
+import FAQSection from "@/components/services/sections/faq-section";
+import type { PageSection } from "@/components/services/sections/section-types";
 
 export async function generateMetadata({
   params,
@@ -25,9 +27,34 @@ export async function generateMetadata({
     description: dict.services.metadata.description,
     path: "/services",
     lang,
-    keywords: "AB services, luxury chauffeur, executive transport, airport transfer, corporate mobility, event logistics",
+    keywords: "ground transportation services, chauffeur and VIP, airport transfers, corporate transportation, event transportation, bus and coach hire, tourism transportation, religious tourism, workforce transport, intercity transfers",
   });
 }
+
+const HUB_HERO_IMAGE = "/services/www.ab.limo-services-images/image1.jpg";
+
+const HUB_INTRO: string[] = [
+  "Managing executive mobility across multiple countries requires centralised command and transparent service execution. AB maintains owned infrastructure and regional offices across Riyadh, Dubai, Abu Dhabi and Doha to deliver seamless travel management.",
+  "Corporate organisations require dependable ground transportation that eliminates the variability of street hailing and unvetted suppliers. Every service category connects directly into our Riyadh dispatch centre, providing travel coordinators with round the clock operational supervision.",
+];
+
+const HUB_FAQ_SECTION: PageSection = {
+  id: "services-hub-faq",
+  type: "faq",
+  variant: "default",
+  order: 0,
+  enabled: true,
+  content: {
+    eyebrow: "Knowledge Base",
+    heading: "Frequently asked questions",
+    description:
+      "Operational answers on cross border coordination, duty of care, flight tracking, event scale, coach hire and regional billing.",
+    items: HUB_FAQS,
+  },
+  items: [],
+  settings: { variant: "default" },
+  appearance: { theme: "darker", padding: "lg", border: true, textAlign: "center" },
+};
 
 export default async function ServicesPage({
   params,
@@ -42,7 +69,7 @@ export default async function ServicesPage({
       {/* Hero */}
       <section className="relative min-h-[85vh] flex flex-col overflow-hidden pt-24 pb-10">
         <Image
-          src="/services/hub-hero.jpg"
+          src={HUB_HERO_IMAGE}
           alt=""
           aria-hidden="true"
           fill
@@ -62,14 +89,24 @@ export default async function ServicesPage({
           </div>
 
           <h1 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight max-w-4xl text-white">
-            Six ways we move people across the Gulf
+            Nine ways we deliver ground transportation services across the Gulf
           </h1>
 
-          <p className="mt-7 max-w-2xl text-lg text-gray-300 leading-relaxed">
-            From a single VIP arrival to hundreds of vehicles over a multi week event,
-            every journey is planned, dispatched and supervised by one team. Choose a
-            service to see how it works.
-          </p>
+          <div className="mt-7 max-w-2xl flex flex-col gap-4 text-lg text-gray-300 leading-relaxed">
+            <p className="m-0">
+              AB coordinates managed ground transportation services across Saudi
+              Arabia, the UAE and Qatar for corporate teams, official delegations
+              and major international events. Central dispatch supervisors monitor
+              every vehicle movement from the Riyadh operations centre.
+            </p>
+            <p className="m-0">
+              Direct fleet oversight, regional protocol standards and route
+              scheduling determine whether regional passenger movements run
+              punctually across complex itineraries. Operational consistency across
+              metropolitan centres allows business travellers to move between
+              appointments without administrative friction.
+            </p>
+          </div>
 
           <div className="mt-8 flex flex-wrap gap-3.5">
             <Link
@@ -86,7 +123,7 @@ export default async function ServicesPage({
             </Link>
           </div>
 
-          <div className="mt-auto pt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="mt-auto pt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-4">
             {SKETCH_SERVICES.map((s, i) => (
               <a
                 key={s.id}
@@ -105,21 +142,56 @@ export default async function ServicesPage({
         </div>
       </section>
 
+      {/* Intro */}
+      <section className="max-w-7xl mx-auto px-8 pt-16 pb-4">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight max-w-3xl">
+          Managed ground transportation services across the Gulf
+        </h2>
+        <div className="mt-7 grid md:grid-cols-2 gap-x-14 gap-y-5 max-w-5xl">
+          {HUB_INTRO.map((p, i) => (
+            <p key={i} className="m-0 text-[17px] leading-relaxed text-gray-300">
+              {p}
+            </p>
+          ))}
+        </div>
+      </section>
+
       {/* Services with sticky list */}
       <div className="h-[72px]" />
       <ServicesDirectory lang={lang} />
 
+      {/* Frequently asked questions */}
+      <FAQSection section={HUB_FAQ_SECTION} />
+
       {/* Closing call to action */}
-      <section className="bg-abBlack">
+      <section className="bg-abBlack border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-8 py-20 flex flex-wrap items-end justify-between gap-8">
           <div className="flex-1 basis-[420px] min-w-0">
             <h2 className="text-3xl md:text-4xl font-bold">
               Not sure which service fits?
             </h2>
             <p className="mt-4 text-gray-400">
-              Tell us about the journey and we will design the movement plan.
-              hello@ab.limo
+              For tailored ground transportation services across Saudi Arabia, the
+              UAE and Qatar, contact our dispatch team at{" "}
+              <a
+                href="mailto:hello@ab.limo"
+                className="text-white underline underline-offset-4 hover:text-abBlue transition-colors"
+              >
+                hello@ab.limo
+              </a>
+              .
             </p>
+            <p className="mt-3 text-gray-400">
+              Request a transport proposal — submit your travel schedule or event
+              itinerary to receive a managed transport plan from our operations
+              team.
+            </p>
+            <a
+              href="tel:+966581118720"
+              className="mt-5 inline-flex items-center text-white text-lg font-semibold hover:text-abBlue transition-colors"
+            >
+              +966 58 111 8720
+            </a>
           </div>
           <Link
             href={`${base}/contact`}

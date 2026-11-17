@@ -255,7 +255,7 @@ export default function FleetSection({
   );
 
   return (
-    <section id="fleet" className="py-24 bg-[#0a0a0a] border-b border-gray-900">
+    <section id="fleet" className="py-24 bg-abBlack border-b border-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div className="max-w-2xl">

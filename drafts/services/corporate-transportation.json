@@ -1,0 +1,741 @@
+{
+  "pageType": "service",
+  "slug": "corporate-transportation",
+  "title": "Corporate & Staff Transportation",
+  "subtitle": "Reliable corporate transportation across the Middle East",
+  "desc": "AB delivers corporate transportation built for organisations that require punctuality, discretion and regional reach. Headquartered in Riyadh with central operations, we manage executive travel, employee commuter routes and business delegations across the Gulf Cooperation Council.",
+  "heroImage": "/services/www.ab.limo-services-corporate-transportation-images/image1.jpg",
+  "breadcrumb": "Corporate & Staff Transportation",
+  "features": [
+    {
+      "icon": "UserTie",
+      "title": "Executive Chauffeur Programmes",
+      "desc": "On-call chauffeurs for leadership teams with vehicle class, preferences and security requirements agreed per executive."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Dedicated Vehicles & Drivers",
+      "desc": "Assigned full-time to an executive or department with immediate replacement guarantee if one is off the road."
+    },
+    {
+      "icon": "Bus",
+      "title": "Staff Shuttles & Daily Routes",
+      "desc": "Scheduled vans, minibuses or coaches between residential areas, offices and sites planned around shift times."
+    }
+  ],
+  "cardsHeading": "Programmes we operate across the GCC",
+  "cardsDesc": "Five purpose-built transportation programmes designed to handle every organizational mobility demand under one operating agreement.",
+  "cards": [
+    {
+      "image": "/services/executive-corporate-mobility.jpg",
+      "tag": "Executive",
+      "title": "Executive Chauffeur Programmes",
+      "desc": "On-call chauffeurs for leadership teams with vehicle class, preferences and security requirements agreed per executive."
+    },
+    {
+      "image": "/services/corporate-transportation.jpg",
+      "tag": "Dedicated",
+      "title": "Dedicated Vehicles and Drivers",
+      "desc": "A chauffeur and vehicle assigned full-time. AB handles recruitment, vetting, payroll, relief cover and vehicle maintenance."
+    },
+    {
+      "image": "/services/bus-coach-hire.jpg",
+      "tag": "Staff Routes",
+      "title": "Staff Shuttles and Daily Routes",
+      "desc": "Scheduled vans, minibuses or coaches between residential areas, offices and sites planned around shift times."
+    },
+    {
+      "image": "/services/airport-transfers.jpg",
+      "tag": "Visitors",
+      "title": "Visitor and New-Joiner Programmes",
+      "desc": "Airport arrival, hotel, office and return for visiting executives, auditors, consultants and relocating staff."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+      "tag": "Roadshows",
+      "title": "Roadshows and Multi-City Itineraries",
+      "desc": "Investor roadshows and site tours across Riyadh, Jeddah, Eastern Province, Dubai, Abu Dhabi and Doha."
+    }
+  ],
+  "sections": [
+    {
+      "image": "/services/corporate-transportation.jpg",
+      "imageAlt": "AB Operations Control Room",
+      "title": "How We Run It: 5-Stage Operation",
+      "paragraphs": [
+        "When your executives, visitors and staff depend on getting somewhere on time every day, transportation becomes an operation in its own right.",
+        "AB runs it for you: we plan the routes and vehicle mix, supply vetted chauffeurs and drivers, monitor every trip from our Riyadh control room, and report on what happened."
+      ],
+      "bullets": [
+        {
+          "text": "1. Requirements review: Passenger groups, locations, hours, and service levels."
+        },
+        {
+          "text": "2. Programme design: Routes, vehicle classes, driver numbers, and standby cover."
+        },
+        {
+          "text": "3. Mobilisation: Vehicles prepared, drivers briefed on your sites and protocol."
+        },
+        {
+          "text": "4. Daily operation: Live tracking, dispatch changes and incident handling 24/7."
+        },
+        {
+          "text": "5. Monthly review: Usage, punctuality and cost by department."
+        }
+      ],
+      "imageSide": "left",
+      "dark": true
+    },
+    {
+      "image": "/services/executive-corporate-mobility.jpg",
+      "imageAlt": "AB Chauffeur Standard",
+      "title": "Standards Written into Every Programme",
+      "paragraphs": [
+        "Our service commitments are contractually codified into measurable SLAs. Every AB agreement guarantees four foundational standards.",
+        "Commercial terms, rate cards, and consolidated billing are set out on Corporate Accounts."
+      ],
+      "bullets": [
+        {
+          "text": "Chauffeurs licensed, background-checked and trained to the AB Chauffeur Standard."
+        },
+        {
+          "text": "Vehicles GPS-tracked, strictly late-model (< 36 months), cleaned and inspected daily."
+        },
+        {
+          "text": "Standby vehicles and relief drivers ready for each programme."
+        },
+        {
+          "text": "Incident reporting to your nominated contact within 15 minutes of an event."
+        }
+      ],
+      "imageSide": "right",
+      "dark": true
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How does AB manage duty of care for business travellers?",
+      "a": "Our duty of care framework applies vetted chauffeurs, continuous GPS tracking and active monitoring from our operations centre in Riyadh. Vehicles undergo mechanical reviews prior to departure, while drivers follow strict working hour regulations. This centralised approach lowers travel risks for visiting staff and senior executives navigating unfamiliar cities across the Gulf region."
+    },
+    {
+      "q": "Can we book a corporate car service across multiple Gulf cities under one agreement?",
+      "a": "Yes. A single master service agreement with AB covers your corporate transportation services UAE requirements, operations across Qatar and domestic routes in the Kingdom. Corporate bookers arrange rides in Riyadh, Jeddah, Dubai, Abu Dhabi and Doha using identical service tiers, eliminating the administrative friction of contracting separate suppliers in each regional territory."
+    },
+    {
+      "q": "How are airport transfers coordinated for visiting delegations?",
+      "a": "Our central dispatch team conducts real time flight tracking to adjust pickup timings for early landings or customs delays automatically. Arriving guests receive a personalised meet and greet service inside the terminal before being escorted to their luxury vehicle. Chauffeurs assist with luggage and provide seamless transfers directly to regional headquarters or hotel accommodations."
+    },
+    {
+      "q": "What operational model was applied for the Roshn Group Staff Shuttle?",
+      "a": "For the Roshn Group Staff Shuttle, AB deployed structured route planning, scheduled departures and dedicated fleet assets to transfer employee teams safely each workday. The deployment maintained strict departure timetables through active route monitoring, providing workforce mobility that aligned perfectly with corporate shift arrangements in the capital."
+    },
+    {
+      "q": "What vehicle classes and logistics support were provided for Siemens Energy?",
+      "a": "During our engagement with Siemens Energy, AB supplied executive sedans and multi passenger vehicles for technical leadership and operational personnel. The project relied on experienced private driver personnel familiar with industrial site security protocols, supported by immediate dispatch adjustments through our twenty four hour operations team."
+    },
+    {
+      "q": "How does consolidated billing operate through a corporate account?",
+      "a": "A corporate account centralises every trip completed across Saudi Arabia, the Emirates and Qatar into one consolidated monthly invoice. Invoices contain granular journey manifests detailing passenger names, departmental billing codes and travel times. This itemised breakdown simplifies financial reconciliation for procurement managers and removes the need for individual expense reimbursements."
+    },
+    {
+      "q": "Can corporate clients arrange staff transportation in specific metropolitan areas?",
+      "a": "We provide specialised staff transportation Riyadh services for corporate headquarters based in the capital, alongside bespoke staff transportation Saudi Arabia wide. Route managers plan optimal transit lines connecting residential districts with business hubs such as the King Abdullah Financial District, reducing commuter fatigue for company employees."
+    },
+    {
+      "q": "What chauffeur standards are maintained for executive transfers in Dubai?",
+      "a": "Every professional chauffeur assigned to our corporate chauffeur service Dubai undergoes extensive background vetting, local route navigation assessments and corporate etiquette training. Chauffeurs operate late model premium vehicles, maintain complete passenger confidentiality and coordinate seamlessly with corporate protocol assistants throughout demanding business itineraries.\n\nMore solutions"
+    },
+    {
+      "q": "Formal procurement tenders and custom fleet allocations",
+      "a": "Submit your travel schedule, route manifests or RFP documentation for comprehensive operational evaluation and commercial quotation.\n\nRequest a proposal"
+    }
+  ],
+  "ctaTitle": "Corporate transportation, managed end to end.",
+  "ctaDesc": "When your executives, visitors and staff depend on getting somewhere on time every day, transportation becomes an operation in its own right. Talk to AB today.",
+  "ctaLabel": "Request a corporate proposal",
+  "ctaHref": "#corporate-account",
+  "pageSections": [
+    {
+      "id": "sec-1794643749593-v78hs9gv1",
+      "type": "hero",
+      "variant": "background-content",
+      "order": 0,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Corporate & Staff Transportation",
+        "title": "Reliable corporate transportation across the Middle East",
+        "titleHighlight": "",
+        "description": "AB delivers corporate transportation built for organisations that require punctuality, discretion and regional reach. Headquartered in Riyadh with central operations, we manage executive travel, employee commuter routes and business delegations across the Gulf Cooperation Council."
+      },
+      "items": [
+        {
+          "label": "Request a proposal",
+          "href": "#corporate-account",
+          "style": "primary",
+          "icon": "ArrowRight",
+          "iconPosition": "right"
+        },
+        {
+          "label": "Talk to an account manager",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone",
+          "iconPosition": "left"
+        },
+        {
+          "label": "See how corporate accounts work →",
+          "href": "/corporate-accounts",
+          "style": "link",
+          "icon": "Briefcase",
+          "iconPosition": "left"
+        }
+      ],
+      "settings": {
+        "minHeight": "85vh",
+        "overlayOpacity": 85,
+        "contentPosition": "left",
+        "buttonLayout": "row"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "/services/www.ab.limo-services-corporate-transportation-images/image1.jpg",
+        "padding": "none",
+        "border": false,
+        "textAlign": "left",
+        "overlayGradient": "default"
+      }
+    },
+    {
+      "id": "sec-1794643749593-u5mvy8mw4",
+      "type": "marquee",
+      "variant": "default",
+      "order": 1,
+      "enabled": true,
+      "content": {
+        "items": [
+          {
+            "id": "itm-1794643749593-h4cnfe0bl",
+            "icon": "Radio",
+            "label": "24/7 Central Dispatch"
+          },
+          {
+            "id": "itm-1794643749593-i5e1bchdv",
+            "icon": "Globe",
+            "label": "3 Countries with Direct Fleet"
+          },
+          {
+            "id": "itm-1794643749593-1pbgf6lya",
+            "icon": "Plane",
+            "label": "8 Regional Airports Served"
+          },
+          {
+            "id": "itm-1794643749593-mf15h4uq1",
+            "icon": "Shield",
+            "label": "Licensed & Protocol-Trained Drivers"
+          },
+          {
+            "id": "itm-1794643749593-4d6t2sgua",
+            "icon": "Clock",
+            "label": "< 15-Minute Incident Notification SLA"
+          },
+          {
+            "id": "itm-1794643749593-l1c61fd0u",
+            "icon": "FileText",
+            "label": "Consolidated Monthly Account Billing"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "speed": "normal",
+        "opacity": 90
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "sm",
+        "border": true
+      }
+    },
+    {
+      "id": "sec-1794643749593-ztaohq3k6",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 2,
+      "enabled": true,
+      "content": {
+        "eyebrow": "How We Work",
+        "heading": "Operational governance for business mobility",
+        "description": "Our corporate transportation programmes integrate licensed drivers, rigorous safety standards and real time vehicle tracking under one transparent contract. Clients receive dedicated account management, clear service level agreements and predictable reporting across every regional facility.",
+        "items": [
+          {
+            "id": "itm-1794643749593-n7x1n9aab",
+            "icon": "Shield",
+            "heading": "Licensed Protocol Drivers",
+            "description": "Vetted chauffeurs operating under strict duty of care protocols across KSA, UAE, and Qatar."
+          },
+          {
+            "id": "itm-1794643749593-fszrqxxeh",
+            "icon": "Radio",
+            "heading": "Centralized GPS Telematics",
+            "description": "Real-time oversight from our central Riyadh operations desk with live flight and route tracking."
+          },
+          {
+            "id": "itm-1794643749593-6qhjg2cg3",
+            "icon": "FileText",
+            "heading": "Single Master Service Agreement",
+            "description": "Unified cross-border billing and corporate service levels eliminating supplier fragmentation."
+          }
+        ],
+        "actions": [
+          {
+            "label": "Request a corporate proposal",
+            "href": "#corporate-account",
+            "style": "primary",
+            "icon": "ArrowRight"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "/services/www.ab.limo-services-corporate-transportation-images/image1.jpg",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749593-bhkjjel0v",
+      "type": "serviceCards",
+      "variant": "3-column",
+      "order": 3,
+      "enabled": true,
+      "content": {
+        "eyebrow": "What You Get",
+        "heading": "Built for corporate transportation",
+        "description": "Four purpose-built transportation programmes designed to handle every organizational mobility demand under one operating agreement.",
+        "sectionCta": {
+          "label": "Explore Commercial Terms & Governance",
+          "href": "/corporate-accounts",
+          "style": "outline",
+          "icon": "Briefcase"
+        },
+        "bottomCta": {
+          "label": "Request a Custom Programme Proposal",
+          "href": "#corporate-account",
+          "style": "primary",
+          "icon": "ArrowRight"
+        }
+      },
+      "items": [
+        {
+          "id": "itm-1794643749593-tst439jhq",
+          "icon": "Car",
+          "title": "1. Dedicated vehicles",
+          "description": "Assigned luxury vehicle options with a full time private driver for senior executives. Maintenance, insurance, regulatory licensing and relief driver coverage remain entirely managed by our operations control room.",
+          "actions": [
+            {
+              "label": "Dedicated Retainers",
+              "href": "/corporate-accounts",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1794643749593-bazk9pvau",
+          "icon": "Bus",
+          "title": "2. Daily staff routes",
+          "description": "Scheduled employee transport service solutions connecting residential communities to business parks and operational headquarters. Route schedules adapt directly to shift patterns and corporate headcount changes.",
+          "actions": [
+            {
+              "label": "Staff Mobility",
+              "href": "/corporate-accounts",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1794643749593-r5vifuiog",
+          "icon": "Route",
+          "title": "3. Roadshows",
+          "description": "Precision roadshow transport designed for high profile investor itineraries and multi destination site inspections. Dedicated dispatch coordinators monitor every stop to support tight executive meeting agendas.",
+          "actions": [
+            {
+              "label": "Roadshow Coordination",
+              "href": "/corporate-accounts",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1794643749593-82jd7vtsh",
+          "icon": "FileText",
+          "title": "4. Central billing and reporting",
+          "description": "Consolidated billing structured by cost centre, corporate entity or project code. Travel administrators access detailed passenger manifests, journey logs and uniform monthly invoicing across all regional locations.",
+          "actions": [
+            {
+              "label": "Corporate Invoicing",
+              "href": "/corporate-accounts",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "columns": "4",
+        "showHeader": true
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1794643749593-7dgke1noh",
+      "type": "mediaContent",
+      "variant": "media-right",
+      "order": 4,
+      "enabled": true,
+      "content": {
+        "eyebrow": "How It Runs",
+        "heading": "Three stages, one accountable partner",
+        "description": "Coordinating corporate travel across regional borders follows a transparent operational sequence designed to maintain duty of care:",
+        "items": [
+          {
+            "id": "itm-1794643749593-7ndx6qcrc",
+            "icon": "FileCheck",
+            "heading": "1. Set up",
+            "description": "We review passenger counts, itinerary demands, preferred vehicle specifications and security requirements to configure your service scope."
+          },
+          {
+            "id": "itm-1794643749593-7wayf5srx",
+            "icon": "PhoneCall",
+            "heading": "2. Book",
+            "description": "Authorised travel arrangers schedule rides through direct integration, verified email dispatch or round the clock telephone booking channels."
+          },
+          {
+            "id": "itm-1794643749593-avn3q59jb",
+            "icon": "Receipt",
+            "heading": "3. Reconcile",
+            "description": "Your finance department receives a single validated monthly invoice backed by complete route metrics and performance reports."
+          }
+        ],
+        "actions": [
+          {
+            "label": "Request a proposal",
+            "href": "#corporate-account",
+            "style": "primary",
+            "icon": "ArrowRight"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "right",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "/services/www.ab.limo-services-corporate-transportation-images/image2.jpg",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749593-nrhth2rhr",
+      "type": "textMediaGrid",
+      "variant": "media-right",
+      "order": 5,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Proven in the Region",
+        "eyebrowIcon": "Building",
+        "heading": "Recent Work & Enterprise Deployments",
+        "headingHighlight": "",
+        "description": "<p class=\"mb-4 leading-relaxed\"><strong>Roshn Group Staff Shuttle:</strong> Mobilised multi vehicle daily commuter routes across Riyadh to transport workforce personnel between residential districts and corporate office facilities. Programme metrics recorded on-time schedule completion across the active operational lifecycle.</p><p class=\"leading-relaxed\"><strong>Siemens Energy:</strong> Supplied executive ground transportation and technical site transit across strategic industrial locations in the Kingdom. Delivered continuous operations with fully vetted drivers and on demand dispatch managed through our Riyadh control desk.</p>",
+        "items": [
+          {
+            "id": "itm-1794643749593-lzkk5ntih",
+            "icon": "Building",
+            "heading": "Saudi Arabia (KSA)",
+            "description": "Managed corporate programmes across Riyadh (KAFD & DQ), Jeddah, and the Eastern Province."
+          },
+          {
+            "id": "itm-1794643749593-cg0irdnog",
+            "icon": "Globe",
+            "heading": "UAE & Qatar Hubs",
+            "description": "Direct operations in Dubai (DIFC), Abu Dhabi (ADGM), and Doha (West Bay) under 1 agreement."
+          }
+        ],
+        "media": [
+          {
+            "id": "itm-1794643749593-emrxjcygz",
+            "type": "stat",
+            "column": "left",
+            "size": "short",
+            "statValue": "99.8%",
+            "statLabel": "On-Time Arrival Rate"
+          },
+          {
+            "id": "itm-1794643749593-sws8cbhdg",
+            "type": "image",
+            "column": "left",
+            "size": "tall",
+            "image": "/services/www.ab.limo-services-corporate-transportation-images/image1.jpg",
+            "imageAlt": "Corporate Fleet Riyadh",
+            "overlay": "blue"
+          },
+          {
+            "id": "itm-1794643749593-vvhr6fznb",
+            "type": "image",
+            "column": "right",
+            "size": "tall",
+            "image": "/services/www.ab.limo-services-corporate-transportation-images/image2.jpg",
+            "imageAlt": "Executive Passenger Dubai",
+            "overlay": "gradient"
+          },
+          {
+            "id": "itm-1794643749593-alj4z2bsg",
+            "type": "stat",
+            "column": "right",
+            "size": "short",
+            "statValue": "24/7",
+            "statLabel": "Control Room Operations"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "right"
+      },
+      "appearance": {
+        "theme": "darker",
+        "pattern": true,
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749593-f98hl5wcj",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 6,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Coverage & Fleet",
+        "heading": "Regional network and executive fleet",
+        "description": "AB operates direct ground logistics across Saudi Arabia, all seven emirates in the UAE and Qatar. Additional GCC requirements across Bahrain, Kuwait and Oman are fulfilled on request through audited regional transport associates.\n\nVehicles typically deployed:\n• Business Sedan\n• First Class Sedan\n• Executive SUV\n• Premium MPV",
+        "items": [
+          {
+            "id": "itm-1794643749593-y7gw8miey",
+            "icon": "MapPin",
+            "heading": "Saudi Arabia",
+            "description": "Full corporate coverage in Riyadh, Jeddah, Dammam, Khobar, AlUla, and Tabuk."
+          },
+          {
+            "id": "itm-1794643749593-bzsp4mcg1",
+            "icon": "MapPin",
+            "heading": "United Arab Emirates",
+            "description": "Executive transfers across Dubai, Abu Dhabi, Sharjah, and all Northern Emirates."
+          },
+          {
+            "id": "itm-1794643749593-58zdqshgd",
+            "icon": "MapPin",
+            "heading": "Qatar",
+            "description": "Comprehensive corporate mobility across Doha, Lusail, West Bay, and industrial zones."
+          }
+        ],
+        "actions": [
+          {
+            "label": "View the full fleet",
+            "href": "/fleet",
+            "style": "primary",
+            "icon": "Car"
+          },
+          {
+            "label": "Explore Corporate Accounts",
+            "href": "/corporate-accounts",
+            "style": "outline",
+            "icon": "Briefcase"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "dark",
+        "background": "/services/www.ab.limo-services-corporate-transportation-images/image2.jpg",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749593-r2of1wjdx",
+      "type": "contactForm",
+      "variant": "corporate",
+      "order": 7,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Request a Proposal",
+        "heading": "Request a corporate transportation proposal",
+        "description": "Submit your travel schedule, route manifests or RFP documentation for comprehensive operational evaluation and commercial quotation.",
+        "icon": "Briefcase",
+        "submitLabel": "Request a proposal",
+        "successTitle": "Proposal Request Received",
+        "successMessage": "Thank you. Our corporate desk will contact you within 4 business hours with your draft proposal and rate card."
+      },
+      "items": [],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749593-djwvatu69",
+      "type": "faq",
+      "variant": "default",
+      "order": 8,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Questions",
+        "heading": "Frequently asked questions",
+        "description": "Key operational and commercial questions on corporate transportation across the GCC.",
+        "items": [
+          {
+            "id": "itm-1794643749593-do6fkzly7",
+            "question": "How does AB manage duty of care for business travellers?",
+            "answer": "Our duty of care framework applies vetted chauffeurs, continuous GPS tracking and active monitoring from our operations centre in Riyadh. Vehicles undergo mechanical reviews prior to departure, while drivers follow strict working hour regulations. This centralised approach lowers travel risks for visiting staff and senior executives navigating unfamiliar cities across the Gulf region."
+          },
+          {
+            "id": "itm-1794643749593-idp44icw1",
+            "question": "Can we book a corporate car service across multiple Gulf cities under one agreement?",
+            "answer": "Yes. A single master service agreement with AB covers your corporate transportation services UAE requirements, operations across Qatar and domestic routes in the Kingdom. Corporate bookers arrange rides in Riyadh, Jeddah, Dubai, Abu Dhabi and Doha using identical service tiers, eliminating the administrative friction of contracting separate suppliers in each regional territory."
+          },
+          {
+            "id": "itm-1794643749593-sybvu8did",
+            "question": "How are airport transfers coordinated for visiting delegations?",
+            "answer": "Our central dispatch team conducts real time flight tracking to adjust pickup timings for early landings or customs delays automatically. Arriving guests receive a personalised meet and greet service inside the terminal before being escorted to their luxury vehicle. Chauffeurs assist with luggage and provide seamless transfers directly to regional headquarters or hotel accommodations."
+          },
+          {
+            "id": "itm-1794643749594-1e6ali175",
+            "question": "What operational model was applied for the Roshn Group Staff Shuttle?",
+            "answer": "For the Roshn Group Staff Shuttle, AB deployed structured route planning, scheduled departures and dedicated fleet assets to transfer employee teams safely each workday. The deployment maintained strict departure timetables through active route monitoring, providing workforce mobility that aligned perfectly with corporate shift arrangements in the capital."
+          },
+          {
+            "id": "itm-1794643749594-gm4nn3ubb",
+            "question": "What vehicle classes and logistics support were provided for Siemens Energy?",
+            "answer": "During our engagement with Siemens Energy, AB supplied executive sedans and multi passenger vehicles for technical leadership and operational personnel. The project relied on experienced private driver personnel familiar with industrial site security protocols, supported by immediate dispatch adjustments through our twenty four hour operations team."
+          },
+          {
+            "id": "itm-1794643749594-q4gt285go",
+            "question": "How does consolidated billing operate through a corporate account?",
+            "answer": "A corporate account centralises every trip completed across Saudi Arabia, the Emirates and Qatar into one consolidated monthly invoice. Invoices contain granular journey manifests detailing passenger names, departmental billing codes and travel times. This itemised breakdown simplifies financial reconciliation for procurement managers and removes the need for individual expense reimbursements."
+          },
+          {
+            "id": "itm-1794643749594-b5826ien9",
+            "question": "Can corporate clients arrange staff transportation in specific metropolitan areas?",
+            "answer": "We provide specialised staff transportation Riyadh services for corporate headquarters based in the capital, alongside bespoke staff transportation Saudi Arabia wide. Route managers plan optimal transit lines connecting residential districts with business hubs such as the King Abdullah Financial District, reducing commuter fatigue for company employees."
+          },
+          {
+            "id": "itm-1794643749594-jxjqcub7q",
+            "question": "What chauffeur standards are maintained for executive transfers in Dubai?",
+            "answer": "Every professional chauffeur assigned to our corporate chauffeur service Dubai undergoes extensive background vetting, local route navigation assessments and corporate etiquette training. Chauffeurs operate late model premium vehicles, maintain complete passenger confidentiality and coordinate seamlessly with corporate protocol assistants throughout demanding business itineraries.\n\nMore solutions"
+          },
+          {
+            "id": "itm-1794643749594-57z0qv89z",
+            "question": "Formal procurement tenders and custom fleet allocations",
+            "answer": "Submit your travel schedule, route manifests or RFP documentation for comprehensive operational evaluation and commercial quotation.\n\nRequest a proposal"
+          }
+        ]
+      },
+      "items": [
+        {
+          "label": "Request a proposal",
+          "href": "#corporate-account",
+          "style": "primary",
+          "icon": "ArrowRight"
+        },
+        {
+          "label": "Talk to a planner",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone"
+        }
+      ],
+      "settings": {
+        "variant": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1794643749594-r8cxi1dt2",
+      "type": "ctaBanner",
+      "variant": "centered",
+      "order": 9,
+      "enabled": true,
+      "content": {
+        "heading": "Planning corporate transportation?",
+        "description": "Connect with AB to structure dependable corporate transportation programmes across Saudi Arabia, the UAE and Qatar backed by regional dispatch control."
+      },
+      "items": [
+        {
+          "label": "Request a proposal",
+          "href": "#corporate-account",
+          "style": "primary",
+          "icon": "ArrowRight"
+        },
+        {
+          "label": "Talk to a planner",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Briefcase"
+        }
+      ],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    }
+  ],
+  "seo": {
+    "metaTitle": "Corporate & Staff Transportation in KSA, UAE & Qatar | AB",
+    "metaDescription": "Managed corporate transportation across Saudi Arabia, the UAE and Qatar: dedicated chauffeurs, staff routes, roadshows and visitor programmes. Get a proposal.",
+    "ogImage": "/services/corporate-transportation.jpg"
+  },
+  "status": "published",
+  "showInMenu": true,
+  "order": 2,
+  "locale": "en",
+  "exportedAt": "2026-11-14T08:09:39.750Z"
+}

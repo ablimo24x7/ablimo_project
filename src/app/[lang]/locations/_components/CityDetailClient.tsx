@@ -5,6 +5,7 @@ import type {
     SectionInstance,
     SectionRenderContext,
 } from "@/components/section-library/types";
+import { stripConfirmPlaceholders } from "@/lib/strip-confirm-placeholders";
 
 interface Props {
     template: SectionInstance[];
@@ -12,5 +13,12 @@ interface Props {
 }
 
 export default function CityDetailClient({ template, context }: Props) {
-    return <SectionRenderer sections={template} context={context} />;
+    return (
+        <div className="[&_p]:text-justify">
+            <SectionRenderer
+                sections={stripConfirmPlaceholders(template) as SectionInstance[]}
+                context={stripConfirmPlaceholders(context) as SectionRenderContext}
+            />
+        </div>
+    );
 }

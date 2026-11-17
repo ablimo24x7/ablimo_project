@@ -1,0 +1,293 @@
+{
+  "pageType": "service",
+  "slug": "tourism-transportation",
+  "title": "Tourism & Leisure",
+  "subtitle": "Custom private tours, sightseeing, and leisure transit curated for travellers who expect more.",
+  "desc": "Custom private tours, sightseeing, pilgrimage, and leisure transit curated for discerning travellers.",
+  "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&h=800&fit=crop",
+  "breadcrumb": "Tourism & Leisure",
+  "features": [
+    {
+      "icon": "",
+      "title": "Custom Itineraries",
+      "desc": "We craft day tours and multi-day programmes around your interests, pace, and preferred destinations."
+    },
+    {
+      "icon": "",
+      "title": "Knowledgeable Chauffeurs",
+      "desc": "Friendly, multilingual chauffeurs double as guides with local insight and great storytelling."
+    },
+    {
+      "icon": "",
+      "title": "Curated Experiences",
+      "desc": "Recommendations for dining, shopping, and landmarks elevate your leisure travel to a true experience."
+    }
+  ],
+  "cardsHeading": "Leisure Experiences",
+  "cardsDesc": "Turn an ordinary trip into a memorable journey with our signature experiences.",
+  "cards": [
+    {
+      "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=500&fit=crop",
+      "tag": "City Tours",
+      "title": "Private City Tours",
+      "desc": "Iconic landmarks and hidden favourites, seen at your own pace in complete privacy."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=500&fit=crop",
+      "tag": "Coastal",
+      "title": "Beach & Leisure Runs",
+      "desc": "Relaxed transfers to beaches, resorts, and leisure destinations with zero logistics stress."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=800&h=500&fit=crop",
+      "tag": "Culture",
+      "title": "Culture & Heritage",
+      "desc": "Thoughtful journeys connecting you with the history, architecture, and culture of the region."
+    }
+  ],
+  "sections": [
+    {
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&h=600&fit=crop",
+      "imageAlt": "Scenic leisure travel destination",
+      "title": "Explore, Your Way",
+      "paragraphs": [
+        "Leisure time should never be rushed or rationed. With a private AB chauffeur, your itinerary bends to your mood, your schedule, and your curiosity.",
+        "Stop for a photograph, linger at a viewpoint, or add a spontaneous detour-your chauffeur is there to make it effortless."
+      ],
+      "bullets": [
+        {
+          "text": "Full-day and half-day hire with flexible stops"
+        },
+        {
+          "text": "Multilingual chauffeurs with local expertise"
+        },
+        {
+          "text": "Suitable for couples, families, and small groups"
+        }
+      ],
+      "imageSide": "left",
+      "dark": true
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can you plan a full-day sightseeing itinerary?",
+      "a": "Yes. We design detailed day tours with recommended timings, dining spots, and must-see stops tailored to your interests."
+    },
+    {
+      "q": "Are your chauffeurs also tour guides?",
+      "a": "Our chauffeurs are knowledgeable about their cities and happy to share insight, while professional licensed guides can also be arranged."
+    },
+    {
+      "q": "Can we make stops along the way?",
+      "a": "Absolutely. Hourly and day-hire packages allow you to stop, explore, or change your plan at any time."
+    }
+  ],
+  "ctaTitle": "Design Your Private Tour",
+  "ctaDesc": "From iconic landmarks to hidden gems, let us curate a seamless, luxurious way to explore your destination.",
+  "ctaLabel": "Plan a Private Tour",
+  "ctaHref": "",
+  "pageSections": [
+    {
+      "id": "sec-1792846212745-6umcr7a3e",
+      "type": "hero",
+      "variant": "background-content",
+      "order": 0,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Premium Mobility",
+        "title": "Tourism & Leisure",
+        "titleHighlight": "",
+        "description": "Custom private tours, sightseeing, and leisure transit curated for travellers who expect more."
+      },
+      "items": [
+        {
+          "label": "Get Started",
+          "href": "#contact",
+          "style": "primary",
+          "icon": "ArrowRight",
+          "iconPosition": "right"
+        }
+      ],
+      "settings": {
+        "minHeight": "85vh",
+        "overlayOpacity": 85,
+        "contentPosition": "left",
+        "buttonLayout": "row"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&h=800&fit=crop",
+        "padding": "none",
+        "border": false,
+        "textAlign": "left",
+        "overlayGradient": "default"
+      }
+    },
+    {
+      "id": "sec-1792846212745-tb14ika1j",
+      "type": "serviceCards",
+      "variant": "3-column",
+      "order": 1,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Our Services",
+        "heading": "Tourism & Leisure Features.",
+        "description": "Custom private tours, sightseeing, and leisure transit curated for travellers who expect more."
+      },
+      "items": [
+        {
+          "id": "itm-1792846212745-8n3gplwe9",
+          "icon": "Shield",
+          "title": "Custom Itineraries",
+          "description": "We craft day tours and multi-day programmes around your interests, pace, and preferred destinations.",
+          "actions": []
+        },
+        {
+          "id": "itm-1792846212745-zb4l25yms",
+          "icon": "Shield",
+          "title": "Knowledgeable Chauffeurs",
+          "description": "Friendly, multilingual chauffeurs double as guides with local insight and great storytelling.",
+          "actions": []
+        },
+        {
+          "id": "itm-1792846212745-4onnwtrgp",
+          "icon": "Shield",
+          "title": "Curated Experiences",
+          "description": "Recommendations for dining, shopping, and landmarks elevate your leisure travel to a true experience.",
+          "actions": []
+        }
+      ],
+      "settings": {
+        "columns": "3",
+        "showHeader": true
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1792846212745-bk5xtribr",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 2,
+      "enabled": true,
+      "content": {
+        "heading": "Explore, Your Way",
+        "description": "Leisure time should never be rushed or rationed. With a private AB chauffeur, your itinerary bends to your mood, your schedule, and your curiosity.\n\nStop for a photograph, linger at a viewpoint, or add a spontaneous detour-your chauffeur is there to make it effortless.",
+        "items": [
+          {
+            "id": "itm-1792846212745-z07pssybi",
+            "icon": "CheckCircle",
+            "heading": "Full-day and half-day hire with flexible stops",
+            "description": ""
+          },
+          {
+            "id": "itm-1792846212745-3m7k2kx8n",
+            "icon": "CheckCircle",
+            "heading": "Multilingual chauffeurs with local expertise",
+            "description": ""
+          },
+          {
+            "id": "itm-1792846212745-5etpc4qx2",
+            "icon": "CheckCircle",
+            "heading": "Suitable for couples, families, and small groups",
+            "description": ""
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&h=600&fit=crop",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1792846212745-b7ni49ve6",
+      "type": "faq",
+      "variant": "default",
+      "order": 3,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Knowledge Base",
+        "heading": "Frequently Asked Questions",
+        "description": "",
+        "items": [
+          {
+            "id": "itm-1792846212745-cw377luza",
+            "question": "Can you plan a full-day sightseeing itinerary?",
+            "answer": "Yes. We design detailed day tours with recommended timings, dining spots, and must-see stops tailored to your interests."
+          },
+          {
+            "id": "itm-1792846212745-gf677ip7j",
+            "question": "Are your chauffeurs also tour guides?",
+            "answer": "Our chauffeurs are knowledgeable about their cities and happy to share insight, while professional licensed guides can also be arranged."
+          },
+          {
+            "id": "itm-1792846212745-pvqqh0yqp",
+            "question": "Can we make stops along the way?",
+            "answer": "Absolutely. Hourly and day-hire packages allow you to stop, explore, or change your plan at any time."
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "variant": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1792846212745-zc01d30ob",
+      "type": "ctaBanner",
+      "variant": "centered",
+      "order": 4,
+      "enabled": true,
+      "content": {
+        "heading": "Design Your Private Tour",
+        "description": "From iconic landmarks to hidden gems, let us curate a seamless, luxurious way to explore your destination."
+      },
+      "items": [
+        {
+          "label": "Plan a Private Tour",
+          "href": "#contact",
+          "style": "primary",
+          "icon": "ArrowRight"
+        }
+      ],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    }
+  ],
+  "seo": {
+    "metaTitle": "Tourism & Leisure Transport | AB",
+    "metaDescription": "Custom private tours, sightseeing, and leisure transit curated by AB for discerning travellers.",
+    "ogImage": ""
+  },
+  "status": "published",
+  "showInMenu": true,
+  "order": 6,
+  "locale": "en",
+  "exportedAt": "2026-11-10T12:32:13.882Z"
+}

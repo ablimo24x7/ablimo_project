@@ -1,0 +1,726 @@
+{
+  "pageType": "country",
+  "refKey": "kuwait",
+  "countrySlug": "kuwait",
+  "path": "/locations/kuwait",
+  "description": "Country template for kuwait",
+  "exportedAt": "2026-11-10T12:32:14.122Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1793272074069-ss4h1eewh",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Kuwait",
+          "titleHighlight": "",
+          "description": "AB coordinates executive chauffeur service Kuwait travel on request through vetted local partners, managed from Riyadh. Operations controllers supervise every schedule to maintain smooth business transport.\n\nActive flight tracking and rigorous vehicle audits support seamless airport transfers for visiting delegations. Central dispatch coordinates each itinerary with 24/7 accountability."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-kuwait-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1793272074069-isjvbfkia",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-rr7ah05n6",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Executive Fleet and Coverage",
+          "heading": "What Chauffeur Service Kuwait and KWI Transfers Include",
+          "description": "Ground transport coordinators organise executive travel schedules for delegations, corporate roadshows and individual VIP transport across major commercial areas. Available fleets feature the Mercedes S Class sedan, Cadillac Escalade SUV, GMC Yukon SUV and Mercedes V Class luxury van, accompanied by a licensed professional chauffeur. Whether arranging an executive car service or specialized limousine service, coordinators access full regional coverage through the Locations directory.",
+          "mediaCaption": "Premium vehicles selected for executive transfers across Kuwait City and surrounding business districts.",
+          "items": [
+            {
+              "id": "kw-cov-1",
+              "icon": "Map",
+              "heading": "Kuwait City",
+              "description": "Downtown corporate transport Kuwait assignments, financial district office visits, diplomatic protocol movements and hourly chauffeur hire for executive meetings."
+            },
+            {
+              "id": "kw-cov-2",
+              "icon": "Map",
+              "heading": "Hawalli",
+              "description": "Commercial transfers, shopping district appointments and flexible private driver car with driver bookings across busy mixed use avenues."
+            },
+            {
+              "id": "kw-cov-3",
+              "icon": "Map",
+              "heading": "Farwaniya and Al Ahmadi",
+              "description": "Industrial facility visits, oil sector corporate travel, government sites and full day hire itineraries across vital economic zones."
+            },
+            {
+              "id": "kw-cov-4",
+              "icon": "Plane",
+              "heading": "Kuwait International Airport (KWI)",
+              "description": "Punctual airport transfer Kuwait solutions, meet and greet arrivals, luggage handling and live flight tracking across terminals."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Locations Directory",
+              "href": "/locations",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-kuwait-images/image2.jpg",
+          "backgroundAlt": "Luxury car fleet for Kuwait chauffeur travel parked in formation"
+        }
+      },
+      {
+        "id": "sec-1793272074069-kgb58xw12",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "heading": "Destinations in Kuwait",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-8agrrgdl6",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Operating Model",
+          "heading": "How Partner Trips Work in Kuwait",
+          "description": ""
+        },
+        "items": [
+          {
+            "id": "kw-wf-1",
+            "icon": "Briefcase",
+            "title": "Request",
+            "description": "Submit itinerary details, passenger manifests and vehicle preferences to our central reservation team. Dispatch specialists calculate transfer timings, review regional traffic patterns and assign appropriate luxury car categories tailored to your schedule."
+          },
+          {
+            "id": "kw-wf-2",
+            "icon": "Shield",
+            "title": "Plan and Vet",
+            "description": "The Riyadh operations centre audits local partner compliance, driver credentials and vehicle maintenance standards. Assigned chauffeurs receive full route briefings, while vehicle cleanliness and comprehensive commercial insurance are confirmed prior to passenger collection."
+          },
+          {
+            "id": "kw-wf-3",
+            "icon": "Clock",
+            "title": "Operate and Report",
+            "description": "Chauffeurs arrive ahead of schedule for seamless execution. The 24/7 central desk tracks vehicle progress in real time, delivers passenger movement updates to travel coordinators and generates transparent billing upon mission completion."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-pr4uuaz9n",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Quality Assurance",
+          "heading": "Kuwait Partner Standards for Professional Chauffeur Delivery",
+          "description": "AB enforces demanding criteria for partner networks supporting corporate transport Kuwait operations, requiring late model sedan, SUV and luxury van fleets with comprehensive commercial insurance. Every professional chauffeur demonstrates English proficiency, defensive driving skills and immaculate executive presentation throughout the journey. Central management from the AB Riyadh headquarters at Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz (+966 58 111 8720) maintains continuous compliance for every itinerary.\n\nCentral dispatch from Riyadh verifies driver licensing, commercial insurance and vehicle condition before approving any partner trip across Kuwait.",
+          "mediaCaption": "Professional chauffeurs meet rigorous presentation and safety benchmarks for every itinerary.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-kuwait-images/image3.jpg",
+          "backgroundAlt": "Chauffeur opening a car door for corporate travel in Kuwait"
+        }
+      },
+      {
+        "id": "sec-1793272074069-x0s6k3bfv",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions About Kuwait Chauffeur Services",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1793272074069-txoq6xlnd",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "Book Chauffeur Service Kuwait Travel",
+          "description": "Arrange reliable executive ground transport across Kuwait with central dispatch management from Riyadh and vetted local premium vehicles."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1792139036438-7gjl4qbo1",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service In {country}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://plus.unsplash.com/premium_photo-1661963334316-e7f118aaae75?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036438-c4tzg309f",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-mqu8o9klo",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-pbcmstlho",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Executive Chauffeur Service in Kuwait",
+          "description": "Kuwait's rich heritage and modern skyline frame a nation of opportunity. AB delivers premium chauffeur service from Kuwait International Airport, executive corporate transfers, and comfortable intercity travel across every governorate — with the discretion and professionalism your time deserves.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://plus.unsplash.com/premium_photo-1661963334316-e7f118aaae75?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      },
+      {
+        "id": "sec-1792139036438-i4evyupap",
+        "type": "introText",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "Experience refined elegance with AB’s premium chauffeur service across {country}. From major business hubs to every destination across the region, our network of professional drivers provides discreet, first-class transportation tailored to your journey. Whether you need seamless airport transfers, city-to-city travel, or flexible hourly bookings, we deliver an uncompromised, executive travel experience.",
+            "Don't settle for just renting a car with a driver — immerse yourself in an experience by booking with AB.",
+            "Check out our wide range of services available across {country} below:"
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-nieoxmxcd",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "heading": "Inter City Routes in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-x3qfjuswt",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1793272074085-0mh1qgag8",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Kuwait",
+          "titleHighlight": "",
+          "description": "AB coordinates executive chauffeur service Kuwait travel on request through vetted local partners, managed from Riyadh. Operations controllers supervise every schedule to maintain smooth business transport.\n\nActive flight tracking and rigorous vehicle audits support seamless airport transfers for visiting delegations. Central dispatch coordinates each itinerary with 24/7 accountability."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-kuwait-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1793272074085-v17n5sf3f",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-l3mtfu4m0",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Executive Fleet and Coverage",
+          "heading": "What Chauffeur Service Kuwait and KWI Transfers Include",
+          "description": "Ground transport coordinators organise executive travel schedules for delegations, corporate roadshows and individual VIP transport across major commercial areas. Available fleets feature the Mercedes S Class sedan, Cadillac Escalade SUV, GMC Yukon SUV and Mercedes V Class luxury van, accompanied by a licensed professional chauffeur. Whether arranging an executive car service or specialized limousine service, coordinators access full regional coverage through the Locations directory.",
+          "mediaCaption": "Premium vehicles selected for executive transfers across Kuwait City and surrounding business districts.",
+          "items": [
+            {
+              "id": "kw-cov-1",
+              "icon": "Map",
+              "heading": "Kuwait City",
+              "description": "Downtown corporate transport Kuwait assignments, financial district office visits, diplomatic protocol movements and hourly chauffeur hire for executive meetings."
+            },
+            {
+              "id": "kw-cov-2",
+              "icon": "Map",
+              "heading": "Hawalli",
+              "description": "Commercial transfers, shopping district appointments and flexible private driver car with driver bookings across busy mixed use avenues."
+            },
+            {
+              "id": "kw-cov-3",
+              "icon": "Map",
+              "heading": "Farwaniya and Al Ahmadi",
+              "description": "Industrial facility visits, oil sector corporate travel, government sites and full day hire itineraries across vital economic zones."
+            },
+            {
+              "id": "kw-cov-4",
+              "icon": "Plane",
+              "heading": "Kuwait International Airport (KWI)",
+              "description": "Punctual airport transfer Kuwait solutions, meet and greet arrivals, luggage handling and live flight tracking across terminals."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Locations Directory",
+              "href": "/locations",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-kuwait-images/image2.jpg",
+          "backgroundAlt": "Luxury car fleet for Kuwait chauffeur travel parked in formation"
+        }
+      },
+      {
+        "id": "sec-1793272074085-hplu91agf",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "heading": "Destinations in Kuwait",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-7mv4jtm71",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Operating Model",
+          "heading": "How Partner Trips Work in Kuwait",
+          "description": ""
+        },
+        "items": [
+          {
+            "id": "kw-wf-1",
+            "icon": "Briefcase",
+            "title": "Request",
+            "description": "Submit itinerary details, passenger manifests and vehicle preferences to our central reservation team. Dispatch specialists calculate transfer timings, review regional traffic patterns and assign appropriate luxury car categories tailored to your schedule."
+          },
+          {
+            "id": "kw-wf-2",
+            "icon": "Shield",
+            "title": "Plan and Vet",
+            "description": "The Riyadh operations centre audits local partner compliance, driver credentials and vehicle maintenance standards. Assigned chauffeurs receive full route briefings, while vehicle cleanliness and comprehensive commercial insurance are confirmed prior to passenger collection."
+          },
+          {
+            "id": "kw-wf-3",
+            "icon": "Clock",
+            "title": "Operate and Report",
+            "description": "Chauffeurs arrive ahead of schedule for seamless execution. The 24/7 central desk tracks vehicle progress in real time, delivers passenger movement updates to travel coordinators and generates transparent billing upon mission completion."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-04up5h9t0",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Quality Assurance",
+          "heading": "Kuwait Partner Standards for Professional Chauffeur Delivery",
+          "description": "AB enforces demanding criteria for partner networks supporting corporate transport Kuwait operations, requiring late model sedan, SUV and luxury van fleets with comprehensive commercial insurance. Every professional chauffeur demonstrates English proficiency, defensive driving skills and immaculate executive presentation throughout the journey. Central management from the AB Riyadh headquarters at Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz (+966 58 111 8720) maintains continuous compliance for every itinerary.\n\nCentral dispatch from Riyadh verifies driver licensing, commercial insurance and vehicle condition before approving any partner trip across Kuwait.",
+          "mediaCaption": "Professional chauffeurs meet rigorous presentation and safety benchmarks for every itinerary.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-kuwait-images/image3.jpg",
+          "backgroundAlt": "Chauffeur opening a car door for corporate travel in Kuwait"
+        }
+      },
+      {
+        "id": "sec-1793272074085-03j90bprk",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions About Kuwait Chauffeur Services",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1793272074085-w47w98web",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "Book Chauffeur Service Kuwait Travel",
+          "description": "Arrange reliable executive ground transport across Kuwait with central dispatch management from Riyadh and vetted local premium vehicles."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

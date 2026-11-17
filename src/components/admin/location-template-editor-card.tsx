@@ -12,6 +12,10 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { buildCountryTemplate } from "@/components/section-library/presets/country-presets";
 import { buildCityTemplate } from "@/components/section-library/presets/city-presets";
 import { buildRouteTemplate } from "@/components/section-library/presets/route-presets";
+import {
+  CLIENT_CITY_DATA,
+  preserveCityTemplateContent,
+} from "@/components/section-library/presets/client-city-data";
 
 const TEMPLATE_LANG = "en-US";
 
@@ -81,11 +85,20 @@ export function LocationTemplateEditorCard({
         if (!res.ok) throw new Error(`Request failed (${res.status})`);
         const data = await res.json();
         const doc = Array.isArray(data.items) ? data.items[0] : undefined;
+        let loadedSections = doc
+          ? ((Array.isArray(doc.template) ? doc.template : []) as SectionInstance[])
+          : [];
+        if (doc && pageType === "city") {
+          const [countrySlug, citySlug] = debouncedRefKey.split("/");
+          if (countrySlug && CLIENT_CITY_DATA[citySlug]) {
+            const dict = await loadDict();
+            const canonical = buildTemplateSections(pageType, debouncedRefKey, dict);
+            loadedSections = preserveCityTemplateContent(canonical, loadedSections);
+          }
+        }
         if (stale) return;
         setDocId(doc ? doc._id : null);
-        setSections(
-          doc ? ((Array.isArray(doc.template) ? doc.template : []) as SectionInstance[]) : []
-        );
+        setSections(loadedSections);
         setDirty(false);
       } catch {
         if (stale) return;

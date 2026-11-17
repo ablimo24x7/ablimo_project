@@ -21,6 +21,7 @@ import { CSS } from "@dnd-kit/utilities";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Select,
@@ -916,6 +917,214 @@ function ContentTab({ section, scope = "service", structureLocked = false, onUpd
             <Label>Description (rich text paragraphs)</Label>
             <WysiwygEditor value={(c.description as string) || ""} onChange={(v) => updateContent("description", v)} placeholder="SEO paragraphs..." />
           </div>
+
+          {/* Media & Layout Controls */}
+          <div className="border-t border-gray-800 pt-5 mt-6 space-y-4">
+            <div>
+              <Label className="text-sm font-semibold text-white">Media Layout & Position</Label>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                Control where and how media images or stat cards appear beside or below the text.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label className="text-xs">Media Position</Label>
+                <Select
+                  value={(sectionSettings.mediaPosition as string) || "right"}
+                  onValueChange={(v) => updateSettings("mediaPosition", v)}
+                >
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="right">Media on Right (Text Left)</SelectItem>
+                    <SelectItem value="left">Media on Left (Text Right)</SelectItem>
+                    <SelectItem value="bottom">Media Below Text (Horizontal Row)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-2">
+                <Label className="text-xs">Media Display Mode</Label>
+                <Select
+                  value={(sectionSettings.mediaLayout as string) || "mosaic"}
+                  onValueChange={(v) => updateSettings("mediaLayout", v)}
+                >
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="mosaic">Mosaic Grid (2-Col Asymmetric)</SelectItem>
+                    <SelectItem value="row">Horizontal Row / Flex</SelectItem>
+                    <SelectItem value="single">Single Featured Card</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            {/* Media Tiles / Images Manager */}
+            <div className="pt-2 space-y-3">
+              <div className="flex items-center justify-between">
+                <Label className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                  Media Tiles ({((c.media || []) as Array<Record<string, unknown>>).length})
+                </Label>
+                {canManage && !structureLocked && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="h-7 text-xs"
+                    onClick={() => {
+                      const id = `itm-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+                      const currentMedia = ((c.media || []) as Array<Record<string, unknown>>);
+                      const nextCol = currentMedia.length % 2 === 0 ? "left" : "right";
+                      updateContent("media", [
+                        ...currentMedia,
+                        { id, type: "image", column: nextCol, size: "tall", image: "", imageAlt: "", overlay: "none" },
+                      ]);
+                    }}
+                  >
+                    <Plus className="h-3 w-3 mr-1" /> Add Media Tile
+                  </Button>
+                )}
+              </div>
+
+              <p className="text-xs text-muted-foreground">
+                Images and stats configured here are displayed in an aesthetic grid or flex row alongside your text.
+              </p>
+
+              {((c.media || []) as Array<Record<string, unknown>>).length === 0 ? (
+                <div className="p-4 border border-dashed rounded-lg text-center bg-muted/10 space-y-2">
+                  <p className="text-xs text-muted-foreground">No media tiles added yet. The text will render full-width.</p>
+                  {canManage && !structureLocked && (
+                    <Button
+                      type="button"
+                      variant="secondary"
+                      size="sm"
+                      className="text-xs"
+                      onClick={() => {
+                        const id = `itm-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+                        updateContent("media", [
+                          { id: `${id}-1`, type: "stat", column: "left", size: "short", statValue: "100%", statLabel: "Guaranteed Dispatch" },
+                          { id: `${id}-2`, type: "image", column: "left", size: "tall", image: "", imageAlt: "Featured Image", overlay: "blue" },
+                          { id: `${id}-3`, type: "image", column: "right", size: "tall", image: "", imageAlt: "Regional Operations", overlay: "gradient" },
+                          { id: `${id}-4`, type: "stat", column: "right", size: "short", statValue: "24/7", statLabel: "Live Command" },
+                        ]);
+                      }}
+                    >
+                      <Plus className="h-3 w-3 mr-1" /> Load Recommended 4-Tile Preset
+                    </Button>
+                  )}
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  {((c.media || []) as Array<Record<string, unknown>>).map((tile, ti) => {
+                    const updateTile = (updates: Record<string, unknown>) => {
+                      const tiles = [...((c.media || []) as Array<Record<string, unknown>>)];
+                      tiles[ti] = { ...tiles[ti], ...updates };
+                      updateContent("media", tiles);
+                    };
+                    const isImage = (tile.type as string) !== "stat";
+                    return (
+                      <div key={(tile.id as string) || ti} className="border border-gray-800 rounded-lg p-3 bg-muted/20 space-y-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-medium text-gray-300">Tile {ti + 1}: {isImage ? "Image" : "Stat Card"}</span>
+                          {canManage && !structureLocked && (
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="sm"
+                              className="h-6 w-6 p-0 hover:bg-destructive/20"
+                              onClick={() => {
+                                updateContent(
+                                  "media",
+                                  ((c.media || []) as Array<Record<string, unknown>>).filter((_, i) => i !== ti)
+                                );
+                              }}
+                            >
+                              <Trash2 className="h-3 w-3 text-destructive" />
+                            </Button>
+                          )}
+                        </div>
+                        <div className="grid grid-cols-3 gap-2">
+                          <Select value={(tile.type as string) || "image"} onValueChange={(v) => updateTile({ type: v })}>
+                            <SelectTrigger className="h-8 text-xs"><SelectValue /></SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="image">Image</SelectItem>
+                              <SelectItem value="stat">Stat Card</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <Select value={(tile.column as string) || "left"} onValueChange={(v) => updateTile({ column: v })}>
+                            <SelectTrigger className="h-8 text-xs"><SelectValue /></SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="left">Left Col</SelectItem>
+                              <SelectItem value="right">Right Col</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <Select value={(tile.size as string) || "tall"} onValueChange={(v) => updateTile({ size: v })}>
+                            <SelectTrigger className="h-8 text-xs"><SelectValue /></SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="tall">Tall</SelectItem>
+                              <SelectItem value="short">Short</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        {isImage ? (
+                          <div className="space-y-2">
+                            <MediaInput
+                              value={(tile.image as string) || ""}
+                              onChange={(url) => updateTile({ image: url })}
+                              accept="image"
+                              placeholder="Image URL"
+                            />
+                            {(tile.image as string) && (
+                              <img
+                                src={tile.image as string}
+                                alt={(tile.imageAlt as string) || ""}
+                                className="h-24 w-full rounded object-cover border border-gray-700"
+                              />
+                            )}
+                            <Input
+                              value={(tile.imageAlt as string) || ""}
+                              onChange={(e) => updateTile({ imageAlt: e.target.value })}
+                              placeholder="Alt text"
+                              className="h-8 text-xs"
+                            />
+                            <div className="grid grid-cols-2 gap-2 items-center">
+                              <Select value={(tile.overlay as string) || "none"} onValueChange={(v) => updateTile({ overlay: v })}>
+                                <SelectTrigger className="h-8 text-xs"><SelectValue /></SelectTrigger>
+                                <SelectContent>
+                                  <SelectItem value="none">No Overlay</SelectItem>
+                                  <SelectItem value="blue">Blue Tint</SelectItem>
+                                  <SelectItem value="gradient">Bottom Gradient</SelectItem>
+                                </SelectContent>
+                              </Select>
+                              <div className="flex items-center gap-2">
+                                <Switch checked={!!tile.contain} onCheckedChange={(v) => updateTile({ contain: v })} />
+                                <Label className="text-xs">Contain on dark bg</Label>
+                              </div>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="grid grid-cols-2 gap-2">
+                            <Input
+                              value={(tile.statValue as string) || ""}
+                              onChange={(e) => updateTile({ statValue: e.target.value })}
+                              placeholder="100%"
+                              className="h-8 text-xs"
+                            />
+                            <Input
+                              value={(tile.statLabel as string) || ""}
+                              onChange={(e) => updateTile({ statLabel: e.target.value })}
+                              placeholder="Guaranteed Dispatch"
+                              className="h-8 text-xs"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       );
 
@@ -1425,7 +1634,7 @@ function ItemsTab({ section, onUpdate, faqContextItems, structureLocked = false 
     } else if (sType === "dubaiServices" || sType === "cityServices") {
       newItem = { ...newItem, title: "", href: "/services" };
     } else if (sType === "dubaiFleet" || sType === "cityFleet") {
-      newItem = { ...newItem, name: "", model: "", specs: "", image: "", fleetSlug: "" };
+      newItem = { ...newItem, name: "", model: "", specs: "", description: "", image: "", fleetSlug: "" };
     }
 
     onUpdate({ items: [...items, newItem] });
@@ -2232,6 +2441,15 @@ function ItemEditor({ sectionType, item, index, structureLocked = false, onUpdat
                 />
               </div>
               <div className="space-y-1">
+                <Label className="text-xs">Vehicle Description</Label>
+                <Textarea
+                  value={(item.description as string) || ""}
+                  onChange={(e) => onUpdate({ description: e.target.value })}
+                  placeholder="Describe the comfort, capacity, and ideal use of this vehicle."
+                  rows={4}
+                />
+              </div>
+              <div className="space-y-1">
                 <Label className="text-xs">Vehicle Image</Label>
                 <MediaInput
                   value={(item.image as string) || ""}
@@ -2411,15 +2629,29 @@ function SettingsTab({ section, scope = "service", onUpdate }: SectionEditorPane
 
       {/* Text Media Grid settings */}
       {section.type === "textMediaGrid" && (
-        <div className="space-y-2">
-          <Label>Media Position</Label>
-          <Select value={(settings.mediaPosition as string) || "right"} onValueChange={(v) => updateSettings("mediaPosition", v)}>
-            <SelectTrigger><SelectValue /></SelectTrigger>
-            <SelectContent>
-              <SelectItem value="left">Left</SelectItem>
-              <SelectItem value="right">Right</SelectItem>
-            </SelectContent>
-          </Select>
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Media Position</Label>
+            <Select value={(settings.mediaPosition as string) || "right"} onValueChange={(v) => updateSettings("mediaPosition", v)}>
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="right">Right (Content Left, Media Right)</SelectItem>
+                <SelectItem value="left">Left (Media Left, Content Right)</SelectItem>
+                <SelectItem value="bottom">Bottom (Horizontal Row Below)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-2">
+            <Label>Media Display Mode</Label>
+            <Select value={(settings.mediaLayout as string) || "mosaic"} onValueChange={(v) => updateSettings("mediaLayout", v)}>
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="mosaic">Mosaic Grid (2-Col Asymmetric)</SelectItem>
+                <SelectItem value="row">Horizontal Row / Flex</SelectItem>
+                <SelectItem value="single">Single Featured Card</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
       )}
 
@@ -2602,11 +2834,16 @@ function AppearanceTab({ section, onUpdate }: SectionEditorPanelProps) {
       {section.type !== "hero" && (
         <div className="space-y-2">
           <MediaInput
-            label="Background Image (optional)"
+            label="Section Background Image (optional backdrop)"
             value={(appearance.background as string) || ""}
             onChange={(url) => updateAppearance("background", url)}
             accept="image"
           />
+          {section.type === "textMediaGrid" && (
+            <p className="text-xs text-muted-foreground">
+              Note: To add the images and stat cards that appear alongside or below your text, go to the <strong>Content</strong> tab → <strong>Media Layout & Position</strong>.
+            </p>
+          )}
           {(appearance.background as string) && (
             <img
               src={appearance.background as string}

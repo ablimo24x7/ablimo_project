@@ -123,11 +123,13 @@ export default function FleetGridSection({ section }: FleetGridSectionProps) {
               {/* Vehicle Info */}
               <div className="p-6 flex flex-col">
                 <h4 className="text-lg font-bold text-white mb-1">{vehicle.category}</h4>
-                <p className="text-sm text-abServiceBlue font-medium mb-2">
-                  {vehicle.name.startsWith("Typical model")
-                    ? vehicle.name
-                    : `Typical model: ${vehicle.name}`}
-                </p>
+                {vehicle.name ? (
+                  <p className="text-sm text-abServiceBlue font-medium mb-2">
+                    {vehicle.name.startsWith("Typical model")
+                      ? vehicle.name
+                      : `Typical model: ${vehicle.name}`}
+                  </p>
+                ) : null}
                 {vehicle.idealFor && (
                   <p className="text-xs text-gray-300 font-medium mb-2">
                     {vehicle.idealFor.startsWith("Ideal for")

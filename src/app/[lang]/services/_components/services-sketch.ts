@@ -1,138 +1,255 @@
-export interface VehicleShape {
-  w1: number;
-  w2: number;
-  body: string;
-  glass: string;
-  line: string;
-  lamp: string;
+export interface SketchVehicle {
+  /** Real fleet image (cutout/photo) from the fleet page — replaces the old vector sketch. */
+  src: string;
+  label: string;
 }
 
 export interface SketchService {
   id: string;
+  /** Label used in the sticky sidebar list. */
   name: string;
   /** Shorter label used in the hero tab row when present. */
   tabName?: string;
-  desc: string;
+  /** Full section heading (H2). */
+  heading: string;
+  /** Intro paragraphs rendered above the section image. */
+  intro: string[];
+  /** Paragraph rendered below the section image. */
+  detail: string;
   points: string[];
   /** Locale-relative path — prefix with localeBase(lang) at render time. */
   href: string;
-  photo: string;
-  vehicleLabel: string;
-  v: VehicleShape;
+  /** Scene photo for this section. */
+  image: string;
+  imageAlt: string;
+  /** Fleet vehicle shown in the side panel instead of the vector silhouette. */
+  vehicle: SketchVehicle;
 }
 
-/** Vehicle silhouettes from the client sketch (dark-panel colour variants). */
-const V: Record<string, VehicleShape> = {
-  first: {
-    w1: 92,
-    w2: 324,
-    body: "M14,106 L14,90 C14,82 22,78 38,77 L118,73 C140,57 166,45 204,44 L270,44 C298,44 318,57 338,71 L370,76 C386,78 390,86 390,95 L390,106 Z",
-    glass: "M130,72 C152,58 174,50 204,49 L232,49 L232,72 Z M238,49 L268,49 C292,49 310,59 324,71 L238,72 Z",
-    line: "M26,86 L378,86",
-    lamp: "M16,84 L30,83 L30,88 L16,88 Z",
-  },
-  business: {
-    w1: 96,
-    w2: 316,
-    body: "M20,106 L20,91 C20,83 28,79 44,78 L120,74 C142,58 166,47 200,46 L258,46 C286,46 306,58 326,72 L362,77 C378,79 384,87 384,96 L384,106 Z",
-    glass: "M132,73 C152,60 172,52 200,51 L224,51 L224,73 Z M230,51 L256,51 C278,51 296,60 312,72 L230,73 Z",
-    line: "M32,87 L372,87",
-    lamp: "M22,85 L36,84 L36,89 L22,89 Z",
-  },
-  suv: {
-    w1: 96,
-    w2: 312,
-    body: "M20,106 L20,82 C20,74 26,68 40,66 L96,62 L128,36 C132,32 138,30 146,30 L334,30 C346,30 352,36 356,44 L368,64 C378,67 382,74 382,84 L382,106 Z",
-    glass: "M134,60 L154,36 L224,36 L224,60 Z M230,36 L290,36 L290,60 L230,60 Z M296,36 L334,36 C340,36 344,40 346,46 L352,60 L296,60 Z",
-    line: "M32,80 L372,80",
-    lamp: "M22,74 L38,72 L38,78 L22,78 Z",
-  },
-  mpv: {
-    w1: 92,
-    w2: 318,
-    body: "M18,106 L18,80 C18,72 24,66 36,64 L70,60 L118,30 C122,27 128,26 134,26 L360,26 C372,26 380,32 380,44 L382,106 Z",
-    glass: "M124,56 L140,32 L206,32 L206,56 Z M212,32 L284,32 L284,56 L212,56 Z M290,32 L360,32 C366,32 370,36 370,42 L370,56 L290,56 Z",
-    line: "M30,78 L372,78",
-    lamp: "M20,72 L36,70 L36,76 L20,76 Z",
-  },
-  van: {
-    w1: 90,
-    w2: 322,
-    body: "M16,106 L16,74 C16,66 22,60 32,58 L58,55 L92,20 C95,16 100,14 108,14 L372,14 C380,14 386,20 386,28 L388,106 Z",
-    glass: "M98,50 L114,22 L150,22 L150,50 Z M158,22 L212,22 L212,48 L158,48 Z M220,22 L274,22 L274,48 L220,48 Z M282,22 L336,22 L336,48 L282,48 Z",
-    line: "M28,74 L376,74",
-    lamp: "M18,68 L34,66 L34,72 L18,72 Z",
-  },
-  coach: {
-    w1: 84,
-    w2: 322,
-    body: "M12,106 L12,26 C12,18 18,12 28,12 L374,12 C384,12 390,18 390,28 L390,106 Z",
-    glass: "M24,24 L64,24 L64,62 L24,62 Z M74,24 L130,24 L130,56 L74,56 Z M138,24 L194,24 L194,56 L138,56 Z M202,24 L258,24 L258,56 L202,56 Z M266,24 L322,24 L322,56 L266,56 Z M330,24 L378,24 L378,56 L330,56 Z",
-    line: "M12,74 L390,74",
-    lamp: "M14,90 L30,90 L30,96 L14,96 Z",
-  },
-};
+const IMGS = "/services/www.ab.limo-services-images";
 
 export const SKETCH_SERVICES: SketchService[] = [
   {
-    id: "executive",
-    name: "Executive and Corporate Mobility",
-    v: V.first,
-    vehicleLabel: "First Class sedan",
-    photo: "chauffeur opening the rear door",
+    id: "chauffeur",
+    name: "Chauffeur and VIP",
+    heading: "01 Chauffeur and VIP ground transportation services",
+    intro: [
+      "Executive mobility requires meticulous operational preparation and discretion across every Gulf market. AB assigns dedicated chauffeurs to corporate leaders, diplomats and visiting VIPs across Riyadh, Jeddah, Dubai, Abu Dhabi and Doha. Our central operations team verifies route itineraries, terminal access passes and passenger preferences prior to departure.",
+      "Clients requiring a private driver or executive vehicle in Doha can book our dedicated qatar limousine service with 24/7 dispatch. Organisations seeking professional chauffeur and transportation services rely on our protocol trained chauffeurs to uphold the highest executive standards.",
+    ],
+    detail:
+      "Dedicated chauffeurs serve leadership teams, board members and visiting principals with discretion across major Gulf cities. Chauffeurs undergo rigorous protocol instruction and receive comprehensive itinerary briefings before opening the vehicle door. Hourly and full day bookings provide flexible mobility with luxury sedans and premium SUVs maintained to the highest standards.",
+    points: [
+      "Hourly and daily private hire",
+      "Protocol trained professional chauffeurs",
+      "First class executive luxury vehicles",
+    ],
     href: "/services/chauffeur-vip",
-    desc: "Dedicated chauffeurs for leadership teams, board members and visiting principals. Discreet, punctual and briefed on every detail before the door opens.",
-    points: ["Hourly and full day hire", "Protocol trained chauffeurs", "First Class and Business sedans"],
+    image: `${IMGS}/image2.jpg`,
+    imageAlt: "Executive black sedan parked outside a modern commercial tower in Riyadh",
+    vehicle: { src: "/cars/sedans/msc.png", label: "First Class Sedan" },
   },
   {
     id: "airport",
     name: "Airport Transfers",
-    v: V.business,
-    vehicleLabel: "Business sedan",
-    photo: "chauffeur with name board at arrivals",
+    heading: "02 Airport transfers and flight tracking",
+    intro: [
+      "Punctual airport transfers require continuous flight surveillance and dedicated kerbside coordination. Whether arriving on commercial flights or private aviation charters, passengers receive immediate assistance upon clearing customs. AB dispatchers track aircraft movements in real time to adapt vehicle arrival schedules to early landings or unexpected delays.",
+      "Arriving passengers entering Dubai International or Zayed International can reserve an airport chauffeur service with flight tracking and terminal meet and greet. Our premium airport transfer services remove the uncertainty of arrival delays across international airport terminals.",
+    ],
+    detail:
+      "Arriving travellers receive professional meet and greet service inside terminal arrival halls with live flight tracking included. Chauffeurs hold personalised name boards, manage heavy luggage and escort guests directly to an executive vehicle staged at the kerb. Punctual airport transfers provide seamless transit from major terminals to corporate offices or hotels across the Gulf.",
+    points: [
+      "Live flight tracking included",
+      "Arrivals hall meet and greet",
+      "Luggage assistance at kerbside",
+    ],
     href: "/services/airport-transfers",
-    desc: "Meet and greet in the arrivals hall, live flight tracking and a car waiting at the kerb, whatever time you land.",
-    points: ["Flight tracking included", "Arrivals hall meet and greet", "Luggage assistance"],
+    image: `${IMGS}/image3.jpg`,
+    imageAlt: "Professional chauffeur holding a greeting sign in an international airport arrivals hall",
+    vehicle: { src: "/cars/sedans/BMW.png", label: "Business Sedan" },
   },
   {
-    id: "fleet",
-    name: "Corporate Fleet and Workforce Mobility",
-    tabName: "Corporate Fleet and Workforce",
-    v: V.mpv,
-    vehicleLabel: "Premium MPV",
-    photo: "fleet lined up at a corporate campus",
+    id: "corporate",
+    name: "Corporate Transportation",
+    heading: "03 Corporate ground transportation services and fleet management",
+    intro: [
+      "Enterprises operating across Saudi Arabia, the UAE and Qatar require coordinated mobility programmes that streamline administrative workflows. AB delivers managed transport frameworks that replace fragmented local taxi receipts with unified service level agreements. Dedicated dispatch teams provide travel managers with complete visibility over daily employee and executive travel.",
+      "Companies requiring continuous regional travel support across Dubai and Abu Dhabi rely on our managed corporate transportation services UAE. Corporate travel managers can establish a unified corporate account with a single monthly invoice and detailed journey reporting.",
+    ],
+    detail:
+      "Managed fleet operations and employee mobility programmes serve multinational organisations that move personnel daily throughout Gulf commercial centres. Travel managers gain centralised operations, dedicated account management and transparent monthly billing with consolidated usage reporting. Long term contracts provide dedicated vehicles and trained drivers aligned with strict corporate travel policies.",
+    points: [
+      "Long term contracted corporate fleets",
+      "Staff shuttles and executive cars",
+      "Monthly consolidated usage reporting",
+    ],
     href: "/services/corporate-transportation",
-    desc: "Managed fleets and staff transport for companies that move people every day, with one account, one dispatch team and clear monthly reporting.",
-    points: ["Long term contracts", "Staff shuttles and pool cars", "Monthly usage reporting"],
+    image: `${IMGS}/image4.jpg`,
+    imageAlt: "Row of executive corporate sedans staged outside a modern office campus in Dubai",
+    vehicle: { src: "/cars/sedans/LEXUS.png", label: "Standard Sedan" },
   },
   {
     id: "events",
     name: "Event Transportation",
-    v: V.van,
-    vehicleLabel: "Executive van",
-    photo: "vehicles staged at a venue drop off",
+    heading: "04 Event transportation management and venue logistics",
+    intro: [
+      "Large scale summits, trade exhibitions and sports championships demand sophisticated ground fleet choreography. AB designs comprehensive transport master plans that manage delegate throughput between airports, primary hotels and exhibition centres. Dedicated on site coordinators liaise with venue security teams and protocol officials to regulate traffic flow.",
+      "When staging major industry summits in the Emirates, event organisers reserve our managed corporate event transportation to maintain strict passenger schedules. Deploying dedicated event transportation services supports smooth delegate movements during high volume regional conventions.",
+    ],
+    detail:
+      "Complete transport logistics for international congresses, government summits and major cultural festivals manage delegations of any scale. Operations specialists establish traffic circulation plans, staging zones and accreditation access to keep delegate transfers operating without disruption. On site dispatch coordinators oversee vehicle staging, guest boarding and route adjustments throughout the entire programme.",
+    points: [
+      "Comprehensive transport movement planning",
+      "On site dispatch coordinators",
+      "Venue access and staging management",
+    ],
     href: "/services/event-transportation",
-    desc: "Complete transport for conferences, sporting events and festivals, from a single VIP arrival to hundreds of vehicles over a multi week programme.",
-    points: ["Transport planning", "On site dispatch teams", "Accreditation and venue access"],
+    image: `${IMGS}/image5.jpg`,
+    imageAlt: "Fleet of VIP vehicles staged at a dedicated event venue drop off area in Abu Dhabi",
+    vehicle: { src: "/cars/vans/V_Class.png", label: "Premium MPV" },
   },
   {
     id: "groups",
-    name: "Group and Coach Charter",
-    v: V.coach,
-    vehicleLabel: "Coach",
-    photo: "coach boarding outside a hotel",
+    name: "Bus and Coach Hire",
+    tabName: "Bus and Coach Hire",
+    heading: "05 Bus and coach hire services for delegations",
+    intro: [
+      "Transporting substantial delegations, flight crews and conference attendees requires modern passenger coaches operated by licensed professional drivers. AB coordinates high volume group charters across Saudi Arabia, the UAE and Qatar with meticulous timetable planning. Every chartered vehicle undergoes regular safety checks to verify passenger comfort across urban and regional highways.",
+      "Organisations coordinating group movements across the UAE can arrange structured bus rental Dubai through our local operations office in Deira. Our comprehensive bus and coach hire services provide the capacity and operational oversight needed for complex delegation itineraries.",
+    ],
+    detail:
+      "Executive coaches and luxury passenger vans accommodate delegations, airline crews and event attendees travelling together across the region. Dedicated transport coordinators supervise passenger manifests, luggage loading and staging schedules to maintain synchronised departures. Modern vehicles offer spacious seating, climate control and ample luggage storage for comfortable group transit.",
+    points: [
+      "Executive vans and luxury coaches",
+      "Delegation and crew movements",
+      "Dedicated on site coordinators",
+    ],
     href: "/services/bus-coach-hire",
-    desc: "Coaches and executive vans for delegations, crews and guests travelling together, with a coordinator who keeps every group on schedule.",
-    points: ["Executive vans and coaches", "Delegation and crew moves", "Group coordinators"],
+    image: `${IMGS}/image6.jpg`,
+    imageAlt: "Executive passenger coach parked outside a luxury hotel entrance in Doha",
+    vehicle: { src: "/cars/buses/Mid_Size_Bus.png", label: "Executive Coach" },
   },
   {
     id: "tourism",
-    name: "Tourism and Leisure",
-    v: V.suv,
-    vehicleLabel: "Executive SUV",
-    photo: "SUV on a desert road at sunset",
+    name: "Tourism Transportation",
+    heading: "06 Tourism transportation and private itineraries",
+    intro: [
+      "Leisure travellers, cultural delegations and corporate guests seeking private touring require knowledgeable chauffeurs familiar with local geography and heritage sites. AB provides curated chauffeured transport across historic destinations and desert landscapes throughout Saudi Arabia, the UAE and Qatar. Central dispatch coordinates scheduled stops, private guides and luxury transfers between regional landmarks.",
+      "Private leisure itineraries require careful vehicle selection to handle diverse driving environments from coastal highways to desert terrain. Experienced private drivers navigate local points of interest while maintaining direct communication with regional dispatch supervisors.",
+    ],
+    detail:
+      "Private leisure journeys across the Gulf pair travellers with professional chauffeurs who possess comprehensive knowledge of regional routes and historic attractions. Custom itineraries connect travellers to remarkable destinations, from historic AlUla to desert reserves outside Abu Dhabi. Daily bookings and multi day charters accommodate hotel pickups, private sightseeing and cruise terminal transfers.",
+    points: [
+      "Single day and regional tours",
+      "Hotel and terminal pickups",
+      "Custom itineraries across the Gulf",
+    ],
     href: "/services/tourism-transportation",
-    desc: "Private touring across the Gulf with chauffeurs who know the routes, the history and the best time to arrive, from AlUla to the dunes outside Abu Dhabi.",
-    points: ["Day trips and multi day tours", "Hotel and cruise pickups", "Tour company partnerships"],
+    image: `${IMGS}/image7.jpg`,
+    imageAlt: "Luxury SUV on a paved highway through scenic desert landscape in Saudi Arabia",
+    vehicle: { src: "/cars/suvs/CADILAC.png", label: "Executive SUV" },
+  },
+  {
+    id: "religious",
+    name: "Religious Tourism (Umrah and Hajj)",
+    tabName: "Religious Tourism",
+    heading: "07 Religious tourism for Umrah and Hajj",
+    intro: [
+      "Pilgrims and official delegations travelling to the holy cities of Makkah and Madinah require organised, reliable ground transport solutions. AB facilitates comfortable transfers between King Abdulaziz International Airport in Jeddah, high speed rail terminals and major hotels. Experienced chauffeurs assist travellers throughout their pilgrimage itineraries with respect and operational precision.",
+      "Navigating seasonal traffic density during peak pilgrimage periods demands active route management and seasoned local drivers. Dispatch supervisors oversee vehicle positioning around terminal facilities to minimise waiting times for arriving pilgrim groups.",
+    ],
+    detail:
+      "Specialised pilgrimage transportation supports individuals, families and official delegations travelling for Umrah and Hajj in the Western Province. Professional chauffeurs provide punctual airport reception at Jeddah and Madinah, managing transfers to hotels and holy sites. Comfortable luxury vehicles and passenger vans allow pilgrims to focus on worship while logistics run smoothly.",
+    points: [
+      "Dedicated Western Province transfers",
+      "Meet and greet at Jeddah",
+      "Scheduled intercity hotel connections",
+    ],
+    href: "/services/religious-tourism",
+    image: `${IMGS}/image8.jpg`,
+    imageAlt: "Executive van staged near a modern hospitality terminal in the Western Province",
+    vehicle: { src: "/cars/vans/Sprinter.png", label: "Executive Van" },
+  },
+  {
+    id: "workforce",
+    name: "Workforce and Project Site Transport",
+    tabName: "Workforce Transport",
+    heading: "08 Workforce and project site transport",
+    intro: [
+      "Infrastructure projects, industrial complexes and remote operations across the Kingdom and the Emirates rely on punctual workforce transit. AB manages scheduled worker transport programmes that shuttle technical staff, engineers and project teams between accommodation camps and worksites. Operations managers configure reliable route networks that adapt to variable shift patterns.",
+      "Maintaining strict duty of care across remote project corridors requires regular fleet servicing and continuous telemetry monitoring. Centralised control rooms monitor vehicle speed, driver rest intervals and operating conditions across every scheduled shift.",
+    ],
+    detail:
+      "Scheduled staff shuttles and rugged project transport support construction sites, industrial plants and energy developments throughout the Gulf. Dedicated transport networks operate on fixed timetables to move operational teams reliably between housing facilities and remote work zones. Fleet management systems track vehicle locations in real time to verify punctuality and passenger safety.",
+    points: [
+      "Scheduled daily worker shuttles",
+      "Remote project site access",
+      "Centralised GPS fleet monitoring",
+    ],
+    href: "/services/workforce-mobility",
+    image: `${IMGS}/image9.jpg`,
+    imageAlt: "Passenger shuttles lined up at an industrial project site facility in Saudi Arabia",
+    vehicle: { src: "/cars/buses/Ankai-Coster.png", label: "Staff Shuttle Coach" },
+  },
+  {
+    id: "intercity",
+    name: "Intercity Transfers",
+    heading: "09 Intercity transfers between Gulf commercial centres",
+    intro: [
+      "Moving between regional business hubs such as Riyadh and Dammam, or Dubai and Abu Dhabi, often demands private highway transit. AB coordinates seamless point to point intercity travel that enables executives to work productively without regional airport queues. Professional chauffeurs navigate major motorways with modern, quiet vehicles equipped for mobile business tasks.",
+      "Business travellers moving between emirates frequently book an intercity chauffeur service UAE to continue working without transport disruptions. Private highway transfers offer direct departures, spacious seating and total schedule flexibility between key business destinations.",
+    ],
+    detail:
+      "Direct highway transfers connect major business districts across Saudi Arabia and the United Arab Emirates without terminal delays. Executives travel comfortably between commercial centres in premium sedans equipped with quiet cabins and mobile charging points. Fixed pricing and transparent invoicing allow corporate clients to schedule long distance travel with complete financial certainty.",
+    points: [
+      "City to city executive transfers",
+      "Direct highway route coordination",
+      "Fixed transparent corporate billing",
+    ],
+    href: "/services/intercity-transfers",
+    image: `${IMGS}/image10.jpg`,
+    imageAlt: "Executive sedan travelling on a wide intercity motorway between Dubai and Abu Dhabi",
+    vehicle: { src: "/cars/sedans/FAURD TAURUS.png", label: "Full-size Sedan" },
+  },
+];
+
+/** Hub page FAQ content (from the services hub document). */
+export const HUB_FAQS: Array<{ id: string; question: string; answer: string }> = [
+  {
+    id: "faq-cross-border",
+    question: "How does AB coordinate cross border ground transportation services in the Gulf?",
+    answer:
+      "AB operates directly across Saudi Arabia, all seven UAE emirates and Qatar through regional offices and central dispatch. Transfers into Bahrain, Kuwait and Oman proceed on request through vetted local partners. Central dispatchers in Riyadh supervise route plans, border documentation and passenger handovers to maintain continuous duty of care throughout every regional itinerary.",
+  },
+  {
+    id: "faq-duty-of-care",
+    question: "What duty of care standards apply to corporate account bookings?",
+    answer:
+      "Every journey booked under a corporate account adheres to rigorous safety and operational protocols across our fleet. Vehicles undergo routine mechanical inspections and carry live GPS tracking monitored continuously by dispatch supervisors. Chauffeurs receive background vetting, professional driving evaluations and protocol instruction before driving visiting executives, board members or government delegations.",
+  },
+  {
+    id: "faq-flight-tracking",
+    question: "How does flight tracking work for airport transfer services?",
+    answer:
+      "Our dispatch software connects directly to global flight tracking databases to follow aircraft progress in real time. Flight arrivals are monitored continuously from the Riyadh operations centre so that the private driver stages at the terminal before landing. Even if incoming flights encounter delays, the assigned chauffeur remains positioned in arrivals for a seamless meet and greet.",
+  },
+  {
+    id: "faq-event-scaling",
+    question: "Can event transportation services scale for multi venue summits?",
+    answer:
+      "Our event logistics coordinators design complete traffic flow models, designated staging areas and scheduled circuits for major conferences. On site dispatch teams communicate directly with venue managers, protocol officers and coach drivers to adapt to rolling agenda changes. Dispatch supervisors deploy supplementary vehicles from local staging hubs whenever delegate numbers shift during high volume sessions.",
+  },
+  {
+    id: "faq-coach-options",
+    question: "What vehicle options are available for bus and coach hire services?",
+    answer:
+      "Organisations can select executive minivans, medium sized coaches and full sized luxury buses configured for corporate comfort. Every vehicle features climate control, pristine interiors, luggage compartments and standard safety systems. Groups benefit from designated route planning and dedicated coordinators who oversee passenger manifests and boarding queues at hotels and convention halls.",
+  },
+  {
+    id: "faq-billing",
+    question: "How are billing and monthly invoice processes managed across countries?",
+    answer:
+      "Corporate clients receive consolidated monthly billing covering all journeys across Saudi Arabia, the UAE and Qatar under a single corporate account. Itemised statements detail date, passenger name, pickup point, destination and vehicle category with transparent regional currency breakdowns. Finance teams eliminate separate supplier invoices and cross border payment complexities through our central corporate billing structure.",
   },
 ];

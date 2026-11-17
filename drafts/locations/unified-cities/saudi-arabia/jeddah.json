@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/jeddah",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "jeddah",
+  "path": "/locations/saudi-arabia/jeddah",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for jeddah (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.445Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309996918-9b2fmy3lr",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN JEDDAH",
+          "title": "Jeddah",
+          "description": "Gateway to Makkah and commercial capital of the Red Sea coast. AB delivers premium chauffeur service from King Abdulaziz International Airport to Al-Andalus corporate offices, the Corniche, and luxury coastal resorts.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Abdulaziz International (JED)",
+          "dropoffDefault": "Jeddah Corniche",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996918-vgpijt2oc",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE JEDDAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996918-vgvutl3z0",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Jeddah and beyond"
+        },
+        "items": [
+          {
+            "id": "jed-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "JED to Jeddah Corniche",
+            "titleAr": "من مطار الملك عبدالعزيز إلى كورنيش جدة",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "King Abdulaziz International Airport (JED)",
+            "dropoff": "Jeddah Corniche"
+          },
+          {
+            "id": "jed-balad",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "JED to Al Balad Historic District",
+            "titleAr": "من مطار الملك عبدالعزيز إلى جدة التاريخية (البلد)",
+            "price": "From SAR 290",
+            "priceAr": "ابتداءً من 290 ر.س",
+            "pickup": "King Abdulaziz International Airport (JED)",
+            "dropoff": "Al Balad, Jeddah"
+          },
+          {
+            "id": "jed-makkah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jeddah to Makkah",
+            "titleAr": "من جدة إلى مكة المكرمة",
+            "price": "From SAR 550",
+            "priceAr": "ابتداءً من 550 ر.س",
+            "pickup": "Jeddah",
+            "dropoff": "The Holy Mosque, Makkah"
+          },
+          {
+            "id": "jed-kaec",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jeddah to KAEC",
+            "titleAr": "من جدة إلى مدينة الملك عبدالله الاقتصادية",
+            "price": "From SAR 600",
+            "priceAr": "ابتداءً من 600 ر.س",
+            "pickup": "Jeddah",
+            "dropoff": "King Abdullah Economic City"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996918-1bjzbia3x",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN JEDDAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996918-i3efmzhab",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jeddah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309996918-9b2fmy3lr",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN JEDDAH",
+          "title": "Jeddah",
+          "description": "Gateway to Makkah and commercial capital of the Red Sea coast. AB delivers premium chauffeur service from King Abdulaziz International Airport to Al-Andalus corporate offices, the Corniche, and luxury coastal resorts.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Abdulaziz International (JED)",
+          "dropoffDefault": "Jeddah Corniche",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996918-vgpijt2oc",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE JEDDAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996918-vgvutl3z0",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Jeddah and beyond"
+        },
+        "items": [
+          {
+            "id": "jed-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "JED to Jeddah Corniche",
+            "titleAr": "من مطار الملك عبدالعزيز إلى كورنيش جدة",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "King Abdulaziz International Airport (JED)",
+            "dropoff": "Jeddah Corniche"
+          },
+          {
+            "id": "jed-balad",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "JED to Al Balad Historic District",
+            "titleAr": "من مطار الملك عبدالعزيز إلى جدة التاريخية (البلد)",
+            "price": "From SAR 290",
+            "priceAr": "ابتداءً من 290 ر.س",
+            "pickup": "King Abdulaziz International Airport (JED)",
+            "dropoff": "Al Balad, Jeddah"
+          },
+          {
+            "id": "jed-makkah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jeddah to Makkah",
+            "titleAr": "من جدة إلى مكة المكرمة",
+            "price": "From SAR 550",
+            "priceAr": "ابتداءً من 550 ر.س",
+            "pickup": "Jeddah",
+            "dropoff": "The Holy Mosque, Makkah"
+          },
+          {
+            "id": "jed-kaec",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jeddah to KAEC",
+            "titleAr": "من جدة إلى مدينة الملك عبدالله الاقتصادية",
+            "price": "From SAR 600",
+            "priceAr": "ابتداءً من 600 ر.س",
+            "pickup": "Jeddah",
+            "dropoff": "King Abdullah Economic City"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996918-1bjzbia3x",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN JEDDAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996918-i3efmzhab",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jeddah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309996918-vu71wsy7k",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في جدة",
+          "title": "جدة",
+          "description": "بوابة مكة المكرمة وعاصمة ساحل البحر الأحمر التجارية. تقدم إيه بي ليمو خدمة سائق خاص متميزة من مطار الملك عبد العزيز الدولي إلى مقرات الأعمال في الأندلس والكورنيش والمنتجعات الساحلية الفاخرة.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "King Abdulaziz International (JED)",
+          "dropoffDefault": "Jeddah Corniche",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jeddah-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996918-tnovt8kz7",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول جدة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996918-97gjzrddr",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء جدة وخارجها"
+        },
+        "items": [
+          {
+            "id": "jed-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "JED to Jeddah Corniche",
+            "titleAr": "من مطار الملك عبدالعزيز إلى كورنيش جدة",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "King Abdulaziz International Airport (JED)",
+            "dropoff": "Jeddah Corniche"
+          },
+          {
+            "id": "jed-balad",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "JED to Al Balad Historic District",
+            "titleAr": "من مطار الملك عبدالعزيز إلى جدة التاريخية (البلد)",
+            "price": "From SAR 290",
+            "priceAr": "ابتداءً من 290 ر.س",
+            "pickup": "King Abdulaziz International Airport (JED)",
+            "dropoff": "Al Balad, Jeddah"
+          },
+          {
+            "id": "jed-makkah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jeddah to Makkah",
+            "titleAr": "من جدة إلى مكة المكرمة",
+            "price": "From SAR 550",
+            "priceAr": "ابتداءً من 550 ر.س",
+            "pickup": "Jeddah",
+            "dropoff": "The Holy Mosque, Makkah"
+          },
+          {
+            "id": "jed-kaec",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jeddah to KAEC",
+            "titleAr": "من جدة إلى مدينة الملك عبدالله الاقتصادية",
+            "price": "From SAR 600",
+            "priceAr": "ابتداءً من 600 ر.س",
+            "pickup": "Jeddah",
+            "dropoff": "King Abdullah Economic City"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996918-5ibgtueha",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في جدة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996918-v3l39yui9",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في جدة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

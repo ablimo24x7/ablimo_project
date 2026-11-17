@@ -39,7 +39,6 @@
     ".next-build/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "recovered-project"
+    "node_modules"
   ]
 }

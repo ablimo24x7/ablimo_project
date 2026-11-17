@@ -1,0 +1,777 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/hail",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "hail",
+  "path": "/locations/saudi-arabia/hail",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 10-section layout for hail (saudi-arabia)",
+  "exportedAt": "2026-11-10T11:52:18.051Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538051-r0x4mjfrt",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "{city}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1794311538051-ltwmj1v7z",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-pt3ggya7k",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-qnl9dh02c",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Chauffeur Service in Hail",
+          "description": "Gateway to northern Saudi Arabia's dramatic desert terrain and UNESCO heritage rock art, Hail combines rich history with visionary growth. AB provides premium chauffeur service from Hail International Airport, city travel, and intercity transfers across the Kingdom.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop"
+        }
+      },
+      {
+        "id": "sec-1794311538051-f84eaa5r4",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Getting Around in {city}",
+          "description": "{city} is a dynamic and culturally rich destination with plenty to experience. AB offers an ideal chauffeur service that gets you around in absolute comfort and style.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/gettingAround.png"
+        }
+      },
+      {
+        "id": "sec-1794311538051-5qmzueaib",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Chauffeur Service in {city}",
+          "description": "Experience a premier chauffeur service in {city}. Hire by the hour to explore local attractions, attend meetings, or enjoy your itinerary seamlessly.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/taxi Alternative.png"
+        }
+      },
+      {
+        "id": "sec-1794311538051-a6axg2hbu",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "{city} Airport Transfer",
+          "description": "Enjoy an efficient and punctual airport transfer service in {city}. Our professional chauffeurs track your flight status and provide a direct ride to your destination.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/airportTransfer.png"
+        }
+      },
+      {
+        "id": "sec-1794311538051-ok9lio5vc",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-yi5lic2sb",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Inter City Routes in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-k7xtm5ww5",
+        "type": "faq",
+        "variant": "default",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538051-r0x4mjfrt",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "{city}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1794311538051-ltwmj1v7z",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-pt3ggya7k",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-qnl9dh02c",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Chauffeur Service in Hail",
+          "description": "Gateway to northern Saudi Arabia's dramatic desert terrain and UNESCO heritage rock art, Hail combines rich history with visionary growth. AB provides premium chauffeur service from Hail International Airport, city travel, and intercity transfers across the Kingdom.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop"
+        }
+      },
+      {
+        "id": "sec-1794311538051-f84eaa5r4",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Getting Around in {city}",
+          "description": "{city} is a dynamic and culturally rich destination with plenty to experience. AB offers an ideal chauffeur service that gets you around in absolute comfort and style.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/gettingAround.png"
+        }
+      },
+      {
+        "id": "sec-1794311538051-5qmzueaib",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Chauffeur Service in {city}",
+          "description": "Experience a premier chauffeur service in {city}. Hire by the hour to explore local attractions, attend meetings, or enjoy your itinerary seamlessly.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/taxi Alternative.png"
+        }
+      },
+      {
+        "id": "sec-1794311538051-a6axg2hbu",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "{city} Airport Transfer",
+          "description": "Enjoy an efficient and punctual airport transfer service in {city}. Our professional chauffeurs track your flight status and provide a direct ride to your destination.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/airportTransfer.png"
+        }
+      },
+      {
+        "id": "sec-1794311538051-ok9lio5vc",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-yi5lic2sb",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Inter City Routes in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-k7xtm5ww5",
+        "type": "faq",
+        "variant": "default",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538051-k25x762zr",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "{city}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1794311538051-t2ytqsgrc",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-cn8ygx77d",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-s3gujyxww",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "عن AB في {location}",
+          "heading": "Chauffeur Service in Hail",
+          "description": "Gateway to northern Saudi Arabia's dramatic desert terrain and UNESCO heritage rock art, Hail combines rich history with visionary growth. AB provides premium chauffeur service from Hail International Airport, city travel, and intercity transfers across the Kingdom.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop"
+        }
+      },
+      {
+        "id": "sec-1794311538051-8dazk0awy",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Getting Around in {city}",
+          "description": "{city} is a dynamic and culturally rich destination with plenty to experience. AB offers an ideal chauffeur service that gets you around in absolute comfort and style.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/gettingAround.png"
+        }
+      },
+      {
+        "id": "sec-1794311538051-miqyrm60v",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Chauffeur Service in {city}",
+          "description": "Experience a premier chauffeur service in {city}. Hire by the hour to explore local attractions, attend meetings, or enjoy your itinerary seamlessly.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/taxi Alternative.png"
+        }
+      },
+      {
+        "id": "sec-1794311538051-83m66u743",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "{city} Airport Transfer",
+          "description": "Enjoy an efficient and punctual airport transfer service in {city}. Our professional chauffeurs track your flight status and provide a direct ride to your destination.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "/airportTransfer.png"
+        }
+      },
+      {
+        "id": "sec-1794311538051-rqv5qql5b",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-3epykanf8",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "المسارات بين المدن في {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538051-sc5ae6plp",
+        "type": "faq",
+        "variant": "default",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "الأسئلة الشائعة",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/neom",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "neom",
+  "path": "/locations/saudi-arabia/neom",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for neom (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.449Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309999160-di892mkr7",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN NEOM",
+          "title": "NEOM",
+          "description": "The city of tomorrow taking shape along the Red Sea. AB delivers discreet, executive chauffeur service across NEOM Bay, Sindalah Island, Trojena, and Oxagon for corporate leadership, dignitaries, and global innovators.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "NEOM Bay Airport (NUM)",
+          "dropoffDefault": "NEOM Headquarters",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-neom-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999160-ro871hi7g",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE NEOM FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999160-zlu7rrhpk",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across NEOM and beyond"
+        },
+        "items": [
+          {
+            "id": "num-hq",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "NUM to NEOM Headquarters",
+            "titleAr": "من مطار خليج نيوم إلى المقر الرئيسي لنيوم",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "NEOM Bay Airport (NUM)",
+            "dropoff": "NEOM HQ"
+          },
+          {
+            "id": "num-sindalah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "NUM to Sindalah Island Marina",
+            "titleAr": "من مطار خليج نيوم إلى مارينا جزيرة سندالة",
+            "price": "From SAR 450",
+            "priceAr": "ابتداءً من 450 ر.س",
+            "pickup": "NEOM Bay Airport (NUM)",
+            "dropoff": "Sindalah Island"
+          },
+          {
+            "id": "neom-sharma",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "NEOM to Sharma Coast",
+            "titleAr": "من نيوم إلى ساحل شرما",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "NEOM",
+            "dropoff": "Sharma"
+          },
+          {
+            "id": "neom-tabuk",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "NEOM to Tabuk",
+            "titleAr": "من نيوم إلى تبوك",
+            "price": "From SAR 650",
+            "priceAr": "ابتداءً من 650 ر.س",
+            "pickup": "NEOM",
+            "dropoff": "Tabuk"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999160-4mdu10nes",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN NEOM",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999160-ke8z4slii",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in NEOM.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309999160-di892mkr7",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN NEOM",
+          "title": "NEOM",
+          "description": "The city of tomorrow taking shape along the Red Sea. AB delivers discreet, executive chauffeur service across NEOM Bay, Sindalah Island, Trojena, and Oxagon for corporate leadership, dignitaries, and global innovators.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "NEOM Bay Airport (NUM)",
+          "dropoffDefault": "NEOM Headquarters",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-neom-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999160-ro871hi7g",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE NEOM FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999160-zlu7rrhpk",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across NEOM and beyond"
+        },
+        "items": [
+          {
+            "id": "num-hq",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "NUM to NEOM Headquarters",
+            "titleAr": "من مطار خليج نيوم إلى المقر الرئيسي لنيوم",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "NEOM Bay Airport (NUM)",
+            "dropoff": "NEOM HQ"
+          },
+          {
+            "id": "num-sindalah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "NUM to Sindalah Island Marina",
+            "titleAr": "من مطار خليج نيوم إلى مارينا جزيرة سندالة",
+            "price": "From SAR 450",
+            "priceAr": "ابتداءً من 450 ر.س",
+            "pickup": "NEOM Bay Airport (NUM)",
+            "dropoff": "Sindalah Island"
+          },
+          {
+            "id": "neom-sharma",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "NEOM to Sharma Coast",
+            "titleAr": "من نيوم إلى ساحل شرما",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "NEOM",
+            "dropoff": "Sharma"
+          },
+          {
+            "id": "neom-tabuk",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "NEOM to Tabuk",
+            "titleAr": "من نيوم إلى تبوك",
+            "price": "From SAR 650",
+            "priceAr": "ابتداءً من 650 ر.س",
+            "pickup": "NEOM",
+            "dropoff": "Tabuk"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999160-4mdu10nes",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN NEOM",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999160-ke8z4slii",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in NEOM.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309999160-f5ugukuix",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في نيوم",
+          "title": "نيوم",
+          "description": "مدينة المستقبل التي ترسم معالم الغد على ساحل البحر الأحمر. تقدم إيه بي ليمو خدمات نقل تنفيذي رفيعة المستوى تشمل خليج نيوم وجزيرة سندالة وتروجينا وأوكساجون للقيادات التنفيذية وكبار الشخصيات.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "NEOM Bay Airport (NUM)",
+          "dropoffDefault": "NEOM Headquarters",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-neom-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999160-rrbjdux6z",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول نيوم",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999160-mg7mfa0mw",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء نيوم وخارجها"
+        },
+        "items": [
+          {
+            "id": "num-hq",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "NUM to NEOM Headquarters",
+            "titleAr": "من مطار خليج نيوم إلى المقر الرئيسي لنيوم",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "NEOM Bay Airport (NUM)",
+            "dropoff": "NEOM HQ"
+          },
+          {
+            "id": "num-sindalah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "NUM to Sindalah Island Marina",
+            "titleAr": "من مطار خليج نيوم إلى مارينا جزيرة سندالة",
+            "price": "From SAR 450",
+            "priceAr": "ابتداءً من 450 ر.س",
+            "pickup": "NEOM Bay Airport (NUM)",
+            "dropoff": "Sindalah Island"
+          },
+          {
+            "id": "neom-sharma",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "NEOM to Sharma Coast",
+            "titleAr": "من نيوم إلى ساحل شرما",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "NEOM",
+            "dropoff": "Sharma"
+          },
+          {
+            "id": "neom-tabuk",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "NEOM to Tabuk",
+            "titleAr": "من نيوم إلى تبوك",
+            "price": "From SAR 650",
+            "priceAr": "ابتداءً من 650 ر.س",
+            "pickup": "NEOM",
+            "dropoff": "Tabuk"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999160-yv3nr3x8p",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في نيوم",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999160-hf0xk1of2",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في نيوم.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

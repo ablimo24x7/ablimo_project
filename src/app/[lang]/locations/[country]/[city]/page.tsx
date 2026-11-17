@@ -7,6 +7,7 @@ import CityDetailClient from "../../_components/CityDetailClient";
 import { generateSeoMetadata } from "@/lib/seo";
 import { CityJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
 import { getCityTemplate } from "@/lib/location-template";
+import { stripConfirmText } from "@/lib/strip-confirm-placeholders";
 import type { SectionRenderContext } from "@/components/section-library/types";
 
 export const revalidate = 0;
@@ -21,9 +22,15 @@ export async function generateMetadata({
   const res = await getCityForRequest(countryParam, cityParam);
   if (!res) return {};
 
-  const cityName = lang === "ar" && res.city.nameAr ? res.city.nameAr : res.city.name;
-  const countryName = lang === "ar" && res.country.nameAr ? res.country.nameAr : res.country.name;
-  const description = lang === "ar" && res.city.descriptionAr ? res.city.descriptionAr : res.city.description;
+  const cityName = stripConfirmText(
+    lang === "ar" && res.city.nameAr ? res.city.nameAr : res.city.name
+  );
+  const countryName = stripConfirmText(
+    lang === "ar" && res.country.nameAr ? res.country.nameAr : res.country.name
+  );
+  const description = stripConfirmText(
+    lang === "ar" && res.city.descriptionAr ? res.city.descriptionAr : res.city.description || ""
+  );
 
   return generateSeoMetadata({
     title: `Premium Chauffeur Service in ${cityName}, ${countryName} | AB`,
@@ -69,9 +76,15 @@ export default async function CityPage({
         }
     }
 
-    const cityName = isArabic && res.city.nameAr ? res.city.nameAr : res.city.name;
-    const countryName = isArabic && res.country.nameAr ? res.country.nameAr : res.country.name;
-    const cityDescription = res.city.description || `AB provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`;
+    const cityName = stripConfirmText(
+        isArabic && res.city.nameAr ? res.city.nameAr : res.city.name
+    );
+    const countryName = stripConfirmText(
+        isArabic && res.country.nameAr ? res.country.nameAr : res.country.name
+    );
+    const cityDescription =
+        stripConfirmText(res.city.description || "") ||
+        `AB provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`;
 
     const template = await getCityTemplate(res.country.slug, res.city.slug, lang);
     const context: SectionRenderContext = {
@@ -103,8 +116,8 @@ export default async function CityPage({
         {res.city.faqs && res.city.faqs.length > 0 && (
           <FAQJsonLd
             items={res.city.faqs.map((faq: { q: string; a: string }) => ({
-              question: faq.q,
-              answer: faq.a,
+              question: stripConfirmText(faq.q),
+              answer: stripConfirmText(faq.a),
             }))}
           />
         )}

@@ -180,6 +180,8 @@ export interface MediaContentActions {
 export interface MediaContentSettings {
   mediaPosition?: "left" | "right";
   containerWidth?: "default" | "narrow" | "wide";
+  featureLayout?: "stacked" | "horizontal";
+  equalColumns?: boolean;
 }
 
 export interface MediaContentAppearance extends SectionAppearanceBase {
@@ -222,7 +224,8 @@ export interface TextMediaGridContent {
 }
 
 export interface TextMediaGridSettings {
-  mediaPosition?: "left" | "right";
+  mediaPosition?: "left" | "right" | "bottom";
+  mediaLayout?: "mosaic" | "row" | "single";
 }
 
 export interface TextMediaGridAppearance extends SectionAppearanceBase {

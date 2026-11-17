@@ -90,11 +90,98 @@ export const COUNTRIES: Country[] = [
       city("sharjah", "Sharjah", [
         airport("sharjah-international-airport", "Sharjah International Airport", "SHJ", "مطار الشارقة الدولي"),
       ], "الشارقة"),
-      city("ajman", "Ajman", [], "عجمان"),
-      city("ras-al-khaimah", "Ras Al Khaimah", [
-        airport("ras-al-khaimah-international-airport", "Ras Al Khaimah International Airport", "RKT", "مطار رأس الخيمة الدولي"),
-      ], "رأس الخيمة"),
-      city("al-ain", "Al Ain", [], "العين"),
+      city(
+        "ajman",
+        "Ajman",
+        [],
+        "عجمان",
+        "The coastal gem of the northern emirates, connecting peaceful seaside tranquility with swift, seamless executive travel into Dubai, Sharjah, and beyond.",
+        [],
+        [
+          {
+            q: "How do I book a chauffeur service in Ajman?",
+            a: "You can book through our online platform, email hello@ab.limo, or call our 24/7 dispatch desk on +971 50 918 0556. We recommend booking at least four hours in advance.",
+          },
+          {
+            q: "Which airports do you serve from Ajman?",
+            a: "We provide round-the-clock private transfers to Sharjah International Airport (SHJ, 25-35 mins), Dubai International Airport (DXB, 30-45 mins), Al Maktoum International (DWC, 65-80 mins), and Zayed International (AUH, 100-120 mins).",
+          },
+          {
+            q: "Are your chauffeurs English-speaking and professionally licensed?",
+            a: "Yes. Every AB chauffeur is professionally licensed, English-fluent, background-checked, and trained to international corporate hospitality standards.",
+          },
+          {
+            q: "Can I book a vehicle on an hourly or daily as-directed basis?",
+            a: "Yes. Our hourly and daily charter services provide complete schedule flexibility for business meetings, diplomatic agendas, shopping trips, or leisure itineraries.",
+          },
+          {
+            q: "What is included in the fare?",
+            a: "All fares are all-inclusive: vehicle, fuel, professional chauffeur, complimentary flight tracking, meet-and-greet service, 60 minutes of complimentary airport waiting time, bottled water, high-speed Wi-Fi, and all road tolls (Salik).",
+          },
+        ]
+      ),
+      city(
+        "ras-al-khaimah",
+        "Ras Al Khaimah",
+        [
+          airport("ras-al-khaimah-international-airport", "Ras Al Khaimah International Airport", "RKT", "مطار رأس الخيمة الدولي"),
+        ],
+        "رأس الخيمة",
+        "The northernmost emirate known for its dramatic mountain sceneries, luxury beachfront resorts, and expanding commercial free zones.",
+        ["rak"],
+        [
+          {
+            q: "How do I book a chauffeur service in Ras Al Khaimah?",
+            a: "You can book through our online platform, email hello@ab.limo, or call our 24/7 dispatch desk on +971 50 918 0556. We recommend booking at least four hours in advance.",
+          },
+          {
+            q: "Which airports do you serve from Ras Al Khaimah?",
+            a: "We provide round-the-clock private transfers to Ras Al Khaimah International Airport (RKT), Sharjah International Airport (SHJ), and Dubai International Airport (DXB).",
+          },
+          {
+            q: "Are your chauffeurs English-speaking and professionally licensed?",
+            a: "Yes. Every AB chauffeur is professionally licensed, English-fluent, background-checked, and trained to international corporate hospitality standards.",
+          },
+          {
+            q: "Can I book a vehicle on an hourly or daily as-directed basis?",
+            a: "Yes. Our hourly and daily charter services provide complete schedule flexibility for business meetings, diplomatic agendas, resort excursions, or leisure itineraries.",
+          },
+          {
+            q: "What is included in the fare?",
+            a: "All fares are all-inclusive: vehicle, fuel, professional chauffeur, complimentary flight tracking, meet-and-greet service, 60 minutes of complimentary airport waiting time, bottled water, high-speed Wi-Fi, and all road tolls.",
+          },
+        ]
+      ),
+      city(
+        "al-ain",
+        "Al Ain",
+        [],
+        "العين",
+        "The Garden City of the UAE, rich in cultural heritage, palm oases, and university institutions, with executive connections across Abu Dhabi and Dubai.",
+        [],
+        [
+          {
+            q: "How do I book a chauffeur service in Al Ain?",
+            a: "You can book through our online platform, email hello@ab.limo, or call our 24/7 dispatch desk on +971 50 918 0556. We recommend booking at least four hours in advance.",
+          },
+          {
+            q: "Which airports do you serve from Al Ain?",
+            a: "We provide round-the-clock private transfers to Zayed International Airport (AUH, Abu Dhabi), Dubai International Airport (DXB), and Sharjah International (SHJ).",
+          },
+          {
+            q: "Are your chauffeurs English-speaking and professionally licensed?",
+            a: "Yes. Every AB chauffeur is professionally licensed, English-fluent, background-checked, and trained to international corporate hospitality standards.",
+          },
+          {
+            q: "Can I book a vehicle on an hourly or daily as-directed basis?",
+            a: "Yes. Our hourly and daily charter services provide complete schedule flexibility for business meetings, academic conferences, family visits, or leisure itineraries.",
+          },
+          {
+            q: "What is included in the fare?",
+            a: "All fares are all-inclusive: vehicle, fuel, professional chauffeur, complimentary flight tracking, meet-and-greet service, 60 minutes of complimentary airport waiting time, bottled water, high-speed Wi-Fi, and all road tolls.",
+          },
+        ]
+      ),
       city(
         "fujairah",
         "Fujairah",
@@ -283,12 +370,128 @@ export const COUNTRIES: Country[] = [
     name: "Qatar",
     nameAr: "قطر",
     cities: [
-      city("doha", "Doha", [
-        airport("hamad-international-airport", "Hamad International Airport", "DOH", "مطار حمد الدولي"),
-      ], "الدوحة"),
-      city("al-khor", "Al Khor", [], "الخور"),
-      city("lusail", "Lusail", [], "لوسيل"),
-      city("al-wakrah", "Al Wakrah", [], "الوكرة"),
+      city(
+        "doha",
+        "Doha",
+        [
+          airport("hamad-international-airport", "Hamad International Airport", "DOH", "مطار حمد الدولي"),
+        ],
+        "الدوحة",
+        "Qatar's dynamic capital and global financial centre, home to world-class museums, luxury towers in West Bay, and Hamad International Airport.",
+        [],
+        [
+          {
+            q: "How do I book a chauffeur service in Doha?",
+            a: "You can book through our online platform, email hello@ab.limo, or call our 24/7 dispatch desk on +971 50 918 0556. We recommend booking at least four hours in advance.",
+          },
+          {
+            q: "Which airports do you serve from Doha?",
+            a: "We provide round-the-clock private transfers to Hamad International Airport (DOH) and Doha International Airport (DIA) with meet-and-greet service.",
+          },
+          {
+            q: "Are your chauffeurs English-speaking and professionally licensed?",
+            a: "Yes. Every AB chauffeur is professionally licensed, English-fluent, background-checked, and trained to international corporate hospitality standards.",
+          },
+          {
+            q: "Can I book a vehicle on an hourly or daily as-directed basis?",
+            a: "Yes. Our hourly and daily charter services provide complete schedule flexibility for business meetings, government summits, shopping excursions, or private itineraries.",
+          },
+          {
+            q: "What is included in the fare?",
+            a: "All fares are all-inclusive: vehicle, fuel, professional chauffeur, complimentary flight tracking, meet-and-greet service, 60 minutes of complimentary airport waiting time, bottled water, and high-speed Wi-Fi.",
+          },
+        ]
+      ),
+      city(
+        "al-khor",
+        "Al Khor",
+        [],
+        "الخور",
+        "A historic coastal city north of Doha, known for its tranquil harbour, mangrove reserves at Purple Island, and proximity to Ras Laffan industrial city.",
+        [],
+        [
+          {
+            q: "How do I book a chauffeur service in Al Khor?",
+            a: "You can book through our online platform, email hello@ab.limo, or call our 24/7 dispatch desk on +971 50 918 0556. We recommend booking at least four hours in advance.",
+          },
+          {
+            q: "Which airports do you serve from Al Khor?",
+            a: "We provide round-the-clock private transfers to Hamad International Airport (DOH) with professional flight tracking and meet-and-greet service.",
+          },
+          {
+            q: "Are your chauffeurs English-speaking and professionally licensed?",
+            a: "Yes. Every AB chauffeur is professionally licensed, English-fluent, background-checked, and trained to international corporate hospitality standards.",
+          },
+          {
+            q: "Can I book a vehicle on an hourly or daily as-directed basis?",
+            a: "Yes. Our hourly and daily charter services provide complete schedule flexibility for energy sector visits, corporate commutes, or leisure itineraries.",
+          },
+          {
+            q: "What is included in the fare?",
+            a: "All fares are all-inclusive: vehicle, fuel, professional chauffeur, complimentary flight tracking, meet-and-greet service, 60 minutes of complimentary airport waiting time, bottled water, and high-speed Wi-Fi.",
+          },
+        ]
+      ),
+      city(
+        "lusail",
+        "Lusail",
+        [],
+        "لوسيل",
+        "Qatar's futuristic city of the future, featuring sustainable smart infrastructure, Lusail Marina, luxury hospitality towers, and Lusail Stadium.",
+        [],
+        [
+          {
+            q: "How do I book a chauffeur service in Lusail?",
+            a: "You can book through our online platform, email hello@ab.limo, or call our 24/7 dispatch desk on +971 50 918 0556. We recommend booking at least four hours in advance.",
+          },
+          {
+            q: "Which airports do you serve from Lusail?",
+            a: "We provide round-the-clock private transfers to Hamad International Airport (DOH) with meet-and-greet service and complimentary flight tracking.",
+          },
+          {
+            q: "Are your chauffeurs English-speaking and professionally licensed?",
+            a: "Yes. Every AB chauffeur is professionally licensed, English-fluent, background-checked, and trained to international corporate hospitality standards.",
+          },
+          {
+            q: "Can I book a vehicle on an hourly or daily as-directed basis?",
+            a: "Yes. Our hourly and daily charter services provide complete schedule flexibility for executive meetings, stadium events, dining, or leisure itineraries.",
+          },
+          {
+            q: "What is included in the fare?",
+            a: "All fares are all-inclusive: vehicle, fuel, professional chauffeur, complimentary flight tracking, meet-and-greet service, 60 minutes of complimentary airport waiting time, bottled water, and high-speed Wi-Fi.",
+          },
+        ]
+      ),
+      city(
+        "al-wakrah",
+        "Al Wakrah",
+        [],
+        "الوكرة",
+        "A vibrant coastal city south of Doha known for Souq Al Wakrah, historic seaside promenades, and Al Janoub Stadium.",
+        [],
+        [
+          {
+            q: "How do I book a chauffeur service in Al Wakrah?",
+            a: "You can book through our online platform, email hello@ab.limo, or call our 24/7 dispatch desk on +971 50 918 0556. We recommend booking at least four hours in advance.",
+          },
+          {
+            q: "Which airports do you serve from Al Wakrah?",
+            a: "We provide round-the-clock private transfers to Hamad International Airport (DOH), located just 15 minutes north, with flight tracking and meet-and-greet service.",
+          },
+          {
+            q: "Are your chauffeurs English-speaking and professionally licensed?",
+            a: "Yes. Every AB chauffeur is professionally licensed, English-fluent, background-checked, and trained to international corporate hospitality standards.",
+          },
+          {
+            q: "Can I book a vehicle on an hourly or daily as-directed basis?",
+            a: "Yes. Our hourly and daily charter services provide complete schedule flexibility for business meetings, port operations, or coastal dining excursions.",
+          },
+          {
+            q: "What is included in the fare?",
+            a: "All fares are all-inclusive: vehicle, fuel, professional chauffeur, complimentary flight tracking, meet-and-greet service, 60 minutes of complimentary airport waiting time, bottled water, and high-speed Wi-Fi.",
+          },
+        ]
+      ),
     ],
   },
   {
@@ -354,6 +557,8 @@ export const COUNTRIES: Country[] = [
 
 const countryAliases: Record<string, string> = {
   "united-arab-emirates": "uae",
+  saudi: "saudi-arabia",
+  ksa: "saudi-arabia",
 };
 
 const cityAliases: Record<string, string> = {
@@ -369,7 +574,8 @@ const cityAliases: Record<string, string> = {
   uaq: "umm-al-quwain",
 };
 
-export function resolveCountry(input: string): Country | undefined {
+export function resolveCountry(input: string | null | undefined): Country | undefined {
+  if (typeof input !== "string") return undefined;
   const key = input.toLowerCase();
   const slug = countryAliases[key] ?? key;
   return COUNTRIES.find((c) => c.slug === slug || c.code === slug);

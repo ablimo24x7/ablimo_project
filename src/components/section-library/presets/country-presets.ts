@@ -13,13 +13,14 @@ const COUNTRY_HERO_IMAGES: Record<string, string> = {
   qatar: "/locations/www.ab.limo-locations-qatar-images/image1.jpg",
   "saudi-arabia":
     "/locations/www.ab.limo-locations-saudi-arabia-images/image1.jpg",
-  uae: "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  uae: "/locations/www.ab.limo-locations-uae-images/image1.jpg",
+  "united-arab-emirates": "/locations/www.ab.limo-locations-uae-images/image1.jpg",
 };
 
 /**
- * Country page template — builds the rich client template for the 5
- * client-specified countries (Saudi Arabia, Bahrain, Kuwait, Oman, Qatar)
- * and falls back to the standard country layout for others (e.g. UAE).
+ * Country page template — builds the rich client template for client-specified
+ * countries (Saudi Arabia, Bahrain, Kuwait, Oman, Qatar, UAE)
+ * and falls back to the standard country layout for others.
  */
 export function buildCountryTemplate(
   countrySlug: string,

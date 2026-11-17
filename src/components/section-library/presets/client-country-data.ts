@@ -1456,4 +1456,401 @@ export const CLIENT_COUNTRY_DATA: Record<string, ClientCountryData> = {
         }),
       ]),
   },
+  uae: {
+    slug: "uae",
+    name: "United Arab Emirates",
+    heroEyebrow: "",
+    heroTitle: "Chauffeur Service in UAE",
+    heroDescription:
+      "Professional chauffeur service UAE provides seamless corporate ground transportation across all seven emirates with unified dispatch and vetted protocol drivers. Operations run under strict safety standards for visiting delegations, roadshows, executive meetings, and private airport journeys throughout the country.\n\nAB coordinates daily movements from dedicated regional operational facilities, supporting multinational firms and government delegations with managed luxury sedans, premium sport utility vehicles, and passenger vans.",
+    heroImage: "/locations/www.ab.limo-locations-uae-images/image1.jpg",
+    description:
+      "Professional chauffeur service UAE provides seamless corporate ground transportation across all seven emirates with unified dispatch and vetted protocol drivers. Operations run under strict safety standards for visiting delegations, roadshows, executive meetings, and private airport journeys throughout the country.",
+    faqs: [
+      {
+        q: "How does booking a chauffeur service UAE work with AB?",
+        a: "Clients submit their itineraries through the AB corporate portal or by contacting local operations desks directly. Dedicated booking teams review vehicle requirements, assign licensed professional chauffeurs, and issue driver details prior to departure. Account managers handle unified corporate billing, passenger manifests, and route adjustments for business travel.",
+      },
+      {
+        q: "What airport meet and greet services operate at DXB?",
+        a: "Chauffeurs meet incoming passengers in designated arrivals areas at Dubai International Airport (DXB) holding a discreet personalised name board. The driver assists with luggage transport and guides travellers directly to their waiting luxury car parked in the reserved executive bay. Flight tracking allows collection times to adapt automatically to airspace delays.",
+      },
+      {
+        q: "How does AB manage flight tracking for UAE airport arrivals?",
+        a: "Central dispatch connects flight numbers directly to terminal radar feeds for real time updates across every major airport. Chauffeurs enter terminal pickup lanes according to verified touchdown times rather than scheduled departures. This automated monitoring reduces passenger wait times outside customs halls across the Emirates.",
+      },
+      {
+        q: "Can corporate clients arrange hourly chauffeur or full day hire?",
+        a: "AB provides flexible hourly chauffeur and full day hire options for roadshows, executive site inspections, and consecutive meetings. The assigned car with driver remains dedicated to the passenger throughout the booked period, accommodating spontaneous itinerary changes without requiring separate bookings for individual transfers.",
+      },
+      {
+        q: "Which premium vehicle models are available across the UAE fleet?",
+        a: "The operational fleet provides luxury sedan options including the Mercedes S Class, executive SUV choices like the Cadillac Escalade and GMC Yukon, and multi passenger Mercedes V Class van configurations. Vehicles maintain rigorous interior presentation, modern climate control systems, and complimentary passenger amenities suited for executive travel.",
+      },
+      {
+        q: "Are intercity transfers available between all seven emirates?",
+        a: "Direct point to point journeys run between all seven emirates on fixed routes or custom schedules. Chauffeurs navigate major highway networks including the E11 corridor between Dubai and Abu Dhabi. Travel times and schedules depend on departure windows, with exact details confirmed at booking.",
+      },
+      {
+        q: "How are chauffeur licensing and passenger safety verified?",
+        a: "Every professional chauffeur holds appropriate commercial driving credentials granted by regional transit regulators. Fleet vehicles undergo routine mechanical safety inspections and carry comprehensive commercial passenger insurance. Drivers adhere to strict confidentiality protocols and conduct daily vehicle safety checks.",
+      },
+    ],
+    buildSections: (homeLabel, rootLabel) =>
+      withOrder([
+        makeSection("hero", {
+          variant: "with-inquiry-form",
+          content: {
+            eyebrow: "",
+            title: "Chauffeur Service in UAE",
+            titleHighlight: "",
+            description:
+              "Professional chauffeur service UAE provides seamless corporate ground transportation across all seven emirates with unified dispatch and vetted protocol drivers. Operations run under strict safety standards for visiting delegations, roadshows, executive meetings, and private airport journeys throughout the country.\n\nAB coordinates daily movements from dedicated regional operational facilities, supporting multinational firms and government delegations with managed luxury sedans, premium sport utility vehicles, and passenger vans.",
+          },
+          items: [
+            { label: "Request a proposal", href: "/quote/tender", style: "primary" },
+            { label: "Book a transfer", href: "/locations/uae", style: "secondary" },
+          ],
+          appearance: {
+            background: "/locations/www.ab.limo-locations-uae-images/image1.jpg",
+          },
+        }),
+        makeSection("breadcrumb", {
+          content: { homeLabel, rootLabel },
+        }),
+        makeSection("serviceCards", {
+          variant: "3-column",
+          content: {
+            eyebrow: "Regional Presence",
+            heading: "Nationwide Infrastructure in the UAE",
+            description:
+              "Operational control across the Emirates combines central coordination with local dispatch units in the two largest commercial hubs.",
+          },
+          items: [
+            {
+              id: "uae-stat-1",
+              icon: "Building2",
+              title: "6 Cities Served",
+              description: "Primary metropolitan centres across the country.",
+            },
+            {
+              id: "uae-stat-2",
+              icon: "Briefcase",
+              title: "2 UAE Offices",
+              description: "Fully staffed operational facilities in Dubai and Abu Dhabi.",
+            },
+            {
+              id: "uae-stat-3",
+              icon: "Plane",
+              title: "6 Airports Connected",
+              description: "International aviation gateways serving regular passenger transfers.",
+            },
+          ],
+          settings: { source: "inline", columns: "3", showHeader: false },
+          appearance: { theme: "darker", padding: "md", border: false, textAlign: "left" },
+        }),
+        makeSection("serviceCards", {
+          variant: "3-column",
+          content: {
+            eyebrow: "Operational Hubs",
+            heading: "AB Regional Office Hubs in UAE",
+            description:
+              "Operational control across the Emirates combines central coordination with local dispatch units in the two largest commercial hubs.",
+          },
+          items: [
+            {
+              id: "uae-hub-1",
+              icon: "Building2",
+              tag: "Northern Hub",
+              title: "AB Dubai",
+              description:
+                "Corporate headquarters for local emirate dispatch, airport meet and assist management, and multi-vehicle roadshow logistics across the commercial district.\n\nSuite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE\n+971 50 781 3880",
+              actions: [{ label: "Dubai Office", href: "/locations/uae/dubai", style: "accent" }],
+            },
+            {
+              id: "uae-hub-2",
+              icon: "Building2",
+              tag: "Capital Hub",
+              title: "AB Abu Dhabi",
+              description:
+                "Specialised operational branch overseeing government ministry transport, diplomatic protocol assignments, and capital business district transfers.\n\nOffice 03, Mezzanine Floor, Building C57, Abu Dhabi, UAE\n+971 50 918 0556",
+              actions: [{ label: "Abu Dhabi Office", href: "/locations/uae/abu-dhabi", style: "accent" }],
+            },
+          ],
+          settings: { source: "inline", columns: "2", showHeader: true },
+          appearance: { theme: "dark", padding: "lg", border: true, textAlign: "left" },
+        }),
+        makeSection("serviceCards", {
+          variant: "3-column",
+          content: {
+            eyebrow: "Coverage",
+            heading: "Cities We Serve Across UAE",
+            description:
+              "AB provides direct luxury vehicle management across major commercial, governmental, and industrial centres. Each metropolitan route benefits from trained chauffeurs familiar with local hotel entrances, business hubs, financial free zones, and VIP terminals.",
+          },
+          items: [
+            {
+              id: "uae-city-1",
+              icon: "Map",
+              tag: "DXB · Active Operations Office",
+              title: "Dubai",
+              description:
+                "Comprehensive executive car service supporting Dubai International Financial Centre, Downtown, and Dubai South. Chauffeurs operate premium sedans and SUVs with full route flexibility.",
+              actions: [{ label: "Explore Dubai", href: "/locations/uae/dubai", style: "accent" }],
+            },
+            {
+              id: "uae-city-2",
+              icon: "Map",
+              tag: "AUH · Active Operations Office",
+              title: "Abu Dhabi",
+              description:
+                "Full diplomatic and business transport serving Al Maryah Island, government entities, and cultural sectors. Managed journeys utilise luxury sedan and van options tailored for visiting delegations.",
+              actions: [{ label: "Explore Abu Dhabi", href: "/locations/uae/abu-dhabi", style: "accent" }],
+            },
+            {
+              id: "uae-city-3",
+              icon: "Map",
+              tag: "SHJ · Served from AB Dubai",
+              title: "Sharjah",
+              description:
+                "Industrial and corporate transfers between commercial free zones and neighbouring emirates. Nearest support operates from AB Dubai at Suite 206, DBC Building, Al Khabaisi.",
+              actions: [{ label: "Explore Sharjah", href: "/locations/uae/sharjah", style: "accent" }],
+            },
+            {
+              id: "uae-city-4",
+              icon: "Map",
+              tag: "DXB / SHJ · Served from AB Dubai",
+              title: "Ajman",
+              description:
+                "Executive mobility connecting beachfront resorts and industrial facilities. Nearest operations stem from AB Dubai at Suite 206, DBC Building, Al Khabaisi.",
+              actions: [{ label: "Explore Ajman", href: "/locations/uae/ajman", style: "accent" }],
+            },
+            {
+              id: "uae-city-5",
+              icon: "Map",
+              tag: "AAN · Served from AB Abu Dhabi",
+              title: "Al Ain",
+              description:
+                "Institutional transit, academic travel, and official delegate transport across the garden city. Dispatch coordinated via AB Abu Dhabi at Building C57.",
+              actions: [{ label: "Explore Al Ain", href: "/locations/uae/al-ain", style: "accent" }],
+            },
+            {
+              id: "uae-city-6",
+              icon: "Map",
+              tag: "RKT · Served from AB Dubai",
+              title: "Ras Al Khaimah",
+              description:
+                "Corporate hospitality transfers and industrial zone journeys across the northern territory. Coordinated through AB Dubai at Suite 206, DBC Building.",
+              actions: [{ label: "Explore Ras Al Khaimah", href: "/locations/uae/ras-al-khaimah", style: "accent" }],
+            },
+          ],
+          settings: { source: "inline", columns: "3", showHeader: true },
+          appearance: { theme: "darker", padding: "lg", border: true, textAlign: "left" },
+        }),
+        makeSection("serviceCards", {
+          variant: "3-column",
+          content: {
+            eyebrow: "Aviation Gateways",
+            heading: "International Aviation Transfers at DXB and UAE Terminals",
+            description:
+              "AB provides executive flight connections with meet and greet reception at all major civilian aviation terminals across the country. Chauffeurs monitor incoming flight schedules to adapt to commercial airspace revisions and private hangar movements.",
+          },
+          items: [
+            {
+              id: "uae-apt-1",
+              icon: "Plane",
+              tag: "DXB · Terminals 1, 2, 3",
+              title: "Dubai International Airport (DXB)",
+              description: "Round the clock arrivals serving central Dubai districts and northern emirates.",
+              actions: [{ label: "DXB Airport Transfers", href: "/airports/dubai-international-dxb", style: "accent" }],
+            },
+            {
+              id: "uae-apt-2",
+              icon: "Plane",
+              tag: "DWC · Passenger and VIP",
+              title: "Al Maktoum International Airport (DWC)",
+              description: "Dubai South logistics corridors, private aviation movements and international event transfers.",
+              actions: [{ label: "DWC Airport Transfers", href: "/airports/al-maktoum-international-dwc", style: "accent" }],
+            },
+            {
+              id: "uae-apt-3",
+              icon: "Plane",
+              tag: "AUH · Main Terminal and VIP",
+              title: "Zayed International Airport (AUH)",
+              description: "Scheduled transfers to Abu Dhabi Corniche, Yas Island venues and Al Ain.",
+              actions: [{ label: "AUH Airport Transfers", href: "/airports/zayed-international-auh", style: "accent" }],
+            },
+            {
+              id: "uae-apt-4",
+              icon: "Plane",
+              tag: "SHJ · Main Arrivals",
+              title: "Sharjah International Airport (SHJ)",
+              description: "Commercial terminal arrivals coordinated via Dubai regional operations.",
+              actions: [{ label: "SHJ Airport Transfers", href: "/locations/uae/sharjah", style: "accent" }],
+            },
+            {
+              id: "uae-apt-5",
+              icon: "Plane",
+              tag: "AAN · Regional Terminal",
+              title: "Al Ain International Airport (AAN)",
+              description: "Regional passenger transfers coordinated via Abu Dhabi operations.",
+              actions: [{ label: "AAN Airport Transfers", href: "/locations/uae/al-ain", style: "accent" }],
+            },
+            {
+              id: "uae-apt-6",
+              icon: "Plane",
+              tag: "RKT · Main Arrivals",
+              title: "Ras Al Khaimah International Airport (RKT)",
+              description: "Northern emirate arrivals coordinated via Dubai operations.",
+              actions: [{ label: "RKT Airport Transfers", href: "/locations/uae/ras-al-khaimah", style: "accent" }],
+            },
+          ],
+          settings: { source: "inline", columns: "3", showHeader: true },
+          appearance: { theme: "dark", padding: "lg", border: true, textAlign: "left" },
+        }),
+        makeSection("serviceCards", {
+          variant: "3-column",
+          content: {
+            eyebrow: "Capabilities",
+            heading: "Ground Transportation Services in UAE",
+            description:
+              "AB structures travel programmes to meet varied institutional and corporate scopes, providing uniformed drivers and modern luxury cars for individual executives, large conference groups, and visiting VIP parties.",
+          },
+          items: [
+            {
+              id: "uae-srv-1",
+              icon: "Crown",
+              title: "Chauffeur & VIP",
+              description:
+                "Dedicated limousine service UAE options including premium sedan models like the Mercedes S Class and spacious Cadillac Escalade or GMC Yukon SUVs for senior leaders.",
+            },
+            {
+              id: "uae-srv-2",
+              icon: "Plane",
+              title: "Airport Transfers",
+              description:
+                "Streamlined airport transfer UAE solutions offering terminal collection, luggage assistance, and active flight tracking across all civilian flight facilities.",
+            },
+            {
+              id: "uae-srv-3",
+              icon: "Briefcase",
+              title: "Corporate Transportation",
+              description:
+                "Managed corporate transportation UAE programmes for business travel, regional office shuttles, and scheduled executive roadshows with unified account management.",
+            },
+            {
+              id: "uae-srv-4",
+              icon: "Calendar",
+              title: "Event Transportation",
+              description:
+                "Coordinated fleet staging for international summits, state occasions, and trade conventions requiring multi-car logistical control.",
+            },
+            {
+              id: "uae-srv-5",
+              icon: "Users",
+              title: "Bus & Coach Hire",
+              description:
+                "High capacity bus rental UAE services utilising luxury coach and Mercedes V Class van options for corporate groups and event attendees.",
+            },
+            {
+              id: "uae-srv-6",
+              icon: "Map",
+              title: "Tourism Transportation",
+              description:
+                "Private driver services offering full-day hire and bespoke travel across historic landmarks, cultural districts, and leisure destinations.",
+            },
+          ],
+          settings: { source: "inline", columns: "3", showHeader: true },
+          appearance: { theme: "darker", padding: "lg", border: true, textAlign: "left" },
+        }),
+        makeSection("serviceCards", {
+          variant: "3-column",
+          content: {
+            eyebrow: "Highway corridors",
+            heading: "Intercity Highway Routes Across UAE",
+            description:
+              "Intercity transfer UAE travel connects major commerce centres over smooth highway networks, permitting executives to conduct meetings or rest between destinations without changing transport providers.",
+          },
+          items: [
+            {
+              id: "uae-route-1",
+              icon: "Map",
+              title: "Dubai to Abu Dhabi",
+              description: "Route connects financial districts via the E11 and E311 motorways.",
+              actions: [{ label: "View Route", href: "/locations/uae/dubai/routes/dubai-to-abu-dhabi", style: "accent" }],
+            },
+            {
+              id: "uae-route-2",
+              icon: "Map",
+              title: "Dubai to Sharjah",
+              description: "Frequent corporate route linking neighbouring commercial trade zones.",
+              actions: [{ label: "View Route", href: "/locations/uae/dubai/routes/dubai-to-sharjah", style: "accent" }],
+            },
+            {
+              id: "uae-route-3",
+              icon: "Map",
+              title: "Dubai to Ras Al Khaimah",
+              description: "Direct northern transit serving manufacturing zones and coastal venues.",
+              actions: [{ label: "View Route", href: "/locations/uae/dubai/routes/dubai-to-ras-al-khaimah", style: "accent" }],
+            },
+            {
+              id: "uae-route-4",
+              icon: "Map",
+              title: "Abu Dhabi to Al Ain",
+              description: "Eastern corridor connecting ministerial offices with educational institutions.",
+              actions: [{ label: "View Route", href: "/locations/uae/abu-dhabi/routes/abu-dhabi-to-al-ain", style: "accent" }],
+            },
+            {
+              id: "uae-route-5",
+              icon: "Map",
+              title: "Sharjah to Ajman",
+              description: "Local metropolitan connection facilitating short intercity movements.",
+              actions: [{ label: "View Route", href: "/locations/uae/sharjah/routes/sharjah-to-ajman", style: "accent" }],
+            },
+          ],
+          settings: { source: "inline", columns: "3", showHeader: true },
+          appearance: { theme: "dark", padding: "lg", border: true, textAlign: "left" },
+        }),
+        makeSection("introText", {
+          content: {
+            eyebrow: "Compliance",
+            heading: "Regulatory Licences and Operating Standards in UAE",
+            paragraphs: [
+              "AB conducts operations under official regional authority frameworks across every emirate, complying with national commercial transport guidelines. Vehicles carry commercial insurance and undergo systematic safety assessments prior to assignment.",
+              "Professional chauffeurs receive defensive driving education, security awareness preparation, and customer confidentiality training to support executive passengers throughout their itineraries.",
+            ],
+          },
+          appearance: { theme: "dark", padding: "lg", border: true, textAlign: "left" },
+        }),
+        makeSection("faq", {
+          content: {
+            eyebrow: "Questions",
+            heading: "Frequently Asked Questions About UAE Chauffeur Travel",
+            description: "",
+            items: [],
+          },
+          items: [],
+          settings: { variant: "default", source: "context.faqs" },
+          appearance: { theme: "darker", padding: "lg", border: true, textAlign: "center" },
+        }),
+        makeSection("ctaBanner", {
+          content: {
+            heading: "Reserve Your Chauffeur Service UAE Experience",
+            description:
+              "AB delivers reliable executive ground mobility across UAE through protocol trained drivers, pristine luxury vehicles, and continuous coordination from dedicated operations facilities.",
+            subheading: "Plan Your Executive Journey",
+            subdescription:
+              "Speak with our regional dispatch team in Dubai or Abu Dhabi on +971 50 918 0556 to coordinate corporate fleet requirements, airport transfers or VIP delegation transport.",
+          },
+          items: [
+            { label: "Request a proposal", href: "/locations/uae/dubai", style: "primary" },
+            { label: "Book a transfer", href: "/locations/uae/abu-dhabi", style: "secondary" },
+          ],
+          appearance: { theme: "dark", padding: "lg", border: true, textAlign: "center" },
+        }),
+      ]),
+  },
 };
+
+CLIENT_COUNTRY_DATA["united-arab-emirates"] = CLIENT_COUNTRY_DATA.uae;
+

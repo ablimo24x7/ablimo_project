@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/najran",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "najran",
+  "path": "/locations/saudi-arabia/najran",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for najran (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.449Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309999844-f02bcltmg",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN NAJRAN",
+          "title": "Najran",
+          "description": "A city steeped in centuries of Arabian history, Najran blends ancient archaeological treasures at Al-Ukhdood with modern southern development. AB offers reliable chauffeur service from Najran Airport, hotel transfers, and private regional travel.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Najran Airport (EAM)",
+          "dropoffDefault": "Najran City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999844-m8bjuthe3",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE NAJRAN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999844-vj5g3k7ck",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Najran and beyond"
+        },
+        "items": [
+          {
+            "id": "eam-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "EAM to Najran City Center",
+            "titleAr": "من مطار نجران إلى وسط مدينة نجران",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Najran Airport (EAM)",
+            "dropoff": "Najran City Center"
+          },
+          {
+            "id": "najran-ukhdood",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Najran to Al Ukhdood Historic Site",
+            "titleAr": "من نجران إلى موقع الأخدود الأثري",
+            "price": "From SAR 250",
+            "priceAr": "ابتداءً من 250 ر.س",
+            "pickup": "Najran",
+            "dropoff": "Al Ukhdood"
+          },
+          {
+            "id": "najran-aan",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Najran to Qasr Al Aan",
+            "titleAr": "من نجران إلى قصر العان التاريخي",
+            "price": "From SAR 200",
+            "priceAr": "ابتداءً من 200 ر.س",
+            "pickup": "Najran",
+            "dropoff": "Qasr Al Aan"
+          },
+          {
+            "id": "najran-sharurah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Najran to Sharurah",
+            "titleAr": "من نجران إلى شرورة",
+            "price": "From SAR 750",
+            "priceAr": "ابتداءً من 750 ر.س",
+            "pickup": "Najran",
+            "dropoff": "Sharurah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999844-7kpkorhs5",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN NAJRAN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999844-y06lg9chh",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Najran.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309999844-f02bcltmg",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN NAJRAN",
+          "title": "Najran",
+          "description": "A city steeped in centuries of Arabian history, Najran blends ancient archaeological treasures at Al-Ukhdood with modern southern development. AB offers reliable chauffeur service from Najran Airport, hotel transfers, and private regional travel.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Najran Airport (EAM)",
+          "dropoffDefault": "Najran City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999844-m8bjuthe3",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE NAJRAN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999844-vj5g3k7ck",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Najran and beyond"
+        },
+        "items": [
+          {
+            "id": "eam-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "EAM to Najran City Center",
+            "titleAr": "من مطار نجران إلى وسط مدينة نجران",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Najran Airport (EAM)",
+            "dropoff": "Najran City Center"
+          },
+          {
+            "id": "najran-ukhdood",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Najran to Al Ukhdood Historic Site",
+            "titleAr": "من نجران إلى موقع الأخدود الأثري",
+            "price": "From SAR 250",
+            "priceAr": "ابتداءً من 250 ر.س",
+            "pickup": "Najran",
+            "dropoff": "Al Ukhdood"
+          },
+          {
+            "id": "najran-aan",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Najran to Qasr Al Aan",
+            "titleAr": "من نجران إلى قصر العان التاريخي",
+            "price": "From SAR 200",
+            "priceAr": "ابتداءً من 200 ر.س",
+            "pickup": "Najran",
+            "dropoff": "Qasr Al Aan"
+          },
+          {
+            "id": "najran-sharurah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Najran to Sharurah",
+            "titleAr": "من نجران إلى شرورة",
+            "price": "From SAR 750",
+            "priceAr": "ابتداءً من 750 ر.س",
+            "pickup": "Najran",
+            "dropoff": "Sharurah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999844-7kpkorhs5",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN NAJRAN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999844-y06lg9chh",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Najran.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309999844-vupp7puck",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في نجران",
+          "title": "نجران",
+          "description": "مدينة عريقة تفيض بالتاريخ والأصالة، تجمع بين آثار الأخدود التاريخية والنهضة التنموية الجنوبية الحديثة. تقدم إيه بي ليمو خدمات سائق خاص متميزة من مطار نجران إلى الفنادق والمواقع الأثرية.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Najran Airport (EAM)",
+          "dropoffDefault": "Najran City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999844-qyyptk1yp",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول نجران",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999844-cem416ozu",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء نجران وخارجها"
+        },
+        "items": [
+          {
+            "id": "eam-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "EAM to Najran City Center",
+            "titleAr": "من مطار نجران إلى وسط مدينة نجران",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Najran Airport (EAM)",
+            "dropoff": "Najran City Center"
+          },
+          {
+            "id": "najran-ukhdood",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Najran to Al Ukhdood Historic Site",
+            "titleAr": "من نجران إلى موقع الأخدود الأثري",
+            "price": "From SAR 250",
+            "priceAr": "ابتداءً من 250 ر.س",
+            "pickup": "Najran",
+            "dropoff": "Al Ukhdood"
+          },
+          {
+            "id": "najran-aan",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Najran to Qasr Al Aan",
+            "titleAr": "من نجران إلى قصر العان التاريخي",
+            "price": "From SAR 200",
+            "priceAr": "ابتداءً من 200 ر.س",
+            "pickup": "Najran",
+            "dropoff": "Qasr Al Aan"
+          },
+          {
+            "id": "najran-sharurah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Najran to Sharurah",
+            "titleAr": "من نجران إلى شرورة",
+            "price": "From SAR 750",
+            "priceAr": "ابتداءً من 750 ر.س",
+            "pickup": "Najran",
+            "dropoff": "Sharurah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999844-34891cnon",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في نجران",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999844-wo3jv78ye",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في نجران.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

@@ -2,34 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { localeBase } from "@/app/[lang]/dictionaries";
-import { SKETCH_SERVICES, type VehicleShape } from "./services-sketch";
+import { SKETCH_SERVICES } from "./services-sketch";
 
 function num(i: number): string {
   return String(i + 1).padStart(2, "0");
-}
-
-function CarSilhouette({ shape, label }: { shape: VehicleShape; label: string }) {
-  return (
-    <svg
-      viewBox="0 0 400 130"
-      className="w-[78%] h-auto mb-7"
-      role="img"
-      aria-label={label}
-    >
-      <ellipse cx="200" cy="124" rx="190" ry="5" fill="#000000" opacity="0.14" />
-      <path d={shape.body} fill="#3B4148" />
-      <path d={shape.glass} fill="#7B848D" />
-      <path d={shape.line} fill="none" stroke="#5A6067" strokeWidth="1" />
-      <path d={shape.lamp} fill="#D9DCE0" />
-      <circle cx={shape.w1} cy="106" r="19" fill="#0A0A0A" />
-      <circle cx={shape.w1} cy="106" r="11" fill="#9097A0" />
-      <circle cx={shape.w1} cy="106" r="4" fill="#2A2A2A" />
-      <circle cx={shape.w2} cy="106" r="19" fill="#0A0A0A" />
-      <circle cx={shape.w2} cy="106" r="11" fill="#9097A0" />
-      <circle cx={shape.w2} cy="106" r="4" fill="#2A2A2A" />
-    </svg>
-  );
 }
 
 function TexturePanel({ id }: { id: string }) {
@@ -109,30 +87,58 @@ export default function ServicesDirectory({ lang }: { lang: string }) {
         <div className="flex-[999] min-w-0 flex flex-col gap-16 lg:gap-28">
           {SKETCH_SERVICES.map((s, i) => (
             <article key={s.id} id={s.id} data-svc={s.id} className="scroll-mt-28">
-              <div className="relative h-[440px]">
-                <div className="absolute left-0 top-0 w-[42%] h-[78%] overflow-hidden bg-[#1c1d21]">
-                  <TexturePanel id={s.id} />
-                </div>
-                <div className="absolute right-0 bottom-0 w-[76%] h-[82%] bg-[#1c1d21] overflow-hidden flex items-end justify-center">
-                  <span className="absolute top-4 left-4 px-2.5 py-1.5 bg-abBlack border border-gray-700 text-xs tracking-[0.12em] uppercase text-gray-300">
-                    Photo: {s.photo}
-                  </span>
-                  <CarSilhouette shape={s.v} label={s.vehicleLabel} />
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-x-14 gap-y-8 mt-10">
+              <div className="flex flex-wrap gap-x-14 gap-y-4 items-end">
                 <div className="flex-1 min-w-[240px]">
                   <p className="m-0 text-[13px] tracking-[0.22em] uppercase text-abBlue">
                     {num(i)}
                   </p>
                   <h2 className="mt-2.5 text-3xl md:text-4xl font-bold leading-tight">
-                    {s.name}
+                    {s.heading}
                   </h2>
                 </div>
+              </div>
+
+              <div className="mt-6 max-w-4xl flex flex-col gap-4">
+                {s.intro.map((p, idx) => (
+                  <p key={idx} className="m-0 text-[17px] leading-relaxed text-gray-300">
+                    {p}
+                  </p>
+                ))}
+              </div>
+
+              <div className="relative h-[440px] mt-9">
+                <div className="absolute left-0 top-0 w-[42%] h-[78%] overflow-hidden bg-[#1c1d21]">
+                  <div className="absolute inset-0">
+                    <TexturePanel id={s.id} />
+                  </div>
+                  <Image
+                    src={s.vehicle.src}
+                    alt={`${s.vehicle.label} from the AB fleet`}
+                    fill
+                    sizes="(max-width: 1024px) 42vw, 22vw"
+                    className="object-contain p-5"
+                  />
+                  <span className="absolute top-4 left-4 px-2.5 py-1.5 bg-abBlack border border-gray-700 text-xs tracking-[0.12em] uppercase text-gray-300">
+                    {s.vehicle.label}
+                  </span>
+                </div>
+                <div className="absolute right-0 bottom-0 w-[76%] h-[82%] bg-[#1c1d21] overflow-hidden">
+                  <Image
+                    src={s.image}
+                    alt={s.imageAlt}
+                    fill
+                    sizes="(max-width: 1024px) 76vw, 55vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-x-14 gap-y-8 mt-10">
+                <div className="flex-1 min-w-[240px]">
+                  <p className="m-0 text-[17px] leading-relaxed text-gray-300">{s.detail}</p>
+                </div>
                 <div className="flex-[1.4] min-w-[260px]">
-                  <p className="m-0 text-[17px] leading-relaxed text-gray-300">{s.desc}</p>
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {s.points.map((pt) => (
                       <span
                         key={pt}

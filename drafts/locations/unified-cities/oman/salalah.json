@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "oman/salalah",
+  "countrySlug": "oman",
+  "citySlug": "salalah",
+  "path": "/locations/oman/salalah",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for salalah (oman)",
+  "exportedAt": "2026-11-10T12:32:14.441Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310000745-qnmu4nz2c",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN SALALAH",
+          "title": "Salalah",
+          "description": "The tropical emerald of Southern Oman — Salalah's Khareef monsoon greenery, waterfalls, and coconut-fringed beaches are unforgettable. AB brings executive comfort to every mile with chauffeur transfers from Salalah Airport and scenic coastal tours.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Salalah Airport (SLL)",
+          "dropoffDefault": "Hawana Salalah",
+          "skyline": "muscat"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1680181825817-838f9bf98e2b?q=80&w=1171&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310000745-i7tkcg7yq",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE SALALAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000745-855db4iwi",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Salalah and beyond"
+        },
+        "items": [
+          {
+            "id": "sll-hawana",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SLL to Hawana Salalah Resorts",
+            "titleAr": "من مطار صلالة إلى منتجعات هوانا صلالة",
+            "price": "From OMR 32",
+            "priceAr": "ابتداءً من 32 ر.ع",
+            "pickup": "Salalah Airport (SLL)",
+            "dropoff": "Hawana Salalah"
+          },
+          {
+            "id": "sll-haffa",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SLL to Al Haffa Beach & Palace Area",
+            "titleAr": "من مطار صلالة إلى شاطئ الحافة وقصر الحصن",
+            "price": "From OMR 28",
+            "priceAr": "ابتداءً من 28 ر.ع",
+            "pickup": "Salalah Airport (SLL)",
+            "dropoff": "Al Haffa"
+          },
+          {
+            "id": "salalah-khor",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Salalah to Ayn Khor Waterfalls",
+            "titleAr": "من صلالة إلى شلالات عين كور",
+            "price": "From OMR 45",
+            "priceAr": "ابتداءً من 45 ر.ع",
+            "pickup": "Salalah",
+            "dropoff": "Ayn Khor"
+          },
+          {
+            "id": "salalah-mughsail",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Salalah to Mughsail Beach & Blowholes",
+            "titleAr": "من صلالة إلى شاطئ ونافورات المغسيل",
+            "price": "From OMR 55",
+            "priceAr": "ابتداءً من 55 ر.ع",
+            "pickup": "Salalah",
+            "dropoff": "Mughsail Beach"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000745-ma64zgsha",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN SALALAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000745-69p8meit3",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Salalah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310000745-qnmu4nz2c",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN SALALAH",
+          "title": "Salalah",
+          "description": "The tropical emerald of Southern Oman — Salalah's Khareef monsoon greenery, waterfalls, and coconut-fringed beaches are unforgettable. AB brings executive comfort to every mile with chauffeur transfers from Salalah Airport and scenic coastal tours.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Salalah Airport (SLL)",
+          "dropoffDefault": "Hawana Salalah",
+          "skyline": "muscat"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1680181825817-838f9bf98e2b?q=80&w=1171&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310000745-i7tkcg7yq",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE SALALAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000745-855db4iwi",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Salalah and beyond"
+        },
+        "items": [
+          {
+            "id": "sll-hawana",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SLL to Hawana Salalah Resorts",
+            "titleAr": "من مطار صلالة إلى منتجعات هوانا صلالة",
+            "price": "From OMR 32",
+            "priceAr": "ابتداءً من 32 ر.ع",
+            "pickup": "Salalah Airport (SLL)",
+            "dropoff": "Hawana Salalah"
+          },
+          {
+            "id": "sll-haffa",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SLL to Al Haffa Beach & Palace Area",
+            "titleAr": "من مطار صلالة إلى شاطئ الحافة وقصر الحصن",
+            "price": "From OMR 28",
+            "priceAr": "ابتداءً من 28 ر.ع",
+            "pickup": "Salalah Airport (SLL)",
+            "dropoff": "Al Haffa"
+          },
+          {
+            "id": "salalah-khor",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Salalah to Ayn Khor Waterfalls",
+            "titleAr": "من صلالة إلى شلالات عين كور",
+            "price": "From OMR 45",
+            "priceAr": "ابتداءً من 45 ر.ع",
+            "pickup": "Salalah",
+            "dropoff": "Ayn Khor"
+          },
+          {
+            "id": "salalah-mughsail",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Salalah to Mughsail Beach & Blowholes",
+            "titleAr": "من صلالة إلى شاطئ ونافورات المغسيل",
+            "price": "From OMR 55",
+            "priceAr": "ابتداءً من 55 ر.ع",
+            "pickup": "Salalah",
+            "dropoff": "Mughsail Beach"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000745-ma64zgsha",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN SALALAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000745-69p8meit3",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Salalah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310000745-u42d36edu",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في صلالة",
+          "title": "صلالة",
+          "description": "جوهرة الجنوب العماني الاستوائية الخضراء — أودية صلالة وشلالات الخريف وشواطئها الساحلية الأخاذة. توفر إيه بي ليمو أعلى مستويات الراحة مع خدمات استقبال متميزة من مطار صلالة وجولات سياحية خاصة.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Salalah Airport (SLL)",
+          "dropoffDefault": "Hawana Salalah",
+          "skyline": "muscat"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1680181825817-838f9bf98e2b?q=80&w=1171&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310000745-hzp6gqclv",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول صلالة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000745-ya6gi73e5",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء صلالة وخارجها"
+        },
+        "items": [
+          {
+            "id": "sll-hawana",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SLL to Hawana Salalah Resorts",
+            "titleAr": "من مطار صلالة إلى منتجعات هوانا صلالة",
+            "price": "From OMR 32",
+            "priceAr": "ابتداءً من 32 ر.ع",
+            "pickup": "Salalah Airport (SLL)",
+            "dropoff": "Hawana Salalah"
+          },
+          {
+            "id": "sll-haffa",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SLL to Al Haffa Beach & Palace Area",
+            "titleAr": "من مطار صلالة إلى شاطئ الحافة وقصر الحصن",
+            "price": "From OMR 28",
+            "priceAr": "ابتداءً من 28 ر.ع",
+            "pickup": "Salalah Airport (SLL)",
+            "dropoff": "Al Haffa"
+          },
+          {
+            "id": "salalah-khor",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Salalah to Ayn Khor Waterfalls",
+            "titleAr": "من صلالة إلى شلالات عين كور",
+            "price": "From OMR 45",
+            "priceAr": "ابتداءً من 45 ر.ع",
+            "pickup": "Salalah",
+            "dropoff": "Ayn Khor"
+          },
+          {
+            "id": "salalah-mughsail",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Salalah to Mughsail Beach & Blowholes",
+            "titleAr": "من صلالة إلى شاطئ ونافورات المغسيل",
+            "price": "From OMR 55",
+            "priceAr": "ابتداءً من 55 ر.ع",
+            "pickup": "Salalah",
+            "dropoff": "Mughsail Beach"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000745-abf6o6ygi",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في صلالة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000745-yq3ecwa7k",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في صلالة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

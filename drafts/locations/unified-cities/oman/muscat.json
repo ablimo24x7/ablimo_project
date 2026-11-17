@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "oman/muscat",
+  "countrySlug": "oman",
+  "citySlug": "muscat",
+  "path": "/locations/oman/muscat",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for muscat (oman)",
+  "exportedAt": "2026-11-10T12:32:14.440Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310000518-kgpb1tanf",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN MUSCAT",
+          "title": "Muscat",
+          "description": "Oman's majestic capital — from Sultan Qaboos Grand Mosque to the Muttrah Corniche, Al Mouj marina, and coastal luxury resorts. AB elevates every journey with first-class chauffeur service from Muscat International Airport and across the Sultanate.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Muscat International (MCT)",
+          "dropoffDefault": "Al Mouj Muscat",
+          "skyline": "muscat"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1699855803432-17f4ab468b2d?q=80&w=2071&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310000518-gajqgv82a",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE MUSCAT FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000518-1q5hmwe1w",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Muscat and beyond"
+        },
+        "items": [
+          {
+            "id": "mct-mouj",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "MCT to Al Mouj Muscat Marina",
+            "titleAr": "من مطار مسقط الدولي إلى مارينا الموج مسقط",
+            "price": "From OMR 35",
+            "priceAr": "ابتداءً من 35 ر.ع",
+            "pickup": "Muscat International Airport (MCT)",
+            "dropoff": "Al Mouj Muscat"
+          },
+          {
+            "id": "mct-muttrah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "MCT to Muttrah Corniche & Old Muscat",
+            "titleAr": "من مطار مسقط الدولي إلى كورنيش مطرح ومسقط القديمة",
+            "price": "From OMR 40",
+            "priceAr": "ابتداءً من 40 ر.ع",
+            "pickup": "Muscat International Airport (MCT)",
+            "dropoff": "Muttrah Corniche"
+          },
+          {
+            "id": "muscat-mosque",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Muscat Hotels to Sultan Qaboos Grand Mosque",
+            "titleAr": "من فنادق مسقط إلى جامع السلطان قابوس الأكبر",
+            "price": "From OMR 25",
+            "priceAr": "ابتداءً من 25 ر.ع",
+            "pickup": "Muscat Hotels",
+            "dropoff": "Grand Mosque"
+          },
+          {
+            "id": "muscat-nizwa",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Muscat to Nizwa Historic Fort",
+            "titleAr": "من مسقط إلى قلعة نزوى التاريخية",
+            "price": "From OMR 85",
+            "priceAr": "ابتداءً من 85 ر.ع",
+            "pickup": "Muscat",
+            "dropoff": "Nizwa Fort"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000518-mr1zer35q",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN MUSCAT",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000518-1qnmwvrgl",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Muscat.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310000518-kgpb1tanf",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN MUSCAT",
+          "title": "Muscat",
+          "description": "Oman's majestic capital — from Sultan Qaboos Grand Mosque to the Muttrah Corniche, Al Mouj marina, and coastal luxury resorts. AB elevates every journey with first-class chauffeur service from Muscat International Airport and across the Sultanate.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Muscat International (MCT)",
+          "dropoffDefault": "Al Mouj Muscat",
+          "skyline": "muscat"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1699855803432-17f4ab468b2d?q=80&w=2071&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310000518-gajqgv82a",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE MUSCAT FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000518-1q5hmwe1w",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Muscat and beyond"
+        },
+        "items": [
+          {
+            "id": "mct-mouj",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "MCT to Al Mouj Muscat Marina",
+            "titleAr": "من مطار مسقط الدولي إلى مارينا الموج مسقط",
+            "price": "From OMR 35",
+            "priceAr": "ابتداءً من 35 ر.ع",
+            "pickup": "Muscat International Airport (MCT)",
+            "dropoff": "Al Mouj Muscat"
+          },
+          {
+            "id": "mct-muttrah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "MCT to Muttrah Corniche & Old Muscat",
+            "titleAr": "من مطار مسقط الدولي إلى كورنيش مطرح ومسقط القديمة",
+            "price": "From OMR 40",
+            "priceAr": "ابتداءً من 40 ر.ع",
+            "pickup": "Muscat International Airport (MCT)",
+            "dropoff": "Muttrah Corniche"
+          },
+          {
+            "id": "muscat-mosque",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Muscat Hotels to Sultan Qaboos Grand Mosque",
+            "titleAr": "من فنادق مسقط إلى جامع السلطان قابوس الأكبر",
+            "price": "From OMR 25",
+            "priceAr": "ابتداءً من 25 ر.ع",
+            "pickup": "Muscat Hotels",
+            "dropoff": "Grand Mosque"
+          },
+          {
+            "id": "muscat-nizwa",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Muscat to Nizwa Historic Fort",
+            "titleAr": "من مسقط إلى قلعة نزوى التاريخية",
+            "price": "From OMR 85",
+            "priceAr": "ابتداءً من 85 ر.ع",
+            "pickup": "Muscat",
+            "dropoff": "Nizwa Fort"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000518-mr1zer35q",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN MUSCAT",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000518-1qnmwvrgl",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Muscat.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310000519-giwrysgib",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في مسقط",
+          "title": "مسقط",
+          "description": "عاصمة سلطنة عمان العريقة — من جامع السلطان قابوس الأكبر إلى كورنيش مطرح ومارينا الموج والمنتجعات الشاطئية الفاخرة. ترتقي إيه بي ليمو بكل رحلة مع خدمة سائق خاص من الطراز الرفيع من مطار مسقط الدولي.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Muscat International (MCT)",
+          "dropoffDefault": "Al Mouj Muscat",
+          "skyline": "muscat"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1699855803432-17f4ab468b2d?q=80&w=2071&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310000519-ahxsomdbu",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول مسقط",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000519-06eletlbv",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء مسقط وخارجها"
+        },
+        "items": [
+          {
+            "id": "mct-mouj",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "MCT to Al Mouj Muscat Marina",
+            "titleAr": "من مطار مسقط الدولي إلى مارينا الموج مسقط",
+            "price": "From OMR 35",
+            "priceAr": "ابتداءً من 35 ر.ع",
+            "pickup": "Muscat International Airport (MCT)",
+            "dropoff": "Al Mouj Muscat"
+          },
+          {
+            "id": "mct-muttrah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "MCT to Muttrah Corniche & Old Muscat",
+            "titleAr": "من مطار مسقط الدولي إلى كورنيش مطرح ومسقط القديمة",
+            "price": "From OMR 40",
+            "priceAr": "ابتداءً من 40 ر.ع",
+            "pickup": "Muscat International Airport (MCT)",
+            "dropoff": "Muttrah Corniche"
+          },
+          {
+            "id": "muscat-mosque",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Muscat Hotels to Sultan Qaboos Grand Mosque",
+            "titleAr": "من فنادق مسقط إلى جامع السلطان قابوس الأكبر",
+            "price": "From OMR 25",
+            "priceAr": "ابتداءً من 25 ر.ع",
+            "pickup": "Muscat Hotels",
+            "dropoff": "Grand Mosque"
+          },
+          {
+            "id": "muscat-nizwa",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Muscat to Nizwa Historic Fort",
+            "titleAr": "من مسقط إلى قلعة نزوى التاريخية",
+            "price": "From OMR 85",
+            "priceAr": "ابتداءً من 85 ر.ع",
+            "pickup": "Muscat",
+            "dropoff": "Nizwa Fort"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000519-36oqbb0wx",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في مسقط",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000519-obvhmxie3",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في مسقط.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}
