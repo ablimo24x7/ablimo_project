@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "united-arab-emirates/ajman",
+  "countrySlug": "united-arab-emirates",
+  "citySlug": "ajman",
+  "path": "/locations/united-arab-emirates/ajman",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for ajman (united-arab-emirates)",
+  "exportedAt": "2026-11-10T12:32:14.456Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310002796-ispj71j15",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AJMAN",
+          "title": "Ajman",
+          "description": "Coastal and swiftly expanding, Ajman deserves travel that keeps pace. AB provides premium chauffeur transfers along the Corniche, to Al Zorah golf and beach resorts, and onwards to Dubai and Sharjah international airports.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Dubai International (DXB)",
+          "dropoffDefault": "Ajman Corniche",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310002796-535vgmsjf",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AJMAN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002796-b0w7jff3y",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Ajman and beyond"
+        },
+        "items": [
+          {
+            "id": "dxb-ajman",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DXB to Ajman Corniche",
+            "titleAr": "من مطار دبي إلى كورنيش عجمان",
+            "price": "From AED 320",
+            "priceAr": "ابتداءً من 320 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Ajman Corniche"
+          },
+          {
+            "id": "shj-zorah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to Al Zorah Resort",
+            "titleAr": "من مطار الشارقة إلى منتجع الزورا بعجمان",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "Al Zorah, Ajman"
+          },
+          {
+            "id": "ajman-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Ajman to Downtown Dubai",
+            "titleAr": "من عجمان إلى وسط مدينة دبي",
+            "price": "From AED 350",
+            "priceAr": "ابتداءً من 350 درهم",
+            "pickup": "Ajman",
+            "dropoff": "Downtown Dubai"
+          },
+          {
+            "id": "ajman-sharjah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Ajman to Sharjah Al Majaz",
+            "titleAr": "من عجمان إلى واجهة المجاز بالشارقة",
+            "price": "From AED 180",
+            "priceAr": "ابتداءً من 180 درهم",
+            "pickup": "Ajman",
+            "dropoff": "Al Majaz, Sharjah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002796-l71uyzln4",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AJMAN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002796-zxmryxlxj",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Ajman.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310002796-ispj71j15",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AJMAN",
+          "title": "Ajman",
+          "description": "Coastal and swiftly expanding, Ajman deserves travel that keeps pace. AB provides premium chauffeur transfers along the Corniche, to Al Zorah golf and beach resorts, and onwards to Dubai and Sharjah international airports.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Dubai International (DXB)",
+          "dropoffDefault": "Ajman Corniche",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310002796-535vgmsjf",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AJMAN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002796-b0w7jff3y",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Ajman and beyond"
+        },
+        "items": [
+          {
+            "id": "dxb-ajman",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DXB to Ajman Corniche",
+            "titleAr": "من مطار دبي إلى كورنيش عجمان",
+            "price": "From AED 320",
+            "priceAr": "ابتداءً من 320 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Ajman Corniche"
+          },
+          {
+            "id": "shj-zorah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to Al Zorah Resort",
+            "titleAr": "من مطار الشارقة إلى منتجع الزورا بعجمان",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "Al Zorah, Ajman"
+          },
+          {
+            "id": "ajman-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Ajman to Downtown Dubai",
+            "titleAr": "من عجمان إلى وسط مدينة دبي",
+            "price": "From AED 350",
+            "priceAr": "ابتداءً من 350 درهم",
+            "pickup": "Ajman",
+            "dropoff": "Downtown Dubai"
+          },
+          {
+            "id": "ajman-sharjah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Ajman to Sharjah Al Majaz",
+            "titleAr": "من عجمان إلى واجهة المجاز بالشارقة",
+            "price": "From AED 180",
+            "priceAr": "ابتداءً من 180 درهم",
+            "pickup": "Ajman",
+            "dropoff": "Al Majaz, Sharjah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002796-l71uyzln4",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AJMAN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002796-zxmryxlxj",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Ajman.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310002796-g18cdl0m0",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في عجمان",
+          "title": "عجمان",
+          "description": "إمارة ساحلية هادئة تشهد نمواً متسارعاً. توفر إيه بي ليمو خدمات سائق خاص بطول الكورنيش وإلى منتجعات الزوراه الفاخرة بالإضافة إلى رحلات مباشرة لمطاري دبي والشارقة الدوليين.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Dubai International (DXB)",
+          "dropoffDefault": "Ajman Corniche",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310002796-e0jk3ab72",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول عجمان",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002796-5gkg67g6m",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء عجمان وخارجها"
+        },
+        "items": [
+          {
+            "id": "dxb-ajman",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DXB to Ajman Corniche",
+            "titleAr": "من مطار دبي إلى كورنيش عجمان",
+            "price": "From AED 320",
+            "priceAr": "ابتداءً من 320 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Ajman Corniche"
+          },
+          {
+            "id": "shj-zorah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to Al Zorah Resort",
+            "titleAr": "من مطار الشارقة إلى منتجع الزورا بعجمان",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "Al Zorah, Ajman"
+          },
+          {
+            "id": "ajman-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Ajman to Downtown Dubai",
+            "titleAr": "من عجمان إلى وسط مدينة دبي",
+            "price": "From AED 350",
+            "priceAr": "ابتداءً من 350 درهم",
+            "pickup": "Ajman",
+            "dropoff": "Downtown Dubai"
+          },
+          {
+            "id": "ajman-sharjah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Ajman to Sharjah Al Majaz",
+            "titleAr": "من عجمان إلى واجهة المجاز بالشارقة",
+            "price": "From AED 180",
+            "priceAr": "ابتداءً من 180 درهم",
+            "pickup": "Ajman",
+            "dropoff": "Al Majaz, Sharjah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002796-vxmh62hgm",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في عجمان",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002796-pqbdig2hu",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في عجمان.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

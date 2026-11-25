@@ -1,0 +1,323 @@
+"use client";
+
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+import { toast } from "sonner";
+import { Plus, Pencil, Trash2, ChevronLeft, ChevronRight, Search } from "lucide-react";
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { SERVICE_OPTIONS } from "@/lib/constants";
+import { usePermissions } from "@/hooks/use-permissions";
+
+const SERVICE_FILTER_OPTIONS = [
+  { slug: "all", label: "All Services" },
+  ...SERVICE_OPTIONS,
+] as const;
+
+const PAGE_SIZE = 50;
+
+type Post = {
+  _id: string;
+  title: string;
+  slug: string;
+  status: string;
+  templateType: string;
+  serviceSlug: string;
+  countrySlug: string;
+  citySlug: string;
+  categoryLabel?: string;
+  views: number;
+  date: string;
+};
+
+/**
+ * Shared posts list. Renders standalone blog posts by default; the Services
+ * ▸ Country/City Services views reuse it with a forced service view.
+ */
+export function PostsPageContent({
+  forcedView,
+  heading = "Posts",
+}: {
+  forcedView?: "country" | "city";
+  heading?: string;
+} = {}) {
+  const queryClient = useQueryClient();
+  const searchParams = useSearchParams();
+  const viewParam = forcedView ?? searchParams.get("view") ?? "blog";
+  const templateTypeFilter =
+    viewParam === "country" ? "service-country" : viewParam === "city" ? "service-city" : "blog";
+  const isBlogView = templateTypeFilter === "blog";
+  const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [serviceFilter, setServiceFilter] = useState("all");
+  const [search, setSearch] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
+  const [page, setPage] = useState(1);
+  const { canCreate, canDelete } = usePermissions();
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setDebouncedSearch(search);
+      setPage(1);
+    }, 300);
+    return () => clearTimeout(t);
+  }, [search]);
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["posts", serviceFilter, templateTypeFilter, page, debouncedSearch],
+    queryFn: async () => {
+      const params = new URLSearchParams();
+      if (serviceFilter !== "all") params.set("service", serviceFilter);
+      if (templateTypeFilter) params.set("templateType", templateTypeFilter);
+      if (debouncedSearch) params.set("q", debouncedSearch);
+      params.set("page", String(page));
+      params.set("limit", String(PAGE_SIZE));
+      const qs = params.toString();
+      const res = await fetch(`/api/articles${qs ? `?${qs}` : ""}`);
+      if (!res.ok) throw new Error("Failed");
+      return res.json() as Promise<{ items: Post[]; total: number; page: number; limit: number }>;
+    },
+  });
+
+  const totalCount = data?.total ?? 0;
+  const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
+
+  const deleteMutation = useMutation({
+    mutationFn: async (id: string) => {
+      const res = await fetch(`/api/articles/${id}`, { method: "DELETE" });
+      if (!res.ok) throw new Error("Failed");
+    },
+    onSuccess: () => {
+      toast.success("Post deleted");
+      queryClient.invalidateQueries({ queryKey: ["posts"] });
+      setDeleteId(null);
+    },
+    onError: () => toast.error("Delete failed"),
+  });
+
+  const posts = data?.items ?? [];
+
+  return (
+    <div className="space-y-4 px-4 lg:px-6">
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold">{heading}</h2>
+        {canCreate && (
+          <Button asChild>
+            <Link href={templateTypeFilter === "service-city" ? "/dashboard/posts/new?type=city" : templateTypeFilter === "service-country" ? "/dashboard/posts/new?type=country" : "/dashboard/posts/new"}>
+              <Plus className="mr-2 h-4 w-4" /> New Post
+            </Link>
+          </Button>
+        )}
+      </div>
+
+      <div className="flex flex-wrap items-center gap-3">
+        {!isBlogView && (
+          <Select value={serviceFilter} onValueChange={(v) => { if (v) { setServiceFilter(v); setPage(1); } }}>
+            <SelectTrigger className="w-[220px]">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {SERVICE_FILTER_OPTIONS.map((s) => (
+                <SelectItem key={s.slug} value={s.slug}>{s.label}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        )}
+        <div className="relative w-full max-w-xs">
+          <Search className="pointer-events-none absolute top-1/2 left-2.5 size-3.5 -translate-y-1/2 text-muted-foreground" />
+          <Input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search by title or slug..."
+            className="pl-8"
+          />
+        </div>
+        {!isLoading && (
+          <span className="text-sm text-muted-foreground tabular-nums">
+            {totalCount} {isBlogView
+              ? totalCount === 1 ? "post" : "posts"
+              : totalCount === 1 ? "article" : "articles"}
+          </span>
+        )}
+      </div>
+
+      <Card>
+        <CardContent className="p-0">
+          {isLoading ? (
+            <div className="p-4 space-y-2">
+              {[...Array(5)].map((_, i) => <Skeleton key={i} className="h-12 w-full" />)}
+            </div>
+          ) : (
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Title</TableHead>
+                  {isBlogView ? (
+                    <TableHead>Category</TableHead>
+                  ) : (
+                    <>
+                      <TableHead>Service</TableHead>
+                      <TableHead>Location</TableHead>
+                    </>
+                  )}
+                  <TableHead>Status</TableHead>
+                  <TableHead className="text-right">Views</TableHead>
+                  <TableHead className="w-24">Actions</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {posts.length === 0 ? (
+                  <TableRow>
+                    <TableCell colSpan={isBlogView ? 5 : 6} className="py-8 text-center text-muted-foreground">
+                      {canCreate
+                        ? isBlogView
+                          ? "No blog posts yet. Create your first post."
+                          : "No posts yet. Create your first post."
+                        : "No posts found."}
+                    </TableCell>
+                  </TableRow>
+                ) : (
+                  posts.map((p) => (
+                    <TableRow key={p._id}>
+                      <TableCell>
+                        <div className="font-medium">{p.title}</div>
+                        <div className="text-xs text-muted-foreground">
+                          {isBlogView ? `/blogs/${p.slug}` : `/${p.slug}`}
+                        </div>
+                      </TableCell>
+                      {isBlogView ? (
+                        <TableCell><Badge variant="outline">{p.categoryLabel || "—"}</Badge></TableCell>
+                      ) : (
+                        <>
+                          <TableCell><Badge variant="outline" className="capitalize">{p.serviceSlug || "—"}</Badge></TableCell>
+                          <TableCell className="text-sm text-muted-foreground">
+                            {[p.countrySlug, p.citySlug].filter(Boolean).join(" / ") || "—"}
+                          </TableCell>
+                        </>
+                      )}
+                      <TableCell><Badge variant={p.status === "published" ? "default" : "secondary"} className="capitalize">{p.status}</Badge></TableCell>
+                      <TableCell className="text-right tabular-nums">{p.views ?? 0}</TableCell>
+                      <TableCell>
+                        <div className="flex gap-1">
+                          <Button variant="ghost" size="sm" asChild>
+                            <Link href={`/dashboard/posts/${p._id}/edit`}><Pencil className="h-4 w-4" /></Link>
+                          </Button>
+                          {canDelete && (
+                            <Button variant="ghost" size="sm" onClick={() => setDeleteId(p._id)}>
+                              <Trash2 className="h-4 w-4 text-destructive" />
+                            </Button>
+                          )}
+                        </div>
+                      </TableCell>
+                    </TableRow>
+                  ))
+                )}
+              </TableBody>
+            </Table>
+          )}
+        </CardContent>
+      </Card>
+
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-muted-foreground">
+            Page {page} of {totalPages} ({totalCount} total)
+          </p>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={page <= 1}
+              onClick={() => setPage(p => Math.max(1, p - 1))}
+            >
+              <ChevronLeft className="h-4 w-4" /> Previous
+            </Button>
+            {Array.from({ length: Math.min(totalPages, 7) }, (_, i) => {
+              let pageNum: number;
+              if (totalPages <= 7) {
+                pageNum = i + 1;
+              } else if (page <= 4) {
+                pageNum = i + 1;
+              } else if (page >= totalPages - 3) {
+                pageNum = totalPages - 6 + i;
+              } else {
+                pageNum = page - 3 + i;
+              }
+              return (
+                <Button
+                  key={pageNum}
+                  variant={pageNum === page ? "default" : "outline"}
+                  size="sm"
+                  className="min-w-[36px]"
+                  onClick={() => setPage(pageNum)}
+                >
+                  {pageNum}
+                </Button>
+              );
+            })}
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={page >= totalPages}
+              onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+            >
+              Next <ChevronRight className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      )}
+
+      <AlertDialog open={!!deleteId} onOpenChange={() => setDeleteId(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete Post?</AlertDialogTitle>
+            <AlertDialogDescription>This cannot be undone.</AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={() => deleteId && deleteMutation.mutate(deleteId)} className="bg-destructive text-destructive-foreground">
+              Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </div>
+  );
+}
+
+export default function PostsPage() {
+  return (
+    <Suspense fallback={<div className="p-4"><Skeleton className="h-12 w-full" /></div>}>
+      <PostsPageContent />
+    </Suspense>
+  );
+}

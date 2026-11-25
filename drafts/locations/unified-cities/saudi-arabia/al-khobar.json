@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/al-khobar",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "al-khobar",
+  "path": "/locations/saudi-arabia/al-khobar",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for al-khobar (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.443Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309998264-4k2taa3pt",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL KHOBAR",
+          "title": "Al Khobar",
+          "description": "The Eastern Province's vibrant waterfront city, Al Khobar blends corporate towers with the scenic Corniche. AB provides executive chauffeur service from King Fahd International Airport, business transfers, and cross-causeway links to Bahrain.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Fahd International (DMM)",
+          "dropoffDefault": "Al Khobar Corniche",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-khobar-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998264-453p7vuu2",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL KHOBAR FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998264-ovuren8kt",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Khobar and beyond"
+        },
+        "items": [
+          {
+            "id": "dmm-khobar-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Al Khobar Corniche",
+            "titleAr": "من مطار الملك فهد إلى كورنيش الخبر",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Al Khobar Corniche"
+          },
+          {
+            "id": "khobar-causeway",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Khobar to King Fahd Causeway",
+            "titleAr": "من الخبر إلى جسر الملك فهد (حدود البحرين)",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "Al Khobar",
+            "dropoff": "King Fahd Causeway"
+          },
+          {
+            "id": "khobar-dhahran",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Khobar to Dhahran Techno Valley",
+            "titleAr": "من الخبر إلى وادي الظهران للتقنية",
+            "price": "From SAR 200",
+            "priceAr": "ابتداءً من 200 ر.س",
+            "pickup": "Al Khobar",
+            "dropoff": "Dhahran Techno Valley"
+          },
+          {
+            "id": "khobar-dammam",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Khobar to Dammam",
+            "titleAr": "من الخبر إلى الدمام",
+            "price": "From SAR 180",
+            "priceAr": "ابتداءً من 180 ر.س",
+            "pickup": "Al Khobar",
+            "dropoff": "Dammam"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998264-vaan88t9y",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL KHOBAR",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998264-dgqfdyvk1",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Khobar.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309998264-4k2taa3pt",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL KHOBAR",
+          "title": "Al Khobar",
+          "description": "The Eastern Province's vibrant waterfront city, Al Khobar blends corporate towers with the scenic Corniche. AB provides executive chauffeur service from King Fahd International Airport, business transfers, and cross-causeway links to Bahrain.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Fahd International (DMM)",
+          "dropoffDefault": "Al Khobar Corniche",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-khobar-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998264-453p7vuu2",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL KHOBAR FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998264-ovuren8kt",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Khobar and beyond"
+        },
+        "items": [
+          {
+            "id": "dmm-khobar-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Al Khobar Corniche",
+            "titleAr": "من مطار الملك فهد إلى كورنيش الخبر",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Al Khobar Corniche"
+          },
+          {
+            "id": "khobar-causeway",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Khobar to King Fahd Causeway",
+            "titleAr": "من الخبر إلى جسر الملك فهد (حدود البحرين)",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "Al Khobar",
+            "dropoff": "King Fahd Causeway"
+          },
+          {
+            "id": "khobar-dhahran",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Khobar to Dhahran Techno Valley",
+            "titleAr": "من الخبر إلى وادي الظهران للتقنية",
+            "price": "From SAR 200",
+            "priceAr": "ابتداءً من 200 ر.س",
+            "pickup": "Al Khobar",
+            "dropoff": "Dhahran Techno Valley"
+          },
+          {
+            "id": "khobar-dammam",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Khobar to Dammam",
+            "titleAr": "من الخبر إلى الدمام",
+            "price": "From SAR 180",
+            "priceAr": "ابتداءً من 180 ر.س",
+            "pickup": "Al Khobar",
+            "dropoff": "Dammam"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998264-vaan88t9y",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL KHOBAR",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998264-dgqfdyvk1",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Khobar.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309998264-sdburgeeq",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الخبر",
+          "title": "الخبر",
+          "description": "واجهة المنطقة الشرقية البحرية الراقية، تجمع الخبر بين مقرات كبرى الشركات والكورنيش الخلاب. تقدم إيه بي ليمو خدمات سائق تنفيذي من مطار الملك فهد الدولي ونقل الأعمال وتوصيل مباشر إلى البحرين عبر جسر الملك فهد.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "King Fahd International (DMM)",
+          "dropoffDefault": "Al Khobar Corniche",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-khobar-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998264-ux6q1cnf7",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الخبر",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998264-ev5kcib5o",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الخبر وخارجها"
+        },
+        "items": [
+          {
+            "id": "dmm-khobar-corniche",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Al Khobar Corniche",
+            "titleAr": "من مطار الملك فهد إلى كورنيش الخبر",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Al Khobar Corniche"
+          },
+          {
+            "id": "khobar-causeway",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Khobar to King Fahd Causeway",
+            "titleAr": "من الخبر إلى جسر الملك فهد (حدود البحرين)",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "Al Khobar",
+            "dropoff": "King Fahd Causeway"
+          },
+          {
+            "id": "khobar-dhahran",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Khobar to Dhahran Techno Valley",
+            "titleAr": "من الخبر إلى وادي الظهران للتقنية",
+            "price": "From SAR 200",
+            "priceAr": "ابتداءً من 200 ر.س",
+            "pickup": "Al Khobar",
+            "dropoff": "Dhahran Techno Valley"
+          },
+          {
+            "id": "khobar-dammam",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Khobar to Dammam",
+            "titleAr": "من الخبر إلى الدمام",
+            "price": "From SAR 180",
+            "priceAr": "ابتداءً من 180 ر.س",
+            "pickup": "Al Khobar",
+            "dropoff": "Dammam"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998264-n5m7c7otj",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الخبر",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998264-51me9oj6b",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الخبر.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

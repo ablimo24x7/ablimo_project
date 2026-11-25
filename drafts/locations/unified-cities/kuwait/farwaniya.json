@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "kuwait/farwaniya",
+  "countrySlug": "kuwait",
+  "citySlug": "farwaniya",
+  "path": "/locations/kuwait/farwaniya",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for farwaniya (kuwait)",
+  "exportedAt": "2026-11-10T12:32:14.438Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310006671-qsign2h0a",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN FARWANIYA",
+          "title": "Farwaniya",
+          "description": "Home to Kuwait International Airport and The Avenues Mall, Farwaniya is Kuwait's premier gateway. AB delivers prompt, seamless airport meet-and-greets and executive transportation across the governorate.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Kuwait International (KWI)",
+          "dropoffDefault": "The Avenues Mall, Farwaniya",
+          "skyline": "kuwait"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310006671-ts23mabw3",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE FARWANIYA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006671-i0sbvdfub",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Farwaniya and beyond"
+        },
+        "items": [
+          {
+            "id": "kwi-farwaniya",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "KWI to Farwaniya Hotels & Business",
+            "titleAr": "من مطار الكويت الدولي إلى فنادق وأعمال الفروانية",
+            "price": "From KWD 25",
+            "priceAr": "ابتداءً من 25 د.ك",
+            "pickup": "Kuwait International Airport (KWI)",
+            "dropoff": "Farwaniya Hotels"
+          },
+          {
+            "id": "farwaniya-avenues",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Farwaniya to The Avenues Mall",
+            "titleAr": "من الفروانية إلى مجمع الأفنيوز",
+            "price": "From KWD 20",
+            "priceAr": "ابتداءً من 20 د.ك",
+            "pickup": "Farwaniya",
+            "dropoff": "The Avenues Mall"
+          },
+          {
+            "id": "farwaniya-city",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Farwaniya to Kuwait City Financial Center",
+            "titleAr": "من الفروانية إلى الحي المالي بمدينة الكويت",
+            "price": "From KWD 30",
+            "priceAr": "ابتداءً من 30 د.ك",
+            "pickup": "Farwaniya",
+            "dropoff": "Kuwait City"
+          },
+          {
+            "id": "farwaniya-stadium",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Farwaniya to Jaber Al Ahmad International Stadium",
+            "titleAr": "من الفروانية إلى استاد جابر الأحمد الدولي",
+            "price": "From KWD 22",
+            "priceAr": "ابتداءً من 22 د.ك",
+            "pickup": "Farwaniya",
+            "dropoff": "Jaber Stadium"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006671-pg0azn66j",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN FARWANIYA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006671-xww35zepo",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Farwaniya.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310006671-qsign2h0a",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN FARWANIYA",
+          "title": "Farwaniya",
+          "description": "Home to Kuwait International Airport and The Avenues Mall, Farwaniya is Kuwait's premier gateway. AB delivers prompt, seamless airport meet-and-greets and executive transportation across the governorate.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Kuwait International (KWI)",
+          "dropoffDefault": "The Avenues Mall, Farwaniya",
+          "skyline": "kuwait"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310006671-ts23mabw3",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE FARWANIYA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006671-i0sbvdfub",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Farwaniya and beyond"
+        },
+        "items": [
+          {
+            "id": "kwi-farwaniya",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "KWI to Farwaniya Hotels & Business",
+            "titleAr": "من مطار الكويت الدولي إلى فنادق وأعمال الفروانية",
+            "price": "From KWD 25",
+            "priceAr": "ابتداءً من 25 د.ك",
+            "pickup": "Kuwait International Airport (KWI)",
+            "dropoff": "Farwaniya Hotels"
+          },
+          {
+            "id": "farwaniya-avenues",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Farwaniya to The Avenues Mall",
+            "titleAr": "من الفروانية إلى مجمع الأفنيوز",
+            "price": "From KWD 20",
+            "priceAr": "ابتداءً من 20 د.ك",
+            "pickup": "Farwaniya",
+            "dropoff": "The Avenues Mall"
+          },
+          {
+            "id": "farwaniya-city",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Farwaniya to Kuwait City Financial Center",
+            "titleAr": "من الفروانية إلى الحي المالي بمدينة الكويت",
+            "price": "From KWD 30",
+            "priceAr": "ابتداءً من 30 د.ك",
+            "pickup": "Farwaniya",
+            "dropoff": "Kuwait City"
+          },
+          {
+            "id": "farwaniya-stadium",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Farwaniya to Jaber Al Ahmad International Stadium",
+            "titleAr": "من الفروانية إلى استاد جابر الأحمد الدولي",
+            "price": "From KWD 22",
+            "priceAr": "ابتداءً من 22 د.ك",
+            "pickup": "Farwaniya",
+            "dropoff": "Jaber Stadium"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006671-pg0azn66j",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN FARWANIYA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006671-xww35zepo",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Farwaniya.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310006671-7qxotg72g",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الفروانية",
+          "title": "الفروانية",
+          "description": "بوابة الكويت الجوية الأولى وحاضنة مجمع الأفنيوز الشهير. تقدم إيه بي ليمو خدمات استقبال سريعة وراقية من المطار وتنقلات تنفيذية في جميع مناطق المحافظة والعاصمة.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Kuwait International (KWI)",
+          "dropoffDefault": "The Avenues Mall, Farwaniya",
+          "skyline": "kuwait"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310006671-1nca3n4tt",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الفروانية",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006671-4or0w2tzb",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الفروانية وخارجها"
+        },
+        "items": [
+          {
+            "id": "kwi-farwaniya",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "KWI to Farwaniya Hotels & Business",
+            "titleAr": "من مطار الكويت الدولي إلى فنادق وأعمال الفروانية",
+            "price": "From KWD 25",
+            "priceAr": "ابتداءً من 25 د.ك",
+            "pickup": "Kuwait International Airport (KWI)",
+            "dropoff": "Farwaniya Hotels"
+          },
+          {
+            "id": "farwaniya-avenues",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Farwaniya to The Avenues Mall",
+            "titleAr": "من الفروانية إلى مجمع الأفنيوز",
+            "price": "From KWD 20",
+            "priceAr": "ابتداءً من 20 د.ك",
+            "pickup": "Farwaniya",
+            "dropoff": "The Avenues Mall"
+          },
+          {
+            "id": "farwaniya-city",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Farwaniya to Kuwait City Financial Center",
+            "titleAr": "من الفروانية إلى الحي المالي بمدينة الكويت",
+            "price": "From KWD 30",
+            "priceAr": "ابتداءً من 30 د.ك",
+            "pickup": "Farwaniya",
+            "dropoff": "Kuwait City"
+          },
+          {
+            "id": "farwaniya-stadium",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Farwaniya to Jaber Al Ahmad International Stadium",
+            "titleAr": "من الفروانية إلى استاد جابر الأحمد الدولي",
+            "price": "From KWD 22",
+            "priceAr": "ابتداءً من 22 د.ك",
+            "pickup": "Farwaniya",
+            "dropoff": "Jaber Stadium"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006671-2c102kpnx",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الفروانية",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006671-vg1bil5fq",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الفروانية.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

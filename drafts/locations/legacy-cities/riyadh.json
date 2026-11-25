@@ -1,0 +1,2427 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/riyadh",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "riyadh",
+  "path": "/locations/saudi-arabia/riyadh",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for riyadh (saudi-arabia)",
+  "exportedAt": "2026-11-10T11:52:18.039Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538039-ri11kuaw7",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Riyadh",
+          "titleHighlight": "",
+          "description": "AB delivers executive chauffeur service Riyadh solutions tailored for corporate leaders, diplomatic delegations and international visitors. Our Riyadh network connects King Khalid International Airport (RUH) directly with central commercial hubs, private residences and government ministries.\n\nEvery itinerary across Riyadh operates under active central dispatch supervision to maintain absolute punctuality, refined passenger comfort and discreet execution."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Riyadh skyline architectural panorama"
+        }
+      },
+      {
+        "id": "sec-1794311538039-7isebjex9",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-tuf1c0wnr",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Riyadh fleet",
+          "heading": "Choose your Riyadh chauffeur class",
+          "description": "Every vehicle in our Riyadh fleet is GPS tracked and detailed before each journey. Our fleet structure accommodates solo executive travel, visiting delegations, high profile delegations and coordinated corporate summit logistics across the capital.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "riyadh-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image2.jpg",
+            "imageAlt": "Standard Sedan parked in Riyadh",
+            "category": "Standard Sedan",
+            "name": "Typical model: or similar [Confirm]",
+            "idealFor": "Ideal for: Individual corporate business travel",
+            "description": "Comfortable executive travel across central Riyadh districts with climate control, bottled water and refined seating for daily meetings or city transfers.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image3.jpg",
+            "imageAlt": "Business Sedan in Riyadh business hub",
+            "category": "Business Sedan",
+            "name": "Typical model: or similar [Confirm]",
+            "idealFor": "Ideal for: Senior managers and visiting executives",
+            "description": "Premium German saloons engineered for quiet productivity between corporate engagements in Riyadh financial hubs, equipped with device charging and plush upholstery.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image4.jpg",
+            "imageAlt": "First Class Sedan Mercedes S Class in Riyadh",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: Diplomatic protocol and VIP passengers",
+            "description": "Flagship luxury vehicles offering supreme acoustic isolation, rear executive legroom and bespoke private driver Riyadh service for state guests and corporate leaders.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image5.jpg",
+            "imageAlt": "Executive SUV Cadillac Escalade in Riyadh",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Small executive teams and delegations",
+            "description": "Commanding cabin space, ample luggage volume and elevated safety for executive delegations navigating Riyadh expressways and regional transfer corridors.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image6.jpg",
+            "imageAlt": "Premium MPV Mercedes V Class in Riyadh",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Roadshow teams and conference groups",
+            "description": "Configured with face to face conference seating, spacious sliding access and silent cabin climate systems for business roadshows across the Kingdom capital.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image7.jpg",
+            "imageAlt": "Executive Van parked in central Riyadh",
+            "category": "Executive Van",
+            "name": "Typical model: or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate group transit and summits",
+            "description": "Specialised group transport offering generous head clearance, individual seating and dedicated luggage bays for summit delegations travelling throughout Riyadh.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-jt5f48z58",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Riyadh and beyond",
+          "description": "AB coordinates scheduled point to point transfers, airport arrivals and regional intercity itineraries. Each route features dedicated vehicle preparation, active GPS navigation and professional chauffeurs familiar with local traffic patterns.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "riyadh-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "RUH to KAFD",
+            "description": "Direct connection from King Khalid International Airport terminal to the financial towers of King Abdullah Financial District.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "RUH to Diplomatic Quarter",
+            "description": "Discreet transit from airport arrival halls to embassies, international organisations and residences in the Diplomatic Quarter.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Riyadh to Diriyah",
+            "description": "Seamless transfers between central Riyadh hotels and the historic cultural precinct of At Turaif in Diriyah.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-4",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Riyadh to Riyadh Front",
+            "description": "Fast corporate mobility linking downtown commercial offices with exhibition centres and corporate campuses at Riyadh Front.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Dammam",
+            "description": "Long distance highway transit across the Eastern Province corridor with spacious executive seating and verified rest halts.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-dammam",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Al Khobar",
+            "description": "Dedicated chauffeured intercity transfer connecting central Riyadh corporate offices directly with Al Khobar waterfront business districts.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-al-khobar",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-7",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Al Qassim (Buraydah)",
+            "description": "Direct northern transit serving agricultural and commercial headquarters in Buraydah with comfortable cabin amenities.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-al-qasim",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-8",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Jeddah",
+            "description": "Transpeninsular long distance chauffeur service linking the political capital with the commercial hub on the Red Sea coast.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-jeddah",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-0vb48ltf1",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Riyadh",
+          "heading": "One partner for every movement in Riyadh",
+          "description": "AB coordinates comprehensive ground mobility programs designed to support executive travel, corporate events, large groups and specialised leisure itineraries throughout the capital."
+        },
+        "items": [
+          {
+            "id": "riyadh-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in Riyadh",
+            "description": "Chauffeur & VIP in Riyadh for executive discretion, luxury sedans and bespoke daily driver arrangements.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Riyadh",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers in Riyadh",
+            "description": "Airport Transfers in Riyadh for terminal meet and greet coordination, luggage handling and punctual terminal departures.",
+            "actions": [
+              {
+                "label": "Airport Transfers in Riyadh",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-3",
+            "icon": "Briefcase",
+            "title": "Corporate Transportation in Riyadh",
+            "description": "Corporate Transportation in Riyadh for recurring executive commutes, multi stop roadshows and financial district client shuttles.",
+            "actions": [
+              {
+                "label": "Corporate Transportation in Riyadh",
+                "href": "/services/corporate-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-4",
+            "icon": "Users",
+            "title": "Event Transportation in Riyadh",
+            "description": "Event Transportation in Riyadh for trade exhibitions, governmental summits, international conferences and private corporate galas.",
+            "actions": [
+              {
+                "label": "Event Transportation in Riyadh",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-5",
+            "icon": "Shield",
+            "title": "Bus & Coach Hire in Riyadh",
+            "description": "Bus & Coach Hire in Riyadh for large delegate movements, staff transport contracts and high capacity charter requirements.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Riyadh",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-6",
+            "icon": "Map",
+            "title": "Tourism Transportation in Riyadh",
+            "description": "Tourism Transportation in Riyadh for guided heritage excursions, architectural visits and cultural travel programs.",
+            "actions": [
+              {
+                "label": "Tourism Transportation in Riyadh",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-s87i2lw49",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Khalid International Airport (RUH)",
+          "description": "Inbound flights at King Khalid International Airport (RUH) receive real time monitoring through our operations desk. Your professional chauffeur tracks flight movements, adjusts pickup timing for landing variances and conducts an indoor meet and greet with a clear passenger name board. The designated airport meeting point [Confirm] provides immediate visual orientation once you exit customs into the terminal arrival concourse.\n\nEvery commercial airport transfer includes generous complimentary waiting time [Confirm] to accommodate immigration lines and luggage reclaim. Chauffeurs assist with bags before escorting guests directly to the pre positioned executive car service outside the terminal curbside.",
+          "items": [
+            {
+              "id": "riyadh-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "riyadh-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "riyadh-apt-b-3",
+              "icon": "Clock",
+              "heading": "RUH to KAFD",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Khalid International Airport (RUH)"
+        }
+      },
+      {
+        "id": "sec-1794311538039-urjpjs57w",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-l7a4m3cfk",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Riyadh",
+          "description": "AB operates round the clock across all urban sectors, commercial districts, exhibition campuses and heritage landmarks of the Saudi capital. Our dispatch system maintains active vehicle coverage across high density corporate zones and outlying government compounds.",
+          "items": [
+            {
+              "id": "riyadh-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "King Abdullah Financial District (KAFD) · Olaya Business District · Digital City"
+            },
+            {
+              "id": "riyadh-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Riyadh International Convention and Exhibition Center · The Arena Riyadh · Riyadh Front Exhibition Center"
+            },
+            {
+              "id": "riyadh-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Diriyah Historic District · Al Bujairi Heritage District · Kingdom Centre Sky Bridge"
+            },
+            {
+              "id": "riyadh-cov-4",
+              "icon": "Shield",
+              "heading": "Government and Industry coverage",
+              "description": "Diplomatic Quarter, Digital City Government Complex, King Abdullah Petroleum Studies and Research Center."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Riyadh"
+        }
+      },
+      {
+        "id": "sec-1794311538039-28nfqqwf8",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Riyadh",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-820uglbcd",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB operations in Riyadh",
+          "description": "Headquartered in Riyadh, AB provides centralised control for managed ground transportation throughout the Kingdom and the wider Gulf region. Our regional operations centre maintains continuous flight tracking, fleet dispatch and chauffeur coordination round the clock.",
+          "items": [
+            {
+              "id": "riyadh-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh — Headquarters and 24/7 dispatch",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "riyadh-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538039-tftjy9azx",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Riyadh: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538039-y10e1x6o2",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Riyadh.",
+          "description": "Contact our round the clock operations centre at +966 58 111 8720 to confirm your chauffeur service Riyadh booking or reserve executive ground fleets across Saudi Arabia.",
+          "subheading": "Reserve your Riyadh executive transport",
+          "subdescription": "Select your vehicle class or submit delegate transit schedules for complete corporate mobility management."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538039-ri11kuaw7",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Riyadh",
+          "titleHighlight": "",
+          "description": "AB delivers executive chauffeur service Riyadh solutions tailored for corporate leaders, diplomatic delegations and international visitors. Our Riyadh network connects King Khalid International Airport (RUH) directly with central commercial hubs, private residences and government ministries.\n\nEvery itinerary across Riyadh operates under active central dispatch supervision to maintain absolute punctuality, refined passenger comfort and discreet execution."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Riyadh skyline architectural panorama"
+        }
+      },
+      {
+        "id": "sec-1794311538039-7isebjex9",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-tuf1c0wnr",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Riyadh fleet",
+          "heading": "Choose your Riyadh chauffeur class",
+          "description": "Every vehicle in our Riyadh fleet is GPS tracked and detailed before each journey. Our fleet structure accommodates solo executive travel, visiting delegations, high profile delegations and coordinated corporate summit logistics across the capital.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "riyadh-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image2.jpg",
+            "imageAlt": "Standard Sedan parked in Riyadh",
+            "category": "Standard Sedan",
+            "name": "Typical model: or similar [Confirm]",
+            "idealFor": "Ideal for: Individual corporate business travel",
+            "description": "Comfortable executive travel across central Riyadh districts with climate control, bottled water and refined seating for daily meetings or city transfers.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image3.jpg",
+            "imageAlt": "Business Sedan in Riyadh business hub",
+            "category": "Business Sedan",
+            "name": "Typical model: or similar [Confirm]",
+            "idealFor": "Ideal for: Senior managers and visiting executives",
+            "description": "Premium German saloons engineered for quiet productivity between corporate engagements in Riyadh financial hubs, equipped with device charging and plush upholstery.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image4.jpg",
+            "imageAlt": "First Class Sedan Mercedes S Class in Riyadh",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: Diplomatic protocol and VIP passengers",
+            "description": "Flagship luxury vehicles offering supreme acoustic isolation, rear executive legroom and bespoke private driver Riyadh service for state guests and corporate leaders.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image5.jpg",
+            "imageAlt": "Executive SUV Cadillac Escalade in Riyadh",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Small executive teams and delegations",
+            "description": "Commanding cabin space, ample luggage volume and elevated safety for executive delegations navigating Riyadh expressways and regional transfer corridors.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image6.jpg",
+            "imageAlt": "Premium MPV Mercedes V Class in Riyadh",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Roadshow teams and conference groups",
+            "description": "Configured with face to face conference seating, spacious sliding access and silent cabin climate systems for business roadshows across the Kingdom capital.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image7.jpg",
+            "imageAlt": "Executive Van parked in central Riyadh",
+            "category": "Executive Van",
+            "name": "Typical model: or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate group transit and summits",
+            "description": "Specialised group transport offering generous head clearance, individual seating and dedicated luggage bays for summit delegations travelling throughout Riyadh.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-jt5f48z58",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Riyadh and beyond",
+          "description": "AB coordinates scheduled point to point transfers, airport arrivals and regional intercity itineraries. Each route features dedicated vehicle preparation, active GPS navigation and professional chauffeurs familiar with local traffic patterns.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "riyadh-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "RUH to KAFD",
+            "description": "Direct connection from King Khalid International Airport terminal to the financial towers of King Abdullah Financial District.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "RUH to Diplomatic Quarter",
+            "description": "Discreet transit from airport arrival halls to embassies, international organisations and residences in the Diplomatic Quarter.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Riyadh to Diriyah",
+            "description": "Seamless transfers between central Riyadh hotels and the historic cultural precinct of At Turaif in Diriyah.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-4",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Riyadh to Riyadh Front",
+            "description": "Fast corporate mobility linking downtown commercial offices with exhibition centres and corporate campuses at Riyadh Front.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Dammam",
+            "description": "Long distance highway transit across the Eastern Province corridor with spacious executive seating and verified rest halts.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-dammam",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Al Khobar",
+            "description": "Dedicated chauffeured intercity transfer connecting central Riyadh corporate offices directly with Al Khobar waterfront business districts.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-al-khobar",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-7",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Al Qassim (Buraydah)",
+            "description": "Direct northern transit serving agricultural and commercial headquarters in Buraydah with comfortable cabin amenities.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-al-qasim",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-8",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Jeddah",
+            "description": "Transpeninsular long distance chauffeur service linking the political capital with the commercial hub on the Red Sea coast.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-jeddah",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-0vb48ltf1",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Riyadh",
+          "heading": "One partner for every movement in Riyadh",
+          "description": "AB coordinates comprehensive ground mobility programs designed to support executive travel, corporate events, large groups and specialised leisure itineraries throughout the capital."
+        },
+        "items": [
+          {
+            "id": "riyadh-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in Riyadh",
+            "description": "Chauffeur & VIP in Riyadh for executive discretion, luxury sedans and bespoke daily driver arrangements.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Riyadh",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers in Riyadh",
+            "description": "Airport Transfers in Riyadh for terminal meet and greet coordination, luggage handling and punctual terminal departures.",
+            "actions": [
+              {
+                "label": "Airport Transfers in Riyadh",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-3",
+            "icon": "Briefcase",
+            "title": "Corporate Transportation in Riyadh",
+            "description": "Corporate Transportation in Riyadh for recurring executive commutes, multi stop roadshows and financial district client shuttles.",
+            "actions": [
+              {
+                "label": "Corporate Transportation in Riyadh",
+                "href": "/services/corporate-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-4",
+            "icon": "Users",
+            "title": "Event Transportation in Riyadh",
+            "description": "Event Transportation in Riyadh for trade exhibitions, governmental summits, international conferences and private corporate galas.",
+            "actions": [
+              {
+                "label": "Event Transportation in Riyadh",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-5",
+            "icon": "Shield",
+            "title": "Bus & Coach Hire in Riyadh",
+            "description": "Bus & Coach Hire in Riyadh for large delegate movements, staff transport contracts and high capacity charter requirements.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Riyadh",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-6",
+            "icon": "Map",
+            "title": "Tourism Transportation in Riyadh",
+            "description": "Tourism Transportation in Riyadh for guided heritage excursions, architectural visits and cultural travel programs.",
+            "actions": [
+              {
+                "label": "Tourism Transportation in Riyadh",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-s87i2lw49",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Khalid International Airport (RUH)",
+          "description": "Inbound flights at King Khalid International Airport (RUH) receive real time monitoring through our operations desk. Your professional chauffeur tracks flight movements, adjusts pickup timing for landing variances and conducts an indoor meet and greet with a clear passenger name board. The designated airport meeting point [Confirm] provides immediate visual orientation once you exit customs into the terminal arrival concourse.\n\nEvery commercial airport transfer includes generous complimentary waiting time [Confirm] to accommodate immigration lines and luggage reclaim. Chauffeurs assist with bags before escorting guests directly to the pre positioned executive car service outside the terminal curbside.",
+          "items": [
+            {
+              "id": "riyadh-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "riyadh-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "riyadh-apt-b-3",
+              "icon": "Clock",
+              "heading": "RUH to KAFD",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Khalid International Airport (RUH)"
+        }
+      },
+      {
+        "id": "sec-1794311538039-urjpjs57w",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-l7a4m3cfk",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Riyadh",
+          "description": "AB operates round the clock across all urban sectors, commercial districts, exhibition campuses and heritage landmarks of the Saudi capital. Our dispatch system maintains active vehicle coverage across high density corporate zones and outlying government compounds.",
+          "items": [
+            {
+              "id": "riyadh-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "King Abdullah Financial District (KAFD) · Olaya Business District · Digital City"
+            },
+            {
+              "id": "riyadh-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Riyadh International Convention and Exhibition Center · The Arena Riyadh · Riyadh Front Exhibition Center"
+            },
+            {
+              "id": "riyadh-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Diriyah Historic District · Al Bujairi Heritage District · Kingdom Centre Sky Bridge"
+            },
+            {
+              "id": "riyadh-cov-4",
+              "icon": "Shield",
+              "heading": "Government and Industry coverage",
+              "description": "Diplomatic Quarter, Digital City Government Complex, King Abdullah Petroleum Studies and Research Center."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Riyadh"
+        }
+      },
+      {
+        "id": "sec-1794311538039-28nfqqwf8",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Riyadh",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-820uglbcd",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB operations in Riyadh",
+          "description": "Headquartered in Riyadh, AB provides centralised control for managed ground transportation throughout the Kingdom and the wider Gulf region. Our regional operations centre maintains continuous flight tracking, fleet dispatch and chauffeur coordination round the clock.",
+          "items": [
+            {
+              "id": "riyadh-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh — Headquarters and 24/7 dispatch",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "riyadh-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538039-tftjy9azx",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Riyadh: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538039-y10e1x6o2",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Riyadh.",
+          "description": "Contact our round the clock operations centre at +966 58 111 8720 to confirm your chauffeur service Riyadh booking or reserve executive ground fleets across Saudi Arabia.",
+          "subheading": "Reserve your Riyadh executive transport",
+          "subdescription": "Select your vehicle class or submit delegate transit schedules for complete corporate mobility management."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538039-j1woqq1kv",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Riyadh",
+          "titleHighlight": "",
+          "description": "AB delivers executive chauffeur service Riyadh solutions tailored for corporate leaders, diplomatic delegations and international visitors. Our Riyadh network connects King Khalid International Airport (RUH) directly with central commercial hubs, private residences and government ministries.\n\nEvery itinerary across Riyadh operates under active central dispatch supervision to maintain absolute punctuality, refined passenger comfort and discreet execution."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Riyadh skyline architectural panorama"
+        }
+      },
+      {
+        "id": "sec-1794311538039-coepdoljl",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-45hyvlms5",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Riyadh fleet",
+          "heading": "Choose your Riyadh chauffeur class",
+          "description": "Every vehicle in our Riyadh fleet is GPS tracked and detailed before each journey. Our fleet structure accommodates solo executive travel, visiting delegations, high profile delegations and coordinated corporate summit logistics across the capital.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "riyadh-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image2.jpg",
+            "imageAlt": "Standard Sedan parked in Riyadh",
+            "category": "Standard Sedan",
+            "name": "Typical model: or similar [Confirm]",
+            "idealFor": "Ideal for: Individual corporate business travel",
+            "description": "Comfortable executive travel across central Riyadh districts with climate control, bottled water and refined seating for daily meetings or city transfers.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image3.jpg",
+            "imageAlt": "Business Sedan in Riyadh business hub",
+            "category": "Business Sedan",
+            "name": "Typical model: or similar [Confirm]",
+            "idealFor": "Ideal for: Senior managers and visiting executives",
+            "description": "Premium German saloons engineered for quiet productivity between corporate engagements in Riyadh financial hubs, equipped with device charging and plush upholstery.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image4.jpg",
+            "imageAlt": "First Class Sedan Mercedes S Class in Riyadh",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: Diplomatic protocol and VIP passengers",
+            "description": "Flagship luxury vehicles offering supreme acoustic isolation, rear executive legroom and bespoke private driver Riyadh service for state guests and corporate leaders.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image5.jpg",
+            "imageAlt": "Executive SUV Cadillac Escalade in Riyadh",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Small executive teams and delegations",
+            "description": "Commanding cabin space, ample luggage volume and elevated safety for executive delegations navigating Riyadh expressways and regional transfer corridors.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image6.jpg",
+            "imageAlt": "Premium MPV Mercedes V Class in Riyadh",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Roadshow teams and conference groups",
+            "description": "Configured with face to face conference seating, spacious sliding access and silent cabin climate systems for business roadshows across the Kingdom capital.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image7.jpg",
+            "imageAlt": "Executive Van parked in central Riyadh",
+            "category": "Executive Van",
+            "name": "Typical model: or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate group transit and summits",
+            "description": "Specialised group transport offering generous head clearance, individual seating and dedicated luggage bays for summit delegations travelling throughout Riyadh.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-7z8bcph2j",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Riyadh and beyond",
+          "description": "AB coordinates scheduled point to point transfers, airport arrivals and regional intercity itineraries. Each route features dedicated vehicle preparation, active GPS navigation and professional chauffeurs familiar with local traffic patterns.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "riyadh-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "RUH to KAFD",
+            "description": "Direct connection from King Khalid International Airport terminal to the financial towers of King Abdullah Financial District.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "RUH to Diplomatic Quarter",
+            "description": "Discreet transit from airport arrival halls to embassies, international organisations and residences in the Diplomatic Quarter.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Riyadh to Diriyah",
+            "description": "Seamless transfers between central Riyadh hotels and the historic cultural precinct of At Turaif in Diriyah.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-4",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Riyadh to Riyadh Front",
+            "description": "Fast corporate mobility linking downtown commercial offices with exhibition centres and corporate campuses at Riyadh Front.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Dammam",
+            "description": "Long distance highway transit across the Eastern Province corridor with spacious executive seating and verified rest halts.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-dammam",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Al Khobar",
+            "description": "Dedicated chauffeured intercity transfer connecting central Riyadh corporate offices directly with Al Khobar waterfront business districts.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-al-khobar",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-7",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Al Qassim (Buraydah)",
+            "description": "Direct northern transit serving agricultural and commercial headquarters in Buraydah with comfortable cabin amenities.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-al-qasim",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-jrny-8",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Riyadh to Jeddah",
+            "description": "Transpeninsular long distance chauffeur service linking the political capital with the commercial hub on the Red Sea coast.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/riyadh/routes/riyadh-to-jeddah",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-kimd7dpvd",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Riyadh",
+          "heading": "One partner for every movement in Riyadh",
+          "description": "AB coordinates comprehensive ground mobility programs designed to support executive travel, corporate events, large groups and specialised leisure itineraries throughout the capital."
+        },
+        "items": [
+          {
+            "id": "riyadh-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in Riyadh",
+            "description": "Chauffeur & VIP in Riyadh for executive discretion, luxury sedans and bespoke daily driver arrangements.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Riyadh",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers in Riyadh",
+            "description": "Airport Transfers in Riyadh for terminal meet and greet coordination, luggage handling and punctual terminal departures.",
+            "actions": [
+              {
+                "label": "Airport Transfers in Riyadh",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-3",
+            "icon": "Briefcase",
+            "title": "Corporate Transportation in Riyadh",
+            "description": "Corporate Transportation in Riyadh for recurring executive commutes, multi stop roadshows and financial district client shuttles.",
+            "actions": [
+              {
+                "label": "Corporate Transportation in Riyadh",
+                "href": "/services/corporate-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-4",
+            "icon": "Users",
+            "title": "Event Transportation in Riyadh",
+            "description": "Event Transportation in Riyadh for trade exhibitions, governmental summits, international conferences and private corporate galas.",
+            "actions": [
+              {
+                "label": "Event Transportation in Riyadh",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-5",
+            "icon": "Shield",
+            "title": "Bus & Coach Hire in Riyadh",
+            "description": "Bus & Coach Hire in Riyadh for large delegate movements, staff transport contracts and high capacity charter requirements.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Riyadh",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "riyadh-svc-6",
+            "icon": "Map",
+            "title": "Tourism Transportation in Riyadh",
+            "description": "Tourism Transportation in Riyadh for guided heritage excursions, architectural visits and cultural travel programs.",
+            "actions": [
+              {
+                "label": "Tourism Transportation in Riyadh",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-p2ugc4c56",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Khalid International Airport (RUH)",
+          "description": "Inbound flights at King Khalid International Airport (RUH) receive real time monitoring through our operations desk. Your professional chauffeur tracks flight movements, adjusts pickup timing for landing variances and conducts an indoor meet and greet with a clear passenger name board. The designated airport meeting point [Confirm] provides immediate visual orientation once you exit customs into the terminal arrival concourse.\n\nEvery commercial airport transfer includes generous complimentary waiting time [Confirm] to accommodate immigration lines and luggage reclaim. Chauffeurs assist with bags before escorting guests directly to the pre positioned executive car service outside the terminal curbside.",
+          "items": [
+            {
+              "id": "riyadh-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "riyadh-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "riyadh-apt-b-3",
+              "icon": "Clock",
+              "heading": "RUH to KAFD",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-riyadh-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Khalid International Airport (RUH)"
+        }
+      },
+      {
+        "id": "sec-1794311538039-qfvgb01cw",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-ma609ggcu",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Riyadh",
+          "description": "AB operates round the clock across all urban sectors, commercial districts, exhibition campuses and heritage landmarks of the Saudi capital. Our dispatch system maintains active vehicle coverage across high density corporate zones and outlying government compounds.",
+          "items": [
+            {
+              "id": "riyadh-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "King Abdullah Financial District (KAFD) · Olaya Business District · Digital City"
+            },
+            {
+              "id": "riyadh-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Riyadh International Convention and Exhibition Center · The Arena Riyadh · Riyadh Front Exhibition Center"
+            },
+            {
+              "id": "riyadh-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Diriyah Historic District · Al Bujairi Heritage District · Kingdom Centre Sky Bridge"
+            },
+            {
+              "id": "riyadh-cov-4",
+              "icon": "Shield",
+              "heading": "Government and Industry coverage",
+              "description": "Diplomatic Quarter, Digital City Government Complex, King Abdullah Petroleum Studies and Research Center."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Riyadh"
+        }
+      },
+      {
+        "id": "sec-1794311538039-vr9vpjmjj",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Riyadh",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538039-a65th0fvn",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB operations in Riyadh",
+          "description": "Headquartered in Riyadh, AB provides centralised control for managed ground transportation throughout the Kingdom and the wider Gulf region. Our regional operations centre maintains continuous flight tracking, fleet dispatch and chauffeur coordination round the clock.",
+          "items": [
+            {
+              "id": "riyadh-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh — Headquarters and 24/7 dispatch",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "riyadh-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538039-v6xpioegx",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Riyadh: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538039-2bmdc31n8",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Riyadh.",
+          "description": "Contact our round the clock operations centre at +966 58 111 8720 to confirm your chauffeur service Riyadh booking or reserve executive ground fleets across Saudi Arabia.",
+          "subheading": "Reserve your Riyadh executive transport",
+          "subdescription": "Select your vehicle class or submit delegate transit schedules for complete corporate mobility management."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

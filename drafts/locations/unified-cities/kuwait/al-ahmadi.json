@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "kuwait/al-ahmadi",
+  "countrySlug": "kuwait",
+  "citySlug": "al-ahmadi",
+  "path": "/locations/kuwait/al-ahmadi",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for al-ahmadi (kuwait)",
+  "exportedAt": "2026-11-10T12:32:14.438Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310006893-yzdzxenp6",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL AHMADI",
+          "title": "Al Ahmadi",
+          "description": "Kuwait's energy and oil heartland, encompassing corporate headquarters and the coastal charm of Fahaheel and Al Kout. AB provides dedicated corporate chauffeur service and executive airport transfers.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Kuwait International (KWI)",
+          "dropoffDefault": "KOC Headquarters, Al Ahmadi",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310006894-y66gr6y7v",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL AHMADI FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006894-n1k34d12n",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Ahmadi and beyond"
+        },
+        "items": [
+          {
+            "id": "kwi-ahmadi",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "KWI to KOC Headquarters, Al Ahmadi",
+            "titleAr": "من مطار الكويت الدولي إلى مقر شركة نفط الكويت بالأحمدي",
+            "price": "From KWD 40",
+            "priceAr": "ابتداءً من 40 د.ك",
+            "pickup": "Kuwait International Airport (KWI)",
+            "dropoff": "KOC HQ, Al Ahmadi"
+          },
+          {
+            "id": "ahmadi-kout",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Ahmadi to Fahaheel Al Kout Waterfront",
+            "titleAr": "من الأحمدي إلى واجهة الكوت البحرية بالفحيحيل",
+            "price": "From KWD 25",
+            "priceAr": "ابتداءً من 25 د.ك",
+            "pickup": "Al Ahmadi",
+            "dropoff": "Al Kout Waterfront"
+          },
+          {
+            "id": "ahmadi-city",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Ahmadi to Kuwait City Financial Center",
+            "titleAr": "من الأحمدي إلى الحي المالي بمدينة الكويت",
+            "price": "From KWD 45",
+            "priceAr": "ابتداءً من 45 د.ك",
+            "pickup": "Al Ahmadi",
+            "dropoff": "Kuwait City"
+          },
+          {
+            "id": "ahmadi-khiran",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Ahmadi to Al Khiran Resort",
+            "titleAr": "من الأحمدي إلى منتجع الخيران",
+            "price": "From KWD 55",
+            "priceAr": "ابتداءً من 55 د.ك",
+            "pickup": "Al Ahmadi",
+            "dropoff": "Al Khiran"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006894-ddyoidmk9",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL AHMADI",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006894-g4tzqbzhj",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Ahmadi.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310006893-yzdzxenp6",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL AHMADI",
+          "title": "Al Ahmadi",
+          "description": "Kuwait's energy and oil heartland, encompassing corporate headquarters and the coastal charm of Fahaheel and Al Kout. AB provides dedicated corporate chauffeur service and executive airport transfers.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Kuwait International (KWI)",
+          "dropoffDefault": "KOC Headquarters, Al Ahmadi",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310006894-y66gr6y7v",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL AHMADI FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006894-n1k34d12n",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Ahmadi and beyond"
+        },
+        "items": [
+          {
+            "id": "kwi-ahmadi",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "KWI to KOC Headquarters, Al Ahmadi",
+            "titleAr": "من مطار الكويت الدولي إلى مقر شركة نفط الكويت بالأحمدي",
+            "price": "From KWD 40",
+            "priceAr": "ابتداءً من 40 د.ك",
+            "pickup": "Kuwait International Airport (KWI)",
+            "dropoff": "KOC HQ, Al Ahmadi"
+          },
+          {
+            "id": "ahmadi-kout",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Ahmadi to Fahaheel Al Kout Waterfront",
+            "titleAr": "من الأحمدي إلى واجهة الكوت البحرية بالفحيحيل",
+            "price": "From KWD 25",
+            "priceAr": "ابتداءً من 25 د.ك",
+            "pickup": "Al Ahmadi",
+            "dropoff": "Al Kout Waterfront"
+          },
+          {
+            "id": "ahmadi-city",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Ahmadi to Kuwait City Financial Center",
+            "titleAr": "من الأحمدي إلى الحي المالي بمدينة الكويت",
+            "price": "From KWD 45",
+            "priceAr": "ابتداءً من 45 د.ك",
+            "pickup": "Al Ahmadi",
+            "dropoff": "Kuwait City"
+          },
+          {
+            "id": "ahmadi-khiran",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Ahmadi to Al Khiran Resort",
+            "titleAr": "من الأحمدي إلى منتجع الخيران",
+            "price": "From KWD 55",
+            "priceAr": "ابتداءً من 55 د.ك",
+            "pickup": "Al Ahmadi",
+            "dropoff": "Al Khiran"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006894-ddyoidmk9",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL AHMADI",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006894-g4tzqbzhj",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Ahmadi.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310006894-rnxy6ht4p",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الأحمدي",
+          "title": "الأحمدي",
+          "description": "مركز الطاقة والصناعات النفطية الرائد في الكويت، يضم مقرات شركات النفط الكبرى وواجهة الكوت البحرية بالفحيحيل. توفر إيه بي ليمو حلول تنقل مؤسسية وسائقين محترفين للشركات والتنفيذيين.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Kuwait International (KWI)",
+          "dropoffDefault": "KOC Headquarters, Al Ahmadi",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1621647017805-7d08d0a38c8a?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310006894-9aew7npkz",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الأحمدي",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006894-ptp4ejo6m",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الأحمدي وخارجها"
+        },
+        "items": [
+          {
+            "id": "kwi-ahmadi",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "KWI to KOC Headquarters, Al Ahmadi",
+            "titleAr": "من مطار الكويت الدولي إلى مقر شركة نفط الكويت بالأحمدي",
+            "price": "From KWD 40",
+            "priceAr": "ابتداءً من 40 د.ك",
+            "pickup": "Kuwait International Airport (KWI)",
+            "dropoff": "KOC HQ, Al Ahmadi"
+          },
+          {
+            "id": "ahmadi-kout",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Ahmadi to Fahaheel Al Kout Waterfront",
+            "titleAr": "من الأحمدي إلى واجهة الكوت البحرية بالفحيحيل",
+            "price": "From KWD 25",
+            "priceAr": "ابتداءً من 25 د.ك",
+            "pickup": "Al Ahmadi",
+            "dropoff": "Al Kout Waterfront"
+          },
+          {
+            "id": "ahmadi-city",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Ahmadi to Kuwait City Financial Center",
+            "titleAr": "من الأحمدي إلى الحي المالي بمدينة الكويت",
+            "price": "From KWD 45",
+            "priceAr": "ابتداءً من 45 د.ك",
+            "pickup": "Al Ahmadi",
+            "dropoff": "Kuwait City"
+          },
+          {
+            "id": "ahmadi-khiran",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Ahmadi to Al Khiran Resort",
+            "titleAr": "من الأحمدي إلى منتجع الخيران",
+            "price": "From KWD 55",
+            "priceAr": "ابتداءً من 55 د.ك",
+            "pickup": "Al Ahmadi",
+            "dropoff": "Al Khiran"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006894-fwoumd9en",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الأحمدي",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310006894-rw8yxuk5c",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الأحمدي.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

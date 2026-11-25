@@ -1,0 +1,358 @@
+{
+  "pageType": "service",
+  "slug": "chauffeur-vip",
+  "title": "Executive & Corporate Mobility",
+  "subtitle": "Private, punctual, and discreet ground transport engineered around the modern executive schedule.",
+  "desc": "Bespoke chauffeur-driven transport for executives, VIPs, and discerning travellers across the GCC.",
+  "heroImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=800&fit=crop",
+  "breadcrumb": "Executive & Corporate Mobility",
+  "features": [
+    {
+      "icon": "",
+      "title": "Dedicated Executives",
+      "desc": "Trained, vetted chauffeurs and brand-directed fleets that reflect your company's professional image at every meeting."
+    },
+    {
+      "icon": "",
+      "title": "On-Time, Every Time",
+      "desc": "Transport control rooms sync with your calendar and live traffic, guaranteeing arrival at every commitment."
+    },
+    {
+      "icon": "",
+      "title": "Single-Point Liaison",
+      "desc": "A dedicated account manager coordinates every journey, itinerary change, and invoice on your behalf."
+    }
+  ],
+  "cardsHeading": "Corporate Mobility Solutions",
+  "cardsDesc": "From daily executive transport to multi-city roadshows, we design the right mobilisation for your business.",
+  "cards": [
+    {
+      "image": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=800&h=500&fit=crop",
+      "tag": "Roadshows",
+      "title": "Multi-City Roadshows",
+      "desc": "Seamless inter-city and cross-border transfers for investor meetings, board tours, and stakeholder visits."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=500&fit=crop",
+      "tag": "On Demand",
+      "title": "Executive Hourly Hire",
+      "desc": "As-directed availability with an executive fleet on standby throughout the business day."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=800&h=500&fit=crop",
+      "tag": "Corporate Accounts",
+      "title": "Corporate Travel Accounts",
+      "desc": "Streamlined billing, consolidated reporting, and priority booking for your organisation."
+    }
+  ],
+  "sections": [
+    {
+      "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop",
+      "imageAlt": "Executive business travel",
+      "title": "Business Travel, Reimagined",
+      "paragraphs": [
+        "Travel should never be a distraction from the work that matters. AB provides executive transport that disappears into your day: a professional chauffeur, a pristine vehicle, and quiet, uninterrupted productivity from door to door.",
+        "Whether it is a single board meeting or a week-long itinerary across Riyadh, Dubai, and Doha, your schedule is orchestrated around you-not the other way around."
+      ],
+      "bullets": [
+        {
+          "text": "Productivity features including Wi-Fi and charging on selected vehicles"
+        },
+        {
+          "text": "Quiet, discreet service suited to sensitive business conversations"
+        },
+        {
+          "text": "Flexible scheduling aligned with meeting times and last-minute changes"
+        }
+      ],
+      "imageSide": "left",
+      "dark": false
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop",
+      "imageAlt": "Corporate team and executives",
+      "title": "A Fleet That Represents Your Brand",
+      "paragraphs": [
+        "Your transport is part of your corporate image. Our executive fleet of professional-grade sedans and luxury SUVs presents a consistent, polished identity for every client-facing interaction.",
+        "Chauffeurs are trained in corporate etiquette, confidentiality, and protocol handling, ensuring your executives are in the most capable hands."
+      ],
+      "bullets": [
+        {
+          "text": "Premium executive sedans and luxury SUVs"
+        },
+        {
+          "text": "Vehicle cleanliness and presentation inspected before every journey"
+        },
+        {
+          "text": "Confidentiality and discretion as standard"
+        }
+      ],
+      "imageSide": "left",
+      "dark": true
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can AB manage a multi-city corporate roadshow?",
+      "a": "Yes. Our transport control room coordinates vehicle, chauffeur, and timing requirements across cities and borders, presenting a single itinerary and consolidated invoice."
+    },
+    {
+      "q": "Do you offer corporate billing and reporting?",
+      "a": "We provide dedicated corporate accounts with monthly consolidated invoices and usage reports to simplify expense management and auditing."
+    },
+    {
+      "q": "Are executives assigned the same chauffeur?",
+      "a": "Where preferred, we allocate a dedicated chauffeur who becomes familiar with your preferences, routes, and schedules for a consistent experience."
+    }
+  ],
+  "ctaTitle": "Elevate Your Corporate Travel Programme",
+  "ctaDesc": "Speak with a corporate mobility specialist about dedicated executive transport, roadshows, and board travel.",
+  "ctaLabel": "Request a Corporate Proposal",
+  "ctaHref": "",
+  "pageSections": [
+    {
+      "id": "sec-1792846212744-5556vusxx",
+      "type": "hero",
+      "variant": "background-content",
+      "order": 0,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Premium Mobility",
+        "title": "Executive & Corporate Mobility",
+        "titleHighlight": "",
+        "description": "Private, punctual, and discreet ground transport engineered around the modern executive schedule."
+      },
+      "items": [
+        {
+          "label": "Get Started",
+          "href": "#contact",
+          "style": "primary",
+          "icon": "ArrowRight",
+          "iconPosition": "right"
+        }
+      ],
+      "settings": {
+        "minHeight": "85vh",
+        "overlayOpacity": 85,
+        "contentPosition": "left",
+        "buttonLayout": "row"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=800&fit=crop",
+        "padding": "none",
+        "border": false,
+        "textAlign": "left",
+        "overlayGradient": "default"
+      }
+    },
+    {
+      "id": "sec-1792846212744-154vbr9xs",
+      "type": "serviceCards",
+      "variant": "3-column",
+      "order": 1,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Our Services",
+        "heading": "Executive & Corporate Mobility Features.",
+        "description": "Private, punctual, and discreet ground transport engineered around the modern executive schedule."
+      },
+      "items": [
+        {
+          "id": "itm-1792846212744-t9qk9xka1",
+          "icon": "Shield",
+          "title": "Dedicated Executives",
+          "description": "Trained, vetted chauffeurs and brand-directed fleets that reflect your company's professional image at every meeting.",
+          "actions": []
+        },
+        {
+          "id": "itm-1792846212744-qmv8hecbu",
+          "icon": "Shield",
+          "title": "On-Time, Every Time",
+          "description": "Transport control rooms sync with your calendar and live traffic, guaranteeing arrival at every commitment.",
+          "actions": []
+        },
+        {
+          "id": "itm-1792846212744-u4e71b6iz",
+          "icon": "Shield",
+          "title": "Single-Point Liaison",
+          "description": "A dedicated account manager coordinates every journey, itinerary change, and invoice on your behalf.",
+          "actions": []
+        }
+      ],
+      "settings": {
+        "columns": "3",
+        "showHeader": true
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1792846212744-nm10o4wbc",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 2,
+      "enabled": true,
+      "content": {
+        "heading": "Business Travel, Reimagined",
+        "description": "Travel should never be a distraction from the work that matters. AB provides executive transport that disappears into your day: a professional chauffeur, a pristine vehicle, and quiet, uninterrupted productivity from door to door.\n\nWhether it is a single board meeting or a week-long itinerary across Riyadh, Dubai, and Doha, your schedule is orchestrated around you-not the other way around.",
+        "items": [
+          {
+            "id": "itm-1792846212744-xrbiywe26",
+            "icon": "CheckCircle",
+            "heading": "Productivity features including Wi-Fi and charging on selected vehicles",
+            "description": ""
+          },
+          {
+            "id": "itm-1792846212744-zmk93ahq7",
+            "icon": "CheckCircle",
+            "heading": "Quiet, discreet service suited to sensitive business conversations",
+            "description": ""
+          },
+          {
+            "id": "itm-1792846212744-q4abl2de6",
+            "icon": "CheckCircle",
+            "heading": "Flexible scheduling aligned with meeting times and last-minute changes",
+            "description": ""
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "dark",
+        "background": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1792846212744-k8rh7nk77",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 3,
+      "enabled": true,
+      "content": {
+        "heading": "A Fleet That Represents Your Brand",
+        "description": "Your transport is part of your corporate image. Our executive fleet of professional-grade sedans and luxury SUVs presents a consistent, polished identity for every client-facing interaction.\n\nChauffeurs are trained in corporate etiquette, confidentiality, and protocol handling, ensuring your executives are in the most capable hands.",
+        "items": [
+          {
+            "id": "itm-1792846212744-lef7a8k9w",
+            "icon": "CheckCircle",
+            "heading": "Premium executive sedans and luxury SUVs",
+            "description": ""
+          },
+          {
+            "id": "itm-1792846212744-8pi234zv1",
+            "icon": "CheckCircle",
+            "heading": "Vehicle cleanliness and presentation inspected before every journey",
+            "description": ""
+          },
+          {
+            "id": "itm-1792846212744-k31tqjozk",
+            "icon": "CheckCircle",
+            "heading": "Confidentiality and discretion as standard",
+            "description": ""
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1792846212744-9ca5jhv59",
+      "type": "faq",
+      "variant": "default",
+      "order": 4,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Knowledge Base",
+        "heading": "Frequently Asked Questions",
+        "description": "",
+        "items": [
+          {
+            "id": "itm-1792846212744-mez28py6t",
+            "question": "Can AB manage a multi-city corporate roadshow?",
+            "answer": "Yes. Our transport control room coordinates vehicle, chauffeur, and timing requirements across cities and borders, presenting a single itinerary and consolidated invoice."
+          },
+          {
+            "id": "itm-1792846212744-w8j0mcuic",
+            "question": "Do you offer corporate billing and reporting?",
+            "answer": "We provide dedicated corporate accounts with monthly consolidated invoices and usage reports to simplify expense management and auditing."
+          },
+          {
+            "id": "itm-1792846212744-6ue2m57lg",
+            "question": "Are executives assigned the same chauffeur?",
+            "answer": "Where preferred, we allocate a dedicated chauffeur who becomes familiar with your preferences, routes, and schedules for a consistent experience."
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "variant": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1792846212744-hvwfjhtae",
+      "type": "ctaBanner",
+      "variant": "centered",
+      "order": 5,
+      "enabled": true,
+      "content": {
+        "heading": "Elevate Your Corporate Travel Programme",
+        "description": "Speak with a corporate mobility specialist about dedicated executive transport, roadshows, and board travel."
+      },
+      "items": [
+        {
+          "label": "Request a Corporate Proposal",
+          "href": "#contact",
+          "style": "primary",
+          "icon": "ArrowRight"
+        }
+      ],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    }
+  ],
+  "seo": {
+    "metaTitle": "Executive & Corporate Mobility | AB",
+    "metaDescription": "Bespoke corporator mobility for board members, roadshows, and executive itineraries. Premium chauffeur-driven transport engineered around your business schedule.",
+    "ogImage": ""
+  },
+  "status": "published",
+  "showInMenu": true,
+  "order": 0,
+  "locale": "en",
+  "exportedAt": "2026-11-10T12:32:13.879Z"
+}

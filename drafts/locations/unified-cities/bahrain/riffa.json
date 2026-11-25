@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "bahrain/riffa",
+  "countrySlug": "bahrain",
+  "citySlug": "riffa",
+  "path": "/locations/bahrain/riffa",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for riffa (bahrain)",
+  "exportedAt": "2026-11-10T12:32:14.437Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309996229-x7i78h37h",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN RIFFA",
+          "title": "Riffa",
+          "description": "Bahrain's royal and residential heart, home to the Royal Golf Club and Riffa Views. AB delivers discrete, executive chauffeur service connecting Riffa with Bahrain International Airport, the capital, and Sakhir events.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Bahrain International (BAH)",
+          "dropoffDefault": "Riffa Views",
+          "skyline": "manama"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996229-yf33etm4u",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE RIFFA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996229-tt7vb9d5h",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Riffa and beyond"
+        },
+        "items": [
+          {
+            "id": "bah-riffa",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "BAH to Riffa Views & Royal Golf Club",
+            "titleAr": "من مطار البحرين الدولي إلى الرفاع فيوز ونادي الغولف",
+            "price": "From BHD 38",
+            "priceAr": "ابتداءً من 38 د.ب",
+            "pickup": "Bahrain International Airport (BAH)",
+            "dropoff": "Riffa Views"
+          },
+          {
+            "id": "riffa-manama",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riffa to Manama Financial District",
+            "titleAr": "من الرفاع إلى الحي المالي بالمنامة",
+            "price": "From BHD 25",
+            "priceAr": "ابتداءً من 25 د.ب",
+            "pickup": "Riffa",
+            "dropoff": "Manama Center"
+          },
+          {
+            "id": "riffa-sakhir",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riffa to Bahrain International Circuit (Sakhir)",
+            "titleAr": "من الرفاع إلى حلبة البحرين بالصخير",
+            "price": "From BHD 30",
+            "priceAr": "ابتداءً من 30 د.ب",
+            "pickup": "Riffa",
+            "dropoff": "BIC Sakhir"
+          },
+          {
+            "id": "riffa-durrat",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Riffa to Durrat Al Bahrain",
+            "titleAr": "من الرفاع إلى درة البحرين",
+            "price": "From BHD 45",
+            "priceAr": "ابتداءً من 45 د.ب",
+            "pickup": "Riffa",
+            "dropoff": "Durrat Al Bahrain"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996229-ptlk4tqbx",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN RIFFA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996229-f99bo9adg",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Riffa.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309996229-x7i78h37h",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN RIFFA",
+          "title": "Riffa",
+          "description": "Bahrain's royal and residential heart, home to the Royal Golf Club and Riffa Views. AB delivers discrete, executive chauffeur service connecting Riffa with Bahrain International Airport, the capital, and Sakhir events.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Bahrain International (BAH)",
+          "dropoffDefault": "Riffa Views",
+          "skyline": "manama"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996229-yf33etm4u",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE RIFFA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996229-tt7vb9d5h",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Riffa and beyond"
+        },
+        "items": [
+          {
+            "id": "bah-riffa",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "BAH to Riffa Views & Royal Golf Club",
+            "titleAr": "من مطار البحرين الدولي إلى الرفاع فيوز ونادي الغولف",
+            "price": "From BHD 38",
+            "priceAr": "ابتداءً من 38 د.ب",
+            "pickup": "Bahrain International Airport (BAH)",
+            "dropoff": "Riffa Views"
+          },
+          {
+            "id": "riffa-manama",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riffa to Manama Financial District",
+            "titleAr": "من الرفاع إلى الحي المالي بالمنامة",
+            "price": "From BHD 25",
+            "priceAr": "ابتداءً من 25 د.ب",
+            "pickup": "Riffa",
+            "dropoff": "Manama Center"
+          },
+          {
+            "id": "riffa-sakhir",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riffa to Bahrain International Circuit (Sakhir)",
+            "titleAr": "من الرفاع إلى حلبة البحرين بالصخير",
+            "price": "From BHD 30",
+            "priceAr": "ابتداءً من 30 د.ب",
+            "pickup": "Riffa",
+            "dropoff": "BIC Sakhir"
+          },
+          {
+            "id": "riffa-durrat",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Riffa to Durrat Al Bahrain",
+            "titleAr": "من الرفاع إلى درة البحرين",
+            "price": "From BHD 45",
+            "priceAr": "ابتداءً من 45 د.ب",
+            "pickup": "Riffa",
+            "dropoff": "Durrat Al Bahrain"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996229-ptlk4tqbx",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN RIFFA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996229-f99bo9adg",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Riffa.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309996229-7wu8jb83p",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الرفاع",
+          "title": "الرفاع",
+          "description": "قلب البحرين الملكي والسكني الراقي، وموطن النادي الملكي للغولف ومجمع الرفاع فيوز. توفر إيه بي ليمو تنقلاً تنفيذياً راقياً يربط الرفاع بمطار البحرين الدولي والعاصمة وفعاليات الصخير.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Bahrain International (BAH)",
+          "dropoffDefault": "Riffa Views",
+          "skyline": "manama"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1548755212-2b46ee259868?q=80&w=1170&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996229-is81thjdt",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الرفاع",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996229-nrdiccbbj",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الرفاع وخارجها"
+        },
+        "items": [
+          {
+            "id": "bah-riffa",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "BAH to Riffa Views & Royal Golf Club",
+            "titleAr": "من مطار البحرين الدولي إلى الرفاع فيوز ونادي الغولف",
+            "price": "From BHD 38",
+            "priceAr": "ابتداءً من 38 د.ب",
+            "pickup": "Bahrain International Airport (BAH)",
+            "dropoff": "Riffa Views"
+          },
+          {
+            "id": "riffa-manama",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riffa to Manama Financial District",
+            "titleAr": "من الرفاع إلى الحي المالي بالمنامة",
+            "price": "From BHD 25",
+            "priceAr": "ابتداءً من 25 د.ب",
+            "pickup": "Riffa",
+            "dropoff": "Manama Center"
+          },
+          {
+            "id": "riffa-sakhir",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riffa to Bahrain International Circuit (Sakhir)",
+            "titleAr": "من الرفاع إلى حلبة البحرين بالصخير",
+            "price": "From BHD 30",
+            "priceAr": "ابتداءً من 30 د.ب",
+            "pickup": "Riffa",
+            "dropoff": "BIC Sakhir"
+          },
+          {
+            "id": "riffa-durrat",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Riffa to Durrat Al Bahrain",
+            "titleAr": "من الرفاع إلى درة البحرين",
+            "price": "From BHD 45",
+            "priceAr": "ابتداءً من 45 د.ب",
+            "pickup": "Riffa",
+            "dropoff": "Durrat Al Bahrain"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996229-evr9sa981",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الرفاع",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996229-gk2gtxiys",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الرفاع.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

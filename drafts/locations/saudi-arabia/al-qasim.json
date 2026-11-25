@@ -1,0 +1,2175 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/al-qasim",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "al-qasim",
+  "path": "/locations/saudi-arabia/al-qasim",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for al-qasim (saudi-arabia)",
+  "exportedAt": "2026-11-10T11:52:18.048Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538048-m6bbpbc82",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Al Qassim",
+          "titleHighlight": "",
+          "description": "AB provides a dedicated chauffeur service Al Qassim organisations rely on for punctual executive mobility throughout the province. Arriving passengers at Prince Naif bin Abdulaziz International Airport (ELQ) receive professional curbside assistance and seamless transit across Al Qassim destinations.\n\nCorporate travel coordinators choose our managed fleet to support visiting leadership teams, VIP guests and regional business itineraries. Every booking operates under centralised management to maintain consistent transport quality across central Saudi Arabia."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Al Qassim skyline with date palms and contemporary architecture"
+        }
+      },
+      {
+        "id": "sec-1794311538048-1dp22sjwi",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-i45pp0tot",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Al Qassim fleet",
+          "heading": "Choose your chauffeur service Al Qassim class",
+          "description": "Vehicles for Al Qassim are dispatched from the nearest office, AB Riyadh (headquarters) [Confirm nearest office]. Each executive vehicle category delivers immaculate safety and comfort for business travel, delegations and local transfers.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "al-qasim-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image2.jpg",
+            "imageAlt": "Standard sedan executive car in Al Qassim",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar [Confirm]",
+            "idealFor": "Ideal for: executive city journeys in comfort",
+            "description": "This class provides efficient point to point travel for corporate executives navigating city meetings. Professional drivers maintain immaculate standards, making everyday business commuting straightforward and comfortable.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image3.jpg",
+            "imageAlt": "Business sedan vehicle serving Al Qassim corporate travellers",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: corporate travel and business meetings",
+            "description": "Business class vehicles deliver refined interiors and quiet rides across Al Qassim business districts. Working passengers can review briefing documents or conduct calls between regional appointments with complete privacy.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image4.jpg",
+            "imageAlt": "First class sedan luxury car in Al Qassim",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP transport and dignitary arrivals",
+            "description": "Our premier saloon offers unmatched sophistication for high profile guests travelling in Al Qassim. Handcrafted leather seating, acoustic glass and refined climate controls create a tranquil haven after commercial flights.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image5.jpg",
+            "imageAlt": "Executive SUV transport across Al Qassim province",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: delegation travel and executive comfort",
+            "description": "Commanding SUVs supply substantial cabin space and generous luggage volume across Al Qassim routes. Delegations value the elevated ride height and generous legroom during longer journeys between regional centres.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image6.jpg",
+            "imageAlt": "Premium MPV people carrier in Al Qassim",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: mobile workspace and group itineraries",
+            "description": "Configured with adaptable conference seating, this spacious vehicle serves executive teams requiring collaborative travel. Built in power outlets and quiet cabin dynamics allow uninterrupted productivity on the move.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image7.jpg",
+            "imageAlt": "Executive van for corporate group transfers in Al Qassim",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: larger group and event transport",
+            "description": "This vehicle provides coordinated group logistics for corporate conferences and regional event teams. Forward facing leather seats and wide aisles ensure all passengers travel comfortably together with their baggage.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-mipm2lgmj",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Al Qassim and beyond",
+          "description": "AB supports punctual transfers connecting major transit hubs, commercial centres and industrial facilities. Each fixed route provides transparent planning for travel managers coordinating regional executive schedules.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "al-qasim-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ELQ to Buraydah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ELQ to Unaizah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Buraydah to Unaizah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Al Qassim to Ar Rass",
+            "description": "",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Buraydah to Riyadh",
+            "description": "",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/al-qasim/routes/al-qasim-to-riyadh",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-e5dsmsu2p",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Al Qassim",
+          "heading": "One partner for every movement in Al Qassim",
+          "description": "AB coordinates comprehensive executive mobility solutions designed to support corporate delegations, VIP guests and private travel requirements across the region."
+        },
+        "items": [
+          {
+            "id": "al-qasim-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Chauffeur & VIP private driver solutions tailored for executive road itineraries",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Airport Transfers providing terminal meet and greet coordination at regional airports",
+            "actions": [
+              {
+                "label": "Airport Transfers",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire arranged in Al Qassim",
+            "description": "Bus & Coach Hire arranged in Al Qassim for corporate groups and major events",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire arranged in Al Qassim",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-88p4hng2t",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Prince Naif bin Abdulaziz International Airport (ELQ)",
+          "description": "Landing at Prince Naif bin Abdulaziz International Airport (ELQ) connects corporate visitors directly with the agricultural and commercial centre of the Kingdom. Your professional chauffeur monitors incoming flights using automated flight tracking systems, adjusting pickup timings to accommodate runway schedule shifts.\n\nUpon clearing customs, guests receive an executive meet and greet service from our uniformed driver holding a customised name board. The driver assists with all luggage before escorting passengers to their preconditioned vehicle parked at Meeting point [Confirm]. Travellers benefit from Free waiting time [Confirm], supporting seamless transitions for business travel, corporate travel and VIP transport.",
+          "items": [
+            {
+              "id": "al-qasim-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "al-qasim-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "al-qasim-apt-b-3",
+              "icon": "Clock",
+              "heading": "ELQ to Buraydah",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+          "backgroundAlt": "Arriving at Prince Naif bin Abdulaziz International Airport (ELQ)"
+        }
+      },
+      {
+        "id": "sec-1794311538048-nvo0zs2pj",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-dqbqyl18s",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Al Qassim",
+          "description": "Our chauffeur operations extend throughout Buraydah, Unaizah and surrounding commercial zones. Chauffeurs possess extensive route familiarity across municipal headquarters, hospitality venues, industrial estates and cultural centres.",
+          "items": [
+            {
+              "id": "al-qasim-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "King Abdulaziz Road (Buraydah commercial offices and banks) · Al Nakheel district (Buraydah retail and business parks) · Unaizah Commerce (Corporate hubs and regional offices)"
+            },
+            {
+              "id": "al-qasim-cov-2",
+              "icon": "Users",
+              "heading": "Events",
+              "description": "King Khalid Centre (Conferences and civic auditorium) · Date Festival Grounds (Seasonal trade pavilions in Buraydah) · Unaizah Village (Heritage cultural exhibition grounds)"
+            },
+            {
+              "id": "al-qasim-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage",
+              "description": "Al Bassam House (Preserved heritage landmark in Unaizah) · Souq Al Masokaf (Historic market and artisan alleys) · Al Othaim Park (Urban green parkland in Buraydah)"
+            },
+            {
+              "id": "al-qasim-cov-4",
+              "icon": "Shield",
+              "heading": "Government",
+              "description": "Qassim Governorate (Provincial administrative headquarters) · Buraydah Modon (Industrial city logistics district) · Qassim Chamber (Trade authority and council hall)"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image8.jpg",
+          "backgroundAlt": "Al Qassim commercial district along King Abdulaziz Road in Buraydah"
+        }
+      },
+      {
+        "id": "sec-1794311538048-h1rchl0bu",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Al Qassim",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-rqo55pie3",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB chauffeur service Al Qassim operations",
+          "description": "Regional journeys across Al Qassim are managed through central dispatch to ensure strict operational compliance, safety oversight and vehicle cleanliness. Our operational coordinators monitor every route around the clock, providing real time driver tracking and rapid dispatch support.",
+          "items": [
+            {
+              "id": "al-qasim-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "al-qasim-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538048-lavcl98s4",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Al Qassim: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538048-zrdt51ahj",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Qassim.",
+          "description": "Arrange your executive chauffeur service Al Qassim booking with 24/7 central dispatch on +966 58 111 8720 for punctual corporate transfers.",
+          "subheading": "Reserve executive ground transportation",
+          "subdescription": "Connect with our central dispatch desk to coordinate individual transfers or complete delegation transport fleets."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538048-m6bbpbc82",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Al Qassim",
+          "titleHighlight": "",
+          "description": "AB provides a dedicated chauffeur service Al Qassim organisations rely on for punctual executive mobility throughout the province. Arriving passengers at Prince Naif bin Abdulaziz International Airport (ELQ) receive professional curbside assistance and seamless transit across Al Qassim destinations.\n\nCorporate travel coordinators choose our managed fleet to support visiting leadership teams, VIP guests and regional business itineraries. Every booking operates under centralised management to maintain consistent transport quality across central Saudi Arabia."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Al Qassim skyline with date palms and contemporary architecture"
+        }
+      },
+      {
+        "id": "sec-1794311538048-1dp22sjwi",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-i45pp0tot",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Al Qassim fleet",
+          "heading": "Choose your chauffeur service Al Qassim class",
+          "description": "Vehicles for Al Qassim are dispatched from the nearest office, AB Riyadh (headquarters) [Confirm nearest office]. Each executive vehicle category delivers immaculate safety and comfort for business travel, delegations and local transfers.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "al-qasim-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image2.jpg",
+            "imageAlt": "Standard sedan executive car in Al Qassim",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar [Confirm]",
+            "idealFor": "Ideal for: executive city journeys in comfort",
+            "description": "This class provides efficient point to point travel for corporate executives navigating city meetings. Professional drivers maintain immaculate standards, making everyday business commuting straightforward and comfortable.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image3.jpg",
+            "imageAlt": "Business sedan vehicle serving Al Qassim corporate travellers",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: corporate travel and business meetings",
+            "description": "Business class vehicles deliver refined interiors and quiet rides across Al Qassim business districts. Working passengers can review briefing documents or conduct calls between regional appointments with complete privacy.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image4.jpg",
+            "imageAlt": "First class sedan luxury car in Al Qassim",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP transport and dignitary arrivals",
+            "description": "Our premier saloon offers unmatched sophistication for high profile guests travelling in Al Qassim. Handcrafted leather seating, acoustic glass and refined climate controls create a tranquil haven after commercial flights.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image5.jpg",
+            "imageAlt": "Executive SUV transport across Al Qassim province",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: delegation travel and executive comfort",
+            "description": "Commanding SUVs supply substantial cabin space and generous luggage volume across Al Qassim routes. Delegations value the elevated ride height and generous legroom during longer journeys between regional centres.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image6.jpg",
+            "imageAlt": "Premium MPV people carrier in Al Qassim",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: mobile workspace and group itineraries",
+            "description": "Configured with adaptable conference seating, this spacious vehicle serves executive teams requiring collaborative travel. Built in power outlets and quiet cabin dynamics allow uninterrupted productivity on the move.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image7.jpg",
+            "imageAlt": "Executive van for corporate group transfers in Al Qassim",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: larger group and event transport",
+            "description": "This vehicle provides coordinated group logistics for corporate conferences and regional event teams. Forward facing leather seats and wide aisles ensure all passengers travel comfortably together with their baggage.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-mipm2lgmj",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Al Qassim and beyond",
+          "description": "AB supports punctual transfers connecting major transit hubs, commercial centres and industrial facilities. Each fixed route provides transparent planning for travel managers coordinating regional executive schedules.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "al-qasim-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ELQ to Buraydah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ELQ to Unaizah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Buraydah to Unaizah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Al Qassim to Ar Rass",
+            "description": "",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Buraydah to Riyadh",
+            "description": "",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/al-qasim/routes/al-qasim-to-riyadh",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-e5dsmsu2p",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Al Qassim",
+          "heading": "One partner for every movement in Al Qassim",
+          "description": "AB coordinates comprehensive executive mobility solutions designed to support corporate delegations, VIP guests and private travel requirements across the region."
+        },
+        "items": [
+          {
+            "id": "al-qasim-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Chauffeur & VIP private driver solutions tailored for executive road itineraries",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Airport Transfers providing terminal meet and greet coordination at regional airports",
+            "actions": [
+              {
+                "label": "Airport Transfers",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire arranged in Al Qassim",
+            "description": "Bus & Coach Hire arranged in Al Qassim for corporate groups and major events",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire arranged in Al Qassim",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-88p4hng2t",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Prince Naif bin Abdulaziz International Airport (ELQ)",
+          "description": "Landing at Prince Naif bin Abdulaziz International Airport (ELQ) connects corporate visitors directly with the agricultural and commercial centre of the Kingdom. Your professional chauffeur monitors incoming flights using automated flight tracking systems, adjusting pickup timings to accommodate runway schedule shifts.\n\nUpon clearing customs, guests receive an executive meet and greet service from our uniformed driver holding a customised name board. The driver assists with all luggage before escorting passengers to their preconditioned vehicle parked at Meeting point [Confirm]. Travellers benefit from Free waiting time [Confirm], supporting seamless transitions for business travel, corporate travel and VIP transport.",
+          "items": [
+            {
+              "id": "al-qasim-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "al-qasim-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "al-qasim-apt-b-3",
+              "icon": "Clock",
+              "heading": "ELQ to Buraydah",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+          "backgroundAlt": "Arriving at Prince Naif bin Abdulaziz International Airport (ELQ)"
+        }
+      },
+      {
+        "id": "sec-1794311538048-nvo0zs2pj",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-dqbqyl18s",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Al Qassim",
+          "description": "Our chauffeur operations extend throughout Buraydah, Unaizah and surrounding commercial zones. Chauffeurs possess extensive route familiarity across municipal headquarters, hospitality venues, industrial estates and cultural centres.",
+          "items": [
+            {
+              "id": "al-qasim-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "King Abdulaziz Road (Buraydah commercial offices and banks) · Al Nakheel district (Buraydah retail and business parks) · Unaizah Commerce (Corporate hubs and regional offices)"
+            },
+            {
+              "id": "al-qasim-cov-2",
+              "icon": "Users",
+              "heading": "Events",
+              "description": "King Khalid Centre (Conferences and civic auditorium) · Date Festival Grounds (Seasonal trade pavilions in Buraydah) · Unaizah Village (Heritage cultural exhibition grounds)"
+            },
+            {
+              "id": "al-qasim-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage",
+              "description": "Al Bassam House (Preserved heritage landmark in Unaizah) · Souq Al Masokaf (Historic market and artisan alleys) · Al Othaim Park (Urban green parkland in Buraydah)"
+            },
+            {
+              "id": "al-qasim-cov-4",
+              "icon": "Shield",
+              "heading": "Government",
+              "description": "Qassim Governorate (Provincial administrative headquarters) · Buraydah Modon (Industrial city logistics district) · Qassim Chamber (Trade authority and council hall)"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image8.jpg",
+          "backgroundAlt": "Al Qassim commercial district along King Abdulaziz Road in Buraydah"
+        }
+      },
+      {
+        "id": "sec-1794311538048-h1rchl0bu",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Al Qassim",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-rqo55pie3",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB chauffeur service Al Qassim operations",
+          "description": "Regional journeys across Al Qassim are managed through central dispatch to ensure strict operational compliance, safety oversight and vehicle cleanliness. Our operational coordinators monitor every route around the clock, providing real time driver tracking and rapid dispatch support.",
+          "items": [
+            {
+              "id": "al-qasim-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "al-qasim-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538048-lavcl98s4",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Al Qassim: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538048-zrdt51ahj",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Qassim.",
+          "description": "Arrange your executive chauffeur service Al Qassim booking with 24/7 central dispatch on +966 58 111 8720 for punctual corporate transfers.",
+          "subheading": "Reserve executive ground transportation",
+          "subdescription": "Connect with our central dispatch desk to coordinate individual transfers or complete delegation transport fleets."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538048-yluc0a4wh",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Al Qassim",
+          "titleHighlight": "",
+          "description": "AB provides a dedicated chauffeur service Al Qassim organisations rely on for punctual executive mobility throughout the province. Arriving passengers at Prince Naif bin Abdulaziz International Airport (ELQ) receive professional curbside assistance and seamless transit across Al Qassim destinations.\n\nCorporate travel coordinators choose our managed fleet to support visiting leadership teams, VIP guests and regional business itineraries. Every booking operates under centralised management to maintain consistent transport quality across central Saudi Arabia."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Al Qassim skyline with date palms and contemporary architecture"
+        }
+      },
+      {
+        "id": "sec-1794311538048-7uin0i0pn",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-2lv6ddro1",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Al Qassim fleet",
+          "heading": "Choose your chauffeur service Al Qassim class",
+          "description": "Vehicles for Al Qassim are dispatched from the nearest office, AB Riyadh (headquarters) [Confirm nearest office]. Each executive vehicle category delivers immaculate safety and comfort for business travel, delegations and local transfers.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "al-qasim-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image2.jpg",
+            "imageAlt": "Standard sedan executive car in Al Qassim",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar [Confirm]",
+            "idealFor": "Ideal for: executive city journeys in comfort",
+            "description": "This class provides efficient point to point travel for corporate executives navigating city meetings. Professional drivers maintain immaculate standards, making everyday business commuting straightforward and comfortable.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image3.jpg",
+            "imageAlt": "Business sedan vehicle serving Al Qassim corporate travellers",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: corporate travel and business meetings",
+            "description": "Business class vehicles deliver refined interiors and quiet rides across Al Qassim business districts. Working passengers can review briefing documents or conduct calls between regional appointments with complete privacy.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image4.jpg",
+            "imageAlt": "First class sedan luxury car in Al Qassim",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP transport and dignitary arrivals",
+            "description": "Our premier saloon offers unmatched sophistication for high profile guests travelling in Al Qassim. Handcrafted leather seating, acoustic glass and refined climate controls create a tranquil haven after commercial flights.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image5.jpg",
+            "imageAlt": "Executive SUV transport across Al Qassim province",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: delegation travel and executive comfort",
+            "description": "Commanding SUVs supply substantial cabin space and generous luggage volume across Al Qassim routes. Delegations value the elevated ride height and generous legroom during longer journeys between regional centres.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image6.jpg",
+            "imageAlt": "Premium MPV people carrier in Al Qassim",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: mobile workspace and group itineraries",
+            "description": "Configured with adaptable conference seating, this spacious vehicle serves executive teams requiring collaborative travel. Built in power outlets and quiet cabin dynamics allow uninterrupted productivity on the move.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image7.jpg",
+            "imageAlt": "Executive van for corporate group transfers in Al Qassim",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: larger group and event transport",
+            "description": "This vehicle provides coordinated group logistics for corporate conferences and regional event teams. Forward facing leather seats and wide aisles ensure all passengers travel comfortably together with their baggage.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-t4o79994y",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Al Qassim and beyond",
+          "description": "AB supports punctual transfers connecting major transit hubs, commercial centres and industrial facilities. Each fixed route provides transparent planning for travel managers coordinating regional executive schedules.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "al-qasim-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ELQ to Buraydah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ELQ to Unaizah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Buraydah to Unaizah",
+            "description": "",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Al Qassim to Ar Rass",
+            "description": "",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Buraydah to Riyadh",
+            "description": "",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/al-qasim/routes/al-qasim-to-riyadh",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-gk9jwqtbl",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Al Qassim",
+          "heading": "One partner for every movement in Al Qassim",
+          "description": "AB coordinates comprehensive executive mobility solutions designed to support corporate delegations, VIP guests and private travel requirements across the region."
+        },
+        "items": [
+          {
+            "id": "al-qasim-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Chauffeur & VIP private driver solutions tailored for executive road itineraries",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Airport Transfers providing terminal meet and greet coordination at regional airports",
+            "actions": [
+              {
+                "label": "Airport Transfers",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-qasim-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire arranged in Al Qassim",
+            "description": "Bus & Coach Hire arranged in Al Qassim for corporate groups and major events",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire arranged in Al Qassim",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-s7nypsqua",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Prince Naif bin Abdulaziz International Airport (ELQ)",
+          "description": "Landing at Prince Naif bin Abdulaziz International Airport (ELQ) connects corporate visitors directly with the agricultural and commercial centre of the Kingdom. Your professional chauffeur monitors incoming flights using automated flight tracking systems, adjusting pickup timings to accommodate runway schedule shifts.\n\nUpon clearing customs, guests receive an executive meet and greet service from our uniformed driver holding a customised name board. The driver assists with all luggage before escorting passengers to their preconditioned vehicle parked at Meeting point [Confirm]. Travellers benefit from Free waiting time [Confirm], supporting seamless transitions for business travel, corporate travel and VIP transport.",
+          "items": [
+            {
+              "id": "al-qasim-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "al-qasim-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "al-qasim-apt-b-3",
+              "icon": "Clock",
+              "heading": "ELQ to Buraydah",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image1.jpg",
+          "backgroundAlt": "Arriving at Prince Naif bin Abdulaziz International Airport (ELQ)"
+        }
+      },
+      {
+        "id": "sec-1794311538048-q4umo70ii",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-19c3kaxzw",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Al Qassim",
+          "description": "Our chauffeur operations extend throughout Buraydah, Unaizah and surrounding commercial zones. Chauffeurs possess extensive route familiarity across municipal headquarters, hospitality venues, industrial estates and cultural centres.",
+          "items": [
+            {
+              "id": "al-qasim-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "King Abdulaziz Road (Buraydah commercial offices and banks) · Al Nakheel district (Buraydah retail and business parks) · Unaizah Commerce (Corporate hubs and regional offices)"
+            },
+            {
+              "id": "al-qasim-cov-2",
+              "icon": "Users",
+              "heading": "Events",
+              "description": "King Khalid Centre (Conferences and civic auditorium) · Date Festival Grounds (Seasonal trade pavilions in Buraydah) · Unaizah Village (Heritage cultural exhibition grounds)"
+            },
+            {
+              "id": "al-qasim-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage",
+              "description": "Al Bassam House (Preserved heritage landmark in Unaizah) · Souq Al Masokaf (Historic market and artisan alleys) · Al Othaim Park (Urban green parkland in Buraydah)"
+            },
+            {
+              "id": "al-qasim-cov-4",
+              "icon": "Shield",
+              "heading": "Government",
+              "description": "Qassim Governorate (Provincial administrative headquarters) · Buraydah Modon (Industrial city logistics district) · Qassim Chamber (Trade authority and council hall)"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-qasim-images/image8.jpg",
+          "backgroundAlt": "Al Qassim commercial district along King Abdulaziz Road in Buraydah"
+        }
+      },
+      {
+        "id": "sec-1794311538048-cr3nnyx25",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Al Qassim",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538048-z7j5iomfc",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB chauffeur service Al Qassim operations",
+          "description": "Regional journeys across Al Qassim are managed through central dispatch to ensure strict operational compliance, safety oversight and vehicle cleanliness. Our operational coordinators monitor every route around the clock, providing real time driver tracking and rapid dispatch support.",
+          "items": [
+            {
+              "id": "al-qasim-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "al-qasim-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538048-ij6euzbfp",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Al Qassim: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538048-xp4tzn17l",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Qassim.",
+          "description": "Arrange your executive chauffeur service Al Qassim booking with 24/7 central dispatch on +966 58 111 8720 for punctual corporate transfers.",
+          "subheading": "Reserve executive ground transportation",
+          "subdescription": "Connect with our central dispatch desk to coordinate individual transfers or complete delegation transport fleets."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

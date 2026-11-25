@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/yanbu",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "yanbu",
+  "path": "/locations/saudi-arabia/yanbu",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for yanbu (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.453Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310000293-yh5bze3fd",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN YANBU",
+          "title": "Yanbu",
+          "description": "A vital Red Sea trade hub divided into the historic port city and modern industrial complex. AB ensures smooth chauffeur transfers from Yanbu Airport to Royal Commission offices, waterfront hotels, and intercity connections to Madinah and Jeddah.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Prince Abdul Mohsin Bin Abdulaziz (YNB)",
+          "dropoffDefault": "Yanbu Industrial City",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1566555108172-f8a02274a3d3?q=80&w=1074&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310000293-lrfta7i5x",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE YANBU FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000293-nmz2g68x4",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Yanbu and beyond"
+        },
+        "items": [
+          {
+            "id": "ynb-industrial",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "YNB to Yanbu Industrial City (Royal Commission)",
+            "titleAr": "من مطار ينبع إلى ينبع الصناعية (الهيئة الملكية)",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Prince Abdul Mohsin Airport (YNB)",
+            "dropoff": "Yanbu Industrial City"
+          },
+          {
+            "id": "ynb-historic",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "YNB to Historic Yanbu Al Bahr",
+            "titleAr": "من مطار ينبع إلى ينبع البحر التاريخية",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Prince Abdul Mohsin Airport (YNB)",
+            "dropoff": "Historic Yanbu"
+          },
+          {
+            "id": "yanbu-kaec",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Yanbu to KAEC",
+            "titleAr": "من ينبع إلى مدينة الملك عبدالله الاقتصادية",
+            "price": "From SAR 580",
+            "priceAr": "ابتداءً من 580 ر.س",
+            "pickup": "Yanbu",
+            "dropoff": "KAEC"
+          },
+          {
+            "id": "yanbu-medina",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Yanbu to Madinah",
+            "titleAr": "من ينبع إلى المدينة المنورة",
+            "price": "From SAR 650",
+            "priceAr": "ابتداءً من 650 ر.س",
+            "pickup": "Yanbu",
+            "dropoff": "Madinah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000293-8rqa4d9rt",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN YANBU",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000293-5yjxyssnt",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Yanbu.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310000293-yh5bze3fd",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN YANBU",
+          "title": "Yanbu",
+          "description": "A vital Red Sea trade hub divided into the historic port city and modern industrial complex. AB ensures smooth chauffeur transfers from Yanbu Airport to Royal Commission offices, waterfront hotels, and intercity connections to Madinah and Jeddah.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Prince Abdul Mohsin Bin Abdulaziz (YNB)",
+          "dropoffDefault": "Yanbu Industrial City",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1566555108172-f8a02274a3d3?q=80&w=1074&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310000293-lrfta7i5x",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE YANBU FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000293-nmz2g68x4",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Yanbu and beyond"
+        },
+        "items": [
+          {
+            "id": "ynb-industrial",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "YNB to Yanbu Industrial City (Royal Commission)",
+            "titleAr": "من مطار ينبع إلى ينبع الصناعية (الهيئة الملكية)",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Prince Abdul Mohsin Airport (YNB)",
+            "dropoff": "Yanbu Industrial City"
+          },
+          {
+            "id": "ynb-historic",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "YNB to Historic Yanbu Al Bahr",
+            "titleAr": "من مطار ينبع إلى ينبع البحر التاريخية",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Prince Abdul Mohsin Airport (YNB)",
+            "dropoff": "Historic Yanbu"
+          },
+          {
+            "id": "yanbu-kaec",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Yanbu to KAEC",
+            "titleAr": "من ينبع إلى مدينة الملك عبدالله الاقتصادية",
+            "price": "From SAR 580",
+            "priceAr": "ابتداءً من 580 ر.س",
+            "pickup": "Yanbu",
+            "dropoff": "KAEC"
+          },
+          {
+            "id": "yanbu-medina",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Yanbu to Madinah",
+            "titleAr": "من ينبع إلى المدينة المنورة",
+            "price": "From SAR 650",
+            "priceAr": "ابتداءً من 650 ر.س",
+            "pickup": "Yanbu",
+            "dropoff": "Madinah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000293-8rqa4d9rt",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN YANBU",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000293-5yjxyssnt",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Yanbu.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310000293-n7ygoigqo",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في ينبع",
+          "title": "ينبع",
+          "description": "مركز تجاري وصناعي استراتيجي على البحر الأحمر يجمع بين عبق التاريخ والتطور الصناعي للهيئة الملكية. تضمن إيه بي ليمو تنقلاً مريحاً من مطار ينبع إلى مقرات الشركات والواجهة البحرية والمدينة المنورة.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Prince Abdul Mohsin Bin Abdulaziz (YNB)",
+          "dropoffDefault": "Yanbu Industrial City",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1566555108172-f8a02274a3d3?q=80&w=1074&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310000293-erh8gid86",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول ينبع",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000293-n4g2hr0w9",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء ينبع وخارجها"
+        },
+        "items": [
+          {
+            "id": "ynb-industrial",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "YNB to Yanbu Industrial City (Royal Commission)",
+            "titleAr": "من مطار ينبع إلى ينبع الصناعية (الهيئة الملكية)",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Prince Abdul Mohsin Airport (YNB)",
+            "dropoff": "Yanbu Industrial City"
+          },
+          {
+            "id": "ynb-historic",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "YNB to Historic Yanbu Al Bahr",
+            "titleAr": "من مطار ينبع إلى ينبع البحر التاريخية",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Prince Abdul Mohsin Airport (YNB)",
+            "dropoff": "Historic Yanbu"
+          },
+          {
+            "id": "yanbu-kaec",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Yanbu to KAEC",
+            "titleAr": "من ينبع إلى مدينة الملك عبدالله الاقتصادية",
+            "price": "From SAR 580",
+            "priceAr": "ابتداءً من 580 ر.س",
+            "pickup": "Yanbu",
+            "dropoff": "KAEC"
+          },
+          {
+            "id": "yanbu-medina",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Yanbu to Madinah",
+            "titleAr": "من ينبع إلى المدينة المنورة",
+            "price": "From SAR 650",
+            "priceAr": "ابتداءً من 650 ر.س",
+            "pickup": "Yanbu",
+            "dropoff": "Madinah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000293-zvy74bv35",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في ينبع",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310000293-lqk2freuk",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في ينبع.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

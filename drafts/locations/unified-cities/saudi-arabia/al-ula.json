@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/al-ula",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "al-ula",
+  "path": "/locations/saudi-arabia/al-ula",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for al-ula (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.444Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309998041-8al9hm2mk",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL ULA",
+          "title": "Al Ula",
+          "description": "A land of ancient wonder — Hegra's sandstone tombs, Ashar Valley luxury resorts, and dramatic desert landscapes. AB's chauffeur service lets you travel in unmatched comfort from AlUla International Airport to every world-class venue.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "AlUla International (ULH)",
+          "dropoffDefault": "Ashar Valley, AlUla",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998041-xouz7h95h",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL ULA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998041-3mc7a33t4",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Ula and beyond"
+        },
+        "items": [
+          {
+            "id": "ulh-ashar",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ULH to Ashar Valley Resorts",
+            "titleAr": "من مطار العلا إلى منتجعات وادي عشار",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "AlUla International Airport (ULH)",
+            "dropoff": "Ashar Valley"
+          },
+          {
+            "id": "ulh-hegra",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ULH to Hegra UNESCO Site",
+            "titleAr": "من مطار العلا إلى موقع الحِجر التراثي",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "AlUla International Airport (ULH)",
+            "dropoff": "Hegra"
+          },
+          {
+            "id": "alula-maraya",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "AlUla Old Town to Maraya Concert Hall",
+            "titleAr": "من بلدة العلا القديمة إلى قاعة مرايا",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "AlUla Old Town",
+            "dropoff": "Maraya Concert Hall"
+          },
+          {
+            "id": "alula-medina",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "AlUla to Madinah",
+            "titleAr": "من العلا إلى المدينة المنورة",
+            "price": "From SAR 950",
+            "priceAr": "ابتداءً من 950 ر.س",
+            "pickup": "AlUla",
+            "dropoff": "Madinah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998041-eo4wik3k9",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL ULA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998041-vhrgl7py2",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Ula.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309998041-8al9hm2mk",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL ULA",
+          "title": "Al Ula",
+          "description": "A land of ancient wonder — Hegra's sandstone tombs, Ashar Valley luxury resorts, and dramatic desert landscapes. AB's chauffeur service lets you travel in unmatched comfort from AlUla International Airport to every world-class venue.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "AlUla International (ULH)",
+          "dropoffDefault": "Ashar Valley, AlUla",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998041-xouz7h95h",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL ULA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998041-3mc7a33t4",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Ula and beyond"
+        },
+        "items": [
+          {
+            "id": "ulh-ashar",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ULH to Ashar Valley Resorts",
+            "titleAr": "من مطار العلا إلى منتجعات وادي عشار",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "AlUla International Airport (ULH)",
+            "dropoff": "Ashar Valley"
+          },
+          {
+            "id": "ulh-hegra",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ULH to Hegra UNESCO Site",
+            "titleAr": "من مطار العلا إلى موقع الحِجر التراثي",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "AlUla International Airport (ULH)",
+            "dropoff": "Hegra"
+          },
+          {
+            "id": "alula-maraya",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "AlUla Old Town to Maraya Concert Hall",
+            "titleAr": "من بلدة العلا القديمة إلى قاعة مرايا",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "AlUla Old Town",
+            "dropoff": "Maraya Concert Hall"
+          },
+          {
+            "id": "alula-medina",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "AlUla to Madinah",
+            "titleAr": "من العلا إلى المدينة المنورة",
+            "price": "From SAR 950",
+            "priceAr": "ابتداءً من 950 ر.س",
+            "pickup": "AlUla",
+            "dropoff": "Madinah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998041-eo4wik3k9",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL ULA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998041-vhrgl7py2",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Ula.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309998041-2xpkg3kao",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في العلا",
+          "title": "العلا",
+          "description": "أرض العجائب التاريخية — مقابر الحِجر المنحوتة في الصخر، ومنتجعات وادي عشار الفاخرة، ومسرح مرايا الأيقوني. تمنحك خدمة السائق الخاص من إيه بي ليمو تنقلاً فائق الراحة من مطار العلا الدولي إلى أرقى الوجهات.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "AlUla International (ULH)",
+          "dropoffDefault": "Ashar Valley, AlUla",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309998041-xs3m1yrzu",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول العلا",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998041-hnu8jmdsr",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء العلا وخارجها"
+        },
+        "items": [
+          {
+            "id": "ulh-ashar",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ULH to Ashar Valley Resorts",
+            "titleAr": "من مطار العلا إلى منتجعات وادي عشار",
+            "price": "From SAR 320",
+            "priceAr": "ابتداءً من 320 ر.س",
+            "pickup": "AlUla International Airport (ULH)",
+            "dropoff": "Ashar Valley"
+          },
+          {
+            "id": "ulh-hegra",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "ULH to Hegra UNESCO Site",
+            "titleAr": "من مطار العلا إلى موقع الحِجر التراثي",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "AlUla International Airport (ULH)",
+            "dropoff": "Hegra"
+          },
+          {
+            "id": "alula-maraya",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "AlUla Old Town to Maraya Concert Hall",
+            "titleAr": "من بلدة العلا القديمة إلى قاعة مرايا",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "AlUla Old Town",
+            "dropoff": "Maraya Concert Hall"
+          },
+          {
+            "id": "alula-medina",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "AlUla to Madinah",
+            "titleAr": "من العلا إلى المدينة المنورة",
+            "price": "From SAR 950",
+            "priceAr": "ابتداءً من 950 ر.س",
+            "pickup": "AlUla",
+            "dropoff": "Madinah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998041-hb3ult7zc",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في العلا",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309998041-edfct96z7",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في العلا.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

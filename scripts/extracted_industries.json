@@ -1,0 +1,1052 @@
+{
+  "aviation": {
+    "title": "Aviation and crew transportation | AB.Limo",
+    "badge": "",
+    "h1": "Crew and passenger transport that keeps pace with the flight schedule",
+    "heroP": "Flights move, gates change and crews rotate around the clock. AB tracks every flight and keeps standby vehicles ready, so crews and passengers are collected on time whatever the schedule does.",
+    "statementEyebrow": "How we work",
+    "statement": "From scheduled crew rotations to private jet arrivals, every pickup is tied to live flight data and backed by standby vehicles for delays and diversions.",
+    "needsEyebrow": "What you need from us",
+    "needsH2": "Built for aviation and crew",
+    "stepsEyebrow": "How it runs",
+    "stepsH2": "Three stages, one accountable partner",
+    "ctaH2": "Planning transport for aviation and crew?",
+    "ctaP": "Share your dates, passenger numbers and locations and an operations planner will design the movement plan around them.",
+    "D": {
+      "strip": [
+        {
+          "v": "8",
+          "l": "Gulf airports served"
+        },
+        {
+          "v": "24/7",
+          "l": "Flight tracked dispatch"
+        },
+        {
+          "v": "FBO",
+          "l": "Private terminal pickups"
+        }
+      ],
+      "needs": [
+        {
+          "num": "01",
+          "t": "Crew rotations",
+          "x": "Scheduled hotel and airport transfers for cabin and flight crews, adjusted to live flight times."
+        },
+        {
+          "num": "02",
+          "t": "FBO and private terminals",
+          "x": "Airside greeters and curbside pickups for private aviation passengers."
+        },
+        {
+          "num": "03",
+          "t": "Disruption standby",
+          "x": "Standby fleets positioned for delays, diversions and irregular operations."
+        },
+        {
+          "num": "04",
+          "t": "One account",
+          "x": "Centralised billing and trip reporting across every airport you operate from."
+        }
+      ],
+      "steps": [
+        {
+          "num": "01",
+          "t": "Connect",
+          "x": "Share crew rosters or flight schedules and pickup rules."
+        },
+        {
+          "num": "02",
+          "t": "Track",
+          "x": "Dispatch monitors flight status and adjusts pickups automatically."
+        },
+        {
+          "num": "03",
+          "t": "Report",
+          "x": "Monthly trip records and a single invoice per account."
+        }
+      ],
+      "cases": [],
+      "services": [
+        {
+          "name": "Airport Transfers",
+          "href": "Services.dc.html#airport"
+        },
+        {
+          "name": "Corporate Fleet and Workforce Mobility",
+          "href": "Services.dc.html#fleet"
+        },
+        {
+          "name": "Executive and Corporate Mobility",
+          "href": "Services.dc.html#executive"
+        }
+      ],
+      "vehicles": [
+        "Business Sedan",
+        "Premium MPV",
+        "Executive Van",
+        "Coach"
+      ],
+      "others": [
+        {
+          "name": "Events and exhibitions",
+          "href": "IndEvents.dc.html"
+        },
+        {
+          "name": "Government and protocol",
+          "href": "IndGovernment.dc.html"
+        },
+        {
+          "name": "Energy and giga projects",
+          "href": "IndEnergy.dc.html"
+        },
+        {
+          "name": "Hospitality and DMCs",
+          "href": "IndHospitality.dc.html"
+        },
+        {
+          "name": "Sports and entertainment",
+          "href": "IndSports.dc.html"
+        },
+        {
+          "name": "Corporate and enterprise",
+          "href": "IndCorporate.dc.html"
+        }
+      ],
+      "faqs": [
+        [
+          "Which airports does AB cover for crew transport?",
+          "RUH, JED, MED, DMM, DXB, DWC, AUH and DOH, with other Gulf airports on request."
+        ],
+        [
+          "What happens when a flight is delayed?",
+          "Dispatch tracks flight status and reschedules the pickup, with standby vehicles ready for longer disruption."
+        ]
+      ]
+    }
+  },
+  "corporate-enterprise": {
+    "title": "Corporate and enterprise transportation | AB.Limo",
+    "badge": "",
+    "h1": "Executive travel, roadshows and staff mobility under one corporate account",
+    "heroP": "Companies across the Gulf use AB for leadership travel, investor roadshows and daily staff transport. One contract, one dispatch team and one monthly invoice cover every trip.",
+    "statementEyebrow": "How we work",
+    "statement": "Corporate accounts combine dedicated vehicles, staff routes and on demand chauffeurs, with direct billing and reporting your finance team can reconcile in minutes.",
+    "needsEyebrow": "What you need from us",
+    "needsH2": "Built for corporate and enterprise",
+    "stepsEyebrow": "How it runs",
+    "stepsH2": "Three stages, one accountable partner",
+    "ctaH2": "Planning transport for corporate and enterprise?",
+    "ctaP": "Share your dates, passenger numbers and locations and an operations planner will design the movement plan around them.",
+    "D": {
+      "strip": [
+        {
+          "v": "1",
+          "l": "Contract and monthly invoice"
+        },
+        {
+          "v": "24/7",
+          "l": "Dispatch in every country"
+        },
+        {
+          "v": "API",
+          "l": "Integration where required"
+        }
+      ],
+      "needs": [
+        {
+          "num": "01",
+          "t": "Executive and VIP travel",
+          "x": "Chauffeurs by the trip, the hour or the month for leadership and guests."
+        },
+        {
+          "num": "02",
+          "t": "Roadshows",
+          "x": "Multi city schedules for investor and sales roadshows, coordinated by one planner."
+        },
+        {
+          "num": "03",
+          "t": "Staff transportation",
+          "x": "Dedicated vehicles and staff routes for offices and campuses."
+        },
+        {
+          "num": "04",
+          "t": "Central billing",
+          "x": "Client portal, direct billing and one monthly invoice per entity."
+        }
+      ],
+      "steps": [
+        {
+          "num": "01",
+          "t": "Set up",
+          "x": "We agree vehicles, service levels and billing for your account."
+        },
+        {
+          "num": "02",
+          "t": "Book",
+          "x": "Travel managers and assistants book through the portal, email or API."
+        },
+        {
+          "num": "03",
+          "t": "Reconcile",
+          "x": "Monthly reports and one invoice for every trip."
+        }
+      ],
+      "cases": [
+        {
+          "sector": "Corporate",
+          "years": "Ongoing",
+          "place": "Saudi Arabia",
+          "title": "Roshn Group Staff Shuttle",
+          "stats": [
+            {
+              "v": "4",
+              "l": "Vehicles daily"
+            },
+            {
+              "v": "13 to 15",
+              "l": "Passengers each"
+            }
+          ]
+        },
+        {
+          "sector": "Energy and corporate",
+          "years": "2024 to present",
+          "place": "Jubail and Eastern Region, KSA",
+          "title": "Siemens Energy",
+          "stats": [
+            {
+              "v": "7",
+              "l": "Day coverage"
+            },
+            {
+              "v": "0",
+              "l": "Major incidents"
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "Executive and Corporate Mobility",
+          "href": "Services.dc.html#executive"
+        },
+        {
+          "name": "Corporate Fleet and Workforce Mobility",
+          "href": "Services.dc.html#fleet"
+        },
+        {
+          "name": "Airport Transfers",
+          "href": "Services.dc.html#airport"
+        }
+      ],
+      "vehicles": [
+        "Business Sedan",
+        "First Class Sedan",
+        "Executive SUV",
+        "Premium MPV"
+      ],
+      "others": [
+        {
+          "name": "Events and exhibitions",
+          "href": "IndEvents.dc.html"
+        },
+        {
+          "name": "Government and protocol",
+          "href": "IndGovernment.dc.html"
+        },
+        {
+          "name": "Aviation and crew",
+          "href": "IndAviation.dc.html"
+        },
+        {
+          "name": "Energy and giga projects",
+          "href": "IndEnergy.dc.html"
+        },
+        {
+          "name": "Hospitality and DMCs",
+          "href": "IndHospitality.dc.html"
+        },
+        {
+          "name": "Sports and entertainment",
+          "href": "IndSports.dc.html"
+        }
+      ],
+      "faqs": [
+        [
+          "Do you work on long term corporate contracts?",
+          "Yes. Corporate accounts cover dedicated vehicles, staff routes and on demand chauffeurs under one contract with monthly invoicing."
+        ],
+        [
+          "Can we integrate bookings with our travel tools?",
+          "Client portals and direct billing are available, with API integration where required."
+        ]
+      ]
+    }
+  },
+  "energy": {
+    "title": "Energy and giga projects transportation | AB.Limo",
+    "badge": "",
+    "h1": "Workforce and executive transport for remote, large scale projects",
+    "heroP": "Giga projects and energy sites run far from city centres, on shift patterns that never stop. AB runs shift based routes, executive site visits and long term dedicated fleets for project teams.",
+    "statementEyebrow": "How we work",
+    "statement": "Project transport is planned around your shifts and sites, with dedicated vehicles, licensed drivers and dispatch support that covers remote locations around the clock.",
+    "needsEyebrow": "What you need from us",
+    "needsH2": "Built for energy and giga projects",
+    "stepsEyebrow": "How it runs",
+    "stepsH2": "Three stages, one accountable partner",
+    "ctaH2": "Planning transport for energy and giga projects?",
+    "ctaP": "Share your dates, passenger numbers and locations and an operations planner will design the movement plan around them.",
+    "D": {
+      "strip": [
+        {
+          "v": "18",
+          "l": "Luxury coaches a month at NEOM Trojena"
+        },
+        {
+          "v": "7",
+          "l": "Day coverage for Siemens Energy"
+        },
+        {
+          "v": "0",
+          "l": "Major incidents"
+        }
+      ],
+      "needs": [
+        {
+          "num": "01",
+          "t": "Shift based workforce routes",
+          "x": "Scheduled routes for large teams between accommodation, camps and sites, including remote locations."
+        },
+        {
+          "num": "02",
+          "t": "Executive site visits",
+          "x": "Sedans and SUVs for leadership and client visits, with chauffeurs who know the site rules."
+        },
+        {
+          "num": "03",
+          "t": "Dedicated fleets",
+          "x": "Procured and leased fleets for long term project contracts."
+        },
+        {
+          "num": "04",
+          "t": "Safety and compliance",
+          "x": "GPS tracked vehicles, vetted drivers and incident reporting aligned to site HSE requirements."
+        }
+      ],
+      "steps": [
+        {
+          "num": "01",
+          "t": "Survey",
+          "x": "We review sites, shift patterns and headcount with your project team."
+        },
+        {
+          "num": "02",
+          "t": "Mobilise",
+          "x": "Vehicles, drivers and dispatch are put in place before the first shift."
+        },
+        {
+          "num": "03",
+          "t": "Run and report",
+          "x": "Routes run daily with live tracking and monthly performance reports."
+        }
+      ],
+      "cases": [
+        {
+          "sector": "Giga projects",
+          "years": "2025 to present",
+          "place": "NEOM, Saudi Arabia",
+          "title": "NEOM Trojena Project",
+          "stats": [
+            {
+              "v": "18",
+              "l": "Luxury coaches a month"
+            },
+            {
+              "v": "24/7",
+              "l": "Dispatch support"
+            }
+          ]
+        },
+        {
+          "sector": "Energy and corporate",
+          "years": "2024 to present",
+          "place": "Jubail and Eastern Region, KSA",
+          "title": "Siemens Energy",
+          "stats": [
+            {
+              "v": "7",
+              "l": "Day coverage"
+            },
+            {
+              "v": "0",
+              "l": "Major incidents"
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "Corporate Fleet and Workforce Mobility",
+          "href": "Services.dc.html#fleet"
+        },
+        {
+          "name": "Group and Coach Charter",
+          "href": "Services.dc.html#groups"
+        },
+        {
+          "name": "Executive and Corporate Mobility",
+          "href": "Services.dc.html#executive"
+        }
+      ],
+      "vehicles": [
+        "Executive SUV",
+        "Executive Van",
+        "Coach"
+      ],
+      "others": [
+        {
+          "name": "Events and exhibitions",
+          "href": "IndEvents.dc.html"
+        },
+        {
+          "name": "Government and protocol",
+          "href": "IndGovernment.dc.html"
+        },
+        {
+          "name": "Aviation and crew",
+          "href": "IndAviation.dc.html"
+        },
+        {
+          "name": "Hospitality and DMCs",
+          "href": "IndHospitality.dc.html"
+        },
+        {
+          "name": "Sports and entertainment",
+          "href": "IndSports.dc.html"
+        },
+        {
+          "name": "Corporate and enterprise",
+          "href": "IndCorporate.dc.html"
+        }
+      ],
+      "faqs": [
+        [
+          "Can AB provide a dedicated fleet for a multi year project?",
+          "Yes. AB procures and leases dedicated fleets for long term government and corporate contracts."
+        ],
+        [
+          "Do you operate at remote sites?",
+          "Yes. Workforce and project site transport includes shift based routes to remote locations."
+        ]
+      ]
+    }
+  },
+  "events": {
+    "title": "Events and exhibitions transportation | AB.Limo",
+    "badge": "",
+    "h1": "Event transportation that runs on schedule, from the first arrival to the last shuttle",
+    "heroP": "Conferences, festivals and exhibitions move thousands of people through a few gates in a few hours. AB plans the vehicle mix, staffs the venue and runs every movement from a dedicated event control room.",
+    "statementEyebrow": "How we work",
+    "statement": "Every event programme gets its own transport plan: loops, VIP car pools, standby vehicles and coordinators at every pickup point, agreed with your team in writing before the first guest lands.",
+    "needsEyebrow": "What you need from us",
+    "needsH2": "Built for events and exhibitions",
+    "stepsEyebrow": "How it runs",
+    "stepsH2": "Three stages, one accountable partner",
+    "ctaH2": "Planning transport for events and exhibitions?",
+    "ctaP": "Share your dates, passenger numbers and locations and an operations planner will design the movement plan around them.",
+    "D": {
+      "strip": [
+        {
+          "v": "725",
+          "l": "Vehicles at a single event peak"
+        },
+        {
+          "v": "50+",
+          "l": "International events delivered"
+        },
+        {
+          "v": "24/7",
+          "l": "Event control room"
+        }
+      ],
+      "needs": [
+        {
+          "num": "01",
+          "t": "Delegate and visitor shuttles",
+          "x": "Timed loops between hotels, venues and parking, sized to your registration numbers and adjusted live on the day."
+        },
+        {
+          "num": "02",
+          "t": "VIP and speaker movements",
+          "x": "Dedicated sedans and SUVs with protocol trained chauffeurs for keynote speakers, sponsors and government guests."
+        },
+        {
+          "num": "03",
+          "t": "Venue and loading zone control",
+          "x": "On site coordinators manage drop off zones, queues and vehicle staging so arrivals never back up."
+        },
+        {
+          "num": "04",
+          "t": "Post event reporting",
+          "x": "Trip records, on time performance and one consolidated invoice once the event closes."
+        }
+      ],
+      "steps": [
+        {
+          "num": "01",
+          "t": "Plan",
+          "x": "We map passenger flows, set the vehicle mix and agree service levels with your operations team."
+        },
+        {
+          "num": "02",
+          "t": "Operate",
+          "x": "Coordinators and the event control room run the plan and handle changes as they happen."
+        },
+        {
+          "num": "03",
+          "t": "Report",
+          "x": "You receive trip data, on time performance and a single invoice."
+        }
+      ],
+      "cases": [
+        {
+          "sector": "Events and festivals",
+          "years": "2021 to 2025",
+          "place": "Riyadh, Saudi Arabia",
+          "title": "MDL Beast Soundstorm Festival",
+          "stats": [
+            {
+              "v": "725",
+              "l": "Vehicles at peak"
+            },
+            {
+              "v": "145K+",
+              "l": "Attendees"
+            },
+            {
+              "v": "250+",
+              "l": "Artists moved"
+            }
+          ]
+        },
+        {
+          "sector": "Events and exhibitions",
+          "years": "2024 and 2025",
+          "place": "Abu Dhabi, UAE",
+          "title": "ADIPEC VIP Shuttle Services",
+          "stats": [
+            {
+              "v": "VIP",
+              "l": "Guest shuttles"
+            },
+            {
+              "v": "2",
+              "l": "Consecutive editions"
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "Event Transportation",
+          "href": "Services.dc.html#events"
+        },
+        {
+          "name": "Group and Coach Charter",
+          "href": "Services.dc.html#groups"
+        },
+        {
+          "name": "Airport Transfers",
+          "href": "Services.dc.html#airport"
+        }
+      ],
+      "vehicles": [
+        "First Class Sedan",
+        "Executive SUV",
+        "Executive Van",
+        "Coach"
+      ],
+      "others": [
+        {
+          "name": "Government and protocol",
+          "href": "IndGovernment.dc.html"
+        },
+        {
+          "name": "Aviation and crew",
+          "href": "IndAviation.dc.html"
+        },
+        {
+          "name": "Energy and giga projects",
+          "href": "IndEnergy.dc.html"
+        },
+        {
+          "name": "Hospitality and DMCs",
+          "href": "IndHospitality.dc.html"
+        },
+        {
+          "name": "Sports and entertainment",
+          "href": "IndSports.dc.html"
+        },
+        {
+          "name": "Corporate and enterprise",
+          "href": "IndCorporate.dc.html"
+        }
+      ],
+      "faqs": [
+        [
+          "How early should we brief AB for a large event?",
+          "Share dates, passenger numbers and venues as early as possible so planners can secure vehicles and chauffeurs. Your account team will confirm the lead time for your programme."
+        ],
+        [
+          "Can AB handle VIP movements and mass shuttles at the same event?",
+          "Yes. VIP car pools and delegate shuttles run side by side under one plan, monitored from the same event control room."
+        ]
+      ]
+    }
+  },
+  "government-diplomatic": {
+    "title": "Government and protocol transportation | AB.Limo",
+    "badge": "",
+    "h1": "Discreet ground transport for delegations, ministries and official visits",
+    "heroP": "Official visits leave no room for improvisation. AB plans motorcades and delegation movements with protocol teams, using vetted chauffeurs bound by strict confidentiality.",
+    "statementEyebrow": "How we work",
+    "statement": "Protocol movements are planned with your team down to the minute: arrival sequences, vehicle order, standby cars and secure communication with security details.",
+    "needsEyebrow": "What you need from us",
+    "needsH2": "Built for government and protocol",
+    "stepsEyebrow": "How it runs",
+    "stepsH2": "Three stages, one accountable partner",
+    "ctaH2": "Planning transport for government and protocol?",
+    "ctaP": "Share your dates, passenger numbers and locations and an operations planner will design the movement plan around them.",
+    "D": {
+      "strip": [
+        {
+          "v": "NDA",
+          "l": "Signed by every chauffeur"
+        },
+        {
+          "v": "GPS",
+          "l": "Tracking on every vehicle"
+        },
+        {
+          "v": "2025",
+          "l": "Best Supplier Award, presidential delegation"
+        }
+      ],
+      "needs": [
+        {
+          "num": "01",
+          "t": "Motorcade planning",
+          "x": "Vehicle order, routes, timings and standby vehicles agreed with protocol and security teams in advance."
+        },
+        {
+          "num": "02",
+          "t": "Protocol trained chauffeurs",
+          "x": "Chauffeurs trained in protocol, defensive driving and first aid, with background checks and NDAs."
+        },
+        {
+          "num": "03",
+          "t": "Delegation logistics",
+          "x": "Airport arrivals, hotel movements and venue transfers for full delegations, coordinated from one control room."
+        },
+        {
+          "num": "04",
+          "t": "Discretion by default",
+          "x": "Uniformly black fleet, confidential manifests and live GPS visibility for authorised security teams."
+        }
+      ],
+      "steps": [
+        {
+          "num": "01",
+          "t": "Brief",
+          "x": "Protocol shares the programme, delegation size and security requirements."
+        },
+        {
+          "num": "02",
+          "t": "Plan",
+          "x": "We agree vehicle order, routes, standby cars and communication lines in writing."
+        },
+        {
+          "num": "03",
+          "t": "Operate",
+          "x": "Chauffeurs and coordinators run the movement with live tracking from the control room."
+        }
+      ],
+      "cases": [
+        {
+          "sector": "Recognition",
+          "years": "2025",
+          "place": "Middle East",
+          "title": "Best Supplier Award in the Middle East, presidential delegation",
+          "stats": [
+            {
+              "v": "2025",
+              "l": "Award year"
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "Executive and Corporate Mobility",
+          "href": "Services.dc.html#executive"
+        },
+        {
+          "name": "Airport Transfers",
+          "href": "Services.dc.html#airport"
+        },
+        {
+          "name": "Event Transportation",
+          "href": "Services.dc.html#events"
+        }
+      ],
+      "vehicles": [
+        "First Class Sedan",
+        "Executive SUV",
+        "Premium MPV"
+      ],
+      "others": [
+        {
+          "name": "Events and exhibitions",
+          "href": "IndEvents.dc.html"
+        },
+        {
+          "name": "Aviation and crew",
+          "href": "IndAviation.dc.html"
+        },
+        {
+          "name": "Energy and giga projects",
+          "href": "IndEnergy.dc.html"
+        },
+        {
+          "name": "Hospitality and DMCs",
+          "href": "IndHospitality.dc.html"
+        },
+        {
+          "name": "Sports and entertainment",
+          "href": "IndSports.dc.html"
+        },
+        {
+          "name": "Corporate and enterprise",
+          "href": "IndCorporate.dc.html"
+        }
+      ],
+      "faqs": [
+        [
+          "Are AB chauffeurs vetted for government work?",
+          "Every chauffeur goes through comprehensive background checks, defensive driving certification and signs a Non Disclosure Agreement."
+        ],
+        [
+          "Can security teams track vehicles during a visit?",
+          "Yes. Live GPS tracking lets authorised security teams monitor every vehicle in real time."
+        ]
+      ]
+    }
+  },
+  "hospitality": {
+    "title": "Hospitality and DMCs transportation | AB.Limo",
+    "badge": "",
+    "h1": "A chauffeur partner for hotels, DMCs and destination specialists",
+    "heroP": "Your guests judge their stay from the moment they land. AB handles guest transfers, day tours and group movements for hotels and destination management companies across the Gulf.",
+    "statementEyebrow": "How we work",
+    "statement": "Hotels and DMCs book through one account for airport transfers, tours, Umrah journeys and group programmes, with chauffeurs who represent your brand as well as ours.",
+    "needsEyebrow": "What you need from us",
+    "needsH2": "Built for hospitality and dmcs",
+    "stepsEyebrow": "How it runs",
+    "stepsH2": "Three stages, one accountable partner",
+    "ctaH2": "Planning transport for hospitality and dmcs?",
+    "ctaP": "Share your dates, passenger numbers and locations and an operations planner will design the movement plan around them.",
+    "D": {
+      "strip": [
+        {
+          "v": "8",
+          "l": "Gulf airports served"
+        },
+        {
+          "v": "3",
+          "l": "Countries with our own fleet"
+        },
+        {
+          "v": "24/7",
+          "l": "Reservations and dispatch"
+        }
+      ],
+      "needs": [
+        {
+          "num": "01",
+          "t": "Guest airport transfers",
+          "x": "Meet and greet with flight tracking and a named meeting point at every major Gulf airport."
+        },
+        {
+          "num": "02",
+          "t": "Tours and itineraries",
+          "x": "Day tours and multi day itineraries with chauffeurs who know the routes and destinations."
+        },
+        {
+          "num": "03",
+          "t": "Religious tourism",
+          "x": "Jeddah, Makkah and Madinah transport for Umrah groups and pilgrims."
+        },
+        {
+          "num": "04",
+          "t": "Group programmes",
+          "x": "Vans and coaches for incentive groups, weddings and leisure programmes."
+        }
+      ],
+      "steps": [
+        {
+          "num": "01",
+          "t": "Agree",
+          "x": "We set service levels, rates and booking rules for your property or programme."
+        },
+        {
+          "num": "02",
+          "t": "Book",
+          "x": "Your team books through one account by email, portal or API."
+        },
+        {
+          "num": "03",
+          "t": "Deliver",
+          "x": "Chauffeurs collect your guests on time, with live updates to your concierge."
+        }
+      ],
+      "cases": [
+        {
+          "sector": "Events and festivals",
+          "years": "2022 and 2024",
+          "place": "AlUla, Saudi Arabia",
+          "title": "Azimuth Music Festival",
+          "stats": [
+            {
+              "v": "100s",
+              "l": "Vehicles at peak"
+            },
+            {
+              "v": "Crew",
+              "l": "Shuttle services"
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "Tourism and Leisure",
+          "href": "Services.dc.html#tourism"
+        },
+        {
+          "name": "Airport Transfers",
+          "href": "Services.dc.html#airport"
+        },
+        {
+          "name": "Group and Coach Charter",
+          "href": "Services.dc.html#groups"
+        }
+      ],
+      "vehicles": [
+        "Business Sedan",
+        "First Class Sedan",
+        "Premium MPV",
+        "Executive Van"
+      ],
+      "others": [
+        {
+          "name": "Events and exhibitions",
+          "href": "IndEvents.dc.html"
+        },
+        {
+          "name": "Government and protocol",
+          "href": "IndGovernment.dc.html"
+        },
+        {
+          "name": "Aviation and crew",
+          "href": "IndAviation.dc.html"
+        },
+        {
+          "name": "Energy and giga projects",
+          "href": "IndEnergy.dc.html"
+        },
+        {
+          "name": "Sports and entertainment",
+          "href": "IndSports.dc.html"
+        },
+        {
+          "name": "Corporate and enterprise",
+          "href": "IndCorporate.dc.html"
+        }
+      ],
+      "faqs": [
+        [
+          "Can hotels book through an API?",
+          "Client portals and direct billing are available, with API integration where required by clients or tech platforms."
+        ],
+        [
+          "Do you handle Umrah transport?",
+          "Yes. AB runs Jeddah, Makkah and Madinah transport for Umrah groups."
+        ]
+      ]
+    }
+  },
+  "sports": {
+    "title": "Sports and entertainment transportation | AB.Limo",
+    "badge": "",
+    "h1": "Team, talent and fan transport built around match days and show times",
+    "heroP": "Kick off and curtain times do not move. AB plans team, talent and crew movements around the schedule, from tournament fleets to artist transport for the region’s biggest shows.",
+    "statementEyebrow": "How we work",
+    "statement": "Sports federations, promoters and production teams get one partner for athletes, artists, crews and hospitality guests, with discreet chauffeurs and a control room watching every vehicle.",
+    "needsEyebrow": "What you need from us",
+    "needsH2": "Built for sports and entertainment",
+    "stepsEyebrow": "How it runs",
+    "stepsH2": "Three stages, one accountable partner",
+    "ctaH2": "Planning transport for sports and entertainment?",
+    "ctaP": "Share your dates, passenger numbers and locations and an operations planner will design the movement plan around them.",
+    "D": {
+      "strip": [
+        {
+          "v": "All",
+          "l": "Stadiums covered at FIFA World Cup Qatar 2022"
+        },
+        {
+          "v": "250+",
+          "l": "Artists moved at MDL Beast"
+        },
+        {
+          "v": "24/7",
+          "l": "Event control room"
+        }
+      ],
+      "needs": [
+        {
+          "num": "01",
+          "t": "Team and athlete transport",
+          "x": "Hotel, training and venue movements built around match schedules."
+        },
+        {
+          "num": "02",
+          "t": "Artist and talent movements",
+          "x": "Discreet chauffeurs and dedicated vehicles for artists and their teams."
+        },
+        {
+          "num": "03",
+          "t": "Crew and production shuttles",
+          "x": "Vans and coaches for production crews, load in and load out."
+        },
+        {
+          "num": "04",
+          "t": "Hospitality guests",
+          "x": "VIP and sponsor transfers to boxes, lounges and after parties."
+        }
+      ],
+      "steps": [
+        {
+          "num": "01",
+          "t": "Plan",
+          "x": "We align vehicles and timings with the match or show schedule."
+        },
+        {
+          "num": "02",
+          "t": "Operate",
+          "x": "Coordinators at venues and hotels run movements with the control room."
+        },
+        {
+          "num": "03",
+          "t": "Report",
+          "x": "Trip records and a consolidated invoice after the event."
+        }
+      ],
+      "cases": [
+        {
+          "sector": "Sports",
+          "years": "2022",
+          "place": "Doha, Qatar",
+          "title": "FIFA World Cup Qatar 2022",
+          "stats": [
+            {
+              "v": "All",
+              "l": "Stadiums covered"
+            },
+            {
+              "v": "<3",
+              "l": "Months to deliver"
+            }
+          ]
+        },
+        {
+          "sector": "Events and festivals",
+          "years": "2021 to 2025",
+          "place": "Riyadh, Saudi Arabia",
+          "title": "MDL Beast Soundstorm Festival",
+          "stats": [
+            {
+              "v": "725",
+              "l": "Vehicles at peak"
+            },
+            {
+              "v": "145K+",
+              "l": "Attendees"
+            },
+            {
+              "v": "250+",
+              "l": "Artists moved"
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "Event Transportation",
+          "href": "Services.dc.html#events"
+        },
+        {
+          "name": "Group and Coach Charter",
+          "href": "Services.dc.html#groups"
+        },
+        {
+          "name": "Executive and Corporate Mobility",
+          "href": "Services.dc.html#executive"
+        }
+      ],
+      "vehicles": [
+        "First Class Sedan",
+        "Executive SUV",
+        "Executive Van",
+        "Coach"
+      ],
+      "others": [
+        {
+          "name": "Events and exhibitions",
+          "href": "IndEvents.dc.html"
+        },
+        {
+          "name": "Government and protocol",
+          "href": "IndGovernment.dc.html"
+        },
+        {
+          "name": "Aviation and crew",
+          "href": "IndAviation.dc.html"
+        },
+        {
+          "name": "Energy and giga projects",
+          "href": "IndEnergy.dc.html"
+        },
+        {
+          "name": "Hospitality and DMCs",
+          "href": "IndHospitality.dc.html"
+        },
+        {
+          "name": "Corporate and enterprise",
+          "href": "IndCorporate.dc.html"
+        }
+      ],
+      "faqs": [
+        [
+          "Which events has AB supported?",
+          "Recent work includes the FIFA World Cup Qatar 2022, MDL Beast Soundstorm and the Azimuth Music Festival."
+        ],
+        [
+          "Can you keep artist movements confidential?",
+          "Yes. Chauffeurs sign NDAs and manifests are shared only with authorised staff."
+        ]
+      ]
+    }
+  }
+}

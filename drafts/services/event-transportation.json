@@ -1,0 +1,762 @@
+{
+  "pageType": "service",
+  "slug": "event-transportation",
+  "title": "Event Transportation",
+  "subtitle": "Reliable Event Transportation for Flawless Regional Summits",
+  "desc": "Coordinated event transportation requires punctual fleet positioning, vetted professional chauffeurs and continuous central supervision across host cities. AB manages large delegate movements and private VIP motorcades for premier conferences, state gatherings and exhibitions across Saudi Arabia, the UAE and Qatar.",
+  "heroImage": "/services/www.ab.limo-services-event-transportation-images/image1.jpg",
+  "breadcrumb": "Event Transportation",
+  "features": [
+    {
+      "icon": "FileText",
+      "title": "Operational Movement Plan",
+      "desc": "Turnkey passenger schedule detailing routes, vehicle counts by hour, loading zones, and standby contingency fleet."
+    },
+    {
+      "icon": "Radio",
+      "title": "Live Operations Command",
+      "desc": "24/7 central control room monitoring active flight telemetry, GPS manifests, and coordinating on-site marshals."
+    },
+    {
+      "icon": "Crown",
+      "title": "VIP Pools & Venue Shuttles",
+      "desc": "Dedicated late-model luxury saloons for keynote speakers alongside high-frequency delegate shuttle loops."
+    }
+  ],
+  "cardsHeading": "What we deliver",
+  "cardsDesc": "A comprehensive operational framework ensuring flawless arrivals, frictionless venue movements, and coordinated departures.",
+  "cards": [
+    {
+      "image": "/services/event-transportation.jpg",
+      "tag": "Planning",
+      "title": "Written Transport Plan",
+      "desc": "Passenger groups, vehicle numbers by hour, loading zones, and standby contingency rules approved before the event."
+    },
+    {
+      "image": "/services/airport-transfers.jpg",
+      "tag": "Airports",
+      "title": "Arrivals & Departures",
+      "desc": "Airport meet-and-greet desks with live flight tracking and hotel transfers scheduled back from flight departure times."
+    },
+    {
+      "image": "/services/bus-coach-hire.jpg",
+      "tag": "Shuttles",
+      "title": "Venue Shuttle Loops",
+      "desc": "Timed loops between hotels and event venues, with frequency adjusted in real time from the command centre."
+    },
+    {
+      "image": "/services/executive-corporate-mobility.jpg",
+      "tag": "VIPs",
+      "title": "VIP & Speaker Cars",
+      "desc": "Executive sedans and luxury SUVs with chauffeurs briefed on protocol, security clearances, and venue access gates."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+      "tag": "Production",
+      "title": "Artist, Crew & Production Transport",
+      "desc": "Vans and minibuses for production teams, artists, and media crews scheduled around call times and rehearsals."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
+      "tag": "On-Site",
+      "title": "On-Site Coordination",
+      "desc": "Transport coordinators at hotels, venues, and airports managing accreditation, loading bays, and traffic flow."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      "tag": "Reporting",
+      "title": "Post-Event Reporting",
+      "desc": "Comprehensive passenger volume data, vehicle utilisation stats, on-time performance against plan, and debrief notes."
+    }
+  ],
+  "sections": [
+    {
+      "image": "/services/event-transportation.jpg",
+      "imageAlt": "Event Transport Control Room",
+      "title": "How We Plan Your Event",
+      "paragraphs": [
+        "Guests remember the first hour and the last hour of an event, and both usually happen in a vehicle. AB plans and runs every movement around your event: airport arrivals, hotel shuttles, VIP cars, speaker and artist transfers, staff transport and the departure wave.",
+        "Everything is coordinated from one control room, with our team on site."
+      ],
+      "bullets": [
+        {
+          "text": "1. Brief call: Dates, venues, guest profile, numbers, and non-negotiables."
+        },
+        {
+          "text": "2. Draft plan and quote: Vehicle schedule, staffing, and price within agreed working days."
+        },
+        {
+          "text": "3. Site visits: Venues, hotels and airport routes walked and timed."
+        },
+        {
+          "text": "4. Rehearsal day: Drivers briefed and routes driven before guests arrive."
+        },
+        {
+          "text": "5. Live operation: Control room and on-site coordinators run the plan."
+        },
+        {
+          "text": "6. Debrief: Detailed post-event report and lessons learned."
+        }
+      ],
+      "imageSide": "right",
+      "dark": true
+    },
+    {
+      "image": "/services/bus-coach-hire.jpg",
+      "imageAlt": "On-Site Event Marshalling",
+      "title": "What We Deliver: Flawless Movement",
+      "paragraphs": [
+        "The success of an event hinges on how smoothly guests arrive, move, and depart. AB turns transport into an invisible, friction-free operation.",
+        "From the first airport pickup to the final shuttle wave of the evening, every movement is orchestrated by our command team."
+      ],
+      "bullets": [
+        {
+          "text": "Written transport plan covering loading zones, routes, timings and standby fleet."
+        },
+        {
+          "text": "Airport meet-and-greet desks with real-time flight tracking for every guest."
+        },
+        {
+          "text": "Timed shuttle loops between official hotels and venues with live frequency adjustments."
+        },
+        {
+          "text": "Dedicated VIP chauffeur pools for keynote speakers, dignitaries, and artists."
+        },
+        {
+          "text": "On-site transport coordinators liaising with security and venue management."
+        },
+        {
+          "text": "Post-event report with passenger throughput, vehicle utilisation, and on-time stats."
+        }
+      ],
+      "imageSide": "left",
+      "dark": true
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How does AB coordinate large delegate transport from airports?",
+      "a": "AB assigns uniformed greeting personnel inside the terminal arrivals area who track inbound flights in real time. Arriving attendees receive personal assistance with luggage before being guided to reserved executive vans or waiting coaches. Our central dispatch room monitors incoming flights to adjust vehicle staging times when flight delays occur."
+    },
+    {
+      "q": "What experience does AB have managing music and entertainment events?",
+      "a": "Our operations team managed large fleet logistics during the MDL Beast Soundstorm Festival, transferring performers, international production teams and VIP guests between Riyadh hotels and outer desert venue perimeters. That deployment demonstrated our capacity to maintain reliable shuttle frequencies under complex traffic restrictions and high volume staging environments."
+    },
+    {
+      "q": "How are VIP car pool requirements handled for executive speakers?",
+      "a": "Keynote dignitaries, board members and government delegations receive assigned premium sedans with a dedicated professional chauffeur throughout the conference schedule. Chauffeurs remain positioned within designated secure parking bays adjacent to the main conference hall, ready for unscheduled meetings, private dinners or rapid airport departures."
+    },
+    {
+      "q": "How did AB manage energy delegations during ADIPEC VIP Shuttle Services?",
+      "a": "During our work on the ADIPEC VIP Shuttle Services project, AB coordinated executive ground transport for global energy executives visiting Abu Dhabi. Our team placed dedicated on site dispatchers at designated hotel curbsides and exhibition gates, keeping VIP passenger transfers prompt despite dense citywide traffic around the venue."
+    },
+    {
+      "q": "What duty of care standards are applied across the event fleet?",
+      "a": "Every private driver completes rigorous background verification, defensive driving assessments and executive protocol training. All deployed vehicles carry valid commercial licensing, comprehensive insurance and satellite GPS tracking units connected directly to our 24/7 dispatch desk in Riyadh, maintaining total operational oversight throughout the project."
+    },
+    {
+      "q": "Can corporate account holders access consolidated post event invoicing?",
+      "a": "Yes, enterprise clients and travel agencies can establish a corporate account with AB. This facility allows all vehicle hire charges, on site marshalling hours and airport parking fees to be gathered onto a single transparent monthly invoice, complete with individual trip validation receipts for simple accounting reconciliation."
+    },
+    {
+      "q": "How does AB design an event shuttle service between hotels and venues?",
+      "a": "Our route planners examine delegate accommodation distributions, venue access roads and municipal peak traffic patterns to design an efficient timetable. We deploy luxury coaches and executive mini buses on scheduled circular routes, adjusting departure cadences dynamically using real time telemetry to match morning registrations and evening conference receptions."
+    },
+    {
+      "q": "What conference transportation options exist for multi day regional summits?",
+      "a": "Multi day conference transportation requires structured vehicle tiers, combining continuous high capacity guest shuttles with dedicated on call executive limousines for committee leaders. AB assigns a dedicated operations manager who attends daily organiser briefings, reallocating vehicle assignments as delegate attendance numbers fluctuate throughout the summit programme.\n\nOur capabilities"
+    },
+    {
+      "q": "Speak with our regional fleet operations desk",
+      "a": "Connect with our dedicated planning team to structure reliable event transportation for your upcoming summit or corporate conference across the Gulf region.\n\nRequest a proposal Talk to a planner"
+    }
+  ],
+  "ctaTitle": "Event transportation, planned like an operation.",
+  "ctaDesc": "Guests remember the first hour and the last hour of an event. Coordinate your arrivals, venue shuttles, VIP pools and departure waves with our dedicated event control room.",
+  "ctaLabel": "Plan event transport",
+  "ctaHref": "#event-brief",
+  "pageSections": [
+    {
+      "id": "sec-1794643749761-pdwur5vbc",
+      "type": "hero",
+      "variant": "background-content",
+      "order": 0,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Events, Conferences & Exhibitions",
+        "title": "Reliable Event Transportation for Flawless Regional Summits",
+        "titleHighlight": "",
+        "description": "Coordinated event transportation requires punctual fleet positioning, vetted professional chauffeurs and continuous central supervision across host cities. AB manages large delegate movements and private VIP motorcades for premier conferences, state gatherings and exhibitions across Saudi Arabia, the UAE and Qatar."
+      },
+      "items": [
+        {
+          "label": "Request a proposal",
+          "href": "#event-brief",
+          "style": "primary",
+          "icon": "ArrowRight",
+          "iconPosition": "right"
+        },
+        {
+          "label": "Talk to a planner",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone",
+          "iconPosition": "left"
+        },
+        {
+          "label": "View all services →",
+          "href": "/services",
+          "style": "link",
+          "icon": "Calendar",
+          "iconPosition": "left"
+        }
+      ],
+      "settings": {
+        "minHeight": "85vh",
+        "overlayOpacity": 85,
+        "contentPosition": "left",
+        "buttonLayout": "row"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "/services/www.ab.limo-services-event-transportation-images/image1.jpg",
+        "padding": "none",
+        "border": false,
+        "textAlign": "left",
+        "overlayGradient": "default"
+      }
+    },
+    {
+      "id": "sec-1794643749761-i8n1mcbgm",
+      "type": "marquee",
+      "variant": "default",
+      "order": 1,
+      "enabled": true,
+      "content": {
+        "items": [
+          {
+            "id": "itm-1794643749761-5xlpgc2mp",
+            "icon": "Radio",
+            "label": "24/7 Central Dispatch"
+          },
+          {
+            "id": "itm-1794643749761-hbqnwhm4y",
+            "icon": "Globe",
+            "label": "3 Countries with Direct Fleet"
+          },
+          {
+            "id": "itm-1794643749761-iwplds5e8",
+            "icon": "Plane",
+            "label": "8 Regional Airports Served"
+          },
+          {
+            "id": "itm-1794643749761-7zb94kyxi",
+            "icon": "Users",
+            "label": "Uniformed On-Site Ground Marshals"
+          },
+          {
+            "id": "itm-1794643749761-gxf5yoz8d",
+            "icon": "Navigation",
+            "label": "Real-Time Satellite Telematics"
+          },
+          {
+            "id": "itm-1794643749761-wyclusijb",
+            "icon": "FileText",
+            "label": "Single Consolidated Post-Event Invoicing"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "speed": "normal",
+        "opacity": 90
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "sm",
+        "border": true
+      }
+    },
+    {
+      "id": "sec-1794643749761-gbel08hk7",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 2,
+      "enabled": true,
+      "content": {
+        "eyebrow": "How We Work",
+        "heading": "Coordinated Fleet Control",
+        "description": "Executing professional event transportation demands rigorous planning, immediate communication and strict duty of care. AB deploys dedicated local project leads and continuous GPS tracking from our central operations centre, keeping delegate transfers smooth between international airport terminals, official hotels and major exhibition venues.",
+        "items": [
+          {
+            "id": "itm-1794643749761-8cb4p6dx1",
+            "icon": "Users",
+            "heading": "Dedicated On-Site Coordinators",
+            "description": "Uniformed ground marshals managing arrivals, curb side staging, and load-ins."
+          },
+          {
+            "id": "itm-1794643749761-wxqfr13jk",
+            "icon": "Radio",
+            "heading": "24/7 Live Operations Desk",
+            "description": "Telemetry tracking and proactive congestion rerouting across urban summit corridors."
+          },
+          {
+            "id": "itm-1794643749761-no06p0g7r",
+            "icon": "Shield",
+            "heading": "Strict Duty of Care Standards",
+            "description": "Background-checked chauffeurs, GACA-compliant commercial vehicles, and dedicated standby cover."
+          }
+        ],
+        "actions": [
+          {
+            "label": "Request an Event Proposal",
+            "href": "#event-brief",
+            "style": "primary",
+            "icon": "ArrowRight"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "/services/www.ab.limo-services-event-transportation-images/image1.jpg",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749761-r59kllndc",
+      "type": "serviceCards",
+      "variant": "3-column",
+      "order": 3,
+      "enabled": true,
+      "content": {
+        "eyebrow": "What You Get",
+        "heading": "Built for event transportation",
+        "description": "Four integrated mobility tiers tailored for major conferences, cultural festivals, and ministerial gatherings.",
+        "sectionCta": {
+          "label": "View Event Capabilities",
+          "href": "/services",
+          "style": "outline",
+          "icon": "Calendar"
+        },
+        "bottomCta": {
+          "label": "Send Your Event Brief",
+          "href": "#event-brief",
+          "style": "primary",
+          "icon": "ArrowRight"
+        }
+      },
+      "items": [
+        {
+          "id": "itm-1794643749761-ctjupa5ra",
+          "icon": "Bus",
+          "title": "1. Delegate shuttles",
+          "description": "Scheduled coach and minibus loops connect primary conference hotels directly with summit venues. Continuous timetable monitoring manages passenger volume efficiently during peak arrival and departure cycles.",
+          "actions": [
+            {
+              "label": "Shuttle Scope",
+              "href": "#event-brief",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1794643749761-hr199uqgi",
+          "icon": "Crown",
+          "title": "2. VIP car pools",
+          "description": "Dedicated luxury vehicle allocations with a private driver serve keynote speakers, corporate executives and ministerial delegations. Chauffeurs remain on standby for unexpected schedule modifications and private side meetings.",
+          "actions": [
+            {
+              "label": "VIP Allocations",
+              "href": "#event-brief",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1794643749761-xq7ymbhdt",
+          "icon": "Compass",
+          "title": "3. On site coordinators",
+          "description": "Uniformed ground marshals direct passengers at arrival gates, curbside pickup points and venue staging lanes. Our team coordinates vehicle movement directly to prevent curbside congestion.",
+          "actions": [
+            {
+              "label": "Ground Marshalling",
+              "href": "#event-brief",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1794643749761-fobkvtk4j",
+          "icon": "Radio",
+          "title": "4. Live control room",
+          "description": "Operations specialists track all vehicle positions through satellite telematics from our 24/7 dispatch office. Route planners monitor local road congestion and direct drivers around bottlenecks in real time.",
+          "actions": [
+            {
+              "label": "Live Dispatch",
+              "href": "#event-brief",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "columns": "4",
+        "showHeader": true
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1794643749761-wh63acxtg",
+      "type": "mediaContent",
+      "variant": "media-right",
+      "order": 4,
+      "enabled": true,
+      "content": {
+        "eyebrow": "How It Runs",
+        "heading": "Three stages, one accountable partner",
+        "description": "High-capacity event ground transport delivered through a proven three-stage execution framework:",
+        "items": [
+          {
+            "id": "itm-1794643749761-g563mrd4z",
+            "icon": "FileCheck",
+            "heading": "1. Plan",
+            "description": "Route assessment, airport arrival mapping, vehicle staging permits and hotel access protocols are finalised well before delegate arrivals begin."
+          },
+          {
+            "id": "itm-1794643749761-t2kcwyfst",
+            "icon": "Car",
+            "heading": "2. Operate",
+            "description": "On site personnel coordinate vehicle departures while our operations room tracks flight schedules and highway traffic patterns continuously."
+          },
+          {
+            "id": "itm-1794643749761-o3fbrbjio",
+            "icon": "BarChart3",
+            "heading": "3. Report",
+            "description": "Consolidated journey logs, passenger manifest counts and itemised billing data are provided immediately after event operations conclude."
+          }
+        ],
+        "actions": [
+          {
+            "label": "Plan event transport",
+            "href": "#event-brief",
+            "style": "primary",
+            "icon": "ArrowRight"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "right",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "/services/www.ab.limo-services-event-transportation-images/image2.jpg",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749761-h1zchw9pk",
+      "type": "textMediaGrid",
+      "variant": "media-right",
+      "order": 5,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Proven in the Region",
+        "eyebrowIcon": "Calendar",
+        "heading": "Recent Work & High-Capacity Events",
+        "headingHighlight": "",
+        "description": "<p class=\"mb-4 leading-relaxed\"><strong>MDL Beast Soundstorm Festival:</strong> Delivered round the clock artist shuttles, crew logistics and executive guest movements across remote festival grounds outside Riyadh, operating continuous fleet links between central hotels and production perimeters.</p><p class=\"leading-relaxed\"><strong>ADIPEC VIP Shuttle Services:</strong> Managed point to point transfers, ministerial motorcades and dedicated delegate transit for international energy industry leaders attending Abu Dhabi National Exhibition Centre, supported by on site coordination teams.</p>",
+        "items": [
+          {
+            "id": "itm-1794643749761-y3jyz6655",
+            "icon": "Music",
+            "heading": "Soundstorm Festival Logistics",
+            "description": "Round-the-clock artist shuttles, crew movements, and remote festival perimeter routing."
+          },
+          {
+            "id": "itm-1794643749761-o35jrovpj",
+            "icon": "Building",
+            "heading": "ADIPEC Energy Summit",
+            "description": "Ministerial motorcades, VIP shuttle corridors, and multi-hotel delegate loops at ADNEC."
+          }
+        ],
+        "media": [
+          {
+            "id": "itm-1794643749761-llxohbbt6",
+            "type": "image",
+            "column": "left",
+            "size": "tall",
+            "image": "/services/www.ab.limo-services-event-transportation-images/image2.jpg",
+            "imageAlt": "Soundstorm Festival Fleet Staging",
+            "overlay": "blue"
+          },
+          {
+            "id": "itm-1794643749761-sayqna3mt",
+            "type": "stat",
+            "column": "left",
+            "size": "short",
+            "statValue": "100%",
+            "statLabel": "Guaranteed Fleet Dispatch"
+          },
+          {
+            "id": "itm-1794643749761-mczpuboll",
+            "type": "stat",
+            "column": "right",
+            "size": "short",
+            "statValue": "24/7",
+            "statLabel": "On-Site Operations Control"
+          },
+          {
+            "id": "itm-1794643749761-323akrrac",
+            "type": "image",
+            "column": "right",
+            "size": "tall",
+            "image": "/services/www.ab.limo-services-event-transportation-images/image3.jpg",
+            "imageAlt": "ADIPEC VIP Shuttle Fleet Abu Dhabi",
+            "overlay": "gradient"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "right"
+      },
+      "appearance": {
+        "theme": "darker",
+        "pattern": true,
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749761-fzyfhkt9u",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 6,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Where We Run It",
+        "heading": "Regional Coverage and Deployed Fleets",
+        "description": "AB provides directly managed operations across primary commercial centres in three Gulf states. Planners organising regional summits can rely on dedicated territory networks:\n\n• Event Transportation in Saudi Arabia (Riyadh, Jeddah, AlUla)\n• Event Transportation in UAE (Dubai, Abu Dhabi)\n• Event Transportation in Qatar (Doha, Lusail)\n\nVehicles typically deployed:\n• First Class Sedan\n• Executive SUV\n• Executive Van\n• Coach",
+        "items": [
+          {
+            "id": "itm-1794643749761-k35dtxpab",
+            "icon": "MapPin",
+            "heading": "Saudi Arabia (KSA)",
+            "description": "Summits, giga-project launches and festivals across Riyadh, Jeddah, AlUla, and Dammam."
+          },
+          {
+            "id": "itm-1794643749761-36sve3xas",
+            "icon": "MapPin",
+            "heading": "United Arab Emirates",
+            "description": "Large-scale exhibitions and conferences across DWTC, Expo City Dubai, and ADNEC Abu Dhabi."
+          },
+          {
+            "id": "itm-1794643749761-gn3iaxqcy",
+            "icon": "MapPin",
+            "heading": "Qatar Hub",
+            "description": "High-level state summits, sports tournaments and corporate delegations across Doha and Lusail."
+          }
+        ],
+        "actions": [
+          {
+            "label": "View the full fleet",
+            "href": "/fleet",
+            "style": "primary",
+            "icon": "Car"
+          },
+          {
+            "label": "Explore Services",
+            "href": "/services",
+            "style": "outline",
+            "icon": "Calendar"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "dark",
+        "background": "/services/www.ab.limo-services-event-transportation-images/image3.jpg",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749761-wfk05jwj5",
+      "type": "contactForm",
+      "variant": "event",
+      "order": 7,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Plan Your Event Transport",
+        "heading": "Speak with our regional fleet operations desk",
+        "description": "Connect with our dedicated planning team to structure reliable event transportation for your upcoming summit or corporate conference across the Gulf region.",
+        "icon": "Calendar",
+        "submitLabel": "Request a proposal",
+        "successTitle": "Event Brief Received",
+        "successMessage": "Thank you. Our senior event logistics desk will contact you within 4 business hours."
+      },
+      "items": [],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749761-q0srdmcpc",
+      "type": "faq",
+      "variant": "default",
+      "order": 8,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Questions",
+        "heading": "Frequently asked questions",
+        "description": "Operational insights for event directors, production managers and protocol officers.",
+        "items": [
+          {
+            "id": "itm-1794643749762-18waw96tn",
+            "question": "How does AB coordinate large delegate transport from airports?",
+            "answer": "AB assigns uniformed greeting personnel inside the terminal arrivals area who track inbound flights in real time. Arriving attendees receive personal assistance with luggage before being guided to reserved executive vans or waiting coaches. Our central dispatch room monitors incoming flights to adjust vehicle staging times when flight delays occur."
+          },
+          {
+            "id": "itm-1794643749762-oqn9i8f32",
+            "question": "What experience does AB have managing music and entertainment events?",
+            "answer": "Our operations team managed large fleet logistics during the MDL Beast Soundstorm Festival, transferring performers, international production teams and VIP guests between Riyadh hotels and outer desert venue perimeters. That deployment demonstrated our capacity to maintain reliable shuttle frequencies under complex traffic restrictions and high volume staging environments."
+          },
+          {
+            "id": "itm-1794643749762-s5yltmq3g",
+            "question": "How are VIP car pool requirements handled for executive speakers?",
+            "answer": "Keynote dignitaries, board members and government delegations receive assigned premium sedans with a dedicated professional chauffeur throughout the conference schedule. Chauffeurs remain positioned within designated secure parking bays adjacent to the main conference hall, ready for unscheduled meetings, private dinners or rapid airport departures."
+          },
+          {
+            "id": "itm-1794643749762-6jsmq4rec",
+            "question": "How did AB manage energy delegations during ADIPEC VIP Shuttle Services?",
+            "answer": "During our work on the ADIPEC VIP Shuttle Services project, AB coordinated executive ground transport for global energy executives visiting Abu Dhabi. Our team placed dedicated on site dispatchers at designated hotel curbsides and exhibition gates, keeping VIP passenger transfers prompt despite dense citywide traffic around the venue."
+          },
+          {
+            "id": "itm-1794643749762-se3ovfnwf",
+            "question": "What duty of care standards are applied across the event fleet?",
+            "answer": "Every private driver completes rigorous background verification, defensive driving assessments and executive protocol training. All deployed vehicles carry valid commercial licensing, comprehensive insurance and satellite GPS tracking units connected directly to our 24/7 dispatch desk in Riyadh, maintaining total operational oversight throughout the project."
+          },
+          {
+            "id": "itm-1794643749762-uxphl3d3h",
+            "question": "Can corporate account holders access consolidated post event invoicing?",
+            "answer": "Yes, enterprise clients and travel agencies can establish a corporate account with AB. This facility allows all vehicle hire charges, on site marshalling hours and airport parking fees to be gathered onto a single transparent monthly invoice, complete with individual trip validation receipts for simple accounting reconciliation."
+          },
+          {
+            "id": "itm-1794643749762-1gkmnzyoj",
+            "question": "How does AB design an event shuttle service between hotels and venues?",
+            "answer": "Our route planners examine delegate accommodation distributions, venue access roads and municipal peak traffic patterns to design an efficient timetable. We deploy luxury coaches and executive mini buses on scheduled circular routes, adjusting departure cadences dynamically using real time telemetry to match morning registrations and evening conference receptions."
+          },
+          {
+            "id": "itm-1794643749762-5k3mvvp1h",
+            "question": "What conference transportation options exist for multi day regional summits?",
+            "answer": "Multi day conference transportation requires structured vehicle tiers, combining continuous high capacity guest shuttles with dedicated on call executive limousines for committee leaders. AB assigns a dedicated operations manager who attends daily organiser briefings, reallocating vehicle assignments as delegate attendance numbers fluctuate throughout the summit programme.\n\nOur capabilities"
+          },
+          {
+            "id": "itm-1794643749762-iq0vdecin",
+            "question": "Speak with our regional fleet operations desk",
+            "answer": "Connect with our dedicated planning team to structure reliable event transportation for your upcoming summit or corporate conference across the Gulf region.\n\nRequest a proposal Talk to a planner"
+          }
+        ]
+      },
+      "items": [
+        {
+          "label": "Request a proposal",
+          "href": "#event-brief",
+          "style": "primary",
+          "icon": "ArrowRight"
+        },
+        {
+          "label": "Talk to a planner",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone"
+        }
+      ],
+      "settings": {
+        "variant": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1794643749762-te2jwhttr",
+      "type": "ctaBanner",
+      "variant": "centered",
+      "order": 9,
+      "enabled": true,
+      "content": {
+        "heading": "Planning event transportation?",
+        "description": "Speak with our regional fleet operations desk to structure flawless guest movements across Saudi Arabia, the UAE and Qatar."
+      },
+      "items": [
+        {
+          "label": "Request a proposal",
+          "href": "#event-brief",
+          "style": "primary",
+          "icon": "ArrowRight"
+        },
+        {
+          "label": "Talk to a planner",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone"
+        }
+      ],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    }
+  ],
+  "seo": {
+    "metaTitle": "Event & Conference Transportation in the GCC | AB",
+    "metaDescription": "Event transportation for conferences, exhibitions and festivals in Saudi Arabia and the GCC: fleet planning, shuttles, VIP pools and a live control room.",
+    "ogImage": "/services/event-transportation.jpg"
+  },
+  "status": "published",
+  "showInMenu": true,
+  "order": 3,
+  "locale": "en",
+  "exportedAt": "2026-11-14T08:09:39.836Z"
+}

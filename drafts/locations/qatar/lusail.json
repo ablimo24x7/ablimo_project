@@ -1,0 +1,2250 @@
+{
+  "pageType": "city",
+  "refKey": "qatar/lusail",
+  "countrySlug": "qatar",
+  "citySlug": "lusail",
+  "path": "/locations/qatar/lusail",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for lusail (qatar)",
+  "exportedAt": "2026-11-10T11:52:18.060Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538060-gff4ukz01",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Lusail",
+          "titleHighlight": "",
+          "description": "AB delivers premium chauffeur service Lusail transport tailored for corporate executives and official delegations across Lusail. Professional drivers connect clients directly to Hamad International Airport (DOH) and central business districts with complete privacy, punctuality and vehicle presentation.\n\nWhether coordinating multi vehicle summits or individual executive transfers, dispatch coordinators align vehicle categories with specific passenger itineraries. Dedicated operations ensure seamless transitions between commercial terminals, private aviation facilities, luxury hotels and conference venues."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-qatar-lusail-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Lusail skyline waterfront towers and marina promenade in Qatar"
+        }
+      },
+      {
+        "id": "sec-1794311538060-cogywb1pt",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-llbms132p",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Lusail fleet",
+          "heading": "Choose your Lusail chauffeur class",
+          "description": "Vehicles for Lusail are dispatched from the nearest office, AB Doha, providing impeccably maintained luxury sedans, premium people carriers and executive sport utility vehicles throughout the municipality.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "lusail-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image2.jpg",
+            "imageAlt": "Standard Sedan chauffeur service Lusail vehicle",
+            "category": "Standard Sedan",
+            "name": "Executive Sedan or similar",
+            "idealFor": "Ideal for: Everyday executive travel and transfers",
+            "description": "Quiet and refined travel for individual business visitors arriving in Lusail. Professional drivers manage optimal routing through city avenues, offering leather seating, climate control and bottled water for daily appointments.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image3.jpg",
+            "imageAlt": "Business Sedan for executive chauffeur service Lusail",
+            "category": "Business Sedan",
+            "name": "Mercedes E Class or similar",
+            "idealFor": "Ideal for: Corporate meetings and financial visits",
+            "description": "The executive choice for corporate mobility across Lusail commercial precincts. Passengers enjoy mobile charging facilities, generous rear legroom and attentive assistance from an experienced private chauffeur during business visits.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image4.jpg",
+            "imageAlt": "First Class Sedan limousine service Lusail",
+            "category": "First Class Sedan",
+            "name": "Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP hospitality and diplomatic delegations",
+            "description": "A flagship saloon providing peerless comfort for ministerial guests and senior executives in Lusail. Features include reclining rear seats, acoustic insulation, fine upholstery and dedicated protocol support.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image5.jpg",
+            "imageAlt": "Executive SUV car with driver Lusail",
+            "category": "Executive SUV",
+            "name": "Cadillac Escalade or GMC Yukon or similar",
+            "idealFor": "Ideal for: Spacious travel with excess luggage",
+            "description": "Commanding road presence paired with expansive cargo capacity for families or teams. All wheel drive capability delivers serene transport across modern highways, hotel arrivals and coastal residential developments.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image6.jpg",
+            "imageAlt": "Premium MPV private driver Lusail",
+            "category": "Premium MPV",
+            "name": "Mercedes V Class or similar",
+            "idealFor": "Ideal for: Executive groups and mobile conferences",
+            "description": "Flexible conference seating allows colleagues to collaborate while in transit through Lusail. Luxury appointments, rear privacy glass and effortless boarding suit corporate roadshows and multi stop event itineraries.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image7.jpg",
+            "imageAlt": "Executive Van for group chauffeur service Lusail",
+            "category": "Executive Van",
+            "name": "Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Delegation transport and crew movements",
+            "description": "Generous passenger accommodation and luggage space for conference delegations and corporate groups. High roof design and wide aisles allow easy entry for airport pickups and venue transfers.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-3lueyuw1r",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Lusail and beyond",
+          "description": "Fixed rate transfers connect key transport hubs, administrative districts and sporting facilities across the municipality with absolute schedule adherence.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "lusail-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DOH to Lusail Marina",
+            "description": "",
+            "subtext": "From QAR 250",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/airports/hamad-international-doh",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DOH to Lusail Stadium",
+            "description": "",
+            "subtext": "From QAR 280",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/airports/hamad-international-doh",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Lusail to West Bay",
+            "description": "",
+            "subtext": "From QAR 180",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/qatar/doha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Lusail to Doha",
+            "description": "",
+            "subtext": "From QAR 200",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/qatar/doha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-5",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "Lusail to Hamad International Airport (DOH)",
+            "description": "",
+            "subtext": "From QAR 250",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/airports/hamad-international-doh",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-hgpj7639h",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Lusail",
+          "heading": "One partner for every movement in Lusail",
+          "description": "AB coordinates complete executive mobility, airport transfers and group transit across all commercial zones and leisure waterfronts in Lusail."
+        },
+        "items": [
+          {
+            "id": "lusail-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Lusail",
+            "description": "For corporate board members, ministerial delegations and private high net worth individuals.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Lusail",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-svc-2",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Lusail",
+            "description": "For large event shuttles, corporate employee movements and chartered group programmes.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Lusail",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-svc-3",
+            "icon": "Clock",
+            "title": "Hourly Chauffeur Hire",
+            "description": "Flexible vehicle and driver availability for fluid business meeting schedules throughout the working day.",
+            "actions": [
+              {
+                "label": "Hourly Chauffeur Hire",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-svc-4",
+            "icon": "Calendar",
+            "title": "Dedicated Event Transportation",
+            "description": "Synchronising multi fleet arrivals for major conventions, sporting championships and brand activations.",
+            "actions": [
+              {
+                "label": "Dedicated Event Transportation",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-a298y4ex6",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Hamad International Airport (DOH)",
+          "description": "Stepping off a flight into Hamad International Airport requires smooth ground logistics to reach northern destinations without delay. AB monitors all commercial flights and private aviation movements in real time, automatically adjusting pickup schedules when flight arrival times shift. Upon clearing customs, passengers find their private chauffeur waiting in the arrivals hall with a personalised digital name board. Your dedicated driver assists with heavy luggage and guides you straight to the vehicle parked at the agreed meeting point. To accommodate international arrival procedures and potential immigration queues, every airport pickup includes complimentary free waiting time.",
+          "items": [
+            {
+              "id": "lusail-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "lusail-apt-b-2",
+              "icon": "CheckCircle2",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "lusail-apt-b-3",
+              "icon": "Clock",
+              "heading": "DOH to Lusail Marina",
+              "description": "Direct highway transfer"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-qatar-lusail-images/image1.jpg",
+          "backgroundAlt": "Hamad International Airport transfer to Lusail"
+        }
+      },
+      {
+        "id": "sec-1794311538060-jq68mh0kf",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-95nw6qqjd",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Lusail",
+          "description": "Chauffeurs maintain deep geographical knowledge of all modern developments, residential quarters, commercial parks and road infrastructure throughout Lusail. Strategic route planning avoids peak traffic bottlenecks, delivering swift navigation across the planned smart city.",
+          "items": [
+            {
+              "id": "lusail-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "Lusail Marina corporate precinct · Energy City Qatar headquarters · Marina Twin Towers commercial complex"
+            },
+            {
+              "id": "lusail-cov-2",
+              "icon": "Calendar",
+              "heading": "Events and conferences",
+              "description": "Lusail Stadium · Lusail Sports Arena · Place Vendôme luxury exhibition corridors"
+            },
+            {
+              "id": "lusail-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Lusail Boulevard entertainment avenue · Qetaifan Island North beach clubs · Crescent Park"
+            },
+            {
+              "id": "lusail-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Lusail City Hall · Ministry of Commerce and Industry · Lusail Command and Control Centre"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Lusail"
+        }
+      },
+      {
+        "id": "sec-1794311538060-g0ca01qy9",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Lusail",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-tw32q0zis",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Chauffeur service Lusail operations by AB",
+          "description": "All chauffeured vehicle allocations across Lusail are coordinated through the regional office, AB Doha, supported round the clock by the central operations room. Fleet standards, vehicle sanitisation protocols and driver briefings follow stringent executive hospitality criteria.",
+          "items": [
+            {
+              "id": "lusail-hq-1",
+              "icon": "Map",
+              "heading": "AB Doha (Operating Office)",
+              "description": "Office 110, Building 100, Zone 26, Street 310, Old Airport Road, Doha, Qatar"
+            },
+            {
+              "id": "lusail-hq-2",
+              "icon": "Phone",
+              "heading": "+974 7734 3300",
+              "description": "24/7 central dispatch and reservations"
+            },
+            {
+              "id": "lusail-hq-3",
+              "icon": "Map",
+              "heading": "AB Central Dispatch",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "lusail-hq-4",
+              "icon": "Phone",
+              "heading": "+971 50 918 0556",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Office+110,+Building+100,+Zone+26,+Street+310,+Old+Airport+Road,+Doha,+Qatar",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538060-hjlel8aly",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service Lusail: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538060-ggnd9jffk",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Lusail.",
+          "description": "Organise dependable ground transport for upcoming visits to Lusail, major conference summits or executive airport arrivals across Qatar. Contact our 24/7 operations team directly on +971 50 918 0556.",
+          "subheading": "Arrange corporate chauffeur service Lusail mobility",
+          "subdescription": "Experience seamless executive travel, luxury transfers, and dedicated fleet management across Lusail."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538060-gff4ukz01",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Lusail",
+          "titleHighlight": "",
+          "description": "AB delivers premium chauffeur service Lusail transport tailored for corporate executives and official delegations across Lusail. Professional drivers connect clients directly to Hamad International Airport (DOH) and central business districts with complete privacy, punctuality and vehicle presentation.\n\nWhether coordinating multi vehicle summits or individual executive transfers, dispatch coordinators align vehicle categories with specific passenger itineraries. Dedicated operations ensure seamless transitions between commercial terminals, private aviation facilities, luxury hotels and conference venues."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-qatar-lusail-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Lusail skyline waterfront towers and marina promenade in Qatar"
+        }
+      },
+      {
+        "id": "sec-1794311538060-cogywb1pt",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-llbms132p",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Lusail fleet",
+          "heading": "Choose your Lusail chauffeur class",
+          "description": "Vehicles for Lusail are dispatched from the nearest office, AB Doha, providing impeccably maintained luxury sedans, premium people carriers and executive sport utility vehicles throughout the municipality.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "lusail-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image2.jpg",
+            "imageAlt": "Standard Sedan chauffeur service Lusail vehicle",
+            "category": "Standard Sedan",
+            "name": "Executive Sedan or similar",
+            "idealFor": "Ideal for: Everyday executive travel and transfers",
+            "description": "Quiet and refined travel for individual business visitors arriving in Lusail. Professional drivers manage optimal routing through city avenues, offering leather seating, climate control and bottled water for daily appointments.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image3.jpg",
+            "imageAlt": "Business Sedan for executive chauffeur service Lusail",
+            "category": "Business Sedan",
+            "name": "Mercedes E Class or similar",
+            "idealFor": "Ideal for: Corporate meetings and financial visits",
+            "description": "The executive choice for corporate mobility across Lusail commercial precincts. Passengers enjoy mobile charging facilities, generous rear legroom and attentive assistance from an experienced private chauffeur during business visits.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image4.jpg",
+            "imageAlt": "First Class Sedan limousine service Lusail",
+            "category": "First Class Sedan",
+            "name": "Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP hospitality and diplomatic delegations",
+            "description": "A flagship saloon providing peerless comfort for ministerial guests and senior executives in Lusail. Features include reclining rear seats, acoustic insulation, fine upholstery and dedicated protocol support.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image5.jpg",
+            "imageAlt": "Executive SUV car with driver Lusail",
+            "category": "Executive SUV",
+            "name": "Cadillac Escalade or GMC Yukon or similar",
+            "idealFor": "Ideal for: Spacious travel with excess luggage",
+            "description": "Commanding road presence paired with expansive cargo capacity for families or teams. All wheel drive capability delivers serene transport across modern highways, hotel arrivals and coastal residential developments.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image6.jpg",
+            "imageAlt": "Premium MPV private driver Lusail",
+            "category": "Premium MPV",
+            "name": "Mercedes V Class or similar",
+            "idealFor": "Ideal for: Executive groups and mobile conferences",
+            "description": "Flexible conference seating allows colleagues to collaborate while in transit through Lusail. Luxury appointments, rear privacy glass and effortless boarding suit corporate roadshows and multi stop event itineraries.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image7.jpg",
+            "imageAlt": "Executive Van for group chauffeur service Lusail",
+            "category": "Executive Van",
+            "name": "Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Delegation transport and crew movements",
+            "description": "Generous passenger accommodation and luggage space for conference delegations and corporate groups. High roof design and wide aisles allow easy entry for airport pickups and venue transfers.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-3lueyuw1r",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Lusail and beyond",
+          "description": "Fixed rate transfers connect key transport hubs, administrative districts and sporting facilities across the municipality with absolute schedule adherence.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "lusail-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DOH to Lusail Marina",
+            "description": "",
+            "subtext": "From QAR 250",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/airports/hamad-international-doh",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DOH to Lusail Stadium",
+            "description": "",
+            "subtext": "From QAR 280",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/airports/hamad-international-doh",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Lusail to West Bay",
+            "description": "",
+            "subtext": "From QAR 180",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/qatar/doha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Lusail to Doha",
+            "description": "",
+            "subtext": "From QAR 200",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/qatar/doha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-5",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "Lusail to Hamad International Airport (DOH)",
+            "description": "",
+            "subtext": "From QAR 250",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/airports/hamad-international-doh",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-hgpj7639h",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Lusail",
+          "heading": "One partner for every movement in Lusail",
+          "description": "AB coordinates complete executive mobility, airport transfers and group transit across all commercial zones and leisure waterfronts in Lusail."
+        },
+        "items": [
+          {
+            "id": "lusail-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Lusail",
+            "description": "For corporate board members, ministerial delegations and private high net worth individuals.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Lusail",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-svc-2",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Lusail",
+            "description": "For large event shuttles, corporate employee movements and chartered group programmes.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Lusail",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-svc-3",
+            "icon": "Clock",
+            "title": "Hourly Chauffeur Hire",
+            "description": "Flexible vehicle and driver availability for fluid business meeting schedules throughout the working day.",
+            "actions": [
+              {
+                "label": "Hourly Chauffeur Hire",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-svc-4",
+            "icon": "Calendar",
+            "title": "Dedicated Event Transportation",
+            "description": "Synchronising multi fleet arrivals for major conventions, sporting championships and brand activations.",
+            "actions": [
+              {
+                "label": "Dedicated Event Transportation",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-a298y4ex6",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Hamad International Airport (DOH)",
+          "description": "Stepping off a flight into Hamad International Airport requires smooth ground logistics to reach northern destinations without delay. AB monitors all commercial flights and private aviation movements in real time, automatically adjusting pickup schedules when flight arrival times shift. Upon clearing customs, passengers find their private chauffeur waiting in the arrivals hall with a personalised digital name board. Your dedicated driver assists with heavy luggage and guides you straight to the vehicle parked at the agreed meeting point. To accommodate international arrival procedures and potential immigration queues, every airport pickup includes complimentary free waiting time.",
+          "items": [
+            {
+              "id": "lusail-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "lusail-apt-b-2",
+              "icon": "CheckCircle2",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "lusail-apt-b-3",
+              "icon": "Clock",
+              "heading": "DOH to Lusail Marina",
+              "description": "Direct highway transfer"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-qatar-lusail-images/image1.jpg",
+          "backgroundAlt": "Hamad International Airport transfer to Lusail"
+        }
+      },
+      {
+        "id": "sec-1794311538060-jq68mh0kf",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-95nw6qqjd",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Lusail",
+          "description": "Chauffeurs maintain deep geographical knowledge of all modern developments, residential quarters, commercial parks and road infrastructure throughout Lusail. Strategic route planning avoids peak traffic bottlenecks, delivering swift navigation across the planned smart city.",
+          "items": [
+            {
+              "id": "lusail-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "Lusail Marina corporate precinct · Energy City Qatar headquarters · Marina Twin Towers commercial complex"
+            },
+            {
+              "id": "lusail-cov-2",
+              "icon": "Calendar",
+              "heading": "Events and conferences",
+              "description": "Lusail Stadium · Lusail Sports Arena · Place Vendôme luxury exhibition corridors"
+            },
+            {
+              "id": "lusail-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Lusail Boulevard entertainment avenue · Qetaifan Island North beach clubs · Crescent Park"
+            },
+            {
+              "id": "lusail-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Lusail City Hall · Ministry of Commerce and Industry · Lusail Command and Control Centre"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Lusail"
+        }
+      },
+      {
+        "id": "sec-1794311538060-g0ca01qy9",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Lusail",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-tw32q0zis",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Chauffeur service Lusail operations by AB",
+          "description": "All chauffeured vehicle allocations across Lusail are coordinated through the regional office, AB Doha, supported round the clock by the central operations room. Fleet standards, vehicle sanitisation protocols and driver briefings follow stringent executive hospitality criteria.",
+          "items": [
+            {
+              "id": "lusail-hq-1",
+              "icon": "Map",
+              "heading": "AB Doha (Operating Office)",
+              "description": "Office 110, Building 100, Zone 26, Street 310, Old Airport Road, Doha, Qatar"
+            },
+            {
+              "id": "lusail-hq-2",
+              "icon": "Phone",
+              "heading": "+974 7734 3300",
+              "description": "24/7 central dispatch and reservations"
+            },
+            {
+              "id": "lusail-hq-3",
+              "icon": "Map",
+              "heading": "AB Central Dispatch",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "lusail-hq-4",
+              "icon": "Phone",
+              "heading": "+971 50 918 0556",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Office+110,+Building+100,+Zone+26,+Street+310,+Old+Airport+Road,+Doha,+Qatar",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538060-hjlel8aly",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service Lusail: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538060-ggnd9jffk",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Lusail.",
+          "description": "Organise dependable ground transport for upcoming visits to Lusail, major conference summits or executive airport arrivals across Qatar. Contact our 24/7 operations team directly on +971 50 918 0556.",
+          "subheading": "Arrange corporate chauffeur service Lusail mobility",
+          "subdescription": "Experience seamless executive travel, luxury transfers, and dedicated fleet management across Lusail."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538060-p4y14p0my",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Lusail",
+          "titleHighlight": "",
+          "description": "AB delivers premium chauffeur service Lusail transport tailored for corporate executives and official delegations across Lusail. Professional drivers connect clients directly to Hamad International Airport (DOH) and central business districts with complete privacy, punctuality and vehicle presentation.\n\nWhether coordinating multi vehicle summits or individual executive transfers, dispatch coordinators align vehicle categories with specific passenger itineraries. Dedicated operations ensure seamless transitions between commercial terminals, private aviation facilities, luxury hotels and conference venues."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-qatar-lusail-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Lusail skyline waterfront towers and marina promenade in Qatar"
+        }
+      },
+      {
+        "id": "sec-1794311538060-jq3q1cg76",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-exjh06ele",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Lusail fleet",
+          "heading": "Choose your Lusail chauffeur class",
+          "description": "Vehicles for Lusail are dispatched from the nearest office, AB Doha, providing impeccably maintained luxury sedans, premium people carriers and executive sport utility vehicles throughout the municipality.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "lusail-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image2.jpg",
+            "imageAlt": "Standard Sedan chauffeur service Lusail vehicle",
+            "category": "Standard Sedan",
+            "name": "Executive Sedan or similar",
+            "idealFor": "Ideal for: Everyday executive travel and transfers",
+            "description": "Quiet and refined travel for individual business visitors arriving in Lusail. Professional drivers manage optimal routing through city avenues, offering leather seating, climate control and bottled water for daily appointments.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image3.jpg",
+            "imageAlt": "Business Sedan for executive chauffeur service Lusail",
+            "category": "Business Sedan",
+            "name": "Mercedes E Class or similar",
+            "idealFor": "Ideal for: Corporate meetings and financial visits",
+            "description": "The executive choice for corporate mobility across Lusail commercial precincts. Passengers enjoy mobile charging facilities, generous rear legroom and attentive assistance from an experienced private chauffeur during business visits.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image4.jpg",
+            "imageAlt": "First Class Sedan limousine service Lusail",
+            "category": "First Class Sedan",
+            "name": "Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP hospitality and diplomatic delegations",
+            "description": "A flagship saloon providing peerless comfort for ministerial guests and senior executives in Lusail. Features include reclining rear seats, acoustic insulation, fine upholstery and dedicated protocol support.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image5.jpg",
+            "imageAlt": "Executive SUV car with driver Lusail",
+            "category": "Executive SUV",
+            "name": "Cadillac Escalade or GMC Yukon or similar",
+            "idealFor": "Ideal for: Spacious travel with excess luggage",
+            "description": "Commanding road presence paired with expansive cargo capacity for families or teams. All wheel drive capability delivers serene transport across modern highways, hotel arrivals and coastal residential developments.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image6.jpg",
+            "imageAlt": "Premium MPV private driver Lusail",
+            "category": "Premium MPV",
+            "name": "Mercedes V Class or similar",
+            "idealFor": "Ideal for: Executive groups and mobile conferences",
+            "description": "Flexible conference seating allows colleagues to collaborate while in transit through Lusail. Luxury appointments, rear privacy glass and effortless boarding suit corporate roadshows and multi stop event itineraries.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "lusail-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-qatar-lusail-images/image7.jpg",
+            "imageAlt": "Executive Van for group chauffeur service Lusail",
+            "category": "Executive Van",
+            "name": "Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Delegation transport and crew movements",
+            "description": "Generous passenger accommodation and luggage space for conference delegations and corporate groups. High roof design and wide aisles allow easy entry for airport pickups and venue transfers.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-ip9fsxbmx",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Lusail and beyond",
+          "description": "Fixed rate transfers connect key transport hubs, administrative districts and sporting facilities across the municipality with absolute schedule adherence.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "lusail-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DOH to Lusail Marina",
+            "description": "",
+            "subtext": "From QAR 250",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/airports/hamad-international-doh",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "DOH to Lusail Stadium",
+            "description": "",
+            "subtext": "From QAR 280",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/airports/hamad-international-doh",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Lusail to West Bay",
+            "description": "",
+            "subtext": "From QAR 180",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/qatar/doha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Lusail to Doha",
+            "description": "",
+            "subtext": "From QAR 200",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/qatar/doha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-jrny-5",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "Lusail to Hamad International Airport (DOH)",
+            "description": "",
+            "subtext": "From QAR 250",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/airports/hamad-international-doh",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-brmms0fxe",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Lusail",
+          "heading": "One partner for every movement in Lusail",
+          "description": "AB coordinates complete executive mobility, airport transfers and group transit across all commercial zones and leisure waterfronts in Lusail."
+        },
+        "items": [
+          {
+            "id": "lusail-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Lusail",
+            "description": "For corporate board members, ministerial delegations and private high net worth individuals.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Lusail",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-svc-2",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Lusail",
+            "description": "For large event shuttles, corporate employee movements and chartered group programmes.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Lusail",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-svc-3",
+            "icon": "Clock",
+            "title": "Hourly Chauffeur Hire",
+            "description": "Flexible vehicle and driver availability for fluid business meeting schedules throughout the working day.",
+            "actions": [
+              {
+                "label": "Hourly Chauffeur Hire",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "lusail-svc-4",
+            "icon": "Calendar",
+            "title": "Dedicated Event Transportation",
+            "description": "Synchronising multi fleet arrivals for major conventions, sporting championships and brand activations.",
+            "actions": [
+              {
+                "label": "Dedicated Event Transportation",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-g634s66x2",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Hamad International Airport (DOH)",
+          "description": "Stepping off a flight into Hamad International Airport requires smooth ground logistics to reach northern destinations without delay. AB monitors all commercial flights and private aviation movements in real time, automatically adjusting pickup schedules when flight arrival times shift. Upon clearing customs, passengers find their private chauffeur waiting in the arrivals hall with a personalised digital name board. Your dedicated driver assists with heavy luggage and guides you straight to the vehicle parked at the agreed meeting point. To accommodate international arrival procedures and potential immigration queues, every airport pickup includes complimentary free waiting time.",
+          "items": [
+            {
+              "id": "lusail-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "lusail-apt-b-2",
+              "icon": "CheckCircle2",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "lusail-apt-b-3",
+              "icon": "Clock",
+              "heading": "DOH to Lusail Marina",
+              "description": "Direct highway transfer"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-qatar-lusail-images/image1.jpg",
+          "backgroundAlt": "Hamad International Airport transfer to Lusail"
+        }
+      },
+      {
+        "id": "sec-1794311538060-ovaxsz09d",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-kfx3dnm16",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Lusail",
+          "description": "Chauffeurs maintain deep geographical knowledge of all modern developments, residential quarters, commercial parks and road infrastructure throughout Lusail. Strategic route planning avoids peak traffic bottlenecks, delivering swift navigation across the planned smart city.",
+          "items": [
+            {
+              "id": "lusail-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "Lusail Marina corporate precinct · Energy City Qatar headquarters · Marina Twin Towers commercial complex"
+            },
+            {
+              "id": "lusail-cov-2",
+              "icon": "Calendar",
+              "heading": "Events and conferences",
+              "description": "Lusail Stadium · Lusail Sports Arena · Place Vendôme luxury exhibition corridors"
+            },
+            {
+              "id": "lusail-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Lusail Boulevard entertainment avenue · Qetaifan Island North beach clubs · Crescent Park"
+            },
+            {
+              "id": "lusail-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Lusail City Hall · Ministry of Commerce and Industry · Lusail Command and Control Centre"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Lusail"
+        }
+      },
+      {
+        "id": "sec-1794311538060-y9z1oy0gp",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Lusail",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538060-efu7vvok8",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Chauffeur service Lusail operations by AB",
+          "description": "All chauffeured vehicle allocations across Lusail are coordinated through the regional office, AB Doha, supported round the clock by the central operations room. Fleet standards, vehicle sanitisation protocols and driver briefings follow stringent executive hospitality criteria.",
+          "items": [
+            {
+              "id": "lusail-hq-1",
+              "icon": "Map",
+              "heading": "AB Doha (Operating Office)",
+              "description": "Office 110, Building 100, Zone 26, Street 310, Old Airport Road, Doha, Qatar"
+            },
+            {
+              "id": "lusail-hq-2",
+              "icon": "Phone",
+              "heading": "+974 7734 3300",
+              "description": "24/7 central dispatch and reservations"
+            },
+            {
+              "id": "lusail-hq-3",
+              "icon": "Map",
+              "heading": "AB Central Dispatch",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "lusail-hq-4",
+              "icon": "Phone",
+              "heading": "+971 50 918 0556",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Office+110,+Building+100,+Zone+26,+Street+310,+Old+Airport+Road,+Doha,+Qatar",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538060-aabzaq7hj",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service Lusail: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538060-j1de5r05i",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Lusail.",
+          "description": "Organise dependable ground transport for upcoming visits to Lusail, major conference summits or executive airport arrivals across Qatar. Contact our 24/7 operations team directly on +971 50 918 0556.",
+          "subheading": "Arrange corporate chauffeur service Lusail mobility",
+          "subdescription": "Experience seamless executive travel, luxury transfers, and dedicated fleet management across Lusail."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

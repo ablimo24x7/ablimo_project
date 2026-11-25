@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/tabuk",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "tabuk",
+  "path": "/locations/saudi-arabia/tabuk",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for tabuk (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.450Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309997816-dhulioew8",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN TABUK",
+          "title": "Tabuk",
+          "description": "Northwest Saudi Arabia's rising gateway connecting ancient heritage with the NEOM mega-region. AB ensures every transfer from Prince Sultan bin Abdulaziz Airport to regional business centers and mountain corridors is first class.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Prince Sultan bin Abdulaziz (TUU)",
+          "dropoffDefault": "Tabuk City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-tabuk-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997816-3g4r2tzqa",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE TABUK FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997816-kfjxqwfvk",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Tabuk and beyond"
+        },
+        "items": [
+          {
+            "id": "tuu-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "TUU to Tabuk City Center",
+            "titleAr": "من مطار الأمير سلطان إلى وسط مدينة تبوك",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Prince Sultan bin Abdulaziz Airport (TUU)",
+            "dropoff": "Tabuk City Center"
+          },
+          {
+            "id": "tuu-neom",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "TUU to NEOM Community",
+            "titleAr": "من مطار الأمير سلطان إلى مجمعات نيوم",
+            "price": "From SAR 650",
+            "priceAr": "ابتداءً من 650 ر.س",
+            "pickup": "Prince Sultan bin Abdulaziz Airport (TUU)",
+            "dropoff": "NEOM Community"
+          },
+          {
+            "id": "tabuk-disah",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Tabuk to Wadi Al Disah",
+            "titleAr": "من تبوك إلى وادي الديسة",
+            "price": "From SAR 580",
+            "priceAr": "ابتداءً من 580 ر.س",
+            "pickup": "Tabuk",
+            "dropoff": "Wadi Al Disah"
+          },
+          {
+            "id": "tabuk-alula",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Tabuk to AlUla",
+            "titleAr": "من تبوك إلى العلا",
+            "price": "From SAR 850",
+            "priceAr": "ابتداءً من 850 ر.س",
+            "pickup": "Tabuk",
+            "dropoff": "AlUla"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997816-22nt1gan6",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN TABUK",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997816-nvyc9epxp",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Tabuk.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309997816-dhulioew8",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN TABUK",
+          "title": "Tabuk",
+          "description": "Northwest Saudi Arabia's rising gateway connecting ancient heritage with the NEOM mega-region. AB ensures every transfer from Prince Sultan bin Abdulaziz Airport to regional business centers and mountain corridors is first class.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Prince Sultan bin Abdulaziz (TUU)",
+          "dropoffDefault": "Tabuk City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-tabuk-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997816-3g4r2tzqa",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE TABUK FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997816-kfjxqwfvk",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Tabuk and beyond"
+        },
+        "items": [
+          {
+            "id": "tuu-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "TUU to Tabuk City Center",
+            "titleAr": "من مطار الأمير سلطان إلى وسط مدينة تبوك",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Prince Sultan bin Abdulaziz Airport (TUU)",
+            "dropoff": "Tabuk City Center"
+          },
+          {
+            "id": "tuu-neom",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "TUU to NEOM Community",
+            "titleAr": "من مطار الأمير سلطان إلى مجمعات نيوم",
+            "price": "From SAR 650",
+            "priceAr": "ابتداءً من 650 ر.س",
+            "pickup": "Prince Sultan bin Abdulaziz Airport (TUU)",
+            "dropoff": "NEOM Community"
+          },
+          {
+            "id": "tabuk-disah",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Tabuk to Wadi Al Disah",
+            "titleAr": "من تبوك إلى وادي الديسة",
+            "price": "From SAR 580",
+            "priceAr": "ابتداءً من 580 ر.س",
+            "pickup": "Tabuk",
+            "dropoff": "Wadi Al Disah"
+          },
+          {
+            "id": "tabuk-alula",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Tabuk to AlUla",
+            "titleAr": "من تبوك إلى العلا",
+            "price": "From SAR 850",
+            "priceAr": "ابتداءً من 850 ر.س",
+            "pickup": "Tabuk",
+            "dropoff": "AlUla"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997816-22nt1gan6",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN TABUK",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997816-nvyc9epxp",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Tabuk.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309997816-c0wwe4dqk",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في تبوك",
+          "title": "تبوك",
+          "description": "بوابة شمال غرب المملكة الصاعدة التي تربط بين المواقع التراثية ومشاريع نيوم المستقبلية. تضمن إيه بي ليمو تجربة تنقل من الطراز الأول من مطار الأمير سلطان بن عبد العزيز إلى مراكز الأعمال والمواقع الإقليمية.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Prince Sultan bin Abdulaziz (TUU)",
+          "dropoffDefault": "Tabuk City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-tabuk-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997816-szdhrprd3",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول تبوك",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997816-c7n7sv6mg",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء تبوك وخارجها"
+        },
+        "items": [
+          {
+            "id": "tuu-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "TUU to Tabuk City Center",
+            "titleAr": "من مطار الأمير سلطان إلى وسط مدينة تبوك",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Prince Sultan bin Abdulaziz Airport (TUU)",
+            "dropoff": "Tabuk City Center"
+          },
+          {
+            "id": "tuu-neom",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "TUU to NEOM Community",
+            "titleAr": "من مطار الأمير سلطان إلى مجمعات نيوم",
+            "price": "From SAR 650",
+            "priceAr": "ابتداءً من 650 ر.س",
+            "pickup": "Prince Sultan bin Abdulaziz Airport (TUU)",
+            "dropoff": "NEOM Community"
+          },
+          {
+            "id": "tabuk-disah",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Tabuk to Wadi Al Disah",
+            "titleAr": "من تبوك إلى وادي الديسة",
+            "price": "From SAR 580",
+            "priceAr": "ابتداءً من 580 ر.س",
+            "pickup": "Tabuk",
+            "dropoff": "Wadi Al Disah"
+          },
+          {
+            "id": "tabuk-alula",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Tabuk to AlUla",
+            "titleAr": "من تبوك إلى العلا",
+            "price": "From SAR 850",
+            "priceAr": "ابتداءً من 850 ر.س",
+            "pickup": "Tabuk",
+            "dropoff": "AlUla"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997816-e2nqzvdwe",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في تبوك",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997816-h3pdnhf3q",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في تبوك.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

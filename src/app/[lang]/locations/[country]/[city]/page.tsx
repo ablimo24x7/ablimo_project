@@ -1,0 +1,127 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { getDictionary, localeBase, localeHome } from "@/app/[lang]/dictionaries";
+import { getCityForRequest, getRoutesForCity } from "@/lib/locationData";
+import { getCityServicesForLocation } from "@/lib/blog";
+import CityDetailClient from "../../_components/CityDetailClient";
+import { generateSeoMetadata } from "@/lib/seo";
+import { CityJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
+import { getCityTemplate } from "@/lib/location-template";
+import { stripConfirmText } from "@/lib/strip-confirm-placeholders";
+import type { SectionRenderContext } from "@/components/section-library/types";
+
+export const revalidate = 0;
+export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; country: string; city: string }>;
+}): Promise<Metadata> {
+  const { lang, country: countryParam, city: cityParam } = await params;
+  const res = await getCityForRequest(countryParam, cityParam);
+  if (!res) return {};
+
+  const cityName = stripConfirmText(
+    lang === "ar" && res.city.nameAr ? res.city.nameAr : res.city.name
+  );
+  const countryName = stripConfirmText(
+    lang === "ar" && res.country.nameAr ? res.country.nameAr : res.country.name
+  );
+  const description = stripConfirmText(
+    lang === "ar" && res.city.descriptionAr ? res.city.descriptionAr : res.city.description || ""
+  );
+
+  return generateSeoMetadata({
+    title: `Premium Chauffeur Service in ${cityName}, ${countryName} | AB`,
+    description: description || `AB provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`,
+    path: `/locations/${countryParam}/${cityParam}`,
+    lang,
+    keywords: `AB ${cityName}, chauffeur service ${cityName}, luxury transportation ${cityName}, airport transfer ${cityName}, ${cityName} limousine, ${countryName} executive travel`,
+  });
+}
+
+export default async function CityPage({
+    params,
+}: {
+    params: Promise<{ lang: string; country: string; city: string }>;
+}) {
+    const { lang, country: countryParam, city: cityParam } = await params;
+    const res = await getCityForRequest(countryParam, cityParam);
+    if (!res) notFound();
+
+    const services = await getCityServicesForLocation(
+        res.country.slug,
+        res.city.slug,
+        lang,
+        lang
+    );
+    const routes = await getRoutesForCity(res.city.slug);
+    const dict = await getDictionary(lang as "en-US" | "en-GB" | "ar");
+
+    const isArabic = lang === "ar";
+
+    if (isArabic) {
+        if (res.country.nameAr) res.country.name = res.country.nameAr;
+        if (res.country.descriptionAr) res.country.description = res.country.descriptionAr;
+        if (res.country.faqsAr?.length) res.country.faqs = res.country.faqsAr;
+
+        if (res.city.nameAr) res.city.name = res.city.nameAr;
+        if (res.city.descriptionAr) res.city.description = res.city.descriptionAr;
+        if (res.city.faqsAr?.length) res.city.faqs = res.city.faqsAr;
+
+        for (const airport of res.city.airports ?? []) {
+            if (airport.nameAr) airport.name = airport.nameAr;
+            if (airport.descriptionAr) airport.description = airport.descriptionAr;
+        }
+    }
+
+    const cityName = stripConfirmText(
+        isArabic && res.city.nameAr ? res.city.nameAr : res.city.name
+    );
+    const countryName = stripConfirmText(
+        isArabic && res.country.nameAr ? res.country.nameAr : res.country.name
+    );
+    const cityDescription =
+        stripConfirmText(res.city.description || "") ||
+        `AB provides luxury chauffeur-driven transportation in ${cityName}, ${countryName}. Airport transfers, corporate travel, and event logistics with premium vehicles.`;
+
+    const template = await getCityTemplate(res.country.slug, res.city.slug, lang);
+    const context: SectionRenderContext = {
+        kind: "location",
+        lang,
+        country: res.country,
+        city: res.city,
+        services,
+        routes,
+        dict,
+    };
+
+    return (
+      <>
+        <CityJsonLd
+          cityName={cityName}
+          countryName={countryName}
+          description={cityDescription}
+          url={`/locations/${countryParam}/${cityParam}`}
+        />
+        <BreadcrumbJsonLd
+          items={[
+            { name: "Home", url: `${localeHome(lang)}` },
+            { name: "Locations", url: `${localeBase(lang)}/locations` },
+            { name: countryName, url: `${localeBase(lang)}/locations/${countryParam}` },
+            { name: cityName, url: `${localeBase(lang)}/locations/${countryParam}/${cityParam}` },
+          ]}
+        />
+        {res.city.faqs && res.city.faqs.length > 0 && (
+          <FAQJsonLd
+            items={res.city.faqs.map((faq: { q: string; a: string }) => ({
+              question: stripConfirmText(faq.q),
+              answer: stripConfirmText(faq.a),
+            }))}
+          />
+        )}
+        <CityDetailClient template={template} context={context} />
+      </>
+    );
+}

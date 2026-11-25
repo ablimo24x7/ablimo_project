@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/jubail",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "jubail",
+  "path": "/locations/saudi-arabia/jubail",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for jubail (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.448Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309999619-vr0z8f6i7",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN JUBAIL",
+          "title": "Jubail",
+          "description": "The industrial powerhouse of the Eastern Province, Jubail Industrial City hosts global petrochemical leaders and executive delegations. AB delivers corporate transportation, airport transfers to King Fahd International (DMM), and industrial corridor mobility.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Fahd International (DMM)",
+          "dropoffDefault": "Jubail Industrial City",
+          "skyline": "khobar"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?q=80&w=1095&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999619-4qexldhj6",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE JUBAIL FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999619-62le3xj2c",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Jubail and beyond"
+        },
+        "items": [
+          {
+            "id": "dmm-jubail",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Jubail Industrial City",
+            "titleAr": "من مطار الملك فهد إلى الجبيل الصناعية",
+            "price": "From SAR 420",
+            "priceAr": "ابتداءً من 420 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Jubail Industrial City"
+          },
+          {
+            "id": "jubail-fanateer",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Jubail Center to Fanateer Marina",
+            "titleAr": "من مركز الجبيل إلى مارينا الفناتير",
+            "price": "From SAR 180",
+            "priceAr": "ابتداءً من 180 ر.س",
+            "pickup": "Jubail Center",
+            "dropoff": "Fanateer Marina"
+          },
+          {
+            "id": "jubail-dammam",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jubail to Dammam & Al Khobar",
+            "titleAr": "من الجبيل إلى الدمام والخبر",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "Jubail",
+            "dropoff": "Dammam"
+          },
+          {
+            "id": "jubail-ras-khair",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jubail to Ras Al Khair",
+            "titleAr": "من الجبيل إلى رأس الخير",
+            "price": "From SAR 450",
+            "priceAr": "ابتداءً من 450 ر.س",
+            "pickup": "Jubail",
+            "dropoff": "Ras Al Khair"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999619-c97z7w8x3",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN JUBAIL",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999619-ut4ts784c",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jubail.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309999619-vr0z8f6i7",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN JUBAIL",
+          "title": "Jubail",
+          "description": "The industrial powerhouse of the Eastern Province, Jubail Industrial City hosts global petrochemical leaders and executive delegations. AB delivers corporate transportation, airport transfers to King Fahd International (DMM), and industrial corridor mobility.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Fahd International (DMM)",
+          "dropoffDefault": "Jubail Industrial City",
+          "skyline": "khobar"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?q=80&w=1095&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999619-4qexldhj6",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE JUBAIL FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999619-62le3xj2c",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Jubail and beyond"
+        },
+        "items": [
+          {
+            "id": "dmm-jubail",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Jubail Industrial City",
+            "titleAr": "من مطار الملك فهد إلى الجبيل الصناعية",
+            "price": "From SAR 420",
+            "priceAr": "ابتداءً من 420 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Jubail Industrial City"
+          },
+          {
+            "id": "jubail-fanateer",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Jubail Center to Fanateer Marina",
+            "titleAr": "من مركز الجبيل إلى مارينا الفناتير",
+            "price": "From SAR 180",
+            "priceAr": "ابتداءً من 180 ر.س",
+            "pickup": "Jubail Center",
+            "dropoff": "Fanateer Marina"
+          },
+          {
+            "id": "jubail-dammam",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jubail to Dammam & Al Khobar",
+            "titleAr": "من الجبيل إلى الدمام والخبر",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "Jubail",
+            "dropoff": "Dammam"
+          },
+          {
+            "id": "jubail-ras-khair",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jubail to Ras Al Khair",
+            "titleAr": "من الجبيل إلى رأس الخير",
+            "price": "From SAR 450",
+            "priceAr": "ابتداءً من 450 ر.س",
+            "pickup": "Jubail",
+            "dropoff": "Ras Al Khair"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999619-c97z7w8x3",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN JUBAIL",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999619-ut4ts784c",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jubail.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309999619-5uyv3vwtf",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الجبيل",
+          "title": "الجبيل",
+          "description": "القلب الصناعي النابض للمنطقة الشرقية ومقر كبرى شركات البتروكيماويات العالمية. توفر إيه بي ليمو حلول نقل مؤسسية وتنفيذية شاملة من مطار الملك فهد الدولي وإلى كافة المجمعات الصناعية بالجبيل.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "King Fahd International (DMM)",
+          "dropoffDefault": "Jubail Industrial City",
+          "skyline": "khobar"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?q=80&w=1095&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999619-zubl3y7gk",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الجبيل",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999619-xtkzt1vy8",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الجبيل وخارجها"
+        },
+        "items": [
+          {
+            "id": "dmm-jubail",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DMM to Jubail Industrial City",
+            "titleAr": "من مطار الملك فهد إلى الجبيل الصناعية",
+            "price": "From SAR 420",
+            "priceAr": "ابتداءً من 420 ر.س",
+            "pickup": "King Fahd International Airport (DMM)",
+            "dropoff": "Jubail Industrial City"
+          },
+          {
+            "id": "jubail-fanateer",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Jubail Center to Fanateer Marina",
+            "titleAr": "من مركز الجبيل إلى مارينا الفناتير",
+            "price": "From SAR 180",
+            "priceAr": "ابتداءً من 180 ر.س",
+            "pickup": "Jubail Center",
+            "dropoff": "Fanateer Marina"
+          },
+          {
+            "id": "jubail-dammam",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jubail to Dammam & Al Khobar",
+            "titleAr": "من الجبيل إلى الدمام والخبر",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "Jubail",
+            "dropoff": "Dammam"
+          },
+          {
+            "id": "jubail-ras-khair",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Jubail to Ras Al Khair",
+            "titleAr": "من الجبيل إلى رأس الخير",
+            "price": "From SAR 450",
+            "priceAr": "ابتداءً من 450 ر.س",
+            "pickup": "Jubail",
+            "dropoff": "Ras Al Khair"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999619-0xnksuemt",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الجبيل",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999619-xx0vm0l6p",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الجبيل.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

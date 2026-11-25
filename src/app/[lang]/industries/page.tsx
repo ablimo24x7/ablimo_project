@@ -1,0 +1,178 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  hasLocale,
+  defaultLocale,
+  type Locale,
+  localeBase,
+  localeHome,
+} from "@/app/[lang]/dictionaries";
+import { generateSeoMetadata } from "@/lib/seo";
+import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/seo/StructuredData";
+import { getSketchIndustries, getHubFaqs } from "./_components/industries-sketch";
+import IndustriesDirectory from "./_components/IndustriesDirectory";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const isAr = lang === "ar";
+  return generateSeoMetadata({
+    title: isAr
+      ? "خدمات النقل حسب القطاع في منطقة الخليج | AB.Limo"
+      : "Transportation Services by Industry Across the Gulf | AB.Limo",
+    description: isAr
+      ? "نقل بري بمستوى المؤسسات الكبرى لأطقم الطيران، وقطاع الضيافة الفاخرة، وتنقلات الشركات، والمراسم الحكومية والدبلوماسية."
+      : "Enterprise-grade ground transportation for aviation crews, luxury hospitality, corporate mobility, and government and diplomatic protocol.",
+    path: "/industries",
+    lang,
+    keywords: isAr
+      ? "خدمات النقل حسب القطاع, النقل البري في دول مجلس التعاون الخليجي, تنقلات الشركات, النقل الحكومي, نقل أطقم الطيران, نقل قطاع الضيافة, نقل الفعاليات, نقل المشاريع العملاقة, نقل الفرق الرياضية"
+      : "transportation services by industry, ground transportation GCC, corporate mobility, government transport, aviation crew transportation, hospitality transportation, event transportation, giga project transportation, sports team transportation",
+  });
+}
+
+export default async function IndustriesPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const isAr = lang === "ar";
+  const base = localeBase(lang);
+  const home = localeHome(lang);
+  const industries = getSketchIndustries(lang);
+  const faqs = getHubFaqs(lang);
+
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: isAr ? "الرئيسية" : "Home", url: home },
+          { name: isAr ? "القطاعات" : "Industries", url: `${base}/industries` },
+        ]}
+      />
+      <FAQJsonLd
+        items={faqs.map((item) => ({
+          question: item.q,
+          answer: item.a,
+        }))}
+      />
+
+      <main className="min-h-screen bg-[#292a30] text-white">
+        {/* Hero */}
+        <section className="relative min-h-[85vh] flex flex-col overflow-hidden pt-24 pb-10">
+          <Image
+            src="/industries/hub-hero.jpg"
+            alt={
+              isAr
+                ? "مركبات أسطول تنفيذي مصطفة خارج مبنى ركاب حديث في الرياض"
+                : "Executive fleet vehicles arranged outside a modern airport terminal in Riyadh"
+            }
+            fill
+            className="object-cover object-[60%_50%]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30 rtl:bg-gradient-to-l" />
+          <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/95 via-black/60 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#292a30] to-transparent" />
+
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 flex-1 flex flex-col">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-abBlue/10 border border-abBlue/30 self-start">
+              <span className="w-2 h-2 rounded-full bg-abBlue animate-pulse"></span>
+              <span className="text-abBlue text-xs font-bold tracking-widest uppercase">
+                {isAr
+                  ? "حلول التنقل حسب القطاع · سبعة قطاعات، ومعيار تشغيلي واحد"
+                  : "Mobility by industry · Seven sectors, one operating standard"}
+              </span>
+            </div>
+
+            <h1 className="mt-5 text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl text-white leading-tight">
+              {isAr
+                ? "خدمات النقل حسب القطاع في منطقة الخليج"
+                : "Transportation Services by Industry Across the Gulf"}
+            </h1>
+
+            <p className="mt-6 max-w-3xl text-base md:text-lg text-gray-300 leading-relaxed">
+              {isAr
+                ? "تساعد خدمات النقل حسب القطاع فرقَ الشركات والطيران والجهات الحكومية والفعاليات على تنسيق نقل بري موثوق في أنحاء منطقة الخليج. تقدّم AB برامج نقل بري مُدارة في دول مجلس التعاون الخليجي، تُوائم فيها الأسطول وخدمات السائق الخاص والتوجيه مع الاحتياجات التشغيلية لكل قطاع في المملكة العربية السعودية والإمارات العربية المتحدة وقطر، مع التزام ثابت بواجب الرعاية وإشراف واضح على الحسابات."
+                : "Transportation services by industry help corporate, aviation, government and event teams coordinate reliable ground transportation across the Gulf. AB provides managed ground transportation GCC programmes, matching fleet, chauffeur service and dispatch to each sector's operating needs in Saudi Arabia, the UAE and Qatar, with consistent duty of care and clear account oversight."}
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3.5">
+              <Link
+                href={`${base}/contact`}
+                className="inline-flex items-center min-h-[52px] px-7 bg-abBlue hover:bg-abServiceBlue text-white text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abBlue/20"
+              >
+                {isAr ? "اطلب عرضًا" : "Request a proposal"}
+              </Link>
+              <Link
+                href={`${base}/contact`}
+                className="inline-flex items-center min-h-[52px] px-7 border border-white/50 hover:bg-white/10 text-white text-sm font-semibold rounded-full transition-colors"
+              >
+                {isAr ? "تحدّث إلى أحد مخطّطينا" : "Talk to a planner"}
+              </Link>
+              <Link
+                href={`${base}/services`}
+                className="inline-flex items-center min-h-[52px] px-7 border border-white/30 hover:bg-white/10 text-white text-sm font-semibold rounded-full transition-colors"
+              >
+                {isAr ? "خدماتنا" : "Our services"}
+              </Link>
+            </div>
+
+            <div className="mt-auto pt-12 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
+              {industries.map((s) => (
+                <a
+                  key={s.id}
+                  href={`#${s.id}`}
+                  className="group flex flex-col gap-1 pt-3.5 min-h-[44px] border-t border-white/30 hover:border-white transition-colors"
+                >
+                  <span className="text-xs tracking-[0.14em] text-abBlue">{s.num}</span>
+                  <span className="text-sm leading-snug text-white">{s.name}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries with sticky list, How we work, and FAQs */}
+        <IndustriesDirectory lang={lang} />
+
+        {/* Closing call to action */}
+        <section className="bg-abBlack">
+          <div className="max-w-7xl mx-auto px-8 py-20 flex flex-wrap items-end justify-between gap-8">
+            <div className="flex-1 basis-[520px] min-w-0">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                {isAr
+                  ? "اختر خدمات النقل حسب القطاع مع AB"
+                  : "Choose Transportation Services by Industry with AB"}
+              </h2>
+              <p className="mt-4 text-gray-400 max-w-2xl leading-relaxed">
+                {isAr
+                  ? "تنسّق AB خدمات نقل مصمّمة حسب الاحتياج، وسائقين خاصين محترفين، ودعمًا متكاملًا للأسطول في المملكة العربية السعودية والإمارات العربية المتحدة وقطر، لتمنح المؤسسات نهجًا مُدارًا واحدًا لرحلات كل قطاع."
+                  : "AB coordinates tailored transportation services, professional chauffeurs and fleet support across Saudi Arabia, the UAE and Qatar, giving organisations one managed approach for sector-specific journeys."}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3.5">
+              <Link
+                href={`${base}/contact`}
+                className="inline-flex items-center min-h-[52px] px-7 bg-abBlue hover:bg-abServiceBlue text-white text-sm font-semibold rounded-full transition-colors shadow-lg shadow-abBlue/20"
+              >
+                {isAr ? "اطلب عرضًا" : "Request a proposal"}
+              </Link>
+              <Link
+                href={`${base}/services`}
+                className="inline-flex items-center min-h-[52px] px-7 border border-white/50 hover:bg-white/10 text-white text-sm font-semibold rounded-full transition-colors"
+              >
+                {isAr ? "احجز رحلة نقل" : "Book a transfer"}
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}

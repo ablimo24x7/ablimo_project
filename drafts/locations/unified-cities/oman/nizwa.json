@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "oman/nizwa",
+  "countrySlug": "oman",
+  "citySlug": "nizwa",
+  "path": "/locations/oman/nizwa",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for nizwa (oman)",
+  "exportedAt": "2026-11-10T12:32:14.440Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310001197-phlsl5k7t",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN NIZWA",
+          "title": "Nizwa",
+          "description": "One of Oman's oldest cities and historic center of trade and culture, Nizwa is famed for its circular fort, traditional souq, and gateway to Jebel Akhdar. AB provides luxury chauffeur service connecting Nizwa with Muscat and mountain retreats.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Muscat International (MCT)",
+          "dropoffDefault": "Nizwa Historic Fort & Souq",
+          "skyline": "muscat"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1699855803432-17f4ab468b2d?q=80&w=2071&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310001197-pav9gnzqg",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE NIZWA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001197-dkhn4bo6j",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Nizwa and beyond"
+        },
+        "items": [
+          {
+            "id": "mct-nizwa",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "MCT to Nizwa Historic City",
+            "titleAr": "من مطار مسقط الدولي إلى مدينة نزوى التاريخية",
+            "price": "From OMR 85",
+            "priceAr": "ابتداءً من 85 ر.ع",
+            "pickup": "Muscat International Airport (MCT)",
+            "dropoff": "Nizwa"
+          },
+          {
+            "id": "nizwa-akhdar",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Nizwa to Jebel Akhdar (Green Mountain)",
+            "titleAr": "من نزوى إلى الجبل الأخضر",
+            "price": "From OMR 65",
+            "priceAr": "ابتداءً من 65 ر.ع",
+            "pickup": "Nizwa",
+            "dropoff": "Jebel Akhdar"
+          },
+          {
+            "id": "nizwa-bahla",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Nizwa to Bahla Fort UNESCO Site",
+            "titleAr": "من نزوى إلى قلعة بهلاء المدرجة باليونسكو",
+            "price": "From OMR 35",
+            "priceAr": "ابتداءً من 35 ر.ع",
+            "pickup": "Nizwa",
+            "dropoff": "Bahla Fort"
+          },
+          {
+            "id": "nizwa-shams",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Nizwa to Jebel Shams (Grand Canyon)",
+            "titleAr": "من نزوى إلى جبل شمس (جراند كانيون عمان)",
+            "price": "From OMR 75",
+            "priceAr": "ابتداءً من 75 ر.ع",
+            "pickup": "Nizwa",
+            "dropoff": "Jebel Shams"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001197-ycmd19vc9",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN NIZWA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001197-rd99uhbs1",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Nizwa.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310001197-phlsl5k7t",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN NIZWA",
+          "title": "Nizwa",
+          "description": "One of Oman's oldest cities and historic center of trade and culture, Nizwa is famed for its circular fort, traditional souq, and gateway to Jebel Akhdar. AB provides luxury chauffeur service connecting Nizwa with Muscat and mountain retreats.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Muscat International (MCT)",
+          "dropoffDefault": "Nizwa Historic Fort & Souq",
+          "skyline": "muscat"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1699855803432-17f4ab468b2d?q=80&w=2071&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310001197-pav9gnzqg",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE NIZWA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001197-dkhn4bo6j",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Nizwa and beyond"
+        },
+        "items": [
+          {
+            "id": "mct-nizwa",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "MCT to Nizwa Historic City",
+            "titleAr": "من مطار مسقط الدولي إلى مدينة نزوى التاريخية",
+            "price": "From OMR 85",
+            "priceAr": "ابتداءً من 85 ر.ع",
+            "pickup": "Muscat International Airport (MCT)",
+            "dropoff": "Nizwa"
+          },
+          {
+            "id": "nizwa-akhdar",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Nizwa to Jebel Akhdar (Green Mountain)",
+            "titleAr": "من نزوى إلى الجبل الأخضر",
+            "price": "From OMR 65",
+            "priceAr": "ابتداءً من 65 ر.ع",
+            "pickup": "Nizwa",
+            "dropoff": "Jebel Akhdar"
+          },
+          {
+            "id": "nizwa-bahla",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Nizwa to Bahla Fort UNESCO Site",
+            "titleAr": "من نزوى إلى قلعة بهلاء المدرجة باليونسكو",
+            "price": "From OMR 35",
+            "priceAr": "ابتداءً من 35 ر.ع",
+            "pickup": "Nizwa",
+            "dropoff": "Bahla Fort"
+          },
+          {
+            "id": "nizwa-shams",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Nizwa to Jebel Shams (Grand Canyon)",
+            "titleAr": "من نزوى إلى جبل شمس (جراند كانيون عمان)",
+            "price": "From OMR 75",
+            "priceAr": "ابتداءً من 75 ر.ع",
+            "pickup": "Nizwa",
+            "dropoff": "Jebel Shams"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001197-ycmd19vc9",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN NIZWA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001197-rd99uhbs1",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Nizwa.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310001197-6co0o5sus",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في نزوى",
+          "title": "نزوى",
+          "description": "إحدى أعرق المدن العمانية وحاضنة قلعة نزوى الدائرية التاريخية وسوقها التراثي الشهير وبوابة الجبل الأخضر وجبل شمس. توفر إيه بي ليمو خدمات نقل سياحي وتنفيذي فاخرة تربط نزوى بمسقط والمنتجعات الجبلية.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Muscat International (MCT)",
+          "dropoffDefault": "Nizwa Historic Fort & Souq",
+          "skyline": "muscat"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1699855803432-17f4ab468b2d?q=80&w=2071&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310001197-e721j9ax4",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول نزوى",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001197-tmmaffvut",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء نزوى وخارجها"
+        },
+        "items": [
+          {
+            "id": "mct-nizwa",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "MCT to Nizwa Historic City",
+            "titleAr": "من مطار مسقط الدولي إلى مدينة نزوى التاريخية",
+            "price": "From OMR 85",
+            "priceAr": "ابتداءً من 85 ر.ع",
+            "pickup": "Muscat International Airport (MCT)",
+            "dropoff": "Nizwa"
+          },
+          {
+            "id": "nizwa-akhdar",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Nizwa to Jebel Akhdar (Green Mountain)",
+            "titleAr": "من نزوى إلى الجبل الأخضر",
+            "price": "From OMR 65",
+            "priceAr": "ابتداءً من 65 ر.ع",
+            "pickup": "Nizwa",
+            "dropoff": "Jebel Akhdar"
+          },
+          {
+            "id": "nizwa-bahla",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Nizwa to Bahla Fort UNESCO Site",
+            "titleAr": "من نزوى إلى قلعة بهلاء المدرجة باليونسكو",
+            "price": "From OMR 35",
+            "priceAr": "ابتداءً من 35 ر.ع",
+            "pickup": "Nizwa",
+            "dropoff": "Bahla Fort"
+          },
+          {
+            "id": "nizwa-shams",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Nizwa to Jebel Shams (Grand Canyon)",
+            "titleAr": "من نزوى إلى جبل شمس (جراند كانيون عمان)",
+            "price": "From OMR 75",
+            "priceAr": "ابتداءً من 75 ر.ع",
+            "pickup": "Nizwa",
+            "dropoff": "Jebel Shams"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001197-r7nt3boo7",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في نزوى",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310001197-0d2sj2f2d",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في نزوى.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

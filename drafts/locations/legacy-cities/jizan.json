@@ -1,0 +1,2169 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/jizan",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "jizan",
+  "path": "/locations/saudi-arabia/jizan",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for jizan (saudi-arabia)",
+  "exportedAt": "2026-11-10T11:52:18.049Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538049-w8gmnihhr",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Jizan",
+          "titleHighlight": "",
+          "description": "AB provides executive chauffeur service Jizan solutions designed for regional commerce and official delegations. Passengers travelling through King Abdullah bin Abdulaziz Airport (GIZ) receive direct terminal reception. Coordinated itineraries across Jizan maintain continuous operations for every scheduled appointment."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Chauffeur service Jizan vehicles on coastal avenue"
+        }
+      },
+      {
+        "id": "sec-1794311538049-6uvuh7qwi",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-lxntj59xa",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Jizan fleet",
+          "heading": "Choose your Jizan chauffeur class",
+          "description": "Vehicles for Jizan are dispatched from the nearest office, AB Riyadh headquarters [Confirm nearest office]. Each executive vehicle maintains strict safety standards, complete commercial passenger insurance, and verified comfort appointments.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "jizan-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image2.jpg",
+            "imageAlt": "Standard Sedan chauffeur service Jizan",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar [Confirm]",
+            "idealFor": "Ideal for: Solo business journeys",
+            "description": "This vehicle delivers efficient private driver Jizan transit for professionals needing dependable connections between local offices and regional work sites.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image3.jpg",
+            "imageAlt": "Business Sedan chauffeur service Jizan",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate executive transit",
+            "description": "Executive travellers obtain refined space, quiet cabin comfort, and reliable scheduling throughout urban destinations across Jizan.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image4.jpg",
+            "imageAlt": "First Class Sedan luxury transport in Jizan",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP and diplomatic delegations",
+            "description": "Our flagship option provides distinguished appointments, exceptional acoustic control, and premier protocol standards for demanding VIP itineraries in the province.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service Jizan",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Leadership teams and site visits",
+            "description": "Spacious seating and luggage capacity suit visiting leadership teams monitoring industrial developments across Jizan and neighbouring regional facilities.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image6.jpg",
+            "imageAlt": "Premium MPV private driver Jizan",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Small delegations requiring collaboration",
+            "description": "Mobile workspace layouts permit visiting delegations to confer comfortably while moving between meetings across civic and commercial districts.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image7.jpg",
+            "imageAlt": "Executive Van group transport in Jizan",
+            "category": "Executive Van",
+            "name": "Typical model: Luxury Minibus or similar [Confirm]",
+            "idealFor": "Ideal for: Event crews and staff support",
+            "description": "Generous passenger volume supports corporate event groups, crew logistics, and specialized event transport across southern Saudi Arabia.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-dz9vlun3q",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Jizan and beyond",
+          "description": "AB coordinates single transfers, full day hires, and regional road missions connecting air gateways, commercial nodes, and regional economic zones.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "jizan-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "GIZ to Jizan Corniche",
+            "description": "Direct passenger connection from flight arrivals to coastal commercial hotels and corporate waterfront apartments.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "GIZ to Jazan Economic City",
+            "description": "Dedicated long transit serving engineers, operational specialists, and international executives visiting major industrial installations.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Jizan to Sabya",
+            "description": "Reliable metropolitan link connecting the core administrative capital with commercial businesses located in Sabya.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jizan to Abha [Confirm]",
+            "description": "Comfortable intercity transfer Jizan to the Asir mountain plateau for cross regional corporate travel.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/jizan/routes/jizan-to-abha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jizan city to Jazan Economic City [Confirm]",
+            "description": "Point to point executive car service connecting metropolitan offices with manufacturing and port facilities.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-7t0fxbbw7",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Jizan",
+          "heading": "One partner for every movement in Jizan",
+          "description": "AB delivers reliable corporate ground transportation, VIP logistics, and group passenger solutions tailored to complex business schedules across the region."
+        },
+        "items": [
+          {
+            "id": "jizan-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Chauffeur & VIP",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Airport Transfers",
+            "actions": [
+              {
+                "label": "Airport Transfers",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire arranged in Jizan",
+            "description": "Bus & Coach Hire arranged in Jizan",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire arranged in Jizan",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-9xq4ifnv6",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Abdullah bin Abdulaziz Airport (GIZ)",
+          "description": "Arriving passengers step into an organised reception workflow handled by licensed professional chauffeurs. Every booking includes active flight tracking to monitor scheduled landing adjustments and arrival gate updates. Chauffeurs provide a formal meet and greet with name boards positioned at the terminal arrivals exit [Confirm meeting point]. Passengers benefit from inclusive free waiting time [Confirm free waiting time] allowing complete ease during luggage retrieval and customs processing. Corporate travel planners and executive assistants gain peace of mind through central dispatch updates confirming chauffeur on site status and passenger pickup confirmation.",
+          "items": [
+            {
+              "id": "jizan-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "jizan-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "jizan-apt-b-3",
+              "icon": "Clock",
+              "heading": "GIZ to Jizan Corniche",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Abdullah bin Abdulaziz Airport (GIZ)"
+        }
+      },
+      {
+        "id": "sec-1794311538049-g53k7mjqq",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-4r9mka5sg",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Jizan",
+          "description": "AB maintains extensive operational knowledge of regional municipal roads, private industrial security entries, and hospitality complexes across the Jizan province. Executive chauffeurs execute scheduled journeys with meticulous route navigation and local awareness.",
+          "items": [
+            {
+              "id": "jizan-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Al Shati District · Courtyard Jazan Commercial Hub · Al Safa Financial Zone"
+            },
+            {
+              "id": "jizan-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Jazan Cultural Centre · Grand Millennium Conference Hall · Jazan Heritage Village Pavilion"
+            },
+            {
+              "id": "jizan-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Jazan Corniche Promenade · Al Dosariyah Castle · Farasan Islands Ferry Terminal"
+            },
+            {
+              "id": "jizan-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Jazan Economic City · Jazan Port Authority · Jazan University Administrative Complex"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Jizan"
+        }
+      },
+      {
+        "id": "sec-1794311538049-gp28f2vba",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Jizan",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-61ml7kms5",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Central dispatch coordination for Jizan",
+          "description": "Ground operations in Jizan are actively supervised through our central headquarters. Our dispatch desk oversees driver schedules, fleet compliance, and real time passenger movements around the clock.",
+          "items": [
+            {
+              "id": "jizan-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh (headquarters) [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "jizan-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538049-5itzqi0p1",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Jizan: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538049-ul7m1d2j5",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jizan.",
+          "description": "Connect directly with our 24/7 central dispatch team at +966 58 111 8720 to confirm your executive chauffeur service Jizan booking."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538049-w8gmnihhr",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Jizan",
+          "titleHighlight": "",
+          "description": "AB provides executive chauffeur service Jizan solutions designed for regional commerce and official delegations. Passengers travelling through King Abdullah bin Abdulaziz Airport (GIZ) receive direct terminal reception. Coordinated itineraries across Jizan maintain continuous operations for every scheduled appointment."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Chauffeur service Jizan vehicles on coastal avenue"
+        }
+      },
+      {
+        "id": "sec-1794311538049-6uvuh7qwi",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-lxntj59xa",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Jizan fleet",
+          "heading": "Choose your Jizan chauffeur class",
+          "description": "Vehicles for Jizan are dispatched from the nearest office, AB Riyadh headquarters [Confirm nearest office]. Each executive vehicle maintains strict safety standards, complete commercial passenger insurance, and verified comfort appointments.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "jizan-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image2.jpg",
+            "imageAlt": "Standard Sedan chauffeur service Jizan",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar [Confirm]",
+            "idealFor": "Ideal for: Solo business journeys",
+            "description": "This vehicle delivers efficient private driver Jizan transit for professionals needing dependable connections between local offices and regional work sites.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image3.jpg",
+            "imageAlt": "Business Sedan chauffeur service Jizan",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate executive transit",
+            "description": "Executive travellers obtain refined space, quiet cabin comfort, and reliable scheduling throughout urban destinations across Jizan.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image4.jpg",
+            "imageAlt": "First Class Sedan luxury transport in Jizan",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP and diplomatic delegations",
+            "description": "Our flagship option provides distinguished appointments, exceptional acoustic control, and premier protocol standards for demanding VIP itineraries in the province.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service Jizan",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Leadership teams and site visits",
+            "description": "Spacious seating and luggage capacity suit visiting leadership teams monitoring industrial developments across Jizan and neighbouring regional facilities.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image6.jpg",
+            "imageAlt": "Premium MPV private driver Jizan",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Small delegations requiring collaboration",
+            "description": "Mobile workspace layouts permit visiting delegations to confer comfortably while moving between meetings across civic and commercial districts.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image7.jpg",
+            "imageAlt": "Executive Van group transport in Jizan",
+            "category": "Executive Van",
+            "name": "Typical model: Luxury Minibus or similar [Confirm]",
+            "idealFor": "Ideal for: Event crews and staff support",
+            "description": "Generous passenger volume supports corporate event groups, crew logistics, and specialized event transport across southern Saudi Arabia.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-dz9vlun3q",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Jizan and beyond",
+          "description": "AB coordinates single transfers, full day hires, and regional road missions connecting air gateways, commercial nodes, and regional economic zones.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "jizan-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "GIZ to Jizan Corniche",
+            "description": "Direct passenger connection from flight arrivals to coastal commercial hotels and corporate waterfront apartments.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "GIZ to Jazan Economic City",
+            "description": "Dedicated long transit serving engineers, operational specialists, and international executives visiting major industrial installations.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Jizan to Sabya",
+            "description": "Reliable metropolitan link connecting the core administrative capital with commercial businesses located in Sabya.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jizan to Abha [Confirm]",
+            "description": "Comfortable intercity transfer Jizan to the Asir mountain plateau for cross regional corporate travel.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/jizan/routes/jizan-to-abha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jizan city to Jazan Economic City [Confirm]",
+            "description": "Point to point executive car service connecting metropolitan offices with manufacturing and port facilities.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-7t0fxbbw7",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Jizan",
+          "heading": "One partner for every movement in Jizan",
+          "description": "AB delivers reliable corporate ground transportation, VIP logistics, and group passenger solutions tailored to complex business schedules across the region."
+        },
+        "items": [
+          {
+            "id": "jizan-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Chauffeur & VIP",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Airport Transfers",
+            "actions": [
+              {
+                "label": "Airport Transfers",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire arranged in Jizan",
+            "description": "Bus & Coach Hire arranged in Jizan",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire arranged in Jizan",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-9xq4ifnv6",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Abdullah bin Abdulaziz Airport (GIZ)",
+          "description": "Arriving passengers step into an organised reception workflow handled by licensed professional chauffeurs. Every booking includes active flight tracking to monitor scheduled landing adjustments and arrival gate updates. Chauffeurs provide a formal meet and greet with name boards positioned at the terminal arrivals exit [Confirm meeting point]. Passengers benefit from inclusive free waiting time [Confirm free waiting time] allowing complete ease during luggage retrieval and customs processing. Corporate travel planners and executive assistants gain peace of mind through central dispatch updates confirming chauffeur on site status and passenger pickup confirmation.",
+          "items": [
+            {
+              "id": "jizan-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "jizan-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "jizan-apt-b-3",
+              "icon": "Clock",
+              "heading": "GIZ to Jizan Corniche",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Abdullah bin Abdulaziz Airport (GIZ)"
+        }
+      },
+      {
+        "id": "sec-1794311538049-g53k7mjqq",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-4r9mka5sg",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Jizan",
+          "description": "AB maintains extensive operational knowledge of regional municipal roads, private industrial security entries, and hospitality complexes across the Jizan province. Executive chauffeurs execute scheduled journeys with meticulous route navigation and local awareness.",
+          "items": [
+            {
+              "id": "jizan-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Al Shati District · Courtyard Jazan Commercial Hub · Al Safa Financial Zone"
+            },
+            {
+              "id": "jizan-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Jazan Cultural Centre · Grand Millennium Conference Hall · Jazan Heritage Village Pavilion"
+            },
+            {
+              "id": "jizan-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Jazan Corniche Promenade · Al Dosariyah Castle · Farasan Islands Ferry Terminal"
+            },
+            {
+              "id": "jizan-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Jazan Economic City · Jazan Port Authority · Jazan University Administrative Complex"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Jizan"
+        }
+      },
+      {
+        "id": "sec-1794311538049-gp28f2vba",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Jizan",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-61ml7kms5",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Central dispatch coordination for Jizan",
+          "description": "Ground operations in Jizan are actively supervised through our central headquarters. Our dispatch desk oversees driver schedules, fleet compliance, and real time passenger movements around the clock.",
+          "items": [
+            {
+              "id": "jizan-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh (headquarters) [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "jizan-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538049-5itzqi0p1",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Jizan: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538049-ul7m1d2j5",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jizan.",
+          "description": "Connect directly with our 24/7 central dispatch team at +966 58 111 8720 to confirm your executive chauffeur service Jizan booking."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538049-hoeo5obwd",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Jizan",
+          "titleHighlight": "",
+          "description": "AB provides executive chauffeur service Jizan solutions designed for regional commerce and official delegations. Passengers travelling through King Abdullah bin Abdulaziz Airport (GIZ) receive direct terminal reception. Coordinated itineraries across Jizan maintain continuous operations for every scheduled appointment."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Chauffeur service Jizan vehicles on coastal avenue"
+        }
+      },
+      {
+        "id": "sec-1794311538049-9x6eo9yiz",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-oyxc3dsxb",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Jizan fleet",
+          "heading": "Choose your Jizan chauffeur class",
+          "description": "Vehicles for Jizan are dispatched from the nearest office, AB Riyadh headquarters [Confirm nearest office]. Each executive vehicle maintains strict safety standards, complete commercial passenger insurance, and verified comfort appointments.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "jizan-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image2.jpg",
+            "imageAlt": "Standard Sedan chauffeur service Jizan",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar [Confirm]",
+            "idealFor": "Ideal for: Solo business journeys",
+            "description": "This vehicle delivers efficient private driver Jizan transit for professionals needing dependable connections between local offices and regional work sites.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image3.jpg",
+            "imageAlt": "Business Sedan chauffeur service Jizan",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate executive transit",
+            "description": "Executive travellers obtain refined space, quiet cabin comfort, and reliable scheduling throughout urban destinations across Jizan.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image4.jpg",
+            "imageAlt": "First Class Sedan luxury transport in Jizan",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP and diplomatic delegations",
+            "description": "Our flagship option provides distinguished appointments, exceptional acoustic control, and premier protocol standards for demanding VIP itineraries in the province.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service Jizan",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Leadership teams and site visits",
+            "description": "Spacious seating and luggage capacity suit visiting leadership teams monitoring industrial developments across Jizan and neighbouring regional facilities.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image6.jpg",
+            "imageAlt": "Premium MPV private driver Jizan",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Small delegations requiring collaboration",
+            "description": "Mobile workspace layouts permit visiting delegations to confer comfortably while moving between meetings across civic and commercial districts.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "jizan-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image7.jpg",
+            "imageAlt": "Executive Van group transport in Jizan",
+            "category": "Executive Van",
+            "name": "Typical model: Luxury Minibus or similar [Confirm]",
+            "idealFor": "Ideal for: Event crews and staff support",
+            "description": "Generous passenger volume supports corporate event groups, crew logistics, and specialized event transport across southern Saudi Arabia.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-d6b98zkt1",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Jizan and beyond",
+          "description": "AB coordinates single transfers, full day hires, and regional road missions connecting air gateways, commercial nodes, and regional economic zones.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "jizan-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "GIZ to Jizan Corniche",
+            "description": "Direct passenger connection from flight arrivals to coastal commercial hotels and corporate waterfront apartments.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "GIZ to Jazan Economic City",
+            "description": "Dedicated long transit serving engineers, operational specialists, and international executives visiting major industrial installations.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Jizan to Sabya",
+            "description": "Reliable metropolitan link connecting the core administrative capital with commercial businesses located in Sabya.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jizan to Abha [Confirm]",
+            "description": "Comfortable intercity transfer Jizan to the Asir mountain plateau for cross regional corporate travel.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/jizan/routes/jizan-to-abha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Jizan city to Jazan Economic City [Confirm]",
+            "description": "Point to point executive car service connecting metropolitan offices with manufacturing and port facilities.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-tsv6mzhuj",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Jizan",
+          "heading": "One partner for every movement in Jizan",
+          "description": "AB delivers reliable corporate ground transportation, VIP logistics, and group passenger solutions tailored to complex business schedules across the region."
+        },
+        "items": [
+          {
+            "id": "jizan-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Chauffeur & VIP",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Airport Transfers",
+            "actions": [
+              {
+                "label": "Airport Transfers",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "jizan-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire arranged in Jizan",
+            "description": "Bus & Coach Hire arranged in Jizan",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire arranged in Jizan",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-85l3t82ip",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Abdullah bin Abdulaziz Airport (GIZ)",
+          "description": "Arriving passengers step into an organised reception workflow handled by licensed professional chauffeurs. Every booking includes active flight tracking to monitor scheduled landing adjustments and arrival gate updates. Chauffeurs provide a formal meet and greet with name boards positioned at the terminal arrivals exit [Confirm meeting point]. Passengers benefit from inclusive free waiting time [Confirm free waiting time] allowing complete ease during luggage retrieval and customs processing. Corporate travel planners and executive assistants gain peace of mind through central dispatch updates confirming chauffeur on site status and passenger pickup confirmation.",
+          "items": [
+            {
+              "id": "jizan-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "jizan-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "jizan-apt-b-3",
+              "icon": "Clock",
+              "heading": "GIZ to Jizan Corniche",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-jizan-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Abdullah bin Abdulaziz Airport (GIZ)"
+        }
+      },
+      {
+        "id": "sec-1794311538049-9t666es4h",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-nfq0v4cpp",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Jizan",
+          "description": "AB maintains extensive operational knowledge of regional municipal roads, private industrial security entries, and hospitality complexes across the Jizan province. Executive chauffeurs execute scheduled journeys with meticulous route navigation and local awareness.",
+          "items": [
+            {
+              "id": "jizan-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Al Shati District · Courtyard Jazan Commercial Hub · Al Safa Financial Zone"
+            },
+            {
+              "id": "jizan-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Jazan Cultural Centre · Grand Millennium Conference Hall · Jazan Heritage Village Pavilion"
+            },
+            {
+              "id": "jizan-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Jazan Corniche Promenade · Al Dosariyah Castle · Farasan Islands Ferry Terminal"
+            },
+            {
+              "id": "jizan-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Jazan Economic City · Jazan Port Authority · Jazan University Administrative Complex"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Jizan"
+        }
+      },
+      {
+        "id": "sec-1794311538049-j0htmh3vn",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Jizan",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538049-yriyrcymi",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Central dispatch coordination for Jizan",
+          "description": "Ground operations in Jizan are actively supervised through our central headquarters. Our dispatch desk oversees driver schedules, fleet compliance, and real time passenger movements around the clock.",
+          "items": [
+            {
+              "id": "jizan-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh (headquarters) [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "jizan-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538049-ej0o4nny1",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Jizan: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538049-fa8ew132t",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Jizan.",
+          "description": "Connect directly with our 24/7 central dispatch team at +966 58 111 8720 to confirm your executive chauffeur service Jizan booking."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

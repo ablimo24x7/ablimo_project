@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "qatar/lusail",
+  "countrySlug": "qatar",
+  "citySlug": "lusail",
+  "path": "/locations/qatar/lusail",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for lusail (qatar)",
+  "exportedAt": "2026-11-10T12:32:14.443Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310005492-vlzqtsgkq",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN LUSAIL",
+          "title": "Lusail",
+          "description": "Qatar's iconic city of the future — Lusail's marina towers, Lusail Boulevard, and Katara Towers define modernity. AB delivers executive chauffeur service connecting Lusail with Hamad International Airport and West Bay.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "Lusail Marina Promenade",
+          "skyline": "doha"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-lusail-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005492-s3tv7oj4i",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE LUSAIL FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005492-7jlqtqemf",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Lusail and beyond"
+        },
+        "items": [
+          {
+            "id": "doh-lusail-marina",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Lusail Marina Promenade",
+            "titleAr": "من مطار حمد الدولي إلى ممشى مارينا لوسيل",
+            "price": "From QAR 250",
+            "priceAr": "ابتداءً من 250 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Lusail Marina"
+          },
+          {
+            "id": "doh-lusail-blvd",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Lusail Boulevard & Stadium",
+            "titleAr": "من مطار حمد الدولي إلى درب واستاد لوسيل",
+            "price": "From QAR 260",
+            "priceAr": "ابتداءً من 260 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Lusail Boulevard"
+          },
+          {
+            "id": "lusail-westbay",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Lusail to West Bay Doha",
+            "titleAr": "من لوسيل إلى الخليج الغربي بالدوحة",
+            "price": "From QAR 180",
+            "priceAr": "ابتداءً من 180 ر.ق",
+            "pickup": "Lusail",
+            "dropoff": "West Bay"
+          },
+          {
+            "id": "lusail-pearl",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Lusail to The Pearl-Qatar",
+            "titleAr": "من لوسيل إلى اللؤلؤة قطر",
+            "price": "From QAR 160",
+            "priceAr": "ابتداءً من 160 ر.ق",
+            "pickup": "Lusail",
+            "dropoff": "The Pearl-Qatar"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005492-nx4t0fze9",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN LUSAIL",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005492-owdiaki25",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Lusail.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310005492-vlzqtsgkq",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN LUSAIL",
+          "title": "Lusail",
+          "description": "Qatar's iconic city of the future — Lusail's marina towers, Lusail Boulevard, and Katara Towers define modernity. AB delivers executive chauffeur service connecting Lusail with Hamad International Airport and West Bay.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "Lusail Marina Promenade",
+          "skyline": "doha"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-lusail-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005492-s3tv7oj4i",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE LUSAIL FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005492-7jlqtqemf",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Lusail and beyond"
+        },
+        "items": [
+          {
+            "id": "doh-lusail-marina",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Lusail Marina Promenade",
+            "titleAr": "من مطار حمد الدولي إلى ممشى مارينا لوسيل",
+            "price": "From QAR 250",
+            "priceAr": "ابتداءً من 250 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Lusail Marina"
+          },
+          {
+            "id": "doh-lusail-blvd",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Lusail Boulevard & Stadium",
+            "titleAr": "من مطار حمد الدولي إلى درب واستاد لوسيل",
+            "price": "From QAR 260",
+            "priceAr": "ابتداءً من 260 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Lusail Boulevard"
+          },
+          {
+            "id": "lusail-westbay",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Lusail to West Bay Doha",
+            "titleAr": "من لوسيل إلى الخليج الغربي بالدوحة",
+            "price": "From QAR 180",
+            "priceAr": "ابتداءً من 180 ر.ق",
+            "pickup": "Lusail",
+            "dropoff": "West Bay"
+          },
+          {
+            "id": "lusail-pearl",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Lusail to The Pearl-Qatar",
+            "titleAr": "من لوسيل إلى اللؤلؤة قطر",
+            "price": "From QAR 160",
+            "priceAr": "ابتداءً من 160 ر.ق",
+            "pickup": "Lusail",
+            "dropoff": "The Pearl-Qatar"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005492-nx4t0fze9",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN LUSAIL",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005492-owdiaki25",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Lusail.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310005492-cs24xln4o",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في لوسيل",
+          "title": "لوسيل",
+          "description": "مدينة المستقبل القطرية الأيقونية — أبراج المارينا الشامخة ودرب لوسيل وأبراج كتارا الفاخرة. تقدم إيه بي ليمو خدمات نقل تنفيذي رفيعة تربط لوسيل بمطار حمد الدولي والخليج الغربي.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "Lusail Marina Promenade",
+          "skyline": "doha"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-lusail-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005492-82hdyze0l",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول لوسيل",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005492-dikjfq484",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء لوسيل وخارجها"
+        },
+        "items": [
+          {
+            "id": "doh-lusail-marina",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Lusail Marina Promenade",
+            "titleAr": "من مطار حمد الدولي إلى ممشى مارينا لوسيل",
+            "price": "From QAR 250",
+            "priceAr": "ابتداءً من 250 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Lusail Marina"
+          },
+          {
+            "id": "doh-lusail-blvd",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Lusail Boulevard & Stadium",
+            "titleAr": "من مطار حمد الدولي إلى درب واستاد لوسيل",
+            "price": "From QAR 260",
+            "priceAr": "ابتداءً من 260 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Lusail Boulevard"
+          },
+          {
+            "id": "lusail-westbay",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Lusail to West Bay Doha",
+            "titleAr": "من لوسيل إلى الخليج الغربي بالدوحة",
+            "price": "From QAR 180",
+            "priceAr": "ابتداءً من 180 ر.ق",
+            "pickup": "Lusail",
+            "dropoff": "West Bay"
+          },
+          {
+            "id": "lusail-pearl",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Lusail to The Pearl-Qatar",
+            "titleAr": "من لوسيل إلى اللؤلؤة قطر",
+            "price": "From QAR 160",
+            "priceAr": "ابتداءً من 160 ر.ق",
+            "pickup": "Lusail",
+            "dropoff": "The Pearl-Qatar"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005492-utamznugk",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في لوسيل",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005492-vs4ra2vxa",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في لوسيل.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

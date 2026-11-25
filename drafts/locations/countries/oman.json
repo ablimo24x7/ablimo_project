@@ -1,0 +1,712 @@
+{
+  "pageType": "country",
+  "refKey": "oman",
+  "countrySlug": "oman",
+  "path": "/locations/oman",
+  "description": "Country template for oman",
+  "exportedAt": "2026-11-10T12:32:14.122Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1793272074069-fuxvmep9n",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Oman",
+          "titleHighlight": "",
+          "description": "AB arranges every executive chauffeur service Oman journey on request through vetted partners, planned from Riyadh headquarters for corporate and protocol delegations. This managed network provides reliable ground transport across Oman with continuous trip supervision.\n\nCentralised coordination from the operations centre maintains rigorous service standards for every cross border itinerary."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/locations",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-oman-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1793272074069-e1qzmhpf6",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-3sczxhx03",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage and Fleet",
+          "heading": "Executive Chauffeur Service Oman Capabilities",
+          "description": "AB coordinates executive ground transportation throughout the Sultanate for business travel, VIP transport and official delegations. Partner operations cover major commercial zones, industrial ports and international arrival terminals. Corporate transport Oman solutions include dedicated airport transfers, full day hire and hourly chauffeur bookings. Chauffeurs operate premium limousine service fleets including the Mercedes S Class, Cadillac Escalade, GMC Yukon and Mercedes V Class, supporting travel managers with flight tracking and terminal meet and greet services.",
+          "items": [
+            {
+              "id": "om-cov-1",
+              "icon": "Map",
+              "heading": "Muscat",
+              "description": "Private driver arrangements and corporate mobility across the capital, linking government ministries, diplomatic quarters and commercial districts."
+            },
+            {
+              "id": "om-cov-2",
+              "icon": "Map",
+              "heading": "Salalah",
+              "description": "Executive car service options for southern regional visits, port facilities and commercial operations throughout Dhofar."
+            },
+            {
+              "id": "om-cov-3",
+              "icon": "Map",
+              "heading": "Sohar",
+              "description": "Industrial hub transport supporting maritime logistics, trade corridors and corporate visits to northern manufacturing centres."
+            },
+            {
+              "id": "om-cov-4",
+              "icon": "Plane",
+              "heading": "Muscat International Airport (MCT)",
+              "description": "Dedicated airport transfer Oman journeys and MCT arrivals with meet and greet service, flight tracking and direct onward transit."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-oman-images/image1.jpg",
+          "backgroundAlt": "Executive chauffeur service Oman sedan parked in Muscat"
+        }
+      },
+      {
+        "id": "sec-1793272074069-mgnv0x96v",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "heading": "Destinations in Oman",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-1g63rpcha",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Operational Workflow",
+          "heading": "How Chauffeur Service Oman Bookings Operate",
+          "description": ""
+        },
+        "items": [
+          {
+            "id": "om-wf-1",
+            "icon": "Briefcase",
+            "title": "Request",
+            "description": "Submit itinerary specifications through the central dispatch office or via our portal at quote/tender. Detail passenger manifests, vehicle preferences, flight numbers and schedule requirements across Oman.",
+            "actions": [
+              {
+                "label": "Submit Request",
+                "href": "/quote/tender",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "om-wf-2",
+            "icon": "Shield",
+            "title": "Plan and vet",
+            "description": "The Riyadh operations centre reviews partner availability, audits driver documentation and verifies vehicle maintenance history. Chauffeurs assigned to the trip hold active commercial insurance, clean safety credentials and protocol background clearance."
+          },
+          {
+            "id": "om-wf-3",
+            "icon": "Clock",
+            "title": "Operate and report",
+            "description": "Local chauffeurs execute journeys with real time flight monitoring and 24/7 central oversight. Dispatchers track transit progression from Riyadh, providing consolidated billing and route completion summaries to travel managers."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-ebvh97ldm",
+        "type": "introText",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Quality Assurance",
+          "heading": "Safety and Fleet Standards for Chauffeur Service Oman",
+          "paragraphs": [
+            "AB enforces strict operational standards across all partner networks in Oman. Every private driver undergoes comprehensive vetting, identity confirmation and local route assessments. Vehicles in service, including luxury sedan, SUV and executive van models, remain fully licensed, insured and subject to regular mechanical inspections. Operating teams maintain strict non smoking policies, spotless interior presentation and professional etiquette to protect passenger comfort and security on every road."
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-oj3s0ea1j",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Client Enquiries",
+          "heading": "Frequently Asked Questions About Oman Travel",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1793272074069-xhtz899e2",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "Book Your Chauffeur Service Oman Transfer",
+          "description": "Coordinate your executive ground transportation across Oman through AB central operations in Riyadh."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/locations",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1792139036438-04m5wwzuk",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service In {country}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1621680696874-edd80ce57b72?q=80&w=1291&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036438-80i6bvy4w",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-nxuhasqsm",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-svia5i0na",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Luxury Chauffeur Service Across Oman",
+          "description": "Oman enchants with wadis, mountains, and timeless hospitality — from Muscat's Grand Mosque to Salalah's monsoon greens. AB is your trusted chauffeur partner, providing luxury airport transfers, city travel, and intercity journeys across the Sultanate.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1621680696874-edd80ce57b72?q=80&w=1291&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      },
+      {
+        "id": "sec-1792139036438-fdqa0drq0",
+        "type": "introText",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "Experience refined elegance with AB’s premium chauffeur service across {country}. From major business hubs to every destination across the region, our network of professional drivers provides discreet, first-class transportation tailored to your journey. Whether you need seamless airport transfers, city-to-city travel, or flexible hourly bookings, we deliver an uncompromised, executive travel experience.",
+            "Don't settle for just renting a car with a driver — immerse yourself in an experience by booking with AB.",
+            "Check out our wide range of services available across {country} below:"
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-pqr3og3jj",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "heading": "Inter City Routes in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-6aediz7o0",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1793272074085-h5fy21fmd",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Oman",
+          "titleHighlight": "",
+          "description": "AB arranges every executive chauffeur service Oman journey on request through vetted partners, planned from Riyadh headquarters for corporate and protocol delegations. This managed network provides reliable ground transport across Oman with continuous trip supervision.\n\nCentralised coordination from the operations centre maintains rigorous service standards for every cross border itinerary."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/locations",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-oman-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1793272074085-1qjibzuqi",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-q8ibdkv1a",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage and Fleet",
+          "heading": "Executive Chauffeur Service Oman Capabilities",
+          "description": "AB coordinates executive ground transportation throughout the Sultanate for business travel, VIP transport and official delegations. Partner operations cover major commercial zones, industrial ports and international arrival terminals. Corporate transport Oman solutions include dedicated airport transfers, full day hire and hourly chauffeur bookings. Chauffeurs operate premium limousine service fleets including the Mercedes S Class, Cadillac Escalade, GMC Yukon and Mercedes V Class, supporting travel managers with flight tracking and terminal meet and greet services.",
+          "items": [
+            {
+              "id": "om-cov-1",
+              "icon": "Map",
+              "heading": "Muscat",
+              "description": "Private driver arrangements and corporate mobility across the capital, linking government ministries, diplomatic quarters and commercial districts."
+            },
+            {
+              "id": "om-cov-2",
+              "icon": "Map",
+              "heading": "Salalah",
+              "description": "Executive car service options for southern regional visits, port facilities and commercial operations throughout Dhofar."
+            },
+            {
+              "id": "om-cov-3",
+              "icon": "Map",
+              "heading": "Sohar",
+              "description": "Industrial hub transport supporting maritime logistics, trade corridors and corporate visits to northern manufacturing centres."
+            },
+            {
+              "id": "om-cov-4",
+              "icon": "Plane",
+              "heading": "Muscat International Airport (MCT)",
+              "description": "Dedicated airport transfer Oman journeys and MCT arrivals with meet and greet service, flight tracking and direct onward transit."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-oman-images/image1.jpg",
+          "backgroundAlt": "Executive chauffeur service Oman sedan parked in Muscat"
+        }
+      },
+      {
+        "id": "sec-1793272074085-iyykqng7b",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "heading": "Destinations in Oman",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-8dfmf5e6h",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Operational Workflow",
+          "heading": "How Chauffeur Service Oman Bookings Operate",
+          "description": ""
+        },
+        "items": [
+          {
+            "id": "om-wf-1",
+            "icon": "Briefcase",
+            "title": "Request",
+            "description": "Submit itinerary specifications through the central dispatch office or via our portal at quote/tender. Detail passenger manifests, vehicle preferences, flight numbers and schedule requirements across Oman.",
+            "actions": [
+              {
+                "label": "Submit Request",
+                "href": "/quote/tender",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "om-wf-2",
+            "icon": "Shield",
+            "title": "Plan and vet",
+            "description": "The Riyadh operations centre reviews partner availability, audits driver documentation and verifies vehicle maintenance history. Chauffeurs assigned to the trip hold active commercial insurance, clean safety credentials and protocol background clearance."
+          },
+          {
+            "id": "om-wf-3",
+            "icon": "Clock",
+            "title": "Operate and report",
+            "description": "Local chauffeurs execute journeys with real time flight monitoring and 24/7 central oversight. Dispatchers track transit progression from Riyadh, providing consolidated billing and route completion summaries to travel managers."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-7gdym785g",
+        "type": "introText",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Quality Assurance",
+          "heading": "Safety and Fleet Standards for Chauffeur Service Oman",
+          "paragraphs": [
+            "AB enforces strict operational standards across all partner networks in Oman. Every private driver undergoes comprehensive vetting, identity confirmation and local route assessments. Vehicles in service, including luxury sedan, SUV and executive van models, remain fully licensed, insured and subject to regular mechanical inspections. Operating teams maintain strict non smoking policies, spotless interior presentation and professional etiquette to protect passenger comfort and security on every road."
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-42jpmkso3",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Client Enquiries",
+          "heading": "Frequently Asked Questions About Oman Travel",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1793272074085-rbcts85q8",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "Book Your Chauffeur Service Oman Transfer",
+          "description": "Coordinate your executive ground transportation across Oman through AB central operations in Riyadh."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/locations",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

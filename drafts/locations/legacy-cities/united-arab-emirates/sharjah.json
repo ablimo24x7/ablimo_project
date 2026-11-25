@@ -1,0 +1,2220 @@
+{
+  "pageType": "city",
+  "refKey": "united-arab-emirates/sharjah",
+  "countrySlug": "united-arab-emirates",
+  "citySlug": "sharjah",
+  "path": "/locations/united-arab-emirates/sharjah",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for sharjah (united-arab-emirates)",
+  "exportedAt": "2026-11-10T11:52:18.055Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538055-h45cggv3g",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Sharjah",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service Sharjah transport provides punctual journeys across the emirate and regional road corridors. AB connects arrivals from Sharjah International Airport (SHJ) to commerce centres throughout Sharjah with dedicated business vehicles and experienced chauffeurs.\n\nCorporate travel coordinators rely on our vetted standards for airport transfers, board meetings and intercity connections throughout the United Arab Emirates."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-uae-sharjah-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Sharjah skyline along Khalid Lagoon at sunset"
+        }
+      },
+      {
+        "id": "sec-1794311538055-6o25rilfb",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-ryu3flqjt",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Sharjah fleet",
+          "heading": "Choose your Sharjah chauffeur class",
+          "description": "Every vehicle in our Sharjah fleet is GPS tracked and detailed before each journey. AB maintains executive standards across all vehicle categories for corporate itineraries and personal movements.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "sharjah-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image2.jpg",
+            "imageAlt": "Standard Sedan in Sharjah",
+            "category": "Standard Sedan",
+            "name": "Toyota Camry or similar",
+            "idealFor": "Ideal for: Daily corporate travel and transfers",
+            "description": "A dependable sedan providing quiet travel across Sharjah for corporate professionals and individual travellers needing prompt point to point journeys. Chauffeurs maintain pristine vehicle presentation for every road transfer.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image3.jpg",
+            "imageAlt": "Business Sedan in Sharjah",
+            "category": "Business Sedan",
+            "name": "Mercedes E Class or similar",
+            "idealFor": "Ideal for: Executive meetings and airport journeys",
+            "description": "Refined comfort for executives attending commercial appointments in the city. The vehicle provides generous legroom, quiet interiors and leather seating for focused work between destinations.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image4.jpg",
+            "imageAlt": "First Class Sedan in Sharjah",
+            "category": "First Class Sedan",
+            "name": "Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP transport and state delegations",
+            "description": "The premier luxury car option for prominent delegations visiting Sharjah. Superior suspension, acoustic insulation and rear cabin climate control provide an elevated private driver Sharjah experience.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image5.jpg",
+            "imageAlt": "Executive SUV in Sharjah",
+            "category": "Executive SUV",
+            "name": "Cadillac Escalade, GMC Yukon or similar",
+            "idealFor": "Ideal for: Family travel and executive groups",
+            "description": "Spacious prestige SUVs offering commanding road presence and generous luggage capacity. Perfect for group transfers navigating between commercial engagements and hotel resorts across the northern Emirates.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image6.jpg",
+            "imageAlt": "Premium MPV in Sharjah",
+            "category": "Premium MPV",
+            "name": "Mercedes V Class or similar",
+            "idealFor": "Ideal for: Small teams and mobile conferences",
+            "description": "Flexible conference style seating designed for business teams moving across Sharjah. Passengers work collaboratively while travelling with dedicated climate controls and convenient device charging points.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image7.jpg",
+            "imageAlt": "Executive Van in Sharjah",
+            "category": "Executive Van",
+            "name": "Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Event delegations and corporate groups",
+            "description": "High capacity group transport tailored for large delegations and event participants. Generous headroom, wide entry doors and partitioned luggage storage accommodate group logistical requirements smoothly.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-e31x31zje",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Sharjah and beyond",
+          "description": "AB provides fixed route pricing and scheduled transfers connecting vital commercial hubs, cultural institutions and neighbouring emirates.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "sharjah-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to Al Majaz",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to University City",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Sharjah to Expo Centre Sharjah",
+            "description": "",
+            "subtext": "Corporate City Rate",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Sharjah to Dubai",
+            "description": "",
+            "subtext": "Direct Border Transfer · 25m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/sharjah/routes/sharjah-to-dubai",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Sharjah to Ajman",
+            "description": "",
+            "subtext": "Direct Border Transfer · 15m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/sharjah/routes/sharjah-to-ajman",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Sharjah to Abu Dhabi",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 1.7h",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/sharjah/routes/sharjah-to-abu-dhabi",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-g18giuxvy",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Sharjah",
+          "heading": "One partner for every movement in Sharjah",
+          "description": "AB delivers managed ground mobility solutions supporting corporate delegations, group transfers and personal schedules with professional chauffeurs throughout the emirate."
+        },
+        "items": [
+          {
+            "id": "sharjah-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Sharjah",
+            "description": "Dedicated hourly hire and executive mobility for commercial leadership and private itineraries.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Sharjah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers SHJ",
+            "description": "Flight-tracked terminal arrivals and departures with curbside assistance and terminal greeting.",
+            "actions": [
+              {
+                "label": "Airport Transfers SHJ",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Sharjah",
+            "description": "High-capacity coaches and bus rental options for conferences, staff transport, and large delegations.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Sharjah",
+                "href": "/services/bus-coach-hire",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-ghf9whq96",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Sharjah International Airport (SHJ)",
+          "description": "Sharjah International Airport (SHJ) serves as a primary international gateway for business and leisure visitors entering the northern Emirates. AB provides dedicated SHJ airport transfer coordination built on real time flight tracking, monitoring inbound arrivals to adjust pickup schedules for early landings or air traffic delays. Upon clearing customs, guests receive a personalised meet and greet service from a professional chauffeur holding a clear digital name board. Travellers benefit from free waiting time, luggage assistance and direct escort to an air conditioned vehicle, eliminating terminal taxi queues and parking delays.",
+          "items": [
+            {
+              "id": "sharjah-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival monitored automatically in real-time."
+            },
+            {
+              "id": "sharjah-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Professional reception inside the terminal arrivals hall with custom digital name board."
+            },
+            {
+              "id": "sharjah-apt-b-3",
+              "icon": "Clock",
+              "heading": "SHJ to Al Majaz",
+              "description": "Direct 20-minute city transfer."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-sharjah-images/image1.jpg",
+          "backgroundAlt": "Sharjah International Airport terminal approach"
+        }
+      },
+      {
+        "id": "sec-1794311538055-phm1u8akk",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-uq5oiu9re",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Sharjah",
+          "description": "AB coordinates complete executive transport coverage across all key commercial, industrial and cultural zones in the emirate. Our chauffeurs manage itineraries connecting multinational headquarters, regional exhibition venues, government complexes and coastal hospitality properties.",
+          "items": [
+            {
+              "id": "sharjah-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "Sharjah Chamber of Commerce, Al Majaz Waterfront, Sharjah Media City Shams"
+            },
+            {
+              "id": "sharjah-cov-2",
+              "icon": "Calendar",
+              "heading": "Events and conferences",
+              "description": "Expo Centre Sharjah, Al Jawaher Reception and Convention Centre, Sharjah Golf & Shooting Club"
+            },
+            {
+              "id": "sharjah-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Heart of Sharjah, Sharjah Art Museum, Al Noor Island waterfront"
+            },
+            {
+              "id": "sharjah-cov-4",
+              "icon": "Shield",
+              "heading": "Government and industry",
+              "description": "Sharjah Government House, Hamriyah Free Zone, SAIF Zone logistics corridors"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Sharjah"
+        }
+      },
+      {
+        "id": "sec-1794311538055-i2xk2mlnr",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Sharjah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-4l4fnsnej",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Chauffeur service Sharjah operations and regional office",
+          "description": "Ground operations in Sharjah are managed directly from the nearest regional office, AB Dubai, situated minutes from the emirate border. Transportation schedules benefit from unified fleet standards and continuous dispatch monitoring provided by the AB central operations centre in Riyadh.",
+          "items": [
+            {
+              "id": "sharjah-hq-1",
+              "icon": "Map",
+              "heading": "AB Dubai (Serving Sharjah)",
+              "description": "Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE"
+            },
+            {
+              "id": "sharjah-hq-2",
+              "icon": "Phone",
+              "heading": "+971 50 781 3880",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Suite+206,+DBC+Building,+Al+Khabaisi,+Deira,+Dubai,+UAE",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538055-iwg9nyxy4",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Sharjah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538055-v9w5fzjrq",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Sharjah.",
+          "description": "Book your executive chauffeur service Sharjah transfer today or speak directly with our dispatch operations team on +971 50 918 0556 for corporate accounts.",
+          "subheading": "Reserve your executive journey",
+          "subdescription": "Coordinate single transfers or ongoing corporate transport schedules with our 24/7 operations team."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538055-h45cggv3g",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Sharjah",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service Sharjah transport provides punctual journeys across the emirate and regional road corridors. AB connects arrivals from Sharjah International Airport (SHJ) to commerce centres throughout Sharjah with dedicated business vehicles and experienced chauffeurs.\n\nCorporate travel coordinators rely on our vetted standards for airport transfers, board meetings and intercity connections throughout the United Arab Emirates."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-uae-sharjah-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Sharjah skyline along Khalid Lagoon at sunset"
+        }
+      },
+      {
+        "id": "sec-1794311538055-6o25rilfb",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-ryu3flqjt",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Sharjah fleet",
+          "heading": "Choose your Sharjah chauffeur class",
+          "description": "Every vehicle in our Sharjah fleet is GPS tracked and detailed before each journey. AB maintains executive standards across all vehicle categories for corporate itineraries and personal movements.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "sharjah-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image2.jpg",
+            "imageAlt": "Standard Sedan in Sharjah",
+            "category": "Standard Sedan",
+            "name": "Toyota Camry or similar",
+            "idealFor": "Ideal for: Daily corporate travel and transfers",
+            "description": "A dependable sedan providing quiet travel across Sharjah for corporate professionals and individual travellers needing prompt point to point journeys. Chauffeurs maintain pristine vehicle presentation for every road transfer.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image3.jpg",
+            "imageAlt": "Business Sedan in Sharjah",
+            "category": "Business Sedan",
+            "name": "Mercedes E Class or similar",
+            "idealFor": "Ideal for: Executive meetings and airport journeys",
+            "description": "Refined comfort for executives attending commercial appointments in the city. The vehicle provides generous legroom, quiet interiors and leather seating for focused work between destinations.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image4.jpg",
+            "imageAlt": "First Class Sedan in Sharjah",
+            "category": "First Class Sedan",
+            "name": "Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP transport and state delegations",
+            "description": "The premier luxury car option for prominent delegations visiting Sharjah. Superior suspension, acoustic insulation and rear cabin climate control provide an elevated private driver Sharjah experience.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image5.jpg",
+            "imageAlt": "Executive SUV in Sharjah",
+            "category": "Executive SUV",
+            "name": "Cadillac Escalade, GMC Yukon or similar",
+            "idealFor": "Ideal for: Family travel and executive groups",
+            "description": "Spacious prestige SUVs offering commanding road presence and generous luggage capacity. Perfect for group transfers navigating between commercial engagements and hotel resorts across the northern Emirates.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image6.jpg",
+            "imageAlt": "Premium MPV in Sharjah",
+            "category": "Premium MPV",
+            "name": "Mercedes V Class or similar",
+            "idealFor": "Ideal for: Small teams and mobile conferences",
+            "description": "Flexible conference style seating designed for business teams moving across Sharjah. Passengers work collaboratively while travelling with dedicated climate controls and convenient device charging points.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image7.jpg",
+            "imageAlt": "Executive Van in Sharjah",
+            "category": "Executive Van",
+            "name": "Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Event delegations and corporate groups",
+            "description": "High capacity group transport tailored for large delegations and event participants. Generous headroom, wide entry doors and partitioned luggage storage accommodate group logistical requirements smoothly.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-e31x31zje",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Sharjah and beyond",
+          "description": "AB provides fixed route pricing and scheduled transfers connecting vital commercial hubs, cultural institutions and neighbouring emirates.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "sharjah-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to Al Majaz",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to University City",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Sharjah to Expo Centre Sharjah",
+            "description": "",
+            "subtext": "Corporate City Rate",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Sharjah to Dubai",
+            "description": "",
+            "subtext": "Direct Border Transfer · 25m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/sharjah/routes/sharjah-to-dubai",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Sharjah to Ajman",
+            "description": "",
+            "subtext": "Direct Border Transfer · 15m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/sharjah/routes/sharjah-to-ajman",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Sharjah to Abu Dhabi",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 1.7h",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/sharjah/routes/sharjah-to-abu-dhabi",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-g18giuxvy",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Sharjah",
+          "heading": "One partner for every movement in Sharjah",
+          "description": "AB delivers managed ground mobility solutions supporting corporate delegations, group transfers and personal schedules with professional chauffeurs throughout the emirate."
+        },
+        "items": [
+          {
+            "id": "sharjah-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Sharjah",
+            "description": "Dedicated hourly hire and executive mobility for commercial leadership and private itineraries.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Sharjah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers SHJ",
+            "description": "Flight-tracked terminal arrivals and departures with curbside assistance and terminal greeting.",
+            "actions": [
+              {
+                "label": "Airport Transfers SHJ",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Sharjah",
+            "description": "High-capacity coaches and bus rental options for conferences, staff transport, and large delegations.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Sharjah",
+                "href": "/services/bus-coach-hire",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-ghf9whq96",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Sharjah International Airport (SHJ)",
+          "description": "Sharjah International Airport (SHJ) serves as a primary international gateway for business and leisure visitors entering the northern Emirates. AB provides dedicated SHJ airport transfer coordination built on real time flight tracking, monitoring inbound arrivals to adjust pickup schedules for early landings or air traffic delays. Upon clearing customs, guests receive a personalised meet and greet service from a professional chauffeur holding a clear digital name board. Travellers benefit from free waiting time, luggage assistance and direct escort to an air conditioned vehicle, eliminating terminal taxi queues and parking delays.",
+          "items": [
+            {
+              "id": "sharjah-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival monitored automatically in real-time."
+            },
+            {
+              "id": "sharjah-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Professional reception inside the terminal arrivals hall with custom digital name board."
+            },
+            {
+              "id": "sharjah-apt-b-3",
+              "icon": "Clock",
+              "heading": "SHJ to Al Majaz",
+              "description": "Direct 20-minute city transfer."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-sharjah-images/image1.jpg",
+          "backgroundAlt": "Sharjah International Airport terminal approach"
+        }
+      },
+      {
+        "id": "sec-1794311538055-phm1u8akk",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-uq5oiu9re",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Sharjah",
+          "description": "AB coordinates complete executive transport coverage across all key commercial, industrial and cultural zones in the emirate. Our chauffeurs manage itineraries connecting multinational headquarters, regional exhibition venues, government complexes and coastal hospitality properties.",
+          "items": [
+            {
+              "id": "sharjah-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "Sharjah Chamber of Commerce, Al Majaz Waterfront, Sharjah Media City Shams"
+            },
+            {
+              "id": "sharjah-cov-2",
+              "icon": "Calendar",
+              "heading": "Events and conferences",
+              "description": "Expo Centre Sharjah, Al Jawaher Reception and Convention Centre, Sharjah Golf & Shooting Club"
+            },
+            {
+              "id": "sharjah-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Heart of Sharjah, Sharjah Art Museum, Al Noor Island waterfront"
+            },
+            {
+              "id": "sharjah-cov-4",
+              "icon": "Shield",
+              "heading": "Government and industry",
+              "description": "Sharjah Government House, Hamriyah Free Zone, SAIF Zone logistics corridors"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Sharjah"
+        }
+      },
+      {
+        "id": "sec-1794311538055-i2xk2mlnr",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Sharjah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-4l4fnsnej",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Chauffeur service Sharjah operations and regional office",
+          "description": "Ground operations in Sharjah are managed directly from the nearest regional office, AB Dubai, situated minutes from the emirate border. Transportation schedules benefit from unified fleet standards and continuous dispatch monitoring provided by the AB central operations centre in Riyadh.",
+          "items": [
+            {
+              "id": "sharjah-hq-1",
+              "icon": "Map",
+              "heading": "AB Dubai (Serving Sharjah)",
+              "description": "Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE"
+            },
+            {
+              "id": "sharjah-hq-2",
+              "icon": "Phone",
+              "heading": "+971 50 781 3880",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Suite+206,+DBC+Building,+Al+Khabaisi,+Deira,+Dubai,+UAE",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538055-iwg9nyxy4",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Sharjah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538055-v9w5fzjrq",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Sharjah.",
+          "description": "Book your executive chauffeur service Sharjah transfer today or speak directly with our dispatch operations team on +971 50 918 0556 for corporate accounts.",
+          "subheading": "Reserve your executive journey",
+          "subdescription": "Coordinate single transfers or ongoing corporate transport schedules with our 24/7 operations team."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538055-mj7kedqfk",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Sharjah",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service Sharjah transport provides punctual journeys across the emirate and regional road corridors. AB connects arrivals from Sharjah International Airport (SHJ) to commerce centres throughout Sharjah with dedicated business vehicles and experienced chauffeurs.\n\nCorporate travel coordinators rely on our vetted standards for airport transfers, board meetings and intercity connections throughout the United Arab Emirates."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-uae-sharjah-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Sharjah skyline along Khalid Lagoon at sunset"
+        }
+      },
+      {
+        "id": "sec-1794311538055-qbzei0lot",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-46ouo8z3x",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Sharjah fleet",
+          "heading": "Choose your Sharjah chauffeur class",
+          "description": "Every vehicle in our Sharjah fleet is GPS tracked and detailed before each journey. AB maintains executive standards across all vehicle categories for corporate itineraries and personal movements.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "sharjah-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image2.jpg",
+            "imageAlt": "Standard Sedan in Sharjah",
+            "category": "Standard Sedan",
+            "name": "Toyota Camry or similar",
+            "idealFor": "Ideal for: Daily corporate travel and transfers",
+            "description": "A dependable sedan providing quiet travel across Sharjah for corporate professionals and individual travellers needing prompt point to point journeys. Chauffeurs maintain pristine vehicle presentation for every road transfer.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image3.jpg",
+            "imageAlt": "Business Sedan in Sharjah",
+            "category": "Business Sedan",
+            "name": "Mercedes E Class or similar",
+            "idealFor": "Ideal for: Executive meetings and airport journeys",
+            "description": "Refined comfort for executives attending commercial appointments in the city. The vehicle provides generous legroom, quiet interiors and leather seating for focused work between destinations.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image4.jpg",
+            "imageAlt": "First Class Sedan in Sharjah",
+            "category": "First Class Sedan",
+            "name": "Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP transport and state delegations",
+            "description": "The premier luxury car option for prominent delegations visiting Sharjah. Superior suspension, acoustic insulation and rear cabin climate control provide an elevated private driver Sharjah experience.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image5.jpg",
+            "imageAlt": "Executive SUV in Sharjah",
+            "category": "Executive SUV",
+            "name": "Cadillac Escalade, GMC Yukon or similar",
+            "idealFor": "Ideal for: Family travel and executive groups",
+            "description": "Spacious prestige SUVs offering commanding road presence and generous luggage capacity. Perfect for group transfers navigating between commercial engagements and hotel resorts across the northern Emirates.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image6.jpg",
+            "imageAlt": "Premium MPV in Sharjah",
+            "category": "Premium MPV",
+            "name": "Mercedes V Class or similar",
+            "idealFor": "Ideal for: Small teams and mobile conferences",
+            "description": "Flexible conference style seating designed for business teams moving across Sharjah. Passengers work collaboratively while travelling with dedicated climate controls and convenient device charging points.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-sharjah-images/image7.jpg",
+            "imageAlt": "Executive Van in Sharjah",
+            "category": "Executive Van",
+            "name": "Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Event delegations and corporate groups",
+            "description": "High capacity group transport tailored for large delegations and event participants. Generous headroom, wide entry doors and partitioned luggage storage accommodate group logistical requirements smoothly.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-va0ctcdh6",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Sharjah and beyond",
+          "description": "AB provides fixed route pricing and scheduled transfers connecting vital commercial hubs, cultural institutions and neighbouring emirates.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "sharjah-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to Al Majaz",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to University City",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "Sharjah to Expo Centre Sharjah",
+            "description": "",
+            "subtext": "Corporate City Rate",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Sharjah to Dubai",
+            "description": "",
+            "subtext": "Direct Border Transfer · 25m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/sharjah/routes/sharjah-to-dubai",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Sharjah to Ajman",
+            "description": "",
+            "subtext": "Direct Border Transfer · 15m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/sharjah/routes/sharjah-to-ajman",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Sharjah to Abu Dhabi",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 1.7h",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/sharjah/routes/sharjah-to-abu-dhabi",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-nuh7ceh93",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Sharjah",
+          "heading": "One partner for every movement in Sharjah",
+          "description": "AB delivers managed ground mobility solutions supporting corporate delegations, group transfers and personal schedules with professional chauffeurs throughout the emirate."
+        },
+        "items": [
+          {
+            "id": "sharjah-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Sharjah",
+            "description": "Dedicated hourly hire and executive mobility for commercial leadership and private itineraries.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Sharjah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-svc-2",
+            "icon": "Plane",
+            "title": "Airport Transfers SHJ",
+            "description": "Flight-tracked terminal arrivals and departures with curbside assistance and terminal greeting.",
+            "actions": [
+              {
+                "label": "Airport Transfers SHJ",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "sharjah-svc-3",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Sharjah",
+            "description": "High-capacity coaches and bus rental options for conferences, staff transport, and large delegations.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Sharjah",
+                "href": "/services/bus-coach-hire",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-20hz9pbhp",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Sharjah International Airport (SHJ)",
+          "description": "Sharjah International Airport (SHJ) serves as a primary international gateway for business and leisure visitors entering the northern Emirates. AB provides dedicated SHJ airport transfer coordination built on real time flight tracking, monitoring inbound arrivals to adjust pickup schedules for early landings or air traffic delays. Upon clearing customs, guests receive a personalised meet and greet service from a professional chauffeur holding a clear digital name board. Travellers benefit from free waiting time, luggage assistance and direct escort to an air conditioned vehicle, eliminating terminal taxi queues and parking delays.",
+          "items": [
+            {
+              "id": "sharjah-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival monitored automatically in real-time."
+            },
+            {
+              "id": "sharjah-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Professional reception inside the terminal arrivals hall with custom digital name board."
+            },
+            {
+              "id": "sharjah-apt-b-3",
+              "icon": "Clock",
+              "heading": "SHJ to Al Majaz",
+              "description": "Direct 20-minute city transfer."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-sharjah-images/image1.jpg",
+          "backgroundAlt": "Sharjah International Airport terminal approach"
+        }
+      },
+      {
+        "id": "sec-1794311538055-woyu2huhq",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-svssxt5jn",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Sharjah",
+          "description": "AB coordinates complete executive transport coverage across all key commercial, industrial and cultural zones in the emirate. Our chauffeurs manage itineraries connecting multinational headquarters, regional exhibition venues, government complexes and coastal hospitality properties.",
+          "items": [
+            {
+              "id": "sharjah-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "Sharjah Chamber of Commerce, Al Majaz Waterfront, Sharjah Media City Shams"
+            },
+            {
+              "id": "sharjah-cov-2",
+              "icon": "Calendar",
+              "heading": "Events and conferences",
+              "description": "Expo Centre Sharjah, Al Jawaher Reception and Convention Centre, Sharjah Golf & Shooting Club"
+            },
+            {
+              "id": "sharjah-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Heart of Sharjah, Sharjah Art Museum, Al Noor Island waterfront"
+            },
+            {
+              "id": "sharjah-cov-4",
+              "icon": "Shield",
+              "heading": "Government and industry",
+              "description": "Sharjah Government House, Hamriyah Free Zone, SAIF Zone logistics corridors"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Sharjah"
+        }
+      },
+      {
+        "id": "sec-1794311538055-t042ld657",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Sharjah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538055-4r678fq45",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Chauffeur service Sharjah operations and regional office",
+          "description": "Ground operations in Sharjah are managed directly from the nearest regional office, AB Dubai, situated minutes from the emirate border. Transportation schedules benefit from unified fleet standards and continuous dispatch monitoring provided by the AB central operations centre in Riyadh.",
+          "items": [
+            {
+              "id": "sharjah-hq-1",
+              "icon": "Map",
+              "heading": "AB Dubai (Serving Sharjah)",
+              "description": "Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE"
+            },
+            {
+              "id": "sharjah-hq-2",
+              "icon": "Phone",
+              "heading": "+971 50 781 3880",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Suite+206,+DBC+Building,+Al+Khabaisi,+Deira,+Dubai,+UAE",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538055-gq3vu5u5p",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Sharjah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538055-mygqnp5im",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Sharjah.",
+          "description": "Book your executive chauffeur service Sharjah transfer today or speak directly with our dispatch operations team on +971 50 918 0556 for corporate accounts.",
+          "subheading": "Reserve your executive journey",
+          "subdescription": "Coordinate single transfers or ongoing corporate transport schedules with our 24/7 operations team."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

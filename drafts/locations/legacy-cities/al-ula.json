@@ -1,0 +1,2220 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/al-ula",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "al-ula",
+  "path": "/locations/saudi-arabia/al-ula",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for al-ula (saudi-arabia)",
+  "exportedAt": "2026-11-10T11:52:18.046Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538046-mcmssvqlr",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in AlUla",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service AlUla connects visitors seamlessly across the historic valley. Arriving travellers at Prince Abdulmajeed bin Abdulaziz International Airport (ULH) receive dedicated assistance directly to hotels, heritage venues and desert resorts across AlUla.\n\nCoordinated ground travel supports executive schedules, cultural exploration and private delegations. AB manages local itineraries through experienced drivers and clean luxury vehicles tailored to the regional landscape."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "AlUla skyline sandstone formations and historic valley at dusk"
+        }
+      },
+      {
+        "id": "sec-1794311538046-jt98p3e2c",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-ttsryh74x",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The AlUla fleet",
+          "heading": "Choose your AlUla chauffeur class",
+          "description": "Every vehicle in our AlUla fleet is GPS tracked and detailed before each journey. AB maintains immaculate standards across every vehicle category for comfort in the desert climate.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "al-ula-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image2.jpg",
+            "imageAlt": "Standard Sedan luxury chauffeur service AlUla",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Avalon or similar [Confirm]",
+            "idealFor": "Ideal for: Efficient private business transfers",
+            "description": "A comfortable, climate controlled choice for individual business visitors moving between scheduled hotel appointments and regional corporate sites across AlUla.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image3.jpg",
+            "imageAlt": "Business Sedan chauffeur transport in AlUla",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate meetings and executives",
+            "description": "Refined executive travel delivering quiet comfort, rear seat climate adjustment and discreet driving for professional agendas throughout the AlUla region.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image4.jpg",
+            "imageAlt": "First Class Sedan Mercedes S Class in AlUla",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP hospitality and protocol",
+            "description": "The flagship choice for state visits, dignitaries and luxury guests demanding superior sound insulation, acoustic privacy and smooth ride dynamics in AlUla.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image5.jpg",
+            "imageAlt": "Executive SUV Cadillac Escalade chauffeur service AlUla",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Spacious travel across desert",
+            "description": "Generous cabin proportions with elevated road visibility and superior luggage storage, built to handle longer desert itineraries comfortably.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image6.jpg",
+            "imageAlt": "Premium MPV Mercedes V Class chauffeur in AlUla",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Family groups and small teams",
+            "description": "Conference seating options and ample luggage capacity make this luxury MPV the premier choice for delegation groups and extended touring parties.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image7.jpg",
+            "imageAlt": "Executive Van event transportation in AlUla",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: Event crews and delegacy transport",
+            "description": "Spacious high ceiling transport designed for event production staff, touring delegations and group transfers operating across diverse project sites.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-2xncot5sn",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across AlUla and beyond",
+          "description": "AB coordinates point to point transit, historical sightseeing and intercity transfers connecting north western hubs across Saudi Arabia.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "al-ula-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ULH to AlUla Old Town",
+            "description": "Direct transfer from the airport terminal to heritage hotels and cultural districts.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ULH to Hegra",
+            "description": "Private airport reception directly onward to the UNESCO World Heritage visitor gates.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "AlUla to Maraya",
+            "description": "Luxury evening transport to the concert hall and exhibition grounds in Ashar Valley.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "AlUla to Madinah",
+            "description": "Long distance highway transfer connecting the heritage valley with the holy city.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/al-ula/routes/al-ula-to-medina",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "AlUla to Tabuk",
+            "description": "Northern corridor executive transfer serving corporate and government itineraries.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "AlUla to Hegra and heritage sites [Confirm]",
+            "description": "Full day historical circuit covering primary archaeological landmarks across the region.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-5izunptvn",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in AlUla",
+          "heading": "One partner for every movement in AlUla",
+          "description": "AB coordinates ground fleet operations for corporate travellers, production organisers and international touring partners across the entire valley."
+        },
+        "items": [
+          {
+            "id": "al-ula-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in AlUla",
+            "description": "Book managed protocol travel through Chauffeur & VIP in AlUla.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in AlUla",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-svc-2",
+            "icon": "Users",
+            "title": "Event Transportation in AlUla",
+            "description": "Organise festival and production fleets through Event Transportation in AlUla.",
+            "actions": [
+              {
+                "label": "Event Transportation in AlUla",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-svc-3",
+            "icon": "Map",
+            "title": "Tourism Transportation in AlUla",
+            "description": "Coordinate heritage site excursions through Tourism Transportation in AlUla.",
+            "actions": [
+              {
+                "label": "Tourism Transportation in AlUla",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-0bpdcj5uw",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH)",
+          "description": "Arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH) is straightforward with arranged chauffeur reception. AB monitors regional and international flights so pickup schedules match real arrival times. Your dedicated driver waits inside the arrivals area holding a personalized digital name board. Chauffeurs assist with luggage transfer before escorting passengers to their air-conditioned vehicle. Collection happens at the terminal meeting point [Confirm]. The ULH airport transfer service includes a free waiting time [Confirm] to allow comfortable customs clearance and baggage collection.",
+          "items": [
+            {
+              "id": "al-ula-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "al-ula-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "al-ula-apt-b-3",
+              "icon": "Clock",
+              "heading": "ULH to AlUla Old Town",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+          "backgroundAlt": "Arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH)"
+        }
+      },
+      {
+        "id": "sec-1794311538046-586ggtknk",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-bhr9ozbrl",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in AlUla",
+          "description": "AB maintains extensive operational reach throughout the oasis valley, supporting cultural institutions, hospitality resorts, commercial hubs and government projects. Professional drivers navigate remote canyon locations, desert pavilions and historic districts with complete route familiarity.",
+          "items": [
+            {
+              "id": "al-ula-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Royal Commission for AlUla Headquarters · AlUla Innovation Hub · Ashar Commercial Centre"
+            },
+            {
+              "id": "al-ula-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Maraya Concert Hall · Ashar Valley Conference Pavilion · AlUla Cultural Oasis Venues"
+            },
+            {
+              "id": "al-ula-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Hegra Archaeological Site · AlUla Old Town · Dadan and Jabal Ikmah"
+            },
+            {
+              "id": "al-ula-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "AlUla Governorate Offices · Prince Abdulmajeed bin Abdulaziz International Airport (ULH) Logistics Area · Ashar Valley Project Development Zone"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in AlUla"
+        }
+      },
+      {
+        "id": "sec-1794311538046-jx1pq1qho",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from AlUla",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-0khwqat19",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Centrally managed operations serving AlUla",
+          "description": "AB coordinates ground transport across AlUla through active fleet deployment directed by central regional operations. Our 24/7 central dispatch tracks vehicle statuses continuously, providing seamless chauffeur coordination without requiring a physical customer office locally.",
+          "items": [
+            {
+              "id": "al-ula-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters and 24/7 dispatch [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "al-ula-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538046-itc1osvqs",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in AlUla: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538046-8bntyxtkf",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in AlUla.",
+          "description": "Secure executive ground transport and private driver services tailored to your itinerary. Reserve professional chauffeur service AlUla today by contacting 24/7 central dispatch at +966 58 111 8720.",
+          "subheading": "Reserve your private transport",
+          "subdescription": "Confirm individual vehicle transfers or complete event fleet coordination across Saudi Arabia."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538046-mcmssvqlr",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in AlUla",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service AlUla connects visitors seamlessly across the historic valley. Arriving travellers at Prince Abdulmajeed bin Abdulaziz International Airport (ULH) receive dedicated assistance directly to hotels, heritage venues and desert resorts across AlUla.\n\nCoordinated ground travel supports executive schedules, cultural exploration and private delegations. AB manages local itineraries through experienced drivers and clean luxury vehicles tailored to the regional landscape."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "AlUla skyline sandstone formations and historic valley at dusk"
+        }
+      },
+      {
+        "id": "sec-1794311538046-jt98p3e2c",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-ttsryh74x",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The AlUla fleet",
+          "heading": "Choose your AlUla chauffeur class",
+          "description": "Every vehicle in our AlUla fleet is GPS tracked and detailed before each journey. AB maintains immaculate standards across every vehicle category for comfort in the desert climate.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "al-ula-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image2.jpg",
+            "imageAlt": "Standard Sedan luxury chauffeur service AlUla",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Avalon or similar [Confirm]",
+            "idealFor": "Ideal for: Efficient private business transfers",
+            "description": "A comfortable, climate controlled choice for individual business visitors moving between scheduled hotel appointments and regional corporate sites across AlUla.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image3.jpg",
+            "imageAlt": "Business Sedan chauffeur transport in AlUla",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate meetings and executives",
+            "description": "Refined executive travel delivering quiet comfort, rear seat climate adjustment and discreet driving for professional agendas throughout the AlUla region.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image4.jpg",
+            "imageAlt": "First Class Sedan Mercedes S Class in AlUla",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP hospitality and protocol",
+            "description": "The flagship choice for state visits, dignitaries and luxury guests demanding superior sound insulation, acoustic privacy and smooth ride dynamics in AlUla.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image5.jpg",
+            "imageAlt": "Executive SUV Cadillac Escalade chauffeur service AlUla",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Spacious travel across desert",
+            "description": "Generous cabin proportions with elevated road visibility and superior luggage storage, built to handle longer desert itineraries comfortably.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image6.jpg",
+            "imageAlt": "Premium MPV Mercedes V Class chauffeur in AlUla",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Family groups and small teams",
+            "description": "Conference seating options and ample luggage capacity make this luxury MPV the premier choice for delegation groups and extended touring parties.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image7.jpg",
+            "imageAlt": "Executive Van event transportation in AlUla",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: Event crews and delegacy transport",
+            "description": "Spacious high ceiling transport designed for event production staff, touring delegations and group transfers operating across diverse project sites.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-2xncot5sn",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across AlUla and beyond",
+          "description": "AB coordinates point to point transit, historical sightseeing and intercity transfers connecting north western hubs across Saudi Arabia.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "al-ula-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ULH to AlUla Old Town",
+            "description": "Direct transfer from the airport terminal to heritage hotels and cultural districts.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ULH to Hegra",
+            "description": "Private airport reception directly onward to the UNESCO World Heritage visitor gates.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "AlUla to Maraya",
+            "description": "Luxury evening transport to the concert hall and exhibition grounds in Ashar Valley.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "AlUla to Madinah",
+            "description": "Long distance highway transfer connecting the heritage valley with the holy city.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/al-ula/routes/al-ula-to-medina",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "AlUla to Tabuk",
+            "description": "Northern corridor executive transfer serving corporate and government itineraries.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "AlUla to Hegra and heritage sites [Confirm]",
+            "description": "Full day historical circuit covering primary archaeological landmarks across the region.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-5izunptvn",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in AlUla",
+          "heading": "One partner for every movement in AlUla",
+          "description": "AB coordinates ground fleet operations for corporate travellers, production organisers and international touring partners across the entire valley."
+        },
+        "items": [
+          {
+            "id": "al-ula-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in AlUla",
+            "description": "Book managed protocol travel through Chauffeur & VIP in AlUla.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in AlUla",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-svc-2",
+            "icon": "Users",
+            "title": "Event Transportation in AlUla",
+            "description": "Organise festival and production fleets through Event Transportation in AlUla.",
+            "actions": [
+              {
+                "label": "Event Transportation in AlUla",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-svc-3",
+            "icon": "Map",
+            "title": "Tourism Transportation in AlUla",
+            "description": "Coordinate heritage site excursions through Tourism Transportation in AlUla.",
+            "actions": [
+              {
+                "label": "Tourism Transportation in AlUla",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-0bpdcj5uw",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH)",
+          "description": "Arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH) is straightforward with arranged chauffeur reception. AB monitors regional and international flights so pickup schedules match real arrival times. Your dedicated driver waits inside the arrivals area holding a personalized digital name board. Chauffeurs assist with luggage transfer before escorting passengers to their air-conditioned vehicle. Collection happens at the terminal meeting point [Confirm]. The ULH airport transfer service includes a free waiting time [Confirm] to allow comfortable customs clearance and baggage collection.",
+          "items": [
+            {
+              "id": "al-ula-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "al-ula-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "al-ula-apt-b-3",
+              "icon": "Clock",
+              "heading": "ULH to AlUla Old Town",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+          "backgroundAlt": "Arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH)"
+        }
+      },
+      {
+        "id": "sec-1794311538046-586ggtknk",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-bhr9ozbrl",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in AlUla",
+          "description": "AB maintains extensive operational reach throughout the oasis valley, supporting cultural institutions, hospitality resorts, commercial hubs and government projects. Professional drivers navigate remote canyon locations, desert pavilions and historic districts with complete route familiarity.",
+          "items": [
+            {
+              "id": "al-ula-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Royal Commission for AlUla Headquarters · AlUla Innovation Hub · Ashar Commercial Centre"
+            },
+            {
+              "id": "al-ula-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Maraya Concert Hall · Ashar Valley Conference Pavilion · AlUla Cultural Oasis Venues"
+            },
+            {
+              "id": "al-ula-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Hegra Archaeological Site · AlUla Old Town · Dadan and Jabal Ikmah"
+            },
+            {
+              "id": "al-ula-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "AlUla Governorate Offices · Prince Abdulmajeed bin Abdulaziz International Airport (ULH) Logistics Area · Ashar Valley Project Development Zone"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in AlUla"
+        }
+      },
+      {
+        "id": "sec-1794311538046-jx1pq1qho",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from AlUla",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-0khwqat19",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Centrally managed operations serving AlUla",
+          "description": "AB coordinates ground transport across AlUla through active fleet deployment directed by central regional operations. Our 24/7 central dispatch tracks vehicle statuses continuously, providing seamless chauffeur coordination without requiring a physical customer office locally.",
+          "items": [
+            {
+              "id": "al-ula-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters and 24/7 dispatch [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "al-ula-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538046-itc1osvqs",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in AlUla: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538046-8bntyxtkf",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in AlUla.",
+          "description": "Secure executive ground transport and private driver services tailored to your itinerary. Reserve professional chauffeur service AlUla today by contacting 24/7 central dispatch at +966 58 111 8720.",
+          "subheading": "Reserve your private transport",
+          "subdescription": "Confirm individual vehicle transfers or complete event fleet coordination across Saudi Arabia."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538046-c32nxz0uj",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in AlUla",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service AlUla connects visitors seamlessly across the historic valley. Arriving travellers at Prince Abdulmajeed bin Abdulaziz International Airport (ULH) receive dedicated assistance directly to hotels, heritage venues and desert resorts across AlUla.\n\nCoordinated ground travel supports executive schedules, cultural exploration and private delegations. AB manages local itineraries through experienced drivers and clean luxury vehicles tailored to the regional landscape."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "AlUla skyline sandstone formations and historic valley at dusk"
+        }
+      },
+      {
+        "id": "sec-1794311538046-uhp3vll30",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-vmwk96cqn",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The AlUla fleet",
+          "heading": "Choose your AlUla chauffeur class",
+          "description": "Every vehicle in our AlUla fleet is GPS tracked and detailed before each journey. AB maintains immaculate standards across every vehicle category for comfort in the desert climate.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "al-ula-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image2.jpg",
+            "imageAlt": "Standard Sedan luxury chauffeur service AlUla",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Avalon or similar [Confirm]",
+            "idealFor": "Ideal for: Efficient private business transfers",
+            "description": "A comfortable, climate controlled choice for individual business visitors moving between scheduled hotel appointments and regional corporate sites across AlUla.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image3.jpg",
+            "imageAlt": "Business Sedan chauffeur transport in AlUla",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate meetings and executives",
+            "description": "Refined executive travel delivering quiet comfort, rear seat climate adjustment and discreet driving for professional agendas throughout the AlUla region.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image4.jpg",
+            "imageAlt": "First Class Sedan Mercedes S Class in AlUla",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP hospitality and protocol",
+            "description": "The flagship choice for state visits, dignitaries and luxury guests demanding superior sound insulation, acoustic privacy and smooth ride dynamics in AlUla.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image5.jpg",
+            "imageAlt": "Executive SUV Cadillac Escalade chauffeur service AlUla",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Spacious travel across desert",
+            "description": "Generous cabin proportions with elevated road visibility and superior luggage storage, built to handle longer desert itineraries comfortably.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image6.jpg",
+            "imageAlt": "Premium MPV Mercedes V Class chauffeur in AlUla",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Family groups and small teams",
+            "description": "Conference seating options and ample luggage capacity make this luxury MPV the premier choice for delegation groups and extended touring parties.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image7.jpg",
+            "imageAlt": "Executive Van event transportation in AlUla",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: Event crews and delegacy transport",
+            "description": "Spacious high ceiling transport designed for event production staff, touring delegations and group transfers operating across diverse project sites.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-u85n6cfu1",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across AlUla and beyond",
+          "description": "AB coordinates point to point transit, historical sightseeing and intercity transfers connecting north western hubs across Saudi Arabia.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "al-ula-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ULH to AlUla Old Town",
+            "description": "Direct transfer from the airport terminal to heritage hotels and cultural districts.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "ULH to Hegra",
+            "description": "Private airport reception directly onward to the UNESCO World Heritage visitor gates.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-3",
+            "icon": "Clock",
+            "tag": "City",
+            "title": "AlUla to Maraya",
+            "description": "Luxury evening transport to the concert hall and exhibition grounds in Ashar Valley.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "AlUla to Madinah",
+            "description": "Long distance highway transfer connecting the heritage valley with the holy city.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/al-ula/routes/al-ula-to-medina",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-5",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "AlUla to Tabuk",
+            "description": "Northern corridor executive transfer serving corporate and government itineraries.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-jrny-6",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "AlUla to Hegra and heritage sites [Confirm]",
+            "description": "Full day historical circuit covering primary archaeological landmarks across the region.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-co11vifi6",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in AlUla",
+          "heading": "One partner for every movement in AlUla",
+          "description": "AB coordinates ground fleet operations for corporate travellers, production organisers and international touring partners across the entire valley."
+        },
+        "items": [
+          {
+            "id": "al-ula-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in AlUla",
+            "description": "Book managed protocol travel through Chauffeur & VIP in AlUla.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in AlUla",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-svc-2",
+            "icon": "Users",
+            "title": "Event Transportation in AlUla",
+            "description": "Organise festival and production fleets through Event Transportation in AlUla.",
+            "actions": [
+              {
+                "label": "Event Transportation in AlUla",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "al-ula-svc-3",
+            "icon": "Map",
+            "title": "Tourism Transportation in AlUla",
+            "description": "Coordinate heritage site excursions through Tourism Transportation in AlUla.",
+            "actions": [
+              {
+                "label": "Tourism Transportation in AlUla",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-ctiddd8of",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH)",
+          "description": "Arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH) is straightforward with arranged chauffeur reception. AB monitors regional and international flights so pickup schedules match real arrival times. Your dedicated driver waits inside the arrivals area holding a personalized digital name board. Chauffeurs assist with luggage transfer before escorting passengers to their air-conditioned vehicle. Collection happens at the terminal meeting point [Confirm]. The ULH airport transfer service includes a free waiting time [Confirm] to allow comfortable customs clearance and baggage collection.",
+          "items": [
+            {
+              "id": "al-ula-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival"
+            },
+            {
+              "id": "al-ula-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal"
+            },
+            {
+              "id": "al-ula-apt-b-3",
+              "icon": "Clock",
+              "heading": "ULH to AlUla Old Town",
+              "description": "[Confirm] minutes"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-al-ula-images/image1.jpg",
+          "backgroundAlt": "Arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH)"
+        }
+      },
+      {
+        "id": "sec-1794311538046-nhqvs5b3b",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-q1olhpxmc",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in AlUla",
+          "description": "AB maintains extensive operational reach throughout the oasis valley, supporting cultural institutions, hospitality resorts, commercial hubs and government projects. Professional drivers navigate remote canyon locations, desert pavilions and historic districts with complete route familiarity.",
+          "items": [
+            {
+              "id": "al-ula-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business",
+              "description": "Royal Commission for AlUla Headquarters · AlUla Innovation Hub · Ashar Commercial Centre"
+            },
+            {
+              "id": "al-ula-cov-2",
+              "icon": "Users",
+              "heading": "Events and conferences",
+              "description": "Maraya Concert Hall · Ashar Valley Conference Pavilion · AlUla Cultural Oasis Venues"
+            },
+            {
+              "id": "al-ula-cov-3",
+              "icon": "Crown",
+              "heading": "Heritage and leisure",
+              "description": "Hegra Archaeological Site · AlUla Old Town · Dadan and Jabal Ikmah"
+            },
+            {
+              "id": "al-ula-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "AlUla Governorate Offices · Prince Abdulmajeed bin Abdulaziz International Airport (ULH) Logistics Area · Ashar Valley Project Development Zone"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in AlUla"
+        }
+      },
+      {
+        "id": "sec-1794311538046-ofy8znn8l",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from AlUla",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538046-u5fx695sr",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Centrally managed operations serving AlUla",
+          "description": "AB coordinates ground transport across AlUla through active fleet deployment directed by central regional operations. Our 24/7 central dispatch tracks vehicle statuses continuously, providing seamless chauffeur coordination without requiring a physical customer office locally.",
+          "items": [
+            {
+              "id": "al-ula-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters and 24/7 dispatch [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "al-ula-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538046-red1c6ll8",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in AlUla: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538046-acksh9zn0",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in AlUla.",
+          "description": "Secure executive ground transport and private driver services tailored to your itinerary. Reserve professional chauffeur service AlUla today by contacting 24/7 central dispatch at +966 58 111 8720.",
+          "subheading": "Reserve your private transport",
+          "subdescription": "Confirm individual vehicle transfers or complete event fleet coordination across Saudi Arabia."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

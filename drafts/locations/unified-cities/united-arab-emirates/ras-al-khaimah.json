@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "united-arab-emirates/ras-al-khaimah",
+  "countrySlug": "united-arab-emirates",
+  "citySlug": "ras-al-khaimah",
+  "path": "/locations/united-arab-emirates/ras-al-khaimah",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for ras-al-khaimah (united-arab-emirates)",
+  "exportedAt": "2026-11-10T12:32:14.457Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310003248-ybn6i30wk",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN RAS AL KHAIMAH",
+          "title": "Ras Al Khaimah",
+          "description": "From the peaks of Jebel Jais to the luxury island resorts of Al Marjan, Ras Al Khaimah is the UAE's premier nature and luxury destination. AB pairs dramatic mountain views with chauffeur-driven comfort for delegations, tours, and transfers.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Ras Al Khaimah International (RKT)",
+          "dropoffDefault": "Al Marjan Island",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310003248-nieg6sauz",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE RAS AL KHAIMAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003248-lrl2qvxad",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Ras Al Khaimah and beyond"
+        },
+        "items": [
+          {
+            "id": "rkt-marjan",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "RKT to Al Marjan Island",
+            "titleAr": "من مطار رأس الخيمة إلى جزيرة المرجان",
+            "price": "From AED 260",
+            "priceAr": "ابتداءً من 260 درهم",
+            "pickup": "Ras Al Khaimah Airport (RKT)",
+            "dropoff": "Al Marjan Island"
+          },
+          {
+            "id": "dxb-rak",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Ras Al Khaimah Luxury Resorts",
+            "titleAr": "من مطار دبي إلى منتجعات رأس الخيمة الفاخرة",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Ras Al Khaimah"
+          },
+          {
+            "id": "rak-jais",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Ras Al Khaimah to Jebel Jais Peak",
+            "titleAr": "من رأس الخيمة إلى قمة جبل جيس",
+            "price": "From AED 450",
+            "priceAr": "ابتداءً من 450 درهم",
+            "pickup": "Ras Al Khaimah",
+            "dropoff": "Jebel Jais"
+          },
+          {
+            "id": "rak-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Ras Al Khaimah to Dubai Downtown",
+            "titleAr": "من رأس الخيمة إلى وسط مدينة دبي",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Ras Al Khaimah",
+            "dropoff": "Downtown Dubai"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003248-p780mhobt",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN RAS AL KHAIMAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003248-lhh55f4n7",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Ras Al Khaimah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310003248-ybn6i30wk",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN RAS AL KHAIMAH",
+          "title": "Ras Al Khaimah",
+          "description": "From the peaks of Jebel Jais to the luxury island resorts of Al Marjan, Ras Al Khaimah is the UAE's premier nature and luxury destination. AB pairs dramatic mountain views with chauffeur-driven comfort for delegations, tours, and transfers.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Ras Al Khaimah International (RKT)",
+          "dropoffDefault": "Al Marjan Island",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310003248-nieg6sauz",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE RAS AL KHAIMAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003248-lrl2qvxad",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Ras Al Khaimah and beyond"
+        },
+        "items": [
+          {
+            "id": "rkt-marjan",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "RKT to Al Marjan Island",
+            "titleAr": "من مطار رأس الخيمة إلى جزيرة المرجان",
+            "price": "From AED 260",
+            "priceAr": "ابتداءً من 260 درهم",
+            "pickup": "Ras Al Khaimah Airport (RKT)",
+            "dropoff": "Al Marjan Island"
+          },
+          {
+            "id": "dxb-rak",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Ras Al Khaimah Luxury Resorts",
+            "titleAr": "من مطار دبي إلى منتجعات رأس الخيمة الفاخرة",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Ras Al Khaimah"
+          },
+          {
+            "id": "rak-jais",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Ras Al Khaimah to Jebel Jais Peak",
+            "titleAr": "من رأس الخيمة إلى قمة جبل جيس",
+            "price": "From AED 450",
+            "priceAr": "ابتداءً من 450 درهم",
+            "pickup": "Ras Al Khaimah",
+            "dropoff": "Jebel Jais"
+          },
+          {
+            "id": "rak-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Ras Al Khaimah to Dubai Downtown",
+            "titleAr": "من رأس الخيمة إلى وسط مدينة دبي",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Ras Al Khaimah",
+            "dropoff": "Downtown Dubai"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003248-p780mhobt",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN RAS AL KHAIMAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003248-lhh55f4n7",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Ras Al Khaimah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310003249-bqnp3t0s6",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في رأس الخيمة",
+          "title": "رأس الخيمة",
+          "description": "من قمم جبل جيس الشاهقة إلى منتجعات جزيرة المرجان الفاخرة، تمثل رأس الخيمة وجهة الطبيعة والاستجمام الأولى في الإمارات. تقدم إيه بي ليمو رحلات فاخرة بين دبي ورأس الخيمة مع خدمة سائق من الطراز الأول.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Ras Al Khaimah International (RKT)",
+          "dropoffDefault": "Al Marjan Island",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1611479853417-80d5b7869ddf?q=80&w=1134&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310003249-fv4ldoa0p",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول رأس الخيمة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003249-37vumt7rc",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء رأس الخيمة وخارجها"
+        },
+        "items": [
+          {
+            "id": "rkt-marjan",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "RKT to Al Marjan Island",
+            "titleAr": "من مطار رأس الخيمة إلى جزيرة المرجان",
+            "price": "From AED 260",
+            "priceAr": "ابتداءً من 260 درهم",
+            "pickup": "Ras Al Khaimah Airport (RKT)",
+            "dropoff": "Al Marjan Island"
+          },
+          {
+            "id": "dxb-rak",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Ras Al Khaimah Luxury Resorts",
+            "titleAr": "من مطار دبي إلى منتجعات رأس الخيمة الفاخرة",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Ras Al Khaimah"
+          },
+          {
+            "id": "rak-jais",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Ras Al Khaimah to Jebel Jais Peak",
+            "titleAr": "من رأس الخيمة إلى قمة جبل جيس",
+            "price": "From AED 450",
+            "priceAr": "ابتداءً من 450 درهم",
+            "pickup": "Ras Al Khaimah",
+            "dropoff": "Jebel Jais"
+          },
+          {
+            "id": "rak-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Ras Al Khaimah to Dubai Downtown",
+            "titleAr": "من رأس الخيمة إلى وسط مدينة دبي",
+            "price": "From AED 550",
+            "priceAr": "ابتداءً من 550 درهم",
+            "pickup": "Ras Al Khaimah",
+            "dropoff": "Downtown Dubai"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003249-bozcswo1v",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في رأس الخيمة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310003249-oxdyq82g9",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في رأس الخيمة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

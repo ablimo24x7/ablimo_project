@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "qatar/al-wakrah",
+  "countrySlug": "qatar",
+  "citySlug": "al-wakrah",
+  "path": "/locations/qatar/al-wakrah",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for al-wakrah (qatar)",
+  "exportedAt": "2026-11-10T12:32:14.442Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310005716-c3ibhd9ms",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL WAKRAH",
+          "title": "Al Wakrah",
+          "description": "Just south of Doha, Al Wakrah combines its historic fishing souq and beach promenade with Al Janoub Stadium and rapid industrial connectivity. AB provides executive chauffeur service to Hamad International Airport and Mesaieed.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "Souq Al Wakrah",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-al-wakrah-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005716-g498j6cmw",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL WAKRAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005716-gk7ydk6ox",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Wakrah and beyond"
+        },
+        "items": [
+          {
+            "id": "doh-wakrah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Souq Al Wakrah Waterfront",
+            "titleAr": "من مطار حمد الدولي إلى واجهة سوق الوكرة",
+            "price": "From QAR 190",
+            "priceAr": "ابتداءً من 190 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Souq Al Wakrah"
+          },
+          {
+            "id": "wakrah-janoub",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Wakrah to Al Janoub Stadium",
+            "titleAr": "من الوكرة إلى استاد الجنوب",
+            "price": "From QAR 150",
+            "priceAr": "ابتداءً من 150 ر.ق",
+            "pickup": "Al Wakrah",
+            "dropoff": "Al Janoub Stadium"
+          },
+          {
+            "id": "wakrah-westbay",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Wakrah to West Bay Doha",
+            "titleAr": "من الوكرة إلى الخليج الغربي بالدوحة",
+            "price": "From QAR 220",
+            "priceAr": "ابتداءً من 220 ر.ق",
+            "pickup": "Al Wakrah",
+            "dropoff": "West Bay"
+          },
+          {
+            "id": "wakrah-mesaieed",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Wakrah to Mesaieed Industrial City",
+            "titleAr": "من الوكرة إلى مدينة مسيعيد الصناعية",
+            "price": "From QAR 250",
+            "priceAr": "ابتداءً من 250 ر.ق",
+            "pickup": "Al Wakrah",
+            "dropoff": "Mesaieed Industrial City"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005716-saaofn0k6",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL WAKRAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005716-5bdf96a3o",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Wakrah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310005716-c3ibhd9ms",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL WAKRAH",
+          "title": "Al Wakrah",
+          "description": "Just south of Doha, Al Wakrah combines its historic fishing souq and beach promenade with Al Janoub Stadium and rapid industrial connectivity. AB provides executive chauffeur service to Hamad International Airport and Mesaieed.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "Souq Al Wakrah",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-al-wakrah-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005716-g498j6cmw",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL WAKRAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005716-gk7ydk6ox",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Wakrah and beyond"
+        },
+        "items": [
+          {
+            "id": "doh-wakrah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Souq Al Wakrah Waterfront",
+            "titleAr": "من مطار حمد الدولي إلى واجهة سوق الوكرة",
+            "price": "From QAR 190",
+            "priceAr": "ابتداءً من 190 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Souq Al Wakrah"
+          },
+          {
+            "id": "wakrah-janoub",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Wakrah to Al Janoub Stadium",
+            "titleAr": "من الوكرة إلى استاد الجنوب",
+            "price": "From QAR 150",
+            "priceAr": "ابتداءً من 150 ر.ق",
+            "pickup": "Al Wakrah",
+            "dropoff": "Al Janoub Stadium"
+          },
+          {
+            "id": "wakrah-westbay",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Wakrah to West Bay Doha",
+            "titleAr": "من الوكرة إلى الخليج الغربي بالدوحة",
+            "price": "From QAR 220",
+            "priceAr": "ابتداءً من 220 ر.ق",
+            "pickup": "Al Wakrah",
+            "dropoff": "West Bay"
+          },
+          {
+            "id": "wakrah-mesaieed",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Wakrah to Mesaieed Industrial City",
+            "titleAr": "من الوكرة إلى مدينة مسيعيد الصناعية",
+            "price": "From QAR 250",
+            "priceAr": "ابتداءً من 250 ر.ق",
+            "pickup": "Al Wakrah",
+            "dropoff": "Mesaieed Industrial City"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005716-saaofn0k6",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL WAKRAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005716-5bdf96a3o",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Wakrah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310005716-evrhn7w5i",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الوكرة",
+          "title": "الوكرة",
+          "description": "جنوب الدوحة مباشرة، تجمع الوكرة بين سوقها التراثي وشاطئها الجميل واستاد الجنوب الأيقوني وقربها من المناطق الصناعية. توفر إيه بي ليمو خدمات نقل تنفيذي إلى مطار حمد الدولي ومسيعيد.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "Souq Al Wakrah",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-al-wakrah-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005716-cq6ok6ifv",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الوكرة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005716-8mgtmo9n9",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الوكرة وخارجها"
+        },
+        "items": [
+          {
+            "id": "doh-wakrah",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Souq Al Wakrah Waterfront",
+            "titleAr": "من مطار حمد الدولي إلى واجهة سوق الوكرة",
+            "price": "From QAR 190",
+            "priceAr": "ابتداءً من 190 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Souq Al Wakrah"
+          },
+          {
+            "id": "wakrah-janoub",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Wakrah to Al Janoub Stadium",
+            "titleAr": "من الوكرة إلى استاد الجنوب",
+            "price": "From QAR 150",
+            "priceAr": "ابتداءً من 150 ر.ق",
+            "pickup": "Al Wakrah",
+            "dropoff": "Al Janoub Stadium"
+          },
+          {
+            "id": "wakrah-westbay",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Wakrah to West Bay Doha",
+            "titleAr": "من الوكرة إلى الخليج الغربي بالدوحة",
+            "price": "From QAR 220",
+            "priceAr": "ابتداءً من 220 ر.ق",
+            "pickup": "Al Wakrah",
+            "dropoff": "West Bay"
+          },
+          {
+            "id": "wakrah-mesaieed",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Wakrah to Mesaieed Industrial City",
+            "titleAr": "من الوكرة إلى مدينة مسيعيد الصناعية",
+            "price": "From QAR 250",
+            "priceAr": "ابتداءً من 250 ر.ق",
+            "pickup": "Al Wakrah",
+            "dropoff": "Mesaieed Industrial City"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005716-stexjvx2h",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الوكرة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005716-qswui27t9",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الوكرة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

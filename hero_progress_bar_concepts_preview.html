@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Progress Bar Concepts - Chauffeur Brand UI</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              goldLight: '#F3E5AB',
+              accent: '#3B82F6',
+              accentGlowing: '#60A5FA',
+              dark: '#0B0F17',
+              surface: '#161C28',
+              surfaceLight: '#222A3B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Custom Scrollbar for horizontal chips */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Subtle glow effects */
+    .glow-dot {
+      box-shadow: 0 0 10px #3B82F6, 0 0 20px #3B82F6;
+    }
+    
+    .glow-gold {
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+    }
+
+    /* Dynamic circular progress ring */
+    .circle-progress {
+      transition: stroke-dashoffset 50ms linear;
+    }
+
+    /* Edge progress transition */
+    .journey-fill {
+      transition: width 50ms linear;
+    }
+
+    /* Smooth frame transitions for responsive preview container */
+    .viewport-frame {
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- TOP APP HEADER -->
+  <header class="bg-slate-900/90 border-b border-slate-800 sticky top-0 z-50 backdrop-blur-md px-4 py-3">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-200 flex items-center justify-center text-slate-950 font-bold">
+          <i class="fa-solid me-0.5 fa-car-side text-xs"></i>
+        </div>
+        <div>
+          <h1 class="text-base font-bold text-white tracking-wide">Hero Slider Progress Concepts</h1>
+          <p class="text-xs text-slate-400">Luxury Chauffeur Service — Interactive Prototype</p>
+        </div>
+      </div>
+
+      <!-- VIEWPORT SWITCHER -->
+      <div class="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs font-medium">
+        <button id="btn-mobile" onclick="setViewport('mobile')" class="px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 text-slate-400 hover:text-white">
+          <i class="fa-solid fa-mobile-screen-button"></i> Mobile <span class="text-[10px] text-slate-500">375px</span>
+        </button>
+        <button id="btn-tablet" onclick="setViewport('tablet')" class="px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 text-slate-400 hover:text-white">
+          <i class="fa-solid fa-tablet-screen-button"></i> Tablet <span class="text-[10px] text-slate-500">768px</span>
+        </button>
+        <button id="btn-desktop" onclick="setViewport('desktop')" class="px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 text-slate-400 hover:text-white">
+          <i class="fa-solid fa-laptop"></i> Desktop <span class="text-[10px] text-slate-500">100%</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 flex flex-col lg:flex-row gap-6">
+
+    <!-- LEFT SIDEBAR: CONCEPT SELECTION & EXPLANATION -->
+    <aside class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-3">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400 px-1">Select Concept UI</h2>
+
+      <div class="space-y-2" id="concept-buttons">
+        <!-- Recommended Hybrid Button -->
+        <button onclick="selectConcept('hybrid')" id="concept-btn-hybrid" class="w-full text-left p-3 rounded-xl border border-amber-500/50 bg-amber-500/10 hover:bg-amber-500/20 transition relative group">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wide flex items-center gap-1.5">
+              <i class="fa-solid fa-star text-amber-400"></i> Recommended: 1 + 2
+            </span>
+            <span class="text-[10px] bg-amber-500 text-slate-950 font-extrabold px-1.5 py-0.5 rounded">HYBRID</span>
+          </div>
+          <p class="text-sm font-semibold text-white">Journey Line + Countdown Ring</p>
+          <p class="text-xs text-slate-400 mt-1 line-clamp-2">Hero edge fill + SVG timer ring around play/pause + 03/07 counter. Cleanest & most premium.</p>
+        </button>
+
+        <!-- Concept 1 -->
+        <button onclick="selectConcept(1)" id="concept-btn-1" class="w-full text-left p-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 transition">
+          <div class="flex items-center justify-between mb-0.5">
+            <span class="text-xs font-bold text-blue-400">Concept 1</span>
+            <span class="text-[10px] text-slate-400">Minimalist</span>
+          </div>
+          <p class="text-sm font-semibold text-white">Journey Line on Hero Edge</p>
+          <p class="text-xs text-slate-400 mt-0.5">Top-pinned 7-segment hairline with glowing vehicle dot.</p>
+        </button>
+
+        <!-- Concept 2 -->
+        <button onclick="selectConcept(2)" id="concept-btn-2" class="w-full text-left p-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 transition">
+          <div class="flex items-center justify-between mb-0.5">
+            <span class="text-xs font-bold text-blue-400">Concept 2</span>
+            <span class="text-[10px] text-slate-400">Control-focused</span>
+          </div>
+          <p class="text-sm font-semibold text-white">Circular Countdown Ring</p>
+          <p class="text-xs text-slate-400 mt-0.5">SVG ring wrapping play/pause button + numeric index.</p>
+        </button>
+
+        <!-- Concept 3 -->
+        <button onclick="selectConcept(3)" id="concept-btn-3" class="w-full text-left p-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 transition">
+          <div class="flex items-center justify-between mb-0.5">
+            <span class="text-xs font-bold text-blue-400">Concept 3</span>
+            <span class="text-[10px] text-slate-400">Rich Media</span>
+          </div>
+          <p class="text-sm font-semibold text-white">Instagram-Story Chips</p>
+          <p class="text-xs text-slate-400 mt-0.5">Horizontal thumbnail scroll-row with story ring progress.</p>
+        </button>
+
+        <!-- Concept 4 -->
+        <button onclick="selectConcept(4)" id="concept-btn-4" class="w-full text-left p-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 transition">
+          <div class="flex items-center justify-between mb-0.5">
+            <span class="text-xs font-bold text-blue-400">Concept 4</span>
+            <span class="text-[10px] text-slate-400">Editorial</span>
+          </div>
+          <p class="text-sm font-semibold text-white">Editorial Index Numbers</p>
+          <p class="text-xs text-slate-400 mt-0.5">Large luxury 01–07 typography with underline progress.</p>
+        </button>
+
+        <!-- Concept 5 -->
+        <button onclick="selectConcept(5)" id="concept-btn-5" class="w-full text-left p-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 transition">
+          <div class="flex items-center justify-between mb-0.5">
+            <span class="text-xs font-bold text-blue-400">Concept 5</span>
+            <span class="text-[10px] text-slate-400">Fluid Motion</span>
+          </div>
+          <p class="text-sm font-semibold text-white">Morphing Accent Pill</p>
+          <p class="text-xs text-slate-400 mt-0.5">Sliding active pill with internal timer fill indicator.</p>
+        </button>
+
+        <!-- Concept 6 -->
+        <button onclick="selectConcept(6)" id="concept-btn-6" class="w-full text-left p-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 transition">
+          <div class="flex items-center justify-between mb-0.5">
+            <span class="text-xs font-bold text-blue-400">Concept 6</span>
+            <span class="text-[10px] text-slate-400">Route Map</span>
+          </div>
+          <p class="text-sm font-semibold text-white">Dots-as-Stops Rail</p>
+          <p class="text-xs text-slate-400 mt-0.5">7 waypoint nodes connected by glowing travel segments.</p>
+        </button>
+      </div>
+
+      <!-- TIMER CONTROLS -->
+      <div class="mt-2 p-3 bg-slate-900/80 border border-slate-800 rounded-xl flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <button id="global-play-btn" onclick="togglePlay()" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center transition">
+            <i id="global-play-icon" class="fa-solid fa-pause text-xs"></i>
+          </button>
+          <div>
+            <span class="text-xs font-medium text-slate-300 block">Autoplay Timer</span>
+            <span class="text-[10px] text-slate-500" id="speed-label">Duration: 6.5s / slide</span>
+          </div>
+        </div>
+        <button onclick="restartTimer()" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded border border-slate-800">
+          <i class="fa-solid fa-rotate-right mr-1"></i>Reset
+        </button>
+      </div>
+    </aside>
+
+    <!-- RIGHT: INTERACTIVE HERO PREVIEW CONTAINER -->
+    <section class="flex-1 flex flex-col items-center justify-start overflow-x-auto min-h-[640px]">
+      
+      <!-- FRAME CONTAINER -->
+      <div id="viewport-wrapper" class="viewport-frame w-full max-w-[375px] bg-slate-900 rounded-2xl border border-slate-800 shadow-2xl flex flex-col overflow-hidden relative transition-all">
+        
+        <!-- DEVICE BAR (for mobile/tablet simulation frame look) -->
+        <div id="device-bar" class="bg-slate-950 px-4 py-2 border-b border-slate-800/80 flex items-center justify-between text-slate-400 text-xs">
+          <span class="text-[11px] font-mono" id="device-title">iPhone 14 / Mobile View (375px)</span>
+          <div class="flex items-center gap-1.5 text-[10px] text-slate-500">
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-battery-full"></i>
+          </div>
+        </div>
+
+        <!-- HERO SECTION SIMULATOR CONTAINER -->
+        <div id="hero-section" class="relative flex-1 flex flex-col justify-between bg-slate-950 overflow-hidden min-h-[560px] select-none">
+
+          <!-- 1. HERO TOP EDGE PROGRESS BAR (Used in Concept 1 & Hybrid) -->
+          <div id="edge-progress-bar" class="absolute top-0 left-0 w-full z-40 hidden">
+            <!-- 7 Segments -->
+            <div class="w-full flex h-1 bg-slate-900/80 backdrop-blur-sm">
+              <div class="flex-1 border-r border-slate-950/60 relative overflow-hidden bg-slate-800/40">
+                <div id="edge-seg-0" class="h-full bg-blue-500 journey-fill w-0"></div>
+              </div>
+              <div class="flex-1 border-r border-slate-950/60 relative overflow-hidden bg-slate-800/40">
+                <div id="edge-seg-1" class="h-full bg-blue-500 journey-fill w-0"></div>
+              </div>
+              <div class="flex-1 border-r border-slate-950/60 relative overflow-hidden bg-slate-800/40">
+                <div id="edge-seg-2" class="h-full bg-blue-500 journey-fill w-0"></div>
+              </div>
+              <div class="flex-1 border-r border-slate-950/60 relative overflow-hidden bg-slate-800/40">
+                <div id="edge-seg-3" class="h-full bg-blue-500 journey-fill w-0"></div>
+              </div>
+              <div class="flex-1 border-r border-slate-950/60 relative overflow-hidden bg-slate-800/40">
+                <div id="edge-seg-4" class="h-full bg-blue-500 journey-fill w-0"></div>
+              </div>
+              <div class="flex-1 border-r border-slate-950/60 relative overflow-hidden bg-slate-800/40">
+                <div id="edge-seg-5" class="h-full bg-blue-500 journey-fill w-0"></div>
+              </div>
+              <div class="flex-1 relative overflow-hidden bg-slate-800/40">
+                <div id="edge-seg-6" class="h-full bg-blue-500 journey-fill w-0"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HERO BACKGROUND IMAGE & GRADIENT OVERLAY -->
+          <div class="absolute inset-0 z-0">
+            <img id="hero-bg-img" src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover transition-opacity duration-700 brightness-[0.45]" alt="Chauffeur Luxury Car">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/60"></div>
+          </div>
+
+          <!-- HERO TOP NAV HEADER -->
+          <div class="relative z-10 px-5 pt-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="font-serif italic text-lg font-bold text-amber-400 tracking-wider">VELOCITY</span>
+              <span class="text-[9px] uppercase tracking-widest text-slate-400 border-l border-slate-700 pl-2">Private Fleet</span>
+            </div>
+            <button class="w-8 h-8 rounded-full bg-slate-900/60 border border-slate-700/60 text-white flex items-center justify-center">
+              <i class="fa-solid fa-bars text-xs"></i>
+            </button>
+          </div>
+
+          <!-- HERO MAIN CONTENT (DESTINATION DETAIL) -->
+          <div class="relative z-10 px-5 my-auto py-6">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[11px] font-medium mb-3">
+              <i class="fa-solid fa-location-dot text-[10px]"></i>
+              <span id="slide-subtitle">Exclusive Airport Transit</span>
+            </div>
+            <h2 id="slide-title" class="font-serif text-3xl font-bold text-white tracking-tight leading-tight">
+              Zurich Airport to St. Moritz
+            </h2>
+            <p id="slide-desc" class="text-xs text-slate-300 mt-2 leading-relaxed max-w-md">
+              Seamless alpine transfer in our Mercedes Maybach S-Class with dedicated flight tracking.
+            </p>
+
+            <div class="mt-5 flex items-center gap-3">
+              <button class="px-4 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-semibold text-xs tracking-wide shadow-lg hover:bg-amber-400 transition flex items-center gap-2">
+                <span>Reserve Route</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+              <button class="px-4 py-2.5 rounded-xl bg-slate-900/70 border border-slate-700 text-white font-medium text-xs hover:bg-slate-800 transition">
+                View Fleet
+              </button>
+            </div>
+          </div>
+
+          <!-- HERO BOTTOM NAVIGATION & PROGRESS UI (DYNAMIC CONCEPTS) -->
+          <div class="relative z-20 px-5 pb-5 pt-2 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent">
+
+            <!-- CONCEPT SPECIFIC IMPLEMENTATION RENDER TARGET -->
+            <div id="concept-render-area" class="w-full">
+              <!-- Dynamically populated by JS based on selected concept -->
+            </div>
+
+            <!-- COMMON SLIDER FOOTER CONTROLS -->
+            <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-800/80">
+              <div class="flex items-center gap-2">
+                
+                <!-- PAUSE/PLAY BUTTON WITH CIRCULAR RING WRAPPER (Concept 2 & Hybrid) -->
+                <div class="relative flex items-center justify-center">
+                  <!-- SVG Circle Progress Ring (Hidden by default unless Concept 2 or Hybrid) -->
+                  <svg id="circle-ring-svg" class="w-10 h-10 -rotate-90 hidden" viewBox="0 0 36 36">
+                    <path class="text-slate-800" stroke-width="2.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path id="circle-ring-path" class="text-blue-500 circle-progress" stroke-dasharray="100, 100" stroke-dashoffset="100" stroke-linecap="round" stroke-width="2.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+
+                  <button id="hero-play-pause-btn" onclick="togglePlay()" class="w-8 h-8 rounded-full bg-slate-900 border border-slate-700 text-slate-200 flex items-center justify-center hover:text-white hover:border-slate-500 transition z-10">
+                    <i id="hero-play-icon" class="fa-solid fa-pause text-xs"></i>
+                  </button>
+                </div>
+
+                <!-- INDEX COUNTER (e.g. 03 / 07) -->
+                <div class="text-xs font-mono tracking-wider ml-1" id="counter-display">
+                  <span id="curr-num" class="text-white font-bold">01</span>
+                  <span class="text-slate-600">/</span>
+                  <span class="text-slate-500 text-[10px]">07</span>
+                </div>
+              </div>
+
+              <!-- PREV / NEXT CHEVRONS -->
+              <div class="flex items-center gap-1.5">
+                <button onclick="prevSlide()" class="w-8 h-8 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:bg-slate-800 transition flex items-center justify-center">
+                  <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button onclick="nextSlide()" class="w-8 h-8 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:bg-slate-800 transition flex items-center justify-center">
+                  <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CONCEPT DETAIL SUMMARY CARD BELOW PREVIEW -->
+      <div class="w-full max-w-[768px] mt-4 p-4 bg-slate-900/80 border border-slate-800 rounded-xl">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400" id="detail-tag">Concept Breakdown</span>
+          <span class="text-xs text-blue-400 font-medium" id="detail-fit">Best For: Mobile & Tablet Efficiency</span>
+        </div>
+        <h3 class="text-base font-bold text-white" id="detail-title">Journey Line + Countdown Ring</h3>
+        <p class="text-xs text-slate-300 mt-1 leading-relaxed" id="detail-desc">
+          Combines the top-pinned segment hairline for continuous journey context with an Apple/YouTube style circular SVG ring around the pause button. Frees up city tabs to act purely as clean navigation buttons without progress clutter.
+        </p>
+        
+        <div class="grid grid-cols-3 gap-2 mt-3 pt-3 border-t border-slate-800/80 text-[11px]">
+          <div>
+            <span class="text-slate-500 block">Layout Cost</span>
+            <span class="text-emerald-400 font-semibold" id="detail-cost">Zero / Minimal</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">Brand Vibe</span>
+            <span class="text-amber-300 font-semibold" id="detail-vibe">Ultra-Luxury Chauffeur</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">Dev Effort</span>
+            <span class="text-blue-400 font-semibold" id="detail-effort">Low (No Dependencies)</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    // SLIDE DATA (7 Cities / Destinations)
+    const slides = [
+      {
+        city: "Zurich",
+        route: "Zurich to St. Moritz",
+        subtitle: "Alpine Executive Transit",
+        desc: "Seamless mountain journey in our Mercedes-Maybach S-Class with real-time flight telemetry.",
+        img: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        city: "Geneva",
+        route: "Geneva to Courchevel",
+        subtitle: "Private Jet Chauffeur",
+        desc: "Tarmac pick-up at Geneva GVA directly to your luxury ski chalet in 3 Valleys.",
+        img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        city: "Paris",
+        route: "Paris City to Le Bourget",
+        subtitle: "Fashion Week Direct",
+        desc: "Chauffeur on-demand between Paris boutiques, luxury hotels, and private aviation terminals.",
+        img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        city: "Milan",
+        route: "Milan to Lake Como",
+        subtitle: "Lombardy Grand Tour",
+        desc: "Relax in luxury massage seating from Malpensa to Bellagio waterfront villas.",
+        img: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        city: "London",
+        route: "Mayfair to Farnborough",
+        subtitle: "Financial Capital Express",
+        desc: "Discreet Range Rover AutoBiography transfers through Central London financial districts.",
+        img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        city: "Monaco",
+        route: "Nice Airport to Monte-Carlo",
+        subtitle: "Riviera Coastal Transfer",
+        desc: "Panoramic coastal transit with complimentary champagne and high-speed Wi-Fi.",
+        img: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        city: "Munich",
+        route: "Munich to Kitzbühel",
+        subtitle: "Bavarian Alpine Shuttle",
+        desc: "All-wheel-drive winterized fleet equipped for fast, smooth highway cruising.",
+        img: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop"
+      }
+    ];
+
+    // STATE VARIABLES
+    let currentSlide = 0;
+    let activeConcept = 'hybrid'; // Default: Recommended hybrid 1+2
+    let isPlaying = true;
+    let progressPercent = 0;
+    const DURATION = 6500; // 6.5s per slide
+    const INTERVAL_STEP = 50; // ms
+    let timerId = null;
+
+    // DOM ELEMENTS
+    const edgeProgressBar = document.getElementById('edge-progress-bar');
+    const circleRingSvg = document.getElementById('circle-ring-svg');
+    const circleRingPath = document.getElementById('circle-ring-path');
+    const conceptRenderArea = document.getElementById('concept-render-area');
+    const currNumEl = document.getElementById('curr-num');
+    const globalPlayIcon = document.getElementById('global-play-icon');
+    const heroPlayIcon = document.getElementById('hero-play-icon');
+
+    // INITIALIZATION
+    window.onload = function() {
+      selectConcept('hybrid');
+      startTimer();
+    };
+
+    // TIMER LOGIC
+    function startTimer() {
+      if (timerId) clearInterval(timerId);
+      timerId = setInterval(() => {
+        if (!isPlaying) return;
+
+        progressPercent += (INTERVAL_STEP / DURATION) * 100;
+        if (progressPercent >= 100) {
+          progressPercent = 0;
+          currentSlide = (currentSlide + 1) % slides.length;
+          updateSlideContent();
+        }
+        renderProgress();
+      }, INTERVAL_STEP);
+    }
+
+    function togglePlay() {
+      isPlaying = !isPlaying;
+      const iconClass = isPlaying ? 'fa-pause' : 'fa-play';
+      globalPlayIcon.className = `fa-solid ${iconClass} text-xs`;
+      heroPlayIcon.className = `fa-solid ${iconClass} text-xs`;
+    }
+
+    function restartTimer() {
+      progressPercent = 0;
+      currentSlide = 0;
+      updateSlideContent();
+      renderProgress();
+    }
+
+    function nextSlide() {
+      progressPercent = 0;
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlideContent();
+      renderProgress();
+    }
+
+    function prevSlide() {
+      progressPercent = 0;
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlideContent();
+      renderProgress();
+    }
+
+    function goToSlide(index) {
+      progressPercent = 0;
+      currentSlide = index;
+      updateSlideContent();
+      renderProgress();
+    }
+
+    // UPDATE TEXT & IMAGE CONTENT
+    function updateSlideContent() {
+      const slide = slides[currentSlide];
+      document.getElementById('hero-bg-img').src = slide.img;
+      document.getElementById('slide-title').innerText = slide.route;
+      document.getElementById('slide-subtitle').innerText = slide.subtitle;
+      document.getElementById('slide-desc').innerText = slide.desc;
+      currNumEl.innerText = String(currentSlide + 1).padStart(2, '0');
+      
+      // Re-render UI frame for active tabs if needed
+      updateActiveTabUI();
+    }
+
+    // RENDER PROGRESS ACROSS VARIOUS CONCEPTS
+    function renderProgress() {
+      const p = Math.min(progressPercent, 100);
+
+      // Edge Progress Hairline (Concept 1 & Hybrid)
+      slides.forEach((_, idx) => {
+        const seg = document.getElementById(`edge-seg-${idx}`);
+        if (seg) {
+          if (idx < currentSlide) {
+            seg.style.width = '100%';
+          } else if (idx === currentSlide) {
+            seg.style.width = `${p}%`;
+          } else {
+            seg.style.width = '0%';
+          }
+        }
+      });
+
+      // Circle Ring Progress (Concept 2 & Hybrid)
+      if (circleRingPath) {
+        // SVG circle perimeter is ~100 with stroke-dasharray="100, 100"
+        const offset = 100 - p;
+        circleRingPath.style.strokeDashoffset = offset;
+      }
+
+      // Concept 3: Story Ring
+      const storyRing = document.getElementById(`story-ring-${currentSlide}`);
+      if (storyRing) {
+        const offset = 100 - p;
+        storyRing.style.strokeDashoffset = offset;
+      }
+
+      // Concept 4: Editorial Underline Fill
+      const editLine = document.getElementById(`edit-line-${currentSlide}`);
+      if (editLine) {
+        editLine.style.width = `${p}%`;
+      }
+
+      // Concept 5: Morphing Pill Timer Fill
+      const pillFill = document.getElementById('pill-timer-fill');
+      if (pillFill) {
+        pillFill.style.width = `${p}%`;
+      }
+
+      // Concept 6: Route Stop Segment Fill
+      const routeFill = document.getElementById(`route-segment-${currentSlide}`);
+      if (routeFill) {
+        routeFill.style.width = `${p}%`;
+      }
+    }
+
+    // SELECT CONCEPT & RE-RENDER UI
+    function selectConcept(conceptId) {
+      activeConcept = conceptId;
+
+      // Update button highlights in sidebar
+      const allBtns = document.querySelectorAll('[id^="concept-btn-"]');
+      allBtns.forEach(b => {
+        b.classList.remove('border-amber-500', 'bg-amber-500/10', 'border-blue-500', 'bg-blue-500/10');
+        b.classList.add('border-slate-800', 'bg-slate-900/60');
+      });
+
+      const activeBtn = document.getElementById(`concept-btn-${conceptId}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('border-slate-800', 'bg-slate-900/60');
+        if (conceptId === 'hybrid') {
+          activeBtn.classList.add('border-amber-500', 'bg-amber-500/10');
+        } else {
+          activeBtn.classList.add('border-blue-500', 'bg-blue-500/10');
+        }
+      }
+
+      // Toggle Edge Hairline & Circle Ring Visibility
+      if (conceptId === 1 || conceptId === 'hybrid') {
+        edgeProgressBar.classList.remove('hidden');
+      } else {
+        edgeProgressBar.classList.add('hidden');
+      }
+
+      if (conceptId === 2 || conceptId === 'hybrid') {
+        circleRingSvg.classList.remove('hidden');
+      } else {
+        circleRingSvg.classList.add('hidden');
+      }
+
+      // Update Detail Card Data
+      updateDetailCard(conceptId);
+
+      // Render Tab Navigation Layout for the chosen concept
+      renderConceptLayout(conceptId);
+
+      // Trigger immediate update
+      updateSlideContent();
+      renderProgress();
+    }
+
+    // RENDER HTML FOR THE NAVIGATION TABS ACCORDING TO CONCEPT
+    function renderConceptLayout(conceptId) {
+      let html = '';
+
+      if (conceptId === 'hybrid' || conceptId === 1 || conceptId === 2) {
+        // Standard Tab Grid (Tabs are purely navigational, zero heavy progress clutter)
+        html = `
+          <div class="grid grid-cols-4 gap-1.5 text-center">
+            ${slides.slice(0, 4).map((s, idx) => `
+              <button onclick="goToSlide(${idx})" id="tab-btn-${idx}" class="py-2 px-1 rounded-lg text-xs font-medium transition border ${idx === currentSlide ? 'bg-blue-600/20 border-blue-500 text-white font-semibold' : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:text-slate-200'}">
+                ${s.city}
+              </button>
+            `).join('')}
+          </div>
+          <div class="grid grid-cols-3 gap-1.5 text-center mt-1.5">
+            ${slides.slice(4, 7).map((s, idx) => {
+              const realIdx = idx + 4;
+              return `
+                <button onclick="goToSlide(${realIdx})" id="tab-btn-${realIdx}" class="py-2 px-1 rounded-lg text-xs font-medium transition border ${realIdx === currentSlide ? 'bg-blue-600/20 border-blue-500 text-white font-semibold' : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:text-slate-200'}">
+                  ${s.city}
+                </button>
+              `;
+            }).join('')}
+          </div>
+        `;
+      } 
+      else if (conceptId === 3) {
+        // Instagram Stories Thumbnails Row
+        html = `
+          <div class="flex items-center gap-2.5 overflow-x-auto no-scrollbar py-1 px-1">
+            ${slides.map((s, idx) => `
+              <button onclick="goToSlide(${idx})" class="flex-shrink-0 flex flex-col items-center gap-1 group focus:outline-none">
+                <div class="relative w-12 h-12 flex items-center justify-center">
+                  <!-- Story SVG Ring -->
+                  <svg class="absolute inset-0 w-12 h-12 -rotate-90" viewBox="0 0 36 36">
+                    <path class="text-slate-800" stroke-width="2" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path id="story-ring-${idx}" class="${idx === currentSlide ? 'text-amber-400' : 'text-transparent'} circle-progress" stroke-dasharray="100, 100" stroke-dashoffset="${idx === currentSlide ? 100 : 0}" stroke-linecap="round" stroke-width="2.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <img src="${s.img}" class="w-9 h-9 rounded-full object-cover border border-slate-700 ${idx === currentSlide ? 'scale-105' : 'opacity-60'} transition">
+                </div>
+                <span class="text-[10px] font-medium ${idx === currentSlide ? 'text-amber-300 font-bold' : 'text-slate-400'}">${s.city}</span>
+              </button>
+            `).join('')}
+          </div>
+        `;
+      } 
+      else if (conceptId === 4) {
+        // Editorial Index Numbers (01 - 07 with big typography)
+        html = `
+          <div class="flex items-center justify-between gap-1 border-b border-slate-800 pb-2 overflow-x-auto no-scrollbar">
+            ${slides.map((s, idx) => `
+              <button onclick="goToSlide(${idx})" class="flex-1 min-w-[38px] flex flex-col items-center text-left transition group">
+                <span class="font-serif text-sm font-bold ${idx === currentSlide ? 'text-amber-400 scale-110' : 'text-slate-500 hover:text-slate-300'} transition-all">
+                  0${idx + 1}
+                </span>
+                <span class="text-[9px] uppercase tracking-wider font-semibold ${idx === currentSlide ? 'text-white' : 'text-slate-500'}">
+                  ${s.city.substring(0, 3)}
+                </span>
+                <div class="w-full h-0.5 bg-slate-800 mt-1 relative overflow-hidden rounded-full">
+                  <div id="edit-line-${idx}" class="h-full bg-amber-400 ${idx < currentSlide ? 'w-full' : idx === currentSlide ? 'w-0' : 'w-0'}"></div>
+                </div>
+              </button>
+            `).join('')}
+          </div>
+        `;
+      } 
+      else if (conceptId === 5) {
+        // Morphing Accent Pill (Single-row horizontal scrollable)
+        html = `
+          <div class="relative bg-slate-900/90 p-1 rounded-xl border border-slate-800 flex items-center overflow-x-auto no-scrollbar gap-1">
+            ${slides.map((s, idx) => `
+              <button onclick="goToSlide(${idx})" class="relative flex-1 min-w-[70px] py-1.5 text-center text-xs font-medium rounded-lg z-10 transition ${idx === currentSlide ? 'text-white font-bold' : 'text-slate-400 hover:text-slate-200'}">
+                ${s.city}
+                ${idx === currentSlide ? `
+                  <div class="absolute inset-0 bg-blue-600 rounded-lg -z-10 overflow-hidden shadow-md">
+                    <div id="pill-timer-fill" class="h-full bg-blue-400/50 w-0"></div>
+                  </div>
+                ` : ''}
+              </button>
+            `).join('')}
+          </div>
+        `;
+      } 
+      else if (conceptId === 6) {
+        // Dots-As-Stops Rail Map
+        html = `
+          <div class="px-2 py-2">
+            <div class="flex items-center justify-between relative">
+              <!-- Connecting Track Background -->
+              <div class="absolute top-1/2 left-3 right-3 h-0.5 bg-slate-800 -translate-y-1/2 z-0"></div>
+              
+              ${slides.map((s, idx) => `
+                <button onclick="goToSlide(${idx})" class="relative z-10 flex flex-col items-center group">
+                  <div class="w-5 h-5 rounded-full border-2 transition-all flex items-center justify-center ${idx < currentSlide ? 'bg-blue-500 border-blue-400 text-slate-950' : idx === currentSlide ? 'bg-blue-600 border-white ring-4 ring-blue-500/30 scale-125' : 'bg-slate-900 border-slate-700'}">
+                    ${idx < currentSlide ? '<i class="fa-solid fa-check text-[8px]"></i>' : ''}
+                    ${idx === currentSlide ? '<div class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>' : ''}
+                  </div>
+                  <span class="text-[9px] mt-1 font-medium ${idx === currentSlide ? 'text-blue-400 font-bold' : 'text-slate-500'}">${s.city.substring(0,3)}</span>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      conceptRenderArea.innerHTML = html;
+    }
+
+    function updateActiveTabUI() {
+      slides.forEach((_, idx) => {
+        const tabBtn = document.getElementById(`tab-btn-${idx}`);
+        if (tabBtn) {
+          if (idx === currentSlide) {
+            tabBtn.className = 'py-2 px-1 rounded-lg text-xs font-medium transition border bg-blue-600/20 border-blue-500 text-white font-semibold';
+          } else {
+            tabBtn.className = 'py-2 px-1 rounded-lg text-xs font-medium transition border bg-slate-900/60 border-slate-800 text-slate-400 hover:text-slate-200';
+          }
+        }
+      });
+    }
+
+    // UPDATE CARD DESCRIPTION DYNAMICALLY
+    function updateDetailCard(conceptId) {
+      const titleEl = document.getElementById('detail-title');
+      const descEl = document.getElementById('detail-desc');
+      const tagEl = document.getElementById('detail-tag');
+      const fitEl = document.getElementById('detail-fit');
+      const costEl = document.getElementById('detail-cost');
+      const vibeEl = document.getElementById('detail-vibe');
+      const effortEl = document.getElementById('detail-effort');
+
+      const details = {
+        'hybrid': {
+          tag: 'RECOMMENDED COMBO (1 + 2)',
+          fit: 'Mobile & Tablet Optimization',
+          title: 'Journey Line + Countdown Control Ring',
+          desc: ' Combines the top-pinned segment hairline for continuous journey context with an Apple/YouTube style circular SVG ring around the pause button. Frees up city tabs to act purely as clean navigation buttons without progress clutter.',
+          cost: 'Zero Layout Shift',
+          vibe: 'Ultra-Luxury Chauffeur',
+          effort: 'Low (0 Dependencies)'
+        },
+        1: {
+          tag: 'CONCEPT 1',
+          fit: 'All Breakpoints & Header Edges',
+          title: 'Journey Line on Hero\'s Edge',
+          desc: 'A hairline track pinned to the top edge of the hero section, split into 7 segments. The active segment fills left to right with a vehicle movement feel. Zero layout cost.',
+          cost: 'Zero Extra Space',
+          vibe: 'Modern Minimalist',
+          effort: 'Very Low CSS'
+        },
+        2: {
+          tag: 'CONCEPT 2',
+          fit: 'Controls-First Interfaces',
+          title: 'Circular Countdown Ring Around Pause',
+          desc: 'Wraps the pause/play toggle with an SVG stroke-dashoffset countdown ring (6.5s fill). Gives immediate visual indication of slide duration like luxury editorial video players.',
+          cost: 'Zero Extra Height',
+          vibe: 'Apple / Premium Media',
+          effort: 'Low SVG'
+        },
+        3: {
+          tag: 'CONCEPT 3',
+          fit: 'Mobile Media Experience',
+          title: 'Instagram-Stories Image Chips',
+          desc: 'Replaces plain text tabs on mobile with a horizontal scroll-snap row of city thumbnails. Active image gets an animated story ring.',
+          cost: 'High (Needs Photo Crops)',
+          vibe: 'Social & Rich Media',
+          effort: 'Medium (Image Assets)'
+        },
+        4: {
+          tag: 'CONCEPT 4',
+          fit: 'Typography-Focused Brands',
+          title: 'Editorial Index Numbers (01–07)',
+          desc: 'Large luxury index numbers where progress grows under/through the active number. Highly readable, elegant typography without heavy image requirements.',
+          cost: 'Low Vertical Height',
+          vibe: 'Luxury Editorial / Vogue',
+          effort: 'Low'
+        },
+        5: {
+          tag: 'CONCEPT 5',
+          fit: 'Single-Row Horizontal Nav',
+          title: 'Morphing Accent Pill',
+          desc: 'An active accent pill smoothly slides between tabs with internal background timer fill. Best when constrained to a single horizontal scroll line.',
+          cost: 'Requires Single Row',
+          vibe: 'Tech Luxury / App-Like',
+          effort: 'Medium (Framer/API)'
+        },
+        6: {
+          tag: 'CONCEPT 6',
+          fit: 'Travel & Route Visualizations',
+          title: 'Dots-as-Stops Route Map Rail',
+          desc: '7 waypoint dots connected by a luxury route line. Active dot pulses and active segment fills. Tells a direct "travel journey" story.',
+          cost: 'Moderate Grid Space',
+          vibe: 'Chauffeur Route Map',
+          effort: 'Low-Medium'
+        }
+      };
+
+      const d = details[conceptId];
+      if (d) {
+        tagEl.innerText = d.tag;
+        fitEl.innerText = d.fit;
+        titleEl.innerText = d.title;
+        descEl.innerText = d.desc;
+        costEl.innerText = d.cost;
+        vibeEl.innerText = d.vibe;
+        effortEl.innerText = d.effort;
+      }
+    }
+
+    // VIEWPORT RESPONSIVE PREVIEW CONTROLLER
+    function setViewport(mode) {
+      const wrapper = document.getElementById('viewport-wrapper');
+      const deviceTitle = document.getElementById('device-title');
+      const btnMobile = document.getElementById('btn-mobile');
+      const btnTablet = document.getElementById('btn-tablet');
+      const btnDesktop = document.getElementById('btn-desktop');
+
+      // Reset active states on viewport switcher
+      [btnMobile, btnTablet, btnDesktop].forEach(b => {
+        b.classList.remove('bg-blue-600', 'text-white');
+        b.classList.add('text-slate-400');
+      });
+
+      if (mode === 'mobile') {
+        wrapper.style.maxWidth = '375px';
+        deviceTitle.innerText = 'iPhone 14 / Mobile (375px)';
+        btnMobile.classList.add('bg-blue-600', 'text-white');
+      } else if (mode === 'tablet') {
+        wrapper.style.maxWidth = '768px';
+        deviceTitle.innerText = 'iPad Air / Tablet (768px)';
+        btnTablet.classList.add('bg-blue-600', 'text-white');
+      } else if (mode === 'desktop') {
+        wrapper.style.maxWidth = '100%';
+        deviceTitle.innerText = 'Desktop / Ultra Wide View (100%)';
+        btnDesktop.classList.add('bg-blue-600', 'text-white');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,469 @@
+{
+  "pageType": "service",
+  "slug": "intercity-transfers",
+  "title": "Intercity Transfers",
+  "subtitle": "Intercity chauffeur service UAE for seamless business travel",
+  "desc": "An intercity chauffeur service UAE provides managed point to point road travel across the emirates with professional chauffeurs and continuous flight tracking. Executive travellers secure punctual departures between major commercial centres, international airports and regional project offices through direct central dispatch.",
+  "heroImage": "/services/www.ab.limo-services-intercity-transfers-dubai-abu-dhabi-images/image1.jpg",
+  "breadcrumb": "Intercity Transfers",
+  "features": [],
+  "cardsHeading": "",
+  "cardsDesc": "",
+  "cards": [],
+  "sections": [],
+  "faqs": [
+    {
+      "q": "How does AB coordinate an intercity transfer between emirates?",
+      "a": "Every journey is logged through our central operations centre, where route managers verify live traffic conditions and assign qualified chauffeurs. Central dispatch monitors progress via live GPS tracking from origin departure to final destination arrival. Passengers receive driver details in advance, while executive assistants retain direct communication channels with dispatch teams throughout the transfer."
+    },
+    {
+      "q": "What vehicle categories are available for long distance transfers?",
+      "a": "Our fleet comprises premium executive sedans, spacious sports utility vehicles, executive MPVs and high capacity passenger vans. Each vehicle is equipped for highway comfort, maintaining strict interior climate standards and generous luggage capacity. Travel planners select vehicle specifications tailored to passenger numbers, luggage requirements and corporate protocol preferences via our fleet overview."
+    },
+    {
+      "q": "How are airport arrivals managed for onward intercity journeys?",
+      "a": "Chauffeurs track inbound commercial and private flights in real time to adapt to schedule revisions or gate delays automatically. Guests receive an inside terminal meet and greet service with personalised signage immediately upon clearing customs. Chauffeurs assist with luggage handling before escorting passengers to their waiting vehicle for prompt onward highway departure."
+    },
+    {
+      "q": "Can corporate clients establish centralised monthly billing?",
+      "a": "Organisations managing frequent business travel can establish a corporate account with AB to streamline travel administration. This framework consolidates multiple bookings across regional offices into a clear monthly invoice with custom cost centre coding. Approved accounts access agreed corporate service level agreements and prioritised dispatch allocation during peak calendar periods."
+    },
+    {
+      "q": "What safety and duty of care standards govern AB operations?",
+      "a": "AB enforces stringent duty of care measures across all managed transport services. Professional chauffeurs undergo background checks, defensive driving instruction and protocol training before deployment. Vehicles undergo routine mechanical safety checks and feature real time vehicle telemetry, allowing our central control room to verify speed compliance and travel progress continuously."
+    },
+    {
+      "q": "How does dispatch handle transfers across international borders or into partner countries?",
+      "a": "AB directly owns and operates fleets within Saudi Arabia, the UAE and Qatar under uniform operational standards. For journeys requiring service into Bahrain, Kuwait or Oman, travel desks coordinate transport through fully vetted regional partner networks. This structure maintains single point accountability, consistent communication standards and cohesive billing across multi country travel itineraries."
+    },
+    {
+      "q": "Can itineraries incorporate multiple stops or hourly standby during the journey?",
+      "a": "Itineraries can include interim stops for corporate meetings, site inspections or government delegations along any intercity corridor. Chauffeurs remain on standby as directed, adapting smoothly to evolving executive schedules and meeting overruns. Central dispatch adjusts journey tracking in real time, maintaining total driver coordination throughout complex multi leg agendas."
+    },
+    {
+      "q": "How far in advance should an intercity chauffeur service be booked?",
+      "a": "Advance booking is recommended to secure preferred vehicle classes during high volume business summits and regional trade exhibitions. However, our continuous 24/7 dispatch operation accepts short notice transfer requests subject to fleet availability in each hub. Bookings can be initiated online through our reservation portal or coordinated directly with regional dispatch desks."
+    },
+    {
+      "q": "Reserve executive ground transportation",
+      "a": "Coordinate regional highway transfers with direct dispatch support and tailored corporate billing solutions.\n\nRequest a proposal Talk to a planner"
+    }
+  ],
+  "ctaTitle": "",
+  "ctaDesc": "",
+  "ctaLabel": "",
+  "ctaHref": "",
+  "pageSections": [
+    {
+      "id": "sec-1794643749838-l9cuann5g",
+      "type": "hero",
+      "variant": "background-content",
+      "order": 0,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Intercity Ground Transportation",
+        "title": "Intercity chauffeur service UAE for seamless business travel",
+        "titleHighlight": "",
+        "description": "An intercity chauffeur service UAE provides managed point to point road travel across the emirates with professional chauffeurs and continuous flight tracking. Executive travellers secure punctual departures between major commercial centres, international airports and regional project offices through direct central dispatch."
+      },
+      "items": [
+        {
+          "label": "Request a proposal",
+          "href": "/contact",
+          "style": "primary",
+          "icon": "ArrowRight",
+          "iconPosition": "right"
+        },
+        {
+          "label": "Book a transfer",
+          "href": "/booking",
+          "style": "secondary",
+          "icon": "Car",
+          "iconPosition": "left"
+        },
+        {
+          "label": "All services →",
+          "href": "/services",
+          "style": "link",
+          "icon": "Route",
+          "iconPosition": "left"
+        }
+      ],
+      "settings": {
+        "minHeight": "85vh",
+        "overlayOpacity": 85,
+        "contentPosition": "left",
+        "buttonLayout": "row"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "/services/www.ab.limo-services-intercity-transfers-dubai-abu-dhabi-images/image1.jpg",
+        "padding": "none",
+        "border": false,
+        "textAlign": "left",
+        "overlayGradient": "default"
+      }
+    },
+    {
+      "id": "sec-1794643749838-83z8hraqb",
+      "type": "marquee",
+      "variant": "default",
+      "order": 1,
+      "enabled": true,
+      "content": {
+        "items": [
+          {
+            "id": "itm-1794643749838-5ha9omk9a",
+            "icon": "Radio",
+            "label": "24/7 Central Dispatch"
+          },
+          {
+            "id": "itm-1794643749838-o9q032b5z",
+            "icon": "Globe",
+            "label": "3 Countries with Direct Fleet"
+          },
+          {
+            "id": "itm-1794643749838-i9qrunqte",
+            "icon": "Plane",
+            "label": "8 Regional Airports Served"
+          },
+          {
+            "id": "itm-1794643749838-r1zjhn5f5",
+            "icon": "Shield",
+            "label": "Point-to-Point Borderless Transit"
+          },
+          {
+            "id": "itm-1794643749838-k4400jlc8",
+            "icon": "Navigation",
+            "label": "Real-Time Telemetry & Traffic Rerouting"
+          },
+          {
+            "id": "itm-1794643749838-r0o8p2cco",
+            "icon": "FileText",
+            "label": "Consolidated Corporate Accounts"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "speed": "normal",
+        "opacity": 90
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "sm",
+        "border": true
+      }
+    },
+    {
+      "id": "sec-1794643749838-wbtgbi0pu",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 2,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Operational Protocol",
+        "heading": "How we work",
+        "description": "Organisations requiring a reliable intercity chauffeur service UAE rely on structured ground transport protocols managed from a central operations hub. Every route pairs experienced chauffeurs with real time GPS tracking, unified regional account management and immediate dispatch capability across the Arabian Gulf.",
+        "items": [
+          {
+            "id": "itm-1794643749838-2tb4iwn63",
+            "icon": "Compass",
+            "heading": "Direct Corridor Navigation",
+            "description": "Direct non-stop road transit eliminating connection delays and multi-leg itineraries."
+          },
+          {
+            "id": "itm-1794643749838-vl49kldxm",
+            "icon": "Radio",
+            "heading": "24/7 Operations Supervision",
+            "description": "Continuous control room tracking from initial pickup to final destination arrival."
+          },
+          {
+            "id": "itm-1794643749838-m616sfi5q",
+            "icon": "Shield",
+            "heading": "Verified Duty of Care",
+            "description": "Strict mechanical inspections, commercial licensing, and protocol-trained chauffeurs."
+          }
+        ],
+        "actions": [
+          {
+            "label": "Request a Proposal",
+            "href": "/contact",
+            "style": "primary",
+            "icon": "ArrowRight"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "/services/www.ab.limo-services-intercity-transfers-dubai-abu-dhabi-images/image1.jpg",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749838-hurkcnz6s",
+      "type": "serviceCards",
+      "variant": "3-column",
+      "order": 3,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Service Capabilities",
+        "heading": "Built for intercity transfers",
+        "description": "Corporate travel demands consistency, complete route visibility and vehicle suitability across all regional jurisdictions."
+      },
+      "items": [
+        {
+          "id": "itm-1794643749838-2rwi7w31b",
+          "icon": "Route",
+          "title": "Point to point transfers",
+          "description": "Direct non stop transit connects headquarters, industrial zones and regional offices across emirate borders without vehicle transfers or interim delays.",
+          "actions": [
+            {
+              "label": "Explore Point-to-Point",
+              "href": "/contact",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1794643749838-5yhxe5qyz",
+          "icon": "Compass",
+          "title": "Popular routes",
+          "description": "A city to city transfer delivers executives directly between primary urban business districts with transparent logistics and verified routing.",
+          "actions": [
+            {
+              "label": "View Routes",
+              "href": "/services/intercity-transfers/dubai-abu-dhabi",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1794643749838-rwuq0t3d4",
+          "icon": "Plane",
+          "title": "Airport to city",
+          "description": "Inbound travellers receive flight tracking, terminal meet and greet arrivals and direct onward private intercity car transit to their destination.",
+          "actions": [
+            {
+              "label": "Airport Protocol",
+              "href": "/services/airport-transfers",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1794643749838-ibavemst4",
+          "icon": "Clock",
+          "title": "One way, return or hourly",
+          "description": "Choose single legs, same day returns or continuous standby with a dedicated long distance chauffeur for fluid executive agendas.",
+          "actions": [
+            {
+              "label": "Flexible Hire",
+              "href": "/contact",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "columns": "4",
+        "showHeader": true
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1794643749838-gjx03v96e",
+      "type": "mediaContent",
+      "variant": "media-right",
+      "order": 4,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Operational Workflow",
+        "heading": "Three stages, one accountable partner",
+        "description": "Coordinating corporate travel across regional borders follows a transparent operational sequence designed to maintain duty of care:",
+        "items": [
+          {
+            "id": "itm-1794643749838-j9i5ewy3w",
+            "icon": "FileText",
+            "heading": "1. Brief",
+            "description": "Submit passenger manifests, pickup windows, luggage requirements and special protocol details directly to our central booking coordinators."
+          },
+          {
+            "id": "itm-1794643749838-13nyz5l9j",
+            "icon": "MapPin",
+            "heading": "2. Plan",
+            "description": "Operations teams assign optimal vehicle categories, verify highway route clearances and schedule chauffeurs to meet pickup timing."
+          },
+          {
+            "id": "itm-1794643749838-5t9w8e383",
+            "icon": "Car",
+            "heading": "3. Operate",
+            "description": "Central dispatch monitors vehicle telemetry continuously, providing real time pickup updates and quiet travel to the final arrival point."
+          }
+        ],
+        "actions": [
+          {
+            "label": "Request a proposal",
+            "href": "/contact",
+            "style": "primary",
+            "icon": "ArrowRight"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "right",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "/services/www.ab.limo-services-intercity-transfers-dubai-abu-dhabi-images/image1.jpg",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1794643749838-z6yfig1fn",
+      "type": "faq",
+      "variant": "default",
+      "order": 5,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Questions",
+        "heading": "Frequently asked questions",
+        "description": "Operational details for intercity travel across the UAE and GCC.",
+        "items": [
+          {
+            "id": "itm-1794643749838-mw7ro2h9z",
+            "question": "How does AB coordinate an intercity transfer between emirates?",
+            "answer": "Every journey is logged through our central operations centre, where route managers verify live traffic conditions and assign qualified chauffeurs. Central dispatch monitors progress via live GPS tracking from origin departure to final destination arrival. Passengers receive driver details in advance, while executive assistants retain direct communication channels with dispatch teams throughout the transfer."
+          },
+          {
+            "id": "itm-1794643749838-h8q3k32lm",
+            "question": "What vehicle categories are available for long distance transfers?",
+            "answer": "Our fleet comprises premium executive sedans, spacious sports utility vehicles, executive MPVs and high capacity passenger vans. Each vehicle is equipped for highway comfort, maintaining strict interior climate standards and generous luggage capacity. Travel planners select vehicle specifications tailored to passenger numbers, luggage requirements and corporate protocol preferences via our fleet overview."
+          },
+          {
+            "id": "itm-1794643749838-uyg00o2xd",
+            "question": "How are airport arrivals managed for onward intercity journeys?",
+            "answer": "Chauffeurs track inbound commercial and private flights in real time to adapt to schedule revisions or gate delays automatically. Guests receive an inside terminal meet and greet service with personalised signage immediately upon clearing customs. Chauffeurs assist with luggage handling before escorting passengers to their waiting vehicle for prompt onward highway departure."
+          },
+          {
+            "id": "itm-1794643749838-nuf8e5rxu",
+            "question": "Can corporate clients establish centralised monthly billing?",
+            "answer": "Organisations managing frequent business travel can establish a corporate account with AB to streamline travel administration. This framework consolidates multiple bookings across regional offices into a clear monthly invoice with custom cost centre coding. Approved accounts access agreed corporate service level agreements and prioritised dispatch allocation during peak calendar periods."
+          },
+          {
+            "id": "itm-1794643749838-yd2m5ysze",
+            "question": "What safety and duty of care standards govern AB operations?",
+            "answer": "AB enforces stringent duty of care measures across all managed transport services. Professional chauffeurs undergo background checks, defensive driving instruction and protocol training before deployment. Vehicles undergo routine mechanical safety checks and feature real time vehicle telemetry, allowing our central control room to verify speed compliance and travel progress continuously."
+          },
+          {
+            "id": "itm-1794643749838-pzds9635e",
+            "question": "How does dispatch handle transfers across international borders or into partner countries?",
+            "answer": "AB directly owns and operates fleets within Saudi Arabia, the UAE and Qatar under uniform operational standards. For journeys requiring service into Bahrain, Kuwait or Oman, travel desks coordinate transport through fully vetted regional partner networks. This structure maintains single point accountability, consistent communication standards and cohesive billing across multi country travel itineraries."
+          },
+          {
+            "id": "itm-1794643749838-1go41lj26",
+            "question": "Can itineraries incorporate multiple stops or hourly standby during the journey?",
+            "answer": "Itineraries can include interim stops for corporate meetings, site inspections or government delegations along any intercity corridor. Chauffeurs remain on standby as directed, adapting smoothly to evolving executive schedules and meeting overruns. Central dispatch adjusts journey tracking in real time, maintaining total driver coordination throughout complex multi leg agendas."
+          },
+          {
+            "id": "itm-1794643749838-d6s0l0ouc",
+            "question": "How far in advance should an intercity chauffeur service be booked?",
+            "answer": "Advance booking is recommended to secure preferred vehicle classes during high volume business summits and regional trade exhibitions. However, our continuous 24/7 dispatch operation accepts short notice transfer requests subject to fleet availability in each hub. Bookings can be initiated online through our reservation portal or coordinated directly with regional dispatch desks."
+          },
+          {
+            "id": "itm-1794643749838-0ds5etvxp",
+            "question": "Reserve executive ground transportation",
+            "answer": "Coordinate regional highway transfers with direct dispatch support and tailored corporate billing solutions.\n\nRequest a proposal Talk to a planner"
+          }
+        ]
+      },
+      "items": [
+        {
+          "label": "Request a proposal",
+          "href": "/contact",
+          "style": "primary",
+          "icon": "ArrowRight"
+        },
+        {
+          "label": "Talk to a planner",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone"
+        }
+      ],
+      "settings": {
+        "variant": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1794643749838-imiywdkbf",
+      "type": "ctaBanner",
+      "variant": "centered",
+      "order": 6,
+      "enabled": true,
+      "content": {
+        "heading": "Planning intercity transfers?",
+        "description": "Deploy a professional intercity chauffeur service UAE with central dispatch, verified duty of care protocols and premium executive vehicles across every emirate."
+      },
+      "items": [
+        {
+          "label": "Request a proposal",
+          "href": "/contact",
+          "style": "primary",
+          "icon": "ArrowRight"
+        },
+        {
+          "label": "Talk to a planner",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone"
+        }
+      ],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    }
+  ],
+  "seo": {
+    "metaTitle": "Intercity Transfers | AB",
+    "metaDescription": "Professional Intercity Transfers with executive chauffeur services across Saudi Arabia, UAE, and the GCC.",
+    "ogImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=500&fit=crop"
+  },
+  "status": "published",
+  "showInMenu": true,
+  "order": 8,
+  "locale": "en",
+  "exportedAt": "2026-11-14T08:09:39.925Z"
+}

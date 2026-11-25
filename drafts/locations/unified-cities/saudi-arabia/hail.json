@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/hail",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "hail",
+  "path": "/locations/saudi-arabia/hail",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for hail (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.444Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309999393-xoynwelcn",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN HAIL",
+          "title": "Hail",
+          "description": "Gateway to Northern Saudi Arabia's dramatic desert terrain and UNESCO rock art. AB provides executive chauffeur service from Hail International Airport, city travel, and intercity connections.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hail International (HAS)",
+          "dropoffDefault": "Hail City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999393-7sas8z2k6",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE HAIL FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999393-a0fbrpaw5",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Hail and beyond"
+        },
+        "items": [
+          {
+            "id": "has-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "HAS to Hail City Center",
+            "titleAr": "من مطار حائل إلى وسط مدينة حائل",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Hail International Airport (HAS)",
+            "dropoff": "Hail City Center"
+          },
+          {
+            "id": "hail-jubbah",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Hail to Jubbah UNESCO Rock Art",
+            "titleAr": "من حائل إلى موقع جبة التراثي",
+            "price": "From SAR 420",
+            "priceAr": "ابتداءً من 420 ر.س",
+            "pickup": "Hail",
+            "dropoff": "Jubbah"
+          },
+          {
+            "id": "hail-aja",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Hail to Aja & Salma Mountains",
+            "titleAr": "من حائل إلى جبال أجا وسلمى",
+            "price": "From SAR 300",
+            "priceAr": "ابتداءً من 300 ر.س",
+            "pickup": "Hail",
+            "dropoff": "Aja Mountains"
+          },
+          {
+            "id": "hail-riyadh",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Hail to Riyadh",
+            "titleAr": "من حائل إلى الرياض",
+            "price": "From SAR 1,100",
+            "priceAr": "ابتداءً من 1,100 ر.س",
+            "pickup": "Hail",
+            "dropoff": "Riyadh"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999393-j3xiymw8b",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN HAIL",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999393-wvgzjobh2",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Hail.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309999393-xoynwelcn",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN HAIL",
+          "title": "Hail",
+          "description": "Gateway to Northern Saudi Arabia's dramatic desert terrain and UNESCO rock art. AB provides executive chauffeur service from Hail International Airport, city travel, and intercity connections.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hail International (HAS)",
+          "dropoffDefault": "Hail City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999393-7sas8z2k6",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE HAIL FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999393-a0fbrpaw5",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Hail and beyond"
+        },
+        "items": [
+          {
+            "id": "has-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "HAS to Hail City Center",
+            "titleAr": "من مطار حائل إلى وسط مدينة حائل",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Hail International Airport (HAS)",
+            "dropoff": "Hail City Center"
+          },
+          {
+            "id": "hail-jubbah",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Hail to Jubbah UNESCO Rock Art",
+            "titleAr": "من حائل إلى موقع جبة التراثي",
+            "price": "From SAR 420",
+            "priceAr": "ابتداءً من 420 ر.س",
+            "pickup": "Hail",
+            "dropoff": "Jubbah"
+          },
+          {
+            "id": "hail-aja",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Hail to Aja & Salma Mountains",
+            "titleAr": "من حائل إلى جبال أجا وسلمى",
+            "price": "From SAR 300",
+            "priceAr": "ابتداءً من 300 ر.س",
+            "pickup": "Hail",
+            "dropoff": "Aja Mountains"
+          },
+          {
+            "id": "hail-riyadh",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Hail to Riyadh",
+            "titleAr": "من حائل إلى الرياض",
+            "price": "From SAR 1,100",
+            "priceAr": "ابتداءً من 1,100 ر.س",
+            "pickup": "Hail",
+            "dropoff": "Riyadh"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999393-j3xiymw8b",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN HAIL",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999393-wvgzjobh2",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Hail.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309999393-4e6cwdwa7",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في حائل",
+          "title": "حائل",
+          "description": "بوابة شمال المملكة بتضاريسها الصحراوية الأخاذة وفنونها الصخرية المدرجة في قائمة اليونسكو. تقدم إيه بي ليمو خدمات نقل متميزة من مطار حائل الدولي للتنقل داخل المدينة والرحلات الإقليمية.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Hail International (HAS)",
+          "dropoffDefault": "Hail City Center",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?q=80&w=1332&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309999393-k7yzlb426",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول حائل",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999393-edc1e85e6",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء حائل وخارجها"
+        },
+        "items": [
+          {
+            "id": "has-center",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "HAS to Hail City Center",
+            "titleAr": "من مطار حائل إلى وسط مدينة حائل",
+            "price": "From SAR 220",
+            "priceAr": "ابتداءً من 220 ر.س",
+            "pickup": "Hail International Airport (HAS)",
+            "dropoff": "Hail City Center"
+          },
+          {
+            "id": "hail-jubbah",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Hail to Jubbah UNESCO Rock Art",
+            "titleAr": "من حائل إلى موقع جبة التراثي",
+            "price": "From SAR 420",
+            "priceAr": "ابتداءً من 420 ر.س",
+            "pickup": "Hail",
+            "dropoff": "Jubbah"
+          },
+          {
+            "id": "hail-aja",
+            "tag": "SCENIC TRANSFER",
+            "tagAr": "جولة سياحية",
+            "title": "Hail to Aja & Salma Mountains",
+            "titleAr": "من حائل إلى جبال أجا وسلمى",
+            "price": "From SAR 300",
+            "priceAr": "ابتداءً من 300 ر.س",
+            "pickup": "Hail",
+            "dropoff": "Aja Mountains"
+          },
+          {
+            "id": "hail-riyadh",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Hail to Riyadh",
+            "titleAr": "من حائل إلى الرياض",
+            "price": "From SAR 1,100",
+            "priceAr": "ابتداءً من 1,100 ر.س",
+            "pickup": "Hail",
+            "dropoff": "Riyadh"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999393-ehyc2dvqg",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في حائل",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309999393-ptr7e58nk",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في حائل.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

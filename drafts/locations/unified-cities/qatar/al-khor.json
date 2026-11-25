@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "qatar/al-khor",
+  "countrySlug": "qatar",
+  "citySlug": "al-khor",
+  "path": "/locations/qatar/al-khor",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for al-khor (qatar)",
+  "exportedAt": "2026-11-10T12:32:14.441Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310005259-on3tdgubo",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL KHOR",
+          "title": "Al Khor",
+          "description": "North of Doha, Al Khor blends coastal charm and Al Bayt Stadium with proximity to Ras Laffan Industrial City. AB delivers reliable executive transfers for corporate leaders, event visitors, and residents.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "Al Khor Corniche",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-al-khor-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005259-h8mim5qaj",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL KHOR FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005259-rku3o559h",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Khor and beyond"
+        },
+        "items": [
+          {
+            "id": "doh-alkhor",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Al Khor City Center",
+            "titleAr": "من مطار حمد الدولي إلى وسط مدينة الخور",
+            "price": "From QAR 350",
+            "priceAr": "ابتداءً من 350 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Al Khor Center"
+          },
+          {
+            "id": "alkhor-bayt",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Khor to Al Bayt Stadium",
+            "titleAr": "من الخور إلى استاد البيت",
+            "price": "From QAR 150",
+            "priceAr": "ابتداءً من 150 ر.ق",
+            "pickup": "Al Khor",
+            "dropoff": "Al Bayt Stadium"
+          },
+          {
+            "id": "alkhor-raslaffan",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Khor to Ras Laffan Industrial City",
+            "titleAr": "من الخور إلى مدينة راس لفان الصناعية",
+            "price": "From QAR 280",
+            "priceAr": "ابتداءً من 280 ر.ق",
+            "pickup": "Al Khor",
+            "dropoff": "Ras Laffan"
+          },
+          {
+            "id": "alkhor-doha",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Khor to Doha West Bay",
+            "titleAr": "من الخور إلى الخليج الغربي بالدوحة",
+            "price": "From QAR 350",
+            "priceAr": "ابتداءً من 350 ر.ق",
+            "pickup": "Al Khor",
+            "dropoff": "Doha West Bay"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005259-qrmqro1sz",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL KHOR",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005259-z2dorc8ly",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Khor.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310005259-on3tdgubo",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN AL KHOR",
+          "title": "Al Khor",
+          "description": "North of Doha, Al Khor blends coastal charm and Al Bayt Stadium with proximity to Ras Laffan Industrial City. AB delivers reliable executive transfers for corporate leaders, event visitors, and residents.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "Al Khor Corniche",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-al-khor-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005259-h8mim5qaj",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE AL KHOR FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005259-rku3o559h",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Al Khor and beyond"
+        },
+        "items": [
+          {
+            "id": "doh-alkhor",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Al Khor City Center",
+            "titleAr": "من مطار حمد الدولي إلى وسط مدينة الخور",
+            "price": "From QAR 350",
+            "priceAr": "ابتداءً من 350 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Al Khor Center"
+          },
+          {
+            "id": "alkhor-bayt",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Khor to Al Bayt Stadium",
+            "titleAr": "من الخور إلى استاد البيت",
+            "price": "From QAR 150",
+            "priceAr": "ابتداءً من 150 ر.ق",
+            "pickup": "Al Khor",
+            "dropoff": "Al Bayt Stadium"
+          },
+          {
+            "id": "alkhor-raslaffan",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Khor to Ras Laffan Industrial City",
+            "titleAr": "من الخور إلى مدينة راس لفان الصناعية",
+            "price": "From QAR 280",
+            "priceAr": "ابتداءً من 280 ر.ق",
+            "pickup": "Al Khor",
+            "dropoff": "Ras Laffan"
+          },
+          {
+            "id": "alkhor-doha",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Khor to Doha West Bay",
+            "titleAr": "من الخور إلى الخليج الغربي بالدوحة",
+            "price": "From QAR 350",
+            "priceAr": "ابتداءً من 350 ر.ق",
+            "pickup": "Al Khor",
+            "dropoff": "Doha West Bay"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005259-qrmqro1sz",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN AL KHOR",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005259-z2dorc8ly",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Al Khor.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310005259-812efofa8",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الخور",
+          "title": "الخور",
+          "description": "شمال العاصمة، تجمع الخور بين السحر الساحلي واستاد البيت المعماري وقربها الحيوي من مدينة راس لفان الصناعية. تقدم إيه بي ليمو خدمات نقل تنفيذي موثوقة لقيادات الأعمال وزوار الفعاليات.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "Al Khor Corniche",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-al-khor-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005259-c0a7eb89z",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الخور",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005259-ptjl424z5",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الخور وخارجها"
+        },
+        "items": [
+          {
+            "id": "doh-alkhor",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to Al Khor City Center",
+            "titleAr": "من مطار حمد الدولي إلى وسط مدينة الخور",
+            "price": "From QAR 350",
+            "priceAr": "ابتداءً من 350 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "Al Khor Center"
+          },
+          {
+            "id": "alkhor-bayt",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Al Khor to Al Bayt Stadium",
+            "titleAr": "من الخور إلى استاد البيت",
+            "price": "From QAR 150",
+            "priceAr": "ابتداءً من 150 ر.ق",
+            "pickup": "Al Khor",
+            "dropoff": "Al Bayt Stadium"
+          },
+          {
+            "id": "alkhor-raslaffan",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Khor to Ras Laffan Industrial City",
+            "titleAr": "من الخور إلى مدينة راس لفان الصناعية",
+            "price": "From QAR 280",
+            "priceAr": "ابتداءً من 280 ر.ق",
+            "pickup": "Al Khor",
+            "dropoff": "Ras Laffan"
+          },
+          {
+            "id": "alkhor-doha",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Al Khor to Doha West Bay",
+            "titleAr": "من الخور إلى الخليج الغربي بالدوحة",
+            "price": "From QAR 350",
+            "priceAr": "ابتداءً من 350 ر.ق",
+            "pickup": "Al Khor",
+            "dropoff": "Doha West Bay"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005259-rov0yyh7o",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الخور",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005259-tag9ulmtw",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الخور.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

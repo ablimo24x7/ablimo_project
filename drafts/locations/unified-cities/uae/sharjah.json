@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "uae/sharjah",
+  "countrySlug": "uae",
+  "citySlug": "sharjah",
+  "path": "/locations/uae/sharjah",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for sharjah (uae)",
+  "exportedAt": "2026-11-10T12:32:14.455Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310002349-lz1yeowlt",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN SHARJAH",
+          "title": "Sharjah",
+          "description": "Sharjah — the cultural capital of the Emirates — blends UNESCO heritage sites with flourishing commerce. Whether heading to Sharjah Airport or exploring Al Majaz Waterfront and University City, AB's chauffeurs ensure every trip is seamless.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Sharjah International (SHJ)",
+          "dropoffDefault": "Al Majaz Waterfront",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-sharjah-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310002349-4w1l6fbcn",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE SHARJAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002349-5uq6cdp07",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Sharjah and beyond"
+        },
+        "items": [
+          {
+            "id": "shj-majaz",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to Al Majaz Waterfront",
+            "titleAr": "من مطار الشارقة إلى واجهة المجاز المائية",
+            "price": "From AED 240",
+            "priceAr": "ابتداءً من 240 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "Al Majaz Waterfront"
+          },
+          {
+            "id": "shj-university",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to University City",
+            "titleAr": "من مطار الشارقة إلى المدينة الجامعية",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "University City, Sharjah"
+          },
+          {
+            "id": "sharjah-difc",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Sharjah to Dubai DIFC",
+            "titleAr": "من الشارقة إلى مركز دبي المالي العالمي",
+            "price": "From AED 320",
+            "priceAr": "ابتداءً من 320 درهم",
+            "pickup": "Sharjah",
+            "dropoff": "DIFC Dubai"
+          },
+          {
+            "id": "sharjah-ajman",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Sharjah to Ajman Corniche",
+            "titleAr": "من الشارقة إلى كورنيش عجمان",
+            "price": "From AED 200",
+            "priceAr": "ابتداءً من 200 درهم",
+            "pickup": "Sharjah",
+            "dropoff": "Ajman Corniche"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002349-800m8r2dl",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN SHARJAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002349-9x3z9mbju",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Sharjah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310002349-lz1yeowlt",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN SHARJAH",
+          "title": "Sharjah",
+          "description": "Sharjah — the cultural capital of the Emirates — blends UNESCO heritage sites with flourishing commerce. Whether heading to Sharjah Airport or exploring Al Majaz Waterfront and University City, AB's chauffeurs ensure every trip is seamless.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Sharjah International (SHJ)",
+          "dropoffDefault": "Al Majaz Waterfront",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-sharjah-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310002349-4w1l6fbcn",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE SHARJAH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002349-5uq6cdp07",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Sharjah and beyond"
+        },
+        "items": [
+          {
+            "id": "shj-majaz",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to Al Majaz Waterfront",
+            "titleAr": "من مطار الشارقة إلى واجهة المجاز المائية",
+            "price": "From AED 240",
+            "priceAr": "ابتداءً من 240 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "Al Majaz Waterfront"
+          },
+          {
+            "id": "shj-university",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to University City",
+            "titleAr": "من مطار الشارقة إلى المدينة الجامعية",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "University City, Sharjah"
+          },
+          {
+            "id": "sharjah-difc",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Sharjah to Dubai DIFC",
+            "titleAr": "من الشارقة إلى مركز دبي المالي العالمي",
+            "price": "From AED 320",
+            "priceAr": "ابتداءً من 320 درهم",
+            "pickup": "Sharjah",
+            "dropoff": "DIFC Dubai"
+          },
+          {
+            "id": "sharjah-ajman",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Sharjah to Ajman Corniche",
+            "titleAr": "من الشارقة إلى كورنيش عجمان",
+            "price": "From AED 200",
+            "priceAr": "ابتداءً من 200 درهم",
+            "pickup": "Sharjah",
+            "dropoff": "Ajman Corniche"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002349-800m8r2dl",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN SHARJAH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002349-9x3z9mbju",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Sharjah.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310002349-wen71aly1",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الشارقة",
+          "title": "الشارقة",
+          "description": "الشارقة — العاصمة الثقافية لدولة الإمارات — تجمع بين المعالم التراثية والنهضة التجارية. توفر إيه بي ليمو تنقلاً سلساً من مطار الشارقة الدولي وإلى واجهة المجاز والمدينة الجامعية ومراكز الأعمال.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Sharjah International (SHJ)",
+          "dropoffDefault": "Al Majaz Waterfront",
+          "skyline": "dubai"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-uae-sharjah-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310002349-vh10h8iun",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الشارقة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002349-1peizwd32",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الشارقة وخارجها"
+        },
+        "items": [
+          {
+            "id": "shj-majaz",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to Al Majaz Waterfront",
+            "titleAr": "من مطار الشارقة إلى واجهة المجاز المائية",
+            "price": "From AED 240",
+            "priceAr": "ابتداءً من 240 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "Al Majaz Waterfront"
+          },
+          {
+            "id": "shj-university",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to University City",
+            "titleAr": "من مطار الشارقة إلى المدينة الجامعية",
+            "price": "From AED 220",
+            "priceAr": "ابتداءً من 220 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "University City, Sharjah"
+          },
+          {
+            "id": "sharjah-difc",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Sharjah to Dubai DIFC",
+            "titleAr": "من الشارقة إلى مركز دبي المالي العالمي",
+            "price": "From AED 320",
+            "priceAr": "ابتداءً من 320 درهم",
+            "pickup": "Sharjah",
+            "dropoff": "DIFC Dubai"
+          },
+          {
+            "id": "sharjah-ajman",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Sharjah to Ajman Corniche",
+            "titleAr": "من الشارقة إلى كورنيش عجمان",
+            "price": "From AED 200",
+            "priceAr": "ابتداءً من 200 درهم",
+            "pickup": "Sharjah",
+            "dropoff": "Ajman Corniche"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002349-mrvnj2tid",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الشارقة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310002349-0h28vkjrh",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الشارقة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

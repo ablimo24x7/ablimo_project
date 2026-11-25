@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/riyadh",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "riyadh",
+  "path": "/locations/saudi-arabia/riyadh",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for riyadh (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.450Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309996689-suhbnm8yr",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN RIYADH",
+          "title": "Riyadh",
+          "description": "From King Khalid International arrivals to KAFD boardrooms, ministry visits and Riyadh Season events, AB.Limo moves executives, delegations and guests across the capital in an immaculate black fleet, driven by vetted professional chauffeurs.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Khalid International (RUH)",
+          "dropoffDefault": "KAFD, Riyadh",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/hero/city-riyadh.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996689-5frfzyh09",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE RIYADH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996689-z73ldb2rw",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Riyadh and beyond"
+        },
+        "items": [
+          {
+            "id": "ruh-kafd",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "RUH to KAFD",
+            "titleAr": "من مطار الملك خالد إلى كافد",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "King Khalid International Airport (RUH)",
+            "dropoff": "KAFD, Riyadh"
+          },
+          {
+            "id": "ruh-dq",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "RUH to Diplomatic Quarter",
+            "titleAr": "من مطار الملك خالد إلى الحي الدبلوماسي",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "King Khalid International Airport (RUH)",
+            "dropoff": "Diplomatic Quarter, Riyadh"
+          },
+          {
+            "id": "riyadh-diriyah",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riyadh to Diriyah",
+            "titleAr": "من الرياض إلى الدرعية",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "Riyadh",
+            "dropoff": "Diriyah Gate"
+          },
+          {
+            "id": "riyadh-front",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riyadh to Riyadh Front",
+            "titleAr": "من الرياض إلى واجهة الرياض",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "Riyadh",
+            "dropoff": "Riyadh Front"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996689-4uogj698k",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN RIYADH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996690-n5rj1922w",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Riyadh.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309996689-suhbnm8yr",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN RIYADH",
+          "title": "Riyadh",
+          "description": "From King Khalid International arrivals to KAFD boardrooms, ministry visits and Riyadh Season events, AB.Limo moves executives, delegations and guests across the capital in an immaculate black fleet, driven by vetted professional chauffeurs.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "King Khalid International (RUH)",
+          "dropoffDefault": "KAFD, Riyadh",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/hero/city-riyadh.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996689-5frfzyh09",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE RIYADH FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996689-z73ldb2rw",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Riyadh and beyond"
+        },
+        "items": [
+          {
+            "id": "ruh-kafd",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "RUH to KAFD",
+            "titleAr": "من مطار الملك خالد إلى كافد",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "King Khalid International Airport (RUH)",
+            "dropoff": "KAFD, Riyadh"
+          },
+          {
+            "id": "ruh-dq",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "RUH to Diplomatic Quarter",
+            "titleAr": "من مطار الملك خالد إلى الحي الدبلوماسي",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "King Khalid International Airport (RUH)",
+            "dropoff": "Diplomatic Quarter, Riyadh"
+          },
+          {
+            "id": "riyadh-diriyah",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riyadh to Diriyah",
+            "titleAr": "من الرياض إلى الدرعية",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "Riyadh",
+            "dropoff": "Diriyah Gate"
+          },
+          {
+            "id": "riyadh-front",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riyadh to Riyadh Front",
+            "titleAr": "من الرياض إلى واجهة الرياض",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "Riyadh",
+            "dropoff": "Riyadh Front"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996689-4uogj698k",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN RIYADH",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996690-n5rj1922w",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Riyadh.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309996690-sqevhm2a8",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الرياض",
+          "title": "الرياض",
+          "description": "من الوصول في مطار الملك خالد الدولي إلى غرف اجتماعات مركز الملك عبد الله المالي وزيارات الوزارات وفعاليات موسم الرياض، تنقل إيه بي ليمو التنفيذيين والوفود والضيوف في جميع أنحاء العاصمة بأسطول أسود فخم يقوده سائقون محترفون ومعتمدون.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "King Khalid International (RUH)",
+          "dropoffDefault": "KAFD, Riyadh",
+          "skyline": "riyadh"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/hero/city-riyadh.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309996690-mbdbp906g",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الرياض",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996690-lvhmniti9",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الرياض وخارجها"
+        },
+        "items": [
+          {
+            "id": "ruh-kafd",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "RUH to KAFD",
+            "titleAr": "من مطار الملك خالد إلى كافد",
+            "price": "From SAR 350",
+            "priceAr": "ابتداءً من 350 ر.س",
+            "pickup": "King Khalid International Airport (RUH)",
+            "dropoff": "KAFD, Riyadh"
+          },
+          {
+            "id": "ruh-dq",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "RUH to Diplomatic Quarter",
+            "titleAr": "من مطار الملك خالد إلى الحي الدبلوماسي",
+            "price": "From SAR 380",
+            "priceAr": "ابتداءً من 380 ر.س",
+            "pickup": "King Khalid International Airport (RUH)",
+            "dropoff": "Diplomatic Quarter, Riyadh"
+          },
+          {
+            "id": "riyadh-diriyah",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riyadh to Diriyah",
+            "titleAr": "من الرياض إلى الدرعية",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "Riyadh",
+            "dropoff": "Diriyah Gate"
+          },
+          {
+            "id": "riyadh-front",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Riyadh to Riyadh Front",
+            "titleAr": "من الرياض إلى واجهة الرياض",
+            "price": "From SAR 260",
+            "priceAr": "ابتداءً من 260 ر.س",
+            "pickup": "Riyadh",
+            "dropoff": "Riyadh Front"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996690-n0q9pheku",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الرياض",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309996690-of0llm98a",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الرياض.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

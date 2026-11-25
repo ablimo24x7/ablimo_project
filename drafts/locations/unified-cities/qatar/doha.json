@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "qatar/doha",
+  "countrySlug": "qatar",
+  "citySlug": "doha",
+  "path": "/locations/qatar/doha",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for doha (qatar)",
+  "exportedAt": "2026-11-10T12:32:14.442Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310005033-jf7xy87bh",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN DOHA",
+          "title": "Doha",
+          "description": "Qatar's glittering capital pairs Arabian heritage with contemporary ambition. From Hamad International arrivals to West Bay boardrooms, Lusail meetings and evening events at The Pearl, AB.Limo moves executives and delegations in immaculate style.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "West Bay, Doha",
+          "skyline": "doha"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-doha-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005033-qdcsw0c89",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE DOHA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005033-3gw9soqvb",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Doha and beyond"
+        },
+        "items": [
+          {
+            "id": "doh-westbay",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to West Bay Financial District",
+            "titleAr": "من مطار حمد الدولي إلى الخليج الغربي",
+            "price": "From QAR 220",
+            "priceAr": "ابتداءً من 220 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "West Bay, Doha"
+          },
+          {
+            "id": "doh-pearl",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to The Pearl-Qatar",
+            "titleAr": "من مطار حمد الدولي إلى جزيرة اللؤلؤة",
+            "price": "From QAR 250",
+            "priceAr": "ابتداءً من 250 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "The Pearl-Qatar"
+          },
+          {
+            "id": "doha-lusail",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Doha Center to Lusail Marina",
+            "titleAr": "من وسط الدوحة إلى مارينا لوسيل",
+            "price": "From QAR 200",
+            "priceAr": "ابتداءً من 200 ر.ق",
+            "pickup": "Doha Center",
+            "dropoff": "Lusail Marina"
+          },
+          {
+            "id": "doha-alkhor",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Doha to Al Khor & Al Bayt Stadium",
+            "titleAr": "من الدوحة إلى الخور واستاد البيت",
+            "price": "From QAR 350",
+            "priceAr": "ابتداءً من 350 ر.ق",
+            "pickup": "Doha",
+            "dropoff": "Al Khor"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005033-4e3iucnk6",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN DOHA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005033-ehtsg1cak",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Doha.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310005033-jf7xy87bh",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN DOHA",
+          "title": "Doha",
+          "description": "Qatar's glittering capital pairs Arabian heritage with contemporary ambition. From Hamad International arrivals to West Bay boardrooms, Lusail meetings and evening events at The Pearl, AB.Limo moves executives and delegations in immaculate style.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "West Bay, Doha",
+          "skyline": "doha"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-doha-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005033-qdcsw0c89",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE DOHA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005033-3gw9soqvb",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Doha and beyond"
+        },
+        "items": [
+          {
+            "id": "doh-westbay",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to West Bay Financial District",
+            "titleAr": "من مطار حمد الدولي إلى الخليج الغربي",
+            "price": "From QAR 220",
+            "priceAr": "ابتداءً من 220 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "West Bay, Doha"
+          },
+          {
+            "id": "doh-pearl",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to The Pearl-Qatar",
+            "titleAr": "من مطار حمد الدولي إلى جزيرة اللؤلؤة",
+            "price": "From QAR 250",
+            "priceAr": "ابتداءً من 250 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "The Pearl-Qatar"
+          },
+          {
+            "id": "doha-lusail",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Doha Center to Lusail Marina",
+            "titleAr": "من وسط الدوحة إلى مارينا لوسيل",
+            "price": "From QAR 200",
+            "priceAr": "ابتداءً من 200 ر.ق",
+            "pickup": "Doha Center",
+            "dropoff": "Lusail Marina"
+          },
+          {
+            "id": "doha-alkhor",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Doha to Al Khor & Al Bayt Stadium",
+            "titleAr": "من الدوحة إلى الخور واستاد البيت",
+            "price": "From QAR 350",
+            "priceAr": "ابتداءً من 350 ر.ق",
+            "pickup": "Doha",
+            "dropoff": "Al Khor"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005033-4e3iucnk6",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN DOHA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005033-ehtsg1cak",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Doha.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310005033-3yqwxpohh",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في الدوحة",
+          "title": "الدوحة",
+          "description": "عاصمة قطر المتألقة التي تجمع بين التراث العربي العريق والحداثة العالمية. من الوصول في مطار حمد الدولي إلى غرف اجتماعات الخليج الغربي واجتماعات لوسيل ومساء اللؤلؤة، تنقل إيه بي ليمو التنفيذيين والوفود بأسطول أسود فخم.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Hamad International (DOH)",
+          "dropoffDefault": "West Bay, Doha",
+          "skyline": "doha"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-qatar-doha-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310005033-x92ci3554",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول الدوحة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005033-3pkyue1ve",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء الدوحة وخارجها"
+        },
+        "items": [
+          {
+            "id": "doh-westbay",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to West Bay Financial District",
+            "titleAr": "من مطار حمد الدولي إلى الخليج الغربي",
+            "price": "From QAR 220",
+            "priceAr": "ابتداءً من 220 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "West Bay, Doha"
+          },
+          {
+            "id": "doh-pearl",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "DOH to The Pearl-Qatar",
+            "titleAr": "من مطار حمد الدولي إلى جزيرة اللؤلؤة",
+            "price": "From QAR 250",
+            "priceAr": "ابتداءً من 250 ر.ق",
+            "pickup": "Hamad International Airport (DOH)",
+            "dropoff": "The Pearl-Qatar"
+          },
+          {
+            "id": "doha-lusail",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Doha Center to Lusail Marina",
+            "titleAr": "من وسط الدوحة إلى مارينا لوسيل",
+            "price": "From QAR 200",
+            "priceAr": "ابتداءً من 200 ر.ق",
+            "pickup": "Doha Center",
+            "dropoff": "Lusail Marina"
+          },
+          {
+            "id": "doha-alkhor",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Doha to Al Khor & Al Bayt Stadium",
+            "titleAr": "من الدوحة إلى الخور واستاد البيت",
+            "price": "From QAR 350",
+            "priceAr": "ابتداءً من 350 ر.ق",
+            "pickup": "Doha",
+            "dropoff": "Al Khor"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005033-1ola5zdke",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في الدوحة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310005033-xsqubt4sx",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في الدوحة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

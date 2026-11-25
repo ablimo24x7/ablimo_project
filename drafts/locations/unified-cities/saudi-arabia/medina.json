@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/medina",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "medina",
+  "path": "/locations/saudi-arabia/medina",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for medina (saudi-arabia)",
+  "exportedAt": "2026-11-10T12:32:14.449Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794309997368-43thw4z0g",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN MEDINA",
+          "title": "Medina",
+          "description": "Madinah's serenity deserves travel to match. AB offers discreet, respectful chauffeur service for Ziyarat tours, hotel transfers, and seamless journeys to and from Prince Mohammad Bin Abdulaziz International Airport.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Prince Mohammad Bin Abdulaziz (MED)",
+          "dropoffDefault": "Prophet's Mosque (Al-Masjid an-Nabawi)",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-medina-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997368-pqp0pt2ql",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE MEDINA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997368-9gvx8ky3q",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Medina and beyond"
+        },
+        "items": [
+          {
+            "id": "med-prophet-mosque",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "MED to Prophet's Mosque",
+            "titleAr": "من مطار الأمير محمد بن عبدالعزيز إلى المسجد النبوي",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "Prince Mohammad Bin Abdulaziz Airport (MED)",
+            "dropoff": "Al-Masjid an-Nabawi"
+          },
+          {
+            "id": "med-quba",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Medina to Quba Mosque & Uhud",
+            "titleAr": "من المدينة إلى مسجد قباء وجبل أحد",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Medina Hotels",
+            "dropoff": "Quba Mosque & Mount Uhud"
+          },
+          {
+            "id": "med-makkah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Madinah to Makkah",
+            "titleAr": "من المدينة المنورة إلى مكة المكرمة",
+            "price": "From SAR 1,200",
+            "priceAr": "ابتداءً من 1,200 ر.س",
+            "pickup": "Madinah",
+            "dropoff": "Makkah"
+          },
+          {
+            "id": "med-alula",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Madinah to AlUla",
+            "titleAr": "من المدينة المنورة إلى العلا",
+            "price": "From SAR 950",
+            "priceAr": "ابتداءً من 950 ر.س",
+            "pickup": "Madinah",
+            "dropoff": "AlUla"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997368-p8kliaf8k",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN MEDINA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997368-suk4c6zeo",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Medina.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794309997368-43thw4z0g",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN MEDINA",
+          "title": "Medina",
+          "description": "Madinah's serenity deserves travel to match. AB offers discreet, respectful chauffeur service for Ziyarat tours, hotel transfers, and seamless journeys to and from Prince Mohammad Bin Abdulaziz International Airport.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Prince Mohammad Bin Abdulaziz (MED)",
+          "dropoffDefault": "Prophet's Mosque (Al-Masjid an-Nabawi)",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-medina-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997368-pqp0pt2ql",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE MEDINA FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997368-9gvx8ky3q",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Medina and beyond"
+        },
+        "items": [
+          {
+            "id": "med-prophet-mosque",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "MED to Prophet's Mosque",
+            "titleAr": "من مطار الأمير محمد بن عبدالعزيز إلى المسجد النبوي",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "Prince Mohammad Bin Abdulaziz Airport (MED)",
+            "dropoff": "Al-Masjid an-Nabawi"
+          },
+          {
+            "id": "med-quba",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Medina to Quba Mosque & Uhud",
+            "titleAr": "من المدينة إلى مسجد قباء وجبل أحد",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Medina Hotels",
+            "dropoff": "Quba Mosque & Mount Uhud"
+          },
+          {
+            "id": "med-makkah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Madinah to Makkah",
+            "titleAr": "من المدينة المنورة إلى مكة المكرمة",
+            "price": "From SAR 1,200",
+            "priceAr": "ابتداءً من 1,200 ر.س",
+            "pickup": "Madinah",
+            "dropoff": "Makkah"
+          },
+          {
+            "id": "med-alula",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Madinah to AlUla",
+            "titleAr": "من المدينة المنورة إلى العلا",
+            "price": "From SAR 950",
+            "priceAr": "ابتداءً من 950 ر.س",
+            "pickup": "Madinah",
+            "dropoff": "AlUla"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997368-p8kliaf8k",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN MEDINA",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997368-suk4c6zeo",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Medina.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794309997369-lpa2lhq5o",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في المدينة المنورة",
+          "title": "المدينة المنورة",
+          "description": "سكينة المدينة المنورة تستحق تجربة تنقل هادئة وراقية. تقدم إيه بي ليمو خدمات سائق خاص احترافية لجولات الزيارة والنقل الفندقي والتوصيل من وإلى مطار الأمير محمد بن عبد العزيز الدولي.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Prince Mohammad Bin Abdulaziz (MED)",
+          "dropoffDefault": "Prophet's Mosque (Al-Masjid an-Nabawi)",
+          "skyline": "jeddah"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-medina-images/image1.jpg",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794309997369-vb6e4v4v1",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول المدينة المنورة",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997369-08odjcugw",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء المدينة المنورة وخارجها"
+        },
+        "items": [
+          {
+            "id": "med-prophet-mosque",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "MED to Prophet's Mosque",
+            "titleAr": "من مطار الأمير محمد بن عبدالعزيز إلى المسجد النبوي",
+            "price": "From SAR 280",
+            "priceAr": "ابتداءً من 280 ر.س",
+            "pickup": "Prince Mohammad Bin Abdulaziz Airport (MED)",
+            "dropoff": "Al-Masjid an-Nabawi"
+          },
+          {
+            "id": "med-quba",
+            "tag": "CITY",
+            "tagAr": "داخل المدينة",
+            "title": "Medina to Quba Mosque & Uhud",
+            "titleAr": "من المدينة إلى مسجد قباء وجبل أحد",
+            "price": "From SAR 240",
+            "priceAr": "ابتداءً من 240 ر.س",
+            "pickup": "Medina Hotels",
+            "dropoff": "Quba Mosque & Mount Uhud"
+          },
+          {
+            "id": "med-makkah",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Madinah to Makkah",
+            "titleAr": "من المدينة المنورة إلى مكة المكرمة",
+            "price": "From SAR 1,200",
+            "priceAr": "ابتداءً من 1,200 ر.س",
+            "pickup": "Madinah",
+            "dropoff": "Makkah"
+          },
+          {
+            "id": "med-alula",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Madinah to AlUla",
+            "titleAr": "من المدينة المنورة إلى العلا",
+            "price": "From SAR 950",
+            "priceAr": "ابتداءً من 950 ر.س",
+            "pickup": "Madinah",
+            "dropoff": "AlUla"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997369-zfu7rabst",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في المدينة المنورة",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794309997369-vhirq6ht9",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في المدينة المنورة.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

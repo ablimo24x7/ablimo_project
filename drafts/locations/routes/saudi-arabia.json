@@ -1,0 +1,1078 @@
+{
+  "pageType": "route",
+  "refKey": "saudi-arabia",
+  "countrySlug": "saudi-arabia",
+  "path": "/locations/saudi-arabia/routes",
+  "description": "Routes template for saudi-arabia",
+  "exportedAt": "2026-11-10T12:32:14.228Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1792139036417-bmwlsuyqy",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "{from} → {to}",
+          "titleHighlight": "",
+          "description": "Travel between cities in luxury and comfort with professional chauffeurs.",
+          "images": {
+            "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+            "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
+            "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=80",
+            "riyadh": "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop",
+            "dammam": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "doha": "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=400&h=300&fit=crop",
+            "al-khor": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "jeddah": "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?w=400&h=300&fit=crop",
+            "mecca": "https://images.unsplash.com/photo-1647177156544-0d51fb7c900c?w=400&h=300&fit=crop",
+            "medina": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop&q=80",
+            "manama": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop",
+            "al-khobar": "https://plus.unsplash.com/premium_photo-1697729655535-705aef824baf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "kuwait-city": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop",
+            "al-ain": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&q=80",
+            "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=81",
+            "ajman": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=82",
+            "al-ahmadi": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop&q=80",
+            "lusail": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "sohar": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80"
+          }
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1494783367193-149034c05e8f?w=800&h=600&fit=crop",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036417-fnw5ptwrv",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036417-7etf7zfax",
+        "type": "routeStats",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {},
+        "items": [
+          {
+            "id": "stat-distance",
+            "icon": "Map",
+            "label": "Total Distance",
+            "value": "{distance}"
+          },
+          {
+            "id": "stat-duration",
+            "icon": "Clock",
+            "label": "Estimated Time",
+            "value": "{duration}"
+          },
+          {
+            "id": "stat-pricing",
+            "icon": "Shield",
+            "label": "Pricing",
+            "value": "Fixed"
+          }
+        ],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1792139036417-3ka8i8eh3",
+        "type": "cityVisuals",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "fromLabel": "From",
+          "toLabel": "To",
+          "images": {
+            "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+            "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
+            "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=80",
+            "riyadh": "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop",
+            "dammam": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "doha": "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=400&h=300&fit=crop",
+            "al-khor": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "jeddah": "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?w=400&h=300&fit=crop",
+            "mecca": "https://images.unsplash.com/photo-1647177156544-0d51fb7c900c?w=400&h=300&fit=crop",
+            "medina": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop&q=80",
+            "manama": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop",
+            "al-khobar": "https://plus.unsplash.com/premium_photo-1697729655535-705aef824baf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "kuwait-city": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop",
+            "al-ain": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&q=80",
+            "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=81",
+            "ajman": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=82",
+            "al-ahmadi": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop&q=80",
+            "lusail": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "sohar": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80"
+          }
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036417-wghlime82",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Why choose AB for {from} to {to}",
+          "description": "Travel between {from} and {to} in complete comfort with our premium city-to-city transfer service. Our professional chauffeurs know the best routes and ensure a smooth, relaxing journey.",
+          "items": [
+            {
+              "id": "route-feature-0",
+              "icon": "CheckCircle",
+              "heading": "Door-to-door pickup and drop-off",
+              "description": ""
+            },
+            {
+              "id": "route-feature-1",
+              "icon": "CheckCircle",
+              "heading": "Real-time journey tracking",
+              "description": ""
+            },
+            {
+              "id": "route-feature-2",
+              "icon": "CheckCircle",
+              "heading": "Complimentary Wi-Fi and refreshments",
+              "description": ""
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop",
+          "backgroundAlt": "Long Distance Travel"
+        }
+      },
+      {
+        "id": "sec-1792139036417-x4y16egvs",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "About this route",
+          "description": "The {from} to {to} route covers {distance} of premium road travel. Our experienced chauffeurs are familiar with every stretch of this route, ensuring the most efficient and comfortable journey. Whether you're traveling for business or leisure, our door-to-door service eliminates the stress of driving or navigating public transport. Sit back, relax, and enjoy the scenery while our professional driver takes care of everything.",
+          "items": [
+            {
+              "id": "route-feature-0",
+              "icon": "CheckCircle",
+              "heading": "Door-to-door pickup and drop-off",
+              "description": ""
+            },
+            {
+              "id": "route-feature-1",
+              "icon": "CheckCircle",
+              "heading": "Real-time journey tracking",
+              "description": ""
+            },
+            {
+              "id": "route-feature-2",
+              "icon": "CheckCircle",
+              "heading": "Complimentary Wi-Fi and refreshments",
+              "description": ""
+            }
+          ],
+          "actions": [],
+          "images": {
+            "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+            "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
+            "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=80",
+            "riyadh": "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop",
+            "dammam": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "doha": "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=400&h=300&fit=crop",
+            "al-khor": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "jeddah": "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?w=400&h=300&fit=crop",
+            "mecca": "https://images.unsplash.com/photo-1647177156544-0d51fb7c900c?w=400&h=300&fit=crop",
+            "medina": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop&q=80",
+            "manama": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop",
+            "al-khobar": "https://plus.unsplash.com/premium_photo-1697729655535-705aef824baf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "kuwait-city": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop",
+            "al-ain": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&q=80",
+            "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=81",
+            "ajman": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=82",
+            "al-ahmadi": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop&q=80",
+            "lusail": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "sohar": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80"
+          }
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": false,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1792139036417-byvuwlz6n",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": [
+            {
+              "id": "faq-0",
+              "question": "How long does a city-to-city transfer take?",
+              "answer": "The duration depends on the distance between cities. For example, Dubai to Abu Dhabi takes approximately 1.5 hours, while Riyadh to Dammam takes around 4 hours. Your chauffeur will choose the most efficient route."
+            },
+            {
+              "id": "faq-1",
+              "question": "Can I make stops during my city-to-city journey?",
+              "answer": "Yes, you can request additional stops during your journey. Simply let us know your requirements when booking, or communicate with your chauffeur during the trip. Additional stops may incur extra charges."
+            },
+            {
+              "id": "faq-2",
+              "question": "What vehicles are available for long distance travel?",
+              "answer": "We offer Business Class sedans, First Class luxury sedans, and Business Van/SUV options for city-to-city travel. All vehicles are equipped with Wi-Fi, charging ports, and refreshments for your comfort."
+            },
+            {
+              "id": "faq-3",
+              "question": "Is there a maximum distance for city-to-city transfers?",
+              "answer": "We cover distances up to 500 km for a single booking. For longer distances, we can arrange multi-day transfers with overnight stops at premium hotels along the route."
+            },
+            {
+              "id": "faq-4",
+              "question": "Can I book a round trip?",
+              "answer": "Yes, round-trip bookings are available. You can schedule your return journey at the time of booking or arrange it later through our app or customer service."
+            },
+            {
+              "id": "faq-5",
+              "question": "What is the cancellation policy?",
+              "answer": "Free cancellation is available up to 24 hours before your scheduled pickup. Cancellations within 24 hours may incur a fee. Please check our terms for full details."
+            },
+            {
+              "id": "faq-6",
+              "question": "Do you provide child seats?",
+              "answer": "Yes, child seats are available upon request. Please mention your requirements when booking so we can ensure the appropriate seat is installed in your vehicle."
+            },
+            {
+              "id": "faq-7",
+              "question": "Are your prices fixed or metered?",
+              "answer": "All our city-to-city transfers have fixed prices. You'll see the exact fare when you book, with no hidden charges or surge pricing."
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1792139036417-bii6a3io5",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "Ready for your journey from {from} to {to}?",
+          "description": "Book your long distance transfer today and travel in luxury and comfort."
+        },
+        "items": [
+          {
+            "id": "cta-contact",
+            "label": "Book Now",
+            "href": "{langPrefix}/contact",
+            "style": "primary",
+            "icon": ""
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1792139036437-s951qd8we",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "{from} → {to}",
+          "titleHighlight": "",
+          "description": "Travel between cities in luxury and comfort with professional chauffeurs.",
+          "images": {
+            "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+            "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
+            "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=80",
+            "riyadh": "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop",
+            "dammam": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "doha": "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=400&h=300&fit=crop",
+            "al-khor": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "jeddah": "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?w=400&h=300&fit=crop",
+            "mecca": "https://images.unsplash.com/photo-1647177156544-0d51fb7c900c?w=400&h=300&fit=crop",
+            "medina": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop&q=80",
+            "manama": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop",
+            "al-khobar": "https://plus.unsplash.com/premium_photo-1697729655535-705aef824baf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "kuwait-city": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop",
+            "al-ain": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&q=80",
+            "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=81",
+            "ajman": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=82",
+            "al-ahmadi": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop&q=80",
+            "lusail": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "sohar": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80"
+          }
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1494783367193-149034c05e8f?w=800&h=600&fit=crop",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036438-oxt57m52h",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-9ogmlrkb7",
+        "type": "routeStats",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {},
+        "items": [
+          {
+            "id": "stat-distance",
+            "icon": "Map",
+            "label": "Total Distance",
+            "value": "{distance}"
+          },
+          {
+            "id": "stat-duration",
+            "icon": "Clock",
+            "label": "Estimated Time",
+            "value": "{duration}"
+          },
+          {
+            "id": "stat-pricing",
+            "icon": "Shield",
+            "label": "Pricing",
+            "value": "Fixed"
+          }
+        ],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1792139036438-omzcehr4w",
+        "type": "cityVisuals",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "fromLabel": "From",
+          "toLabel": "To",
+          "images": {
+            "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+            "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
+            "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=80",
+            "riyadh": "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop",
+            "dammam": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "doha": "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=400&h=300&fit=crop",
+            "al-khor": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "jeddah": "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?w=400&h=300&fit=crop",
+            "mecca": "https://images.unsplash.com/photo-1647177156544-0d51fb7c900c?w=400&h=300&fit=crop",
+            "medina": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop&q=80",
+            "manama": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop",
+            "al-khobar": "https://plus.unsplash.com/premium_photo-1697729655535-705aef824baf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "kuwait-city": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop",
+            "al-ain": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&q=80",
+            "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=81",
+            "ajman": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=82",
+            "al-ahmadi": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop&q=80",
+            "lusail": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "sohar": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80"
+          }
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-c0jzssho9",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Why choose AB for {from} to {to}",
+          "description": "Travel between {from} and {to} in complete comfort with our premium city-to-city transfer service. Our professional chauffeurs know the best routes and ensure a smooth, relaxing journey.",
+          "items": [
+            {
+              "id": "route-feature-0",
+              "icon": "CheckCircle",
+              "heading": "Door-to-door pickup and drop-off",
+              "description": ""
+            },
+            {
+              "id": "route-feature-1",
+              "icon": "CheckCircle",
+              "heading": "Real-time journey tracking",
+              "description": ""
+            },
+            {
+              "id": "route-feature-2",
+              "icon": "CheckCircle",
+              "heading": "Complimentary Wi-Fi and refreshments",
+              "description": ""
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop",
+          "backgroundAlt": "Long Distance Travel"
+        }
+      },
+      {
+        "id": "sec-1792139036438-mxkxq4tw0",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "About this route",
+          "description": "The {from} to {to} route covers {distance} of premium road travel. Our experienced chauffeurs are familiar with every stretch of this route, ensuring the most efficient and comfortable journey. Whether you're traveling for business or leisure, our door-to-door service eliminates the stress of driving or navigating public transport. Sit back, relax, and enjoy the scenery while our professional driver takes care of everything.",
+          "items": [
+            {
+              "id": "route-feature-0",
+              "icon": "CheckCircle",
+              "heading": "Door-to-door pickup and drop-off",
+              "description": ""
+            },
+            {
+              "id": "route-feature-1",
+              "icon": "CheckCircle",
+              "heading": "Real-time journey tracking",
+              "description": ""
+            },
+            {
+              "id": "route-feature-2",
+              "icon": "CheckCircle",
+              "heading": "Complimentary Wi-Fi and refreshments",
+              "description": ""
+            }
+          ],
+          "actions": [],
+          "images": {
+            "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+            "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
+            "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=80",
+            "riyadh": "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop",
+            "dammam": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "doha": "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=400&h=300&fit=crop",
+            "al-khor": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "jeddah": "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?w=400&h=300&fit=crop",
+            "mecca": "https://images.unsplash.com/photo-1647177156544-0d51fb7c900c?w=400&h=300&fit=crop",
+            "medina": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop&q=80",
+            "manama": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop",
+            "al-khobar": "https://plus.unsplash.com/premium_photo-1697729655535-705aef824baf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "kuwait-city": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop",
+            "al-ain": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&q=80",
+            "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=81",
+            "ajman": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=82",
+            "al-ahmadi": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop&q=80",
+            "lusail": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "sohar": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80"
+          }
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": false,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1792139036438-zkdrwfmyo",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": [
+            {
+              "id": "faq-0",
+              "question": "How long does a city-to-city transfer take?",
+              "answer": "The duration depends on the distance between cities. For example, Dubai to Abu Dhabi takes approximately 1.5 hours, while Riyadh to Dammam takes around 4 hours. Your chauffeur will choose the most efficient route."
+            },
+            {
+              "id": "faq-1",
+              "question": "Can I make stops during my city-to-city journey?",
+              "answer": "Yes, you can request additional stops during your journey. Simply let us know your requirements when booking, or communicate with your chauffeur during the trip. Additional stops may incur extra charges."
+            },
+            {
+              "id": "faq-2",
+              "question": "What vehicles are available for long distance travel?",
+              "answer": "We offer Business Class sedans, First Class luxury sedans, and Business Van/SUV options for city-to-city travel. All vehicles are equipped with Wi-Fi, charging ports, and refreshments for your comfort."
+            },
+            {
+              "id": "faq-3",
+              "question": "Is there a maximum distance for city-to-city transfers?",
+              "answer": "We cover distances up to 500 km for a single booking. For longer distances, we can arrange multi-day transfers with overnight stops at premium hotels along the route."
+            },
+            {
+              "id": "faq-4",
+              "question": "Can I book a round trip?",
+              "answer": "Yes, round-trip bookings are available. You can schedule your return journey at the time of booking or arrange it later through our app or customer service."
+            },
+            {
+              "id": "faq-5",
+              "question": "What is the cancellation policy?",
+              "answer": "Free cancellation is available up to 24 hours before your scheduled pickup. Cancellations within 24 hours may incur a fee. Please check our terms for full details."
+            },
+            {
+              "id": "faq-6",
+              "question": "Do you provide child seats?",
+              "answer": "Yes, child seats are available upon request. Please mention your requirements when booking so we can ensure the appropriate seat is installed in your vehicle."
+            },
+            {
+              "id": "faq-7",
+              "question": "Are your prices fixed or metered?",
+              "answer": "All our city-to-city transfers have fixed prices. You'll see the exact fare when you book, with no hidden charges or surge pricing."
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1792139036438-5ykn51ceb",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "Ready for your journey from {from} to {to}?",
+          "description": "Book your long distance transfer today and travel in luxury and comfort."
+        },
+        "items": [
+          {
+            "id": "cta-contact",
+            "label": "Book Now",
+            "href": "{langPrefix}/contact",
+            "style": "primary",
+            "icon": ""
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1792139036464-280xc9ek7",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "{from} → {to}",
+          "titleHighlight": "",
+          "description": "سافر بين المدن بالفخامة والراحة مع سائقين محترفين.",
+          "images": {
+            "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+            "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
+            "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=80",
+            "riyadh": "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop",
+            "dammam": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "doha": "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=400&h=300&fit=crop",
+            "al-khor": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "jeddah": "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?w=400&h=300&fit=crop",
+            "mecca": "https://images.unsplash.com/photo-1647177156544-0d51fb7c900c?w=400&h=300&fit=crop",
+            "medina": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop&q=80",
+            "manama": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop",
+            "al-khobar": "https://plus.unsplash.com/premium_photo-1697729655535-705aef824baf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "kuwait-city": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop",
+            "al-ain": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&q=80",
+            "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=81",
+            "ajman": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=82",
+            "al-ahmadi": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop&q=80",
+            "lusail": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "sohar": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80"
+          }
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://images.unsplash.com/photo-1494783367193-149034c05e8f?w=800&h=600&fit=crop",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036464-au09mbvy7",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036464-72q30xstv",
+        "type": "routeStats",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {},
+        "items": [
+          {
+            "id": "stat-distance",
+            "icon": "Map",
+            "label": "المسافة الإجمالية",
+            "value": "{distance}"
+          },
+          {
+            "id": "stat-duration",
+            "icon": "Clock",
+            "label": "الوقت المقدر",
+            "value": "{duration}"
+          },
+          {
+            "id": "stat-pricing",
+            "icon": "Shield",
+            "label": "التسعير",
+            "value": "ثابت"
+          }
+        ],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1792139036464-ut7eec2od",
+        "type": "cityVisuals",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "fromLabel": "من",
+          "toLabel": "إلى",
+          "images": {
+            "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+            "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
+            "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=80",
+            "riyadh": "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop",
+            "dammam": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "doha": "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=400&h=300&fit=crop",
+            "al-khor": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "jeddah": "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?w=400&h=300&fit=crop",
+            "mecca": "https://images.unsplash.com/photo-1647177156544-0d51fb7c900c?w=400&h=300&fit=crop",
+            "medina": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop&q=80",
+            "manama": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop",
+            "al-khobar": "https://plus.unsplash.com/premium_photo-1697729655535-705aef824baf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "kuwait-city": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop",
+            "al-ain": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&q=80",
+            "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=81",
+            "ajman": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=82",
+            "al-ahmadi": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop&q=80",
+            "lusail": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "sohar": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80"
+          }
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036464-x267jxj40",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "لماذا تختار AB للانتقال من {from} إلى {to}",
+          "description": "سافر بين {from} و {to} براحة تامة مع خدمة النقل بين المدن الفاخرة لدينا. سائقونا المحترفون يعرفون أفضل الطرق ويضمنون رحلة سلسة ومريحة.",
+          "items": [
+            {
+              "id": "route-feature-0",
+              "icon": "CheckCircle",
+              "heading": "استلام و إنزال من باب إلى باب",
+              "description": ""
+            },
+            {
+              "id": "route-feature-1",
+              "icon": "CheckCircle",
+              "heading": "تتبع الرحلة في الوقت الفعلي",
+              "description": ""
+            },
+            {
+              "id": "route-feature-2",
+              "icon": "CheckCircle",
+              "heading": "واي فاي ومشروبات مجانية",
+              "description": ""
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop",
+          "backgroundAlt": "Long Distance Travel"
+        }
+      },
+      {
+        "id": "sec-1792139036464-ggldny5jc",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "عن هذا المسار",
+          "description": "يغطي مسار {from} إلى {to} مسافة {distance} من السفر الفاخر على الطريق. سائقونا ذوو الخبرة على دراية بكل جزء من هذا المسار، مما يضمن أكثر رحلة فعالية وراحة. سواء كنت تسافر للأعمال أو الترفيه، خدمة من باب إلى باب لدينا تزيل عناء القيادة أو التنقل بالنقل العام. استرخِ واستمتع بالمناظر بينما يتولى سائقنا المحترف كل شيء.",
+          "items": [
+            {
+              "id": "route-feature-0",
+              "icon": "CheckCircle",
+              "heading": "استلام و إنزال من باب إلى باب",
+              "description": ""
+            },
+            {
+              "id": "route-feature-1",
+              "icon": "CheckCircle",
+              "heading": "تتبع الرحلة في الوقت الفعلي",
+              "description": ""
+            },
+            {
+              "id": "route-feature-2",
+              "icon": "CheckCircle",
+              "heading": "واي فاي ومشروبات مجانية",
+              "description": ""
+            }
+          ],
+          "actions": [],
+          "images": {
+            "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
+            "abu-dhabi": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop",
+            "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=80",
+            "riyadh": "https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=400&h=300&fit=crop",
+            "dammam": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "doha": "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=400&h=300&fit=crop",
+            "al-khor": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "jeddah": "https://images.unsplash.com/photo-1674979724572-c0a0579bc9d0?w=400&h=300&fit=crop",
+            "mecca": "https://images.unsplash.com/photo-1647177156544-0d51fb7c900c?w=400&h=300&fit=crop",
+            "medina": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop&q=80",
+            "manama": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop",
+            "al-khobar": "https://plus.unsplash.com/premium_photo-1697729655535-705aef824baf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "kuwait-city": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop",
+            "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop",
+            "al-ain": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&q=80",
+            "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=81",
+            "ajman": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop&q=82",
+            "al-ahmadi": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=400&h=300&fit=crop&q=80",
+            "lusail": "https://images.unsplash.com/photo-1647252262017-582a7dbb73d0?w=400&h=300&fit=crop",
+            "sohar": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&h=300&fit=crop&q=80"
+          }
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": false,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1792139036464-lfzpg3v54",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "الأسئلة الشائعة",
+          "description": "",
+          "items": [
+            {
+              "id": "faq-0",
+              "question": "كم تستغرق رحلة نقل بين المدن؟",
+              "answer": "تعتمد المدة على المسافة بين المدن. على سبيل المثال، تستغرق رحلة دبي إلى أبوظبي حوالي 1.5 ساعة، بينما تستغرق رحلة الرياض إلى الدمام حوالي 4 ساعات. سيختار سائقك أقصر طريق."
+            },
+            {
+              "id": "faq-1",
+              "question": "هل يمكنني التوقف أثناء رحلتي بين المدن؟",
+              "answer": "نعم، يمكنك طلب توقفات إضافية أثناء رحلتك. فقط أبلغنا عن متطلباتك عند الحجز أو تواصل مع سائقك أثناء الرحلة. قد تتطلب التوقفات الإضافية رسوماً إضافية."
+            },
+            {
+              "id": "faq-2",
+              "question": "ما السيارات المتاحة للسفر الطويل؟",
+              "answer": "نقدم خيارات الدرجة-business والدرجة الأولى وفان/سيارة دفع رباعي للسفر بين المدن. جميع السيارات مجهزة بالواي فاي ومنافذ الشحن والمشروبات لراحتك."
+            },
+            {
+              "id": "faq-3",
+              "question": "هل هناك حد أقصى للمسافة في النقل بين المدن؟",
+              "answer": "نغطي مسافات تصل إلى 500 كم لكل حجز. للمسافات الأطول، يمكننا ترتيب نقل متعدد الأيام مع توقفات ليلية في فنادق فاخرة على طول الطريق."
+            },
+            {
+              "id": "faq-4",
+              "question": "هل يمكنني حجز رحلة ذهاب وعودة؟",
+              "answer": "نعم، الحجوزات ذهاب وعودة متاحة. يمكنك جدولة رحلة العودة عند الحجز أو ترتيبها لاحقاً عبر تطبيقنا أو خدمة العملاء."
+            },
+            {
+              "id": "faq-5",
+              "question": "ما هي سياسة الإلغاء؟",
+              "answer": "الإلغاء مجاني حتى 24 ساعة قبل وقت الاستلام المحدد. قد تتطلب الإلغاءات خلال 24 ساعة رسوماً. يرجى مراجعة شروطنا للتفاصيل الكاملة."
+            },
+            {
+              "id": "faq-6",
+              "question": "هل توفرون مقاعد أطفال؟",
+              "answer": "نعم، مقاعد الأطفال متاحة عند الطلب. يرجى ذكر متطلباتك عند الحجز حتى نتمكن من ضمان تركيب المقعد المناسب في سيارتك."
+            },
+            {
+              "id": "faq-7",
+              "question": "هل أسعاركم ثابتة أم حسب العداد؟",
+              "answer": "جميع نقلاتنا بين المدن لها أسعار ثابتة. سترى الأجرة الدقيقة عند الحجز، بدون رسوم إضافية أو تسعير حسب الطلب."
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1792139036464-9scayqrpd",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "heading": "هل أنت مستعد لرحلتك من {from} إلى {to}؟",
+          "description": "احجز نقلك الطويل اليوم وسافر بالفخامة والراحة."
+        },
+        "items": [
+          {
+            "id": "cta-contact",
+            "label": "احجز الآن",
+            "href": "{langPrefix}/contact",
+            "style": "primary",
+            "icon": ""
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

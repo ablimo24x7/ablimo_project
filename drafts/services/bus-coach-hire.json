@@ -1,0 +1,293 @@
+{
+  "pageType": "service",
+  "slug": "bus-coach-hire",
+  "title": "Group & Coach Charter",
+  "subtitle": "Executive coaches, minibuses, and motorcoach charters for teams, delegations, and groups travelling together.",
+  "desc": "Minibuses, executive coaches, and motorcoach charters for teams, delegations, and large groups.",
+  "heroImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1920&h=800&fit=crop",
+  "breadcrumb": "Group & Coach Charter",
+  "features": [
+    {
+      "icon": "",
+      "title": "Right-Sized Vehicles",
+      "desc": "From 8-seat minibuses to 49-seat executive coaches, our fleet fits your group and luggage perfectly."
+    },
+    {
+      "icon": "",
+      "title": "On-Time Charting",
+      "desc": "Reliable scheduling keeps your whole group moving to plan, whether single- or multi-day."
+    },
+    {
+      "icon": "",
+      "title": "Flexible Itineraries",
+      "desc": "Custom routes, stops, and schedules designed around your group's unique plan."
+    }
+  ],
+  "cardsHeading": "Charter Options",
+  "cardsDesc": "A fleet built for group travel, from compact crews to full delegations.",
+  "cards": [
+    {
+      "image": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&h=500&fit=crop",
+      "tag": "Minibus",
+      "title": "Minibuses (8–16 pax)",
+      "desc": "Comfortable mid-size vehicles ideal for teams, families, and small delegations."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=500&fit=crop",
+      "tag": "Executive Coach",
+      "title": "Executive Coaches (20–30 pax)",
+      "desc": "Business-class coaches with reclining seats and onboard comforts for discerning groups."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=500&fit=crop",
+      "tag": "Motorcoach",
+      "title": "Motorcoaches (40+ pax)",
+      "desc": "Full-size motorcoaches for large groups, events, and long-distance charters."
+    }
+  ],
+  "sections": [
+    {
+      "image": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&h=600&fit=crop",
+      "imageAlt": "Group travelling together",
+      "title": "One Journey, One Group, Zero Friction",
+      "paragraphs": [
+        "Moving a group is about more than reserving a vehicle-it is about keeping your people together, on time, and comfortable. AB handles every detail so you can focus on your group.",
+        "Our coordinators manage the itinerary, the drivers, and the logistics, while your group simply enjoys the journey."
+      ],
+      "bullets": [
+        {
+          "text": "Dedicated journey coordinator for every charter"
+        },
+        {
+          "text": "Comfortable, well-maintained, inspection-ready vehicles"
+        },
+        {
+          "text": "Multi-day and multi-vehicle charters supported"
+        }
+      ],
+      "imageSide": "left",
+      "dark": true
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What is the minimum group size for a charter?",
+      "a": "We charter for groups of roughly eight passengers and above, though smaller executive transfers are also available."
+    },
+    {
+      "q": "Can you charter coaches for a multi-day itinerary?",
+      "a": "Yes, including overnight journeys and multi-day programmes with coordinated driver planning."
+    },
+    {
+      "q": "Are drivers experienced with large coach operations?",
+      "a": "Our coach drivers hold the appropriate licensing and undergo rigorous training and background vetting."
+    }
+  ],
+  "ctaTitle": "Charter Your Group Transport",
+  "ctaDesc": "Tell us your group size, route, and schedule, and we will match the perfect coach or fleet to your journey.",
+  "ctaLabel": "Request a Group Charter",
+  "ctaHref": "",
+  "pageSections": [
+    {
+      "id": "sec-1792846212744-rbtr8u3pb",
+      "type": "hero",
+      "variant": "background-content",
+      "order": 0,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Premium Mobility",
+        "title": "Group & Coach Charter",
+        "titleHighlight": "",
+        "description": "Executive coaches, minibuses, and motorcoach charters for teams, delegations, and groups travelling together."
+      },
+      "items": [
+        {
+          "label": "Get Started",
+          "href": "#contact",
+          "style": "primary",
+          "icon": "ArrowRight",
+          "iconPosition": "right"
+        }
+      ],
+      "settings": {
+        "minHeight": "85vh",
+        "overlayOpacity": 85,
+        "contentPosition": "left",
+        "buttonLayout": "row"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1920&h=800&fit=crop",
+        "padding": "none",
+        "border": false,
+        "textAlign": "left",
+        "overlayGradient": "default"
+      }
+    },
+    {
+      "id": "sec-1792846212744-flsoitbvb",
+      "type": "serviceCards",
+      "variant": "3-column",
+      "order": 1,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Our Services",
+        "heading": "Group & Coach Charter Features.",
+        "description": "Executive coaches, minibuses, and motorcoach charters for teams, delegations, and groups travelling together."
+      },
+      "items": [
+        {
+          "id": "itm-1792846212744-ea9ra583n",
+          "icon": "Shield",
+          "title": "Right-Sized Vehicles",
+          "description": "From 8-seat minibuses to 49-seat executive coaches, our fleet fits your group and luggage perfectly.",
+          "actions": []
+        },
+        {
+          "id": "itm-1792846212744-8jr6hx1sh",
+          "icon": "Shield",
+          "title": "On-Time Charting",
+          "description": "Reliable scheduling keeps your whole group moving to plan, whether single- or multi-day.",
+          "actions": []
+        },
+        {
+          "id": "itm-1792846212744-6pe3catqv",
+          "icon": "Shield",
+          "title": "Flexible Itineraries",
+          "description": "Custom routes, stops, and schedules designed around your group's unique plan.",
+          "actions": []
+        }
+      ],
+      "settings": {
+        "columns": "3",
+        "showHeader": true
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1792846212744-8yelay08j",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 2,
+      "enabled": true,
+      "content": {
+        "heading": "One Journey, One Group, Zero Friction",
+        "description": "Moving a group is about more than reserving a vehicle-it is about keeping your people together, on time, and comfortable. AB handles every detail so you can focus on your group.\n\nOur coordinators manage the itinerary, the drivers, and the logistics, while your group simply enjoys the journey.",
+        "items": [
+          {
+            "id": "itm-1792846212744-jw6r70j26",
+            "icon": "CheckCircle",
+            "heading": "Dedicated journey coordinator for every charter",
+            "description": ""
+          },
+          {
+            "id": "itm-1792846212744-2r0xvih9c",
+            "icon": "CheckCircle",
+            "heading": "Comfortable, well-maintained, inspection-ready vehicles",
+            "description": ""
+          },
+          {
+            "id": "itm-1792846212744-7foq7v2pv",
+            "icon": "CheckCircle",
+            "heading": "Multi-day and multi-vehicle charters supported",
+            "description": ""
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&h=600&fit=crop",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1792846212744-6z8tvbqfs",
+      "type": "faq",
+      "variant": "default",
+      "order": 3,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Knowledge Base",
+        "heading": "Frequently Asked Questions",
+        "description": "",
+        "items": [
+          {
+            "id": "itm-1792846212744-l35gdwrxn",
+            "question": "What is the minimum group size for a charter?",
+            "answer": "We charter for groups of roughly eight passengers and above, though smaller executive transfers are also available."
+          },
+          {
+            "id": "itm-1792846212744-v44ptl8hw",
+            "question": "Can you charter coaches for a multi-day itinerary?",
+            "answer": "Yes, including overnight journeys and multi-day programmes with coordinated driver planning."
+          },
+          {
+            "id": "itm-1792846212744-8e7k8llcl",
+            "question": "Are drivers experienced with large coach operations?",
+            "answer": "Our coach drivers hold the appropriate licensing and undergo rigorous training and background vetting."
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "variant": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1792846212744-cubi4tctk",
+      "type": "ctaBanner",
+      "variant": "centered",
+      "order": 4,
+      "enabled": true,
+      "content": {
+        "heading": "Charter Your Group Transport",
+        "description": "Tell us your group size, route, and schedule, and we will match the perfect coach or fleet to your journey."
+      },
+      "items": [
+        {
+          "label": "Request a Group Charter",
+          "href": "#contact",
+          "style": "primary",
+          "icon": "ArrowRight"
+        }
+      ],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    }
+  ],
+  "seo": {
+    "metaTitle": "Group & Coach Charter | AB",
+    "metaDescription": "Minibuses, executive coaches, and motorcoach charters for teams, delegations, and large groups across the Gulf.",
+    "ogImage": ""
+  },
+  "status": "published",
+  "showInMenu": true,
+  "order": 4,
+  "locale": "en",
+  "exportedAt": "2026-11-10T12:32:13.881Z"
+}

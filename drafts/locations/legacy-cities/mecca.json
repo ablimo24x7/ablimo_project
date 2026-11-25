@@ -1,0 +1,2178 @@
+{
+  "pageType": "city",
+  "refKey": "saudi-arabia/mecca",
+  "countrySlug": "saudi-arabia",
+  "citySlug": "mecca",
+  "path": "/locations/saudi-arabia/mecca",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for mecca (saudi-arabia)",
+  "exportedAt": "2026-11-10T11:52:18.042Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538042-92vrkck74",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Makkah",
+          "titleHighlight": "",
+          "description": "AB provides executive ground mobility and professional chauffeur service Makkah for private delegations, business visitors, and pilgrims. Our discreet private driver team manages transfers between King Abdulaziz International Airport (JED) and prestigious hotels across Makkah with seamless coordination.\n\nEach journey delivers exceptional punctuality, refined comfort, and operational precision throughout the holy city."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Makkah skyline view with executive transportation vehicle"
+        }
+      },
+      {
+        "id": "sec-1794311538042-4bkof6qwh",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-n4dehx2cr",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Makkah fleet",
+          "heading": "Choose your Makkah chauffeur class",
+          "description": "Every vehicle in our Makkah fleet is GPS tracked and detailed before each journey. Our fleet options accommodate corporate executives, diplomatic visits, and extended family groups travelling together.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "mecca-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image2.jpg",
+            "imageAlt": "Standard Sedan chauffeur service Makkah",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar [Confirm]",
+            "idealFor": "Ideal for: Solo business travellers and short transfers",
+            "description": "Enjoy reliable urban transit and swift point to point journeys with our dependable standard sedan option across central Makkah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image3.jpg",
+            "imageAlt": "Business Sedan private driver Makkah",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate meetings and daily transfers",
+            "description": "Our business class vehicle provides leather seating, climate control, and generous legroom for productive business travel throughout Makkah districts.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image4.jpg",
+            "imageAlt": "First Class Sedan luxury car Makkah",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP delegates and senior executives",
+            "description": "Experience premier automotive craftsmanship with acoustic insulation and supreme comfort tailored for prestigious journeys and discreet executive movement in Makkah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service Makkah",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Small delegations and family pilgrimage",
+            "description": "Spacious luggage capacity combined with elevated ride height provides effortless regional transfers and comfortable group travel from Makkah to neighbouring destinations.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image6.jpg",
+            "imageAlt": "Premium MPV limousine service Makkah",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Executive teams and luggage flexibility",
+            "description": "Face to face conference seating configurations and easy boarding make this luxury people carrier an exceptional choice for collaborative corporate delegations.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image7.jpg",
+            "imageAlt": "Executive Van bus rental Makkah",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: Large delegations and hospitality groups",
+            "description": "Coordinated transport for large groups with ample baggage stowage and dedicated professional driver logistics across regional highway routes.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-2ymt7fxfi",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Makkah and beyond",
+          "description": "AB coordinates individual city connections and extensive cross province routes with fixed transparent scheduling.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "mecca-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "JED to Makkah hotels near the Haram",
+            "description": "Direct private transfer from the airport terminal to luxury hotel towers in central Makkah.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-2",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "JED to Al Aziziyah",
+            "description": "Convenient scheduled service connecting arriving flights directly to residential and commercial quarters in Al Aziziyah.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-3",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "Makkah to Madinah",
+            "description": "Seamless intercity transfer Makkah connection along the primary highway corridor linking both holy cities in complete comfort.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/mecca/routes/mecca-to-medina",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-4",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "Makkah to Jeddah",
+            "description": "Executive ground transport between hospitality suites in Makkah and corporate headquarters or diplomatic offices in Jeddah.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/mecca/routes/mecca-to-jeddah",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-5",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "Jeddah airport (JED) to Makkah",
+            "description": "Full arrival assistance and rapid onward dispatch for regional international passengers arriving at terminal facilities.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-6",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "Makkah to Taif",
+            "description": "Scenic and tranquil mountain route transit between Makkah and the highland city of Taif with experienced chauffeurs.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-bl16kdrkb",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Makkah",
+          "heading": "One partner for every movement in Makkah",
+          "description": "AB delivers comprehensive ground logistics including corporate transfers, executive events, and private pilgrimage travel across the Kingdom."
+        },
+        "items": [
+          {
+            "id": "mecca-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in Makkah",
+            "description": "Book our tailored Chauffeur & VIP in Makkah service for high profile executives and private dignitaries.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Makkah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-svc-2",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Makkah",
+            "description": "Coordinate large event movements through our dedicated Bus & Coach Hire in Makkah fleet.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Makkah",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-svc-3",
+            "icon": "Shield",
+            "title": "Religious Tourism",
+            "description": "Organise specialised pilgrim transfers via our professional Religious Tourism logistics team.",
+            "actions": [
+              {
+                "label": "Religious Tourism",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-xp9dsf41n",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Abdulaziz International Airport (JED)",
+          "description": "Arriving at King Abdulaziz International Airport (JED) represents the start of your spiritual or professional mission in the western province. AB provides flight tracking on every flight, adjusting immediately for advance arrivals or unexpected airborne delays. Your professional chauffeur conducts a formal meet and greet with a personalised name board inside the terminal hall. The designated meeting point is [Confirm], where your luggage is handled with utmost care. Guests benefit from inclusive free waiting time of [Confirm] to clear immigration and baggage reclaim smoothly. Your dedicated vehicle then embarks on an unhindered journey to your accommodation in Makkah.",
+          "items": [
+            {
+              "id": "mecca-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival is monitored in real time through our operations platform."
+            },
+            {
+              "id": "mecca-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal with professional identification boards."
+            },
+            {
+              "id": "mecca-apt-b-3",
+              "icon": "Clock",
+              "heading": "JED to Makkah hotels",
+              "description": "[Confirm] minutes to destinations near the Haram."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Abdulaziz International Airport (JED)"
+        }
+      },
+      {
+        "id": "sec-1794311538042-zapwi2qjv",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-p2hj4d530",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Makkah",
+          "description": "AB supports corporate transport, religious movements, and government protocol assignments across Makkah. Our operational network covers major financial districts, conference facilities, and hospitality towers. Drivers strictly respect regulatory boundaries, acknowledging that non Muslims cannot enter the Haram area and re-routing appropriately across commercial sectors.",
+          "items": [
+            {
+              "id": "mecca-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business and Events",
+              "description": "Al Aziziyah business district · Makkah Chamber of Commerce · Jabal Omar commercial centre · Abraj Al Bait conference halls · Umm Al Qura University convention centres · Makkah Clock Royal Tower event venues"
+            },
+            {
+              "id": "mecca-cov-2",
+              "icon": "Shield",
+              "heading": "Heritage and Government",
+              "description": "Makkah Museum in Al Zahir · Hira Cultural District · Mina and Arafat pilgrimage corridors · Makkah Municipality Headquarters · Emirate of Makkah Province offices · Ministry of Hajj and Umrah facilities"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Makkah"
+        }
+      },
+      {
+        "id": "sec-1794311538042-s96gca3ra",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Makkah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-btyw35l6c",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB operations supporting Makkah",
+          "description": "AB supports Makkah through its integrated regional operations network and continuous 24/7 dispatch infrastructure. Central vehicle tracking and journey coordination are managed directly through our primary operations centre in the capital city. The nearest administrative base is AB Riyadh headquarters, subject to confirmation.",
+          "items": [
+            {
+              "id": "mecca-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters and 24/7 dispatch [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "mecca-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538042-kl8wwwpn6",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Makkah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538042-anytke4sw",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Makkah.",
+          "description": "Reserve executive chauffeur service Makkah with our central dispatch team on +966 58 111 8720 for dependable corporate and VIP transport."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538042-92vrkck74",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Makkah",
+          "titleHighlight": "",
+          "description": "AB provides executive ground mobility and professional chauffeur service Makkah for private delegations, business visitors, and pilgrims. Our discreet private driver team manages transfers between King Abdulaziz International Airport (JED) and prestigious hotels across Makkah with seamless coordination.\n\nEach journey delivers exceptional punctuality, refined comfort, and operational precision throughout the holy city."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Makkah skyline view with executive transportation vehicle"
+        }
+      },
+      {
+        "id": "sec-1794311538042-4bkof6qwh",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-n4dehx2cr",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Makkah fleet",
+          "heading": "Choose your Makkah chauffeur class",
+          "description": "Every vehicle in our Makkah fleet is GPS tracked and detailed before each journey. Our fleet options accommodate corporate executives, diplomatic visits, and extended family groups travelling together.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "mecca-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image2.jpg",
+            "imageAlt": "Standard Sedan chauffeur service Makkah",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar [Confirm]",
+            "idealFor": "Ideal for: Solo business travellers and short transfers",
+            "description": "Enjoy reliable urban transit and swift point to point journeys with our dependable standard sedan option across central Makkah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image3.jpg",
+            "imageAlt": "Business Sedan private driver Makkah",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate meetings and daily transfers",
+            "description": "Our business class vehicle provides leather seating, climate control, and generous legroom for productive business travel throughout Makkah districts.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image4.jpg",
+            "imageAlt": "First Class Sedan luxury car Makkah",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP delegates and senior executives",
+            "description": "Experience premier automotive craftsmanship with acoustic insulation and supreme comfort tailored for prestigious journeys and discreet executive movement in Makkah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service Makkah",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Small delegations and family pilgrimage",
+            "description": "Spacious luggage capacity combined with elevated ride height provides effortless regional transfers and comfortable group travel from Makkah to neighbouring destinations.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image6.jpg",
+            "imageAlt": "Premium MPV limousine service Makkah",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Executive teams and luggage flexibility",
+            "description": "Face to face conference seating configurations and easy boarding make this luxury people carrier an exceptional choice for collaborative corporate delegations.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image7.jpg",
+            "imageAlt": "Executive Van bus rental Makkah",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: Large delegations and hospitality groups",
+            "description": "Coordinated transport for large groups with ample baggage stowage and dedicated professional driver logistics across regional highway routes.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-2ymt7fxfi",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Makkah and beyond",
+          "description": "AB coordinates individual city connections and extensive cross province routes with fixed transparent scheduling.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "mecca-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "JED to Makkah hotels near the Haram",
+            "description": "Direct private transfer from the airport terminal to luxury hotel towers in central Makkah.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-2",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "JED to Al Aziziyah",
+            "description": "Convenient scheduled service connecting arriving flights directly to residential and commercial quarters in Al Aziziyah.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-3",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "Makkah to Madinah",
+            "description": "Seamless intercity transfer Makkah connection along the primary highway corridor linking both holy cities in complete comfort.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/mecca/routes/mecca-to-medina",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-4",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "Makkah to Jeddah",
+            "description": "Executive ground transport between hospitality suites in Makkah and corporate headquarters or diplomatic offices in Jeddah.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/mecca/routes/mecca-to-jeddah",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-5",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "Jeddah airport (JED) to Makkah",
+            "description": "Full arrival assistance and rapid onward dispatch for regional international passengers arriving at terminal facilities.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-6",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "Makkah to Taif",
+            "description": "Scenic and tranquil mountain route transit between Makkah and the highland city of Taif with experienced chauffeurs.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-bl16kdrkb",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Makkah",
+          "heading": "One partner for every movement in Makkah",
+          "description": "AB delivers comprehensive ground logistics including corporate transfers, executive events, and private pilgrimage travel across the Kingdom."
+        },
+        "items": [
+          {
+            "id": "mecca-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in Makkah",
+            "description": "Book our tailored Chauffeur & VIP in Makkah service for high profile executives and private dignitaries.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Makkah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-svc-2",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Makkah",
+            "description": "Coordinate large event movements through our dedicated Bus & Coach Hire in Makkah fleet.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Makkah",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-svc-3",
+            "icon": "Shield",
+            "title": "Religious Tourism",
+            "description": "Organise specialised pilgrim transfers via our professional Religious Tourism logistics team.",
+            "actions": [
+              {
+                "label": "Religious Tourism",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-xp9dsf41n",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Abdulaziz International Airport (JED)",
+          "description": "Arriving at King Abdulaziz International Airport (JED) represents the start of your spiritual or professional mission in the western province. AB provides flight tracking on every flight, adjusting immediately for advance arrivals or unexpected airborne delays. Your professional chauffeur conducts a formal meet and greet with a personalised name board inside the terminal hall. The designated meeting point is [Confirm], where your luggage is handled with utmost care. Guests benefit from inclusive free waiting time of [Confirm] to clear immigration and baggage reclaim smoothly. Your dedicated vehicle then embarks on an unhindered journey to your accommodation in Makkah.",
+          "items": [
+            {
+              "id": "mecca-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival is monitored in real time through our operations platform."
+            },
+            {
+              "id": "mecca-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal with professional identification boards."
+            },
+            {
+              "id": "mecca-apt-b-3",
+              "icon": "Clock",
+              "heading": "JED to Makkah hotels",
+              "description": "[Confirm] minutes to destinations near the Haram."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Abdulaziz International Airport (JED)"
+        }
+      },
+      {
+        "id": "sec-1794311538042-zapwi2qjv",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-p2hj4d530",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Makkah",
+          "description": "AB supports corporate transport, religious movements, and government protocol assignments across Makkah. Our operational network covers major financial districts, conference facilities, and hospitality towers. Drivers strictly respect regulatory boundaries, acknowledging that non Muslims cannot enter the Haram area and re-routing appropriately across commercial sectors.",
+          "items": [
+            {
+              "id": "mecca-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business and Events",
+              "description": "Al Aziziyah business district · Makkah Chamber of Commerce · Jabal Omar commercial centre · Abraj Al Bait conference halls · Umm Al Qura University convention centres · Makkah Clock Royal Tower event venues"
+            },
+            {
+              "id": "mecca-cov-2",
+              "icon": "Shield",
+              "heading": "Heritage and Government",
+              "description": "Makkah Museum in Al Zahir · Hira Cultural District · Mina and Arafat pilgrimage corridors · Makkah Municipality Headquarters · Emirate of Makkah Province offices · Ministry of Hajj and Umrah facilities"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Makkah"
+        }
+      },
+      {
+        "id": "sec-1794311538042-s96gca3ra",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Makkah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-btyw35l6c",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB operations supporting Makkah",
+          "description": "AB supports Makkah through its integrated regional operations network and continuous 24/7 dispatch infrastructure. Central vehicle tracking and journey coordination are managed directly through our primary operations centre in the capital city. The nearest administrative base is AB Riyadh headquarters, subject to confirmation.",
+          "items": [
+            {
+              "id": "mecca-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters and 24/7 dispatch [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "mecca-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538042-kl8wwwpn6",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Makkah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538042-anytke4sw",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Makkah.",
+          "description": "Reserve executive chauffeur service Makkah with our central dispatch team on +966 58 111 8720 for dependable corporate and VIP transport."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538042-m5axam5o9",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service in Makkah",
+          "titleHighlight": "",
+          "description": "AB provides executive ground mobility and professional chauffeur service Makkah for private delegations, business visitors, and pilgrims. Our discreet private driver team manages transfers between King Abdulaziz International Airport (JED) and prestigious hotels across Makkah with seamless coordination.\n\nEach journey delivers exceptional punctuality, refined comfort, and operational precision throughout the holy city."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Makkah skyline view with executive transportation vehicle"
+        }
+      },
+      {
+        "id": "sec-1794311538042-mnt6sc5qx",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-m2p8d1md9",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Makkah fleet",
+          "heading": "Choose your Makkah chauffeur class",
+          "description": "Every vehicle in our Makkah fleet is GPS tracked and detailed before each journey. Our fleet options accommodate corporate executives, diplomatic visits, and extended family groups travelling together.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "mecca-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image2.jpg",
+            "imageAlt": "Standard Sedan chauffeur service Makkah",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar [Confirm]",
+            "idealFor": "Ideal for: Solo business travellers and short transfers",
+            "description": "Enjoy reliable urban transit and swift point to point journeys with our dependable standard sedan option across central Makkah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image3.jpg",
+            "imageAlt": "Business Sedan private driver Makkah",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar [Confirm]",
+            "idealFor": "Ideal for: Corporate meetings and daily transfers",
+            "description": "Our business class vehicle provides leather seating, climate control, and generous legroom for productive business travel throughout Makkah districts.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image4.jpg",
+            "imageAlt": "First Class Sedan luxury car Makkah",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar [Confirm]",
+            "idealFor": "Ideal for: VIP delegates and senior executives",
+            "description": "Experience premier automotive craftsmanship with acoustic insulation and supreme comfort tailored for prestigious journeys and discreet executive movement in Makkah.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image5.jpg",
+            "imageAlt": "Executive SUV chauffeur service Makkah",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar [Confirm]",
+            "idealFor": "Ideal for: Small delegations and family pilgrimage",
+            "description": "Spacious luggage capacity combined with elevated ride height provides effortless regional transfers and comfortable group travel from Makkah to neighbouring destinations.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image6.jpg",
+            "imageAlt": "Premium MPV limousine service Makkah",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar [Confirm]",
+            "idealFor": "Ideal for: Executive teams and luggage flexibility",
+            "description": "Face to face conference seating configurations and easy boarding make this luxury people carrier an exceptional choice for collaborative corporate delegations.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "mecca-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image7.jpg",
+            "imageAlt": "Executive Van bus rental Makkah",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar [Confirm]",
+            "idealFor": "Ideal for: Large delegations and hospitality groups",
+            "description": "Coordinated transport for large groups with ample baggage stowage and dedicated professional driver logistics across regional highway routes.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-h1f8b83jg",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Makkah and beyond",
+          "description": "AB coordinates individual city connections and extensive cross province routes with fixed transparent scheduling.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "mecca-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "JED to Makkah hotels near the Haram",
+            "description": "Direct private transfer from the airport terminal to luxury hotel towers in central Makkah.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-2",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "JED to Al Aziziyah",
+            "description": "Convenient scheduled service connecting arriving flights directly to residential and commercial quarters in Al Aziziyah.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-3",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "Makkah to Madinah",
+            "description": "Seamless intercity transfer Makkah connection along the primary highway corridor linking both holy cities in complete comfort.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/mecca/routes/mecca-to-medina",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-4",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "Makkah to Jeddah",
+            "description": "Executive ground transport between hospitality suites in Makkah and corporate headquarters or diplomatic offices in Jeddah.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/saudi-arabia/mecca/routes/mecca-to-jeddah",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-5",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "Jeddah airport (JED) to Makkah",
+            "description": "Full arrival assistance and rapid onward dispatch for regional international passengers arriving at terminal facilities.",
+            "subtext": "From [SAR price]",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-jrny-6",
+            "icon": "Map",
+            "tag": "City or Intercity",
+            "title": "Makkah to Taif",
+            "description": "Scenic and tranquil mountain route transit between Makkah and the highland city of Taif with experienced chauffeurs.",
+            "subtext": "From [SAR price] · [Confirm] hours",
+            "actions": [
+              {
+                "label": "Book transfer",
+                "href": "/book",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-glt7r6ct0",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Makkah",
+          "heading": "One partner for every movement in Makkah",
+          "description": "AB delivers comprehensive ground logistics including corporate transfers, executive events, and private pilgrimage travel across the Kingdom."
+        },
+        "items": [
+          {
+            "id": "mecca-svc-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP in Makkah",
+            "description": "Book our tailored Chauffeur & VIP in Makkah service for high profile executives and private dignitaries.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Makkah",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-svc-2",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Makkah",
+            "description": "Coordinate large event movements through our dedicated Bus & Coach Hire in Makkah fleet.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Makkah",
+                "href": "/services/event-transport",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "mecca-svc-3",
+            "icon": "Shield",
+            "title": "Religious Tourism",
+            "description": "Organise specialised pilgrim transfers via our professional Religious Tourism logistics team.",
+            "actions": [
+              {
+                "label": "Religious Tourism",
+                "href": "/services/chauffeur-service",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-wjaktcgvv",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at King Abdulaziz International Airport (JED)",
+          "description": "Arriving at King Abdulaziz International Airport (JED) represents the start of your spiritual or professional mission in the western province. AB provides flight tracking on every flight, adjusting immediately for advance arrivals or unexpected airborne delays. Your professional chauffeur conducts a formal meet and greet with a personalised name board inside the terminal hall. The designated meeting point is [Confirm], where your luggage is handled with utmost care. Guests benefit from inclusive free waiting time of [Confirm] to clear immigration and baggage reclaim smoothly. Your dedicated vehicle then embarks on an unhindered journey to your accommodation in Makkah.",
+          "items": [
+            {
+              "id": "mecca-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Every arrival is monitored in real time through our operations platform."
+            },
+            {
+              "id": "mecca-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Inside the terminal with professional identification boards."
+            },
+            {
+              "id": "mecca-apt-b-3",
+              "icon": "Clock",
+              "heading": "JED to Makkah hotels",
+              "description": "[Confirm] minutes to destinations near the Haram."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-saudi-arabia-mecca-images/image1.jpg",
+          "backgroundAlt": "Arriving at King Abdulaziz International Airport (JED)"
+        }
+      },
+      {
+        "id": "sec-1794311538042-o6o34lbss",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-w5afz3xbg",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Makkah",
+          "description": "AB supports corporate transport, religious movements, and government protocol assignments across Makkah. Our operational network covers major financial districts, conference facilities, and hospitality towers. Drivers strictly respect regulatory boundaries, acknowledging that non Muslims cannot enter the Haram area and re-routing appropriately across commercial sectors.",
+          "items": [
+            {
+              "id": "mecca-cov-1",
+              "icon": "Briefcase",
+              "heading": "Business and Events",
+              "description": "Al Aziziyah business district · Makkah Chamber of Commerce · Jabal Omar commercial centre · Abraj Al Bait conference halls · Umm Al Qura University convention centres · Makkah Clock Royal Tower event venues"
+            },
+            {
+              "id": "mecca-cov-2",
+              "icon": "Shield",
+              "heading": "Heritage and Government",
+              "description": "Makkah Museum in Al Zahir · Hira Cultural District · Mina and Arafat pilgrimage corridors · Makkah Municipality Headquarters · Emirate of Makkah Province offices · Ministry of Hajj and Umrah facilities"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Makkah"
+        }
+      },
+      {
+        "id": "sec-1794311538042-9jk7lq2ct",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Makkah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538042-8z7nd9181",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "AB operations supporting Makkah",
+          "description": "AB supports Makkah through its integrated regional operations network and continuous 24/7 dispatch infrastructure. Central vehicle tracking and journey coordination are managed directly through our primary operations centre in the capital city. The nearest administrative base is AB Riyadh headquarters, subject to confirmation.",
+          "items": [
+            {
+              "id": "mecca-hq-1",
+              "icon": "Map",
+              "heading": "AB Riyadh, headquarters and 24/7 dispatch [Confirm nearest office]",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "mecca-hq-2",
+              "icon": "Phone",
+              "heading": "+966 58 111 8720",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Building%203036%2C%20Office%2008%2C%202nd%20Floor%2C%20Umar%20Ibn%20Abdulaziz%20Road%2C%20Al%20Malaz%2C%20Riyadh%2C%20Saudi%20Arabia",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538042-5hvrpz84t",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Makkah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538042-z9iani1fs",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Makkah.",
+          "description": "Reserve executive chauffeur service Makkah with our central dispatch team on +966 58 111 8720 for dependable corporate and VIP transport."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

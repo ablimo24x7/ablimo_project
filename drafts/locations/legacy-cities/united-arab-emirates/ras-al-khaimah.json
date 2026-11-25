@@ -1,0 +1,2166 @@
+{
+  "pageType": "city",
+  "refKey": "united-arab-emirates/ras-al-khaimah",
+  "countrySlug": "united-arab-emirates",
+  "citySlug": "ras-al-khaimah",
+  "path": "/locations/united-arab-emirates/ras-al-khaimah",
+  "layoutName": "legacy-10-to-12-sections",
+  "description": "Previous 12-section layout for ras-al-khaimah (united-arab-emirates)",
+  "exportedAt": "2026-11-10T11:52:18.056Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794311538056-81v89ieja",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Ras Al Khaimah",
+          "titleHighlight": "",
+          "description": "AB provides premier chauffeur service Ras Al Khaimah solutions for executive travel, corporate events and private airport journeys across the growing coastal emirate. Our managed transport delivers refined vehicles and courteous drivers for every journey.\n\nTravellers between Sharjah International Airport (SHJ) and Ras Al Khaimah rely on professional chauffeurs dedicated to punctual timing and discreet passenger comfort. We coordinate every route with meticulous attention to passenger schedules and flight movements."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Panoramic view of Ras Al Khaimah skyline and coastal waterfront at dusk"
+        }
+      },
+      {
+        "id": "sec-1794311538056-tghdhnkgh",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-nacaad3zt",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Ras Al Khaimah fleet",
+          "heading": "Executive vehicles for chauffeur service Ras Al Khaimah travel",
+          "description": "Every vehicle scheduled for travel in Ras Al Khaimah is prepared meticulously and dispatched directly from our regional office, AB Dubai. Our operations team maintains rigorous safety, hygiene and mechanical standards across the complete premium collection.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "ras-al-khaimah-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image2.jpg",
+            "imageAlt": "Standard executive sedan prepared for chauffeur service in Ras Al Khaimah",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar",
+            "idealFor": "Ideal for: Daily city travel and transfers",
+            "description": "A comfortable option for individual business travel across Ras Al Khaimah districts. Guests enjoy quiet cabins, climate control and professional chauffeurs who navigate local routes with complete route familiarity and courteous attention.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image3.jpg",
+            "imageAlt": "Business sedan parked outside a corporate office in Ras Al Khaimah",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar",
+            "idealFor": "Ideal for: Executive meetings and corporate travel",
+            "description": "Engineered for corporate executives requiring mobile productivity between meetings. The refined cabin provides leather seating, acoustic insulation and charging points for seamless working sessions between Ras Al Khaimah and neighbouring commercial hubs.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image4.jpg",
+            "imageAlt": "First class executive sedan for VIP hospitality in Ras Al Khaimah",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP hospitality and protocol travel",
+            "description": "Our flagship sedan delivers superior prestige for distinguished guests and executive leadership. Reclining rear seats, advanced ride damping and discreet personal service create an unmatched environment for luxury car travel.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image5.jpg",
+            "imageAlt": "Executive luxury SUV for delegation and family travel in Ras Al Khaimah",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar",
+            "idealFor": "Ideal for: Delegations and spacious family journeys",
+            "description": "Spacious and commanding, this full size luxury SUV accommodates delegations with generous luggage capacity. Elevated seating and expansive interior room provide relaxed travel throughout coastal Ras Al Khaimah and across regional highways.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image6.jpg",
+            "imageAlt": "Premium executive MPV for corporate delegation transport in Ras Al Khaimah",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar",
+            "idealFor": "Ideal for: Mobile meetings and executive teams",
+            "description": "Configured with face to face conference seating, this cabin functions as a mobile workspace. Ideal for corporate roadshows and visiting delegations that value collaborative discussions while travelling between scheduled appointments.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image7.jpg",
+            "imageAlt": "Executive passenger minibus prepared for group logistics across Ras Al Khaimah",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Event groups and airport shuttles",
+            "description": "Designed for larger parties requiring coordinated group transit without compromising comfort. Dedicated luggage space, wide aisles and individual climate vents support seamless logistics for conferences and private delegations.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-uituxc5jh",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Ras Al Khaimah and beyond",
+          "description": "We provide point to point transfers connecting coastal resorts, commercial districts and airport terminals across the northern emirates.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "ras-al-khaimah-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to Ras Al Khaimah Corniche",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to Al Nuaimiya",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-jrny-3",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Ras Al Khaimah to Dubai",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 30m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/ras-al-khaimah/routes/ras-al-khaimah-to-dubai",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Ras Al Khaimah to Sharjah",
+            "description": "",
+            "subtext": "Direct Border Transfer · 20m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/ras-al-khaimah/routes/ras-al-khaimah-to-sharjah",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-l9zductaj",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Ras Al Khaimah",
+          "heading": "One partner for every movement in Ras Al Khaimah",
+          "description": "AB delivers managed ground logistics, luxury transport and coach coordination tailored to commercial and private requirements throughout the northern emirate."
+        },
+        "items": [
+          {
+            "id": "ras-al-khaimah-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Ras Al Khaimah",
+            "description": "Dedicated hourly hire and daily executive mobility for corporate leadership and private guests.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Ras Al Khaimah",
+                "href": "/services/chauffeur-vip",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-svc-2",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Ras Al Khaimah",
+            "description": "High-capacity group transport for conferences, staff logistics, and large delegations.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Ras Al Khaimah",
+                "href": "/services/bus-coach-hire",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-svc-3",
+            "icon": "Plane",
+            "title": "Airport Transfers SHJ & DXB",
+            "description": "Flight-tracked arrivals and departures with curbside assistance and terminal greeting.",
+            "actions": [
+              {
+                "label": "Airport Transfers SHJ & DXB",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-xf8hj5dv3",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Sharjah International Airport (SHJ)",
+          "description": "Arriving passengers at Sharjah International Airport (SHJ) receive dedicated support from the moment their flight touches down. Our central operations team monitors real time flight tracking for every arrival, adjusting chauffeur schedules automatically for early arrivals or flight delays. Inside the terminal, your professional chauffeur welcomes you with a personalised digital name board at the meeting point. Guests benefit from complimentary waiting time, allowing unhurried navigation through passport clearance, baggage reclaim and customs. From the terminal curb, your private driver assists with all luggage before conducting a smooth transfer to your residence, hotel or corporate office in Ras Al Khaimah.",
+          "items": [
+            {
+              "id": "ras-al-khaimah-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Automated real-time monitoring for every commercial arrival."
+            },
+            {
+              "id": "ras-al-khaimah-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Professional reception inside the terminal arrivals hall with custom name board."
+            },
+            {
+              "id": "ras-al-khaimah-apt-b-3",
+              "icon": "Clock",
+              "heading": "SHJ to Ras Al Khaimah Corniche",
+              "description": "Swift 20-30 minute direct highway transfer."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image8.jpg",
+          "backgroundAlt": "Sharjah International Airport terminal approach serving travellers to Ras Al Khaimah"
+        }
+      },
+      {
+        "id": "sec-1794311538056-4qw69rr42",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-r1z9pbcgs",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Ras Al Khaimah",
+          "description": "AB provides comprehensive coverage across the emirate, supporting executive travel between commercial centres, hospitality resorts and civic institutions. Whether your itinerary involves morning conferences, waterfront resort transfers or industrial site inspections, our drivers maintain thorough local knowledge of routes, traffic patterns and property access protocols. Seamless dispatch from our regional hub delivers punctual transport across every major municipal district.",
+          "items": [
+            {
+              "id": "ras-al-khaimah-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "Ras Al Khaimah Free Zone, City Centre Ras Al Khaimah, Nuaimiya Commercial"
+            },
+            {
+              "id": "ras-al-khaimah-cov-2",
+              "icon": "Calendar",
+              "heading": "Events and conferences",
+              "description": "Ras Al Khaimah Hotel, Bahi Ras Al Khaimah Palace, Radisson Blu Ras Al Khaimah"
+            },
+            {
+              "id": "ras-al-khaimah-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Ras Al Khaimah Museum, Al Zorah Golf Club, Ras Al Khaimah Corniche"
+            },
+            {
+              "id": "ras-al-khaimah-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Ras Al Khaimah Chamber of Commerce, Ras Al Khaimah Port Terminal, Al Jurf Industrial Area"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Ras Al Khaimah"
+        }
+      },
+      {
+        "id": "sec-1794311538056-t5xqyk2v3",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Ras Al Khaimah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-wo2zw7x6r",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Regional office support for chauffeur service Ras Al Khaimah",
+          "description": "Ras Al Khaimah operations are managed and dispatched directly from our regional office, AB Dubai, with strategic coordination from our Riyadh headquarters. Our fleet staging and maintenance protocols adhere to strict corporate standards. Dedicated fleet specialists handle custom itinerary requirements, airport meet and greet logistics and round the clock operations.",
+          "items": [
+            {
+              "id": "ras-al-khaimah-hq-1",
+              "icon": "Map",
+              "heading": "AB Dubai (Regional Office)",
+              "description": "Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE"
+            },
+            {
+              "id": "ras-al-khaimah-hq-2",
+              "icon": "Phone",
+              "heading": "+971 50 918 0556",
+              "description": "24/7 central dispatch and reservations"
+            },
+            {
+              "id": "ras-al-khaimah-hq-3",
+              "icon": "Map",
+              "heading": "AB Riyadh (Headquarters & 24/7 Dispatch)",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "ras-al-khaimah-hq-4",
+              "icon": "Phone",
+              "heading": "+966 59 697 8125",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Suite+206,+DBC+Building,+Al+Khabaisi,+Deira,+Dubai,+UAE",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538056-n0oqf2xgz",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Ras Al Khaimah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538056-tdjwkqsys",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Ras Al Khaimah.",
+          "description": "Book your chauffeur service Ras Al Khaimah transfer today or contact our central dispatch operations team directly on +971 50 918 0556 for tailored corporate transport coordination across the emirates.",
+          "subheading": "Reserve executive ground travel",
+          "subdescription": "Coordinate single transfers or ongoing corporate transport schedules with our 24/7 operations team."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794311538056-81v89ieja",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Ras Al Khaimah",
+          "titleHighlight": "",
+          "description": "AB provides premier chauffeur service Ras Al Khaimah solutions for executive travel, corporate events and private airport journeys across the growing coastal emirate. Our managed transport delivers refined vehicles and courteous drivers for every journey.\n\nTravellers between Sharjah International Airport (SHJ) and Ras Al Khaimah rely on professional chauffeurs dedicated to punctual timing and discreet passenger comfort. We coordinate every route with meticulous attention to passenger schedules and flight movements."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Panoramic view of Ras Al Khaimah skyline and coastal waterfront at dusk"
+        }
+      },
+      {
+        "id": "sec-1794311538056-tghdhnkgh",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-nacaad3zt",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Ras Al Khaimah fleet",
+          "heading": "Executive vehicles for chauffeur service Ras Al Khaimah travel",
+          "description": "Every vehicle scheduled for travel in Ras Al Khaimah is prepared meticulously and dispatched directly from our regional office, AB Dubai. Our operations team maintains rigorous safety, hygiene and mechanical standards across the complete premium collection.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "ras-al-khaimah-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image2.jpg",
+            "imageAlt": "Standard executive sedan prepared for chauffeur service in Ras Al Khaimah",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar",
+            "idealFor": "Ideal for: Daily city travel and transfers",
+            "description": "A comfortable option for individual business travel across Ras Al Khaimah districts. Guests enjoy quiet cabins, climate control and professional chauffeurs who navigate local routes with complete route familiarity and courteous attention.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image3.jpg",
+            "imageAlt": "Business sedan parked outside a corporate office in Ras Al Khaimah",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar",
+            "idealFor": "Ideal for: Executive meetings and corporate travel",
+            "description": "Engineered for corporate executives requiring mobile productivity between meetings. The refined cabin provides leather seating, acoustic insulation and charging points for seamless working sessions between Ras Al Khaimah and neighbouring commercial hubs.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image4.jpg",
+            "imageAlt": "First class executive sedan for VIP hospitality in Ras Al Khaimah",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP hospitality and protocol travel",
+            "description": "Our flagship sedan delivers superior prestige for distinguished guests and executive leadership. Reclining rear seats, advanced ride damping and discreet personal service create an unmatched environment for luxury car travel.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image5.jpg",
+            "imageAlt": "Executive luxury SUV for delegation and family travel in Ras Al Khaimah",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar",
+            "idealFor": "Ideal for: Delegations and spacious family journeys",
+            "description": "Spacious and commanding, this full size luxury SUV accommodates delegations with generous luggage capacity. Elevated seating and expansive interior room provide relaxed travel throughout coastal Ras Al Khaimah and across regional highways.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image6.jpg",
+            "imageAlt": "Premium executive MPV for corporate delegation transport in Ras Al Khaimah",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar",
+            "idealFor": "Ideal for: Mobile meetings and executive teams",
+            "description": "Configured with face to face conference seating, this cabin functions as a mobile workspace. Ideal for corporate roadshows and visiting delegations that value collaborative discussions while travelling between scheduled appointments.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image7.jpg",
+            "imageAlt": "Executive passenger minibus prepared for group logistics across Ras Al Khaimah",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Event groups and airport shuttles",
+            "description": "Designed for larger parties requiring coordinated group transit without compromising comfort. Dedicated luggage space, wide aisles and individual climate vents support seamless logistics for conferences and private delegations.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-uituxc5jh",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Ras Al Khaimah and beyond",
+          "description": "We provide point to point transfers connecting coastal resorts, commercial districts and airport terminals across the northern emirates.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "ras-al-khaimah-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to Ras Al Khaimah Corniche",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to Al Nuaimiya",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-jrny-3",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Ras Al Khaimah to Dubai",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 30m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/ras-al-khaimah/routes/ras-al-khaimah-to-dubai",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Ras Al Khaimah to Sharjah",
+            "description": "",
+            "subtext": "Direct Border Transfer · 20m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/ras-al-khaimah/routes/ras-al-khaimah-to-sharjah",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-l9zductaj",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Ras Al Khaimah",
+          "heading": "One partner for every movement in Ras Al Khaimah",
+          "description": "AB delivers managed ground logistics, luxury transport and coach coordination tailored to commercial and private requirements throughout the northern emirate."
+        },
+        "items": [
+          {
+            "id": "ras-al-khaimah-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Ras Al Khaimah",
+            "description": "Dedicated hourly hire and daily executive mobility for corporate leadership and private guests.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Ras Al Khaimah",
+                "href": "/services/chauffeur-vip",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-svc-2",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Ras Al Khaimah",
+            "description": "High-capacity group transport for conferences, staff logistics, and large delegations.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Ras Al Khaimah",
+                "href": "/services/bus-coach-hire",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-svc-3",
+            "icon": "Plane",
+            "title": "Airport Transfers SHJ & DXB",
+            "description": "Flight-tracked arrivals and departures with curbside assistance and terminal greeting.",
+            "actions": [
+              {
+                "label": "Airport Transfers SHJ & DXB",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-xf8hj5dv3",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Sharjah International Airport (SHJ)",
+          "description": "Arriving passengers at Sharjah International Airport (SHJ) receive dedicated support from the moment their flight touches down. Our central operations team monitors real time flight tracking for every arrival, adjusting chauffeur schedules automatically for early arrivals or flight delays. Inside the terminal, your professional chauffeur welcomes you with a personalised digital name board at the meeting point. Guests benefit from complimentary waiting time, allowing unhurried navigation through passport clearance, baggage reclaim and customs. From the terminal curb, your private driver assists with all luggage before conducting a smooth transfer to your residence, hotel or corporate office in Ras Al Khaimah.",
+          "items": [
+            {
+              "id": "ras-al-khaimah-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Automated real-time monitoring for every commercial arrival."
+            },
+            {
+              "id": "ras-al-khaimah-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Professional reception inside the terminal arrivals hall with custom name board."
+            },
+            {
+              "id": "ras-al-khaimah-apt-b-3",
+              "icon": "Clock",
+              "heading": "SHJ to Ras Al Khaimah Corniche",
+              "description": "Swift 20-30 minute direct highway transfer."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image8.jpg",
+          "backgroundAlt": "Sharjah International Airport terminal approach serving travellers to Ras Al Khaimah"
+        }
+      },
+      {
+        "id": "sec-1794311538056-4qw69rr42",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-r1z9pbcgs",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Ras Al Khaimah",
+          "description": "AB provides comprehensive coverage across the emirate, supporting executive travel between commercial centres, hospitality resorts and civic institutions. Whether your itinerary involves morning conferences, waterfront resort transfers or industrial site inspections, our drivers maintain thorough local knowledge of routes, traffic patterns and property access protocols. Seamless dispatch from our regional hub delivers punctual transport across every major municipal district.",
+          "items": [
+            {
+              "id": "ras-al-khaimah-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "Ras Al Khaimah Free Zone, City Centre Ras Al Khaimah, Nuaimiya Commercial"
+            },
+            {
+              "id": "ras-al-khaimah-cov-2",
+              "icon": "Calendar",
+              "heading": "Events and conferences",
+              "description": "Ras Al Khaimah Hotel, Bahi Ras Al Khaimah Palace, Radisson Blu Ras Al Khaimah"
+            },
+            {
+              "id": "ras-al-khaimah-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Ras Al Khaimah Museum, Al Zorah Golf Club, Ras Al Khaimah Corniche"
+            },
+            {
+              "id": "ras-al-khaimah-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Ras Al Khaimah Chamber of Commerce, Ras Al Khaimah Port Terminal, Al Jurf Industrial Area"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Ras Al Khaimah"
+        }
+      },
+      {
+        "id": "sec-1794311538056-t5xqyk2v3",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Ras Al Khaimah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-wo2zw7x6r",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Regional office support for chauffeur service Ras Al Khaimah",
+          "description": "Ras Al Khaimah operations are managed and dispatched directly from our regional office, AB Dubai, with strategic coordination from our Riyadh headquarters. Our fleet staging and maintenance protocols adhere to strict corporate standards. Dedicated fleet specialists handle custom itinerary requirements, airport meet and greet logistics and round the clock operations.",
+          "items": [
+            {
+              "id": "ras-al-khaimah-hq-1",
+              "icon": "Map",
+              "heading": "AB Dubai (Regional Office)",
+              "description": "Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE"
+            },
+            {
+              "id": "ras-al-khaimah-hq-2",
+              "icon": "Phone",
+              "heading": "+971 50 918 0556",
+              "description": "24/7 central dispatch and reservations"
+            },
+            {
+              "id": "ras-al-khaimah-hq-3",
+              "icon": "Map",
+              "heading": "AB Riyadh (Headquarters & 24/7 Dispatch)",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "ras-al-khaimah-hq-4",
+              "icon": "Phone",
+              "heading": "+966 59 697 8125",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Suite+206,+DBC+Building,+Al+Khabaisi,+Deira,+Dubai,+UAE",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538056-n0oqf2xgz",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Ras Al Khaimah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538056-tdjwkqsys",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Ras Al Khaimah.",
+          "description": "Book your chauffeur service Ras Al Khaimah transfer today or contact our central dispatch operations team directly on +971 50 918 0556 for tailored corporate transport coordination across the emirates.",
+          "subheading": "Reserve executive ground travel",
+          "subdescription": "Coordinate single transfers or ongoing corporate transport schedules with our 24/7 operations team."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794311538056-kgel015ua",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur service in Ras Al Khaimah",
+          "titleHighlight": "",
+          "description": "AB provides premier chauffeur service Ras Al Khaimah solutions for executive travel, corporate events and private airport journeys across the growing coastal emirate. Our managed transport delivers refined vehicles and courteous drivers for every journey.\n\nTravellers between Sharjah International Airport (SHJ) and Ras Al Khaimah rely on professional chauffeurs dedicated to punctual timing and discreet passenger comfort. We coordinate every route with meticulous attention to passenger schedules and flight movements."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "#fleet",
+            "style": "primary"
+          },
+          {
+            "label": "View the fleet",
+            "href": "#fleet",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default",
+          "backgroundAlt": "Panoramic view of Ras Al Khaimah skyline and coastal waterfront at dusk"
+        }
+      },
+      {
+        "id": "sec-1794311538056-xu4b3jktm",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-8fbd19tvc",
+        "type": "fleetGrid",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "The Ras Al Khaimah fleet",
+          "heading": "Executive vehicles for chauffeur service Ras Al Khaimah travel",
+          "description": "Every vehicle scheduled for travel in Ras Al Khaimah is prepared meticulously and dispatched directly from our regional office, AB Dubai. Our operations team maintains rigorous safety, hygiene and mechanical standards across the complete premium collection.",
+          "headerAction": {
+            "label": "View Full Fleet",
+            "href": "/fleet"
+          }
+        },
+        "items": [
+          {
+            "id": "ras-al-khaimah-veh-1",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image2.jpg",
+            "imageAlt": "Standard executive sedan prepared for chauffeur service in Ras Al Khaimah",
+            "category": "Standard Sedan",
+            "name": "Typical model: Toyota Camry or similar",
+            "idealFor": "Ideal for: Daily city travel and transfers",
+            "description": "A comfortable option for individual business travel across Ras Al Khaimah districts. Guests enjoy quiet cabins, climate control and professional chauffeurs who navigate local routes with complete route familiarity and courteous attention.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-2",
+            "badge": "Sedan · 3 guests · 2 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image3.jpg",
+            "imageAlt": "Business sedan parked outside a corporate office in Ras Al Khaimah",
+            "category": "Business Sedan",
+            "name": "Typical model: Mercedes E Class or similar",
+            "idealFor": "Ideal for: Executive meetings and corporate travel",
+            "description": "Engineered for corporate executives requiring mobile productivity between meetings. The refined cabin provides leather seating, acoustic insulation and charging points for seamless working sessions between Ras Al Khaimah and neighbouring commercial hubs.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-3",
+            "badge": "Flagship sedan · 3 guests · 2 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image4.jpg",
+            "imageAlt": "First class executive sedan for VIP hospitality in Ras Al Khaimah",
+            "category": "First Class Sedan",
+            "name": "Typical model: Mercedes S Class or similar",
+            "idealFor": "Ideal for: VIP hospitality and protocol travel",
+            "description": "Our flagship sedan delivers superior prestige for distinguished guests and executive leadership. Reclining rear seats, advanced ride damping and discreet personal service create an unmatched environment for luxury car travel.",
+            "capacity": "3 guests",
+            "bags": "2 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-4",
+            "badge": "SUV · 6 guests · 5 bags",
+            "badgeStyle": "accent",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image5.jpg",
+            "imageAlt": "Executive luxury SUV for delegation and family travel in Ras Al Khaimah",
+            "category": "Executive SUV",
+            "name": "Typical model: Cadillac Escalade, GMC Yukon or similar",
+            "idealFor": "Ideal for: Delegations and spacious family journeys",
+            "description": "Spacious and commanding, this full size luxury SUV accommodates delegations with generous luggage capacity. Elevated seating and expansive interior room provide relaxed travel throughout coastal Ras Al Khaimah and across regional highways.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-5",
+            "badge": "MPV · 6 guests · 5 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image6.jpg",
+            "imageAlt": "Premium executive MPV for corporate delegation transport in Ras Al Khaimah",
+            "category": "Premium MPV",
+            "name": "Typical model: Mercedes V Class or similar",
+            "idealFor": "Ideal for: Mobile meetings and executive teams",
+            "description": "Configured with face to face conference seating, this cabin functions as a mobile workspace. Ideal for corporate roadshows and visiting delegations that value collaborative discussions while travelling between scheduled appointments.",
+            "capacity": "6 guests",
+            "bags": "5 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-veh-6",
+            "badge": "Van · 14 guests · 10 bags",
+            "badgeStyle": "default",
+            "image": "/locations/www.ab.limo-locations-uae-ajman-images/image7.jpg",
+            "imageAlt": "Executive passenger minibus prepared for group logistics across Ras Al Khaimah",
+            "category": "Executive Van",
+            "name": "Typical model: Mercedes Sprinter or similar",
+            "idealFor": "Ideal for: Event groups and airport shuttles",
+            "description": "Designed for larger parties requiring coordinated group transit without compromising comfort. Dedicated luggage space, wide aisles and individual climate vents support seamless logistics for conferences and private delegations.",
+            "capacity": "14 guests",
+            "bags": "10 bags",
+            "actions": [
+              {
+                "label": "Book this class",
+                "href": "/book"
+              },
+              {
+                "label": "Request a quote",
+                "href": "/contact"
+              },
+              {
+                "label": "Airport transfer",
+                "href": "/services/airport-transfers"
+              },
+              {
+                "label": "Hourly chauffeur",
+                "href": "/services/chauffeur-service"
+              },
+              {
+                "label": "Full specifications",
+                "href": "/fleet"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-rp2l9dmsd",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Popular journeys",
+          "heading": "Across Ras Al Khaimah and beyond",
+          "description": "We provide point to point transfers connecting coastal resorts, commercial districts and airport terminals across the northern emirates.",
+          "bottomCta": {
+            "label": "Explore Intercity Transfers",
+            "href": "/services/intercity-transfers",
+            "style": "secondary"
+          }
+        },
+        "items": [
+          {
+            "id": "ras-al-khaimah-jrny-1",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to Ras Al Khaimah Corniche",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-jrny-2",
+            "icon": "Plane",
+            "tag": "Airport transfer",
+            "title": "SHJ to Al Nuaimiya",
+            "description": "",
+            "subtext": "Fixed Corporate Rates",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-jrny-3",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Ras Al Khaimah to Dubai",
+            "description": "",
+            "subtext": "Direct Highway Transfer · 30m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/ras-al-khaimah/routes/ras-al-khaimah-to-dubai",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-jrny-4",
+            "icon": "Map",
+            "tag": "Intercity",
+            "title": "Ras Al Khaimah to Sharjah",
+            "description": "",
+            "subtext": "Direct Border Transfer · 20m",
+            "actions": [
+              {
+                "label": "Book route",
+                "href": "/locations/uae/ras-al-khaimah/routes/ras-al-khaimah-to-sharjah",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-lqykjyyoz",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Services in Ras Al Khaimah",
+          "heading": "One partner for every movement in Ras Al Khaimah",
+          "description": "AB delivers managed ground logistics, luxury transport and coach coordination tailored to commercial and private requirements throughout the northern emirate."
+        },
+        "items": [
+          {
+            "id": "ras-al-khaimah-svc-1",
+            "icon": "Shield",
+            "title": "Chauffeur & VIP in Ras Al Khaimah",
+            "description": "Dedicated hourly hire and daily executive mobility for corporate leadership and private guests.",
+            "actions": [
+              {
+                "label": "Chauffeur & VIP in Ras Al Khaimah",
+                "href": "/services/chauffeur-vip",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-svc-2",
+            "icon": "Users",
+            "title": "Bus & Coach Hire in Ras Al Khaimah",
+            "description": "High-capacity group transport for conferences, staff logistics, and large delegations.",
+            "actions": [
+              {
+                "label": "Bus & Coach Hire in Ras Al Khaimah",
+                "href": "/services/bus-coach-hire",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "ras-al-khaimah-svc-3",
+            "icon": "Plane",
+            "title": "Airport Transfers SHJ & DXB",
+            "description": "Flight-tracked arrivals and departures with curbside assistance and terminal greeting.",
+            "actions": [
+              {
+                "label": "Airport Transfers SHJ & DXB",
+                "href": "/services/airport-transfers",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-02kdfai9f",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Airport transfers",
+          "heading": "Arriving at Sharjah International Airport (SHJ)",
+          "description": "Arriving passengers at Sharjah International Airport (SHJ) receive dedicated support from the moment their flight touches down. Our central operations team monitors real time flight tracking for every arrival, adjusting chauffeur schedules automatically for early arrivals or flight delays. Inside the terminal, your professional chauffeur welcomes you with a personalised digital name board at the meeting point. Guests benefit from complimentary waiting time, allowing unhurried navigation through passport clearance, baggage reclaim and customs. From the terminal curb, your private driver assists with all luggage before conducting a smooth transfer to your residence, hotel or corporate office in Ras Al Khaimah.",
+          "items": [
+            {
+              "id": "ras-al-khaimah-apt-b-1",
+              "icon": "Plane",
+              "heading": "Flight tracking",
+              "description": "Automated real-time monitoring for every commercial arrival."
+            },
+            {
+              "id": "ras-al-khaimah-apt-b-2",
+              "icon": "Users",
+              "heading": "Meet and greet",
+              "description": "Professional reception inside the terminal arrivals hall with custom name board."
+            },
+            {
+              "id": "ras-al-khaimah-apt-b-3",
+              "icon": "Clock",
+              "heading": "SHJ to Ras Al Khaimah Corniche",
+              "description": "Swift 20-30 minute direct highway transfer."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Book Airport Transfer",
+              "href": "/book",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-uae-ajman-images/image8.jpg",
+          "backgroundAlt": "Sharjah International Airport terminal approach serving travellers to Ras Al Khaimah"
+        }
+      },
+      {
+        "id": "sec-1794311538056-7acv87mf2",
+        "type": "airportsGrid",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "heading": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.airports",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-1t24cj4xh",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Where we work in Ras Al Khaimah",
+          "description": "AB provides comprehensive coverage across the emirate, supporting executive travel between commercial centres, hospitality resorts and civic institutions. Whether your itinerary involves morning conferences, waterfront resort transfers or industrial site inspections, our drivers maintain thorough local knowledge of routes, traffic patterns and property access protocols. Seamless dispatch from our regional hub delivers punctual transport across every major municipal district.",
+          "items": [
+            {
+              "id": "ras-al-khaimah-cov-1",
+              "icon": "Building2",
+              "heading": "Business",
+              "description": "Ras Al Khaimah Free Zone, City Centre Ras Al Khaimah, Nuaimiya Commercial"
+            },
+            {
+              "id": "ras-al-khaimah-cov-2",
+              "icon": "Calendar",
+              "heading": "Events and conferences",
+              "description": "Ras Al Khaimah Hotel, Bahi Ras Al Khaimah Palace, Radisson Blu Ras Al Khaimah"
+            },
+            {
+              "id": "ras-al-khaimah-cov-3",
+              "icon": "Landmark",
+              "heading": "Heritage and leisure",
+              "description": "Ras Al Khaimah Museum, Al Zorah Golf Club, Ras Al Khaimah Corniche"
+            },
+            {
+              "id": "ras-al-khaimah-cov-4",
+              "icon": "Shield",
+              "heading": "Government or Industry",
+              "description": "Ras Al Khaimah Chamber of Commerce, Ras Al Khaimah Port Terminal, Al Jurf Industrial Area"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "",
+          "backgroundAlt": "Where we work in Ras Al Khaimah"
+        }
+      },
+      {
+        "id": "sec-1794311538056-elxtneoz0",
+        "type": "routesGrid",
+        "variant": "default",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "heading": "Intercity Routes from Ras Al Khaimah",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.routes",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1794311538056-2nufe7q23",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Our office",
+          "heading": "Regional office support for chauffeur service Ras Al Khaimah",
+          "description": "Ras Al Khaimah operations are managed and dispatched directly from our regional office, AB Dubai, with strategic coordination from our Riyadh headquarters. Our fleet staging and maintenance protocols adhere to strict corporate standards. Dedicated fleet specialists handle custom itinerary requirements, airport meet and greet logistics and round the clock operations.",
+          "items": [
+            {
+              "id": "ras-al-khaimah-hq-1",
+              "icon": "Map",
+              "heading": "AB Dubai (Regional Office)",
+              "description": "Suite 206, DBC Building, Al Khabaisi, Deira, Dubai, UAE"
+            },
+            {
+              "id": "ras-al-khaimah-hq-2",
+              "icon": "Phone",
+              "heading": "+971 50 918 0556",
+              "description": "24/7 central dispatch and reservations"
+            },
+            {
+              "id": "ras-al-khaimah-hq-3",
+              "icon": "Map",
+              "heading": "AB Riyadh (Headquarters & 24/7 Dispatch)",
+              "description": "Building 3036, Office 08, 2nd Floor, Umar Ibn Abdulaziz Road, Al Malaz, Riyadh, Saudi Arabia"
+            },
+            {
+              "id": "ras-al-khaimah-hq-4",
+              "icon": "Phone",
+              "heading": "+966 59 697 8125",
+              "description": "24/7 central dispatch and reservations"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Get directions",
+              "href": "https://maps.google.com/maps?q=Suite+206,+DBC+Building,+Al+Khabaisi,+Deira,+Dubai,+UAE",
+              "style": "secondary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": true,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": ""
+        }
+      },
+      {
+        "id": "sec-1794311538056-r6ienpjpd",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Chauffeur service in Ras Al Khaimah: your questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1794311538056-runnmnl29",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Ras Al Khaimah.",
+          "description": "Book your chauffeur service Ras Al Khaimah transfer today or contact our central dispatch operations team directly on +971 50 918 0556 for tailored corporate transport coordination across the emirates.",
+          "subheading": "Reserve executive ground travel",
+          "subdescription": "Coordinate single transfers or ongoing corporate transport schedules with our 24/7 operations team."
+        },
+        "items": [
+          {
+            "label": "Book now",
+            "href": "/book",
+            "style": "primary"
+          },
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,459 @@
+{
+  "pageType": "city",
+  "refKey": "uae/umm-al-quwain",
+  "countrySlug": "uae",
+  "citySlug": "umm-al-quwain",
+  "path": "/locations/uae/umm-al-quwain",
+  "layoutName": "unified-riyadh-style-10-sections",
+  "description": "Unified Riyadh-style 10-section layout for umm-al-quwain (uae)",
+  "exportedAt": "2026-11-10T12:32:14.455Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1794310004589-wr7sb4b1d",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN UMM AL QUWAIN",
+          "title": "Umm Al Quwain",
+          "description": "Offering a peaceful sanctuary along the Arabian Gulf with rich mangroves and coastal heritage, Umm Al Quwain provides a relaxed pace. AB delivers dedicated chauffeur service to luxury resorts and airport connections across the Northern Emirates.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Sharjah International (SHJ)",
+          "dropoffDefault": "UAQ Marina",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1706413639793-1ad524e698ae?q=80&w=1171&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310004589-wq51c3mka",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE UMM AL QUWAIN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004589-r0f55xy5u",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Umm Al Quwain and beyond"
+        },
+        "items": [
+          {
+            "id": "shj-uaq",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to Umm Al Quwain Marina",
+            "titleAr": "من مطار الشارقة إلى مارينا أم القيوين",
+            "price": "From AED 250",
+            "priceAr": "ابتداءً من 250 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "UAQ Marina"
+          },
+          {
+            "id": "dxb-uaq",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Umm Al Quwain Resorts",
+            "titleAr": "من مطار دبي إلى منتجعات أم القيوين",
+            "price": "From AED 380",
+            "priceAr": "ابتداءً من 380 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Umm Al Quwain Resorts"
+          },
+          {
+            "id": "uaq-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Umm Al Quwain to Downtown Dubai",
+            "titleAr": "من أم القيوين إلى وسط مدينة دبي",
+            "price": "From AED 420",
+            "priceAr": "ابتداءً من 420 درهم",
+            "pickup": "Umm Al Quwain",
+            "dropoff": "Downtown Dubai"
+          },
+          {
+            "id": "uaq-rak",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Umm Al Quwain to Ras Al Khaimah",
+            "titleAr": "من أم القيوين إلى رأس الخيمة",
+            "price": "From AED 260",
+            "priceAr": "ابتداءً من 260 درهم",
+            "pickup": "Umm Al Quwain",
+            "dropoff": "Ras Al Khaimah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004589-adk448a8g",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN UMM AL QUWAIN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004589-namih6ivr",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Umm Al Quwain.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1794310004589-wr7sb4b1d",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "CHAUFFEUR SERVICE IN UMM AL QUWAIN",
+          "title": "Umm Al Quwain",
+          "description": "Offering a peaceful sanctuary along the Arabian Gulf with rich mangroves and coastal heritage, Umm Al Quwain provides a relaxed pace. AB delivers dedicated chauffeur service to luxury resorts and airport connections across the Northern Emirates.",
+          "bookNowLabel": "BOOK NOW",
+          "viewFleetLabel": "VIEW THE FLEET",
+          "pickupDefault": "Sharjah International (SHJ)",
+          "dropoffDefault": "UAQ Marina",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1706413639793-1ad524e698ae?q=80&w=1171&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310004589-wq51c3mka",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "THE UMM AL QUWAIN FLEET",
+          "heading": "Choose your class",
+          "description": "Every vehicle is late model, black and detailed before each journey. Select a class to see the cabin you will travel in."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004589-r0f55xy5u",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "POPULAR JOURNEYS",
+          "heading": "Across Umm Al Quwain and beyond"
+        },
+        "items": [
+          {
+            "id": "shj-uaq",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to Umm Al Quwain Marina",
+            "titleAr": "من مطار الشارقة إلى مارينا أم القيوين",
+            "price": "From AED 250",
+            "priceAr": "ابتداءً من 250 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "UAQ Marina"
+          },
+          {
+            "id": "dxb-uaq",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Umm Al Quwain Resorts",
+            "titleAr": "من مطار دبي إلى منتجعات أم القيوين",
+            "price": "From AED 380",
+            "priceAr": "ابتداءً من 380 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Umm Al Quwain Resorts"
+          },
+          {
+            "id": "uaq-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Umm Al Quwain to Downtown Dubai",
+            "titleAr": "من أم القيوين إلى وسط مدينة دبي",
+            "price": "From AED 420",
+            "priceAr": "ابتداءً من 420 درهم",
+            "pickup": "Umm Al Quwain",
+            "dropoff": "Downtown Dubai"
+          },
+          {
+            "id": "uaq-rak",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Umm Al Quwain to Ras Al Khaimah",
+            "titleAr": "من أم القيوين إلى رأس الخيمة",
+            "price": "From AED 260",
+            "priceAr": "ابتداءً من 260 درهم",
+            "pickup": "Umm Al Quwain",
+            "dropoff": "Ras Al Khaimah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004589-adk448a8g",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "SERVICES IN UMM AL QUWAIN",
+          "heading": "One partner for every movement"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004589-namih6ivr",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "Your chauffeur is ready in Umm Al Quwain.",
+          "description": "Available around the clock. Reply within minutes at hello@ab.limo",
+          "buttonLabel": "BOOK NOW"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1794310004589-1wjzsagip",
+        "type": "dubaiHero",
+        "variant": "default",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "badge": "خدمة السائق الخاص في أم القيوين",
+          "title": "أم القيوين",
+          "description": "ملاذ هادئ على شواطئ الخليج العربي تحفه أشجار القرم وجزر الخور الطبيعية. توفر إيه بي ليمو خدمات نقل مخصصة إلى المنتجعات الفاخرة ورحلات سريعة لمطاري الشارقة ودبي الدوليين.",
+          "bookNowLabel": "احجز الآن",
+          "viewFleetLabel": "استعرض الأسطول",
+          "pickupDefault": "Sharjah International (SHJ)",
+          "dropoffDefault": "UAQ Marina",
+          "skyline": "none"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "background": "https://images.unsplash.com/photo-1706413639793-1ad524e698ae?q=80&w=1171&auto=format&fit=crop",
+          "theme": "dark",
+          "padding": "none"
+        }
+      },
+      {
+        "id": "sec-1794310004589-v9ffkacpv",
+        "type": "dubaiFleet",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "eyebrow": "أسطول أم القيوين",
+          "heading": "اختر فئتك",
+          "description": "كل مركبة من طراز حديث، سوداء وتم تجهيزها بعناية قبل كل رحلة. اختر فئة للاطلاع على مقصورة رحلتك."
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004589-w9xxoqb2u",
+        "type": "dubaiJourneys",
+        "variant": "default",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "رحلات شائعة",
+          "heading": "في أنحاء أم القيوين وخارجها"
+        },
+        "items": [
+          {
+            "id": "shj-uaq",
+            "tag": "AIRPORT TRANSFER",
+            "tagAr": "نقل من المطار",
+            "title": "SHJ to Umm Al Quwain Marina",
+            "titleAr": "من مطار الشارقة إلى مارينا أم القيوين",
+            "price": "From AED 250",
+            "priceAr": "ابتداءً من 250 درهم",
+            "pickup": "Sharjah International Airport (SHJ)",
+            "dropoff": "UAQ Marina"
+          },
+          {
+            "id": "dxb-uaq",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "DXB to Umm Al Quwain Resorts",
+            "titleAr": "من مطار دبي إلى منتجعات أم القيوين",
+            "price": "From AED 380",
+            "priceAr": "ابتداءً من 380 درهم",
+            "pickup": "Dubai International Airport (DXB)",
+            "dropoff": "Umm Al Quwain Resorts"
+          },
+          {
+            "id": "uaq-dubai",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Umm Al Quwain to Downtown Dubai",
+            "titleAr": "من أم القيوين إلى وسط مدينة دبي",
+            "price": "From AED 420",
+            "priceAr": "ابتداءً من 420 درهم",
+            "pickup": "Umm Al Quwain",
+            "dropoff": "Downtown Dubai"
+          },
+          {
+            "id": "uaq-rak",
+            "tag": "INTERCITY",
+            "tagAr": "بين المدن",
+            "title": "Umm Al Quwain to Ras Al Khaimah",
+            "titleAr": "من أم القيوين إلى رأس الخيمة",
+            "price": "From AED 260",
+            "priceAr": "ابتداءً من 260 درهم",
+            "pickup": "Umm Al Quwain",
+            "dropoff": "Ras Al Khaimah"
+          }
+        ],
+        "settings": {
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004589-6m4ofgao3",
+        "type": "dubaiServices",
+        "variant": "default",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "الخدمات في أم القيوين",
+          "heading": "شريك واحد لجميع تنقلاتك"
+        },
+        "items": [],
+        "settings": {
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true
+        }
+      },
+      {
+        "id": "sec-1794310004589-rib4mvrgj",
+        "type": "dubaiCta",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "heading": "سائقك الخاص جاهز في أم القيوين.",
+          "description": "متاحون على مدار الساعة. نرد خلال دقائق عبر hello@ab.limo",
+          "buttonLabel": "احجز الآن"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": true
+        }
+      }
+    ]
+  }
+}

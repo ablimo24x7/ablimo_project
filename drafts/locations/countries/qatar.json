@@ -1,0 +1,1146 @@
+{
+  "pageType": "country",
+  "refKey": "qatar",
+  "countrySlug": "qatar",
+  "path": "/locations/qatar",
+  "description": "Country template for qatar",
+  "exportedAt": "2026-11-10T12:32:14.123Z",
+  "templates": {
+    "en-US": [
+      {
+        "id": "sec-1793272074069-lcmjw3fo4",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service Qatar",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service Qatar operations provide executive transport for corporate leaders and official delegations visiting the country. Managed ground mobility coordinates daily schedules with vetted chauffeurs and immaculate vehicles across Doha and neighbouring commercial centres.\n\nTravel requirements in Qatar depend on punctual coordination between flight arrivals, corporate headquarters and major event venues. AB delivers structured journeys with dedicated dispatch oversight for every transfer."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/book",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-qatar-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1793272074069-1itaeuoym",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-80g05nu67",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": ""
+        },
+        "items": [
+          {
+            "id": "qa-stat-1",
+            "icon": "Map",
+            "title": "4 Cities Served",
+            "description": "Comprehensive coverage across Doha, Lusail, Al Wakrah and Al Khor."
+          },
+          {
+            "id": "qa-stat-2",
+            "icon": "Briefcase",
+            "title": "1 Direct Office",
+            "description": "Local operational base established on Old Airport Road in Doha."
+          },
+          {
+            "id": "qa-stat-3",
+            "icon": "Plane",
+            "title": "1 Commercial Airport",
+            "description": "Continuous flight arrival coverage at Hamad International Airport (DOH)."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-qsgihilti",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Chauffeur Service Qatar Local Office",
+          "description": "AB Doha coordinates corporate transport and VIP delegation movements across the country from its dedicated hub on Old Airport Road.",
+          "items": [
+            {
+              "id": "qa-off-1",
+              "icon": "Map",
+              "heading": "AB Doha — Qatar Operations Desk",
+              "description": "Office 110, Building 100, Zone 26, Street 310, Old Airport Road, Doha, Qatar"
+            },
+            {
+              "id": "qa-off-2",
+              "icon": "Phone",
+              "heading": "+974 7734 3300",
+              "description": "Direct Qatar Operations Desk contact"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-qatar-images/image1.jpg",
+          "backgroundAlt": "Map of Qatar displaying executive chauffeur routes and service pins across Doha and Lusail"
+        }
+      },
+      {
+        "id": "sec-1793272074069-xko7tzm4a",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Executive Chauffeur Coverage Across Qatar Municipalities",
+          "description": "AB provides managed ground transport networks spanning the principal commercial and residential districts of Qatar. Chauffeurs operate across municipal boundaries to connect business districts, maritime centres and industrial developments with executive sedans and spacious passenger vans. Centralised dispatch maintains punctual coordination for all regional journeys."
+        },
+        "items": [
+          {
+            "id": "qa-mun-1",
+            "icon": "Map",
+            "tag": "Airport Code: [Confirm if needed] | Status: [Confirm: service status if not provided]",
+            "title": "Doha",
+            "description": "Executive chauffeurs serve commercial districts across Doha including West Bay and Msheireb Downtown. Daily operations support business meetings, government summits and direct airport transfers. Visit the Doha city hub for regional fleet options.",
+            "actions": [
+              {
+                "label": "Doha",
+                "href": "/locations/qatar/doha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "qa-mun-2",
+            "icon": "Map",
+            "tag": "Airport Code: [Confirm if needed] | Status: [Confirm: service status if not provided]",
+            "title": "Lusail",
+            "description": "Chauffeur vehicles connect the modern business towers and entertainment districts of Lusail with the capital. Corporate travellers utilise scheduled daily hire and on demand executive transport. Access dedicated vehicle categories through the Lusail service network.",
+            "actions": [
+              {
+                "label": "Lusail",
+                "href": "/locations/qatar/lusail",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "qa-mun-3",
+            "icon": "Map",
+            "tag": "Airport Code: [Confirm if needed] | Status: [Confirm: service status if not provided]",
+            "title": "Al Wakrah",
+            "description": "Transportation services cover maritime facilities, commercial ports and coastal residential communities throughout Al Wakrah. Chauffeurs facilitate seamless transfers to central business hubs and hospitality venues. Explore local transfer capabilities on the Al Wakrah destination page.",
+            "actions": [
+              {
+                "label": "Al Wakrah",
+                "href": "/locations/qatar/al-wakrah",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "qa-mun-4",
+            "icon": "Map",
+            "tag": "Airport Code: [Confirm if needed] | Status: [Confirm: service status if not provided]",
+            "title": "Al Khor",
+            "description": "Fleet operations support energy sector facilities, coastal projects and residential districts across Al Khor. Dedicated transport provides reliable links to northern industrial hubs and southern corporate centres. Discover complete route details on the Al Khor location profile.",
+            "actions": [
+              {
+                "label": "Al Khor",
+                "href": "/locations/qatar/al-khor",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-bgw04sbr4",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "heading": "Qatar Municipalities",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-ykmxza2hb",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Aviation Terminals",
+          "heading": "Hamad International Airport DOH Chauffeur Transfers in Qatar",
+          "description": "Travellers arriving at Hamad International Airport (DOH) receive terminal meet and greet coordination with professional chauffeurs. Flight tracking allows drivers to adapt to schedule variations before aircraft arrival at DOH. Access terminal transfer bookings through the Hamad International Airport DOH transfer desk.",
+          "items": [
+            {
+              "id": "qa-apt-1",
+              "icon": "Plane",
+              "heading": "Hamad International (DOH) · Commercial Hub",
+              "description": "Terminal meet and greet coordination with flight tracking and direct luggage transfer to executive vehicles."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Hamad International Airport DOH",
+              "href": "/locations/qatar/doha/airport/hamad-international-airport",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-qatar-images/image2.jpg",
+          "backgroundAlt": "Executive chauffeur beside luxury vehicle outside Hamad International Airport DOH in Qatar"
+        }
+      },
+      {
+        "id": "sec-1793272074069-whyc0993x",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Mobility Solutions",
+          "heading": "Chauffeur Service Qatar Mobility Capabilities",
+          "description": "AB coordinates comprehensive ground transport arrangements designed for multinational corporations, conference planners and visiting delegations across Qatar. Clients select specific service categories tailored to itinerary duration, passenger volume and protocol requirements."
+        },
+        "items": [
+          {
+            "id": "qa-cap-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Private driver bookings feature luxury car models such as the Mercedes S Class for executive journeys and diplomatic protocol."
+          },
+          {
+            "id": "qa-cap-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Dependable airport transfer Qatar journeys link corporate travellers directly to international flight departures with flight tracking and luggage assistance."
+          },
+          {
+            "id": "qa-cap-3",
+            "icon": "Briefcase",
+            "title": "Corporate Transportation",
+            "description": "Dedicated corporate transportation Qatar services provide corporate travel solutions for business meetings and multinational executive roadshows."
+          },
+          {
+            "id": "qa-cap-4",
+            "icon": "Users",
+            "title": "Event Transportation",
+            "description": "Event mobility coordinators manage multi vehicle fleets including the Cadillac Escalade and GMC Yukon for summits, state functions and major exhibitions."
+          },
+          {
+            "id": "qa-cap-5",
+            "icon": "Users",
+            "title": "Bus & Coach Hire",
+            "description": "Reliable bus rental Qatar solutions transport large delegations, conference attendees and staff shuttles in comfortable passenger coaches."
+          },
+          {
+            "id": "qa-cap-6",
+            "icon": "Map",
+            "title": "Tourism Transportation",
+            "description": "Premium limousine service Qatar itineraries and flexible intercity transfer Qatar routes allow private guests to explore cultural landmarks at an unhurried pace."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-msypd4k69",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Highway Corridors",
+          "heading": "Intercity Highway Routes Across Qatar",
+          "description": "Intercity transit corridors link key commercial centres, ports and aviation facilities across the country. Chauffeurs navigate primary expressways with precision to support punctual itineraries between urban hubs.",
+          "items": [
+            {
+              "id": "qa-hw-1",
+              "icon": "Map",
+              "heading": "Doha to Lusail",
+              "description": "Connecting the capital business centre with Lusail Marina and commercial headquarters along the modern expressway corridor. Chauffeurs operate executive sedans and SUVs for daily meetings. Travel time: [Confirm: travel time]."
+            },
+            {
+              "id": "qa-hw-2",
+              "icon": "Map",
+              "heading": "Doha to Al Wakrah",
+              "description": "Linking central Doha with southern port developments, logistics hubs and coastal hospitality developments. Private driver hire provides uninterrupted travel for corporate teams. Travel time: [Confirm: travel time]."
+            },
+            {
+              "id": "qa-hw-3",
+              "icon": "Map",
+              "heading": "Doha to Al Khor",
+              "description": "Direct highway transport between downtown Doha and northern industrial sites, research centres and community sports venues. Full day hire options support multi stop operational visits. Travel time: [Confirm: travel time]."
+            },
+            {
+              "id": "qa-hw-4",
+              "icon": "Plane",
+              "heading": "Hamad International Airport (DOH) to West Bay",
+              "description": "Direct executive arrivals route from Hamad International Airport (DOH) to the diplomatic and commercial skyline of West Bay. Professional chauffeurs handle luggage and flight schedule updates. Travel time: [Confirm: travel time]."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-qatar-images/image3.jpg",
+          "backgroundAlt": "Executive Mercedes V Class traveling on highway between Doha and Lusail in Qatar"
+        }
+      },
+      {
+        "id": "sec-1793272074069-trx062t83",
+        "type": "introText",
+        "variant": "default",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Governance",
+          "heading": "Licensing and Safety Standards Across Qatar",
+          "paragraphs": [
+            "AB maintains strict operational standards across Qatar through fully licensed and commercially insured vehicle fleets. All operations comply with statutory transport regulations [Confirm licence names and numbers] enforced by national transit authorities. Professional chauffeurs complete protocol and safety training before assignment to corporate travel itineraries. Centralised 24/7 dispatch from the Riyadh operations centre coordinates vehicle telematics and driver schedules, supporting safe and reliable ground mobility for every client journey."
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074069-85tejf2cj",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Frequently Asked Questions About Chauffeur Travel in Qatar",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1793272074069-liwx7ahtx",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Book Your Chauffeur Service Qatar Experience",
+          "description": "Reserve premium chauffeur service Qatar transportation with AB for seamless corporate travel, VIP delegation logistics and airport transfers across the country."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/book",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "en-GB": [
+      {
+        "id": "sec-1792139036438-m364m7c42",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service In {country}",
+          "titleHighlight": "",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "https://plus.unsplash.com/premium_photo-1661919068698-40e7b78f196a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1792139036438-mjhcufj2p",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "Home",
+          "rootLabel": "Countries"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-q52h39ezp",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": "",
+          "sectionCta": {
+            "label": "",
+            "href": "",
+            "style": "primary",
+            "icon": ""
+          }
+        },
+        "items": [],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "context.services"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-cnui6eild",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "About AB In {location}",
+          "heading": "Qatar's Trusted Chauffeur Partner",
+          "description": "Qatar pairs Arabian heritage with world-class modernity — Doha's skyline, Lusail's ambition, and the warmth of its people. AB delivers luxury airport transfers, corporate travel, and event mobility across the peninsula, so every journey matches the standard of the destination.",
+          "items": [],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "md",
+          "border": false,
+          "textAlign": "left",
+          "background": "https://plus.unsplash.com/premium_photo-1661919068698-40e7b78f196a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      },
+      {
+        "id": "sec-1792139036438-ndh92gz94",
+        "type": "introText",
+        "variant": "default",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "Experience refined elegance with AB’s premium chauffeur service across {country}. From major business hubs to every destination across the region, our network of professional drivers provides discreet, first-class transportation tailored to your journey. Whether you need seamless airport transfers, city-to-city travel, or flexible hourly bookings, we deliver an uncompromised, executive travel experience.",
+            "Don't settle for just renting a car with a driver — immerse yourself in an experience by booking with AB.",
+            "Check out our wide range of services available across {country} below:"
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-9ishf0tfj",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "heading": "Inter City Routes in {country}",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "3"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1792139036438-i3p430tm4",
+        "type": "faq",
+        "variant": "default",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Frequently Asked Questions",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": false,
+          "textAlign": "center"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "id": "sec-1793272074085-700wz9ew2",
+        "type": "hero",
+        "variant": "with-inquiry-form",
+        "order": 0,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "title": "Chauffeur Service Qatar",
+          "titleHighlight": "",
+          "description": "Professional chauffeur service Qatar operations provide executive transport for corporate leaders and official delegations visiting the country. Managed ground mobility coordinates daily schedules with vetted chauffeurs and immaculate vehicles across Doha and neighbouring commercial centres.\n\nTravel requirements in Qatar depend on punctual coordination between flight arrivals, corporate headquarters and major event venues. AB delivers structured journeys with dedicated dispatch oversight for every transfer."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/book",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "minHeight": "85vh",
+          "overlayOpacity": 85,
+          "contentPosition": "left",
+          "buttonLayout": "row"
+        },
+        "appearance": {
+          "theme": "darker",
+          "background": "/locations/www.ab.limo-locations-qatar-images/image1.jpg",
+          "padding": "none",
+          "border": false,
+          "textAlign": "left",
+          "overlayGradient": "default"
+        }
+      },
+      {
+        "id": "sec-1793272074085-8fjinhlkw",
+        "type": "breadcrumb",
+        "variant": "default",
+        "order": 1,
+        "enabled": true,
+        "content": {
+          "homeLabel": "الرئيسية",
+          "rootLabel": "الدول"
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "sm",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-81rqelfo1",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 2,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "",
+          "description": ""
+        },
+        "items": [
+          {
+            "id": "qa-stat-1",
+            "icon": "Map",
+            "title": "4 Cities Served",
+            "description": "Comprehensive coverage across Doha, Lusail, Al Wakrah and Al Khor."
+          },
+          {
+            "id": "qa-stat-2",
+            "icon": "Briefcase",
+            "title": "1 Direct Office",
+            "description": "Local operational base established on Old Airport Road in Doha."
+          },
+          {
+            "id": "qa-stat-3",
+            "icon": "Plane",
+            "title": "1 Commercial Airport",
+            "description": "Continuous flight arrival coverage at Hamad International Airport (DOH)."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": false,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "md",
+          "border": false,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-6ivlk8ubg",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 3,
+        "enabled": true,
+        "content": {
+          "eyebrow": "",
+          "heading": "Chauffeur Service Qatar Local Office",
+          "description": "AB Doha coordinates corporate transport and VIP delegation movements across the country from its dedicated hub on Old Airport Road.",
+          "items": [
+            {
+              "id": "qa-off-1",
+              "icon": "Map",
+              "heading": "AB Doha — Qatar Operations Desk",
+              "description": "Office 110, Building 100, Zone 26, Street 310, Old Airport Road, Doha, Qatar"
+            },
+            {
+              "id": "qa-off-2",
+              "icon": "Phone",
+              "heading": "+974 7734 3300",
+              "description": "Direct Qatar Operations Desk contact"
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "dark",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-qatar-images/image1.jpg",
+          "backgroundAlt": "Map of Qatar displaying executive chauffeur routes and service pins across Doha and Lusail"
+        }
+      },
+      {
+        "id": "sec-1793272074085-d7in4wnul",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 4,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Coverage",
+          "heading": "Executive Chauffeur Coverage Across Qatar Municipalities",
+          "description": "AB provides managed ground transport networks spanning the principal commercial and residential districts of Qatar. Chauffeurs operate across municipal boundaries to connect business districts, maritime centres and industrial developments with executive sedans and spacious passenger vans. Centralised dispatch maintains punctual coordination for all regional journeys."
+        },
+        "items": [
+          {
+            "id": "qa-mun-1",
+            "icon": "Map",
+            "tag": "Airport Code: [Confirm if needed] | Status: [Confirm: service status if not provided]",
+            "title": "Doha",
+            "description": "Executive chauffeurs serve commercial districts across Doha including West Bay and Msheireb Downtown. Daily operations support business meetings, government summits and direct airport transfers. Visit the Doha city hub for regional fleet options.",
+            "actions": [
+              {
+                "label": "Doha",
+                "href": "/locations/qatar/doha",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "qa-mun-2",
+            "icon": "Map",
+            "tag": "Airport Code: [Confirm if needed] | Status: [Confirm: service status if not provided]",
+            "title": "Lusail",
+            "description": "Chauffeur vehicles connect the modern business towers and entertainment districts of Lusail with the capital. Corporate travellers utilise scheduled daily hire and on demand executive transport. Access dedicated vehicle categories through the Lusail service network.",
+            "actions": [
+              {
+                "label": "Lusail",
+                "href": "/locations/qatar/lusail",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "qa-mun-3",
+            "icon": "Map",
+            "tag": "Airport Code: [Confirm if needed] | Status: [Confirm: service status if not provided]",
+            "title": "Al Wakrah",
+            "description": "Transportation services cover maritime facilities, commercial ports and coastal residential communities throughout Al Wakrah. Chauffeurs facilitate seamless transfers to central business hubs and hospitality venues. Explore local transfer capabilities on the Al Wakrah destination page.",
+            "actions": [
+              {
+                "label": "Al Wakrah",
+                "href": "/locations/qatar/al-wakrah",
+                "style": "accent"
+              }
+            ]
+          },
+          {
+            "id": "qa-mun-4",
+            "icon": "Map",
+            "tag": "Airport Code: [Confirm if needed] | Status: [Confirm: service status if not provided]",
+            "title": "Al Khor",
+            "description": "Fleet operations support energy sector facilities, coastal projects and residential districts across Al Khor. Dedicated transport provides reliable links to northern industrial hubs and southern corporate centres. Discover complete route details on the Al Khor location profile.",
+            "actions": [
+              {
+                "label": "Al Khor",
+                "href": "/locations/qatar/al-khor",
+                "style": "accent"
+              }
+            ]
+          }
+        ],
+        "settings": {
+          "columns": "2",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-xum26lrid",
+        "type": "citiesGrid",
+        "variant": "default",
+        "order": 5,
+        "enabled": true,
+        "content": {
+          "heading": "Qatar Municipalities",
+          "description": ""
+        },
+        "items": [],
+        "settings": {
+          "source": "context.cities",
+          "columns": "4"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "md",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-vj8k2ia0g",
+        "type": "mediaContent",
+        "variant": "media-right",
+        "order": 6,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Aviation Terminals",
+          "heading": "Hamad International Airport DOH Chauffeur Transfers in Qatar",
+          "description": "Travellers arriving at Hamad International Airport (DOH) receive terminal meet and greet coordination with professional chauffeurs. Flight tracking allows drivers to adapt to schedule variations before aircraft arrival at DOH. Access terminal transfer bookings through the Hamad International Airport DOH transfer desk.",
+          "items": [
+            {
+              "id": "qa-apt-1",
+              "icon": "Plane",
+              "heading": "Hamad International (DOH) · Commercial Hub",
+              "description": "Terminal meet and greet coordination with flight tracking and direct luggage transfer to executive vehicles."
+            }
+          ],
+          "actions": [
+            {
+              "label": "Hamad International Airport DOH",
+              "href": "/locations/qatar/doha/airport/hamad-international-airport",
+              "style": "primary"
+            }
+          ]
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "right",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-qatar-images/image2.jpg",
+          "backgroundAlt": "Executive chauffeur beside luxury vehicle outside Hamad International Airport DOH in Qatar"
+        }
+      },
+      {
+        "id": "sec-1793272074085-cy51monqf",
+        "type": "serviceCards",
+        "variant": "3-column",
+        "order": 7,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Mobility Solutions",
+          "heading": "Chauffeur Service Qatar Mobility Capabilities",
+          "description": "AB coordinates comprehensive ground transport arrangements designed for multinational corporations, conference planners and visiting delegations across Qatar. Clients select specific service categories tailored to itinerary duration, passenger volume and protocol requirements."
+        },
+        "items": [
+          {
+            "id": "qa-cap-1",
+            "icon": "Crown",
+            "title": "Chauffeur & VIP",
+            "description": "Private driver bookings feature luxury car models such as the Mercedes S Class for executive journeys and diplomatic protocol."
+          },
+          {
+            "id": "qa-cap-2",
+            "icon": "Plane",
+            "title": "Airport Transfers",
+            "description": "Dependable airport transfer Qatar journeys link corporate travellers directly to international flight departures with flight tracking and luggage assistance."
+          },
+          {
+            "id": "qa-cap-3",
+            "icon": "Briefcase",
+            "title": "Corporate Transportation",
+            "description": "Dedicated corporate transportation Qatar services provide corporate travel solutions for business meetings and multinational executive roadshows."
+          },
+          {
+            "id": "qa-cap-4",
+            "icon": "Users",
+            "title": "Event Transportation",
+            "description": "Event mobility coordinators manage multi vehicle fleets including the Cadillac Escalade and GMC Yukon for summits, state functions and major exhibitions."
+          },
+          {
+            "id": "qa-cap-5",
+            "icon": "Users",
+            "title": "Bus & Coach Hire",
+            "description": "Reliable bus rental Qatar solutions transport large delegations, conference attendees and staff shuttles in comfortable passenger coaches."
+          },
+          {
+            "id": "qa-cap-6",
+            "icon": "Map",
+            "title": "Tourism Transportation",
+            "description": "Premium limousine service Qatar itineraries and flexible intercity transfer Qatar routes allow private guests to explore cultural landmarks at an unhurried pace."
+          }
+        ],
+        "settings": {
+          "columns": "3",
+          "showHeader": true,
+          "source": "inline"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-68gzfgtt9",
+        "type": "mediaContent",
+        "variant": "media-left",
+        "order": 8,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Highway Corridors",
+          "heading": "Intercity Highway Routes Across Qatar",
+          "description": "Intercity transit corridors link key commercial centres, ports and aviation facilities across the country. Chauffeurs navigate primary expressways with precision to support punctual itineraries between urban hubs.",
+          "items": [
+            {
+              "id": "qa-hw-1",
+              "icon": "Map",
+              "heading": "Doha to Lusail",
+              "description": "Connecting the capital business centre with Lusail Marina and commercial headquarters along the modern expressway corridor. Chauffeurs operate executive sedans and SUVs for daily meetings. Travel time: [Confirm: travel time]."
+            },
+            {
+              "id": "qa-hw-2",
+              "icon": "Map",
+              "heading": "Doha to Al Wakrah",
+              "description": "Linking central Doha with southern port developments, logistics hubs and coastal hospitality developments. Private driver hire provides uninterrupted travel for corporate teams. Travel time: [Confirm: travel time]."
+            },
+            {
+              "id": "qa-hw-3",
+              "icon": "Map",
+              "heading": "Doha to Al Khor",
+              "description": "Direct highway transport between downtown Doha and northern industrial sites, research centres and community sports venues. Full day hire options support multi stop operational visits. Travel time: [Confirm: travel time]."
+            },
+            {
+              "id": "qa-hw-4",
+              "icon": "Plane",
+              "heading": "Hamad International Airport (DOH) to West Bay",
+              "description": "Direct executive arrivals route from Hamad International Airport (DOH) to the diplomatic and commercial skyline of West Bay. Professional chauffeurs handle luggage and flight schedule updates. Travel time: [Confirm: travel time]."
+            }
+          ],
+          "actions": []
+        },
+        "items": [],
+        "settings": {
+          "mediaPosition": "left",
+          "containerWidth": "default"
+        },
+        "appearance": {
+          "theme": "darker",
+          "pattern": false,
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left",
+          "background": "/locations/www.ab.limo-locations-qatar-images/image3.jpg",
+          "backgroundAlt": "Executive Mercedes V Class traveling on highway between Doha and Lusail in Qatar"
+        }
+      },
+      {
+        "id": "sec-1793272074085-kvfrkr251",
+        "type": "introText",
+        "variant": "default",
+        "order": 9,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Governance",
+          "heading": "Licensing and Safety Standards Across Qatar",
+          "paragraphs": [
+            "AB maintains strict operational standards across Qatar through fully licensed and commercially insured vehicle fleets. All operations comply with statutory transport regulations [Confirm licence names and numbers] enforced by national transit authorities. Professional chauffeurs complete protocol and safety training before assignment to corporate travel itineraries. Centralised 24/7 dispatch from the Riyadh operations centre coordinates vehicle telematics and driver schedules, supporting safe and reliable ground mobility for every client journey."
+          ]
+        },
+        "items": [],
+        "settings": {},
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "left"
+        }
+      },
+      {
+        "id": "sec-1793272074085-gyue8lnit",
+        "type": "faq",
+        "variant": "default",
+        "order": 10,
+        "enabled": true,
+        "content": {
+          "eyebrow": "Questions",
+          "heading": "Frequently Asked Questions About Chauffeur Travel in Qatar",
+          "description": "",
+          "items": []
+        },
+        "items": [],
+        "settings": {
+          "variant": "default",
+          "source": "context.faqs"
+        },
+        "appearance": {
+          "theme": "darker",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      },
+      {
+        "id": "sec-1793272074085-8nzfssw8w",
+        "type": "ctaBanner",
+        "variant": "centered",
+        "order": 11,
+        "enabled": true,
+        "content": {
+          "heading": "Book Your Chauffeur Service Qatar Experience",
+          "description": "Reserve premium chauffeur service Qatar transportation with AB for seamless corporate travel, VIP delegation logistics and airport transfers across the country."
+        },
+        "items": [
+          {
+            "label": "Request a proposal",
+            "href": "/quote/tender",
+            "style": "primary"
+          },
+          {
+            "label": "Book a transfer",
+            "href": "/book",
+            "style": "secondary"
+          }
+        ],
+        "settings": {
+          "layout": "centered"
+        },
+        "appearance": {
+          "theme": "dark",
+          "padding": "lg",
+          "border": true,
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

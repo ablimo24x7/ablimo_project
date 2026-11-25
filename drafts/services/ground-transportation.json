@@ -1,0 +1,552 @@
+{
+  "pageType": "service",
+  "slug": "ground-transportation",
+  "title": "Comprehensive Ground Transportation",
+  "subtitle": "Complete transportation solutions for individuals and businesses across the Gulf region and worldwide.",
+  "desc": "Comprehensive ground transportation across Saudi Arabia, UAE, and GCC: airport transfers, executive chauffeur, corporate travel, and event mobility.",
+  "heroImage": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&h=800&fit=crop",
+  "breadcrumb": "Ground Transportation",
+  "features": [
+    {
+      "icon": "Plane",
+      "title": "Airport Transfers with Flight Monitoring",
+      "desc": "Real-time radar flight tracking, terminal meet & greet, luggage handling, and generous complimentary waiting time."
+    },
+    {
+      "icon": "Briefcase",
+      "title": "Corporate Accounts with Centralized Billing",
+      "desc": "Streamlined corporate accounts with consolidated monthly invoicing, cost-center reporting, and dedicated account support."
+    },
+    {
+      "icon": "Globe",
+      "title": "Event & Intercity Mobility Logistics",
+      "desc": "Scalable group transportation, VIP chauffeur motorcades, and direct long-distance city-to-city transfers across the GCC."
+    }
+  ],
+  "cardsHeading": "Comprehensive Ground Mobility",
+  "cardsDesc": "Explore our full suite of ground transportation services tailored for executives, visitors, and groups.",
+  "cards": [
+    {
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop",
+      "tag": "Airports",
+      "title": "Airport Ground Transfers",
+      "desc": "Guaranteed on-time arrivals and departures with real-time flight tracking and personalized chauffeur greeting."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&h=500&fit=crop",
+      "tag": "Executive",
+      "title": "Executive & Chauffeur Mobility",
+      "desc": "Punctual, discreet chauffeur mobility for corporate leadership teams, roadshows, and board meetings."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop",
+      "tag": "Intercity",
+      "title": "City-to-City Intercity Travel",
+      "desc": "Stress-free, comfortable long-distance chauffeured travel connecting primary business hubs across the GCC."
+    }
+  ],
+  "sections": [
+    {
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+      "imageAlt": "Comprehensive Ground Transportation",
+      "title": "Your Comprehensive Ground Transportation",
+      "paragraphs": [
+        "AB provides end-to-end ground transportation solutions tailored to your needs. Whether you're an individual traveler, a corporate client, or organizing a large event, our comprehensive service covers every aspect of your journey.",
+        "With an executive black fleet under 36 months old and professional chauffeurs coordinated via our 24/7 central control room, every journey meets the highest standards of safety, privacy, and punctuality."
+      ],
+      "bullets": [
+        {
+          "text": "Airport transfers with flight monitoring"
+        },
+        {
+          "text": "Corporate accounts with centralized billing"
+        },
+        {
+          "text": "Event and group transportation"
+        },
+        {
+          "text": "City-to-city long distance travel"
+        }
+      ],
+      "imageSide": "left",
+      "dark": true
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=600&fit=crop",
+      "imageAlt": "Personal Chauffeur",
+      "title": "Your Personal Chauffeur",
+      "paragraphs": [
+        "Every journey with AB includes a dedicated professional chauffeur. Our drivers are more than just transportation providers — they are your personal concierge on the road, ensuring your comfort and safety throughout the journey."
+      ],
+      "bullets": [
+        {
+          "text": "Professionally trained and licensed drivers"
+        },
+        {
+          "text": "Multilingual communication skills"
+        },
+        {
+          "text": "Local knowledge and route expertise"
+        }
+      ],
+      "imageSide": "right",
+      "dark": false
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What services are included under ground transportation?",
+      "a": "Our ground transportation covers airport transfers, hourly chauffeur hire, city-to-city journeys, corporate employee mobility, event delegate transport, and VIP motorcades."
+    },
+    {
+      "q": "How does flight tracking work for airport ground transfers?",
+      "a": "Our control room tracks incoming flights live. If your flight is delayed or arrives early, your chauffeur's pickup schedule automatically adjusts, with up to 60 minutes complimentary wait time."
+    },
+    {
+      "q": "Can businesses open a corporate account?",
+      "a": "Yes. Corporate accounts receive consolidated monthly invoicing, cost-center allocation, priority dispatch, and dedicated account manager support."
+    },
+    {
+      "q": "Which vehicles are available?",
+      "a": "Our fleet includes luxury executive sedans, premium full-size SUVs, and executive vans such as Mercedes S-Class, BMW 7 Series, Cadillac Escalade, and Mercedes V-Class."
+    }
+  ],
+  "ctaTitle": "Ready for comprehensive ground transportation?",
+  "ctaDesc": "Experience seamless transportation solutions with AB. Book your journey today.",
+  "ctaLabel": "Book Now",
+  "ctaHref": "/contact",
+  "pageSections": [
+    {
+      "id": "sec-1793446883718-vjoooa0rx",
+      "type": "hero",
+      "variant": "background-content",
+      "order": 0,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Comprehensive Mobility Solutions",
+        "title": "Ground transportation,",
+        "titleHighlight": "seamlessly connected.",
+        "description": "Complete ground transportation solutions for individuals, executives, and organizations across the GCC and worldwide. From airport transfers and personal chauffeur services to corporate travel and event logistics, experience punctual, professional, and reliable mobility."
+      },
+      "items": [
+        {
+          "label": "Book Ground Transportation",
+          "href": "/contact",
+          "style": "primary",
+          "icon": "ArrowRight",
+          "iconPosition": "right"
+        },
+        {
+          "label": "Talk to a Transport Specialist",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone",
+          "iconPosition": "left"
+        },
+        {
+          "label": "Explore Our Fleet →",
+          "href": "/fleet",
+          "style": "link",
+          "icon": "Car",
+          "iconPosition": "left"
+        }
+      ],
+      "settings": {
+        "minHeight": "85vh",
+        "overlayOpacity": 85,
+        "contentPosition": "left",
+        "buttonLayout": "row"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&h=800&fit=crop",
+        "padding": "none",
+        "border": false,
+        "textAlign": "left",
+        "overlayGradient": "default"
+      }
+    },
+    {
+      "id": "sec-1793446883718-kp3y5xy2k",
+      "type": "marquee",
+      "variant": "default",
+      "order": 1,
+      "enabled": true,
+      "content": {
+        "items": [
+          {
+            "id": "itm-1793446883718-6rvcq4h36",
+            "icon": "Shield",
+            "label": "Licensed & Vetted Professional Chauffeurs"
+          },
+          {
+            "id": "itm-1793446883718-oh9ssgxr4",
+            "icon": "Radio",
+            "label": "24/7 Central Control Room & GPS Tracking"
+          },
+          {
+            "id": "itm-1793446883718-9smhev3wz",
+            "icon": "Plane",
+            "label": "Real-Time Flight Tracking & Delay Protection"
+          },
+          {
+            "id": "itm-1793446883718-b88675bcm",
+            "icon": "Car",
+            "label": "Executive Fleet (< 36 Months Old)"
+          },
+          {
+            "id": "itm-1793446883718-kyjwh4qkp",
+            "icon": "Globe",
+            "label": "GCC & Worldwide Network Coverage"
+          },
+          {
+            "id": "itm-1793446883718-y0i0bjexm",
+            "icon": "FileText",
+            "label": "Consolidated Corporate Invoicing"
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "speed": "normal",
+        "opacity": 90
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "sm",
+        "border": true
+      }
+    },
+    {
+      "id": "sec-1793446883718-wqvcaqesx",
+      "type": "serviceCards",
+      "variant": "3-column",
+      "order": 2,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Operating Capabilities",
+        "heading": "Comprehensive Ground Mobility Services",
+        "description": "End-to-end transportation services tailored to individual, corporate, and group travel demands across the region."
+      },
+      "items": [
+        {
+          "id": "itm-1793446883718-5h9weud7t",
+          "icon": "Plane",
+          "title": "Airport Ground Transfers",
+          "description": "Seamless airport pickups and drop-offs with live flight monitoring, personalized meet-and-greet name board service, and 60 minutes complimentary waiting time.",
+          "actions": [
+            {
+              "label": "Airport Protocol",
+              "href": "/services/airport-transfers",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1793446883718-r05y1vzzt",
+          "icon": "UserTie",
+          "title": "Personal & Executive Chauffeur",
+          "description": "Discreet, multilingual professional chauffeurs on demand or by the hour. Impeccable executive vehicles equipped with Wi-Fi, bottled water, and mobile chargers.",
+          "actions": [
+            {
+              "label": "Chauffeur Protocol",
+              "href": "/services/chauffeur-vip",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1793446883718-o8a5hx38e",
+          "icon": "Briefcase",
+          "title": "Corporate & Executive Travel",
+          "description": "Centralized account management, consolidated monthly billing, and guaranteed vehicle availability for executive teams, board members, and visiting partners.",
+          "actions": [
+            {
+              "label": "Corporate Solutions",
+              "href": "/corporate-accounts",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1793446883718-d57cxnipv",
+          "icon": "MapPin",
+          "title": "City-to-City Intercity Transfers",
+          "description": "Direct, comfortable long-distance travel between metropolitan hubs across Saudi Arabia, UAE, and GCC without airport queues or security hassle.",
+          "actions": [
+            {
+              "label": "Intercity Routes",
+              "href": "/contact",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1793446883718-fv6s82415",
+          "icon": "Calendar",
+          "title": "Event & Group Logistics",
+          "description": "Coordinated transportation for conferences, summits, and delegations. From luxury sedans and executive MPVs to 50-passenger executive motorcoaches.",
+          "actions": [
+            {
+              "label": "Event Mobility",
+              "href": "/services/event-transportation",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        },
+        {
+          "id": "itm-1793446883718-wglf4l7ru",
+          "icon": "Clock",
+          "title": "Hourly & As-Directed Hire",
+          "description": "Flexible hourly chauffeur bookings giving you total control of your itinerary, multiple meeting stops, and standby chauffeur time with complete discretion.",
+          "actions": [
+            {
+              "label": "Book Hourly",
+              "href": "/contact",
+              "style": "accent",
+              "icon": "ChevronRight"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "columns": "3",
+        "showHeader": true
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1793446883718-9tga7szak",
+      "type": "mediaContent",
+      "variant": "media-right",
+      "order": 3,
+      "enabled": true,
+      "content": {
+        "eyebrow": "End-to-End Solutions",
+        "heading": "Your Comprehensive Ground Transportation",
+        "description": "AB provides end-to-end ground transportation solutions tailored to your exact needs. Whether you are an individual traveler, a corporate client, or organizing a large event, our comprehensive service covers every aspect of your journey with military precision.",
+        "items": [
+          {
+            "id": "itm-1793446883718-bijxydsng",
+            "icon": "CheckCircle",
+            "heading": "Airport transfers with flight monitoring",
+            "description": "Real-time radar tracking ensures your chauffeur is ready when your wheels touch down."
+          },
+          {
+            "id": "itm-1793446883718-1v10lh9m4",
+            "icon": "CheckCircle",
+            "heading": "Corporate accounts with centralized billing",
+            "description": "Consolidated monthly invoices, spend analytics, and priority booking dispatch."
+          },
+          {
+            "id": "itm-1793446883718-a52buarv6",
+            "icon": "CheckCircle",
+            "heading": "Event and group transportation",
+            "description": "Dedicated on-site coordinators, VIP pools, and scheduled shuttle corridors."
+          },
+          {
+            "id": "itm-1793446883718-73kuvpn4i",
+            "icon": "CheckCircle",
+            "heading": "City-to-city long distance travel",
+            "description": "Relax or work in comfort across intercity corridors without airport stress."
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "right",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "darker",
+        "background": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1793446883718-rqzuer10u",
+      "type": "mediaContent",
+      "variant": "media-left",
+      "order": 4,
+      "enabled": true,
+      "content": {
+        "eyebrow": "White-Glove Standards",
+        "heading": "Your Personal Chauffeur & Protocol",
+        "description": "Every journey with AB includes a dedicated professional chauffeur. Our drivers are more than just transportation providers — they are your personal concierge on the road, ensuring supreme comfort, privacy, and safety throughout the journey.",
+        "items": [
+          {
+            "id": "itm-1793446883718-w4fytkjx8",
+            "icon": "UserCheck",
+            "heading": "Professionally trained and licensed drivers",
+            "description": "Undergoes rigorous background checks, defensive driving certification, and executive protocol training."
+          },
+          {
+            "id": "itm-1793446883718-ublrmec0p",
+            "icon": "Globe",
+            "heading": "Multilingual communication skills",
+            "description": "Fluent communication in English and Arabic for seamless interaction and complete discretion."
+          },
+          {
+            "id": "itm-1793446883718-em87o29yc",
+            "icon": "Compass",
+            "heading": "Local knowledge and route expertise",
+            "description": "Expert mastery of regional routes, VIP access gates, and live traffic avoidance."
+          }
+        ]
+      },
+      "items": [],
+      "settings": {
+        "mediaPosition": "left",
+        "containerWidth": "default"
+      },
+      "appearance": {
+        "theme": "dark",
+        "background": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=600&fit=crop",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "sec-1793446883718-wa587h8ts",
+      "type": "fleetGrid",
+      "variant": "4-column",
+      "order": 5,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Premium Fleet",
+        "heading": "Executive Fleet Built for Precision Travel",
+        "description": "From top-tier executive sedans to spacious luxury vans, our entire fleet is under 36 months old and maintained to the highest safety specifications."
+      },
+      "items": [],
+      "settings": {
+        "columns": "4",
+        "showHeader": true
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1793446883718-uqs9adsox",
+      "type": "faq",
+      "variant": "default",
+      "order": 6,
+      "enabled": true,
+      "content": {
+        "eyebrow": "Knowledge Base",
+        "heading": "Frequently Asked Questions",
+        "description": "Direct answers to common questions about our ground transportation and chauffeur services.",
+        "items": [
+          {
+            "id": "itm-1793446883718-wct1001el",
+            "question": "What is included in AB ground transportation services?",
+            "answer": "Our ground transportation covers airport transfers, corporate chauffeur travel, hourly as-directed bookings, intercity journeys, event transportation, and VIP motorcades. All bookings include a professionally vetted chauffeur, flight/traffic tracking, premium amenities, and fuel/tolls."
+          },
+          {
+            "id": "itm-1793446883718-96j8g6p3a",
+            "question": "How does airport flight tracking work?",
+            "answer": "We monitor commercial and private flights in real time. If your flight is delayed or arrives early, your chauffeur's pickup schedule automatically adjusts, and you receive up to 60 minutes complimentary wait time."
+          },
+          {
+            "id": "itm-1793446883718-4byx4pgw6",
+            "question": "Can I book long-distance city-to-city travel?",
+            "answer": "Yes, we operate regular intercity routes across Saudi Arabia, UAE, and the wider GCC (such as Riyadh to Dammam, Dubai to Abu Dhabi, and cross-border GCC transfers) with luxury sedans and executive vans."
+          },
+          {
+            "id": "itm-1793446883718-z4onk06dj",
+            "question": "How can businesses set up a corporate transportation account?",
+            "answer": "Corporate clients can set up an account with centralized booking, dedicated account managers, customized billing cycles, and consolidated monthly invoices. Contact our team to initiate corporate onboarding."
+          },
+          {
+            "id": "itm-1793446883718-yx162blm2",
+            "question": "What is the cancellation policy for ground transportation?",
+            "answer": "Standard chauffeur bookings can be cancelled or rescheduled up to 12 hours prior to scheduled pickup without charge. For group and event charters, flexible terms are outlined in your service agreement."
+          }
+        ]
+      },
+      "items": [
+        {
+          "label": "Book Ground Transport",
+          "href": "/contact",
+          "style": "primary",
+          "icon": "ArrowRight"
+        },
+        {
+          "label": "Talk to an Advisor",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone"
+        }
+      ],
+      "settings": {
+        "variant": "default"
+      },
+      "appearance": {
+        "theme": "dark",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "sec-1793446883718-5quaktiqs",
+      "type": "ctaBanner",
+      "variant": "centered",
+      "order": 7,
+      "enabled": true,
+      "content": {
+        "heading": "Ready for comprehensive ground transportation?",
+        "description": "Experience seamless transportation solutions with AB. Book your journey today or discuss customized corporate transportation programs."
+      },
+      "items": [
+        {
+          "label": "Book Ground Transportation",
+          "href": "/contact",
+          "style": "primary",
+          "icon": "ArrowRight"
+        },
+        {
+          "label": "Contact Transport Team",
+          "href": "/contact",
+          "style": "secondary",
+          "icon": "Phone"
+        }
+      ],
+      "settings": {
+        "layout": "centered"
+      },
+      "appearance": {
+        "theme": "darker",
+        "padding": "lg",
+        "border": true,
+        "textAlign": "center"
+      }
+    }
+  ],
+  "seo": {
+    "metaTitle": "Comprehensive Ground Transportation | AB",
+    "metaDescription": "Complete ground transportation solutions for individuals, corporate teams, and events across the GCC and worldwide.",
+    "ogImage": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&h=800&fit=crop"
+  },
+  "status": "published",
+  "showInMenu": false,
+  "order": 6,
+  "locale": "en",
+  "exportedAt": "2026-11-10T12:32:13.905Z"
+}
