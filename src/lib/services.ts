@@ -359,6 +359,15 @@ export function buildDefaultServiceDocs(): ServiceContentSource[] {
 
 let seedPromise: Promise<void> | null = null;
 
+function isDuplicateKeyError(error: unknown): error is { code: number } {
+  return (
+    typeof error === "object" &&
+    error !== null &&
+    "code" in error &&
+    error.code === 11000
+  );
+}
+
 /** Seed the database from the bundled dictionaries if it is empty. */
 export async function seedServicesIfEmpty(): Promise<void> {
   const enabled = isDatabaseEnabled();
@@ -372,7 +381,23 @@ export async function seedServicesIfEmpty(): Promise<void> {
       if (count === 0) {
         const docs = buildDefaultServiceDocs();
         if (docs.length) {
-          await Service.insertMany(docs);
+          const slugs = docs.map((doc) => doc.slug).filter(
+            (slug): slug is string => Boolean(slug),
+          );
+          if (slugs.length !== docs.length || new Set(slugs).size !== docs.length) {
+            throw new Error("Cannot seed services with missing or duplicate slugs");
+          }
+
+          try {
+            await Service.insertMany(docs, { ordered: false });
+          } catch (error) {
+            if (!isDuplicateKeyError(error)) throw error;
+
+            const seededCount = await Service.countDocuments({
+              slug: { $in: slugs },
+            });
+            if (seededCount !== slugs.length) throw error;
+          }
         }
       }
       // Ensure only header menu services have showInMenu: true
