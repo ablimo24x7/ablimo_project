@@ -1,0 +1,302 @@
+[{
+  "_id": {
+    "$oid": "6a96c4d3a3d4e90bce868205"
+  },
+  "enabled": true,
+  "__v": 1,
+  "animation": "bounce",
+  "backgroundColor": "#ffffff",
+  "channels": [
+    {
+      "id": "whatsapp",
+      "enabled": true,
+      "label": "WhatsApp",
+      "phone": "+966596978125",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "messenger",
+      "enabled": false,
+      "label": "Facebook Messenger",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "telegram",
+      "enabled": false,
+      "label": "Telegram",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "viber",
+      "enabled": false,
+      "label": "Viber",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "instagram",
+      "enabled": false,
+      "label": "Instagram",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "tiktok",
+      "enabled": false,
+      "label": "TikTok",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "snapchat",
+      "enabled": false,
+      "label": "Snapchat",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "x",
+      "enabled": false,
+      "label": "X (Twitter)",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "linkedin",
+      "enabled": false,
+      "label": "LinkedIn",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "line",
+      "enabled": false,
+      "label": "Line",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "wechat",
+      "enabled": false,
+      "label": "WeChat",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "discord",
+      "enabled": false,
+      "label": "Discord",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "slack",
+      "enabled": false,
+      "label": "Slack",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "phone",
+      "enabled": true,
+      "label": "ABLimo",
+      "phone": "+966596978125",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "AB Transportation",
+      "agentAvatar": "https://plus.unsplash.com/premium_vector-1682269287900-d96e9a6c188b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "sms",
+      "enabled": false,
+      "label": "SMS",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "email",
+      "enabled": false,
+      "label": "Email",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "google-maps",
+      "enabled": false,
+      "label": "Google Maps",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    },
+    {
+      "id": "waze",
+      "enabled": false,
+      "label": "Waze",
+      "phone": "",
+      "email": "",
+      "username": "",
+      "url": "",
+      "presetMessage": "Hello! I have a question about your services.",
+      "agentName": "",
+      "agentAvatar": ""
+    }
+  ],
+  "createdAt": {
+    "$date": "2026-09-01T12:28:03.192Z"
+  },
+  "ctaBgColor": "#25D366",
+  "ctaMessage": "Chat with us! ",
+  "ctaTextColor": "#ffffff",
+  "iconSize": 60,
+  "name": "Default Widget",
+  "position": "bottom-right",
+  "primaryColor": "#25D366",
+  "showAgents": false,
+  "showCta": true,
+  "showOnPages": [
+    "*"
+  ],
+  "targeting": {
+    "pages": [],
+    "excludePages": [],
+    "countries": [],
+    "trafficSources": [],
+    "devices": [
+      "desktop",
+      "mobile"
+    ],
+    "showFrom": "",
+    "showUntil": "",
+    "showDays": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "showHoursFrom": "",
+    "showHoursUntil": ""
+  },
+  "textColor": "#333333",
+  "updatedAt": {
+    "$date": "2026-11-03T04:46:08.774Z"
+  },
+  "whatsappPopup": true,
+  "whatsappPopupHeader": "Chat with us on WhatsApp",
+  "whatsappPopupMsg": "Hi! I have a question about your {service} service.",
+  "cityWhatsappNumber": "",
+  "countryWhatsappNumbers": [
+    {
+      "countrySlug": "uae",
+      "number": "+971 50 918 0556"
+    },
+    {
+      "countrySlug": "qatar",
+      "number": "+971 50 918 0556"
+    },
+    {
+      "countrySlug": "oman",
+      "number": "+971 50 918 0556"
+    },
+    {
+      "countrySlug": "kuwait",
+      "number": "+971 50 918 0556"
+    },
+    {
+      "countrySlug": "bahrain",
+      "number": "+971 50 918 0556"
+    },
+    {
+      "countrySlug": "saudi-arabia",
+      "number": "+966 59 697 8125"
+    }
+  ],
+  "whatsappPopupMsgCity": "Hi! I have a question about your services in {city}.",
+  "whatsappPopupMsgCountry": "Hi! I have a question about your services in {country}.",
+  "universalWhatsappNumber": "+966 59 697 8125"
+}]

@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "6a8d3f149ff637a1842507d9"
+  },
+  "key": "siteTitle",
+  "locale": "en",
+  "value": "AB Limo",
+  "createdAt": {
+    "$date": "2026-08-25T07:07:00.624Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-19T12:35:13.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a8d3f149ff637a1842507da"
+  },
+  "key": "defaultSeo",
+  "locale": "en",
+  "value": {
+    "metaTitle": "AB - Chauffeur, Bus Charter & Corporate Mobility in Saudi Arabia, United Arab Emirates, Qatar and across GCC",
+    "metaDescription": "Book luxury chauffeur services and charted bus transportation wordlwide"
+  },
+  "createdAt": {
+    "$date": "2026-08-25T07:07:00.766Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-19T12:35:13.884Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6aa630baae7ca2804550ff2b"
+  },
+  "key": "comingSoonEnabled",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-09-13T05:10:33.036Z"
+  },
+  "locale": "en",
+  "updatedAt": {
+    "$date": "2026-09-19T12:35:14.086Z"
+  },
+  "value": false
+}]

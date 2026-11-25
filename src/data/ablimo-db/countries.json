@@ -1,0 +1,2059 @@
+[{
+  "_id": {
+    "$oid": "6a9522afad4d61deaefd8be4"
+  },
+  "code": "bh",
+  "slug": "bahrain",
+  "name": "Bahrain",
+  "description": "For executive chauffeur service Bahrain journeys are coordinated through AB by booking vetted regional partners on request. Central operations managed from Riyadh oversee every transfer to maintain strict service consistency across the Kingdom of Bahrain.",
+  "cities": [
+    {
+      "slug": "manama",
+      "name": "Manama",
+      "nameAr": "المنامة",
+      "countrySlug": "",
+      "description": "",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "bahrain-international-airport",
+          "name": "Bahrain International Airport",
+          "nameAr": "",
+          "iata": "BAH",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ad36479fd3a3b06a68d720c"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What chauffeur services are available in Manama?",
+          "a": "AB provides luxury chauffeur services in Manama including airport transfers from Bahrain International Airport (BAH), city tours, corporate transportation, and cross-border transfers."
+        },
+        {
+          "q": "Can I book a cross-border transfer from Manama to Al Khobar?",
+          "a": "Yes, we offer seamless cross-border transfers from Manama to Al Khobar covering approximately 110 km in about 1 hour 30 minutes via the King Fahd Causeway."
+        },
+        {
+          "q": "Do you cover Bahrain's financial district?",
+          "a": "Absolutely. We provide corporate transportation to and from Bahrain's Financial Harbour, Bahrain World Trade Center, and all major business districts in Manama."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ad36479fd3a3b06a68d720b"
+      }
+    },
+    {
+      "slug": "riffa",
+      "name": "Riffa",
+      "nameAr": "الرفاع",
+      "countrySlug": "",
+      "description": "",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [],
+      "faqs": [
+        {
+          "q": "What services are available in Riffa?",
+          "a": "AB provides chauffeur services in Riffa including airport transfers, city transportation, and intercity transfers to Manama and other Bahrain locations."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ad36479fd3a3b06a68d720d"
+      }
+    },
+    {
+      "slug": "muharraq",
+      "name": "Muharraq",
+      "nameAr": "المحرق",
+      "countrySlug": "",
+      "description": "",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [],
+      "faqs": [
+        {
+          "q": "What chauffeur services are available in Muharraq?",
+          "a": "AB offers premium chauffeur services in Muharraq including airport transfers from Bahrain International Airport (BAH), city transportation, and intercity connections across Bahrain."
+        },
+        {
+          "q": "Do you provide transfers to Bahrain International Airport?",
+          "a": "Yes, Bahrain International Airport is located in Muharraq, and we provide fast, reliable meet-and-greet transfers to and from the terminal."
+        },
+        {
+          "q": "Can I book a limousine for cultural tours in Muharraq?",
+          "a": "Yes, we offer chauffeur-driven tours of Muharraq's UNESCO Pearling Trail, Shaikh Ebrahim Center, and traditional houses with professional chauffeurs."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ad36479fd3a3b06a68d720e"
+      }
+    }
+  ],
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:43:59.952Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-29T11:07:53.034Z"
+  },
+  "faqs": [
+    {
+      "q": "How does AB coordinate airport transfer Bahrain arrivals at Bahrain International Airport (BAH)?",
+      "a": "AB manages every Bahrain International Airport (BAH) transfer by tracking flight status live from the Riyadh operations centre. The allocated chauffeur arrives inside the terminal with an executive meet and greet name board. The driver assists with luggage before escorting passengers to their pre arranged vehicle."
+    },
+    {
+      "q": "What vehicle categories are available for chauffeur service in Bahrain?",
+      "a": "Vetted partners provide a versatile fleet suitable for business travel and VIP transport delegations across the country. Available models include executive sedan options such as the Mercedes S Class, luxury SUV transport like the Cadillac Escalade or GMC Yukon, and spacious Mercedes V Class vans for executive groups."
+    },
+    {
+      "q": "Are cross border transfers between Bahrain and Saudi Arabia possible?",
+      "a": "Yes, cross border transfers connecting Bahrain and Saudi Arabia via the King Fahd Causeway are coordinated upon request. AB plans route timing, vehicle clearance protocols, and driver scheduling from Riyadh. Both point to point transfers and multi city corporate transport itineraries can be arranged with our operations team."
+    },
+    {
+      "q": "How far in advance should corporate travel bookings be requested?",
+      "a": "We recommend booking corporate travel itineraries at least twenty four hours in advance to confirm chauffeur vetting and vehicle readiness. For major events, multi vehicle roadshows, or VIP delegations, earlier reservations allow our central dispatch desk to coordinate detailed scheduling, security requirements, and dedicated dispatch reporting."
+    },
+    {
+      "q": "How does AB verify partner standards for chauffeur service across Bahrain?",
+      "a": "AB audits every local supplier against comprehensive service benchmarks before dispatching client trips. Local chauffeurs must hold valid commercial driving licences, complete background checks, and maintain professional protocol training. Vehicles must be fully insured, meticulously valeted, and under three years of age for reliable operations."
+    }
+  ],
+  "descriptionAr": "",
+  "faqsAr": [],
+  "nameAr": ""
+},
+{
+  "_id": {
+    "$oid": "6a9522afad4d61deaefd8bce"
+  },
+  "code": "sa",
+  "slug": "saudi-arabia",
+  "name": "Saudi Arabia",
+  "description": "Deploying a professional chauffeur service Saudi Arabia provides corporate leaders, visiting delegations and international enterprises with punctual ground transport across the Kingdom. Centralised dispatch operates round the clock from the capital to coastal commercial centres, deploying vetted drivers and premium vehicles for demanding itineraries.",
+  "cities": [
+    {
+      "slug": "riyadh",
+      "name": "Riyadh",
+      "nameAr": "الرياض",
+      "countrySlug": "",
+      "description": "Airport Code: RUH. Operational Status: Headquarters and 24/7 Dispatch. Full fleet availability serving King Abdullah Financial District (KAFD), Diplomatic Quarter, ministerial compounds and major conference venues.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "king-khalid-international-airport",
+          "name": "King Khalid International Airport",
+          "nameAr": "",
+          "iata": "RUH",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d8209600b"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How does AB coordinate an airport transfer at King Khalid International Airport (RUH)?",
+          "a": "Our operations team monitors inbound flight numbers in real time for schedule modifications. Chauffeurs position vehicles prior to landing, hold personalised name boards inside the arrivals terminal and guide passengers to the curbside pickup lane with complimentary waiting time included."
+        },
+        {
+          "q": "What vehicle classes are available for chauffeur service in Riyadh?",
+          "a": "The Riyadh fleet includes standard sedans, business sedans, first class sedans such as the Mercedes S Class, executive SUVs such as the Cadillac Escalade, premium MPVs like the Mercedes V Class and executive vans. Every vehicle is detailed before dispatch and equipped with modern amenities."
+        },
+        {
+          "q": "Can corporate clients reserve an hourly chauffeur service in Riyadh?",
+          "a": "Yes, corporate clients can book an hourly chauffeur or full day hire arrangement for multi stop executive roadshows, diplomatic visits and financial district meetings. Your private driver remains on standby throughout the booked period to handle dynamic route adjustments."
+        },
+        {
+          "q": "Are vehicles and drivers in Riyadh fully licensed and insured?",
+          "a": "All vehicles across our Riyadh operations comply with commercial transport regulations within Saudi Arabia and carry comprehensive insurance coverage. Chauffeurs undergo extensive route training, background verification and professional protocol assessments to uphold passenger safety standards."
+        },
+        {
+          "q": "Does AB provide intercity transfer Riyadh journeys to other Saudi cities?",
+          "a": "AB provides chauffeured highway travel between Riyadh and key destinations including Dammam, Al Khobar, Buraydah and Jeddah. Regional transfers feature executive sedans or spacious SUVs with direct door to door pickup and verified transit coordination."
+        },
+        {
+          "q": "How do corporate travel managers establish billing accounts with AB in Riyadh?",
+          "a": "Corporate travel managers, executive assistants and event coordinators can open managed accounts through our Riyadh headquarters. Corporate agreements provide centralised monthly invoicing, priority vehicle allocation, direct dispatch access and consolidated itinerary reporting across Saudi Arabia."
+        },
+        {
+          "q": "What is the procedure for scheduling group event transportation in Riyadh?",
+          "a": "Organisers submit passenger manifests and event timelines to our central coordination desk. AB allocates coordinated fleets of executive vans, premium MPVs and coaches, deploying on site coordinators to oversee delegate boarding and venue departures efficiently."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d8209600a"
+      }
+    },
+    {
+      "slug": "jeddah",
+      "name": "Jeddah",
+      "nameAr": "جدة",
+      "countrySlug": "",
+      "description": "Airport Code: JED. Operational Status: Commercial and Gateway Hub. Comprehensive executive ground transport serving Red Sea commercial ports, diplomatic consulates, luxury coastal resorts and pilgrimage transit routes.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "king-abdulaziz-international-airport",
+          "name": "King Abdulaziz International Airport",
+          "nameAr": "",
+          "iata": "JED",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d8209600d"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is included in the chauffeur service Jeddah airport arrival package?",
+          "a": "Every arrival booked through AB at King Abdulaziz International Airport (JED) includes active flight tracking, inside terminal meet and greet with a personalised name board, luggage handling assistance and an agreed free waiting time. Chauffeurs guide guests directly to a climate controlled vehicle staged curbside."
+        },
+        {
+          "q": "How does AB manage flight delays at JED airport?",
+          "a": "Our operations dispatch monitors commercial aviation telemetry in real time. Pickup schedules adjust automatically when incoming passenger flights experience delays or schedule modifications, allowing chauffeurs to coordinate terminal curb staging precisely when the flight arrives at JED."
+        },
+        {
+          "q": "Which vehicle classes are available for corporate travel across Jeddah?",
+          "a": "Corporate clients can reserve Standard Sedans, Business Sedans such as the Mercedes E Class or similar, First Class flagships including the Mercedes S Class or similar, Executive SUVs like the Cadillac Escalade or GMC Yukon, Premium MPVs and multi passenger Executive Vans."
+        },
+        {
+          "q": "Can I book an hourly chauffeur service in Jeddah for multiple meetings?",
+          "a": "Yes, AB provides flexible hourly and full day chauffeur hire across Jeddah. Chauffeurs remain on standby between commercial appointments, hotel visits and business roadshows, giving executive travellers uninterrupted mobility without the need to arrange separate on demand rides."
+        },
+        {
+          "q": "Are intercity transfers available from Jeddah to Makkah, Madinah and Taif?",
+          "a": "AB provides licensed intercity private transfers departing from Jeddah to regional destinations including Makkah, Madinah, Taif and King Abdullah Economic City. Vehicles include water, high speed passenger connectivity and seasoned drivers familiar with regional Saudi highways."
+        },
+        {
+          "q": "Are vehicles and chauffeurs in Jeddah fully licensed and insured?",
+          "a": "All fleet vehicles operating in Jeddah carry commercial transport licensing and full passenger liability insurance coverage in accordance with Saudi Arabian regulatory requirements. Chauffeurs complete rigorous security vetting, defensive driving protocols and customer etiquette training."
+        },
+        {
+          "q": "How far in advance should I reserve private transport in Jeddah?",
+          "a": "While AB dispatch manages short notice bookings whenever capacity permits, booking in advance supports preferred vehicle availability during peak exhibition seasons, major religious holiday periods and international sporting events in Jeddah [Confirm: booking lead time]."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d8209600c"
+      }
+    },
+    {
+      "slug": "mecca",
+      "name": "Mecca",
+      "nameAr": "مكة المكرمة",
+      "countrySlug": "",
+      "description": "Nearest Airport: JED. Operational Status: Holy City Protocol and VIP Mobility. Specialised chauffeur operations serving the Holy Mosque perimeter, VIP hospitality suites and intercity pilgrimage corridors.",
+      "descriptionAr": "",
+      "aliases": [
+        "makkah"
+      ],
+      "airports": [],
+      "faqs": [
+        {
+          "q": "How do I book a private chauffeur service in Makkah?",
+          "a": "You can reserve ground transport by submitting your flight and itinerary details through our online portal or contacting our central dispatch team. We confirm vehicle availability, dispatch details, and chauffeur contact information well before your departure. Our operations team remains available continuously to handle schedule changes and adjustments."
+        },
+        {
+          "q": "What is included with a JED airport transfer to Makkah?",
+          "a": "Every airport transfer from King Abdulaziz International Airport (JED) includes active flight tracking, terminal meet and greet, luggage assistance, and complimentary waiting time of. Your assigned driver greets you holding an official name board and assists with bags before departing directly for Makkah."
+        },
+        {
+          "q": "Can I reserve a private driver Makkah for hourly or daily hire?",
+          "a": "Yes, AB provides flexible hourly and full day hire packages designed for corporate meetings, delegation site visits, and multi stop itineraries across Makkah. Your dedicated vehicle and driver remain at your disposal throughout the contracted duration, assisting with unscheduled stops and route adjustments."
+        },
+        {
+          "q": "What vehicle options and luggage capacities are available in Makkah?",
+          "a": "Our fleet encompasses standard sedans, luxury business saloons such as the Mercedes S Class, executive SUVs like the Cadillac Escalade and GMC Yukon, and multi passenger vans including the Mercedes Sprinter. Standard sedans hold two bags while executive vans comfortably accommodate up to ten pieces of luggage."
+        },
+        {
+          "q": "How are intercity transfer Makkah journeys to Madinah or Taif arranged?",
+          "a": "Intercity transfers are scheduled with point to point precision between hotels, airports, and private residences. Chauffeurs familiar with long distance highways manage transit to Madinah, Jeddah, or Taif, incorporating planned rest breaks. Fixed pricing and transparent schedules provide predictability without unexpected roadside expenses."
+        },
+        {
+          "q": "Are AB vehicles and drivers licensed and insured for commercial service?",
+          "a": "All AB vehicles operate with comprehensive commercial passenger insurance, valid regulatory permits, and regular safety inspections. Our professional chauffeurs possess commercial driving licences, local geographic knowledge, and extensive etiquette training to support VIP delegations and corporate executives with supreme discretion."
+        },
+        {
+          "q": "What access rules apply to the Haram zone for private transport?",
+          "a": "Strict religious regulations designate the central Haram perimeter solely for Muslim visitors. Non Muslim passengers are safely routed to external commercial districts, corporate headquarters, and regional venues outside sacred boundaries. Chauffeurs possess required credentials to access authorised hotel forecourts near the Grand Mosque."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d8209600e"
+      }
+    },
+    {
+      "slug": "medina",
+      "name": "Medina",
+      "nameAr": "المدينة المنورة",
+      "countrySlug": "",
+      "description": "Airport Code: MED. Operational Status: Holy City and Regional Gateway. Dedicated fleet serving Prince Mohammad bin Abdulaziz International Airport, Knowledge Economic City and central sanctuary hotels.",
+      "descriptionAr": "",
+      "aliases": [
+        "madinah"
+      ],
+      "airports": [
+        {
+          "slug": "prince-mohammad-bin-abdulaziz-international-airport",
+          "name": "Prince Mohammad bin Abdulaziz International Airport",
+          "nameAr": "",
+          "iata": "MED",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096010"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I book a chauffeur service Madinah transfer?",
+          "a": "Reservations can be submitted online or arranged directly through our round the clock dispatch team. Provide your travel date, pickup location, passenger count and preferred vehicle class to receive instant itinerary coordination."
+        },
+        {
+          "q": "What airport transfer services operate at Prince Mohammad bin Abdulaziz International Airport (MED)?",
+          "a": "AB provides scheduled terminal meet and greet arrivals, flight monitoring and direct hotel transfers at MED. Chauffeurs assist with baggage handling and guide passengers to premium vehicles parked in designated airport pickup bays."
+        },
+        {
+          "q": "Can I arrange an intercity transfer Madinah to Makkah or Jeddah?",
+          "a": "Yes, we operate long distance intercity transfers connecting Madinah to Makkah, Jeddah and AlUla. Passengers travel in premium sedans, luxury SUVs or spacious passenger vans with professional chauffeurs experienced on Saudi highway corridors."
+        },
+        {
+          "q": "Are chauffeurs in Madinah licensed and commercially insured?",
+          "a": "All AB chauffeurs hold full regulatory commercial licences and undergo comprehensive background vetting and defensive driving instruction. Every vehicle maintains comprehensive commercial passenger insurance in accordance with Saudi transport authorities."
+        },
+        {
+          "q": "Is hourly chauffeur hire available for ziyarah tours in Madinah?",
+          "a": "AB offers dedicated hourly and full day hire packages for ziyarah itineraries visiting historic landmarks throughout Madinah. Your private driver remains on standby throughout the duration of your visits to holy locations."
+        },
+        {
+          "q": "What vehicle options exist for large delegations needing transport in Madinah?",
+          "a": "For groups exceeding passenger car capacities, AB supplies executive passenger vans and luxury coaches. These group options ensure coordinated arrivals for conferences, large family groups and government delegations visiting Madinah venues."
+        },
+        {
+          "q": "How does AB monitor delayed flights arriving at MED?",
+          "a": "Our Riyadh dispatch centre tracks commercial and private aviation arrivals in real time using automated flight monitoring systems. Driver pickup times automatically adjust to actual landing times, preserving your complimentary waiting window."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d8209600f"
+      }
+    },
+    {
+      "slug": "dammam",
+      "name": "Dammam",
+      "nameAr": "الدمام",
+      "countrySlug": "",
+      "description": "Airport Code: DMM. Operational Status: Eastern Province Operations. Dedicated regional vehicle fleet serving global energy headquarters, petrochemical complexes, maritime logistics ports and corporate campuses.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "king-fahd-international-airport",
+          "name": "King Fahd International Airport",
+          "nameAr": "",
+          "iata": "DMM",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096012"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do passengers book a chauffeur service in Dammam with AB?",
+          "a": "Clients reserve private transport online through our reservation portal or by contacting our 24/7 operations team directly. Specify pickup details, terminal coordinates, destination addresses, and preferred vehicle categories during reservation. Our dispatch office confirms bookings with complete driver details, vehicle registration numbers, and arrival times prior to pickup, supporting punctual execution across Dammam."
+        },
+        {
+          "q": "What arrival procedure applies for airport transfers at DMM?",
+          "a": "Chauffeurs track inbound flight schedules into King Fahd International Airport (DMM) to accommodate flight adjustments automatically. Your driver greets arriving guests inside the terminal arrivals area holding a prominent name board at the designated meeting point. The transfer service includes complimentary free waiting time, allowing passengers ample opportunity to collect baggage and proceed comfortably through customs."
+        },
+        {
+          "q": "Are intercity transfers available from Dammam to other Saudi cities?",
+          "a": "AB delivers scheduled intercity transfers connecting Dammam to major commercial destinations including Riyadh, Jubail, and Al Khobar. Passengers travel in premium sedans or executive sport utility vehicles equipped with climate control, chilled bottled water, and mobile device charging points. Professional drivers manage highway routes with strict adherence to regional road safety standards and scheduled corporate itineraries."
+        },
+        {
+          "q": "Does AB provide cross border chauffeur travel between Dammam and Bahrain?",
+          "a": "AB arranges cross border transfers connecting Dammam with the Kingdom of Bahrain across the King Fahd Causeway [Confirm cross border service]. Travel coordinators review passenger documentation and border processing protocols prior to departure. Private vehicles support relaxed transit for corporate executives visiting regional offices, industrial sites, or international connection hubs across the causeway corridor."
+        },
+        {
+          "q": "Which vehicle classes are available for corporate transportation in Dammam?",
+          "a": "Our Dammam fleet features premium standard sedans, business saloons such as the Mercedes Benz E Class, and flagship vehicles like the Mercedes Benz S Class. Groups and corporate delegations can select spacious sport utility vehicles, Mercedes Benz V Class multi purpose vehicles, or executive passenger vans. Every vehicle maintains immaculate interior detailing, active telemetry, and comprehensive commercial passenger insurance coverage."
+        },
+        {
+          "q": "Can clients book a private driver in Dammam on an hourly basis?",
+          "a": "Hourly chauffeur service and full day hire options provide maximum scheduling flexibility for visiting executives with multiple daily appointments. Your dedicated driver remains on standby throughout meetings, factory inspections, or conference events across Dammam and Dhahran. This on demand mobility model allows passengers to adjust routes dynamically without needing individual transfer bookings for separate journeys."
+        },
+        {
+          "q": "What safety standards and licensing apply to chauffeur services in Dammam?",
+          "a": "All AB chauffeurs possess professional commercial driving licences and undergo comprehensive background vetting and defensive driving training. Every fleet vehicle undergoes regular mechanical inspections and carries valid commercial passenger insurance. Onboard satellite tracking connects each car directly to our 24/7 Riyadh operations centre, maintaining constant route oversight, schedule compliance, and rapid dispatch assistance throughout the Eastern Province."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096011"
+      }
+    },
+    {
+      "slug": "tabuk",
+      "name": "Tabuk",
+      "nameAr": "تبوك",
+      "countrySlug": "",
+      "description": "Airport Code: TUU. Operational Status: Northwestern Regional Hub. Managed fleet operations serving regional commercial centres and highway connections to Red Sea and NEOM developments.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "prince-sultan-bin-abdulaziz-airport",
+          "name": "Prince Sultan bin Abdulaziz Airport",
+          "nameAr": "مطار الأمير سلطان بن عبدالعزيز",
+          "iata": "TUU",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096014"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What vehicles are available for chauffeur service Tabuk bookings?",
+          "a": "AB operates executive sedans, luxury flagship saloons, full size sports utility vehicles, and high capacity vans across Tabuk. Fleet choices include the Mercedes E Class, Mercedes S Class, Cadillac Escalade, GMC Yukon, and Mercedes Sprinter, all maintained under strict detailing and maintenance standards."
+        },
+        {
+          "q": "How does AB coordinate an airport transfer at Prince Sultan bin Abdulaziz Airport (TUU)?",
+          "a": "Chauffeurs track inbound flights to Prince Sultan bin Abdulaziz Airport (TUU) in real time to adapt to timing alterations. Your driver greets arriving passengers inside the terminal holding an official name board, helps carry baggage, and escorts guests directly to their ready vehicle."
+        },
+        {
+          "q": "Can I reserve a private driver Tabuk for intercity transit to NEOM?",
+          "a": "Yes, AB provides direct intercity transfer Tabuk corridors linking local accommodation and airports to project sites across NEOM. These long distance journeys utilise comfortable, high specification vehicles driven by professional chauffeurs familiar with regional highways and route requirements."
+        },
+        {
+          "q": "Can corporate teams arrange hourly chauffeur and full day hire in Tabuk?",
+          "a": "Corporate travellers can book vehicles by the hour or reserve full day hire across Tabuk for back to back meetings and site inspections. This setup provides dedicated access to a car with driver, keeping itineraries entirely flexible while our central dispatch manages logistical timing."
+        },
+        {
+          "q": "Are all vehicles and chauffeurs licensed and insured in Saudi Arabia?",
+          "a": "Every vehicle in our operational fleet is fully insured and licensed in compliance with Saudi transport authority standards. Chauffeurs undergo vetting, professional defensive driving checks, and security protocol preparation to deliver safe executive car service throughout the region."
+        },
+        {
+          "q": "How do corporate clients manage booking and invoicing for group travel?",
+          "a": "Corporate travel managers can centralise bookings through consolidated account facilities managed by our dispatch headquarters. We provide clear digital itineraries, automated reporting, and transparent billing schedules suited for corporate travel programs, event delegations, and multi vehicle movements."
+        },
+        {
+          "q": "What is the standard procedure for flight delays at TUU airport?",
+          "a": "Our dispatch system continuously tracks incoming flight telemetry into TUU airport. Chauffeur dispatch times update automatically when commercial flights experience delays, preserving the agreed complimentary waiting period from the moment your aircraft lands on the runway."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096013"
+      }
+    },
+    {
+      "slug": "al-ula",
+      "name": "Al Ula",
+      "nameAr": "العلا",
+      "countrySlug": "",
+      "description": "Airport Code: ULH. Operational Status: Heritage and Event Coverage. High specification executive SUVs and premium sedans operating across luxury resort developments, global cultural summits and desert conference destinations.",
+      "descriptionAr": "",
+      "aliases": [
+        "alula"
+      ],
+      "airports": [
+        {
+          "slug": "prince-abdulmajeed-bin-abdulaziz-international-airport",
+          "name": "Prince Abdulmajeed bin Abdulaziz International Airport",
+          "nameAr": "مطار الأمير عبدالمجيد بن عبدالعزيز الدولي",
+          "iata": "ULH",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096016"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is included in the chauffeur service AlUla?",
+          "a": "Chauffeur service in AlUla includes a professional driver, a sanitised luxury vehicle with GPS tracking, bottled water, and comprehensive passenger insurance. Services accommodate point to point journeys, hourly bookings, or multi day event coordination across the valley. Detailed inclusions for custom itineraries are confirmed during quotation."
+        },
+        {
+          "q": "How does ULH airport transfer meet and greet work?",
+          "a": "When arriving at Prince Abdulmajeed bin Abdulaziz International Airport (ULH), your chauffeur tracks your flight status and greets you inside the terminal with an identification name board. Chauffeurs assist with your baggage and escort you to the awaiting vehicle. Standard complimentary wait times apply for international and domestic arrivals [Confirm: wait time]."
+        },
+        {
+          "q": "Can I hire a private driver AlUla for full day heritage tours?",
+          "a": "Yes, private driver AlUla hire is available on an hourly or full day basis for touring sites such as Hegra, Dadan, and Elephant Rock. Dedicated drivers remain on standby throughout your visits, following your personal schedule. Daily packages provide flexible tour transport AlUla without transport delays between archaeological landmarks."
+        },
+        {
+          "q": "Does AB provide intercity transfer AlUla to other cities?",
+          "a": "AB provides comfortable intercity transfers connecting AlUla with Madinah, Tabuk, and surrounding regional destinations. Long distance journeys utilise premium sedans and spacious SUVs driven by experienced highway chauffeurs. Travel durations, vehicle specifications, and scheduled rest stops are arranged during booking confirmation."
+        },
+        {
+          "q": "Are vehicles and drivers in AlUla fully licensed and insured?",
+          "a": "Every vehicle in the AB fleet complies with Saudi transport regulations, maintaining full passenger insurance and rigorous safety inspections. Drivers hold valid commercial chauffeur permits and complete defensive driving training for regional road conditions. Fleet operations are monitored continuously by our Riyadh dispatch team."
+        },
+        {
+          "q": "Can AB coordinate event transportation AlUla for large groups?",
+          "a": "AB manages large scale event transportation AlUla for festivals, exhibitions, corporate conferences, and private cultural gatherings. Group transportation integrates executive vans, premium MPVs, and luxury sedans under unified dispatch control. Dedicated coordinators oversee flight arrivals, VIP escorts, and site shuttles throughout your schedule."
+        },
+        {
+          "q": "How far in advance should I book limousine service AlUla?",
+          "a": "We advise reserving limousine service AlUla in advance, especially during winter festival seasons and major concert periods. While dispatch accommodates short notice requests subject to availability, advance reservations secure your preferred vehicle class. Bookings can be confirmed directly online or through our central operations centre."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096015"
+      }
+    },
+    {
+      "slug": "al-khobar",
+      "name": "Al Khobar",
+      "nameAr": "الخبر",
+      "countrySlug": "",
+      "description": "Airport Code: DMM. Operational Status: Active Corporate Hub. Providing executive car service solutions for energy sector headquarters, international business parks and interstate commercial travel connecting regional industrial complexes.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [],
+      "faqs": [
+        {
+          "q": "How do I book a chauffeur service Al Khobar transfer with AB?",
+          "a": "Booking your journey with AB is straightforward through our central reservations team. You can submit your itinerary details online or contact our Riyadh dispatch office directly. Please provide your pick up location, destination, flight details if applicable, date, time and preferred vehicle class. Our team confirms reservations promptly and assigns a professional chauffeur with full vehicle details in advance."
+        },
+        {
+          "q": "What does the meet and greet procedure involve for arrivals at DMM?",
+          "a": "When arriving at King Fahd International Airport, your chauffeur tracks your inbound flight status in real time to adapt to any schedule changes. Once you clear baggage collection, your driver welcomes you inside the arrivals hall holding a personalised name board. Your driver assists with all luggage and escorts you directly to your waiting executive car for a calm journey."
+        },
+        {
+          "q": "Does AB provide intercity transfer Al Khobar routes across Saudi Arabia and to Bahrain?",
+          "a": "AB provides comfortable intercity journeys connecting Al Khobar with major regional destinations including Dammam, Dhahran, Jubail, Hofuf and Riyadh. Cross border journeys to Bahrain across the King Fahd Causeway are arranged upon request through vetted partners [Confirm cross border service]. Every long distance journey features premium sedans or SUVs equipped with refreshments, climate control and professional drivers."
+        },
+        {
+          "q": "Can I book an hourly chauffeur or full day hire for corporate meetings?",
+          "a": "Yes, AB provides flexible hourly hire and full day chauffeur services tailored to corporate schedules. This option suits executives attending consecutive meetings, roadshows or VIP events across multiple commercial districts. Your dedicated driver remains on standby throughout the day, providing immediate departures between venues without the inconvenience of coordinating separate transport bookings for each individual journey."
+        },
+        {
+          "q": "Which vehicle classes are available for chauffeur services in Al Khobar?",
+          "a": "Our fleet serving Al Khobar includes Standard Sedan, Business Sedan such as the Mercedes E Class, First Class Sedan including the Mercedes S Class, Executive SUV options like the Cadillac Escalade or GMC Yukon, Premium MPV models like the Mercedes V Class, and Executive Vans for up to fourteen guests. Every vehicle is thoroughly detailed and inspected before departure."
+        },
+        {
+          "q": "What safety and vetting standards apply to AB chauffeurs and vehicles?",
+          "a": "AB maintains strict operational safety across all transportation operations. Every chauffeur is professionally trained, licensed, fully insured and selected for discretion, etiquette and advanced driving competence. Each vehicle in the fleet features active GPS tracking and undergoes rigorous mechanical maintenance. Chauffeurs observe regional traffic laws and corporate protocol standards to provide smooth, dependable passenger transit."
+        },
+        {
+          "q": "How does AB support corporate travel managers and travel partners?",
+          "a": "AB offers dedicated ground logistics management for corporate travel coordinators, event organisers and executive assistants. Corporate accounts benefit from centralised invoicing, coordinated group movements and 24/7 dispatch support from our regional headquarters. We manage complex itineraries, delegate movements and VIP protocol transport with precision, allowing business teams to focus entirely on their commercial objectives."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096017"
+      }
+    },
+    {
+      "slug": "al-qasim",
+      "name": "Al Qasim",
+      "nameAr": "القصيم",
+      "countrySlug": "",
+      "description": "Airport Code: ELQ. Operational Status: Central Agricultural and Commercial Hub. Reliable corporate transportation connecting regional food production leadership, university forums and trade centres with the central capital.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "prince-naif-bin-abdulaziz-international-airport",
+          "name": "Prince Naif bin Abdulaziz International Airport",
+          "nameAr": "مطار الأمير نايف بن عبدالعزيز الدولي",
+          "iata": "ELQ",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096019"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What does an ELQ airport transfer include?",
+          "a": "An ELQ airport transfer includes flight tracking for your arrival at Prince Naif bin Abdulaziz International Airport (ELQ), terminal meet and greet, luggage assistance and private transport to your Buraydah or Unaizah destination. The driver monitors schedule changes directly to accommodate altered arrival times without administrative complications."
+        },
+        {
+          "q": "Can I hire a private driver Al Qassim for a full day?",
+          "a": "Yes, AB provides hourly chauffeur and full day hire options across Buraydah, Unaizah and surrounding areas. This flexible service suits corporate leaders attending multiple business meetings, allowing your private driver Al Qassim to remain dedicated to your schedule throughout the day."
+        },
+        {
+          "q": "Are chauffeur vehicles licensed and insured across Al Qassim?",
+          "a": "All AB vehicles operating in Al Qassim carry comprehensive commercial passenger insurance and full regulatory registration. Professional drivers undergo thorough vetting and rigorous safety training, upholding passenger safety and discretion on every journey across the region."
+        },
+        {
+          "q": "How are intercity transfers from Al Qassim booked?",
+          "a": "Intercity transfer Al Qassim bookings can be scheduled in advance through our 24/7 central dispatch team. Our long distance service provides private point to point transit between Al Qassim, Riyadh, Ar Rass and adjacent regions in climate controlled comfort."
+        },
+        {
+          "q": "How far in advance should I arrange a chauffeur in Al Qassim?",
+          "a": "We recommend booking your chauffeur service in Al Qassim at least 24 hours prior to departure to secure your preferred vehicle class. For urgent requirements or same day flights into ELQ, contact our dispatch operations directly for rapid vehicle allocation."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096018"
+      }
+    },
+    {
+      "slug": "abha",
+      "name": "Abha",
+      "nameAr": "أبها",
+      "countrySlug": "",
+      "description": "Airport Code: AHB. Operational Status: Southern Province Coverage. Transport solutions operating through the Asir highland territory, serving regional administrative bodies, seasonal symposiums and institutional travel needs.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "abha-international-airport",
+          "name": "Abha International Airport",
+          "nameAr": "مطار أبها الدولي",
+          "iata": "AHB",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d8209601b"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I arrange an executive chauffeur service in Abha?",
+          "a": "Reservations can be requested online or through our round the clock dispatch desk in Riyadh. Simply submit your travel dates, preferred vehicle category, passenger count, and route details. Our team confirms availability, assigns a certified private driver, and provides full chauffeur identification details prior to departure. Corporate accounts also receive centralised invoicing and flexible itinerary adjustments for regional meetings."
+        },
+        {
+          "q": "What is the protocol for AHB airport collections?",
+          "a": "Every arrival at Abha International Airport (AHB) includes complimentary flight tracking and executive meet and greet service. Your assigned chauffeur monitors flight progress to adjust for early touchdowns or unexpected air delays. The driver waits inside arrivals holding a personalised name board at meeting point. Guests receive complimentary waiting time to complete baggage collection before a seamless transfer to their destination."
+        },
+        {
+          "q": "Can AB provide a private driver in Abha for high altitude mountain roads?",
+          "a": "Booking a private driver Abha service allows business visitors to navigate steep terrain without personal driving stress. AB provides experienced chauffeurs specifically accustomed to the winding elevations and seasonal weather patterns across Abha and the Asir highlands. All drivers adhere to rigorous defensive driving procedures, while fleet vehicles undergo comprehensive mechanical inspections to handle steep mountain gradients. Passengers enjoy smooth, unhurried journeys whether ascending to panoramic ridge viewpoints or travelling between elevated residential and municipal sectors."
+        },
+        {
+          "q": "How do intercity transfers from Abha to regional destinations work?",
+          "a": "Every intercity transfer Abha connection provides direct transportation to surrounding commercial and industrial centres. AB operates scheduled private intercity transfers from Abha to key destinations including Khamis Mushait, Jizan, and surrounding commercial centres. Passengers travel in premium sedans or executive SUVs configured for long distance comfort, avoiding the inconvenience of regional flight schedules or unvetted taxis. Every intercity journey features door to door pickup, climate control, complimentary bottled refreshments, and professional route planning for optimal efficiency."
+        },
+        {
+          "q": "Which vehicle classes are available for chauffeur bookings in Abha?",
+          "a": "Our regional fleet encompasses standard, business, and first class sedans such as the Mercedes S Class, alongside executive SUVs like the GMC Yukon and Cadillac Escalade. For corporate delegations and private entourages, we supply luxury Mercedes V Class multi purpose vehicles and spacious passenger vans. Every vehicle dispatched in Abha maintains rigorous safety standards, immaculate detailing, and advanced climate control."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d8209601a"
+      }
+    },
+    {
+      "slug": "jizan",
+      "name": "Jizan",
+      "nameAr": "جازان",
+      "countrySlug": "",
+      "description": "Airport Code: GIZ. Operational Status: Southern Industrial and Port Hub. Executive ground fleet serving Jazan City for Primary and Downstream Industries, maritime ports and commercial shipping centers.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "king-abdullah-bin-abdulaziz-airport",
+          "name": "King Abdullah bin Abdulaziz Airport",
+          "nameAr": "مطار الملك عبدالله بن عبدالعزيز",
+          "iata": "GIZ",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d8209601d"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What vehicle options are available for chauffeur service Jizan?",
+          "a": "AB provides standard sedans, executive business saloons, flagship luxury sedans like the Mercedes S Class, and spacious premium SUVs such as the Cadillac Escalade or GMC Yukon. For delegations, premium MPVs and executive vans accommodate larger corporate groups. Every vehicle is fully insured and licensed for commercial passenger carriage."
+        },
+        {
+          "q": "How are arrivals handled at King Abdullah bin Abdulaziz Airport (GIZ)?",
+          "a": "Your professional chauffeur tracks inbound flight status in real time to adapt to schedule variations. Upon arrival, the driver welcomes passengers inside the terminal with a personalized name board. Chauffeurs assist with luggage before escorting passengers to their awaiting vehicle for a smooth GIZ airport transfer."
+        },
+        {
+          "q": "Can I book an intercity transfer Jizan to other regional centres?",
+          "a": "Yes, AB coordinates direct intercity journeys from Jizan to destinations including Abha, Sabya, and Jazan Economic City. Chauffeurs manage route planning across regional highways, delivering relaxed travel without the delays of scheduled regional connections. Long distance itineraries may be booked as one way transfers or round trips."
+        },
+        {
+          "q": "Can corporate clients reserve an hourly private driver Jizan for full day meetings?",
+          "a": "Executive clients can reserve an hourly chauffeur or complete full day hire for complex schedules in Jizan. The assigned private driver remains on standby throughout the itinerary to accommodate multi stop agendas, changing meeting venues, and executive site visits. Central dispatch oversees ongoing route coordination."
+        },
+        {
+          "q": "What safety and insurance standards apply to AB operations in Jizan?",
+          "a": "All operations supervised by AB adhere to strict transport authority regulations within Saudi Arabia. Every chauffeur is professionally vetted, commercially licensed, and trained in passenger safety and discrete executive protocol. Vehicles undergo routine safety inspections and carry comprehensive commercial passenger insurance coverage."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d8209601c"
+      }
+    },
+    {
+      "slug": "neom",
+      "name": "NEOM",
+      "nameAr": "نيوم",
+      "countrySlug": "",
+      "description": "Airport Code: NUM. Operational Status: Giga-Project Logistics Hub. Specialised fleet support for project executives, international consultants, investor delegations and engineering site visits.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "neom-bay-airport",
+          "name": "NEOM Bay Airport",
+          "nameAr": "مطار خليج نيوم",
+          "iata": "NUM",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d8209601f"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What vehicles are available for chauffeur service NEOM bookings?",
+          "a": "AB provides executive sedans, flagship luxury sedans, premium multi purpose vehicles and executive SUVs across NEOM. The fleet includes models like the Mercedes S Class, Mercedes E Class, Cadillac Escalade, GMC Yukon and Mercedes V Class or similar. All vehicles are maintained to strict corporate standards, featuring climate control, comprehensive insurance and tracking systems."
+        },
+        {
+          "q": "How does AB coordinate an NUM airport transfer?",
+          "a": "Arrival transfers from NEOM Bay Airport (NUM) include automated flight monitoring to accommodate early or delayed flights. Your allocated chauffeur waits inside the terminal holding a personalised name board. The driver assists with your luggage and guides you to an executive vehicle prepared for immediate departure."
+        },
+        {
+          "q": "Can I book an intercity transfer NEOM to Tabuk or AlUla?",
+          "a": "AB arranges dedicated intercity transfers from NEOM to major regional destinations including Tabuk, Prince Sultan bin Abdulaziz Airport (TUU) and AlUla. Journeys feature experienced chauffeurs familiar with northwest highway regulations, checkpoint protocols and desert driving conditions. Vehicles carry bottled water and mobile charging facilities for travel comfort."
+        },
+        {
+          "q": "Do you offer hourly chauffeur and full day hire in NEOM?",
+          "a": "AB offers flexible hourly hire and dedicated full day chauffeur services for visiting delegations, project inspections and corporate leadership itineraries. Your assigned driver remains at your disposal throughout the day to navigate between project sectors, client meetings and site base camps on a flexible schedule."
+        },
+        {
+          "q": "How are drivers vetted and licensed for project travel across NEOM?",
+          "a": "Every professional chauffeur operating with AB holds proper commercial driving credentials, local road knowledge and required security clearances for major industrial sites. Drivers adhere to rigorous defensive driving standards and client confidentiality protocols, providing safe corporate travel for senior executives and project partners."
+        },
+        {
+          "q": "What corporate transportation NEOM options exist for large delegations?",
+          "a": "AB manages comprehensive ground mobility programmes for large corporate groups, engineering teams and international delegations. Services include luxury Mercedes V Class multi purpose vehicles, executive passenger vans and high capacity bus rental NEOM coaches. Central dispatch coordinates complex multi vehicle logistics for conferences and workforce mobilization."
+        },
+        {
+          "q": "How do corporate clients arrange booking and billing with AB?",
+          "a": "Clients can book individual transfers or establish consolidated corporate accounts with monthly invoicing, centralized reporting and dedicated account management. The 24/7 Riyadh operations centre handles immediate reservations, itinerary adjustments and urgent dispatch requirements via telephone, email and corporate procurement channels."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d8209601e"
+      }
+    },
+    {
+      "slug": "hail",
+      "name": "Hail",
+      "nameAr": "حائل",
+      "countrySlug": "",
+      "description": "Historic capital of northern Saudi Arabia, celebrated for UNESCO World Heritage rock art, desert landscapes, and legendary Arabian hospitality.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "hail-international-airport",
+          "name": "Hail International Airport",
+          "nameAr": "مطار حائل الدولي",
+          "iata": "HAS",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096021"
+          }
+        }
+      ],
+      "faqs": [],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096020"
+      }
+    },
+    {
+      "slug": "jubail",
+      "name": "Jubail",
+      "nameAr": "الجبيل",
+      "countrySlug": "",
+      "description": "Home to the world's largest petrochemical industrial complex and modern coastal business districts along the Arabian Gulf.",
+      "descriptionAr": "",
+      "aliases": [
+        "jubial"
+      ],
+      "airports": [
+        {
+          "slug": "jubail-airport",
+          "name": "Jubail Airport",
+          "nameAr": "مطار الجبيل",
+          "iata": "QJB",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096023"
+          }
+        }
+      ],
+      "faqs": [],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096022"
+      }
+    },
+    {
+      "slug": "najran",
+      "name": "Najran",
+      "nameAr": "نجران",
+      "countrySlug": "",
+      "description": "An ancient trade oasis and cultural jewel near Saudi Arabia's southern border, renowned for Al-Ukhdood ruins and traditional mudbrick palaces.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "najran-airport",
+          "name": "Najran Airport",
+          "nameAr": "مطار نجران",
+          "iata": "EAM",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096025"
+          }
+        }
+      ],
+      "faqs": [],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096024"
+      }
+    },
+    {
+      "slug": "taif",
+      "name": "Taif",
+      "nameAr": "الطائف",
+      "countrySlug": "",
+      "description": "The scenic summer retreat of Saudi Arabia perched on the Sarawat Mountains, famous for fragrant rose gardens, Shubra Palace, and cool mountain air.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "taif-regional-airport",
+          "name": "Taif Regional Airport",
+          "nameAr": "مطار الطائف الإقليمي",
+          "iata": "TIF",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096027"
+          }
+        }
+      ],
+      "faqs": [],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096026"
+      }
+    },
+    {
+      "slug": "yanbu",
+      "name": "Yanbu",
+      "nameAr": "ينبع",
+      "countrySlug": "",
+      "description": "A major Red Sea industrial port and historic maritime city, celebrated for pristine coral reefs, Yanbu Industrial City, and preserved heritage quarters.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "yanbu-airport",
+          "name": "Prince Abdul Mohsin Bin Abdulaziz International Airport",
+          "nameAr": "مطار الأمير عبد المحسن بن عبد العزيز",
+          "iata": "YNB",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ae33abf4d58062d82096029"
+          }
+        }
+      ],
+      "faqs": [],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ae33abf4d58062d82096028"
+      }
+    }
+  ],
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:43:59.951Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-29T12:23:27.701Z"
+  },
+  "faqs": [
+    {
+      "q": "What vehicles are available for chauffeur service Saudi Arabia bookings?",
+      "a": "Our fleet features premium executive sedans including the Mercedes S Class, spacious luxury SUVs such as the Cadillac Escalade and GMC Yukon, and executive vans like the Mercedes V Class. Group journeys utilise luxury coaches and modern minibuses. All vehicles provide climate control, leather upholstery and meticulous presentation for executive travellers."
+    },
+    {
+      "q": "How does airport transfer meet and greet operate at RUH and regional airports?",
+      "a": "Chauffeurs track incoming flights into King Khalid International Airport (RUH) and other national hubs in real time to adapt to flight timing changes. Drivers greet arriving passengers in the terminal arrivals hall holding a personalised name board. The chauffeur assists with luggage before guiding passengers directly to the waiting vehicle."
+    },
+    {
+      "q": "Can corporate travel managers book hourly chauffeur and full day hire?",
+      "a": "Yes, corporate clients can arrange hourly bookings, full day hire and continuous multi day coverage across all major Saudi cities. Chauffeurs remain on standby throughout your itinerary, accommodating unscheduled route changes, business meetings and administrative errands without delay. Reservations are managed through dedicated corporate accounts with consolidated monthly invoicing."
+    },
+    {
+      "q": "What standards apply to drivers delivering limousine service Saudi Arabia?",
+      "a": "Chauffeurs represent the highest professional standards, possessing thorough local geographic knowledge, defensive driving credentials and corporate protocol etiquette. Drivers are fully licensed under Kingdom transport regulations and undergo regular background checks. Multilingual drivers are available upon request to assist foreign commercial delegations and international executive teams."
+    },
+    {
+      "q": "How are intercity transfers coordinated between major business centres?",
+      "a": "Intercity transfers operate as private, non stop road journeys connecting urban centres such as Riyadh, Dammam, Jeddah and regional industrial locations. Central dispatch tracks vehicle movements continuously across highway corridors to maintain scheduling precision. Passengers enjoy quiet cabins equipped with phone charging facilities, climate management and ample luggage capacity."
+    },
+    {
+      "q": "How does AB manage large scale event transportation and bus rental in Saudi Arabia?",
+      "a": "AB coordinates comprehensive ground logistics for summits, trade expos and state functions with dedicated dispatchers and on site staging controllers. Fleets combine executive sedans for speakers with luxury coaches for attendees, managing coordinated shuttle schedules between hotels, airports and venues. Account managers oversee real time routing and vehicle positioning throughout the event."
+    },
+    {
+      "q": "What is the reservation process and operating schedule for chauffeur dispatch?",
+      "a": "Reservations can be submitted online or directly to our central Riyadh operations centre, operating twenty four hours a day, seven days a week. Dispatchers assign vehicles, share chauffeur contact details prior to pickup, and supervise route progress. Institutional accounts receive priority scheduling and dedicated transport coordination for urgent executive requirements."
+    },
+    {
+      "q": "Are all vehicles and passengers covered by commercial insurance?",
+      "a": "All fleet vehicles maintain comprehensive commercial insurance policies meeting all regulatory mandates established by the transport general authority in Saudi Arabia. Regular safety audits and preventive maintenance programmes ensure fleet reliability. Corporate travel managers receive full documentation verifying compliance and driver credentials upon account activation."
+    }
+  ],
+  "descriptionAr": "",
+  "faqsAr": [],
+  "nameAr": ""
+},
+{
+  "_id": {
+    "$oid": "6a9522afad4d61deaefd8bef"
+  },
+  "code": "om",
+  "slug": "oman",
+  "name": "Oman",
+  "description": "AB arranges every executive chauffeur service Oman journey on request through vetted partners, planned from Riyadh headquarters for corporate and protocol delegations. This managed network provides reliable ground transport across Oman with continuous trip supervision.",
+  "cities": [
+    {
+      "slug": "muscat",
+      "name": "Muscat",
+      "countrySlug": "oman",
+      "description": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "muscat-international-airport",
+          "name": "Muscat International Airport",
+          "iata": "MCT",
+          "citySlug": "muscat",
+          "description": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6a9522afad4d61deaefd8bf1"
+          }
+        }
+      ],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bf0"
+      },
+      "faqs": [
+        {
+          "q": "What chauffeur services are available in Muscat?",
+          "a": "AB provides luxury airport transfers from Muscat International Airport (MCT), city tours, hourly chauffeur hire, and intercity transfers to Salalah, Sohar, and beyond."
+        },
+        {
+          "q": "Can I book a Muscat city tour with a chauffeur?",
+          "a": "Yes, we offer guided city tours in Muscat covering the Sultan Qaboos Grand Mosque, Royal Opera House, Muttrah Souq, and coastal attractions with knowledgeable local drivers."
+        },
+        {
+          "q": "What is the duration for a Muscat to Abu Dhabi transfer?",
+          "a": "The drive from Muscat to Abu Dhabi covers approximately 350 km and takes about 3 hours 30 minutes. Our luxury vehicles ensure a comfortable journey."
+        }
+      ],
+      "nameAr": "مسقط"
+    },
+    {
+      "slug": "salalah",
+      "name": "Salalah",
+      "countrySlug": "oman",
+      "description": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "salalah-airport",
+          "name": "Salalah Airport",
+          "iata": "SLL",
+          "citySlug": "salalah",
+          "description": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6a9522afad4d61deaefd8bf3"
+          }
+        }
+      ],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bf2"
+      },
+      "faqs": [
+        {
+          "q": "What services are available in Salalah?",
+          "a": "AB provides airport transfers from Salalah Airport (SLL), khareef season tours, and exploration trips to wadis, beaches, and archaeological sites."
+        },
+        {
+          "q": "Can I book a Salalah khareef tour?",
+          "a": "Yes, we offer specialized khareef season packages to explore Salalah's lush green landscapes, wadis, waterfalls, and natural attractions with experienced local drivers."
+        }
+      ],
+      "nameAr": "صلالة"
+    },
+    {
+      "slug": "sohar",
+      "name": "Sohar",
+      "countrySlug": "oman",
+      "description": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "sohar-international-airport",
+          "name": "Sohar International Airport",
+          "iata": "SOH",
+          "citySlug": "sohar",
+          "description": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6a9522afad4d61deaefd8bf5"
+          }
+        }
+      ],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bf4"
+      },
+      "faqs": [
+        {
+          "q": "What chauffeur services are available in Sohar?",
+          "a": "AB offers premium chauffeur services in Sohar including hotel transfers, city transportation, Sohar Port transfers, and intercity connections to Muscat and the Northern Governorate."
+        },
+        {
+          "q": "Do you provide Muscat to Sohar transfers?",
+          "a": "Yes, we offer comfortable Muscat-to-Sohar transfers covering approximately 230 km in about 2.5 hours with luxury vehicles and professional chauffeurs."
+        },
+        {
+          "q": "Can I book a limousine for corporate travel in Sohar?",
+          "a": "Yes, we provide executive transportation for Sohar's industrial and business areas including Sohar Free Zone with professional chauffeurs."
+        }
+      ],
+      "nameAr": "صحار"
+    },
+    {
+      "slug": "nizwa",
+      "name": "Nizwa",
+      "nameAr": "نزوى",
+      "countrySlug": "oman",
+      "description": "The ancient cultural capital of Oman in the Ad Dakhiliyah region, world-renowned for its 17th-century circular fort, bustling silver souq, and mountain gateways.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [],
+      "faqs": [],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6adb4ed07e1c045799a99a6c"
+      }
+    }
+  ],
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:43:59.952Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-29T11:07:53.034Z"
+  },
+  "faqs": [
+    {
+      "q": "How does AB deliver chauffeur service in Oman without a local branch?",
+      "a": "AB manages Oman journeys through rigorously vetted transportation partners while maintaining 24/7 centralised operations from Riyadh. Direct oversight covers driver verification, vehicle selection and schedule tracking. Clients communicate with their dedicated AB account manager and receive single source invoicing without managing secondary suppliers."
+    },
+    {
+      "q": "What does a Muscat International Airport (MCT) transfer include?",
+      "a": "A Muscat International Airport (MCT) transfer includes personalised meet and greet service inside the arrivals terminal, luggage assistance and automated flight tracking. The professional chauffeur adjusts arrival timing for flight delays. Passengers proceed directly to an executive vehicle for onward transit to Muscat hotels or corporate offices."
+    },
+    {
+      "q": "Which vehicle classes are available for corporate transport across Oman?",
+      "a": "Available vehicles include premium sedans such as the Mercedes S Class, full size SUVs such as the Cadillac Escalade and GMC Yukon, and spacious vans such as the Mercedes V Class. Every vehicle meets strict age limits, commercial licensing and insurance standards to support executive business travel across the Sultanate."
+    },
+    {
+      "q": "Can clients arrange full day hire or intercity journeys from Muscat to Sohar?",
+      "a": "Yes, full day hire and intercity transfers are available on advance request. Chauffeurs handle multi stop corporate itineraries between Muscat, Sohar, Nizwa and regional commercial hubs. Central dispatch in Riyadh coordinates timing, driver rotation and logistics to support productive business travel throughout the day."
+    },
+    {
+      "q": "How far in advance should an executive car service booking be requested?",
+      "a": "Because trips in Oman are fulfilled through vetted affiliate partners, submitting booking requests at least [Confirm: advance notice requirement] prior to departure is recommended. This window permits central dispatch to verify vehicle readiness, complete driver security checks and coordinate terminal access protocols."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a9522afad4d61deaefd8bc2"
+  },
+  "code": "ae",
+  "slug": "united-arab-emirates",
+  "name": "United Arab Emirates",
+  "description": "",
+  "cities": [
+    {
+      "slug": "dubai",
+      "name": "Dubai",
+      "countrySlug": "united-arab-emirates",
+      "description": "Professional chauffeur service Dubai delivers punctual executive mobility across the city for business executives and delegations. Arriving travellers at Dubai International Airport (DXB) receive direct terminal reception, personal luggage assistance, and private transit to central corporate addresses across Dubai with complete schedule reliability.",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "dubai-international-airport",
+          "name": "Dubai International Airport",
+          "iata": "DXB",
+          "citySlug": "dubai",
+          "description": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6a9522afad4d61deaefd8bc4"
+          }
+        },
+        {
+          "slug": "al-maktoum-international-airport",
+          "name": "Al Maktoum International Airport",
+          "iata": "DWC",
+          "citySlug": "dubai",
+          "description": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6a9522afad4d61deaefd8bc5"
+          }
+        }
+      ],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bc3"
+      },
+      "faqs": [
+        {
+          "q": "How do I book a private chauffeur service Dubai with AB?",
+          "a": "Booking a private driver Dubai transfer or full day service requires choosing your vehicle tier, entering journey details, and confirming passenger requirements through our reservations portal. Travel coordinators receive rapid confirmations, verified chauffeur contact details, and complete billing documentation. Dedicated corporate account managers also arrange continuous passenger logistics for commercial roadshows or diplomatic itineraries."
+        },
+        {
+          "q": "What procedures apply for DXB airport transfer meet and greet services?",
+          "a": "Every DXB airport transfer includes continuous flight tracking, so chauffeurs adjust immediately for schedule changes or early arrivals. Your professional chauffeur greets passengers inside Dubai International Airport (DXB) arrivals halls holding a clear personalised name sign. Drivers handle all luggage, assist passengers through the terminal, and guide them directly to their waiting executive vehicle."
+        },
+        {
+          "q": "Can corporate travel managers reserve an hourly chauffeur service in Dubai?",
+          "a": "Hourly chauffeur hire provides complete flexibility for executives attending multiple meetings across Dubai financial districts or conference centres. Your dedicated vehicle and driver remain on standby between appointments, adapting immediately as meeting schedules evolve. This dedicated hire service supports multi stop business itineraries without the administrative burden of coordinating separate single journey bookings."
+        },
+        {
+          "q": "What vehicle classes are available for corporate transportation Dubai?",
+          "a": "AB provides an extensive fleet ranging from standard executive saloons to high capacity vehicles for corporate transportation Dubai. Options include Business Sedans, First Class Sedans like the Mercedes S Class, luxury SUVs such as the Cadillac Escalade, and Mercedes V Class MPVs. Large groups can select executive vans or book larger capacity coaches through our bus rental Dubai service."
+        },
+        {
+          "q": "How does AB coordinate executive event transportation Dubai?",
+          "a": "Event transportation Dubai projects receive dedicated ground coordination managed directly by our experienced operations team. We oversee delegate airport transfers, venue shuttles at locations like Dubai World Trade Centre, and VIP motorcade movements. Real time dispatch monitoring keeps multi vehicle fleets running strictly to your planned summit or conference timetable."
+        },
+        {
+          "q": "Are all AB vehicles and professional chauffeurs fully licensed and insured?",
+          "a": "All vehicles in the AB fleet operate under strict commercial transport licensing, comprehensive insurance coverage, and regular mechanical testing. Chauffeurs undergo extensive background vetting, defensive driving instruction, and protocol training for executive and diplomatic passenger transport. Every vehicle features continuous GPS monitoring to support passenger safety across every journey."
+        },
+        {
+          "q": "How are executive intercity transfer Dubai journeys arranged to other emirates?",
+          "a": "An executive intercity transfer Dubai provides private point to point transit between Dubai and destinations including Abu Dhabi, Sharjah, Al Ain, or Ras Al Khaimah. Passengers enjoy quiet, air conditioned comfort with fixed pricing and experienced drivers familiar with regional UAE highways. Intercity transfers eliminate public transit transfers and airport waiting times for regional business travel."
+        }
+      ],
+      "nameAr": "دبي"
+    },
+    {
+      "slug": "abu-dhabi",
+      "name": "Abu Dhabi",
+      "countrySlug": "united-arab-emirates",
+      "description": "AB delivers professional chauffeur service Abu Dhabi solutions for corporate delegations, VIP visitors and diplomatic movements across the United Arab Emirates capital. Punctual AUH airport transfers, executive fleet, and protocol drivers.",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "zayed-international-airport",
+          "name": "Zayed International Airport",
+          "iata": "AUH",
+          "citySlug": "abu-dhabi",
+          "description": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6a9522afad4d61deaefd8bc7"
+          }
+        }
+      ],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bc6"
+      },
+      "faqs": [
+        {
+          "q": "How do I book a chauffeur service in Abu Dhabi with AB?",
+          "a": "Clients can book private chauffeur transfers online through our web booking portal or by submitting corporate travel requests directly to our team. Provide your collection point, final destination, preferred vehicle class and flight numbers where relevant. Our operations team confirms reservations promptly with clear itinerary documentation and chauffeur contact details."
+        },
+        {
+          "q": "What is included in an AUH airport transfer?",
+          "a": "An AUH airport transfer includes flight tracking, an in terminal meet and greet with a name board, luggage handling and comfortable transit in an executive vehicle. Your private driver monitors flight schedules to adapt to early landings or unexpected airline delays. Chauffeurs greet passengers immediately after customs clearance at the arrivals hall."
+        },
+        {
+          "q": "How does flight tracking and complimentary waiting time work?",
+          "a": "AB monitors commercial flight data in real time from our central operations centre. Chauffeur dispatch adjusts automatically to incoming aircraft arrival times. Passengers enjoy complimentary waiting time for airport pickups, allowing ample time to clear border control and claim personal baggage."
+        },
+        {
+          "q": "Which vehicle classes are available for chauffeur service Abu Dhabi journeys?",
+          "a": "AB provides Standard Sedans, Business Sedans such as the Mercedes E Class, First Class Sedans including the Mercedes S Class, Executive SUVs like the Cadillac Escalade, Premium MPVs and Executive Vans. Every vehicle is GPS tracked, thoroughly cleaned before dispatch and driven by a licensed professional chauffeur."
+        },
+        {
+          "q": "Can corporate transportation Abu Dhabi itineraries be booked by the hour?",
+          "a": "Corporate clients can reserve chauffeur services on an hourly or full day charter basis for executive roadshows and board meetings. This provides an on call vehicle and dedicated driver for the exact duration of your appointments across Abu Dhabi. Changes to multi stop itineraries are accommodated flexibly by our central dispatch desk."
+        },
+        {
+          "q": "Do you offer intercity transfer Abu Dhabi services to Dubai and other Emirates?",
+          "a": "AB operates direct intercity transfers connecting Abu Dhabi with Dubai, Al Ain, Sharjah and other emirates across the UAE. Travellers relax in luxury vehicles on long distance highway routes with professional drivers experienced in intercity motorways. We also provide direct transfers between Abu Dhabi and Al Maktoum International Airport (DWC)."
+        },
+        {
+          "q": "What event transportation Abu Dhabi services does AB coordinate?",
+          "a": "AB manages comprehensive event transportation logistics for trade expos at ADNEC, major gatherings on Yas Island and high level corporate summits. Our team coordinates executive sedans, luxury passenger vans and larger bus rental Abu Dhabi options for large delegate groups. Dispatch teams manage fleet schedules continuously to ensure smooth guest movement."
+        }
+      ],
+      "nameAr": "أبوظبي"
+    },
+    {
+      "slug": "sharjah",
+      "name": "Sharjah",
+      "countrySlug": "united-arab-emirates",
+      "description": "Professional chauffeur service Sharjah transport provides punctual journeys across the emirate and regional road corridors. AB connects arrivals from Sharjah International Airport (SHJ) to commerce centres throughout Sharjah.",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "sharjah-international-airport",
+          "name": "Sharjah International Airport",
+          "iata": "SHJ",
+          "citySlug": "sharjah",
+          "description": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6a9522afad4d61deaefd8bc9"
+          }
+        }
+      ],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bc8"
+      },
+      "faqs": [
+        {
+          "q": "How does airport transfer meet and greet operate at SHJ?",
+          "a": "Chauffeurs track inbound flights arriving at Sharjah International Airport (SHJ) to adjust for scheduling changes. Upon entering the arrivals concourse, guests encounter their driver holding an electronic name board at the designated meeting point. The chauffeur manages baggage handling and escorts travellers directly to the awaiting vehicle with complimentary waiting time."
+        },
+        {
+          "q": "What vehicle classes are available for chauffeur service in Sharjah?",
+          "a": "AB provides a comprehensive fleet across Sharjah, including Standard Sedan, Business Sedan, First Class Sedan, Executive SUV, Premium MPV and high capacity Executive Van models. Vehicles such as the Mercedes S Class, Cadillac Escalade and Mercedes V Class deliver comfort, discrete presentation and business productivity for every scheduled journey."
+        },
+        {
+          "q": "Can I arrange an intercity transfer Sharjah to Dubai or Abu Dhabi?",
+          "a": "Yes, AB schedules frequent cross emirate transfers between Sharjah, Dubai, Ajman and Abu Dhabi. Travel managers book intercity transfer Sharjah routes for single meetings or multi city executive itineraries. Chauffeurs navigate inter emirate highway corridors efficiently, avoiding congestion and ensuring timely arrivals at regional corporate hubs."
+        },
+        {
+          "q": "Can I book an hourly chauffeur or full day hire in Sharjah?",
+          "a": "Hourly chauffeur bookings and full day hire packages provide flexible mobility for complex itineraries across Sharjah. Clients retain a dedicated vehicle and professional driver on standby for corporate site visits, trade exhibitions at Expo Centre Sharjah or government appointments. Packages are tailored to required operating hours with clear upfront terms."
+        },
+        {
+          "q": "Are all AB chauffeurs licensed and insured in the UAE?",
+          "a": "Every professional chauffeur operating in Sharjah holds official commercial licensing and undergoes rigorous background vetting and route training. All vehicles carry comprehensive commercial passenger insurance in compliance with United Arab Emirates transport authorities. Strict safety protocols and regular fleet mechanical audits support passenger security on every journey."
+        },
+        {
+          "q": "How far in advance should I make a booking for Sharjah?",
+          "a": "Advance booking is recommended to secure preferred vehicle classes, especially during peak international exhibition periods and tourism seasons in Sharjah. Reservations can be placed through our digital booking portal or corporate desk. For last minute itineraries, our 24/7 central dispatch team coordinates available fleet capacity to accommodate urgent executive transfer requests."
+        },
+        {
+          "q": "What services are provided for corporate travel and large delegations?",
+          "a": "AB supports corporate travel managers and protocol teams with dedicated group transportation, bus rental Sharjah options and VIP car with driver arrangements. Our team coordinates manifests for major conferences, board meetings and state visits, backed by centralized billing, passenger tracking and round the clock operations oversight."
+        }
+      ],
+      "nameAr": "الشارقة"
+    },
+    {
+      "slug": "ajman",
+      "name": "Ajman",
+      "countrySlug": "united-arab-emirates",
+      "description": "Premier chauffeur service in Ajman for executive travel, corporate events and private airport journeys across the coastal emirate. Professional chauffeurs, flight tracking from SHJ, and immaculate vehicles.",
+      "aliases": [],
+      "airports": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bca"
+      },
+      "faqs": [
+        {
+          "q": "How does an SHJ airport transfer to Ajman operate with AB?",
+          "a": "Your chauffeur tracks your flight status automatically to accommodate schedule variations at Sharjah International Airport (SHJ). Upon clearance, your private driver greets you inside the terminal arrivals hall holding a digital name board at the designated meeting point. The transfer includes luggage assistance and complimentary waiting time, delivering a comfortable journey directly to your designated destination along Ajman Corniche."
+        },
+        {
+          "q": "Can I hire a private driver Ajman service on an hourly or full day basis?",
+          "a": "Hourly chauffeur and full day hire options are available across Ajman for executive meetings, VIP transport and shopping itineraries. A dedicated chauffeur remains at your disposal throughout the booking duration, accommodating custom schedules and multi stop routes without delay. Rates and vehicle availability for extended hire are structured transparently through our operations team."
+        },
+        {
+          "q": "How do intercity transfer Ajman bookings to Dubai or Abu Dhabi work?",
+          "a": "AB coordinates direct intercity journeys from Ajman to Dubai, Abu Dhabi and other emirates with fixed booking parameters and executive vehicles. Your professional chauffeur collects you from your residence or hotel, managing highway navigation for a quiet, productive travel experience. Intercity transfers eliminate taxi queues, providing seamless travel across emirate borders with confirmed scheduling."
+        },
+        {
+          "q": "What vehicle categories are available for limousine service Ajman and group travel?",
+          "a": "Our fleet encompasses premium sedans, executive SUVs, luxury MPVs and high capacity executive vans. For larger delegations, corporate events or staff transport, we also arrange bus rental Ajman solutions through our dedicated group services team. Every vehicle is licensed, commercially insured and maintained to strict executive standards, providing tailored capacity for individual VIPs or large corporate groups."
+        },
+        {
+          "q": "How far in advance should I complete a chauffeur booking in Ajman?",
+          "a": "We recommend confirming your reservation at least 24 hours prior to travel to secure your preferred vehicle class. However, our central dispatch operates 24/7, enabling our team to accommodate urgent requests whenever fleet capacity allows. Corporate clients with established accounts benefit from expedited reservations and flexible scheduling options across the United Arab Emirates."
+        }
+      ],
+      "nameAr": "عجمان"
+    },
+    {
+      "slug": "ras-al-khaimah",
+      "name": "Ras Al Khaimah",
+      "countrySlug": "united-arab-emirates",
+      "description": "Premier chauffeur service in Ras Al Khaimah for executive travel, corporate events and private airport journeys across the coastal emirate. Professional chauffeurs, flight tracking from SHJ, and immaculate vehicles.",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "ras-al-khaimah-international-airport",
+          "name": "Ras Al Khaimah International Airport",
+          "iata": "RKT",
+          "citySlug": "ras-al-khaimah",
+          "description": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6a9522afad4d61deaefd8bcc"
+          }
+        }
+      ],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bcb"
+      },
+      "faqs": [
+        {
+          "q": "How do I book a chauffeur service Ras Al Khaimah for corporate travel?",
+          "a": "Corporate travel managers can request a reservation through the AB booking portal or by contacting our operations centre directly. Provide your flight schedule, passenger manifest and vehicle class preference to receive a prompt proposal. Accounts team members coordinate centralised billing and itinerary confirmation for single trips or multi day corporate assignments."
+        },
+        {
+          "q": "What does an RKT airport transfer include upon arrival?",
+          "a": "An RKT airport transfer includes active flight tracking, terminal meet and greet service and personalised luggage assistance. Your chauffeur waits inside the arrivals area holding a name board for swift recognition. Complimentary waiting time provides ample buffer against customs or baggage delays before departure to your hotel or office."
+        },
+        {
+          "q": "Can I book an intercity transfer Ras Al Khaimah to Dubai or other emirates?",
+          "a": "Yes, AB provides direct point to point intercity transfer Ras Al Khaimah services connecting the emirate to Dubai, Sharjah and Abu Dhabi. Vehicles depart at your preferred schedule from any residence, hotel or corporate address with fixed, transparent pricing. Passenger sedans, executive SUVs and group vans support both individual executive trips and large delegation travel."
+        },
+        {
+          "q": "Is an hourly chauffeur service available throughout Ras Al Khaimah?",
+          "a": "AB provides flexible hourly chauffeur and full day hire options throughout Ras Al Khaimah and nearby desert territories. An hourly hire keeps a dedicated car and private driver on standby throughout complex itineraries, client meetings and recreational excursions. You retain complete flexibility to adjust stops, meeting times and routes as your schedule develops."
+        },
+        {
+          "q": "Are AB chauffeurs in Ras Al Khaimah licensed and commercially insured?",
+          "a": "Every chauffeur operating with AB holds commercial licensing and extensive training in passenger safety, route navigation and defensive driving standards. All fleet vehicles maintain full commercial passenger insurance coverage complying with United Arab Emirates regulatory authorities. Chauffeurs observe strict protocol discretion, executive grooming and immaculate vehicle presentation on every booking."
+        }
+      ],
+      "nameAr": "رأس الخيمة"
+    },
+    {
+      "slug": "al-ain",
+      "name": "Al Ain",
+      "countrySlug": "united-arab-emirates",
+      "description": "Premier chauffeur service in Al Ain for executive travel, corporate events and private airport journeys across the coastal emirate. Professional chauffeurs, flight tracking from SHJ, and immaculate vehicles.",
+      "aliases": [],
+      "airports": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bcd"
+      },
+      "faqs": [
+        {
+          "q": "What vehicles are available for chauffeur service in Al Ain?",
+          "a": "AB provides standard executive sedans, premium business sedans, flagship luxury sedans, spacious executive SUVs, multi passenger MPVs and full size passenger vans across Al Ain. Each vehicle undergoes thorough detailing, safety checks and routine maintenance prior to dispatch from our regional office facility."
+        },
+        {
+          "q": "How does an AAN airport transfer handle delayed flights?",
+          "a": "Every AAN airport transfer reservation includes active flight tracking managed by our operations control room. Arrival schedules adjust automatically to flight delays so that your chauffeur is in position inside the terminal with your name board when your plane touches down."
+        },
+        {
+          "q": "Can I book an intercity transfer from Al Ain to other emirates?",
+          "a": "Yes, AB coordinates direct highway transfers connecting Al Ain with Abu Dhabi, Dubai, Sharjah and the northern emirates. Passengers travel in air conditioned executive comfort with fixed route pricing, generous luggage accommodation and dedicated chauffeurs licensed for long distance travel."
+        },
+        {
+          "q": "Is hourly chauffeur hire available in Al Ain?",
+          "a": "Hourly chauffeur hire and full day vehicle hire are readily arranged for corporate site visits, diplomatic programs and extended meetings across Al Ain. Your private driver remains on standby throughout the booked period to adapt to flexible schedule adjustments."
+        },
+        {
+          "q": "Are chauffeurs serving Al Ain licensed and commercially insured?",
+          "a": "All chauffeurs serving Al Ain are licensed transport professionals who undergo background vetting, safety protocol training and customer etiquette coaching. Every vehicle maintains full commercial passenger transport insurance coverage meeting strict United Arab Emirates regulatory standards."
+        }
+      ],
+      "nameAr": "العين"
+    },
+    {
+      "slug": "fujairah",
+      "name": "Fujairah",
+      "nameAr": "الفجيرة",
+      "countrySlug": "united-arab-emirates",
+      "description": "The only emirate situated on the UAE's eastern Gulf of Oman coast, renowned for rugged mountains, historical forts, and deep-water bunkering ports.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "fujairah-international-airport",
+          "name": "Fujairah International Airport",
+          "nameAr": "مطار الفجيرة الدولي",
+          "iata": "FJR",
+          "citySlug": "fujairah",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6adb4ecf7e1c045799a99a51"
+          }
+        }
+      ],
+      "faqs": [],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6adb4ecf7e1c045799a99a50"
+      }
+    },
+    {
+      "slug": "umm-al-quwain",
+      "name": "Umm Al Quwain",
+      "nameAr": "أم القيوين",
+      "countrySlug": "united-arab-emirates",
+      "description": "A tranquil coastal emirate known for its serene mangrove lagoons, rich maritime heritage, and peaceful escape from bustling metropolises.",
+      "descriptionAr": "",
+      "aliases": [
+        "uaq",
+        "umm-al-qaiwain"
+      ],
+      "airports": [],
+      "faqs": [],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6adb4ecf7e1c045799a99a52"
+      }
+    }
+  ],
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:43:59.949Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-29T11:07:53.034Z"
+  },
+  "faqs": [
+    {
+      "q": "What cities does AB serve in the United Arab Emirates?",
+      "a": "AB operates across the UAE including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, and Al Ain, covering every major airport, hotel, business district, and attraction."
+    },
+    {
+      "q": "Do you offer airport transfers in the UAE?",
+      "a": "Yes, we provide premium airport transfers at Dubai International Airport (DXB), Al Maktoum International (DWC), Abu Dhabi Zayed International (AUH), Sharjah International (SHJ), and all other UAE airports. Our chauffeurs track your flight and greet you at arrivals."
+    },
+    {
+      "q": "Can I book a limousine for intercity travel between Emirates?",
+      "a": "Yes, we offer comfortable intercity transfers such as Dubai to Abu Dhabi (140 km, about 1.5 hours), Dubai to Sharjah (30 km, about 30 minutes), and Abu Dhabi to Al Ain (150 km, about 1.5 hours)."
+    },
+    {
+      "q": "Do you provide corporate and executive transportation in the UAE?",
+      "a": "Absolutely. We serve Dubai's DIFC and Business Bay, Abu Dhabi's Al Maryah Island and Corniche, and other business hubs with executive vehicles, monthly corporate accounts, and professional chauffeurs."
+    },
+    {
+      "q": "Is AB available for events and exhibitions in the UAE?",
+      "a": "Yes, we handle event transportation for exhibitions at Dubai World Trade Centre, Abu Dhabi National Exhibition Centre, concerts, weddings, and government delegations with coordinated logistics."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a9522afad4d61deaefd8bdf"
+  },
+  "code": "qa",
+  "slug": "qatar",
+  "name": "Qatar",
+  "description": "Professional chauffeur service Qatar operations provide executive transport for corporate leaders and official delegations visiting the country. Managed ground mobility coordinates daily schedules with vetted chauffeurs and immaculate vehicles across Doha and neighbouring commercial centres.",
+  "cities": [
+    {
+      "slug": "doha",
+      "name": "Doha",
+      "nameAr": "الدوحة",
+      "countrySlug": "",
+      "description": "Airport Code: DOH. Operational Status: 24/7 Managed Operations. Executive chauffeured ground mobility across Qatar's commercial and diplomatic capital.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "hamad-international-airport",
+          "name": "Hamad International Airport",
+          "nameAr": "",
+          "iata": "DOH",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ad35d23fd3a3b06a68d7206"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is included with your chauffeur service Doha?",
+          "a": "Our chauffeur service Doha includes a professional chauffeur, a fully sanitised luxury vehicle, GPS tracking, commercial insurance and fuel. Passengers receive bottled water and complimentary onboard Wi-Fi where fitted. Drivers assist with luggage loading and navigate optimal routes to bypass urban congestion."
+        },
+        {
+          "q": "How does airport pickup work at DOH?",
+          "a": "At DOH, chauffeurs track your flight in real time and enter the arrivals terminal once your aircraft touches down. Your driver waits at the designated meeting point holding a digital name board to assist with baggage. Complimentary waiting time accommodates immigration clearance and baggage collection."
+        },
+        {
+          "q": "Can I reserve an hourly chauffeur Doha for corporate meetings?",
+          "a": "Yes, reserving an hourly chauffeur Doha provides complete flexibility for back to back business meetings and roadshows across the city. Your dedicated driver remains on standby throughout the booked duration, adapting instantly to schedule revisions and route changes without requiring individual booking confirmations."
+        },
+        {
+          "q": "Do you offer intercity transfer Doha services across Qatar?",
+          "a": "Yes, we operate long distance intercity transfer Doha services connecting the capital with major industrial and coastal hubs including Al Khor, Mesaieed, Ras Laffan and Dukhan. Vehicles provide spacious legroom, climate control and smooth highway cruising for uninterrupted passenger comfort."
+        },
+        {
+          "q": "Are vehicles and chauffeurs licensed and insured in Qatar?",
+          "a": "All fleet vehicles hold full commercial licensing and comprehensive insurance coverage in compliance with Qatari transport regulations. Chauffeurs undergo extensive defensive driving assessments, background screening and corporate etiquette training to support passenger safety and security at all times."
+        },
+        {
+          "q": "What vehicles are available for luxury car with driver Doha hire?",
+          "a": "Our fleet features premium executive sedans such as the Mercedes S Class, spacious luxury SUVs like the Cadillac Escalade and GMC Yukon, and executive vans such as the Mercedes V Class. Each vehicle category accommodates specific passenger numbers and baggage requirements."
+        },
+        {
+          "q": "How far in advance should I arrange a private driver Doha?",
+          "a": "Advance booking is recommended to secure your preferred vehicle class, particularly during major international conferences, sporting tournaments and peak travel seasons in Doha. While short notice dispatch is supported through our round the clock operations centre, advance reservations assist seamless logistics."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ad35d23fd3a3b06a68d7205"
+      }
+    },
+    {
+      "slug": "al-khor",
+      "name": "Al Khor",
+      "nameAr": "الخور",
+      "countrySlug": "",
+      "description": "Operational Status: 24/7 Managed Operations. Connecting Hamad International Airport (DOH), Al Khor city centre, Al Bayt Stadium, and Ras Laffan Industrial City.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [],
+      "faqs": [
+        {
+          "q": "How do I book a chauffeur service Al Khor transfer with AB?",
+          "a": "You can book a transfer through our operations team by telephone or direct reservation request. Please provide your scheduled pick up location, destination in Al Khor, passenger count, luggage requirements, and preferred vehicle class. Our operations team coordinates 24/7 dispatch to confirm your professional driver and vehicle well ahead of your journey."
+        },
+        {
+          "q": "What occurs when my inbound flight to DOH is delayed?",
+          "a": "AB monitors inbound flights into Hamad International Airport (DOH) using real time flight tracking systems. If your commercial or private flight is delayed, your assigned chauffeur adjusts arrival timing accordingly. Your transfer reservation includes complimentary waiting time following actual touchdown."
+        },
+        {
+          "q": "Can I arrange an intercity transfer Al Khor to Doha or Ras Laffan?",
+          "a": "Yes, AB provides direct intercity transfers connecting Al Khor with Doha, Ras Laffan Industrial City, and other destinations across Qatar. Chauffeurs operate premium sedans, executive SUVs, and passenger vans dispatched from our Doha facility for point to point highway journeys."
+        },
+        {
+          "q": "Can I hire an hourly chauffeur in Al Khor for local business meetings?",
+          "a": "Yes, hourly chauffeur Al Khor services are available for multi stop business itineraries, facility inspections, or diplomatic visits. Reserving by the hour provides an executive car with driver Al Khor on standby throughout your schedule. You can modify stops across coastal venues and commercial districts at your discretion while your driver remains parked on site ready for immediate departure."
+        },
+        {
+          "q": "What vehicle types are available for private driver Al Khor bookings?",
+          "a": "AB maintains a versatile fleet dispatched to Al Khor including Standard Sedans, Business Sedans, First Class Sedans like the Mercedes S Class, Executive SUVs like the Cadillac Escalade, Premium MPVs, and Executive Vans. Every vehicle is thoroughly cleaned, mechanically maintained, and operated by a vetted, professionally licensed chauffeur trained to deliver discreet executive hospitality."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ad35d23fd3a3b06a68d7207"
+      }
+    },
+    {
+      "slug": "lusail",
+      "name": "Lusail",
+      "nameAr": "لوسيل",
+      "countrySlug": "",
+      "description": "Operational Status: 24/7 Managed Operations. Connecting Hamad International Airport (DOH), Lusail Marina, and Qatar's premier planned smart city.",
+      "descriptionAr": "",
+      "aliases": [],
+      "airports": [],
+      "faqs": [
+        {
+          "q": "How do I book a private driver Lusail service with AB?",
+          "a": "Clients can book transport online by submitting passenger counts, flight details and vehicle preferences through the reservation portal. Alternatively, corporate coordinators can connect with the 24/7 dispatch desk via telephone or email to arrange complex itineraries, recurring executive transfers or multi day roadshow coverage."
+        },
+        {
+          "q": "What is included with an airport transfer from DOH to Lusail?",
+          "a": "Every airport journey includes live flight tracking, personalised terminal meet and greet service, complimentary waiting time and professional luggage assistance. Chauffeurs operate immaculately prepared luxury vehicles equipped with bottled water, mobile charging cables and comfortable climate control adjusted to passenger preference."
+        },
+        {
+          "q": "Can I reserve an hourly chauffeur Lusail package for roadshows?",
+          "a": "Yes, AB offers flexible hourly hire arrangements tailored for corporate executives attending multiple meetings across disparate districts. Your private chauffeur remains on site throughout each appointment, ready to depart immediately upon passenger return without the delays associated with point to point rebooking."
+        },
+        {
+          "q": "What vehicles are available for limousine service Lusail bookings?",
+          "a": "The operational fleet incorporates premium German and American vehicles across multiple categories, including executive sedans, flagship luxury saloons, prestige sport utility vehicles and multi passenger executive vans. Every vehicle meets rigorous mechanical and presentation benchmarks prior to dispatch from AB Doha."
+        },
+        {
+          "q": "How does an intercity transfer Lusail booking to other Qatar cities operate?",
+          "a": "A professional car with driver Lusail arrangement provides private, non stop transit between Lusail and key regional hubs such as Al Khor, Mesaieed, Ras Laffan or central Doha. Fixed route pricing provides transparency, allowing corporate travel planners to organise regional staff movements with complete budgetary clarity."
+        }
+      ],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ad35d23fd3a3b06a68d7208"
+      }
+    },
+    {
+      "slug": "al-wakrah",
+      "name": "Al Wakrah",
+      "nameAr": "الوكرة",
+      "countrySlug": "",
+      "description": "Al Wakrah is the capital city of the Al Wakrah Municipality in Qatar. Al Wakrah's eastern edge touches the shores of the Persian Gulf and Qatar's capital Doha is situated immediately north of the city. ",
+      "descriptionAr": "الوكرة هي عاصمة بلدية الوكرة في قطر. تلامس الحافة الشرقية للوكرة شواطئ الخليج العربي وتقع العاصمة القطرية الدوحة شمال المدينة مباشرة.",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "hamad-international-airport",
+          "name": "Hamad International Airport,",
+          "nameAr": "",
+          "iata": "HIA",
+          "citySlug": "",
+          "description": "",
+          "descriptionAr": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6ad35d23fd3a3b06a68d720a"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How does your chauffeur service Al Wakrah handle airport pick ups at DOH?",
+          "a": "Flight monitoring systems track your inbound aircraft into Hamad International Airport (DOH) in real time. Your chauffeur meets you in the arrival concourse holding an identification tablet and assists with baggage before escorting you to your vehicle."
+        },
+        {
+          "q": "Can I reserve a car with driver Al Wakrah on an hourly basis?",
+          "a": "Flexible hourly bookings permit clients to retain an executive car with driver Al Wakrah for multivenue itineraries, recurring site visits or municipal meetings. Vehicles remain entirely at your disposal throughout the contracted duration with dedicated route adjustments."
+        },
+        {
+          "q": "What vehicle classes are available for limousine service Al Wakrah?",
+          "a": "Our managed limousine service Al Wakrah provides premium sedans, executive sport utility vehicles and spacious luxury vans. All vehicle categories feature leather seating, advanced climate regulation, complimentary mobile connectivity and bottled mineral water."
+        },
+        {
+          "q": "How are bookings arranged for an intercity transfer Al Wakrah to industrial zones?",
+          "a": "Corporate accounts can schedule an intercity transfer Al Wakrah directly through our operations centre. Chauffeurs facilitate seamless passenger transit from urban Al Wakrah hotels to industrial sectors in Mesaieed, Ras Laffan or central Doha commercial districts."
+        },
+        {
+          "q": "Are private drivers in Al Wakrah fully licensed and commercially insured?",
+          "a": "Every professional private driver Al Wakrah holds official commercial accreditation and comprehensive public liability insurance coverage. Chauffeurs undergo thorough background vetting, executive defensive driving training and rigorous protocol assessments prior to assignment."
+        }
+      ],
+      "faqsAr": [
+        {
+          "q": "ما هي خدمات السائق التي تقدمها AB في الوكرة قطر؟",
+          "a": "توفر AB خدمة نقل المطار الفاخرة، وجولات سياحية في المدينة، واستئجار سائق كل ساعة، ونقل الشركات، وخدمات نقل الفعاليات في جميع أنحاء قطر والوكرة."
+        }
+      ],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6ad35d23fd3a3b06a68d7209"
+      }
+    }
+  ],
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:43:59.952Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-29T11:07:53.034Z"
+  },
+  "faqs": [
+    {
+      "q": "How are chauffeur service Qatar bookings arranged for corporate travel?",
+      "a": "Corporate travel bookings are coordinated through the AB operations desk by phone or electronic enquiry. Travel managers specify pickup locations, itinerary schedules and preferred luxury vehicle classes for individual executives or delegation groups. Dispatch teams confirm reservation details, driver contact credentials and route plans prior to departure."
+    },
+    {
+      "q": "What vehicle categories are available for private chauffeur hire in Qatar?",
+      "a": "Clients select from an executive fleet comprising luxury sedan options such as the Mercedes S Class, spacious SUVs including the Cadillac Escalade and GMC Yukon, and multi passenger vans such as the Mercedes V Class. Every vehicle is licensed, commercially insured and maintained to executive standards for corporate transport."
+    },
+    {
+      "q": "How does airport transfer service operate at Hamad International Airport (DOH)?",
+      "a": "Chauffeurs meet incoming passengers directly inside the terminal arrivals hall at Hamad International Airport (DOH) using clear name boards. Dispatch teams utilise flight tracking to monitor commercial flight schedules, allowing chauffeurs to adjust timing for early landings or flight delays before passenger greeting."
+    },
+    {
+      "q": "Can clients reserve an hourly chauffeur or full day hire across Doha?",
+      "a": "AB provides flexible hourly chauffeur hire and full day vehicle hire across the capital and neighbouring municipalities. This arrangement suits executives attending multiple business meetings, diplomatic summits or site inspections throughout the working day. The dedicated professional chauffeur remains on call throughout the reserved itinerary window."
+    },
+    {
+      "q": "What safety and licensing standards apply to AB drivers and vehicles?",
+      "a": "All vehicles and chauffeurs operate under national regulatory transport permits [Confirm licence names and numbers] and commercial passenger insurance policies. Chauffeurs undergo background vetting, defensive driving instruction and corporate protocol training. Dispatch supervisors oversee vehicle movements around the clock to support passenger safety on every route."
+    },
+    {
+      "q": "Is intercity transfer service available between Doha and other municipalities?",
+      "a": "AB operates intercity transfer services connecting Doha with Lusail, Al Wakrah, Al Khor and surrounding industrial zones. Private driver transport provides direct highway connections without intermediate stops, allowing business travellers to work comfortably between regional appointments. Advance bookings help schedule optimal vehicle dispatch for long distance itineraries."
+    },
+    {
+      "q": "How is dispatch managed for round the clock transportation across Qatar?",
+      "a": "Continuous operations are coordinated through 24/7 dispatch managed from the primary AB operations centre in Riyadh alongside local operational teams in Doha. Dispatch coordinators track fleet telematics, manage schedule updates and handle special client requests at any hour of the day or night."
+    }
+  ],
+  "descriptionAr": "",
+  "faqsAr": [],
+  "nameAr": ""
+},
+{
+  "_id": {
+    "$oid": "6a9522afad4d61deaefd8be9"
+  },
+  "code": "kw",
+  "slug": "kuwait",
+  "name": "Kuwait",
+  "description": "AB coordinates executive chauffeur service Kuwait travel on request through vetted local partners, managed from Riyadh. Operations controllers supervise every schedule to maintain smooth business transport.",
+  "cities": [
+    {
+      "slug": "kuwait-city",
+      "name": "Kuwait City",
+      "countrySlug": "kuwait",
+      "description": "",
+      "aliases": [],
+      "airports": [
+        {
+          "slug": "kuwait-international-airport",
+          "name": "Kuwait International Airport",
+          "iata": "KWI",
+          "citySlug": "kuwait",
+          "description": "",
+          "aliases": [],
+          "type": "international",
+          "status": "published",
+          "_id": {
+            "$oid": "6a9522afad4d61deaefd8beb"
+          }
+        }
+      ],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bea"
+      },
+      "faqs": [
+        {
+          "q": "What chauffeur services are available in Kuwait City?",
+          "a": "AB offers premium chauffeur services in Kuwait City including airport transfers from Kuwait International Airport (KWI), city transportation, corporate mobility, and intercity transfers across Kuwait."
+        },
+        {
+          "q": "Can I hire a limousine for business meetings in Kuwait City?",
+          "a": "Yes, we provide professional corporate transportation in Kuwait City's business districts including Sharq, Mirqab, and the Financial District with executive vehicles."
+        },
+        {
+          "q": "Do you offer transportation for events in Kuwait City?",
+          "a": "Yes, we provide event transportation for conferences at Kuwait International Fairground, weddings, and corporate functions across the city."
+        }
+      ],
+      "nameAr": "مدينة الكويت"
+    },
+    {
+      "slug": "hawalli",
+      "name": "Hawalli",
+      "countrySlug": "kuwait",
+      "description": "",
+      "aliases": [],
+      "airports": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bec"
+      },
+      "faqs": [
+        {
+          "q": "What services are available in Hawalli?",
+          "a": "AB provides chauffeur services in Hawalli including city transfers, airport pickups, and transportation to shopping districts and business areas."
+        }
+      ],
+      "nameAr": "حولي"
+    },
+    {
+      "slug": "farwaniya",
+      "name": "Farwaniya",
+      "countrySlug": "kuwait",
+      "description": "",
+      "aliases": [],
+      "airports": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bed"
+      },
+      "faqs": [
+        {
+          "q": "What chauffeur services are available in Farwaniya?",
+          "a": "AB offers premium chauffeur services in Farwaniya including hotel and apartment transfers, city transportation, and easy access to Kuwait International Airport (KWI)."
+        },
+        {
+          "q": "Can I book a limousine for Farwaniya to airport transfers?",
+          "a": "Yes, we provide reliable Farwaniya-to-Kuwait International Airport (KWI) transfers with professional chauffeurs, popular with families and business travelers."
+        },
+        {
+          "q": "Do you offer intercity transfers from Farwaniya?",
+          "a": "Yes, we provide transfers from Farwaniya to Kuwait City, Hawalli, Salmiya, and other governorates across Kuwait."
+        }
+      ],
+      "nameAr": "الفروانية"
+    },
+    {
+      "slug": "al-ahmadi",
+      "name": "Al Ahmadi",
+      "countrySlug": "kuwait",
+      "description": "",
+      "aliases": [],
+      "airports": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6a9522afad4d61deaefd8bee"
+      },
+      "faqs": [
+        {
+          "q": "What chauffeur services are available in Al Ahmadi?",
+          "a": "AB offers premium chauffeur services in Al Ahmadi including city transportation, hotel transfers, and intercity connections to Kuwait City and the airport."
+        },
+        {
+          "q": "Do you provide corporate transportation in Al Ahmadi?",
+          "a": "Yes, we provide executive transportation for the oil and industrial sectors in Ahmadi, Fahaheel, and Mangaf with professional chauffeurs."
+        },
+        {
+          "q": "Can I book Al Ahmadi to Kuwait City transfers?",
+          "a": "Yes, we offer comfortable Al Ahmadi-to-Kuwait City transfers covering approximately 35 km in about 30 minutes."
+        }
+      ],
+      "nameAr": "الأحمدي"
+    },
+    {
+      "slug": "salmiya",
+      "name": "Salmiya",
+      "nameAr": "السالمية",
+      "countrySlug": "kuwait",
+      "description": "A major commercial and residential district in Kuwait, home to the Scientific Center, Marina Mall, and premier waterfront dining along the Gulf Road.",
+      "descriptionAr": "",
+      "aliases": [
+        "salimya"
+      ],
+      "airports": [],
+      "faqs": [],
+      "faqsAr": [],
+      "sections": [],
+      "status": "published",
+      "_id": {
+        "$oid": "6adb4ed07e1c045799a99a6a"
+      }
+    }
+  ],
+  "status": "published",
+  "__v": 1,
+  "createdAt": {
+    "$date": "2026-08-31T06:43:59.952Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-29T11:07:53.034Z"
+  },
+  "faqs": [
+    {
+      "q": "How does AB coordinate chauffeur service in Kuwait without a local branch?",
+      "a": "AB manages Kuwait operations directly through its 24/7 Riyadh headquarters, partnering with vetted local fleet operators. Central dispatch oversees itinerary scheduling, chauffeur selection, live tracking and corporate invoicing to deliver reliable ground transportation for every booking."
+    },
+    {
+      "q": "What is included in a Kuwait International Airport (KWI) transfer?",
+      "a": "Every Kuwait International Airport (KWI) transfer includes active flight monitoring, terminal meet and greet services and luggage assistance. Chauffeurs adjust arrival times to actual flight landings, welcoming incoming passengers in the arrivals hall before escorting them to their waiting vehicle."
+    },
+    {
+      "q": "Which vehicle classes are available for corporate transport Kuwait bookings?",
+      "a": "Clients can reserve executive sedans like the Mercedes S Class, full size SUVs including the Cadillac Escalade and GMC Yukon, or spacious Mercedes V Class vans. All vehicles are late model units maintained to executive standards with climate control and bottled water."
+    },
+    {
+      "q": "Can corporate clients reserve an hourly chauffeur or full day hire?",
+      "a": "Yes, AB coordinates hourly chauffeur services and full day hire packages across Kuwait for roadshows, multiple client meetings and event travel. Dedicated chauffeurs remain on standby throughout the booked period, offering total schedule flexibility as business requirements evolve."
+    },
+    {
+      "q": "How far in advance should clients book chauffeur service Kuwait itineraries?",
+      "a": "Booking at least 24 hours in advance allows dispatchers to select the optimal vehicle class and complete partner vetting. For large delegation movements or specialized corporate tenders, teams can submit requests through our Tender and Contract Requests department."
+    }
+  ],
+  "descriptionAr": "",
+  "faqsAr": [],
+  "nameAr": ""
+}]
