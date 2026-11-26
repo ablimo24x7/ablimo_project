@@ -24,15 +24,15 @@ const awardsList: AwardItem[] = [
   {
     id: "wlta-2025",
     badge: "2025 Winner",
-    badgeAr: "الفائز لعام 2025",
+    badgeAr: "الفائز، 2025",
     title: "World Luxury Travel Awards",
-    titleAr: "جوائز السفر الفاخر العالمي",
+    titleAr: "جوائز السفر الفاخر العالمية (World Luxury Travel Awards)",
     sub: "Chauffeur Company, Middle East & North Africa",
-    subAr: "أفضل شركة سائق خاص، الشرق الأوسط وشمال أفريقيا",
+    subAr: "أفضل شركة فاخرة لخدمات السائق الخاص في الشرق الأوسط وشمال أفريقيا",
     caption:
       "World Luxury Travel Awards — 2025 Winner, Chauffeur Company, Middle East & North Africa",
     captionAr:
-      "جوائز السفر الفاخر العالمي — الفائز لعام 2025، شركة السائق الخاص، الشرق الأوسط وشمال أفريقيا",
+      "جوائز السفر الفاخر العالمية (World Luxury Travel Awards) — الفائز، 2025، أفضل شركة فاخرة لخدمات السائق الخاص في الشرق الأوسط وشمال أفريقيا",
     image: "/awards/world-luxury-travel-awards-2025.jpg",
     alt: "World Luxury Travel Awards 2025 Winner certificate",
     altAr: "شهادة الفوز بجوائز السفر الفاخر العالمي لعام 2025",
@@ -40,15 +40,15 @@ const awardsList: AwardItem[] = [
   {
     id: "entrepreneur-gulf",
     badge: "Company of the Year 2025",
-    badgeAr: "شركة العام 2025",
+    badgeAr: "شركة العام، 2025",
     title: "Entrepreneur Gulf",
-    titleAr: "مجلة Entrepreneur الخليج",
+    titleAr: "Entrepreneur Gulf",
     sub: "Transportation & Events Support Services",
-    subAr: "خدمات النقل ودعم الفعاليات",
+    subAr: "جائزة التميّز في خدمات النقل ودعم الفعاليات",
     caption:
       "Entrepreneur Gulf — Company of the Year 2025, Transportation & Events Support Services",
     captionAr:
-      "Entrepreneur الخليج — شركة العام 2025، خدمات النقل ودعم الفعاليات",
+      "Entrepreneur Gulf — شركة العام، 2025، جائزة التميّز في خدمات النقل ودعم الفعاليات",
     image: "/awards/entrepreneur-gulf-2025.jpg",
     alt: "Entrepreneur Gulf Company of the Year 2025 certificate",
     altAr: "شهادة شركة العام 2025 من مجلة Entrepreneur الخليج",
@@ -56,13 +56,14 @@ const awardsList: AwardItem[] = [
   {
     id: "eventex-bronze",
     badge: "Bronze",
-    badgeAr: "الميدالية البرونزية",
+    badgeAr: "الفائز بالجائزة البرونزية، 2024",
     title: "Eventex Awards",
-    titleAr: "جوائز Eventex العالمية",
+    titleAr: "جوائز إيفنتكس (Eventex Awards)",
     sub: "Events Transportation Company",
-    subAr: "أفضل شركة نقل فعاليات ومؤتمرات",
+    subAr: "مورّد عالمي لخدمات الفعاليات وشريك في الخدمات اللوجستية للنقل",
     caption: "Eventex Awards — Bronze, Events Transportation Company",
-    captionAr: "جوائز Eventex — الميدالية البرونزية، شركة نقل الفعاليات",
+    captionAr:
+      "جوائز إيفنتكس (Eventex Awards) — الفائز بالجائزة البرونزية، 2024، مورّد عالمي لخدمات الفعاليات وشريك في الخدمات اللوجستية للنقل",
     image: "/awards/eventex-bronze-2025.jpg",
     alt: "Eventex Awards Bronze certificate",
     altAr: "شهادة الميدالية البرونزية من جوائز Eventex",

@@ -71,7 +71,7 @@ export default function EventLogisticsSection({
                 href={managedHref}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-abBlue hover:text-white transition-colors"
               >
-                <span>{el.managed.linkText || (isAr ? "استكشف النقل المدار" : "Explore managed transportation")}</span>
+                <span>{el.managed.linkText || (isAr ? "استكشف خدمات النقل المُدار" : "Explore managed transportation")}</span>
                 <i className={`fa-solid ${isAr ? "fa-arrow-left" : "fa-arrow-right"} text-xs transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1`}></i>
               </Link>
             </div>

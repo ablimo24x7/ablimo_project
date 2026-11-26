@@ -259,6 +259,19 @@ select:focus {
   display: flex;
   animation: marquee 20s linear infinite;
 }
+/* In RTL the track is laid out from the right, so mirror the drift
+   direction — otherwise the row slides off and leaves an empty gap. */
+[dir="rtl"] .animate-marquee {
+  animation-name: marqueeRtl;
+}
+@keyframes marqueeRtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
 
 /* FAQ Accordion */
 .faq-answer {
@@ -1662,6 +1675,12 @@ select:focus {
   width: max-content;
   animation: abxMarquee 45s linear infinite;
 }
+/* In RTL the track is laid out from the right edge, so the duplicate copy
+   sits on the left — drift rightward instead of leftward to keep the loop
+   seamless (translation percentages are not flipped by direction). */
+[dir="rtl"] .abx-marquee-track {
+  animation-name: abxMarqueeRtl;
+}
 .abx-marquee:hover .abx-marquee-track {
   animation-play-state: paused;
 }
@@ -1690,6 +1709,11 @@ select:focus {
 @keyframes abxMarquee {
   to {
     transform: translateX(-50%);
+  }
+}
+@keyframes abxMarqueeRtl {
+  to {
+    transform: translateX(50%);
   }
 }
 

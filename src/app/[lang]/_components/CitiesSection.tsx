@@ -152,7 +152,8 @@ export default async function CitiesSection({
               href={`${localeBase(lang)}/locations`}
               className="text-gray-300 font-semibold hover:text-abBlue border-b border-gray-600 hover:border-abBlue pb-1 transition-colors inline-flex items-center text-sm"
             >
-              {labels.viewAllCities} <i className="fa-solid fa-arrow-right ml-2 text-xs rtl:rotate-180"></i>
+              {labels.viewAllCities}{" "}
+              <i className="fa-solid fa-arrow-right ms-2 text-xs rtl:rotate-180"></i>
             </Link>
           </div>
         </div>
@@ -175,14 +176,14 @@ export default async function CitiesSection({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/20" />
 
-                <div className="absolute top-3 left-3 z-10">
+                <div className="absolute top-3 start-3 z-10">
                   <span className="bg-[#111]/85 backdrop-blur-md border border-gray-700/80 text-gray-200 text-[10px] font-semibold tracking-wider px-2.5 py-1 rounded uppercase">
                     {city.countryName}
                   </span>
                 </div>
 
                 {city.countLabel && (
-                  <div className="absolute top-3 right-3 z-10">
+                  <div className="absolute top-3 end-3 z-10">
                     <span className="bg-abBlue text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
                       {city.countLabel}
                     </span>
@@ -196,7 +197,7 @@ export default async function CitiesSection({
                     </h4>
                     <p className="text-xs text-gray-400 mt-0.5">{city.countryName}</p>
                   </div>
-                  <span className="w-9 h-9 rounded-full bg-[#111]/90 border border-gray-700 flex items-center justify-center text-gray-300 group-hover:border-abBlue group-hover:bg-abBlue group-hover:text-white transition-all duration-300 shadow flex-shrink-0 ml-3">
+                  <span className="w-9 h-9 rounded-full bg-[#111]/90 border border-gray-700 flex items-center justify-center text-gray-300 group-hover:border-abBlue group-hover:bg-abBlue group-hover:text-white transition-all duration-300 shadow flex-shrink-0 ms-3">
                     <i className="fa-solid fa-arrow-right text-xs rtl:rotate-180"></i>
                   </span>
                 </div>
@@ -207,7 +208,7 @@ export default async function CitiesSection({
 
         {/* Tablet & mobile: carousel slider */}
         <div className="lg:hidden">
-          <CitiesCarousel cities={cityCards} />
+          <CitiesCarousel cities={cityCards} lang={lang} />
         </div>
       </div>
     </section>

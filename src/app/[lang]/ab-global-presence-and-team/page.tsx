@@ -53,6 +53,7 @@ const offices = [
     cityAr: "الرياض",
     country: "Saudi Arabia (Headquarters)",
     countryAr: "المملكة العربية السعودية (المقر الرئيسي)",
+    localCompany: "AB Transportation Company",
     isHq: true,
     address: "Malaz Area, Umar Ibn Abdulaziz Road, Building Number 59, Second Floor, Riyadh 12626, Saudi Arabia",
     addressAr: "حي الملز، طريق عمر بن عبد العزيز، مبنى رقم 59، الطابق الثاني، الرياض 12626، المملكة العربية السعودية",
@@ -70,6 +71,7 @@ const offices = [
     cityAr: "دبي",
     country: "United Arab Emirates",
     countryAr: "الإمارات العربية المتحدة",
+    localCompany: "ABT Travel and Tourism LLC",
     address: "Al Khabaisi, Deira, Suite 206, DBC Building, Dubai, United Arab Emirates",
     addressAr: "الخبايصي، ديرة، جناح 206، مبنى دي بي سي (DBC)، دبي، الإمارات العربية المتحدة",
     role: "UAE Commercial Hub, Dubai International Airport (DXB) VIP Staging & Event Logistics",
@@ -86,6 +88,7 @@ const offices = [
     cityAr: "أبوظبي",
     country: "United Arab Emirates",
     countryAr: "الإمارات العربية المتحدة",
+    localCompany: "AB Middleeast and Limousine LLC",
     address: "Mohammed Bin Zayed City, Office 3, Building C57, Abu Dhabi, United Arab Emirates",
     addressAr: "مدينة محمد بن زايد، مكتب 3، مبنى C57، أبوظبي، الإمارات العربية المتحدة",
     role: "Government & Diplomatic Protocol Transport, Zayed International Airport (AUH) Operations",
@@ -102,6 +105,7 @@ const offices = [
     cityAr: "الدوحة",
     country: "State of Qatar",
     countryAr: "دولة قطر",
+    localCompany: "AB Transportation Company (Qatar)",
     address: "Street 830, Al Rufaa, Building 54, Zone 17, Doha, Qatar",
     addressAr: "شارع 830، الرفاع، مبنى 54، المنطقة 17، الدوحة، قطر",
     role: "Qatar Corporate Mobility, Hamad International Airport (DOH) VIP Terminal Coordination",
@@ -115,42 +119,58 @@ const offices = [
   },
 ];
 
-const leaders = [
+const leadershipTeams = [
   {
-    name: "Mansoor Al-Harthi",
-    nameAr: "منصور الحارثي",
-    title: "Chief Executive Officer & Founder",
-    titleAr: "الرئيس التنفيذي والمؤسس",
-    bio: "Over 22 years pioneering executive transportation, government protocol logistics, and corporate fleet infrastructure across the Middle East.",
-    bioAr: "أكثر من 22 عاماً في ريادة قطاع النقل الأرضي لكبار الشخصيات وبروتوكولات الوفود الحكومية وتنقل الشركات بالخليج.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&q=80",
+    id: "executive-leadership",
+    title: "Executive Leadership Team",
+    titleAr: "فريق القيادة التنفيذية",
+    members: [
+      { name: "Abdul Hadi", title: "Group CEO", titleAr: "الرئيس التنفيذي للمجموعة", image: "/Team-AB/Abdul Hadi.jpeg" },
+      { name: "Thajudeen Kaja", title: "Group Director", titleAr: "مدير المجموعة", image: "/Team-AB/Tahuddin Kaja.jpeg" },
+      { name: "Khalid Al Jamaz", title: "Director", titleAr: "مدير", image: "/Team-AB/Khalid.jpeg" },
+    ],
   },
   {
-    name: "Alexander Becker",
-    nameAr: "ألكسندر بيكر",
-    title: "VP of Operations & Central Dispatch",
-    titleAr: "نائب الرئيس للعمليات وغرف التحكم",
-    bio: "Former civil aviation and ground logistics director overseeing 24/7 dispatch commands, telematics, and safety compliance across KSA and UAE.",
-    bioAr: "مدير سابق في قطاع الطيران واللوجستيات يشرف على غرف التحكم 24/7 وأنظمة التتبع التليماتي وجاهزية الأسطول.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=600&fit=crop&q=80",
+    id: "ksa-leadership",
+    title: "KSA Leadership Team",
+    titleAr: "فريق القيادة في السعودية",
+    members: [
+      { name: "Celima Fernandes", title: "Reservations & Operations Manager", titleAr: "مديرة الحجوزات والعمليات", image: "/Team-AB/Celima Fernandes.jpeg" },
+      { name: "Farees Abdulraheem", title: "Country Sales Manager", titleAr: "مدير المبيعات القطري", image: "/Team-AB/Farees.jpeg" },
+    ],
   },
   {
-    name: "Reem Al-Ghamdi",
-    nameAr: "ريم الغامدي",
-    title: "Director of Quality Assurance & Standards",
-    titleAr: "مديرة ضمان الجودة والمعايير",
-    bio: "Leads the AB Chauffeur Training Academy, vehicle inspection regimes, and regulatory compliance across TGA, RTA, ITC, and MOT jurisdictions.",
-    bioAr: "تقود أكاديمية تدريب السائقين وفحوصات الجودة الفنية والامتثال التنظيمي لدى هيئات النقل الخليجية.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop&q=80",
+    id: "uae-leadership",
+    title: "UAE Leadership Team",
+    titleAr: "فريق القيادة في الإمارات",
+    members: [
+      { name: "Abdul Fatah", title: "Operations Director UAE", titleAr: "مدير العمليات في الإمارات", image: "/Team-AB/Abdul fatah.jpeg" },
+      { name: "Fawad Hamayun", title: "Country Director, UAE", titleAr: "مدير الدولة، الإمارات", image: "/Team-AB/Fawad hummayun.jpeg" },
+      { name: "Vishnu", title: "Business Development Manager, UAE", titleAr: "مدير تطوير الأعمال، الإمارات", image: "/Team-AB/Vishnu.jpeg" },
+      { name: "Umer Farooq", title: "Head of Events Transport, Dubai", titleAr: "رئيس نقل الفعاليات، دبي", image: "/Team-AB/Umer Farooq.jpeg" },
+    ],
   },
   {
-    name: "Tariq Mansour",
-    nameAr: "طارق منصور",
-    title: "Commercial Director — GCC Accounts",
-    titleAr: "المدير التجاري — حسابات الشركات بالخليج",
-    bio: "15+ years managing government summits, Fortune 500 corporate mobility agreements, and bespoke embassy delegations across the Gulf.",
-    bioAr: "أكثر من 15 عاماً في إدارة أطر التعاقد المؤسسية والقمم الوزارية واتفاقيات البعثات الدبلوماسية.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop&q=80",
+    id: "qatar-leadership",
+    title: "Qatar Leadership Team",
+    titleAr: "فريق القيادة في قطر",
+    members: [
+      { name: "Noman Ali", title: "Country Director, Qatar", titleAr: "مدير الدولة، قطر", image: "/Team-AB/Noman.jpeg" },
+      { name: "Ayan Nazir", title: "Head of Events Transport, Qatar", titleAr: "رئيس نقل الفعاليات، قطر", image: "/Team-AB/Ayan Nazir.jpeg" },
+    ],
+  },
+  {
+    id: "team",
+    title: "Team",
+    titleAr: "الفريق",
+    members: [
+      { name: "Umriz Khan", title: "Dispatch Manager", titleAr: "مدير الإرسال", image: "/Team-AB/Umraiz.jpeg" },
+      { name: "Hishamudheen Taj", title: "Events Transport Manager", titleAr: "مدير نقل الفعاليات", image: "/Team-AB/Hisham Tajhuddin.jpeg" },
+      { name: "Abdul Qadir", title: "Events Dispatch Manager", titleAr: "مدير إرسال الفعاليات", image: "/Team-AB/Abdul Qadir.jpeg" },
+      { name: "Muhammad Asif", title: "Fleet Manager", titleAr: "مدير الأسطول", image: "/Team-AB/Muhammad Asif.jpeg" },
+      { name: "Muath Ibrahim Aljammaz", title: "Team Leader & Government Affairs Manager", titleAr: "قائد الفريق ومدير الشؤون الحكومية", image: "/Team-AB/Muath.jpeg" },
+      { name: "Bilal Aslam", title: "Head of Technology", titleAr: "رئيس التقنية", image: "/Team-AB/Bilal Aslam.jpeg" },
+    ],
   },
 ];
 
@@ -227,8 +247,8 @@ const faqs = [
   {
     q: "Why does my contract or invoice show a different company name?",
     qAr: "لماذا يظهر اسم شركة مختلف في عقدي أو فاتورتي؟",
-    a: "AB operates through a locally registered company in each country. Your contract and invoices carry the legal name of the AB company in your country (such as Al Badiah Trading and Contracting Company in Saudi Arabia).",
-    aAr: "تعمل AB من خلال شركة مسجلة محلياً في كل دولة. يحمل عقدك وفواتيرك الاسم القانوني لكيان AB في بلدك (مثل شركة البادية للتجارة والمقاولات في المملكة العربية السعودية).",
+    a: "AB operates through a locally registered company in each country. Your contract and invoices carry the legal name of the AB company in your country, such as AB Transportation Company in Saudi Arabia.",
+    aAr: "تعمل AB من خلال شركة مسجلة محلياً في كل دولة. يحمل عقدك وفواتيرك الاسم القانوني لكيان AB في بلدك، مثل AB Transportation Company في المملكة العربية السعودية.",
   },
   {
     q: "Where is AB headquartered?",
@@ -379,6 +399,14 @@ export default async function GlobalPresencePage({
                       <div className="text-xs font-semibold text-abServiceBlue uppercase mb-4">
                         {isAr ? off.countryAr : off.country}
                       </div>
+                      <div className="mb-4">
+                        <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                          {isAr ? "الشركة المحلية" : "Local Company"}
+                        </div>
+                        <p className="text-sm font-semibold text-white">
+                          {off.localCompany}
+                        </p>
+                      </div>
 
                       <div className="space-y-3 mb-6 bg-gray-900/50 p-4 rounded-xl border border-gray-800 text-sm">
                         <div className="flex items-start gap-2.5">
@@ -437,22 +465,22 @@ export default async function GlobalPresencePage({
           </div>
         </section>
 
-        {/* ── H2: Leadership ── */}
+        {/* ── H2: Our Team ── */}
         <section id="leadership" className="py-20 bg-abBlack border-b border-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/20 text-abServiceBlue text-xs font-semibold uppercase tracking-wider mb-3">
                   <Users className="w-3.5 h-3.5" />
-                  <span>{isAr ? "الحوكمة والإدارة" : "Governance"}</span>
+                  <span>{isAr ? "فريقنا" : "Our Team"}</span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2">
-                  {isAr ? "فريق القيادة" : "Leadership"}
+                  {isAr ? "فريقنا" : "Our Team"}
                 </h2>
                 <p className="text-gray-400 text-sm">
                   {isAr
-                    ? "قيادات تنفيذية بخبرات متراكمة في النقل الدبلوماسي وأساطيل الشركات."
-                    : "Executive leaders with decades of combined ground transportation and protocol experience."}
+                    ? "تعرف على فرق القيادة والعمليات في مقرنا الرئيسي ومكاتبنا في السعودية والإمارات وقطر."
+                    : "Meet our leadership and operations teams across our headquarters and offices in KSA, the UAE, and Qatar."}
                 </p>
               </div>
 
@@ -460,39 +488,46 @@ export default async function GlobalPresencePage({
                 href={`${base}/contact`}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-abServiceBlue hover:text-white transition-colors"
               >
-                <span>{isAr ? "تعرف على فريق القيادة ←" : "Meet the leadership team →"}</span>
+                <span>{isAr ? "تواصل مع فريقنا ←" : "Contact Our Team →"}</span>
               </Link>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {leaders.map((ldr) => (
-                <div
-                  key={ldr.name}
-                  className="bg-abDarkGray rounded-2xl border border-gray-800 overflow-hidden shadow-lg flex flex-col justify-between hover:border-gray-700 transition-all"
-                >
-                  <div>
-                    <div className="relative h-64 w-full bg-gray-900">
-                      <Image
-                        src={ldr.image}
-                        alt={ldr.name}
-                        fill
-                        className="object-cover object-top"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-abDarkGray via-transparent to-transparent" />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold text-white mb-1">
-                        {isAr ? ldr.nameAr : ldr.name}
-                      </h3>
-                      <div className="text-xs font-semibold text-abServiceBlue uppercase mb-3">
-                        {isAr ? ldr.titleAr : ldr.title}
-                      </div>
-                      <p className="text-xs text-gray-300 leading-relaxed">
-                        {isAr ? ldr.bioAr : ldr.bio}
-                      </p>
-                    </div>
+            <div className="space-y-14">
+              {leadershipTeams.map((team) => (
+                <section key={team.id} aria-labelledby={`team-${team.id}`}>
+                  <h3
+                    id={`team-${team.id}`}
+                    className="text-xl sm:text-2xl font-bold text-white mb-6"
+                  >
+                    {isAr ? team.titleAr : team.title}
+                  </h3>
+                  <div className="flex flex-wrap justify-center gap-6">
+                    {team.members.map((member) => (
+                      <article
+                        key={member.name}
+                        className="min-w-0 basis-[calc((100%_-_1.5rem)/2)] rounded-2xl border border-gray-800 overflow-hidden shadow-lg hover:border-gray-700 transition-all sm:basis-[calc((100%_-_3rem)/3)] lg:basis-[calc((100%_-_4.5rem)/4)]"
+                      >
+                        <div className="relative h-80 sm:h-96 w-full">
+                          <Image
+                            src={member.image}
+                            alt={member.name}
+                            fill
+                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                            className="object-cover object-top"
+                          />
+                        </div>
+                        <div className="p-5 opacity-90 hover:opacity-100 transition-opacity">
+                          <h4 className="text-base sm:text-lg font-bold text-white mb-1">
+                            {member.name}
+                          </h4>
+                          <div className="text-xs font-semibold text-abServiceBlue">
+                            {isAr ? member.titleAr : member.title}
+                          </div>
+                        </div>
+                      </article>
+                    ))}
                   </div>
-                </div>
+                </section>
               ))}
             </div>
           </div>

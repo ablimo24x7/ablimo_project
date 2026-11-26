@@ -32,6 +32,13 @@ export async function generateMetadata({
   });
 }
 
+const localStations = [
+  { country: "KSA", countryAr: "السعودية", city: "Riyadh", cityAr: "الرياض", phone: "+966 11 834 3777" },
+  { country: "UAE", countryAr: "الإمارات", city: "Abu Dhabi", cityAr: "أبوظبي", phone: "+971 2 642 9111" },
+  { country: "UAE", countryAr: "الإمارات", city: "Dubai", cityAr: "دبي", phone: "+971 4 396 8282" },
+  { country: "Qatar", countryAr: "قطر", city: "Doha", cityAr: "الدوحة", phone: "+974 44 883 222" },
+];
+
 export default async function ContactPage({
   params,
 }: {
@@ -41,6 +48,7 @@ export default async function ContactPage({
   const dict = await getDictionary(lang as Locale);
   const c = dict.contact;
   const cf = dict.contactForm;
+  const isAr = lang.startsWith("ar");
   const channels = await getContactChannelLinks(4);
   const serviceOptions = (await getAllPublishedServices()).map((s) => ({
     slug: s.slug,
@@ -129,6 +137,31 @@ export default async function ContactPage({
               heading={c.channelsHeading}
               hint={c.channelsHint}
             />
+
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">
+                {isAr ? "أرقام مكاتبنا المحلية" : "Local Station Numbers"}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {localStations.map((station) => (
+                  <a
+                    key={station.city}
+                    href={`tel:${station.phone.replace(/\s+/g, "")}`}
+                    className="group bg-abDarkGray border border-gray-800 rounded-xl p-5 hover:border-abBlue transition-colors"
+                  >
+                    <span className="block text-gray-400 text-xs mb-1">
+                      {isAr ? station.countryAr : station.country}
+                    </span>
+                    <span className="block text-white font-semibold text-sm mb-2 group-hover:text-abBlue transition-colors">
+                      {isAr ? station.cityAr : station.city}
+                    </span>
+                    <span className="block text-gray-300 text-sm" dir="ltr">
+                      {station.phone}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {infoCards.map((card) => (

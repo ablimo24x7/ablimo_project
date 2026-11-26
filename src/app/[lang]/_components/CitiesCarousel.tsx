@@ -15,7 +15,13 @@ export interface CityCardData {
   countLabel?: string;
 }
 
-export default function CitiesCarousel({ cities }: { cities: CityCardData[] }) {
+export default function CitiesCarousel({
+  cities,
+  lang = "en-US",
+}: {
+  cities: CityCardData[];
+  lang?: string;
+}) {
   const [autoplay] = useState(() =>
     Autoplay({
       delay: 2000,
@@ -26,15 +32,21 @@ export default function CitiesCarousel({ cities }: { cities: CityCardData[] }) {
 
   return (
     <Carousel
-      opts={{ align: "start", slidesToScroll: 1, loop: true }}
+      opts={{
+        align: "start",
+        slidesToScroll: 1,
+        loop: true,
+        // Flip the Embla axis for Arabic so slides advance RTL.
+        direction: lang === "ar" ? "rtl" : "ltr",
+      }}
       plugins={[autoplay]}
       className="w-full"
     >
-      <CarouselContent className="-ml-6">
+      <CarouselContent className="-ms-6">
         {cities.map((city) => (
           <CarouselItem
             key={city.slug}
-            className="pl-6 basis-full sm:basis-1/2 lg:basis-1/3"
+            className="ps-6 basis-full sm:basis-1/2 lg:basis-1/3"
           >
             <Link
               href={city.href}
@@ -50,14 +62,14 @@ export default function CitiesCarousel({ cities }: { cities: CityCardData[] }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/20" />
 
-                <div className="absolute top-3 left-3 z-10">
+                <div className="absolute top-3 start-3 z-10">
                   <span className="bg-[#111]/85 backdrop-blur-md border border-gray-700/80 text-gray-200 text-[10px] font-semibold tracking-wider px-2.5 py-1 rounded uppercase">
                     {city.countryName}
                   </span>
                 </div>
 
                 {city.countLabel && (
-                  <div className="absolute top-3 right-3 z-10">
+                  <div className="absolute top-3 end-3 z-10">
                     <span className="bg-abBlue text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
                       {city.countLabel}
                     </span>
@@ -71,7 +83,7 @@ export default function CitiesCarousel({ cities }: { cities: CityCardData[] }) {
                     </h4>
                     <p className="text-xs text-gray-400 mt-0.5">{city.countryName}</p>
                   </div>
-                  <span className="w-9 h-9 rounded-full bg-[#111]/90 border border-gray-700 flex items-center justify-center text-gray-300 group-hover:border-abBlue group-hover:bg-abBlue group-hover:text-white transition-all duration-300 shadow flex-shrink-0 ml-3">
+                  <span className="w-9 h-9 rounded-full bg-[#111]/90 border border-gray-700 flex items-center justify-center text-gray-300 group-hover:border-abBlue group-hover:bg-abBlue group-hover:text-white transition-all duration-300 shadow flex-shrink-0 ms-3">
                     <i className="fa-solid fa-arrow-right text-xs rtl:rotate-180"></i>
                   </span>
                 </div>

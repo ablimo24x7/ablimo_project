@@ -119,12 +119,15 @@ export default function HeroSection({ dict, lang }: { dict: Dictionary; lang: st
     const container = chip?.parentElement;
     if (!chip || !container) return;
 
-    const chipLeft =
-      chip.getBoundingClientRect().left -
-      container.getBoundingClientRect().left +
-      container.scrollLeft;
-    const target = chipLeft - (container.clientWidth - chip.offsetWidth) / 2;
-    container.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
+    // Center the active chip using a relative delta so it works in both
+    // LTR and RTL (scrollLeft semantics differ per direction).
+    const chipCenterX = chip.getBoundingClientRect().left + chip.offsetWidth / 2;
+    const containerRect = container.getBoundingClientRect();
+    const containerCenterX = containerRect.left + container.clientWidth / 2;
+    container.scrollBy({
+      left: chipCenterX - containerCenterX,
+      behavior: "smooth",
+    });
   }, [activeIndex]);
 
   const currentCity = CITIES[activeIndex];
@@ -180,13 +183,13 @@ export default function HeroSection({ dict, lang }: { dict: Dictionary; lang: st
                 href={`${localeBase(lang)}/contact`}
                 className="group relative overflow-hidden px-8 py-3.5 bg-white text-[#1a1a1a] font-semibold text-sm tracking-wide uppercase transition-all duration-300 hover:bg-gray-100 rounded-sm"
               >
-                <i className="fa-solid fa-envelope mr-2"></i> {dict.home.heroSection.ctaRequestAProposal}
+                <i className="fa-solid fa-envelope me-2"></i> {dict.home.heroSection.ctaRequestAProposal}
               </Link>
               <Link
                 href="#duty-of-care"
                 className="bg-transparent border border-gray-700 text-white hover:border-abBlue hover:text-abBlue px-8 py-3.5 rounded text-sm font-semibold transition-colors flex items-center"
               >
-                <i className="fa-solid fa-shield-halved mr-2"></i> {dict.home.heroSection.ctaDutyOfCare}
+                <i className="fa-solid fa-shield-halved me-2"></i> {dict.home.heroSection.ctaDutyOfCare}
               </Link>
             </div>
           </div>
@@ -366,7 +369,7 @@ export default function HeroSection({ dict, lang }: { dict: Dictionary; lang: st
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => selectCity(idx)}
-                className={`slide-tab relative flex flex-col items-start gap-0.5 pt-3.5 pb-1 min-h-[44px] bg-transparent border-t-2 text-left cursor-pointer transition-colors ${
+                className={`slide-tab relative flex flex-col items-start gap-0.5 pt-3.5 pb-1 min-h-[44px] bg-transparent border-t-2 text-start cursor-pointer transition-colors ${
                   isActive
                     ? "border-transparent text-white"
                     : "border-white/20 text-gray-400 hover:text-white hover:border-white/40"
@@ -374,7 +377,7 @@ export default function HeroSection({ dict, lang }: { dict: Dictionary; lang: st
               >
                 {isActive && (
                   <span
-                    className="hidden lg:block absolute -top-[2px] left-0 right-0 h-[2px] bg-[#2AA8E0] origin-left"
+                    className="hidden lg:block absolute -top-[2px] left-0 right-0 h-[2px] bg-[#2AA8E0] origin-left rtl:origin-right"
                     style={{
                       transform: `scaleX(${progress / 100})`,
                       transition: "transform 60ms linear",

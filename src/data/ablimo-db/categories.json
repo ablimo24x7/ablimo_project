@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "6a8d3e6917196e2dc19a6d6c"
+  },
+  "slug": "airport-transfers",
+  "label": "Airport Transfers",
+  "color": "#1a8cb2",
+  "count": 0,
+  "locale": "en",
+  "footerLabel": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a8d3e6917196e2dc19a6d6d"
+  },
+  "slug": "city-guides",
+  "label": "City Guides",
+  "color": "#1a8cb2",
+  "count": 0,
+  "locale": "en",
+  "footerLabel": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a8d3e6917196e2dc19a6d6e"
+  },
+  "slug": "travel-tips",
+  "label": "Travel Tips",
+  "color": "#1a8cb2",
+  "count": 0,
+  "locale": "en",
+  "footerLabel": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a8d3e6917196e2dc19a6d6f"
+  },
+  "slug": "chauffeur-services",
+  "label": "Chauffeur Services",
+  "color": "#1a8cb2",
+  "count": 0,
+  "locale": "en",
+  "footerLabel": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a8d3e6917196e2dc19a6d70"
+  },
+  "slug": "luxury-travel",
+  "label": "Luxury Travel",
+  "color": "#1a8cb2",
+  "count": 0,
+  "locale": "en",
+  "footerLabel": "",
+  "__v": 0
+}]

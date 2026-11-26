@@ -14,7 +14,8 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const data = getIndustryData(SLUG);
+  const isAr = lang === "ar";
+  const data = getIndustryData(SLUG, lang);
   if (!data) return {};
 
   return generateSeoMetadata({
@@ -22,8 +23,9 @@ export async function generateMetadata({
     description: data.heroP,
     path: `/industries/${SLUG}`,
     lang,
-    keywords:
-      "exhibition transportation services, conference transportation, delegate transportation, exhibition shuttle service, summit transportation, corporate event transportation Dubai Riyadh Doha",
+    keywords: isAr
+      ? "خدمات نقل المعارض, نقل المؤتمرات, نقل المندوبين, حافلات المعارض المكوكية, نقل القمم, نقل فعاليات الشركات دبي الرياض الدوحة"
+      : "exhibition transportation services, conference transportation, delegate transportation, exhibition shuttle service, summit transportation, corporate event transportation Dubai Riyadh Doha",
   });
 }
 
@@ -33,7 +35,8 @@ export default async function EventsPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const data = getIndustryData(SLUG);
+  const isAr = lang === "ar";
+  const data = getIndustryData(SLUG, lang);
   if (!data) notFound();
 
   const base = localeBase(lang);
@@ -43,8 +46,8 @@ export default async function EventsPage({
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: home },
-          { name: "Industries", url: `${base}/industries` },
+          { name: isAr ? "الرئيسية" : "Home", url: home },
+          { name: isAr ? "القطاعات" : "Industries", url: `${base}/industries` },
           { name: data.badge, url: `${base}/industries/${SLUG}` },
         ]}
       />

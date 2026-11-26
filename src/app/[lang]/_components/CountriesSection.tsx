@@ -61,12 +61,13 @@ export default async function CountriesSection({
               href={`${localeBase(lang)}/locations`}
               className="text-gray-300 font-semibold hover:text-abBlue border-b border-gray-600 hover:border-abBlue pb-1 transition-colors inline-flex items-center text-sm"
             >
-              {labels.link} <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
+              {labels.link}{" "}
+              <i className="fa-solid fa-arrow-right ms-2 text-xs rtl:rotate-180"></i>
             </Link>
           </div>
         </div>
 
-        <CountriesCarousel items={visible} />
+        <CountriesCarousel items={visible} lang={lang} />
       </div>
     </section>
   );

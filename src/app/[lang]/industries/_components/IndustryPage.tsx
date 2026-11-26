@@ -18,7 +18,7 @@ export default async function IndustryPage({
 }: LegacyIndustryPageProps) {
   const { lang } = await params;
   const industrySlug = slug || "aviation";
-  const data = getIndustryData(industrySlug);
+  const data = getIndustryData(industrySlug, lang);
 
   if (!data) notFound();
 

@@ -17,6 +17,7 @@ export default function IndustryDetailClient({
 }: IndustryDetailClientProps) {
   const base = localeBase(lang);
   const home = localeHome(lang);
+  const isAr = lang === "ar";
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
@@ -31,7 +32,7 @@ export default function IndustryDetailClient({
           style={{ objectPosition: data.heroImagePos }}
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/35 rtl:bg-gradient-to-l" />
         <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/95 via-black/60 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#292a30] to-transparent" />
 
@@ -46,14 +47,14 @@ export default function IndustryDetailClient({
                 href={home}
                 className="hover:text-white transition-colors"
               >
-                Home
+                {isAr ? "الرئيسية" : "Home"}
               </Link>
               <span>/</span>
               <Link
                 href={`${base}/industries`}
                 className="hover:text-white transition-colors"
               >
-                Industries
+                {isAr ? "القطاعات" : "Industries"}
               </Link>
               <span>/</span>
               <span className="text-white">{data.badge}</span>
@@ -109,7 +110,7 @@ export default function IndustryDetailClient({
                 href={`${base}/industries`}
                 className="inline-flex items-center min-h-[52px] px-7 border border-white/25 hover:bg-white/10 text-gray-200 text-sm font-medium rounded-full transition-colors"
               >
-                All industries
+                {isAr ? "جميع القطاعات" : "All industries"}
               </Link>
             </div>
           </div>
@@ -287,9 +288,9 @@ export default function IndustryDetailClient({
                   <span>{s.name}</span>
                   <span
                     aria-hidden="true"
-                    className="text-abBlue group-hover:translate-x-1 transition-transform"
+                    className="text-abBlue ltr:group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"
                   >
-                    &rarr;
+                    {isAr ? "←" : "→"}
                   </span>
                 </Link>
                 {s.desc && (
@@ -306,7 +307,7 @@ export default function IndustryDetailClient({
                     className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-abBlue hover:underline"
                   >
                     <span>{s.subLinkLabel}</span>
-                    <span aria-hidden="true">&rarr;</span>
+                    <span aria-hidden="true">{isAr ? "←" : "→"}</span>
                   </Link>
                 </div>
               )}
@@ -363,8 +364,8 @@ export default function IndustryDetailClient({
               href={`${base}/fleet`}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/40 hover:bg-white hover:text-abBlack text-xs uppercase tracking-widest font-semibold text-white transition-colors"
             >
-              <span>Explore full fleet</span>
-              <span aria-hidden="true">&rarr;</span>
+              <span>{isAr ? "استكشف الأسطول بالكامل" : "Explore full fleet"}</span>
+              <span aria-hidden="true">{isAr ? "←" : "→"}</span>
             </Link>
           </div>
 
@@ -399,8 +400,8 @@ export default function IndustryDetailClient({
                     href={`${base}${card.href || "/fleet"}`}
                     className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-abBlue hover:underline"
                   >
-                    <span>{card.ctaLabel || `View ${card.title}`}</span>
-                    <span aria-hidden="true">&rarr;</span>
+                    <span>{card.ctaLabel || (isAr ? `عرض ${card.title}` : `View ${card.title}`)}</span>
+                    <span aria-hidden="true">{isAr ? "←" : "→"}</span>
                   </Link>
                 </div>
               </div>
@@ -409,8 +410,8 @@ export default function IndustryDetailClient({
 
           {data.vehicles.length > 0 && (
             <div className="mt-10 pt-8 border-t border-gray-800 flex flex-wrap items-center gap-3">
-              <span className="text-xs uppercase tracking-widest text-gray-400 mr-2">
-                Vehicles deployed:
+              <span className="text-xs uppercase tracking-widest text-gray-400 me-2">
+                {isAr ? "المركبات المستخدمة:" : "Vehicles deployed:"}
               </span>
               {data.vehicles.map((v) => (
                 <Link
@@ -451,7 +452,7 @@ export default function IndustryDetailClient({
           {data.coverageLinks.length > 0 && (
             <div className="lg:col-span-5 p-7 rounded-xl bg-[#1c1d21] border border-gray-800">
               <p className="text-xs font-bold tracking-[0.22em] uppercase text-abBlue mb-4">
-                Key Regional Hubs &amp; Services
+                {isAr ? "أبرز المراكز والخدمات الإقليمية" : "Key Regional Hubs & Services"}
               </p>
               <div className="divide-y divide-gray-800">
                 {data.coverageLinks.map((link, idx) => (
@@ -463,9 +464,9 @@ export default function IndustryDetailClient({
                     <span>{link.name}</span>
                     <span
                       aria-hidden="true"
-                      className="text-abBlue group-hover:translate-x-1 transition-transform"
+                      className="text-abBlue ltr:group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"
                     >
-                      &rarr;
+                      {isAr ? "←" : "→"}
                     </span>
                   </Link>
                 ))}
@@ -527,8 +528,8 @@ export default function IndustryDetailClient({
                       href={c.href ? `${base}${c.href}` : `${home}#case-studies`}
                       className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-abBlue hover:underline"
                     >
-                      <span>Read the case study</span>
-                      <span aria-hidden="true">&rarr;</span>
+                      <span>{isAr ? "قراءة دراسة الحالة" : "Read the case study"}</span>
+                      <span aria-hidden="true">{isAr ? "←" : "→"}</span>
                     </Link>
                   </div>
                 </div>
@@ -590,7 +591,7 @@ export default function IndustryDetailClient({
                 href={`tel:${data.standardsPhone.replace(/\s+/g, "")}`}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-abBlue/15 border border-abBlue/40 text-abBlue font-semibold text-sm hover:bg-abBlue hover:text-white transition-colors"
               >
-                <span>24/7 Operations Desk: {data.standardsPhone}</span>
+                <span>{isAr ? "مكتب العمليات على مدار الساعة: " : "24/7 Operations Desk: "}{data.standardsPhone}</span>
               </a>
             )}
           </div>
@@ -617,7 +618,7 @@ export default function IndustryDetailClient({
                       type="button"
                       onClick={() => setOpenFaq(isOpen ? null : idx)}
                       aria-expanded={isOpen}
-                      className="w-full flex items-center justify-between gap-4 py-2 text-left bg-transparent border-0 cursor-pointer"
+                      className="w-full flex items-center justify-between gap-4 py-2 ltr:text-left rtl:text-right bg-transparent border-0 cursor-pointer"
                     >
                       <span className="text-lg md:text-xl font-semibold text-white">
                         {faq.q}
@@ -643,7 +644,7 @@ export default function IndustryDetailClient({
       {/* 11. Other Industries Section */}
       <section className="max-w-7xl mx-auto px-8 py-20 border-b border-gray-800">
         <p className="text-xs font-bold tracking-[0.22em] uppercase text-abBlue mb-6">
-          Other industries
+          {isAr ? "قطاعات أخرى" : "Other industries"}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -656,9 +657,9 @@ export default function IndustryDetailClient({
               <span>{o.name}</span>
               <span
                 aria-hidden="true"
-                className="group-hover:translate-x-1 transition-transform"
+                className="ltr:group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"
               >
-                &rarr;
+                {isAr ? "←" : "→"}
               </span>
             </Link>
           ))}

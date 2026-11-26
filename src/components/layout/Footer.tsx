@@ -65,7 +65,7 @@ export default async function Footer({ lang }: FooterProps) {
         { label: d.aboutUs.blog, href: `${localeBase(lang)}/blogs` },
         { label: d.aboutUs.caseStudies, href: `${localeBase(lang)}/case-studies` },
         { label: d.aboutUs.contactUs, href: `${localeBase(lang)}/contact` },
-        { label: d.aboutUs.faq, href: `${localeBase(lang)}/faq` },
+        { label: d.aboutUs.faq, href: `${localeBase(lang)}/faqs` },
       ],
     },
     {
@@ -129,7 +129,7 @@ export default async function Footer({ lang }: FooterProps) {
     },
     {
       label: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/ablimo24x7",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
@@ -138,7 +138,7 @@ export default async function Footer({ lang }: FooterProps) {
     },
     {
       label: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/ablimo24x7",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
@@ -147,7 +147,7 @@ export default async function Footer({ lang }: FooterProps) {
     },
     {
       label: "TikTok",
-      href: "#",
+      href: "https://www.tiktok.com/ablimo24x7",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.96-.5 3.96-1.6 5.6-1.04 1.56-2.58 2.7-4.33 3.19-2.24.62-4.73.45-6.84-.5-2.12-.96-3.82-2.73-4.66-4.88-.8-2.03-.8-4.32-.13-6.38.67-2.06 2.05-3.86 3.9-4.9 1.83-1.04 4.02-1.4 6.07-1.1v4.14c-1.3-.15-2.65.1-3.77.72-1.12.63-1.95 1.63-2.3 2.87-.37 1.25-.2 2.63.4 3.75.63 1.12 1.7 1.94 2.94 2.3 1.25.35 2.6.2 3.72-.4 1.14-.62 1.97-1.67 2.33-2.92.35-1.2.2-2.5.2-3.7v-13z" />
@@ -156,7 +156,7 @@ export default async function Footer({ lang }: FooterProps) {
     },
     {
       label: "YouTube",
-      href: "#",
+      href: "https://www.youtube.com/ablimo24x7",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
@@ -165,7 +165,7 @@ export default async function Footer({ lang }: FooterProps) {
     },
     {
       label: "X",
-      href: "#",
+      href: "https://twitter.com/ablimo24x7",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />

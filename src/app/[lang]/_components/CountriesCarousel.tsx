@@ -27,8 +27,10 @@ const accentClasses = [
 
 export default function CountriesCarousel({
   items,
+  lang = "en-US",
 }: {
   items: CountryCardItem[];
+  lang?: string;
 }) {
   const [autoplay] = useState(() =>
     Autoplay({
@@ -40,15 +42,22 @@ export default function CountriesCarousel({
 
   return (
     <Carousel
-      opts={{ align: "start", slidesToScroll: 1, loop: true }}
+      opts={{
+        align: "start",
+        slidesToScroll: 1,
+        loop: true,
+        // Embla lays out and snaps LTR by default; flip the axis for Arabic so
+        // slides advance in the reading direction.
+        direction: lang === "ar" ? "rtl" : "ltr",
+      }}
       plugins={[autoplay]}
       className="w-full"
     >
-      <CarouselContent className="-ml-6">
+      <CarouselContent className="-ms-6">
         {items.map((item, i) => (
           <CarouselItem
             key={item.slug}
-            className="pl-6 basis-[85%] sm:basis-[48%] md:basis-[31.5%] lg:basis-1/4"
+            className="ps-6 basis-[85%] sm:basis-[48%] md:basis-[31.5%] lg:basis-1/4"
           >
             <Link
               href={item.href}
@@ -64,7 +73,7 @@ export default function CountriesCarousel({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 {item.label && (
-                  <span className="absolute top-3 left-3 bg-[#111] border border-gray-700 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded z-10">
+                  <span className="absolute top-3 start-3 bg-[#111] border border-gray-700 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded z-10">
                     {item.label}
                   </span>
                 )}

@@ -29,10 +29,10 @@ export async function generateMetadata({
 
   return generateSeoMetadata({
     title: isAr
-      ? "نقل الشركات والفعاليات في السعودية والإمارات وقطر | AB"
+      ? "النقل المؤسسي ونقل الفعاليات في السعودية والإمارات وقطر"
       : "Corporate & Event Transport in KSA, UAE & Qatar | AB",
     description: isAr
-      ? "خدمات نقل وإدارة تنقل وسائقين ومطارات وفعاليات وحافلات ونقل فرق العمل في السعودية والإمارات وقطر. إرسال 24/7 من الرياض. اطلب عرض أسعار."
+      ? "خدمات نقل مُدارة تشمل السائق الخاص والمطارات والفعاليات والحافلات ونقل القوى العاملة في المملكة العربية السعودية والإمارات العربية المتحدة وقطر، مع توجيه على مدار الساعة من الرياض."
       : "Managed chauffeur, airport, event, bus and workforce transportation across Saudi Arabia, the UAE and Qatar. 24/7 dispatch from Riyadh. Request a proposal.",
     path: "",
     lang: locale,

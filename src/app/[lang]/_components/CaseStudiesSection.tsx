@@ -45,22 +45,23 @@ const caseStudiesData: CaseStudy[] = [
     id: "mdl-beast",
     cats: ["events"],
     title: "MDL Beast Soundstorm Festival",
-    titleAr: "مهرجان مدل بيست ساوندستورم",
+    titleAr: "MDLBEAST ساوندستورم",
     tag: "Events & festivals",
     tagAr: "الفعاليات والمهرجانات",
     year: "2021 – 2025",
+    yearAr: "2021–2025",
     location: "Riyadh, Saudi Arabia",
     locationAr: "الرياض، المملكة العربية السعودية",
     image: "/case-studies/mdl-beast.jpg",
     alt: "Crowd and stage at MDL Beast Soundstorm Festival",
     altAr: "الجمهور والمسرح في مهرجان مدل بيست ساوندستورم",
     stats: [
-      { val: "725", label: "Vehicles at peak", labelAr: "مركبة في الذروة" },
-      { val: "145K+", label: "Attendees", labelAr: "حاضر" },
-      { val: "250+", label: "Artists moved", labelAr: "فنان تم نقلهم" },
+      { val: "725", label: "Vehicles at peak", labelAr: "مركبة في ذروة التشغيل" },
+      { val: "145K+", valAr: "أكثر من 145 ألف", label: "Attendees", labelAr: "حاضر" },
+      { val: "250+", valAr: "نقل أكثر من 250", label: "Artists moved", labelAr: "فنانًا" },
     ],
     lead: "The region's premier music event, held over three days and attracting more than 145,000 attendees and 86,000 vehicles daily. Across the 2021, 2022, 2023, 2024 and 2025 editions, AB delivered a comprehensive transportation solution for both staff and artists, operating 725 vehicles at the peak of the event.",
-    leadAr: "أكبر حدث موسيقي في المنطقة يقام على مدار ثلاثة أيام ويستقطب أكثر من 145,000 حاضر و86,000 مركبة يومياً. عبر دورات 2021 إلى 2025، قدمت AB حلاً شاملاً لنقل الموظفين والفنانين مشغلة 725 مركبة في ذروة الفعالية.",
+    leadAr: "إدارة متكاملة لعمليات النقل عبر عدة نسخ من المهرجان، شملت قوافل مخصّصة للفنانين، ونقاط تجمّع لكبار الشخصيات، وإشرافًا متواصلًا على عمليات التوجيه.",
     cols: [
       {
         title: "Staff services",
@@ -207,21 +208,22 @@ const caseStudiesData: CaseStudy[] = [
     id: "adipec",
     cats: ["events"],
     title: "ADIPEC VIP Shuttle Services",
-    titleAr: "خدمات النقل الترددي لكبار الشخصيات في أديبك",
+    titleAr: "خدمات النقل المكوكي لكبار الشخصيات في أديبك ADIPEC",
     tag: "Events & exhibitions",
     tagAr: "الفعاليات والمعارض",
     year: "2024 & 2025",
+    yearAr: "2024 و2025",
     location: "Abu Dhabi, UAE",
     locationAr: "أبوظبي، الإمارات العربية المتحدة",
     image: "/case-studies/adipec.jpg",
     alt: "ADIPEC exhibition hall in Abu Dhabi",
     altAr: "قاعة معرض أديبك في أبوظبي",
     stats: [
-      { val: "VIP", label: "Guest shuttles", labelAr: "نقل كبار الشخصيات" },
-      { val: "2", label: "Consecutive editions", labelAr: "دورتان متتاليتان" },
+      { val: "VIP", valAr: "حافلات مكوكية", label: "Guest shuttles", labelAr: "مخصّصة لكبار الشخصيات" },
+      { val: "2", valAr: "نسختان", label: "Consecutive editions", labelAr: "متتاليتان" },
     ],
     lead: "AB Transportation UAE delivered dedicated shuttle bus services for VIP guests attending ADIPEC in Abu Dhabi. Despite short notice, our team ensured smooth, efficient and professional transport operations fully aligned with the expectations of high-profile international attendees.",
-    leadAr: "قدمت AB الإمارات خدمات حافلات ترددية مخصصة لضيوف مؤتمر أديبك في أبوظبي. ورغم ضيق وقت التكليف، وفر فريقنا عمليات نقل سلسة ومحترفة تلبي تطلعات كبار الشخصيات الدولية.",
+    leadAr: "تنقلات مخصّصة بالحافلات التنفيذية والمكوكية تربط أبرز فنادق أبوظبي بمقر المعرض وفق جداول زمنية صارمة.",
     cols: [
       {
         title: "Guest shuttle operations",
@@ -257,22 +259,22 @@ const caseStudiesData: CaseStudy[] = [
     id: "siemens-energy",
     cats: ["energy", "corporate"],
     title: "Siemens Energy",
-    titleAr: "سيمنز للطاقة",
+    titleAr: "سيمنس للطاقة Siemens Energy",
     tag: "Energy & corporate",
-    tagAr: "الطاقة والشركات",
+    tagAr: "التنقل المؤسسي والصناعي",
     year: "2024 – present",
-    yearAr: "2024 – حتى الآن",
+    yearAr: "من 2024 حتى الآن",
     location: "Jubail & Eastern Region, KSA",
-    locationAr: "الجبيل والمنطقة الشرقية، السعودية",
+    locationAr: "الجبيل والمنطقة الشرقية، المملكة العربية السعودية",
     image: "/case-studies/siemens-energy.jpg",
     alt: "Siemens Energy facility",
     altAr: "منشأة سيمنز للطاقة",
     stats: [
-      { val: "7", label: "Day coverage", labelAr: "أيام تغطية أسبوعياً" },
-      { val: "0", label: "Major incidents", labelAr: "حوادث تشغيلية" },
+      { val: "7", valAr: "تغطية طوال أيام", label: "Day coverage", labelAr: "الأسبوع" },
+      { val: "0", valAr: "صفر حوادث", label: "Major incidents", labelAr: "سلامة جسيمة" },
     ],
     lead: "AB Transportation has provided ground transportation for Siemens Energy across Jubail and the Eastern Region of Saudi Arabia since 2024, supporting corporate and project-based operations for up to 10–15 hours per day.",
-    leadAr: "توفر AB خدمات النقل البري لشركة سيمنز للطاقة في الجبيل والمنطقة الشرقية منذ 2024، مدعومة بعمليات تصل إلى 10-15 ساعة يومياً.",
+    leadAr: "دعم متواصل في النقل البري للفرق الفنية والقيادات في المراكز الصناعية بالمنطقة الشرقية.",
     cols: [
       {
         title: "What we delivered",
@@ -505,13 +507,13 @@ export default function CaseStudiesSection({
     if (!reduce && bodyRef.current) {
       bodyRef.current.animate(
         [
-          { opacity: 0, transform: "translateX(12px)" },
+          { opacity: 0, transform: isAr ? "translateX(-12px)" : "translateX(12px)" },
           { opacity: 1, transform: "none" },
         ],
         { duration: 350, easing: "ease-out" }
       );
     }
-  }, [activeStudy, reduce]);
+  }, [activeStudy, reduce, isAr]);
 
   useEffect(() => {
     if (activeStudy) {

@@ -1,0 +1,1011 @@
+[{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c30"
+  },
+  "fromCity": "dubai",
+  "toCity": "abu-dhabi",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "140 km",
+  "duration": "1h 30m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c33"
+  },
+  "fromCity": "dubai",
+  "toCity": "ajman",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "35 km",
+  "duration": "30m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c35"
+  },
+  "fromCity": "muscat",
+  "toCity": "sohar",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "230 km",
+  "duration": "2h 30m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c2e"
+  },
+  "fromCity": "mecca",
+  "toCity": "medina",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "420 km",
+  "duration": "4h 15m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c39"
+  },
+  "fromCity": "kuwait-city",
+  "toCity": "doha",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "550 km",
+  "duration": "5h 30m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c31"
+  },
+  "fromCity": "dubai",
+  "toCity": "sharjah",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "30 km",
+  "duration": "30m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c37"
+  },
+  "fromCity": "doha",
+  "toCity": "lusail",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "25 km",
+  "duration": "20m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c2f"
+  },
+  "fromCity": "abu-dhabi",
+  "toCity": "dubai",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "140 km",
+  "duration": "1h 30m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c2b"
+  },
+  "fromCity": "riyadh",
+  "toCity": "jeddah",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "950 km",
+  "duration": "9h 00m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c32"
+  },
+  "fromCity": "dubai",
+  "toCity": "ras-al-khaimah",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "100 km",
+  "duration": "1h 00m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c2d"
+  },
+  "fromCity": "jeddah",
+  "toCity": "riyadh",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "950 km",
+  "duration": "9h 00m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c38"
+  },
+  "fromCity": "kuwait-city",
+  "toCity": "al-ahmadi",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "40 km",
+  "duration": "30m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c36"
+  },
+  "fromCity": "doha",
+  "toCity": "al-khor",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "50 km",
+  "duration": "45m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c2a"
+  },
+  "fromCity": "riyadh",
+  "toCity": "dammam",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "400 km",
+  "duration": "4h 00m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.035Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.035Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c3a"
+  },
+  "fromCity": "manama",
+  "toCity": "al-khobar",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "110 km",
+  "duration": "1h 30m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c2c"
+  },
+  "fromCity": "jeddah",
+  "toCity": "mecca",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "80 km",
+  "duration": "1h 00m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a9522b0ad4d61deaefd8c34"
+  },
+  "fromCity": "muscat",
+  "toCity": "abu-dhabi",
+  "fromCityName": "",
+  "toCityName": "",
+  "distance": "350 km",
+  "duration": "3h 30m",
+  "countrySlug": "",
+  "status": "published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-31T06:44:00.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ad0d4176f2e031c3f3bdd59"
+  },
+  "fromCity": "abu-dhabi",
+  "toCity": "sharjah",
+  "countrySlug": "uae",
+  "distance": "125 km",
+  "duration": "1h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4176f2e031c3f3bdd5a"
+  },
+  "toCity": "ajman",
+  "fromCity": "abu-dhabi",
+  "countrySlug": "uae",
+  "distance": "150 km",
+  "duration": "1h 45m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4176f2e031c3f3bdd5b"
+  },
+  "toCity": "ras-al-khaimah",
+  "fromCity": "abu-dhabi",
+  "countrySlug": "uae",
+  "distance": "250 km",
+  "duration": "2h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4176f2e031c3f3bdd5c"
+  },
+  "fromCity": "abu-dhabi",
+  "toCity": "al-ain",
+  "countrySlug": "uae",
+  "distance": "150 km",
+  "duration": "1h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd5d"
+  },
+  "fromCity": "sharjah",
+  "toCity": "dubai",
+  "countrySlug": "uae",
+  "distance": "30 km",
+  "duration": "30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd5e"
+  },
+  "fromCity": "sharjah",
+  "toCity": "abu-dhabi",
+  "countrySlug": "uae",
+  "distance": "125 km",
+  "duration": "1h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd5f"
+  },
+  "fromCity": "ajman",
+  "toCity": "abu-dhabi",
+  "countrySlug": "uae",
+  "distance": "150 km",
+  "duration": "1h 45m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd60"
+  },
+  "fromCity": "ajman",
+  "toCity": "ras-al-khaimah",
+  "countrySlug": "uae",
+  "distance": "90 km",
+  "duration": "1h 10m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd61"
+  },
+  "toCity": "al-ain",
+  "fromCity": "ajman",
+  "countrySlug": "uae",
+  "distance": "155 km",
+  "duration": "1h 45m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd62"
+  },
+  "toCity": "dubai",
+  "fromCity": "ras-al-khaimah",
+  "countrySlug": "uae",
+  "distance": "100 km",
+  "duration": "1h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd63"
+  },
+  "toCity": "abu-dhabi",
+  "fromCity": "ras-al-khaimah",
+  "countrySlug": "uae",
+  "distance": "250 km",
+  "duration": "2h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd64"
+  },
+  "toCity": "ajman",
+  "fromCity": "ras-al-khaimah",
+  "countrySlug": "uae",
+  "distance": "90 km",
+  "duration": "1h 10m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd65"
+  },
+  "fromCity": "al-ain",
+  "toCity": "abu-dhabi",
+  "countrySlug": "uae",
+  "distance": "150 km",
+  "duration": "1h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4186f2e031c3f3bdd66"
+  },
+  "toCity": "ajman",
+  "fromCity": "al-ain",
+  "countrySlug": "uae",
+  "distance": "155 km",
+  "duration": "1h 45m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4196f2e031c3f3bdd67"
+  },
+  "toCity": "dubai",
+  "fromCity": "ajman",
+  "countrySlug": "",
+  "distance": "35 km",
+  "duration": "30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4196f2e031c3f3bdd68"
+  },
+  "toCity": "muscat",
+  "fromCity": "sohar",
+  "countrySlug": "",
+  "distance": "230 km",
+  "duration": "2h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4196f2e031c3f3bdd69"
+  },
+  "fromCity": "medina",
+  "toCity": "mecca",
+  "countrySlug": "",
+  "distance": "420 km",
+  "duration": "4h 15m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4196f2e031c3f3bdd6a"
+  },
+  "toCity": "kuwait-city",
+  "fromCity": "doha",
+  "countrySlug": "",
+  "distance": "550 km",
+  "duration": "5h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4196f2e031c3f3bdd6b"
+  },
+  "fromCity": "lusail",
+  "toCity": "doha",
+  "countrySlug": "",
+  "distance": "25 km",
+  "duration": "20m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d41a6f2e031c3f3bdd6c"
+  },
+  "toCity": "kuwait-city",
+  "fromCity": "al-ahmadi",
+  "countrySlug": "",
+  "distance": "40 km",
+  "duration": "30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d41a6f2e031c3f3bdd6d"
+  },
+  "toCity": "doha",
+  "fromCity": "al-khor",
+  "countrySlug": "",
+  "distance": "50 km",
+  "duration": "45m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d41a6f2e031c3f3bdd6f"
+  },
+  "toCity": "riyadh",
+  "fromCity": "dammam",
+  "countrySlug": "",
+  "distance": "400 km",
+  "duration": "4h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d41a6f2e031c3f3bdd70"
+  },
+  "toCity": "manama",
+  "fromCity": "al-khobar",
+  "countrySlug": "",
+  "distance": "110 km",
+  "duration": "1h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d41b6f2e031c3f3bdd71"
+  },
+  "fromCity": "mecca",
+  "toCity": "jeddah",
+  "countrySlug": "",
+  "distance": "80 km",
+  "duration": "1h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d41b6f2e031c3f3bdd72"
+  },
+  "toCity": "muscat",
+  "fromCity": "abu-dhabi",
+  "countrySlug": "",
+  "distance": "350 km",
+  "duration": "3h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cb6f2e031c3f3bdd84"
+  },
+  "toCity": "al-ain",
+  "fromCity": "dubai",
+  "countrySlug": "uae",
+  "distance": "130 km",
+  "duration": "1h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cc6f2e031c3f3bdd85"
+  },
+  "fromCity": "sharjah",
+  "toCity": "ajman",
+  "countrySlug": "uae",
+  "distance": "15 km",
+  "duration": "20m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cc6f2e031c3f3bdd86"
+  },
+  "toCity": "ras-al-khaimah",
+  "fromCity": "sharjah",
+  "countrySlug": "uae",
+  "distance": "80 km",
+  "duration": "1h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cc6f2e031c3f3bdd87"
+  },
+  "fromCity": "sharjah",
+  "toCity": "al-ain",
+  "countrySlug": "uae",
+  "distance": "140 km",
+  "duration": "1h 45m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cc6f2e031c3f3bdd88"
+  },
+  "toCity": "sharjah",
+  "fromCity": "ajman",
+  "countrySlug": "uae",
+  "distance": "15 km",
+  "duration": "20m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cc6f2e031c3f3bdd89"
+  },
+  "fromCity": "ras-al-khaimah",
+  "toCity": "sharjah",
+  "countrySlug": "uae",
+  "distance": "80 km",
+  "duration": "1h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cd6f2e031c3f3bdd8a"
+  },
+  "toCity": "al-ain",
+  "fromCity": "ras-al-khaimah",
+  "countrySlug": "uae",
+  "distance": "160 km",
+  "duration": "1h 45m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cd6f2e031c3f3bdd8b"
+  },
+  "fromCity": "al-ain",
+  "toCity": "dubai",
+  "countrySlug": "uae",
+  "distance": "130 km",
+  "duration": "1h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cd6f2e031c3f3bdd8c"
+  },
+  "toCity": "sharjah",
+  "fromCity": "al-ain",
+  "countrySlug": "uae",
+  "distance": "140 km",
+  "duration": "1h 45m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ad0d4cd6f2e031c3f3bdd8d"
+  },
+  "toCity": "ras-al-khaimah",
+  "fromCity": "al-ain",
+  "countrySlug": "uae",
+  "distance": "160 km",
+  "duration": "1h 45m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": ""
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7b1"
+  },
+  "fromCity": "riyadh",
+  "toCity": "al-khobar",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "415 km",
+  "duration": "4h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7b2"
+  },
+  "fromCity": "al-khobar",
+  "toCity": "riyadh",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "415 km",
+  "duration": "4h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7b3"
+  },
+  "fromCity": "riyadh",
+  "toCity": "al-qasim",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "350 km",
+  "duration": "3h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7b4"
+  },
+  "toCity": "riyadh",
+  "fromCity": "al-qasim",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "350 km",
+  "duration": "3h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7b5"
+  },
+  "fromCity": "dammam",
+  "toCity": "al-khobar",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "25 km",
+  "duration": "30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7b6"
+  },
+  "fromCity": "al-khobar",
+  "toCity": "dammam",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "25 km",
+  "duration": "30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7b7"
+  },
+  "toCity": "al-ula",
+  "fromCity": "medina",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "330 km",
+  "duration": "3h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7b8"
+  },
+  "fromCity": "al-ula",
+  "toCity": "medina",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "330 km",
+  "duration": "3h 30m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7b9"
+  },
+  "toCity": "neom",
+  "fromCity": "tabuk",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "180 km",
+  "duration": "2h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7ba"
+  },
+  "fromCity": "neom",
+  "toCity": "tabuk",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "180 km",
+  "duration": "2h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7bb"
+  },
+  "toCity": "jizan",
+  "fromCity": "abha",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "200 km",
+  "duration": "3h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6ae31e024a49b8e41331c7bc"
+  },
+  "fromCity": "jizan",
+  "toCity": "abha",
+  "createdAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  },
+  "distance": "200 km",
+  "duration": "3h 00m",
+  "fromCityName": "",
+  "status": "published",
+  "toCityName": "",
+  "updatedAt": {
+    "$date": "2026-10-29T10:20:40.297Z"
+  }
+}]

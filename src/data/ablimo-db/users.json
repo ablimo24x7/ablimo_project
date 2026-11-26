@@ -1,0 +1,125 @@
+[{
+  "_id": {
+    "$oid": "6a8d3cbc5a6514e2a2d6ca54"
+  },
+  "name": "Admin",
+  "email": "admin@ablimo.com",
+  "avatarUrl": null,
+  "passwordHash": "$2b$12$KEWzXGrxMwZWX..eJ3H.nOrrFlsoSGIcuGqiJ6xOEnLMR0gqB7fh2",
+  "roles": [
+    "admin"
+  ],
+  "isActive": true,
+  "createdBy": null,
+  "invitationTokenHash": null,
+  "invitationExpiresAt": null,
+  "resetTokenHash": null,
+  "resetTokenExpiresAt": null,
+  "createdAt": {
+    "$date": "2026-08-25T06:57:00.494Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T06:57:00.494Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8c76970efbff0ab6c4b32"
+  },
+  "name": "Shafqat Mehmood",
+  "email": "shafqat.mehmood@beesocialpk.com",
+  "avatarUrl": null,
+  "passwordHash": "$2b$12$NNk64HCOwzC/Or.zSy4wku05EiND.H/iaiWBznTmwCDtQrmj8K2G.",
+  "roles": [
+    "editor"
+  ],
+  "isActive": true,
+  "createdBy": null,
+  "invitationTokenHash": null,
+  "invitationExpiresAt": null,
+  "resetTokenHash": null,
+  "resetTokenExpiresAt": null,
+  "createdAt": {
+    "$date": "2026-10-09T10:52:25.898Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-09T10:52:25.898Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8c9b270efbff0ab6c4b33"
+  },
+  "name": "Noor Aslam",
+  "email": "noor.aslam@beesocialpk.com",
+  "avatarUrl": null,
+  "passwordHash": "$2b$12$oIVc2AnGS2p0VLG2lEkTteJnoK6vy8/uSI4RwJWjBWu8gqGHv92Jq",
+  "roles": [
+    "editor"
+  ],
+  "isActive": true,
+  "createdBy": null,
+  "invitationTokenHash": null,
+  "invitationExpiresAt": null,
+  "resetTokenHash": null,
+  "resetTokenExpiresAt": null,
+  "createdAt": {
+    "$date": "2026-10-09T11:02:10.360Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-09T11:02:10.360Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8cbe3eddbb7fbac8cd282"
+  },
+  "name": "Sohairah Afaq",
+  "email": "sohairah.afaq@beesocialpk.com",
+  "avatarUrl": null,
+  "passwordHash": "$2b$12$TSVSW3sjubSO8exJV7f96u6clenwjHyz0rENZnGFHfRfjIeUcXzze",
+  "roles": [
+    "editor"
+  ],
+  "isActive": true,
+  "createdBy": null,
+  "invitationTokenHash": null,
+  "invitationExpiresAt": null,
+  "resetTokenHash": null,
+  "resetTokenExpiresAt": null,
+  "createdAt": {
+    "$date": "2026-10-09T11:11:31.466Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-09T11:11:31.466Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6accb0184a28fe57d5c6a789"
+  },
+  "name": "Hammad Hussain",
+  "email": "malikassociates700@gmail.com",
+  "avatarUrl": null,
+  "passwordHash": "$2b$12$f.D0cOejsC.q3OveW3KpLuePZnTYF1Cwrr0teMELWRUJE80R2Nu2q",
+  "roles": [
+    "editor"
+  ],
+  "isActive": true,
+  "createdBy": null,
+  "invitationTokenHash": null,
+  "invitationExpiresAt": null,
+  "resetTokenHash": null,
+  "resetTokenExpiresAt": null,
+  "createdAt": {
+    "$date": "2026-10-12T10:02:00.451Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-12T10:02:00.451Z"
+  },
+  "__v": 0
+}]

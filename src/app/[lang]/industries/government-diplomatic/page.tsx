@@ -14,7 +14,8 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const data = getIndustryData(SLUG);
+  const isAr = lang === "ar";
+  const data = getIndustryData(SLUG, lang);
   if (!data) return {};
 
   return generateSeoMetadata({
@@ -22,8 +23,9 @@ export async function generateMetadata({
     description: data.heroP,
     path: `/industries/${SLUG}`,
     lang,
-    keywords:
-      "diplomatic transportation, government transportation services, delegation transport, protocol transportation, embassy chauffeur service, VIP transport Riyadh Abu Dhabi Qatar",
+    keywords: isAr
+      ? "نقل دبلوماسي, خدمات نقل حكومي, نقل وفود, نقل مراسم, سائق خاص للسفارات, نقل كبار الشخصيات الرياض أبوظبي قطر"
+      : "diplomatic transportation, government transportation services, delegation transport, protocol transportation, embassy chauffeur service, VIP transport Riyadh Abu Dhabi Qatar",
   });
 }
 
@@ -33,7 +35,8 @@ export default async function GovernmentPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const data = getIndustryData(SLUG);
+  const isAr = lang === "ar";
+  const data = getIndustryData(SLUG, lang);
   if (!data) notFound();
 
   const base = localeBase(lang);
@@ -43,8 +46,8 @@ export default async function GovernmentPage({
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: home },
-          { name: "Industries", url: `${base}/industries` },
+          { name: isAr ? "الرئيسية" : "Home", url: home },
+          { name: isAr ? "القطاعات" : "Industries", url: `${base}/industries` },
           { name: data.badge, url: `${base}/industries/${SLUG}` },
         ]}
       />
