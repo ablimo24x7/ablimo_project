@@ -9,7 +9,10 @@ async function syncServices() {
   console.log("AB Transportation — Synchronizing Services DB & Templates");
   console.log("=================================================================");
 
-  const uri = process.env.MONGO_URI || process.env.MONGODB_URI || "mongodb+srv://mohsinreddragon260_db_user:vrlzo58zqDOVVneU@cluster0.gpfinl2.mongodb.net/ablimo-db?retryWrites=true&w=majority";
+  const uri = process.env.MONGO_URI || process.env.MONGODB_URI;
+  if (!uri) {
+    throw new Error("MONGO_URI or MONGODB_URI must be set in the environment or .env");
+  }
   const dbUri = uri.includes("/ablimo-db")
     ? uri
     : uri.split("?")[0].replace(/\/+$/, "") + "/ablimo-db" + (uri.includes("?") ? "?" + uri.split("?")[1] : "");

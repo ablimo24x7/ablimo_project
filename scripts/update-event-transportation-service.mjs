@@ -11,8 +11,10 @@ dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
 const MONGODB_URI =
   process.env.MONGODB_URI ||
-  process.env.MONGO_URI ||
-  "mongodb+srv://mohsinreddragon260_db_user:vrlzo58zqDOVVneU@cluster0.gpfinl2.mongodb.net/ablimo-db?retryWrites=true&w=majority";
+  process.env.MONGO_URI;
+if (!MONGODB_URI) {
+  throw new Error("MONGODB_URI or MONGO_URI must be set in the environment or .env.local");
+}
 
 const DB_URI = MONGODB_URI.includes("/ablimo-db")
   ? MONGODB_URI

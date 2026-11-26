@@ -11,12 +11,15 @@
  *            new City PageSection template instead of skipping them.
  */
 
+import dotenv from "dotenv";
 import mongoose from "mongoose";
 import fs from "fs";
 import path from "path";
 
+dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
+dotenv.config({ path: path.resolve(process.cwd(), ".env") });
+
 // ── Config ───────────────────────────────────────────────────────
-const MONGO_URI = "mongodb+srv://mohsinreddragon260_db_user:vrlzo58zqDOVVneU@cluster0.gpfinl2.mongodb.net/ablimo-db";
 const DRY_RUN = process.argv.includes("--dry-run");
 const CONVERT = process.argv.includes("--convert");
 const FILTER_SERVICE = process.argv.find(a => a.startsWith("--service="))?.split("=")[1];
@@ -580,15 +583,19 @@ async function main() {
 
   // 3. Connect to MongoDB
   console.log("Connecting to MongoDB...");
+  const mongoUri = process.env.MONGODB_URI || process.env.MONGO_URI;
+  if (!mongoUri) {
+    throw new Error("MONGODB_URI or MONGO_URI must be set in the environment, .env.local, or .env");
+  }
   try {
-    await mongoose.connect(MONGO_URI);
+    await mongoose.connect(mongoUri);
   } catch (err: any) {
     if (err?.code === "ECONNREFUSED" || /querySrv/i.test(err?.message || "")) {
       // Local DNS can't answer SRV queries — retry via public DNS
       console.log("SRV lookup failed, retrying with public DNS...");
       const dns = await import("dns");
       dns.setServers(["8.8.8.8", "1.1.1.1"]);
-      await mongoose.connect(MONGO_URI);
+      await mongoose.connect(mongoUri);
     } else {
       throw err;
     }
